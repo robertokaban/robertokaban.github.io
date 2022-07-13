@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Blog Roberto Kaban on </title>
+    <link>https://robertokaban.github.io/</link>
+    <description>Recent content in Blog Roberto Kaban on </description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-US</language>
+    <copyright>Copyright (c) 2022 Roberto Kaban</copyright>
+    <lastBuildDate>Wed, 06 Jul 2022 08:47:36 +0000</lastBuildDate>
+    
+        <atom:link href="https://robertokaban.github.io/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Artikel</title>
+      <link>https://robertokaban.github.io/artikel/</link>
+      <pubDate>Tue, 06 Oct 2020 08:49:55 +0000</pubDate>
+      
+      <guid>https://robertokaban.github.io/artikel/</guid>
+      <description>Berisi Artikel terbaru tentang Teknologi</description>
+    </item>
+    
+    <item>
+      <title>Blog</title>
+      <link>https://robertokaban.github.io/post/</link>
+      <pubDate>Tue, 06 Oct 2020 08:49:55 +0000</pubDate>
+      
+      <guid>https://robertokaban.github.io/post/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Coretanku</title>
+      <link>https://robertokaban.github.io/coretanku/</link>
+      <pubDate>Tue, 06 Oct 2020 08:49:55 +0000</pubDate>
+      
+      <guid>https://robertokaban.github.io/coretanku/</guid>
+      <description>Hanya sebatas coretan</description>
+    </item>
+    
+    <item>
+      <title>Tutorial</title>
+      <link>https://robertokaban.github.io/html/</link>
+      <pubDate>Tue, 06 Oct 2020 08:48:23 +0000</pubDate>
+      
+      <guid>https://robertokaban.github.io/html/</guid>
+      <description>Berikut ini kumpulan</description>
+    </item>
+    
+    <item>
+      <title>Tutorial</title>
+      <link>https://robertokaban.github.io/mysql/</link>
+      <pubDate>Tue, 06 Oct 2020 08:48:23 +0000</pubDate>
+      
+      <guid>https://robertokaban.github.io/mysql/</guid>
+      <description>Berikut ini kumpulan</description>
+    </item>
+    
+    <item>
+      <title>Tutorial</title>
+      <link>https://robertokaban.github.io/php/</link>
+      <pubDate>Tue, 06 Oct 2020 08:48:23 +0000</pubDate>
+      
+      <guid>https://robertokaban.github.io/php/</guid>
+      <description>Berikut ini kumpulan</description>
+    </item>
+    
+    <item>
+      <title>Tutorial</title>
+      <link>https://robertokaban.github.io/vbnet/</link>
+      <pubDate>Tue, 06 Oct 2020 08:48:23 +0000</pubDate>
+      
+      <guid>https://robertokaban.github.io/vbnet/</guid>
+      <description>Berikut ini kumpulan</description>
+    </item>
+    
+    <item>
+      <title>Tutorial Javascript</title>
+      <link>https://robertokaban.github.io/javascript/</link>
+      <pubDate>Tue, 06 Oct 2020 08:48:23 +0000</pubDate>
+      
+      <guid>https://robertokaban.github.io/javascript/</guid>
+      <description>Berikut ini kumpulan</description>
+    </item>
+    
+    <item>
+      <title>About Me</title>
+      <link>https://robertokaban.github.io/about/</link>
+      <pubDate>Thu, 27 Aug 2020 19:25:12 +0200</pubDate>
+      
+      <guid>https://robertokaban.github.io/about/</guid>
+      <description>user=&#34;hello&#34;,domain=&#34;getdoks.org&#34;,document.write(user+&#34;@&#34;+domain);hello at getdoks.org selamatdatang</description>
+    </item>
+    
+    <item>
+      <title>Contact</title>
+      <link>https://robertokaban.github.io/contact/</link>
+      <pubDate>Thu, 27 Aug 2020 19:25:12 +0200</pubDate>
+      
+      <guid>https://robertokaban.github.io/contact/</guid>
+      <description>user=&#34;hello&#34;,domain=&#34;getdoks.org&#34;,document.write(user+&#34;@&#34;+domain);hello at getdoks.org </description>
+    </item>
+    
+    <item>
+      <title>Privacy Policy</title>
+      <link>https://robertokaban.github.io/privacy-policy/</link>
+      <pubDate>Thu, 27 Aug 2020 19:23:18 +0200</pubDate>
+      
+      <guid>https://robertokaban.github.io/privacy-policy/</guid>
+      <description>TLDR: We do not use cookies and we do not collect any personal data.
+Website visitors #  No personal information is collected. No information is stored in the browser. No information is shared with, sent to or sold to third-parties. No information is shared with advertising companies. No information is mined and harvested for personal and behavioral trends. No information is monetized.  Information we collect and what we use it for # We run Plausible analytics on getdoks.</description>
+    </item>
+    
+  </channel>
+</rss>
