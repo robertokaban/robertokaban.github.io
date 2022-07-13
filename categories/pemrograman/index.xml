@@ -2,16 +2,16 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Pemrograman on </title>
-    <link>https://robertokaban.github.io/categories/pemrograman/</link>
+    <link>https://kaban.my.id/categories/pemrograman/</link>
     <description>Recent content in Pemrograman on </description>
     <generator>Hugo -- gohugo.io</generator>
-    <lastBuildDate>Sun, 12 Jul 2020 13:57:55 +0700</lastBuildDate><atom:link href="https://robertokaban.github.io/categories/pemrograman/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sun, 12 Jul 2020 13:57:55 +0700</lastBuildDate><atom:link href="https://kaban.my.id/categories/pemrograman/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Mengenal Cli Command Line Interface</title>
-      <link>https://robertokaban.github.io/mengenal-cli-command-line-interface/</link>
+      <link>https://kaban.my.id/mengenal-cli-command-line-interface/</link>
       <pubDate>Sun, 12 Jul 2020 13:57:55 +0700</pubDate>
       
-      <guid>https://robertokaban.github.io/mengenal-cli-command-line-interface/</guid>
+      <guid>https://kaban.my.id/mengenal-cli-command-line-interface/</guid>
       <description>Pengantar # Kita mungkin sering mendengar istilah CLI dalam hal yang bergubungan dengan dunia IT, khususnya di bidang programmer. Apa sebenarnya CLI ini? CLI merupakan singkatan dari Command Line Interface. CLI sebagai media untuk memberikan instruksi/perintah pada komputer dan perangkat lunak (software) yang ada di dalamnya. Pada CLI dapat diberikan berupa perintah dalam bentuk teks yang fungsinya untuk mengerjakan tugas (task) tertentu.
 Dengan berkembangnya perangkat lunak yg sifatnya GUI (Graphic User Interface) membuat banyak orang kurang familiar dengan CLI.</description>
     </item>

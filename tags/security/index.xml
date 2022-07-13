@@ -2,43 +2,43 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>security on </title>
-    <link>https://robertokaban.github.io/tags/security/</link>
+    <link>https://kaban.my.id/tags/security/</link>
     <description>Recent content in security on </description>
     <generator>Hugo -- gohugo.io</generator>
-    <lastBuildDate>Wed, 04 Nov 2020 09:19:42 +0100</lastBuildDate><atom:link href="https://robertokaban.github.io/tags/security/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Wed, 04 Nov 2020 09:19:42 +0100</lastBuildDate><atom:link href="https://kaban.my.id/tags/security/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Say hello to Doks 👋</title>
-      <link>https://robertokaban.github.io/post/blog-number-one1/</link>
+      <link>https://kaban.my.id/post/blog-number-one1/</link>
       <pubDate>Wed, 04 Nov 2020 09:19:42 +0100</pubDate>
       
-      <guid>https://robertokaban.github.io/post/blog-number-one1/</guid>
+      <guid>https://kaban.my.id/post/blog-number-one1/</guid>
       <description>Introducing Doks, a Hugo theme helping you build modern documentation websites that are secure, fast, and SEO-ready — by default.</description>
     </item>
     
     <item>
       <title>Say hello to Doks 👋</title>
-      <link>https://robertokaban.github.io/post/blog-number-two1/</link>
+      <link>https://kaban.my.id/post/blog-number-two1/</link>
       <pubDate>Wed, 04 Nov 2020 09:19:42 +0100</pubDate>
       
-      <guid>https://robertokaban.github.io/post/blog-number-two1/</guid>
+      <guid>https://kaban.my.id/post/blog-number-two1/</guid>
       <description>Introducing Doks, a Hugo theme helping you build modern documentation websites that are secure, fast, and SEO-ready — by default.</description>
     </item>
     
     <item>
       <title>Say hello to Doks 👋</title>
-      <link>https://robertokaban.github.io/post/say-hello-to-doks1/</link>
+      <link>https://kaban.my.id/post/say-hello-to-doks1/</link>
       <pubDate>Wed, 04 Nov 2020 09:19:42 +0100</pubDate>
       
-      <guid>https://robertokaban.github.io/post/say-hello-to-doks1/</guid>
+      <guid>https://kaban.my.id/post/say-hello-to-doks1/</guid>
       <description>Introducing Doks, a Hugo theme helping you build modern documentation websites that are secure, fast, and SEO-ready — by default.</description>
     </item>
     
     <item>
       <title>Say hello to Doks-3 👋</title>
-      <link>https://robertokaban.github.io/say-hello-to-doks-3/</link>
+      <link>https://kaban.my.id/say-hello-to-doks-3/</link>
       <pubDate>Wed, 04 Nov 2020 09:19:42 +0100</pubDate>
       
-      <guid>https://robertokaban.github.io/say-hello-to-doks-3/</guid>
+      <guid>https://kaban.my.id/say-hello-to-doks-3/</guid>
       <description>Introducing Doks, a Hugo theme helping you build modern documentation websites that are secure, fast, and SEO-ready — by default.</description>
     </item>
     
