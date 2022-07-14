@@ -25,15 +25,6 @@
     </item>
     
     <item>
-      <title>News</title>
-      <link>https://kaban.my.id/categories/news/</link>
-      <pubDate>Wed, 04 Nov 2020 09:19:42 +0100</pubDate>
-      
-      <guid>https://kaban.my.id/categories/news/</guid>
-      <description></description>
-    </item>
-    
-    <item>
       <title>Networking</title>
       <link>https://kaban.my.id/categories/networking/</link>
       <pubDate>Sun, 12 Jul 2020 13:57:55 +0700</pubDate>
@@ -93,6 +84,15 @@
       <pubDate>Thu, 04 Jun 2020 09:19:42 +0100</pubDate>
       
       <guid>https://kaban.my.id/categories/bitcoin/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Desentralisasi</title>
+      <link>https://kaban.my.id/categories/desentralisasi/</link>
+      <pubDate>Thu, 04 Jun 2020 09:19:42 +0100</pubDate>
+      
+      <guid>https://kaban.my.id/categories/desentralisasi/</guid>
       <description></description>
     </item>
     

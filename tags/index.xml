@@ -34,33 +34,6 @@
     </item>
     
     <item>
-      <title>performance</title>
-      <link>https://kaban.my.id/tags/performance/</link>
-      <pubDate>Wed, 04 Nov 2020 09:19:42 +0100</pubDate>
-      
-      <guid>https://kaban.my.id/tags/performance/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>security</title>
-      <link>https://kaban.my.id/tags/security/</link>
-      <pubDate>Wed, 04 Nov 2020 09:19:42 +0100</pubDate>
-      
-      <guid>https://kaban.my.id/tags/security/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>SEO</title>
-      <link>https://kaban.my.id/tags/seo/</link>
-      <pubDate>Wed, 04 Nov 2020 09:19:42 +0100</pubDate>
-      
-      <guid>https://kaban.my.id/tags/seo/</guid>
-      <description></description>
-    </item>
-    
-    <item>
       <title>CLI</title>
       <link>https://kaban.my.id/tags/cli/</link>
       <pubDate>Sun, 12 Jul 2020 13:57:55 +0700</pubDate>
@@ -93,6 +66,33 @@
       <pubDate>Mon, 29 Jun 2020 13:57:55 +0700</pubDate>
       
       <guid>https://kaban.my.id/tags/migrasi-blog/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Pindah ke Github</title>
+      <link>https://kaban.my.id/tags/pindah-ke-github/</link>
+      <pubDate>Mon, 29 Jun 2020 13:57:55 +0700</pubDate>
+      
+      <guid>https://kaban.my.id/tags/pindah-ke-github/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Apa itu Bitcoin</title>
+      <link>https://kaban.my.id/tags/apa-itu-bitcoin/</link>
+      <pubDate>Fri, 12 Jun 2020 19:35:40 +0700</pubDate>
+      
+      <guid>https://kaban.my.id/tags/apa-itu-bitcoin/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Bitcoin</title>
+      <link>https://kaban.my.id/tags/bitcoin/</link>
+      <pubDate>Fri, 12 Jun 2020 19:35:40 +0700</pubDate>
+      
+      <guid>https://kaban.my.id/tags/bitcoin/</guid>
       <description></description>
     </item>
     
