@@ -192,6 +192,13 @@
   </url>
   
   <url>
+    <loc>https://kaban.my.id/contributors/roberto-kaban/</loc>
+    <lastmod>2022-07-01T13:57:55+07:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
     <loc>https://kaban.my.id/tags/</loc>
     <lastmod>2022-07-01T13:57:55+07:00</lastmod>
     <changefreq>weekly</changefreq>
@@ -319,13 +326,6 @@
   
   <url>
     <loc>https://kaban.my.id/categories/pemrograman/</loc>
-    <lastmod>2020-07-12T13:57:55+07:00</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.5</priority>
-  </url>
-  
-  <url>
-    <loc>https://kaban.my.id/contributors/roberto-kaban/</loc>
     <lastmod>2020-07-12T13:57:55+07:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
