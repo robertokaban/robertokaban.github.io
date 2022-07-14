@@ -3,15 +3,8 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
   <url>
-    <loc>https://kaban.my.id/10-pertanyaan-mendasar-tentang-blockchain-yang-anda-harus-tahu-jawabannya/</loc>
-    <lastmod>2022-07-12T19:35:40+07:00</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.5</priority>
-  </url>
-  
-  <url>
-    <loc>https://kaban.my.id/blockchain-solusi-resiko-keterlibatan-pihak-ketiga-yang-tidak-bertanggung-jawab/</loc>
-    <lastmod>2020-11-04T09:19:42+01:00</lastmod>
+    <loc>https://kaban.my.id/coretanku/pesta-bunga-dan-buah-di-berastagi-kabupaten-karo/</loc>
+    <lastmod>2022-07-01T13:57:55+07:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url>
@@ -45,13 +38,6 @@
   </url>
   
   <url>
-    <loc>https://kaban.my.id/coretanku/hello-world-buka-blog-lagi/</loc>
-    <lastmod>2020-07-12T13:57:55+07:00</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.5</priority>
-  </url>
-  
-  <url>
     <loc>https://kaban.my.id/mengenal-cli-command-line-interface/</loc>
     <lastmod>2020-07-12T13:57:55+07:00</lastmod>
     <changefreq>weekly</changefreq>
@@ -59,8 +45,22 @@
   </url>
   
   <url>
-    <loc>https://kaban.my.id/coretanku/pesta-bunga-dan-buah-di-berastagi-kabupaten-karo/</loc>
-    <lastmod>2020-07-12T13:57:55+07:00</lastmod>
+    <loc>https://kaban.my.id/coretanku/hello-world-buka-blog-lagi/</loc>
+    <lastmod>2020-06-29T13:57:55+07:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://kaban.my.id/10-pertanyaan-mendasar-tentang-blockchain-yang-anda-harus-tahu-jawabannya/</loc>
+    <lastmod>2020-06-12T19:35:40+07:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://kaban.my.id/blockchain-solusi-resiko-keterlibatan-pihak-ketiga-yang-tidak-bertanggung-jawab/</loc>
+    <lastmod>2020-06-04T09:19:42+01:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url>
@@ -95,7 +95,7 @@
   
   <url>
     <loc>https://kaban.my.id/blockchains-penggebrak-desentralisasi-privasi/</loc>
-    <lastmod>2020-11-04T09:19:42+01:00</lastmod>
+    <lastmod>2020-06-04T09:19:42+01:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url>
@@ -164,62 +164,6 @@
   </url>
   
   <url>
-    <loc>https://kaban.my.id/tags/apa-itu-bitcoin/</loc>
-    <lastmod>2022-07-12T19:35:40+07:00</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.5</priority>
-  </url>
-  
-  <url>
-    <loc>https://kaban.my.id/tags/bitcoin/</loc>
-    <lastmod>2022-07-12T19:35:40+07:00</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.5</priority>
-  </url>
-  
-  <url>
-    <loc>https://kaban.my.id/tags/blockchain/</loc>
-    <lastmod>2022-07-12T19:35:40+07:00</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.5</priority>
-  </url>
-  
-  <url>
-    <loc>https://kaban.my.id/categories/blockchain/</loc>
-    <lastmod>2022-07-12T19:35:40+07:00</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.5</priority>
-  </url>
-  
-  <url>
-    <loc>https://kaban.my.id/categories/</loc>
-    <lastmod>2022-07-12T19:35:40+07:00</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.5</priority>
-  </url>
-  
-  <url>
-    <loc>https://kaban.my.id/contributors/roberto-kaban/</loc>
-    <lastmod>2022-07-12T19:35:40+07:00</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.5</priority>
-  </url>
-  
-  <url>
-    <loc>https://kaban.my.id/tags/</loc>
-    <lastmod>2022-07-12T19:35:40+07:00</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.5</priority>
-  </url>
-  
-  <url>
-    <loc>https://kaban.my.id/categories/teknologi/</loc>
-    <lastmod>2022-07-12T19:35:40+07:00</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.5</priority>
-  </url>
-  
-  <url>
     <loc>https://kaban.my.id/</loc>
     <lastmod>2022-07-06T08:47:36+00:00</lastmod>
     <changefreq>weekly</changefreq>
@@ -227,43 +171,57 @@
   </url>
   
   <url>
+    <loc>https://kaban.my.id/categories/</loc>
+    <lastmod>2022-07-01T13:57:55+07:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://kaban.my.id/categories/karo/</loc>
+    <lastmod>2022-07-01T13:57:55+07:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://kaban.my.id/tags/pesta-buah/</loc>
+    <lastmod>2022-07-01T13:57:55+07:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://kaban.my.id/tags/pesta-bunga/</loc>
+    <lastmod>2022-07-01T13:57:55+07:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://kaban.my.id/tags/pesta-bunga-buah-berastagi/</loc>
+    <lastmod>2022-07-01T13:57:55+07:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://kaban.my.id/tags/</loc>
+    <lastmod>2022-07-01T13:57:55+07:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://kaban.my.id/categories/tanah-karo/</loc>
+    <lastmod>2022-07-01T13:57:55+07:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
     <loc>https://kaban.my.id/php/lorem/</loc>
     <lastmod>2022-01-18T19:58:14+01:00</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.5</priority>
-  </url>
-  
-  <url>
-    <loc>https://kaban.my.id/tags/ancaman-pihak-ketiga/</loc>
-    <lastmod>2020-11-04T09:19:42+01:00</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.5</priority>
-  </url>
-  
-  <url>
-    <loc>https://kaban.my.id/categories/bitcoin/</loc>
-    <lastmod>2020-11-04T09:19:42+01:00</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.5</priority>
-  </url>
-  
-  <url>
-    <loc>https://kaban.my.id/categories/desentralisasi/</loc>
-    <lastmod>2020-11-04T09:19:42+01:00</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.5</priority>
-  </url>
-  
-  <url>
-    <loc>https://kaban.my.id/tags/desentralisasi-privasi/</loc>
-    <lastmod>2020-11-04T09:19:42+01:00</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.5</priority>
-  </url>
-  
-  <url>
-    <loc>https://kaban.my.id/tags/keamanan-data/</loc>
-    <lastmod>2020-11-04T09:19:42+01:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url>
@@ -277,6 +235,13 @@
   
   <url>
     <loc>https://kaban.my.id/tags/performance/</loc>
+    <lastmod>2020-11-04T09:19:42+01:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://kaban.my.id/contributors/roberto-kaban/</loc>
     <lastmod>2020-11-04T09:19:42+01:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
@@ -388,13 +353,6 @@
   </url>
   
   <url>
-    <loc>https://kaban.my.id/categories/blog/</loc>
-    <lastmod>2020-07-12T13:57:55+07:00</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.5</priority>
-  </url>
-  
-  <url>
     <loc>https://kaban.my.id/tags/cli/</loc>
     <lastmod>2020-07-12T13:57:55+07:00</lastmod>
     <changefreq>weekly</changefreq>
@@ -403,27 +361,6 @@
   
   <url>
     <loc>https://kaban.my.id/tags/command-line/</loc>
-    <lastmod>2020-07-12T13:57:55+07:00</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.5</priority>
-  </url>
-  
-  <url>
-    <loc>https://kaban.my.id/tags/core-blog/</loc>
-    <lastmod>2020-07-12T13:57:55+07:00</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.5</priority>
-  </url>
-  
-  <url>
-    <loc>https://kaban.my.id/categories/karo/</loc>
-    <lastmod>2020-07-12T13:57:55+07:00</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.5</priority>
-  </url>
-  
-  <url>
-    <loc>https://kaban.my.id/tags/migrasi-blog/</loc>
     <lastmod>2020-07-12T13:57:55+07:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
@@ -444,43 +381,106 @@
   </url>
   
   <url>
-    <loc>https://kaban.my.id/tags/pesta-buah/</loc>
+    <loc>https://kaban.my.id/categories/tools/</loc>
     <lastmod>2020-07-12T13:57:55+07:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url>
   
   <url>
-    <loc>https://kaban.my.id/tags/pesta-bunga/</loc>
-    <lastmod>2020-07-12T13:57:55+07:00</lastmod>
+    <loc>https://kaban.my.id/categories/blog/</loc>
+    <lastmod>2020-06-29T13:57:55+07:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url>
   
   <url>
-    <loc>https://kaban.my.id/tags/pesta-bunga-buah-berastagi/</loc>
-    <lastmod>2020-07-12T13:57:55+07:00</lastmod>
+    <loc>https://kaban.my.id/tags/core-blog/</loc>
+    <lastmod>2020-06-29T13:57:55+07:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://kaban.my.id/tags/migrasi-blog/</loc>
+    <lastmod>2020-06-29T13:57:55+07:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url>
   
   <url>
     <loc>https://kaban.my.id/tags/pindah-ke-github/</loc>
-    <lastmod>2020-07-12T13:57:55+07:00</lastmod>
+    <lastmod>2020-06-29T13:57:55+07:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url>
   
   <url>
-    <loc>https://kaban.my.id/categories/tanah-karo/</loc>
-    <lastmod>2020-07-12T13:57:55+07:00</lastmod>
+    <loc>https://kaban.my.id/tags/apa-itu-bitcoin/</loc>
+    <lastmod>2020-06-12T19:35:40+07:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url>
   
   <url>
-    <loc>https://kaban.my.id/categories/tools/</loc>
-    <lastmod>2020-07-12T13:57:55+07:00</lastmod>
+    <loc>https://kaban.my.id/tags/bitcoin/</loc>
+    <lastmod>2020-06-12T19:35:40+07:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://kaban.my.id/tags/blockchain/</loc>
+    <lastmod>2020-06-12T19:35:40+07:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://kaban.my.id/categories/blockchain/</loc>
+    <lastmod>2020-06-12T19:35:40+07:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://kaban.my.id/categories/teknologi/</loc>
+    <lastmod>2020-06-12T19:35:40+07:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://kaban.my.id/tags/ancaman-pihak-ketiga/</loc>
+    <lastmod>2020-06-04T09:19:42+01:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://kaban.my.id/categories/bitcoin/</loc>
+    <lastmod>2020-06-04T09:19:42+01:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://kaban.my.id/categories/desentralisasi/</loc>
+    <lastmod>2020-06-04T09:19:42+01:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://kaban.my.id/tags/desentralisasi-privasi/</loc>
+    <lastmod>2020-06-04T09:19:42+01:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://kaban.my.id/tags/keamanan-data/</loc>
+    <lastmod>2020-06-04T09:19:42+01:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url>

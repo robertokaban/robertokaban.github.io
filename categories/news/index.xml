@@ -42,15 +42,5 @@
       <description>Introducing Doks, a Hugo theme helping you build modern documentation websites that are secure, fast, and SEO-ready — by default.</description>
     </item>
     
-    <item>
-      <title>Mengenal Cli Command Line Interface</title>
-      <link>https://kaban.my.id/mengenal-cli-command-line-interface/</link>
-      <pubDate>Sun, 12 Jul 2020 13:57:55 +0700</pubDate>
-      
-      <guid>https://kaban.my.id/mengenal-cli-command-line-interface/</guid>
-      <description>Pengantar # Kita mungkin sering mendengar istilah CLI dalam hal yang bergubungan dengan dunia IT, khususnya di bidang programmer. Apa sebenarnya CLI ini? CLI merupakan singkatan dari Command Line Interface. CLI sebagai media untuk memberikan instruksi/perintah pada komputer dan perangkat lunak (software) yang ada di dalamnya. Pada CLI dapat diberikan berupa perintah dalam bentuk teks yang fungsinya untuk mengerjakan tugas (task) tertentu.
-Dengan berkembangnya perangkat lunak yg sifatnya GUI (Graphic User Interface) membuat banyak orang kurang familiar dengan CLI.</description>
-    </item>
-    
   </channel>
 </rss>

@@ -7,25 +7,6 @@
     <generator>Hugo -- gohugo.io</generator>
     <lastBuildDate>Tue, 06 Oct 2020 08:49:55 +0000</lastBuildDate><atom:link href="https://kaban.my.id/artikel/index.xml" rel="self" type="application/rss+xml" />
     <item>
-      <title>10 Pertanyaan Mendasar Tentang Blockchain Yang Anda Harus Tahu Jawabannya</title>
-      <link>https://kaban.my.id/10-pertanyaan-mendasar-tentang-blockchain-yang-anda-harus-tahu-jawabannya/</link>
-      <pubDate>Tue, 12 Jul 2022 19:35:40 +0700</pubDate>
-      
-      <guid>https://kaban.my.id/10-pertanyaan-mendasar-tentang-blockchain-yang-anda-harus-tahu-jawabannya/</guid>
-      <description>Apa itu blockchain? # Blockchain adalah serangkaian blok yang berisi informasi. Blok-blok ini saling terkait dan dilindungi keunikannya dengan hash (seperti tanda tangan digital yang unik, bisa diumpamakan juga seperti sidik jari yang tidak mungkin sama di antara satu dengan lainnya). Setiap blok berisi informasi. Apabila ada yang mengubah satu blok, maka ia juga harus mengubah serangkaian blok lainnya sehingga kecurangan atau pencurian data menjadi sangat mungkin untuk ditiadakan. Ide siapakah blockchain ini?</description>
-    </item>
-    
-    <item>
-      <title>Blockchain: Solusi Resiko Keterlibatan Pihak Ketiga yang Tidak Bertanggung Jawab</title>
-      <link>https://kaban.my.id/blockchain-solusi-resiko-keterlibatan-pihak-ketiga-yang-tidak-bertanggung-jawab/</link>
-      <pubDate>Wed, 04 Nov 2020 09:19:42 +0100</pubDate>
-      
-      <guid>https://kaban.my.id/blockchain-solusi-resiko-keterlibatan-pihak-ketiga-yang-tidak-bertanggung-jawab/</guid>
-      <description>Pengantar # Begitu banyak kegiatan/transaksi di dalam kehidupan kita memanfaatkan pihak ketiga. Ketiga Anda menggunakan jasa bank, sistem informasi pendaftaran ke sekolah pilihan, bahkan untuk bersosialisasi di dunia maya seperti facebook. Dan, siapa pun tahu bahwa facebook pernah menjual data para user-nya dan mendapatkan keuntungan.
-Tidak ada satu pun transaksi dalam kehidupan manusia modern yang berhubungan dengan internet yang benar-benar terlepas dari pihak ketiga. Dalam sistem blockchain, pihak ketiga ini disebut “services” (yang memberikan layanan), bedanya mereka diberikan aturan yang kuat dan aman yang membuat mereka hanya bisa mengakses apa yang diizinkan oleh user.</description>
-    </item>
-    
-    <item>
       <title>Say hello to Doks-3 👋</title>
       <link>https://kaban.my.id/say-hello-to-doks-3/</link>
       <pubDate>Wed, 04 Nov 2020 09:19:42 +0100</pubDate>
@@ -45,9 +26,28 @@ Dengan berkembangnya perangkat lunak yg sifatnya GUI (Graphic User Interface) me
     </item>
     
     <item>
+      <title>10 Pertanyaan Mendasar Tentang Blockchain Yang Anda Harus Tahu Jawabannya</title>
+      <link>https://kaban.my.id/10-pertanyaan-mendasar-tentang-blockchain-yang-anda-harus-tahu-jawabannya/</link>
+      <pubDate>Fri, 12 Jun 2020 19:35:40 +0700</pubDate>
+      
+      <guid>https://kaban.my.id/10-pertanyaan-mendasar-tentang-blockchain-yang-anda-harus-tahu-jawabannya/</guid>
+      <description>Apa itu blockchain? # Blockchain adalah serangkaian blok yang berisi informasi. Blok-blok ini saling terkait dan dilindungi keunikannya dengan hash (seperti tanda tangan digital yang unik, bisa diumpamakan juga seperti sidik jari yang tidak mungkin sama di antara satu dengan lainnya). Setiap blok berisi informasi. Apabila ada yang mengubah satu blok, maka ia juga harus mengubah serangkaian blok lainnya sehingga kecurangan atau pencurian data menjadi sangat mungkin untuk ditiadakan. Ide siapakah blockchain ini?</description>
+    </item>
+    
+    <item>
+      <title>Blockchain: Solusi Resiko Keterlibatan Pihak Ketiga yang Tidak Bertanggung Jawab</title>
+      <link>https://kaban.my.id/blockchain-solusi-resiko-keterlibatan-pihak-ketiga-yang-tidak-bertanggung-jawab/</link>
+      <pubDate>Thu, 04 Jun 2020 09:19:42 +0100</pubDate>
+      
+      <guid>https://kaban.my.id/blockchain-solusi-resiko-keterlibatan-pihak-ketiga-yang-tidak-bertanggung-jawab/</guid>
+      <description>Pengantar # Begitu banyak kegiatan/transaksi di dalam kehidupan kita memanfaatkan pihak ketiga. Ketiga Anda menggunakan jasa bank, sistem informasi pendaftaran ke sekolah pilihan, bahkan untuk bersosialisasi di dunia maya seperti facebook. Dan, siapa pun tahu bahwa facebook pernah menjual data para user-nya dan mendapatkan keuntungan.
+Tidak ada satu pun transaksi dalam kehidupan manusia modern yang berhubungan dengan internet yang benar-benar terlepas dari pihak ketiga. Dalam sistem blockchain, pihak ketiga ini disebut “services” (yang memberikan layanan), bedanya mereka diberikan aturan yang kuat dan aman yang membuat mereka hanya bisa mengakses apa yang diizinkan oleh user.</description>
+    </item>
+    
+    <item>
       <title>Blockchains Penggebrak Desentralisasi Privasi?</title>
       <link>https://kaban.my.id/blockchains-penggebrak-desentralisasi-privasi/</link>
-      <pubDate>Wed, 04 Nov 2020 09:19:42 +0100</pubDate>
+      <pubDate>Thu, 04 Jun 2020 09:19:42 +0100</pubDate>
       
       <guid>https://kaban.my.id/blockchains-penggebrak-desentralisasi-privasi/</guid>
       <description>Pengantar # Pernahkah Anda ketika melakukan sign up pada sebuah website diminta untuk memberikan sejumlah informasi yang Anda tidak bisa menarik kembali apa pun keterangan yang telah Anda berikan? Ingat bahwa update informasi yang Anda lakukan sekalipun tidak menghapus data yang telah terlanjur Anda berikan. Ketidakberdayaan kita sebagai pengguna teknologi IT telah membuat para peneliti mengembangkan banyak teknik yang memfokuskan pada perlindungan terhadap data personal. Gembar-gembor pemanfaatan blockchains mulai berdengung sejak lima tahunan yang lalu.</description>

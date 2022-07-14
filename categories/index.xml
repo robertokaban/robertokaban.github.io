@@ -5,40 +5,22 @@
     <link>https://kaban.my.id/categories/</link>
     <description>Recent content in Categories on </description>
     <generator>Hugo -- gohugo.io</generator>
-    <lastBuildDate>Tue, 12 Jul 2022 19:35:40 +0700</lastBuildDate><atom:link href="https://kaban.my.id/categories/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Fri, 01 Jul 2022 13:57:55 +0700</lastBuildDate><atom:link href="https://kaban.my.id/categories/index.xml" rel="self" type="application/rss+xml" />
     <item>
-      <title>Blockchain</title>
-      <link>https://kaban.my.id/categories/blockchain/</link>
-      <pubDate>Tue, 12 Jul 2022 19:35:40 +0700</pubDate>
+      <title>Karo</title>
+      <link>https://kaban.my.id/categories/karo/</link>
+      <pubDate>Fri, 01 Jul 2022 13:57:55 +0700</pubDate>
       
-      <guid>https://kaban.my.id/categories/blockchain/</guid>
+      <guid>https://kaban.my.id/categories/karo/</guid>
       <description></description>
     </item>
     
     <item>
-      <title>Teknologi</title>
-      <link>https://kaban.my.id/categories/teknologi/</link>
-      <pubDate>Tue, 12 Jul 2022 19:35:40 +0700</pubDate>
+      <title>Tanah Karo</title>
+      <link>https://kaban.my.id/categories/tanah-karo/</link>
+      <pubDate>Fri, 01 Jul 2022 13:57:55 +0700</pubDate>
       
-      <guid>https://kaban.my.id/categories/teknologi/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Bitcoin</title>
-      <link>https://kaban.my.id/categories/bitcoin/</link>
-      <pubDate>Wed, 04 Nov 2020 09:19:42 +0100</pubDate>
-      
-      <guid>https://kaban.my.id/categories/bitcoin/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Desentralisasi</title>
-      <link>https://kaban.my.id/categories/desentralisasi/</link>
-      <pubDate>Wed, 04 Nov 2020 09:19:42 +0100</pubDate>
-      
-      <guid>https://kaban.my.id/categories/desentralisasi/</guid>
+      <guid>https://kaban.my.id/categories/tanah-karo/</guid>
       <description></description>
     </item>
     
@@ -48,24 +30,6 @@
       <pubDate>Wed, 04 Nov 2020 09:19:42 +0100</pubDate>
       
       <guid>https://kaban.my.id/categories/news/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Blog</title>
-      <link>https://kaban.my.id/categories/blog/</link>
-      <pubDate>Sun, 12 Jul 2020 13:57:55 +0700</pubDate>
-      
-      <guid>https://kaban.my.id/categories/blog/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Karo</title>
-      <link>https://kaban.my.id/categories/karo/</link>
-      <pubDate>Sun, 12 Jul 2020 13:57:55 +0700</pubDate>
-      
-      <guid>https://kaban.my.id/categories/karo/</guid>
       <description></description>
     </item>
     
@@ -88,11 +52,47 @@
     </item>
     
     <item>
-      <title>Tanah Karo</title>
-      <link>https://kaban.my.id/categories/tanah-karo/</link>
+      <title>Tools</title>
+      <link>https://kaban.my.id/categories/tools/</link>
       <pubDate>Sun, 12 Jul 2020 13:57:55 +0700</pubDate>
       
-      <guid>https://kaban.my.id/categories/tanah-karo/</guid>
+      <guid>https://kaban.my.id/categories/tools/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Blog</title>
+      <link>https://kaban.my.id/categories/blog/</link>
+      <pubDate>Mon, 29 Jun 2020 13:57:55 +0700</pubDate>
+      
+      <guid>https://kaban.my.id/categories/blog/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Blockchain</title>
+      <link>https://kaban.my.id/categories/blockchain/</link>
+      <pubDate>Fri, 12 Jun 2020 19:35:40 +0700</pubDate>
+      
+      <guid>https://kaban.my.id/categories/blockchain/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Teknologi</title>
+      <link>https://kaban.my.id/categories/teknologi/</link>
+      <pubDate>Fri, 12 Jun 2020 19:35:40 +0700</pubDate>
+      
+      <guid>https://kaban.my.id/categories/teknologi/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Bitcoin</title>
+      <link>https://kaban.my.id/categories/bitcoin/</link>
+      <pubDate>Thu, 04 Jun 2020 09:19:42 +0100</pubDate>
+      
+      <guid>https://kaban.my.id/categories/bitcoin/</guid>
       <description></description>
     </item>
     

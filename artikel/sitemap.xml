@@ -2,20 +2,6 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
     <url>
-      <loc>https://kaban.my.id/10-pertanyaan-mendasar-tentang-blockchain-yang-anda-harus-tahu-jawabannya/</loc>
-      <lastmod>2022-07-12T19:35:40+07:00</lastmod>
-      <changefreq>weekly</changefreq>
-      <priority>0.5</priority>
-    </url>
-    
-    <url>
-      <loc>https://kaban.my.id/blockchain-solusi-resiko-keterlibatan-pihak-ketiga-yang-tidak-bertanggung-jawab/</loc>
-      <lastmod>2020-11-04T09:19:42+01:00</lastmod>
-      <changefreq>weekly</changefreq>
-      <priority>0.5</priority>
-    </url>
-    
-    <url>
       <loc>https://kaban.my.id/say-hello-to-doks-3/</loc>
       <lastmod>2020-11-04T09:19:42+01:00</lastmod>
       <changefreq>weekly</changefreq>
@@ -30,8 +16,22 @@
     </url>
     
     <url>
+      <loc>https://kaban.my.id/10-pertanyaan-mendasar-tentang-blockchain-yang-anda-harus-tahu-jawabannya/</loc>
+      <lastmod>2020-06-12T19:35:40+07:00</lastmod>
+      <changefreq>weekly</changefreq>
+      <priority>0.5</priority>
+    </url>
+    
+    <url>
+      <loc>https://kaban.my.id/blockchain-solusi-resiko-keterlibatan-pihak-ketiga-yang-tidak-bertanggung-jawab/</loc>
+      <lastmod>2020-06-04T09:19:42+01:00</lastmod>
+      <changefreq>weekly</changefreq>
+      <priority>0.5</priority>
+    </url>
+    
+    <url>
       <loc>https://kaban.my.id/blockchains-penggebrak-desentralisasi-privasi/</loc>
-      <lastmod>2020-11-04T09:19:42+01:00</lastmod>
+      <lastmod>2020-06-04T09:19:42+01:00</lastmod>
       <changefreq>weekly</changefreq>
       <priority>0.5</priority>
     </url>
