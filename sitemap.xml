@@ -10,6 +10,13 @@
   </url>
   
   <url>
+    <loc>https://kaban.my.id/perintah-dasar-linux/</loc>
+    <lastmod>2020-07-18T13:57:55+07:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
     <loc>https://kaban.my.id/mengenal-cli-command-line-interface/</loc>
     <lastmod>2020-07-12T13:57:55+07:00</lastmod>
     <changefreq>weekly</changefreq>
@@ -220,6 +227,13 @@
   </url>
   
   <url>
+    <loc>https://kaban.my.id/privacy-policy/</loc>
+    <lastmod>2021-08-27T19:23:18+02:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
     <loc>https://kaban.my.id/contributors/</loc>
     <lastmod>2020-10-06T08:50:29+00:00</lastmod>
     <changefreq>weekly</changefreq>
@@ -297,42 +311,56 @@
   </url>
   
   <url>
-    <loc>https://kaban.my.id/privacy-policy/</loc>
-    <lastmod>2020-08-27T19:23:18+02:00</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.5</priority>
-  </url>
-  
-  <url>
-    <loc>https://kaban.my.id/tags/cli/</loc>
-    <lastmod>2020-07-12T13:57:55+07:00</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.5</priority>
-  </url>
-  
-  <url>
     <loc>https://kaban.my.id/tags/command-line/</loc>
-    <lastmod>2020-07-12T13:57:55+07:00</lastmod>
+    <lastmod>2020-07-18T13:57:55+07:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://kaban.my.id/tags/command-line-linux/</loc>
+    <lastmod>2020-07-18T13:57:55+07:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://kaban.my.id/tags/linux/</loc>
+    <lastmod>2020-07-18T13:57:55+07:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url>
   
   <url>
     <loc>https://kaban.my.id/categories/networking/</loc>
-    <lastmod>2020-07-12T13:57:55+07:00</lastmod>
+    <lastmod>2020-07-18T13:57:55+07:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url>
   
   <url>
     <loc>https://kaban.my.id/categories/pemrograman/</loc>
-    <lastmod>2020-07-12T13:57:55+07:00</lastmod>
+    <lastmod>2020-07-18T13:57:55+07:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://kaban.my.id/tags/perintah-linux/</loc>
+    <lastmod>2020-07-18T13:57:55+07:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url>
   
   <url>
     <loc>https://kaban.my.id/categories/tools/</loc>
+    <lastmod>2020-07-18T13:57:55+07:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://kaban.my.id/tags/cli/</loc>
     <lastmod>2020-07-12T13:57:55+07:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>

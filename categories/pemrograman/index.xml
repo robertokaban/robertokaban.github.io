@@ -5,7 +5,18 @@
     <link>https://kaban.my.id/categories/pemrograman/</link>
     <description>Recent content in Pemrograman on </description>
     <generator>Hugo -- gohugo.io</generator>
-    <lastBuildDate>Sun, 12 Jul 2020 13:57:55 +0700</lastBuildDate><atom:link href="https://kaban.my.id/categories/pemrograman/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sat, 18 Jul 2020 13:57:55 +0700</lastBuildDate><atom:link href="https://kaban.my.id/categories/pemrograman/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Perintah dasar Linux</title>
+      <link>https://kaban.my.id/perintah-dasar-linux/</link>
+      <pubDate>Sat, 18 Jul 2020 13:57:55 +0700</pubDate>
+      
+      <guid>https://kaban.my.id/perintah-dasar-linux/</guid>
+      <description>Sepintas tentang Linux # Linux adalah keluarga sistem operasi turunan Unix yang bersifat open-source dan didasarkan pada Linux Kernel. Terdapat berbagai distribusi (Distro) linux yang populer seperti Ubuntu, Fedora, Mint, Debian, dan lain-lain.
+Sejak pertama kali dirilis pada tahun 1991, popularitas Linux terus meroket karena sifatnya yang open-source. User bebas memodifikasi Linux dan mendistribusikannya dengan memakai namanya sendiri.
+Ketika mengoperasikan Linux, kita dapat menggunakan shell yang merupakan interface yang menyediakan akses ke layanan sistem operasi.</description>
+    </item>
+    
     <item>
       <title>Mengenal Cli Command Line Interface</title>
       <link>https://kaban.my.id/mengenal-cli-command-line-interface/</link>

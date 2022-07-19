@@ -1,0 +1,675 @@
+<!doctype html>
+<html lang="en-US">
+  <head>
+  <meta charset="utf-8">
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <link rel="preload" as="font" href="https://kaban.my.id/fonts/vendor/jost/jost-v4-latin-regular.woff2" type="font/woff2" crossorigin>
+<link rel="preload" as="font" href="https://kaban.my.id/fonts/vendor/jost/jost-v4-latin-500.woff2" type="font/woff2" crossorigin>
+<link rel="preload" as="font" href="https://kaban.my.id/fonts/vendor/jost/jost-v4-latin-700.woff2" type="font/woff2" crossorigin>
+
+  <script>(()=>{var b=window.matchMedia&&window.matchMedia("(prefers-color-scheme: dark)").matches,a=localStorage.getItem("theme");b&&a===null&&(localStorage.setItem("theme","dark"),document.documentElement.setAttribute("data-dark-mode","")),b&&a==="dark"&&document.documentElement.setAttribute("data-dark-mode",""),a==="dark"&&document.documentElement.setAttribute("data-dark-mode","")})()</script>
+
+  <link rel="stylesheet" href="https://kaban.my.id/main.812e631e4fea94547440bd1ee202d6fdb6246425f32df8719013bcbcf84c1614b23e37053dc0a0c1c5b3be015a0c32d641621dbc37600b8346d52290884e608c.css" integrity="sha512-gS5jHk/qlFR0QL0e4gLW/bYkZCXzLfhxkBO8vPhMFhSyPjcFPcCgwcWzvgFaDDLWQWIdvDdgC4NG1SKQiE5gjA==" crossorigin="anonymous">
+<noscript><style>img.lazyload { display: none; }</style></noscript>
+  <meta name="robots" content="index, follow">
+    <meta name="googlebot" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1">
+    <meta name="bingbot" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1">
+  <title>Perintah dasar Linux - Roberto Kaban Blog&#39;s</title>
+<meta name="description" content="Perintah dasar linux ">
+<link rel="canonical" href="https://kaban.my.id/perintah-dasar-linux/">
+<meta property="og:locale" content="en_US">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Perintah dasar Linux">
+<meta property="og:description" content="Perintah dasar linux ">
+<meta property="og:url" content="https://kaban.my.id/perintah-dasar-linux/">
+<meta property="og:site_name" content="Roberto Kaban Blog&#39;s">
+<meta property="article:published_time" content="2020-07-18T13:57:55+07:00">
+  <meta property="article:modified_time" content="2020-07-18T13:57:55+07:00">
+  
+  <meta property="og:image" content="https://kaban.my.id/doks.png"/>
+      <meta property="og:image:alt" content="Roberto Kaban Blog&#39;s">
+    
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:site" content="@robertokaban">
+<meta name="twitter:creator" content="@robertokaban">
+<meta name="twitter:title" content="Perintah dasar Linux">
+<meta name="twitter:description" content="Perintah dasar linux ">
+<meta name="twitter:image" content="https://kaban.my.id/doks.png">
+    <meta name="twitter:image:alt" content="Perintah dasar Linux">
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "Person",
+        "@id": "https://kaban.my.id/#/schema/person/1",
+      "name": "Doks",
+      "url": "https://kaban.my.id/",
+      "sameAs": [
+        "https://twitter.com/robertokaban"
+        , "https://github.com/robertokaban"
+        ],
+      "image": {
+          "@type": "ImageObject",
+          "@id": "https://kaban.my.id/#/schema/image/1",
+          "url": "https://kaban.my.id/doks.png",
+          "width":  1280 ,
+          "height":  640 ,
+          "caption": "Doks"
+        }
+      },
+    {
+      "@type": "WebSite",
+      "@id": "https://kaban.my.id/#/schema/website/1",
+      "url": "https://kaban.my.id/",
+      "name": "Roberto Kaban Blog\u0027s",
+      "description": "Hanya sebuah catatan kecil untuk hal yang tidak ingin dilupakan.",
+      "publisher": {
+          "@id": "https://kaban.my.id/#/schema/person/1"
+        }
+      },
+    {
+      "@type": "WebPage",
+      "@id": "https://kaban.my.id/perintah-dasar-linux/",
+      "url": "https://kaban.my.id/perintah-dasar-linux/",
+      "name": "Perintah dasar Linux",
+      "description": "Perintah dasar linux ",
+      "isPartOf": {
+        "@id": "https://kaban.my.id/#/schema/website/1"
+      },
+      "about": {
+          "@id": "https://kaban.my.id/#/schema/person/1"
+        },
+      "datePublished": "2020-07-18T13:57:55CET",
+      "dateModified": "2020-07-18T13:57:55CET",
+      "breadcrumb": {
+        "@id": "https://kaban.my.id/perintah-dasar-linux/#/schema/breadcrumb/1"
+      },
+      "primaryImageOfPage": {
+        "@id": "https://kaban.my.id/perintah-dasar-linux/#/schema/image/2"
+      },
+      "inLanguage": "en-US",
+      "potentialAction": [{
+        "@type": "ReadAction", "target": ["https://kaban.my.id/perintah-dasar-linux/"]
+      }]
+    },
+    {
+      "@type": "BreadcrumbList",
+      "@id": "https://kaban.my.id/perintah-dasar-linux/#/schema/breadcrumb/1",
+      "name": "Breadcrumbs",
+      "itemListElement": [{
+        "@type": "ListItem",
+        "position":  1 ,
+        "item": {
+          "@type": "WebPage",
+          "@id": "https://kaban.my.id/",
+          "url": "https://kaban.my.id/",
+          "name": "Home"
+          }
+        },{
+        "@type": "ListItem",
+        "position":  2 ,
+        "item": {
+          "@id": "https://kaban.my.id/perintah-dasar-linux/"
+          }
+        }]
+    },
+
+    {
+      "@context": "https://schema.org",
+      "@graph": [
+        {
+          "@type": "ImageObject",
+          "@id": "https://kaban.my.id/perintah-dasar-linux/#/schema/image/2",
+          "url": "https://kaban.my.id/doks.png",
+          "contentUrl": "https://kaban.my.id/doks.png",
+          "caption": "Perintah dasar Linux"
+        }
+      ]
+    }
+
+  ]
+}
+</script>
+
+  <meta name="theme-color" content="#fff">
+<link rel="icon" href="https://kaban.my.id/favicon.ico" sizes="any">
+<link rel="icon" type="image/svg+xml" href="https://kaban.my.id/favicon.svg">
+<link rel="apple-touch-icon" sizes="180x180" href="https://kaban.my.id/apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="32x32" href="https://kaban.my.id/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="https://kaban.my.id/favicon-16x16.png">
+<link rel="manifest" crossorigin="use-credentials" href="https://kaban.my.id/site.webmanifest">
+
+  
+
+</head>
+
+  <body class="artikel single">
+    <div class="sticky-top">
+<div class="header-bar"></div>
+
+<header class="navbar navbar-expand-lg navbar-light doks-navbar">
+  <nav class="container-xxl flex-wrap flex-lg-nowrap" aria-label="Main navigation">
+
+    <a class="navbar-brand order-0" href="/" aria-label="Roberto Kaban Blog&#39;s">
+      Roberto Kaban Blog&#39;s
+    </a>
+
+    <button class="btn btn-menu order-2 d-block d-lg-none" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasDoks" aria-controls="offcanvasDoks" aria-label="Open main menu">
+      <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-menu"><line x1="3" y1="12" x2="21" y2="12"></line><line x1="3" y1="6" x2="21" y2="6"></line><line x1="3" y1="18" x2="21" y2="18"></line></svg>
+    </button>
+    <div class="offcanvas offcanvas-end border-0 py-lg-1" tabindex="-1" id="offcanvasDoks" data-bs-backdrop="true" aria-labelledby="offcanvasDoksLabel">
+      <div class="header-bar d-lg-none"></div>
+      <div class="offcanvas-header d-lg-none">
+        <h2 class="h5 offcanvas-title ps-2" id="offcanvasDoksLabel"><a class="text-dark" href="/">Roberto Kaban Blog&#39;s</a></h2>
+        <button type="button" class="btn-close text-reset me-2" data-bs-dismiss="offcanvas" aria-label="Close main menu"></button>
+      </div>
+      <div class="offcanvas-body p-4 p-lg-0">
+        <ul class="nav flex-column flex-lg-row align-items-lg-center mt-2 mt-lg-0 ms-lg-2 me-lg-auto">
+              <li class="nav-item">
+                <a class="nav-link ps-0 py-1" href="/about/">About Me</a>
+              </li>
+            
+          
+              <li class="nav-item">
+                <a class="nav-link ps-0 py-1" href="/contact/">Contact</a>
+              </li>
+            
+          
+              <li class="nav-item">
+                <a class="nav-link ps-0 py-1 active" href="/artikel/">Artikel</a>
+              </li>
+            
+          
+              <li class="nav-item">
+                <a class="nav-link ps-0 py-1" href="/coretanku/">Coretanku</a>
+              </li>
+            
+          </ul>
+
+        <hr class="text-black-50 my-4 d-lg-none">
+        <form class="doks-search position-relative flex-grow-1 ms-lg-auto me-lg-2">
+          <input id="search" class="form-control is-search" type="search" placeholder="Cari di blog ini..." aria-label="Cari di blog ini..." autocomplete="off">
+          <div id="suggestions" class="shadow bg-white rounded d-none"></div>
+        </form>
+        <hr class="text-black-50 my-4 d-lg-none">
+        <ul class="nav flex-column flex-lg-row">
+          <li class="nav-item">
+              <a class="nav-link social-link" href="https://github.com/robertokaban"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-github"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path></svg><small class="ms-2 d-lg-none">GitHub</small></a>
+            </li>
+          <li class="nav-item">
+              <a class="nav-link social-link" href="https://twitter.com/robertokaban"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-twitter"><path d="M23 3a10.9 10.9 0 0 1-3.14 1.53 4.48 4.48 0 0 0-7.86 3v1A10.66 10.66 0 0 1 3 4s-4 9 5 13a11.64 11.64 0 0 1-7 2c9 5 20 0 20-11.5a4.5 4.5 0 0 0-.08-.83A7.72 7.72 0 0 0 23 3z"></path></svg><small class="ms-2 d-lg-none">Twitter</small></a>
+            </li>
+          </ul>
+
+        
+        <hr class="text-black-50 my-4 d-lg-none">
+        <button id="mode" class="btn btn-link" type="button" aria-label="Toggle user interface mode">
+          <span class="toggle-dark"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-moon"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path></svg></span>
+          <span class="toggle-light"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-sun"><circle cx="12" cy="12" r="5"></circle><line x1="12" y1="1" x2="12" y2="3"></line><line x1="12" y1="21" x2="12" y2="23"></line><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line><line x1="1" y1="12" x2="3" y2="12"></line><line x1="21" y1="12" x2="23" y2="12"></line><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line></svg></span>
+        </button>
+        
+
+        </div>
+    </div>
+  </nav>
+</header>
+
+
+</div>
+
+    <div class="wrap container-xxl" role="document">
+      <div class="content">
+        
+<article>
+  <div class="row flex-lg-nowrap">
+    <div class="col-lg-2 col-xl-2">
+
+    </div>
+    
+    <nav class="docs-toc d-none d-xl-block col-xl-4" aria-label="Secondary navigation">
+      <div class="d-xl-none">
+  <button class="btn btn-outline-primary btn-sm doks-toc-toggle collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#onThisPage" aria-controls="doks-docs-nav" aria-expanded="false" aria-label="Toggle On this page navigation">
+    <span>Daftar isi</span>
+    <span>
+      <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" class="doks doks-expand" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><title>Expand</title><polyline points="7 13 12 18 17 13"></polyline><polyline points="7 6 12 11 17 6"></polyline></svg>
+      <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" class="doks doks-collapse" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><title>Collapse</title><polyline points="17 11 12 6 7 11"></polyline><polyline points="17 18 12 13 7 18"></polyline></svg>
+    </span>
+  </button>
+  <div class="collapse" id="onThisPage">
+    <div class="card card-body mt-3 py-1">
+      <div class="page-links">
+        <nav id="TableOfContents">
+  <ul>
+    <li><a href="#sepintas-tentang-linux">Sepintas tentang Linux</a></li>
+    <li><a href="#perintah-dasar-linux">Perintah Dasar Linux</a>
+      <ul>
+        <li><a href="#perintah-_pwd_">Perintah <em>pwd</em></a></li>
+        <li><a href="#perintah-_cd_">Perintah <em>cd</em></a></li>
+        <li><a href="#perintah-_ls_">Perintah <em>ls</em></a></li>
+        <li><a href="#perintah-_cat_">Perintah <em>cat</em></a></li>
+        <li><a href="#perintah-_cp_">Perintah <em>cp</em></a></li>
+        <li><a href="#perintah-_mv_">Perintah <em>mv</em></a></li>
+        <li><a href="#perintah-_mkdir_">Perintah <em>mkdir</em></a></li>
+        <li><a href="#perintah-_rmdir_">Perintah <em>rmdir</em></a></li>
+        <li><a href="#perintah-_rm_">perintah <em>rm</em></a></li>
+        <li><a href="#perintah-_touch_">Perintah <em>touch</em></a></li>
+        <li><a href="#perintah-_locate_">Perintah <em>locate</em></a></li>
+        <li><a href="#perintah-_find_">Perintah <em>find</em></a></li>
+        <li><a href="#perintah-_grep_">Perintah <em>grep</em></a></li>
+        <li><a href="#perintah-_sudo_">Perintah <em>sudo</em></a></li>
+        <li><a href="#perintah-_df_">Perintah <em>df</em></a></li>
+        <li><a href="#perintah-_du_">Perintah <em>du</em></a></li>
+        <li><a href="#perintah-_head_">Perintah <em>head</em></a></li>
+        <li><a href="#perintah-_tail_">Perintah <em>tail</em></a></li>
+        <li><a href="#perintah-_diff_">Perintah <em>diff</em></a></li>
+        <li><a href="#perintah-_tar_">Perintah <em>tar</em></a></li>
+        <li><a href="#perintah-_chmod_">Perintah <em>chmod</em></a></li>
+        <li><a href="#perintah-_jobs_">Perintah <em>jobs</em></a></li>
+        <li><a href="#perintah-_kill_">Perintah <em>kill</em></a></li>
+        <li><a href="#perintah-_ping_">perintah <em>ping</em></a></li>
+        <li><a href="#perintah-_wget_">Perintah <em>wget</em></a></li>
+        <li><a href="#perintah-_uname_">Perintah <em>uname</em></a></li>
+        <li><a href="#perintah-_top_">Perintah <em>top</em></a></li>
+        <li><a href="#perintah-_history_">Perintah <em>history</em></a></li>
+        <li><a href="#perintah-_man_">Perintah <em>man</em></a></li>
+        <li><a href="#perintah-_echo_">perintah <em>echo</em></a></li>
+        <li><a href="#perintah-_zip_--_unzip_">perintah <em>zip</em> , <em>unzip</em></a></li>
+        <li><a href="#perintah-_hostname_">perintah <em>hostname</em></a></li>
+        <li><a href="#perintah-_useradd_-_userdel_">Perintah <em>useradd</em>, <em>userdel</em></a></li>
+      </ul>
+    </li>
+  </ul>
+</nav>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="page-links d-none d-xl-block">
+  <h3>Daftar isi</h3>
+  <nav id="TableOfContents">
+  <ul>
+    <li><a href="#sepintas-tentang-linux">Sepintas tentang Linux</a></li>
+    <li><a href="#perintah-dasar-linux">Perintah Dasar Linux</a>
+      <ul>
+        <li><a href="#perintah-_pwd_">Perintah <em>pwd</em></a></li>
+        <li><a href="#perintah-_cd_">Perintah <em>cd</em></a></li>
+        <li><a href="#perintah-_ls_">Perintah <em>ls</em></a></li>
+        <li><a href="#perintah-_cat_">Perintah <em>cat</em></a></li>
+        <li><a href="#perintah-_cp_">Perintah <em>cp</em></a></li>
+        <li><a href="#perintah-_mv_">Perintah <em>mv</em></a></li>
+        <li><a href="#perintah-_mkdir_">Perintah <em>mkdir</em></a></li>
+        <li><a href="#perintah-_rmdir_">Perintah <em>rmdir</em></a></li>
+        <li><a href="#perintah-_rm_">perintah <em>rm</em></a></li>
+        <li><a href="#perintah-_touch_">Perintah <em>touch</em></a></li>
+        <li><a href="#perintah-_locate_">Perintah <em>locate</em></a></li>
+        <li><a href="#perintah-_find_">Perintah <em>find</em></a></li>
+        <li><a href="#perintah-_grep_">Perintah <em>grep</em></a></li>
+        <li><a href="#perintah-_sudo_">Perintah <em>sudo</em></a></li>
+        <li><a href="#perintah-_df_">Perintah <em>df</em></a></li>
+        <li><a href="#perintah-_du_">Perintah <em>du</em></a></li>
+        <li><a href="#perintah-_head_">Perintah <em>head</em></a></li>
+        <li><a href="#perintah-_tail_">Perintah <em>tail</em></a></li>
+        <li><a href="#perintah-_diff_">Perintah <em>diff</em></a></li>
+        <li><a href="#perintah-_tar_">Perintah <em>tar</em></a></li>
+        <li><a href="#perintah-_chmod_">Perintah <em>chmod</em></a></li>
+        <li><a href="#perintah-_jobs_">Perintah <em>jobs</em></a></li>
+        <li><a href="#perintah-_kill_">Perintah <em>kill</em></a></li>
+        <li><a href="#perintah-_ping_">perintah <em>ping</em></a></li>
+        <li><a href="#perintah-_wget_">Perintah <em>wget</em></a></li>
+        <li><a href="#perintah-_uname_">Perintah <em>uname</em></a></li>
+        <li><a href="#perintah-_top_">Perintah <em>top</em></a></li>
+        <li><a href="#perintah-_history_">Perintah <em>history</em></a></li>
+        <li><a href="#perintah-_man_">Perintah <em>man</em></a></li>
+        <li><a href="#perintah-_echo_">perintah <em>echo</em></a></li>
+        <li><a href="#perintah-_zip_--_unzip_">perintah <em>zip</em> , <em>unzip</em></a></li>
+        <li><a href="#perintah-_hostname_">perintah <em>hostname</em></a></li>
+        <li><a href="#perintah-_useradd_-_userdel_">Perintah <em>useradd</em>, <em>userdel</em></a></li>
+      </ul>
+    </li>
+  </ul>
+</nav>
+  </div>
+
+    </nav>
+    <main class="docs-content col-lg-11 col-xl-9">
+    
+        <nav aria-label="breadcrumb">
+          <ol class="breadcrumb">
+            <li class="breadcrumb-item"><a href="/">Home</a></li>
+<li class="breadcrumb-item"><a href="/artikel/">Artikel</a></li>
+<li class="breadcrumb-item active" aria-current="page">Perintah dasar Linux</li>
+          </ol>
+        </nav>
+      
+          <h1>Perintah dasar Linux</h1>
+          
+<p><small>Posted&nbsp;in&nbsp;<a class="stretched-link position-relative link-muted" href="https://kaban.my.id/categories/tools/">Tools</a>, <a class="stretched-link position-relative link-muted" href="https://kaban.my.id/categories/pemrograman/">Pemrograman</a>, <a class="stretched-link position-relative link-muted" href="https://kaban.my.id/categories/networking/">Networking</a>&nbsp;on&nbsp;July 18, 2020 by <a class="stretched-link position-relative" href="/contributors/roberto-kaban/">Roberto Kaban</a>&nbsp;&hyphen;&nbsp;<strong>8&nbsp;min read</strong></small><p>
+      <p class="lead"></p>
+      <nav class="d-xl-none" aria-label="Quaternary navigation">
+        <div class="d-xl-none">
+  <button class="btn btn-outline-primary btn-sm doks-toc-toggle collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#onThisPage" aria-controls="doks-docs-nav" aria-expanded="false" aria-label="Toggle On this page navigation">
+    <span>Daftar isi</span>
+    <span>
+      <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" class="doks doks-expand" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><title>Expand</title><polyline points="7 13 12 18 17 13"></polyline><polyline points="7 6 12 11 17 6"></polyline></svg>
+      <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" class="doks doks-collapse" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><title>Collapse</title><polyline points="17 11 12 6 7 11"></polyline><polyline points="17 18 12 13 7 18"></polyline></svg>
+    </span>
+  </button>
+  <div class="collapse" id="onThisPage">
+    <div class="card card-body mt-3 py-1">
+      <div class="page-links">
+        <nav id="TableOfContents">
+  <ul>
+    <li><a href="#sepintas-tentang-linux">Sepintas tentang Linux</a></li>
+    <li><a href="#perintah-dasar-linux">Perintah Dasar Linux</a>
+      <ul>
+        <li><a href="#perintah-_pwd_">Perintah <em>pwd</em></a></li>
+        <li><a href="#perintah-_cd_">Perintah <em>cd</em></a></li>
+        <li><a href="#perintah-_ls_">Perintah <em>ls</em></a></li>
+        <li><a href="#perintah-_cat_">Perintah <em>cat</em></a></li>
+        <li><a href="#perintah-_cp_">Perintah <em>cp</em></a></li>
+        <li><a href="#perintah-_mv_">Perintah <em>mv</em></a></li>
+        <li><a href="#perintah-_mkdir_">Perintah <em>mkdir</em></a></li>
+        <li><a href="#perintah-_rmdir_">Perintah <em>rmdir</em></a></li>
+        <li><a href="#perintah-_rm_">perintah <em>rm</em></a></li>
+        <li><a href="#perintah-_touch_">Perintah <em>touch</em></a></li>
+        <li><a href="#perintah-_locate_">Perintah <em>locate</em></a></li>
+        <li><a href="#perintah-_find_">Perintah <em>find</em></a></li>
+        <li><a href="#perintah-_grep_">Perintah <em>grep</em></a></li>
+        <li><a href="#perintah-_sudo_">Perintah <em>sudo</em></a></li>
+        <li><a href="#perintah-_df_">Perintah <em>df</em></a></li>
+        <li><a href="#perintah-_du_">Perintah <em>du</em></a></li>
+        <li><a href="#perintah-_head_">Perintah <em>head</em></a></li>
+        <li><a href="#perintah-_tail_">Perintah <em>tail</em></a></li>
+        <li><a href="#perintah-_diff_">Perintah <em>diff</em></a></li>
+        <li><a href="#perintah-_tar_">Perintah <em>tar</em></a></li>
+        <li><a href="#perintah-_chmod_">Perintah <em>chmod</em></a></li>
+        <li><a href="#perintah-_jobs_">Perintah <em>jobs</em></a></li>
+        <li><a href="#perintah-_kill_">Perintah <em>kill</em></a></li>
+        <li><a href="#perintah-_ping_">perintah <em>ping</em></a></li>
+        <li><a href="#perintah-_wget_">Perintah <em>wget</em></a></li>
+        <li><a href="#perintah-_uname_">Perintah <em>uname</em></a></li>
+        <li><a href="#perintah-_top_">Perintah <em>top</em></a></li>
+        <li><a href="#perintah-_history_">Perintah <em>history</em></a></li>
+        <li><a href="#perintah-_man_">Perintah <em>man</em></a></li>
+        <li><a href="#perintah-_echo_">perintah <em>echo</em></a></li>
+        <li><a href="#perintah-_zip_--_unzip_">perintah <em>zip</em> , <em>unzip</em></a></li>
+        <li><a href="#perintah-_hostname_">perintah <em>hostname</em></a></li>
+        <li><a href="#perintah-_useradd_-_userdel_">Perintah <em>useradd</em>, <em>userdel</em></a></li>
+      </ul>
+    </li>
+  </ul>
+</nav>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="page-links d-none d-xl-block">
+  <h3>Daftar isi</h3>
+  <nav id="TableOfContents">
+  <ul>
+    <li><a href="#sepintas-tentang-linux">Sepintas tentang Linux</a></li>
+    <li><a href="#perintah-dasar-linux">Perintah Dasar Linux</a>
+      <ul>
+        <li><a href="#perintah-_pwd_">Perintah <em>pwd</em></a></li>
+        <li><a href="#perintah-_cd_">Perintah <em>cd</em></a></li>
+        <li><a href="#perintah-_ls_">Perintah <em>ls</em></a></li>
+        <li><a href="#perintah-_cat_">Perintah <em>cat</em></a></li>
+        <li><a href="#perintah-_cp_">Perintah <em>cp</em></a></li>
+        <li><a href="#perintah-_mv_">Perintah <em>mv</em></a></li>
+        <li><a href="#perintah-_mkdir_">Perintah <em>mkdir</em></a></li>
+        <li><a href="#perintah-_rmdir_">Perintah <em>rmdir</em></a></li>
+        <li><a href="#perintah-_rm_">perintah <em>rm</em></a></li>
+        <li><a href="#perintah-_touch_">Perintah <em>touch</em></a></li>
+        <li><a href="#perintah-_locate_">Perintah <em>locate</em></a></li>
+        <li><a href="#perintah-_find_">Perintah <em>find</em></a></li>
+        <li><a href="#perintah-_grep_">Perintah <em>grep</em></a></li>
+        <li><a href="#perintah-_sudo_">Perintah <em>sudo</em></a></li>
+        <li><a href="#perintah-_df_">Perintah <em>df</em></a></li>
+        <li><a href="#perintah-_du_">Perintah <em>du</em></a></li>
+        <li><a href="#perintah-_head_">Perintah <em>head</em></a></li>
+        <li><a href="#perintah-_tail_">Perintah <em>tail</em></a></li>
+        <li><a href="#perintah-_diff_">Perintah <em>diff</em></a></li>
+        <li><a href="#perintah-_tar_">Perintah <em>tar</em></a></li>
+        <li><a href="#perintah-_chmod_">Perintah <em>chmod</em></a></li>
+        <li><a href="#perintah-_jobs_">Perintah <em>jobs</em></a></li>
+        <li><a href="#perintah-_kill_">Perintah <em>kill</em></a></li>
+        <li><a href="#perintah-_ping_">perintah <em>ping</em></a></li>
+        <li><a href="#perintah-_wget_">Perintah <em>wget</em></a></li>
+        <li><a href="#perintah-_uname_">Perintah <em>uname</em></a></li>
+        <li><a href="#perintah-_top_">Perintah <em>top</em></a></li>
+        <li><a href="#perintah-_history_">Perintah <em>history</em></a></li>
+        <li><a href="#perintah-_man_">Perintah <em>man</em></a></li>
+        <li><a href="#perintah-_echo_">perintah <em>echo</em></a></li>
+        <li><a href="#perintah-_zip_--_unzip_">perintah <em>zip</em> , <em>unzip</em></a></li>
+        <li><a href="#perintah-_hostname_">perintah <em>hostname</em></a></li>
+        <li><a href="#perintah-_useradd_-_userdel_">Perintah <em>useradd</em>, <em>userdel</em></a></li>
+      </ul>
+    </li>
+  </ul>
+</nav>
+  </div>
+
+      </nav>
+      <h2 id="sepintas-tentang-linux">Sepintas tentang Linux <a href="#sepintas-tentang-linux" class="anchor" aria-hidden="true">#</a></h2>
+<p>Linux adalah keluarga sistem operasi turunan Unix yang bersifat <em>open-source</em> dan didasarkan pada Linux Kernel. Terdapat berbagai distribusi (Distro) linux yang populer seperti Ubuntu, Fedora, Mint, Debian, dan lain-lain.</p>
+<p>Sejak pertama kali dirilis pada tahun 1991, popularitas Linux terus meroket karena sifatnya yang open-source. User bebas memodifikasi Linux dan mendistribusikannya dengan memakai namanya sendiri.</p>
+<p>Ketika mengoperasikan Linux, kita dapat menggunakan shell yang merupakan interface yang menyediakan akses ke layanan sistem operasi. Penggunaan <a href="https://kaban.my.id/mengenal-cli-command-line-interface/" title="Mengenal Command Line Interface">command-line interface (CLI)</a> sangat disarankan karena lebih powerful dan efektif. Task atau tugas yang membutuhkan proses dengan banyak langkah melalui GUI dapat dilakukan hanya dalam waktu sekian detik dengan mengetikkan command atau perintah ke CLI.</p>
+<p>Jadi, ketika hendak menggunakan Linux, kita sebaiknya tahu perintah dasar Linux. Di artikel ini, kita akan mempelajari perintah Linux yang paling mendasar.</p>
+<h2 id="perintah-dasar-linux">Perintah Dasar Linux <a href="#perintah-dasar-linux" class="anchor" aria-hidden="true">#</a></h2>
+<p>Sebelum menjabarkan perintah dasar sistem operasi Linux, Kita harus membuka <em>command line</em> terlebih dulu.</p>
+<p>Berikut daftar command dasar Linux:</p>
+<h3 id="perintah-_pwd_">Perintah <em>pwd</em> <a href="#perintah-_pwd_" class="anchor" aria-hidden="true">#</a></h3>
+<p>Perintah <code>pwd</code> <em>(Print Working Directory)</em> berfungsi untuk mencari path dari direktori (folder) yang Anda gunakan saat ini. Perintah ini akan mengembalikan path yang absolut (penuh), yang pada dasarnya merupakan path semua direktori yang diawali dengan garis miring depan (/). Contoh dari path absolut adalah <code>/home/username</code>.</p>
+<h3 id="perintah-_cd_">Perintah <em>cd</em> <a href="#perintah-_cd_" class="anchor" aria-hidden="true">#</a></h3>
+<p>Untuk pindah direktori gunakan perintah <code>cd</code> <em>(change direktory)</em>. Perintah ini harus disertakan nama direktori yang dituju beserta lokasi/path.</p>
+<p>Contohnya, saat ini Kita sedang berada di direktori <code>/home/username/Documents</code> dan ingin membuka direktori <code>Photos</code> yang berada di direktori <code>Documents</code>. Untuk melakukannya, kita mengetikkan <code>cd Photos</code></p>
+<p>Contoh lainnya, sekarang kita sedang berada di direktori <code>/home/username/Documents/Photos</code>, kemudian ingin berpindah ke direktori <code>/home/username/Documents/Movies</code> maka kita dapat mealukannya dengan mengetikkan path secara langsung, <code> cd /home/username/Documents/Movies</code></p>
+<p>Alternatif lain, kita dapat berpindah direktori dengan cara berikut:</p>
+<p><code>cd ..</code> (dengan dua tanda titik) untuk memindahkan satu direktori ke atas.</p>
+<p><code>cd-</code> (dengan tanda penghubung) untuk berpindah ke direktori sebelumnya.</p>
+<h3 id="perintah-_ls_">Perintah <em>ls</em> <a href="#perintah-_ls_" class="anchor" aria-hidden="true">#</a></h3>
+<p>Perintah <code>ls</code> <em>(lists)</em> digunakan untuk untuk melihat konten atau isi dari direktori. Secara default, command ini akan menampilkan isi dari direktori yang Anda gunakan saat ini.
+Sebgai contoh, kita sedang berada pada direktori <code>/home/username/Documents</code> kemudian kita ketikkan <code>ls</code> maka akan ditampilkan isi (file dan direktori) yang ada pada direktori kita berada.</p>
+<p>Jika ingin melihat isi direktori lain, ketik <code>ls</code>, disusul dengan path direktori. Contoh, ketik <code>ls /home/username/Downloads</code> untuk melihat isi direktori <code>/home/username/Downloads</code>.</p>
+<p>Untuk menampilkan file yang tersembunyi dalam direktori dapat menggunakan <code>ls -a</code>
+Untuk menampilkan file dan direktori secara detail beserta hak akses, ukuran dan pemilik (owner) dengan perintah <code>ls -la</code></p>
+<h3 id="perintah-_cat_">Perintah <em>cat</em> <a href="#perintah-_cat_" class="anchor" aria-hidden="true">#</a></h3>
+<p><code>cat</code> <em>(concatenate)</em> perintah untuk membuat daftar konten atau isi file pada standard output (sdout). Untuk menjalankan perintah ini, ketik <code>cat</code> yang kemudian diikuti dengan nama dan ekstensi file.</p>
+<p>Sebagai contoh, kita ingin membuat file baru maka dapat menggunakan perintah: <code>cat &gt; biodata.txt</code> kemudian <code>enter</code> akan menghasilkan sebuah file baru dengan nama <code>biodata.txt</code> ketikkan sembarang kalimat dan tekan tombol <code>enter</code> selanjutnya <code>control</code> + <code>c</code> untuk menyimpan.</p>
+<p>Menggabungkan isi file dapat menggunakan perintah
+<code>cat file1 file2 &gt; file3</code> artinya kita menggabungkan isi <code>file1</code> dan <code>file2</code> kedalam file baru yang bernama <code>file3</code></p>
+<h3 id="perintah-_cp_">Perintah <em>cp</em> <a href="#perintah-_cp_" class="anchor" aria-hidden="true">#</a></h3>
+<p>Perintah <code>cp</code> <em>(copy)</em> untuk menyalin file dari direktori saat ini ke direktori yang berbeda.
+Contohnya, <code>cp biodata.txt /home/username/Documents</code> untuk copy file <code>biodata.txt</code> dari direktori saat ini ke direktori <code>/home/username/Documents</code>.</p>
+<p>contoh selanjutnya, kita copy file dari direktori lain (bukan direktori aktif kita sekarang) ke direktori lain
+<code>cp /home/username/Documents/fotoku.jpg /home/username/Documents/Photos</code> artinya, kita copy file <code>fotoku.jpg</code> dari direktori <code>/home/username/Documents/</code> ke direktori <code>/home/username/Documents/Photos</code></p>
+<h3 id="perintah-_mv_">Perintah <em>mv</em> <a href="#perintah-_mv_" class="anchor" aria-hidden="true">#</a></h3>
+<p>Perintah <code>mv</code> <em>(move)</em> digunakan untuk memindahkan (mengubah) file atau direktori. Penggunaan perintah <strong>mv</strong> sama dengan penggunaan perintah <strong>cp</strong> .</p>
+<p>Contoh penggunaan, <code>mv /home/username/Documents/fotoku.jpg /home/username/Documents/Photos</code> artinya, kita memindahkan file <code>fotoku.jpg</code> dari direktori <code>/home/username/Documents/</code> ke direktori <code>/home/username/Documents/Photos</code> .</p>
+<p>contoh lain, <code>mv file1.txt file2.txt</code> berarti kita mengganti nama file <code>file1.txt</code> menjadi <code>file2.txt</code></p>
+<h3 id="perintah-_mkdir_">Perintah <em>mkdir</em> <a href="#perintah-_mkdir_" class="anchor" aria-hidden="true">#</a></h3>
+<p>Perintah <code>mkdir</code> <em>(make directory)</em> digunakan untuk membuat direktori.
+Contoh penggunaan, <code>mkdir foto</code> akan membuat sebuah direktori (folder) dengan nama <code>foto</code> pada direktori yang sedang aktif (direktori kita mengetikkan perintah).</p>
+<p>contoh lain, <code> mkdir /home/username/Documents/foto</code> akan membuat sebuah direktori dengan nama <code>foto</code> pada direktori <code> /home/username/Documents/</code></p>
+<h3 id="perintah-_rmdir_">Perintah <em>rmdir</em> <a href="#perintah-_rmdir_" class="anchor" aria-hidden="true">#</a></h3>
+<p>Perintah <code>rmdir</code> (remove directory), digunakan untuk menghapus direktori kosong.
+contoh penggunaan, <code>rmdir foto</code> akan menghapus direktori <code>foto</code> pada direktori yang sedang aktif (direktori kita mengetikkan perintah).</p>
+<p>contoh lain, <code> rmdir /home/username/Documents/foto</code> akan menghapus direktori <code>foto</code> pada direktori <code> /home/username/Documents/</code></p>
+<h3 id="perintah-_rm_">perintah <em>rm</em> <a href="#perintah-_rm_" class="anchor" aria-hidden="true">#</a></h3>
+<p>Perintah <code>rm</code> (remove) berfungsi untuk menghapus direktori beserta isinya.
+contoh penggunaan, <code>rm foto</code> akan menghapus direktori <code>foto</code> beserta isinya pada direktori yang sedang aktif (direktori kita mengetikkan perintah).</p>
+<p>contoh lain, <code> rmdir /home/username/Documents/foto</code> akan menghapus direktori <code>foto</code> beserta isinya pada direktori <code> /home/username/Documents/</code></p>
+<p>untuk menghapus file, <code>rm fotoku.jpg</code> berarti kita menghapus file yang bernama <code>fotoku.jpg</code></p>
+<p>Hati-hati aat menggunakan perintah <code>rm</code>, karena file yang sudah dihapus tidak dapat dikembalikan lagi.😁</p>
+<h3 id="perintah-_touch_">Perintah <em>touch</em> <a href="#perintah-_touch_" class="anchor" aria-hidden="true">#</a></h3>
+<p>perintah <code>touch</code> digunakan untuk membuat file baru yang kosong melalui baris perintah Linux.
+Sebagai contoh, <code>touch /home/username/Documents/biodataku.html</code> untuk membuat file <code>biodataku.html</code> di direktori <code>/home/username/Documents/</code></p>
+<h3 id="perintah-_locate_">Perintah <em>locate</em> <a href="#perintah-_locate_" class="anchor" aria-hidden="true">#</a></h3>
+<p>Perintah <code>locate</code> digunakan untuk mencari file, fungsinya sama seperti pencarian di Windows. Apabila dipasangkan dengan argumen <code>-i </code>, perintah ini akan bersifat <strong>case-insensitive</strong> sehingga file dapat dicari meski kita tidak mengingat namanya dengan tepat.</p>
+<p>Untuk mencari file yang memuat dua atau lebih dari dua kata, gunakan tanda bintang (*).
+Misalnya, perintah <code>locate -i tugas*kampus</code> akan mencari file yang pada namanya termuat kata &ldquo;tugas&rdquo; dan “kampus”, dengan mengabaikan penulisan nama file huruf besar atau kecil.</p>
+<h3 id="perintah-_find_">Perintah <em>find</em> <a href="#perintah-_find_" class="anchor" aria-hidden="true">#</a></h3>
+<p>pPrintah <code>find</code> juga dapat digunakan untuk mencari file dan direktori. Bedanya, perintah <code>find</code> lebih ditujukan untuk mencari file yang berlokasi di dalam direktori yang diberikan.</p>
+<p>Contoh, perintah <code>find /home/ -name catatan.txt</code> akan mencari file bernama <code>catatan.txt</code> di dalam direktori <code>home</code> dan subdirektorinya.</p>
+<h3 id="perintah-_grep_">Perintah <em>grep</em> <a href="#perintah-_grep_" class="anchor" aria-hidden="true">#</a></h3>
+<p>Perintah <code>grep</code> untuk melakukan pencarian di semua teks di dalam sebuah file.</p>
+<p>Sebagai contoh, <code>grep medan catatanku.txt</code> akan mencari kata <code>medan</code> di file <code>catatanku.txt</code>. Baris yang memuat kata yang dicari akan ditampilkan seluruhnya.</p>
+<h3 id="perintah-_sudo_">Perintah <em>sudo</em> <a href="#perintah-_sudo_" class="anchor" aria-hidden="true">#</a></h3>
+<p>Perintah <code>sudo</code> (SuperUser Do) berfungsi untuk menjalankan task yang memerlukan hak akses (permission) administrative atau root.</p>
+<h3 id="perintah-_df_">Perintah <em>df</em> <a href="#perintah-_df_" class="anchor" aria-hidden="true">#</a></h3>
+<p>Perintah <code>df</code> digunakan untuk mendapatkan laporan tentang penggunaan disk space sistem. Laporan yang ditampilkan dalam bentuk persentase dan satuan KB. Bila ingin melihat laporan berupa satuan megabyte, ketik <code>df -m</code>.</p>
+<h3 id="perintah-_du_">Perintah <em>du</em> <a href="#perintah-_du_" class="anchor" aria-hidden="true">#</a></h3>
+<p>Perintah <code>du</code> merupakan perintah dasar Linux yang berfungsi untuk mengecek seberapa banyak space yang digunakan oleh suatu file atau direktori. Hanya saja, untuk format ringkasan, penggunaan disk yang ditampilkan berupa nomor blok disk alih-alih format ukuran pada umumnya. Jika ingin melihat jumlah penggunaan disk dalam satuan byte, kilobyte, dan megabyte, tambahkan argumen <code>-h</code> ke baris perintah.</p>
+<h3 id="perintah-_head_">Perintah <em>head</em> <a href="#perintah-_head_" class="anchor" aria-hidden="true">#</a></h3>
+<p>Perintah <code>head</code> digunakan untuk melihat baris pertama dari semua file teks. Secara default, perintah ini akan menampilkan sepuluh baris pertama. Namun, jumlah baris tersebut dapat diubah sesuai keinginan kita. Misalnya, jika  hanya ingin menampilkan lima baris pertama, ketik <code>head -n 5 namafile.ext</code></p>
+<h3 id="perintah-_tail_">Perintah <em>tail</em> <a href="#perintah-_tail_" class="anchor" aria-hidden="true">#</a></h3>
+<p>Perintah <code>tail</code> memiliki fungsi yang sama dengan perintah <code>head</code>. Hanya saja, perintah <code>tail</code> akan menampilkan sepuluh baris terakhir dari suatu file. Misalnya, <code>tail -n namafile.ext</code>.</p>
+<h3 id="perintah-_diff_">Perintah <em>diff</em> <a href="#perintah-_diff_" class="anchor" aria-hidden="true">#</a></h3>
+<p>Perintah <code>diff</code> digunakan untuk membandingkan konten atau isi dua file berdasarkan baris demi baris. Setelah menganalisis file, perintah ini akan menghasilkan output berupa line atau baris yang tidak cocok. Programmer sering menggunakan perintah ini ketika membuat perubahan program.</p>
+<p>contoh penggunaan <code>diff file1.ext file2.ext</code>.</p>
+<h3 id="perintah-_tar_">Perintah <em>tar</em> <a href="#perintah-_tar_" class="anchor" aria-hidden="true">#</a></h3>
+<p>Perintah <code>tar</code> digunakan untuk mengarsipkan banyak file ke dalam format file arsip tar</p>
+<h3 id="perintah-_chmod_">Perintah <em>chmod</em> <a href="#perintah-_chmod_" class="anchor" aria-hidden="true">#</a></h3>
+<p>Perintah <code>chmod</code> digunakan untuk membaca, menulis, dan menjalankan permission (hak akses) file dan direktori.</p>
+<h3 id="perintah-_jobs_">Perintah <em>jobs</em> <a href="#perintah-_jobs_" class="anchor" aria-hidden="true">#</a></h3>
+<p>Perintah <code>jobs</code> akan menampilkan semua jobs saat ini beserta dengan statusnya. Pada dasarnya job merupakan proses yang dimulai oleh shell.</p>
+<h3 id="perintah-_kill_">Perintah <em>kill</em> <a href="#perintah-_kill_" class="anchor" aria-hidden="true">#</a></h3>
+<p>Perintah <code>kill</code> akan mengirimkan sinyal tertentu ke aplikasi yang bermasalah dan memberi instruksi kepada aplikasi tersebut untuk berakhir atau mati dengan sendirinya.</p>
+<p>Totalnya ada 64 sinyal yang dapat digunakan, tapi biasanya orang-orang hanya menggunakan dua sinyal, yakni:</p>
+<p>SIGTERM (15) – meminta program untuk berhenti bekerja dan memberikannya waktu untuk menyimpan semua progress. Jika tidak ada sinyal khusus yang ditentukan ketika memasukkan perintah kill, sinyal inilah yang akan digunakan.</p>
+<p>SIGKILL (9) – memaksa program untuk berhenti bekerja saat itu juga. Progress yang tidak tersimpan akan hilang.</p>
+<p>Selain sinyal, Kita juga harus tahu nomor identifikasi proses (process identification number – PID) dari sebuah program yang hendak dihentikan (kill). Jika tidak tahu PID-nya, Kita bisa menjalankan perintah <code>ps ux</code>.</p>
+<p>Setelah mengetahui sinyal yang ingin digunakan dan PID program, ketikkan <code> kill [signal option] PID</code>.</p>
+<h3 id="perintah-_ping_">perintah <em>ping</em> <a href="#perintah-_ping_" class="anchor" aria-hidden="true">#</a></h3>
+<p>Perintah <code>ping</code> berfungsi untuk mengecek status konektivitas ke server. Misalnya, <code>ping google.com</code>, command akan mengecek apakah  sudah terhubung ke Google atau belum dan juga mengukur waktu respons.</p>
+<h3 id="perintah-_wget_">Perintah <em>wget</em> <a href="#perintah-_wget_" class="anchor" aria-hidden="true">#</a></h3>
+<p>Perintah <code>wget</code> digunakan mengunduh file dari internet dengan bantuan command wget. Anda hanya perlu mengetikkan wget yang diikuti dengan link unduhan.</p>
+<h3 id="perintah-_uname_">Perintah <em>uname</em> <a href="#perintah-_uname_" class="anchor" aria-hidden="true">#</a></h3>
+<p>Perintah <code>uname</code> (Unix Name) digunakan untuk menampilkan mencetak informasi lengkap mengenai sistem Linux, misalnya nama mesin, sistem operasi, kernel, dan lain-lain.</p>
+<h3 id="perintah-_top_">Perintah <em>top</em> <a href="#perintah-_top_" class="anchor" aria-hidden="true">#</a></h3>
+<p>Sebagai terminal yang setara dengan Task Manager di Windows, perintah <code>top</code> akan menampilkan daftar proses yang sedang berlangsung dan seberapa banyak ruang CPU yang digunakan oleh tiap proses tersebut. Melakukan pengawasan terhadap penggunaan resource sistem sangatlah disarankan, terutama ketika Anda harus mencari tahu mana proses yang perlu dimatikan karena terlalu banyak menggunakan resource.</p>
+<h3 id="perintah-_history_">Perintah <em>history</em> <a href="#perintah-_history_" class="anchor" aria-hidden="true">#</a></h3>
+<p>Perintah <code>history</code> untuk mengecek kembali (review) pernah yang sudah digunakan sebelumnya.</p>
+<h3 id="perintah-_man_">Perintah <em>man</em> <a href="#perintah-_man_" class="anchor" aria-hidden="true">#</a></h3>
+<p>Perintah <code>man</code> digunakan untuk menampilkan manual/ bantuan perintah pada linux. sebgai contoh <code>man tail</code> akan menampilkan opsi yang dapat digunakan pada perintah <code>tail</code>.</p>
+<h3 id="perintah-_echo_">perintah <em>echo</em> <a href="#perintah-_echo_" class="anchor" aria-hidden="true">#</a></h3>
+<p>Perintah <code>echo</code> dasar Linux ini digunakan untuk memindahkan beberapa data ke dalam satu file. Misalnya, jika ingin menambahkan teks, <code>Hello world</code> ke file yang bernama <code>hello.txt</code>, yang perlu diketik adalah <code>echo Hello, my name is John &gt;&gt; hello.txt</code></p>
+<h3 id="perintah-_zip_--_unzip_">perintah <em>zip</em> , <em>unzip</em> <a href="#perintah-_zip_--_unzip_" class="anchor" aria-hidden="true">#</a></h3>
+<p>Gunakan perintah ``zip untuk <strong>compress</strong> file ke arsip <em>zip</em> dan perintah <code>unzip</code> untuk mengekstrak file zip ke arsip zip.</p>
+<h3 id="perintah-_hostname_">perintah <em>hostname</em> <a href="#perintah-_hostname_" class="anchor" aria-hidden="true">#</a></h3>
+<p>Perintah <code>hostname</code> digunakan untuk mengetahui nama host/network. Dengan menambahkan -I di akhir perintah, alamat IP jaringan akan ditampilkan.</p>
+<h3 id="perintah-_useradd_-_userdel_">Perintah <em>useradd</em>, <em>userdel</em> <a href="#perintah-_useradd_-_userdel_" class="anchor" aria-hidden="true">#</a></h3>
+<p><code>useradd</code> digunakan untuk membuat user baru, sedangkan <code>passwd</code> untuk menambahkan password ke akun user tersebut. Untuk menambahkan user bernama alfa, misalnya, cukup ketikkan <code>useradd alfa  passwd 12345678</code> untuk menambahkan passwordnya.</p>
+<p>Cara menghapus user sama dengan menambahkan user. Untuk menghapus akun user, ketik <code>userdel UserName</code>.</p>
+
+
+      <div class="mt-4">
+        <a class="btn btn-light" href="https://kaban.my.id/tags/linux/" role="button">Linux</a>
+        <a class="btn btn-light" href="https://kaban.my.id/tags/perintah-linux/" role="button">Perintah Linux</a>
+        <a class="btn btn-light" href="https://kaban.my.id/tags/command-line/" role="button">Command Line</a>
+        <a class="btn btn-light" href="https://kaban.my.id/tags/command-line-linux/" role="button">Command line Linux</a>
+        </div>
+      <div id="disqus_thread"></div>
+<script type="application/javascript">
+    var disqus_config = function () {
+    
+    
+    
+    };
+    (function() {
+        if (["localhost", "127.0.0.1"].indexOf(window.location.hostname) != -1) {
+            document.getElementById('disqus_thread').innerHTML = 'Disqus comments not available by default when the website is previewed locally.';
+            return;
+        }
+        var d = document, s = d.createElement('script'); s.async = true;
+        s.src = '//' + "kaban-my-id" + '.disqus.com/embed.js';
+        s.setAttribute('data-timestamp', +new Date());
+        (d.head || d.body).appendChild(s);
+    })();
+</script>
+<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+<a href="https://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
+      <div class="page-footer-meta d-flex flex-column flex-md-row justify-content-between">
+       
+        </div>
+      <div class="docs-navigation d-flex justify-content-between">
+	
+	<a class="ms-auto" href="/mengenal-cli-command-line-interface/">
+			<div class="card my-1">
+				<div class="card-body py-2">
+					Mengenal Cli Command Line Interface &rarr;
+				</div>
+			</div>
+		</a>
+	</div>
+
+      
+    </main>
+    
+  </div>
+ 
+</article>
+<div class="related-posts">
+<div class="row justify-content-center">
+  <div class="col">
+    <h2 class="section-title">Informasi Lainnya</h2>
+  </div>
+</div>
+<div class="row row-cols-1 row-cols-md-2 row-cols-lg-3 g-lg-5">
+  <div class="col">
+    <div class="card">
+      <div class="card-body">
+        <article>
+          <h2 class="h3"><a class="stretched-link text-body" href="/mengenal-cli-command-line-interface/">Mengenal Cli Command Line Interface</a></h2>
+          <p>Kita mungkin sering mendengar istilah CLI dalam hal yang bergubungan dengan dunia IT, khususnya di bidang programmer. Apa sebenarnya CLI ini? </p>
+          
+<p><small>Posted&nbsp;in&nbsp;<a class="stretched-link position-relative link-muted" href="https://kaban.my.id/categories/tools/">Tools</a>, <a class="stretched-link position-relative link-muted" href="https://kaban.my.id/categories/pemrograman/">Pemrograman</a>, <a class="stretched-link position-relative link-muted" href="https://kaban.my.id/categories/networking/">Networking</a>&nbsp;on&nbsp;July 12, 2020 by <a class="stretched-link position-relative" href="/contributors/roberto-kaban/">Roberto Kaban</a>&nbsp;&hyphen;&nbsp;<strong>4&nbsp;min read</strong></small><p></article>
+      </div>
+    </div>
+  </div>
+  </div>
+</div>
+<section class="section section-sm">
+  <div class="container">
+    <div class="row justify-content-center text-center mt-lg-3">
+     
+    </div>
+  </div>
+</section>
+
+
+      </div>
+    </div>
+    
+    
+    <footer class="footer text-muted">
+  <div class="container-xxl">
+    <div class="row">
+      <div class="col-lg-8 order-last order-lg-first">
+        <ul class="list-inline">
+          <li class="list-inline-item">Powered by <a class="text-muted" href="https://gohugo.io/">Hugo</a> and <a class="text-muted" href="https://github.com/">Github</a></li>
+        </ul>
+      </div>
+      <div class="col-lg-8 order-first order-lg-last text-lg-end">
+        <ul class="list-inline">
+          </ul>
+      </div>
+    </div>
+  </div>
+</footer>
+    
+
+<script src="/js/bootstrap.min.5cdeb20ef814d367b4d5429ada9d342419eb34734de4713a71e5706485eaa75fa8d5d760c7a7f7ef20cb5494737eb8811729431813f22744c177384758c19081.js" integrity="sha512-XN6yDvgU02e01UKa2p00JBnrNHNN5HE6ceVwZIXqp1&#43;o1ddgx6f37yDLVJRzfriBFylDGBPyJ0TBdzhHWMGQgQ==" crossorigin="anonymous" defer></script>
+  <script src="/js/highlight.min.6e0bbb1ba7e7c09c5287a998de4147da3f56f6fed3dc91b747789519a1de6486b086542ebb2ed60527cfc4c32b8ce175a08c257392e98d7bb3f09661f2bd5666.js" integrity="sha512-bgu7G6fnwJxSh6mY3kFH2j9W9v7T3JG3R3iVGaHeZIawhlQuuy7WBSfPxMMrjOF1oIwlc5LpjXuz8JZh8r1WZg==" crossorigin="anonymous" defer></script>
+  <script src="/main.min.124171d9dd7beef16c3e35cd8394ad0c5ca7699608f699d747030ef0b0c3e4c2782454dd406f78e14ef7336f4a15de8676a808261d92f9b1858f1ec3ff720269.js" integrity="sha512-EkFx2d177vFsPjXNg5StDFynaZYI9pnXRwMO8LDD5MJ4JFTdQG944U73M29KFd6GdqgIJh2S&#43;bGFjx7D/3ICaQ==" crossorigin="anonymous" defer></script>
+  <script src="https://kaban.my.id/index.min.b8c02b215461f1620b54107eb618d339e01a558c9305fef1c0c29e2b2114ca8680f0bc805429aa2a2e0c5931806e3dc757b37a70cae15da4354474fa9958f5bc.js" integrity="sha512-uMArIVRh8WILVBB&#43;thjTOeAaVYyTBf7xwMKeKyEUyoaA8LyAVCmqKi4MWTGAbj3HV7N6cMrhXaQ1RHT6mVj1vA==" crossorigin="anonymous" defer></script>
+  
+    <div class="d-flex fixed-bottom pb-4 pb-lg-5 pe-4 pe-lg-5">
+      <a id="toTop" href="#" class="btn btn-outline-primary rounded-circle ms-auto p-2"><span class="visually-hidden">Top</span><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-chevron-up"><polyline points="18 15 12 9 6 15"></polyline></svg></a>
+    </div>
+    
+  </body>
+</html>
