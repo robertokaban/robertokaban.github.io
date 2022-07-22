@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Tutorial Python on </title>
+    <link>https://kaban.my.id/python/tutorial/</link>
+    <description>Recent content in Tutorial Python on </description>
+    <generator>Hugo -- gohugo.io</generator>
+    <lastBuildDate>Tue, 06 Oct 2020 08:49:15 +0000</lastBuildDate><atom:link href="https://kaban.my.id/python/tutorial/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Pengenalan Python</title>
+      <link>https://kaban.my.id/python/tutorial/pengenalan-python/</link>
+      <pubDate>Sun, 06 Dec 2020 08:49:31 +0000</pubDate>
+      
+      <guid>https://kaban.my.id/python/tutorial/pengenalan-python/</guid>
+      <description>Apa itu Python? # Python adalah bahasa pemrograman yang populer. Itu dibuat oleh Guido van Rossum, dan dirilis pada tahun 1991.
+Python digunakan untuk:
+ pengembangan web (sisi server), pengembangan perangkat lunak, matematika, skrip sistem.  Python dapat digunakan untuk keperluan apa saja? #  Python dapat digunakan di server untuk membuat aplikasi web. Python dapat digunakan bersama perangkat lunak untuk membuat alur kerja. Python dapat terhubung ke sistem database. Itu juga dapat membaca dan memodifikasi file.</description>
+    </item>
+    
+    <item>
+      <title>Instalasi Python</title>
+      <link>https://kaban.my.id/python/tutorial/instalasi-python/</link>
+      <pubDate>Sun, 06 Dec 2020 08:49:31 +0000</pubDate>
+      
+      <guid>https://kaban.my.id/python/tutorial/instalasi-python/</guid>
+      <description>Cek Instalasi Python # Untuk memeriksa apakah Anda telah menginstal python pada PC Windows, buka command prompt Windows, atau dari menu Run dengan menekan tombol Winkey + R kemudian ketikkan &amp;lsquo;cmd&amp;rsquo; kemudian tekan enter, selanjutnya ketikkan python --version seperti contoh dibawah:
+C:\Users\ Your Name&amp;gt;python --version  Untuk memeriksa apakah Anda telah menginstal python di Linux atau Mac, lalu di linux buka command prompt atau di Mac buka Terminal dan ketik:</description>
+    </item>
+    
+    <item>
+      <title>Menjalankan Python</title>
+      <link>https://kaban.my.id/python/tutorial/menjalankan-python/</link>
+      <pubDate>Sun, 06 Dec 2020 08:49:31 +0000</pubDate>
+      
+      <guid>https://kaban.my.id/python/tutorial/menjalankan-python/</guid>
+      <description>Untuk menjalankan Python ada banyak cara yang bisa dilakukan. Anda bisa menggunakan shell, terminal atau menggunakan IDE (Integrated Development Environment). Di bawah ini adalah langkah-langkah menjalankan Python dengan cara yang paling mudah.
+Cara menjalankan file python di Linux # Buka terminal CTRL+ALT+T Ketik python maka Anda akan masuk ke Python shell. Tuliskan script Python Anda, contoh: print(&amp;quot;Selamat datang di Python&amp;quot;). jika sudah tekan tombol ENTER, dan script Python akan dijalankan/eksekusi. Untuk keluar dari Python shell ketik exit() atau</description>
+    </item>
+    
+    <item>
+      <title>Aturan Penulisan</title>
+      <link>https://kaban.my.id/python/tutorial/aturan-penulisan/</link>
+      <pubDate>Sun, 06 Dec 2020 08:49:31 +0000</pubDate>
+      
+      <guid>https://kaban.my.id/python/tutorial/aturan-penulisan/</guid>
+      <description>Syntax bahasa Python hampir sama dengan bahasa pemrograman pada umumnya seperti Java atau PHP.
+Syntax Dasar # Dibawah ini adalah contoh fungsi Python yang digunakan untuk mencetak. Di Python untuk mencetak cukup gunakan fungsi print() , dimana sesuatu yang akan dicetak harus diletakkan diantara kurung buka dan kurung tutup, bahkan di Python versi 2.x Anda tidak harus menggunakan tanda kurung kurawal, cukup pisahkan dengan spasi.
+Jika ingin mencetak tipe data String langsung, Anda harus memasukanya ke dalam tanda kutip terlebih dahulu.</description>
+    </item>
+    
+    <item>
+      <title>Komentar Program</title>
+      <link>https://kaban.my.id/python/tutorial/komentar-program/</link>
+      <pubDate>Sun, 06 Dec 2020 08:49:31 +0000</pubDate>
+      
+      <guid>https://kaban.my.id/python/tutorial/komentar-program/</guid>
+      <description>Apa itu komentar program? # Komentar (comment) adalah kode di dalam script Python yang tidak dieksekusi atau tidak dijalankan mesin. Komentar hanya digunakan untuk menandai atau memberikan keterangan tertulis pada script.
+Komentar biasa digunakan untuk membiarkan orang lain memahami apa yang dilakukan script. atau untuk mengingatkan kepada programmer sendiri jika suatu saat kembali mengedit script tersebut.
+Untuk menggunakan komentar anda cukup menulis tanda pagar #, diikuti dengan komentar Anda.
+Dibawah ini adalah contoh penggunaan komentar pada Python</description>
+    </item>
+    
+    <item>
+      <title>Tipe data</title>
+      <link>https://kaban.my.id/python/tutorial/tipe-data/</link>
+      <pubDate>Sun, 06 Dec 2020 08:49:31 +0000</pubDate>
+      
+      <guid>https://kaban.my.id/python/tutorial/tipe-data/</guid>
+      <description>Apa itu tipe data? # Tipe data adalah suatu media atau memori pada komputer yang digunakan untuk menampung informasi.
+Python sendiri mempunyai tipe data yang cukup unik bila kita bandingkan dengan bahasa pemrograman yang lain.
+Berikut adalah tipe data dari bahasa pemrograman Python :
+   Tipe Data Contoh Penjelasan     Boolean True atau False Menyatakan benar True yang bernilai 1, atau salah False yang bernilai 0   String &amp;ldquo;Ayo belajar Python&amp;rdquo; Menyatakan karakter/kalimat bisa berupa huruf angka, dll (diapit tanda &amp;quot; atau &amp;lsquo;)   Integer 25 atau 1209 Menyatakan bilangan bulat   Float 3.</description>
+    </item>
+    
+    <item>
+      <title>Variabel dalam Python</title>
+      <link>https://kaban.my.id/python/tutorial/variabel/</link>
+      <pubDate>Sun, 06 Dec 2020 08:49:31 +0000</pubDate>
+      
+      <guid>https://kaban.my.id/python/tutorial/variabel/</guid>
+      <description>Apa itu variabel? # Variabel adalah lokasi memori yang dicadangkan untuk menyimpan nilai-nilai. Ini berarti bahwa ketika Anda membuat sebuah variabel Anda memesan beberapa ruang di memori. Variabel menyimpan data yang dilakukan selama program dieksekusi, yang nantinya isi dari variabel tersebut dapat diubah oleh operasi - operasi tertentu pada program yang menggunakan variabel.
+Variabel dapat menyimpan berbagai macam tipe data. Di dalam pemrograman Python, variabel mempunyai sifat yang dinamis, artinya variabel Python tidak perlu didekralasikan tipe data tertentu dan variabel Python dapat diubah saat program dijalankan.</description>
+    </item>
+    
+    <item>
+      <title>Operator di dalam Python</title>
+      <link>https://kaban.my.id/python/tutorial/operator/</link>
+      <pubDate>Sun, 06 Dec 2020 08:49:31 +0000</pubDate>
+      
+      <guid>https://kaban.my.id/python/tutorial/operator/</guid>
+      <description>Apa itu Operator? # Operator adalah konstruksi yang dapat memanipulasi nilai dari operan.
+Sebagai contoh operasi 4 + 5 = 9. Disini 4 dan 5 adalah operan dan + adalah operator.
+Operator Aritmatika #    Operator Contoh Penjelasan     Penjumlahan + 1 + 3 = 4 Menjumlahkan nilai dari masing-masing operan atau bilangan   Pengurangan - 4 - 1 = 3 Mengurangi nilai operan di sebelah kiri menggunakan operan di sebelah kanan   Perkalian * 2 * 4 = 8 Mengalikan operan/bilangan   Pembagian / 10 / 5 = 2 Untuk membagi operan di sebelah kiri menggunakan operan di sebelah kanan   Sisa Bagi % 11 % 2 = 1 Mendapatkan sisa pembagian dari operan di sebelah kiri operator ketika dibagi oleh operan di sebelah kanan   Pangkat ** 8 ** 2 = 64 Memangkatkan operan disebelah kiri operator dengan operan di sebelah kanan operator   Pembagian Bulat // 10 // 3 = 3 Sama seperti pembagian.</description>
+    </item>
+    
+    <item>
+      <title>Kondisi di dalam Python</title>
+      <link>https://kaban.my.id/python/tutorial/kondisi/</link>
+      <pubDate>Mon, 06 Dec 2021 08:49:31 +0000</pubDate>
+      
+      <guid>https://kaban.my.id/python/tutorial/kondisi/</guid>
+      <description>Kondisi If # Pengambilan keputusan (kondisi if) digunakan untuk mengantisipasi kondisi yang terjadi saat jalanya program dan menentukan tindakan apa yang akan diambil sesuai dengan kondisi.
+Pada python ada beberapa statement/kondisi diantaranya adalah if, else dan elif Kondisi if digunakan untuk mengeksekusi kode jika kondisi bernilai benar True.
+Jika kondisi bernilai salah False maka statement/kondisi if tidak akan di-eksekusi.
+Dibawah ini adalah contoh penggunaan kondisi if pada Python
+#Kondisi if adalah kondisi yang akan dieksekusi oleh program jika bernilai benar atau TRUE nilai = 9 #jika kondisi benar/TRUE maka program akan mengeksekusi perintah dibawahnya if(nilai &amp;gt; 7): print(&amp;quot;Sembilan Lebih Besar Dari Angka Tujuh&amp;quot;) # Kondisi Benar, Dieksekusi #jika kondisi salah/FALSE maka program tidak akan mengeksekusi perintah dibawahnya if(nilai &amp;gt; 10): print(&amp;quot;Sembilan Lebih Besar Dari Angka Sepuluh&amp;quot;) # Kondisi Salah, Maka tidak tereksekusi  Dari contoh diatas, jika program dijalankan maka akan mencetak string &amp;ldquo;Sembilan Lebih Besar Dari Angka Tujuh&amp;rdquo; sebanyak 1 kali yaitu pada if pertama.</description>
+    </item>
+    
+    <item>
+      <title>Perulangan di dalam Python</title>
+      <link>https://kaban.my.id/python/tutorial/perulangan/</link>
+      <pubDate>Mon, 06 Dec 2021 08:49:31 +0000</pubDate>
+      
+      <guid>https://kaban.my.id/python/tutorial/perulangan/</guid>
+      <description>Apa itu loop? # Secara umum, pernyataan pada bahasa pemrograman akan dieksekusi secara berurutan. Pernyataan pertama dalam sebuah fungsi dijalankan pertama, diikuti oleh yang kedua, dan seterusnya. Tetapi akan ada situasi dimana Anda harus menulis banyak kode, dimana kode tersebut sangat banyak. Jika dilakukan secara manual maka Anda hanya akan membuang-buang tenaga dengan menulis beratus-ratus bahkan beribu-ribu kode. Untuk itu Anda perlu menggunakan pengulangan di dalam bahasa pemrograman Python.
+Jenis loop dalam Python # Di dalam bahasa pemrograman Python pengulangan dibagi menjadi 3 bagian, yaitu :</description>
+    </item>
+    
+  </channel>
+</rss>

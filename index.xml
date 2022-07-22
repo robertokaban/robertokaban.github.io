@@ -28,7 +28,7 @@ Website visitors #  No personal information is collected. No information is stor
       <pubDate>Tue, 06 Oct 2020 08:49:55 +0000</pubDate>
       
       <guid>https://kaban.my.id/artikel/</guid>
-      <description>Berisi Artikel terbaru tentang Teknologi</description>
+      <description>Berisi artikel yang berhubungan dengan Teknologi, Pemrograman, tips dan trik komputer, Perancangan sistem, Jaringan komputer.</description>
     </item>
     
     <item>
@@ -46,43 +46,16 @@ Website visitors #  No personal information is collected. No information is stor
       <pubDate>Tue, 06 Oct 2020 08:49:55 +0000</pubDate>
       
       <guid>https://kaban.my.id/coretanku/</guid>
-      <description>Hanya sebatas coretan</description>
+      <description>Sebatas coretan, cerita, perjalanan hidup dan pengalaman pribadi yang saya tuliskan di blog ini.</description>
     </item>
     
     <item>
-      <title>Tutorial</title>
+      <title>Tutorial HTML</title>
       <link>https://kaban.my.id/html/</link>
       <pubDate>Tue, 06 Oct 2020 08:48:23 +0000</pubDate>
       
       <guid>https://kaban.my.id/html/</guid>
-      <description>Berikut ini kumpulan</description>
-    </item>
-    
-    <item>
-      <title>Tutorial</title>
-      <link>https://kaban.my.id/mysql/</link>
-      <pubDate>Tue, 06 Oct 2020 08:48:23 +0000</pubDate>
-      
-      <guid>https://kaban.my.id/mysql/</guid>
-      <description>Berikut ini kumpulan</description>
-    </item>
-    
-    <item>
-      <title>Tutorial</title>
-      <link>https://kaban.my.id/php/</link>
-      <pubDate>Tue, 06 Oct 2020 08:48:23 +0000</pubDate>
-      
-      <guid>https://kaban.my.id/php/</guid>
-      <description>Berikut ini kumpulan</description>
-    </item>
-    
-    <item>
-      <title>Tutorial</title>
-      <link>https://kaban.my.id/vbnet/</link>
-      <pubDate>Tue, 06 Oct 2020 08:48:23 +0000</pubDate>
-      
-      <guid>https://kaban.my.id/vbnet/</guid>
-      <description>Berikut ini kumpulan</description>
+      <description>HTML (HyperText Markup Language) merupakan bahasa markup standar untuk membuat struktur halaman website.</description>
     </item>
     
     <item>
@@ -91,7 +64,43 @@ Website visitors #  No personal information is collected. No information is stor
       <pubDate>Tue, 06 Oct 2020 08:48:23 +0000</pubDate>
       
       <guid>https://kaban.my.id/javascript/</guid>
-      <description>Berikut ini kumpulan</description>
+      <description>JavaScript adalah bahasa pemrograman yg paling populer untuk membuat website yang dinamis dan interaktif.</description>
+    </item>
+    
+    <item>
+      <title>Tutorial MySQL</title>
+      <link>https://kaban.my.id/mysql/</link>
+      <pubDate>Tue, 06 Oct 2020 08:48:23 +0000</pubDate>
+      
+      <guid>https://kaban.my.id/mysql/</guid>
+      <description>MySQL merupakan sistem manajemen database relasional yang berbasis SQL (Structured Query Language).</description>
+    </item>
+    
+    <item>
+      <title>Tutorial PHP</title>
+      <link>https://kaban.my.id/php/</link>
+      <pubDate>Tue, 06 Oct 2020 08:48:23 +0000</pubDate>
+      
+      <guid>https://kaban.my.id/php/</guid>
+      <description>PHP (PHP: Hypertext Prepocessor) merupakan bahasa pemrograman yang umum dipakai dalam pembuatan dan pengembangan sistem berbasis web.</description>
+    </item>
+    
+    <item>
+      <title>Tutorial Python</title>
+      <link>https://kaban.my.id/python/</link>
+      <pubDate>Tue, 06 Oct 2020 08:48:23 +0000</pubDate>
+      
+      <guid>https://kaban.my.id/python/</guid>
+      <description>Python merupakan bahasa pemrograman interpretatif yang multiplatform dan berfokus pada keterbacaan kode.</description>
+    </item>
+    
+    <item>
+      <title>Tutorial Vb.Net</title>
+      <link>https://kaban.my.id/vbnet/</link>
+      <pubDate>Tue, 06 Oct 2020 08:48:23 +0000</pubDate>
+      
+      <guid>https://kaban.my.id/vbnet/</guid>
+      <description>Vb.Net merupakan bahasa pemrograman untuk membuat aplikasi yang berbasis sistem operasi Windows Microsoft.</description>
     </item>
     
     <item>

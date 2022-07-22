@@ -1,0 +1,164 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?><urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+  xmlns:xhtml="http://www.w3.org/1999/xhtml">
+  
+    <url>
+      <loc>https://kaban.my.id/python/tutorial/pengenalan-python/</loc>
+      <lastmod>2020-12-06T08:49:31+00:00</lastmod>
+      <changefreq>weekly</changefreq>
+      <priority>0.5</priority>
+    </url>
+    
+    <url>
+      <loc>https://kaban.my.id/python/tutorial/instalasi-python/</loc>
+      <lastmod>2020-12-06T08:49:31+00:00</lastmod>
+      <changefreq>weekly</changefreq>
+      <priority>0.5</priority>
+    </url>
+    
+    <url>
+      <loc>https://kaban.my.id/python/tutorial/menjalankan-python/</loc>
+      <lastmod>2020-12-06T08:49:31+00:00</lastmod>
+      <changefreq>weekly</changefreq>
+      <priority>0.5</priority>
+    </url>
+    
+    <url>
+      <loc>https://kaban.my.id/python/tutorial/aturan-penulisan/</loc>
+      <lastmod>2020-12-06T08:49:31+00:00</lastmod>
+      <changefreq>weekly</changefreq>
+      <priority>0.5</priority>
+    </url>
+    
+    <url>
+      <loc>https://kaban.my.id/python/tutorial/komentar-program/</loc>
+      <lastmod>2020-12-06T08:49:31+00:00</lastmod>
+      <changefreq>weekly</changefreq>
+      <priority>0.5</priority>
+    </url>
+    
+    <url>
+      <loc>https://kaban.my.id/python/tutorial/tipe-data/</loc>
+      <lastmod>2020-12-06T08:49:31+00:00</lastmod>
+      <changefreq>weekly</changefreq>
+      <priority>0.5</priority>
+    </url>
+    
+    <url>
+      <loc>https://kaban.my.id/python/tutorial/variabel/</loc>
+      <lastmod>2020-12-06T08:49:31+00:00</lastmod>
+      <changefreq>weekly</changefreq>
+      <priority>0.5</priority>
+    </url>
+    
+    <url>
+      <loc>https://kaban.my.id/python/tutorial/operator/</loc>
+      <lastmod>2020-12-06T08:49:31+00:00</lastmod>
+      <changefreq>weekly</changefreq>
+      <priority>0.5</priority>
+    </url>
+    
+    <url>
+      <loc>https://kaban.my.id/python/tutorial/kondisi/</loc>
+      <lastmod>2021-12-06T08:49:31+00:00</lastmod>
+      <changefreq>weekly</changefreq>
+      <priority>0.5</priority>
+    </url>
+    
+    <url>
+      <loc>https://kaban.my.id/python/tutorial/perulangan/</loc>
+      <lastmod>2021-12-06T08:49:31+00:00</lastmod>
+      <changefreq>weekly</changefreq>
+      <priority>0.5</priority>
+    </url>
+    
+    <url>
+      <loc>https://kaban.my.id/python/tutorial/number/</loc>
+      <lastmod>2021-12-06T08:49:31+00:00</lastmod>
+      <changefreq>weekly</changefreq>
+      <priority>0.5</priority>
+    </url>
+    
+    <url>
+      <loc>https://kaban.my.id/python/tutorial/string/</loc>
+      <lastmod>2021-12-06T08:49:31+00:00</lastmod>
+      <changefreq>weekly</changefreq>
+      <priority>0.5</priority>
+    </url>
+    
+    <url>
+      <loc>https://kaban.my.id/python/tutorial/list/</loc>
+      <lastmod>2021-12-06T08:49:31+00:00</lastmod>
+      <changefreq>weekly</changefreq>
+      <priority>0.5</priority>
+    </url>
+    
+    <url>
+      <loc>https://kaban.my.id/python/tutorial/tuple/</loc>
+      <lastmod>2021-12-06T08:49:31+00:00</lastmod>
+      <changefreq>weekly</changefreq>
+      <priority>0.5</priority>
+    </url>
+    
+    <url>
+      <loc>https://kaban.my.id/python/tutorial/dictionary/</loc>
+      <lastmod>2021-12-06T08:49:31+00:00</lastmod>
+      <changefreq>weekly</changefreq>
+      <priority>0.5</priority>
+    </url>
+    
+    <url>
+      <loc>https://kaban.my.id/python/tutorial/tanggal-waktu/</loc>
+      <lastmod>2021-12-06T08:49:31+00:00</lastmod>
+      <changefreq>weekly</changefreq>
+      <priority>0.5</priority>
+    </url>
+    
+    <url>
+      <loc>https://kaban.my.id/python/tutorial/fungsi/</loc>
+      <lastmod>2021-12-06T08:49:31+00:00</lastmod>
+      <changefreq>weekly</changefreq>
+      <priority>0.5</priority>
+    </url>
+    
+    <url>
+      <loc>https://kaban.my.id/python/tutorial/modul/</loc>
+      <lastmod>2021-12-06T08:49:31+00:00</lastmod>
+      <changefreq>weekly</changefreq>
+      <priority>0.5</priority>
+    </url>
+    
+    <url>
+      <loc>https://kaban.my.id/python/tutorial/input-output/</loc>
+      <lastmod>2021-12-06T08:49:31+00:00</lastmod>
+      <changefreq>weekly</changefreq>
+      <priority>0.5</priority>
+    </url>
+    
+    <url>
+      <loc>https://kaban.my.id/python/tutorial/exception/</loc>
+      <lastmod>2021-12-06T08:49:31+00:00</lastmod>
+      <changefreq>weekly</changefreq>
+      <priority>0.5</priority>
+    </url>
+    
+    <url>
+      <loc>https://kaban.my.id/python/tutorial/objek-class/</loc>
+      <lastmod>2021-12-06T08:49:31+00:00</lastmod>
+      <changefreq>weekly</changefreq>
+      <priority>0.5</priority>
+    </url>
+    
+    <url>
+      <loc>https://kaban.my.id/python/tutorial/akses-database/</loc>
+      <lastmod>2021-12-06T08:49:31+00:00</lastmod>
+      <changefreq>weekly</changefreq>
+      <priority>0.5</priority>
+    </url>
+    
+    <url>
+      <loc>https://kaban.my.id/python/tutorial/netwotking/</loc>
+      <lastmod>2021-12-06T08:49:31+00:00</lastmod>
+      <changefreq>weekly</changefreq>
+      <priority>0.5</priority>
+    </url>
+    </urlset>
