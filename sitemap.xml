@@ -10,6 +10,13 @@
   </url>
   
   <url>
+    <loc>https://kaban.my.id/coretanku/hello-world-buka-blog-lagi/</loc>
+    <lastmod>2022-06-29T13:57:55+07:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
     <loc>https://kaban.my.id/coretanku/pernikahan-dan-pesta-adat-aro-roberto-kaban-dan-selasari-keliat-2021/</loc>
     <lastmod>2021-02-20T23:30:55+07:00</lastmod>
     <changefreq>weekly</changefreq>
@@ -26,13 +33,6 @@
   <url>
     <loc>https://kaban.my.id/mengenal-cli-command-line-interface/</loc>
     <lastmod>2020-07-12T13:57:55+07:00</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.5</priority>
-  </url>
-  
-  <url>
-    <loc>https://kaban.my.id/coretanku/hello-world-buka-blog-lagi/</loc>
-    <lastmod>2020-06-29T13:57:55+07:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url>
@@ -311,8 +311,57 @@
   </url>
   
   <url>
+    <loc>https://kaban.my.id/categories/blog/</loc>
+    <lastmod>2022-06-29T13:57:55+07:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://kaban.my.id/tags/core-blog/</loc>
+    <lastmod>2022-06-29T13:57:55+07:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://kaban.my.id/tags/migrasi-blog/</loc>
+    <lastmod>2022-06-29T13:57:55+07:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://kaban.my.id/tags/pindah-ke-github/</loc>
+    <lastmod>2022-06-29T13:57:55+07:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
     <loc>https://kaban.my.id/privacy-policy/</loc>
     <lastmod>2021-08-27T19:23:18+02:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://kaban.my.id/tags/adat-karo/</loc>
+    <lastmod>2021-02-20T23:30:55+07:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://kaban.my.id/tags/pernikahanku/</loc>
+    <lastmod>2021-02-20T23:30:55+07:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://kaban.my.id/tags/pesta-karo/</loc>
+    <lastmod>2021-02-20T23:30:55+07:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url>
@@ -453,34 +502,6 @@
   <url>
     <loc>https://kaban.my.id/tags/cli/</loc>
     <lastmod>2020-07-12T13:57:55+07:00</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.5</priority>
-  </url>
-  
-  <url>
-    <loc>https://kaban.my.id/categories/blog/</loc>
-    <lastmod>2020-06-29T13:57:55+07:00</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.5</priority>
-  </url>
-  
-  <url>
-    <loc>https://kaban.my.id/tags/core-blog/</loc>
-    <lastmod>2020-06-29T13:57:55+07:00</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.5</priority>
-  </url>
-  
-  <url>
-    <loc>https://kaban.my.id/tags/migrasi-blog/</loc>
-    <lastmod>2020-06-29T13:57:55+07:00</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.5</priority>
-  </url>
-  
-  <url>
-    <loc>https://kaban.my.id/tags/pindah-ke-github/</loc>
-    <lastmod>2020-06-29T13:57:55+07:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url>
