@@ -80,6 +80,13 @@
   </url>
   
   <url>
+    <loc>https://kaban.my.id/cybercrime-dan-ancaman-terhadap-keamanan-jaringan/</loc>
+    <lastmod>2012-10-16T13:54:26+07:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
     <loc>https://kaban.my.id/alamat-ipv4-pengalamatan-internet-protocol-versi-4/</loc>
     <lastmod>2012-07-01T13:54:26+07:00</lastmod>
     <changefreq>weekly</changefreq>
@@ -670,6 +677,34 @@
   <url>
     <loc>https://kaban.my.id/tags/tembang-ke-meulaboh/</loc>
     <lastmod>2013-02-28T01:30:55+07:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://kaban.my.id/tags/ancaman-jaringan/</loc>
+    <lastmod>2012-10-16T13:54:26+07:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://kaban.my.id/tags/cybercrime/</loc>
+    <lastmod>2012-10-16T13:54:26+07:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://kaban.my.id/tags/jaringan-internet/</loc>
+    <lastmod>2012-10-16T13:54:26+07:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://kaban.my.id/tags/keamanan-jaringan/</loc>
+    <lastmod>2012-10-16T13:54:26+07:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url>
