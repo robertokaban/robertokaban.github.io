@@ -66,6 +66,13 @@
   </url>
   
   <url>
+    <loc>https://kaban.my.id/coretanku/marga-suku-karo-beserta-kampung-asal/</loc>
+    <lastmod>2014-12-19T13:57:55+07:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
     <loc>https://kaban.my.id/pengertian-data-informasi-sistem-sistem-informasi-dan-sistem-informasi-manajemen/</loc>
     <lastmod>2014-03-15T20:26:10+07:00</lastmod>
     <changefreq>weekly</changefreq>
@@ -614,6 +621,20 @@
   <url>
     <loc>https://kaban.my.id/tags/desentralisasi-pendidikan/</loc>
     <lastmod>2020-06-01T13:54:26+07:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://kaban.my.id/tags/marga-karo/</loc>
+    <lastmod>2014-12-19T13:57:55+07:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://kaban.my.id/tags/suku-karo/</loc>
+    <lastmod>2014-12-19T13:57:55+07:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url>
