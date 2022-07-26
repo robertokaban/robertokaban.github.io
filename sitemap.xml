@@ -3,6 +3,41 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
   <url>
+    <loc>https://kaban.my.id/html/tutorial/pengenalan/</loc>
+    <lastmod>2021-12-06T08:49:31+00:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://kaban.my.id/html/tutorial/editor/</loc>
+    <lastmod>2021-12-06T08:49:31+00:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://kaban.my.id/html/tutorial/dokumen-html/</loc>
+    <lastmod>2021-12-06T08:49:31+00:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://kaban.my.id/html/tutorial/elements/</loc>
+    <lastmod>2021-12-06T08:49:31+00:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://kaban.my.id/html/tutorial/attributes/</loc>
+    <lastmod>2021-12-06T08:49:31+00:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
     <loc>https://kaban.my.id/coretanku/pesta-bunga-dan-buah-di-berastagi-kabupaten-karo/</loc>
     <lastmod>2022-07-01T13:57:55+07:00</lastmod>
     <changefreq>weekly</changefreq>
@@ -12,6 +47,13 @@
   <url>
     <loc>https://kaban.my.id/coretanku/hello-world-buka-blog-lagi/</loc>
     <lastmod>2022-06-29T13:57:55+07:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://kaban.my.id/html/tutorial/heading/</loc>
+    <lastmod>2021-12-06T08:49:31+00:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url>
@@ -96,6 +138,34 @@
   <url>
     <loc>https://kaban.my.id/alamat-ipv4-pengalamatan-internet-protocol-versi-4/</loc>
     <lastmod>2012-07-01T13:54:26+07:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://kaban.my.id/html/tutorial/paragraph/</loc>
+    <lastmod>2021-12-06T08:49:31+00:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://kaban.my.id/html/tutorial/style/</loc>
+    <lastmod>2021-12-06T08:49:31+00:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://kaban.my.id/html/tutorial/text-formatiing/</loc>
+    <lastmod>2021-12-06T08:49:31+00:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://kaban.my.id/html/tutorial/quotation/</loc>
+    <lastmod>2021-12-06T08:49:31+00:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url>
@@ -264,6 +334,13 @@
   <url>
     <loc>https://kaban.my.id/python/tutorial/netwotking/</loc>
     <lastmod>2021-12-06T08:49:31+00:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://kaban.my.id/html/tutorial/</loc>
+    <lastmod>2020-10-06T08:49:15+00:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url>

@@ -1,0 +1,560 @@
+<!doctype html>
+<html lang="en-US">
+  <head>
+  <meta charset="utf-8">
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <link rel="preload" as="font" href="https://kaban.my.id/fonts/vendor/jost/jost-v4-latin-regular.woff2" type="font/woff2" crossorigin>
+<link rel="preload" as="font" href="https://kaban.my.id/fonts/vendor/jost/jost-v4-latin-500.woff2" type="font/woff2" crossorigin>
+<link rel="preload" as="font" href="https://kaban.my.id/fonts/vendor/jost/jost-v4-latin-700.woff2" type="font/woff2" crossorigin>
+
+  <script>(()=>{var b=window.matchMedia&&window.matchMedia("(prefers-color-scheme: dark)").matches,a=localStorage.getItem("theme");b&&a===null&&(localStorage.setItem("theme","dark"),document.documentElement.setAttribute("data-dark-mode","")),b&&a==="dark"&&document.documentElement.setAttribute("data-dark-mode",""),a==="dark"&&document.documentElement.setAttribute("data-dark-mode","")})()</script>
+
+  <link rel="stylesheet" href="https://kaban.my.id/main.9f9fad637f512e7960fe1ef7bd0189ef246cbd3497e8a967f80d5f0c99a7d7c8399e82dce890bec55c0cd5a8eb7ef8654e35fac221365452f47cc2997b209d09.css" integrity="sha512-n5&#43;tY39RLnlg/h73vQGJ7yRsvTSX6Kln&#43;A1fDJmn18g5noLc6JC&#43;xVwM1ajrfvhlTjX6wiE2VFL0fMKZeyCdCQ==" crossorigin="anonymous">
+<noscript><style>img.lazyload { display: none; }</style></noscript>
+  <meta name="robots" content="index, follow">
+    <meta name="googlebot" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1">
+    <meta name="bingbot" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1">
+  <title>Elemen HTML - Roberto Kaban Blog&#39;s</title>
+<meta name="description" content="Editor HTML">
+<link rel="canonical" href="https://kaban.my.id/html/tutorial/elements/">
+<meta property="og:locale" content="en_US">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Elemen HTML">
+<meta property="og:description" content="Editor HTML">
+<meta property="og:url" content="https://kaban.my.id/html/tutorial/elements/">
+<meta property="og:site_name" content="Roberto Kaban Blog&#39;s">
+<meta property="article:published_time" content="2021-12-06T08:49:31+00:00">
+  <meta property="article:modified_time" content="2021-12-06T08:49:31+00:00">
+  
+  <meta property="og:image" content="https://kaban.my.id/doks.png"/>
+      <meta property="og:image:alt" content="Roberto Kaban Blog&#39;s">
+    
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:site" content="@robertokaban">
+<meta name="twitter:creator" content="@robertokaban">
+<meta name="twitter:title" content="Elemen HTML">
+<meta name="twitter:description" content="Editor HTML">
+<meta name="twitter:image" content="https://kaban.my.id/doks.png">
+    <meta name="twitter:image:alt" content="Elemen HTML">
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "Person",
+        "@id": "https://kaban.my.id/#/schema/person/1",
+      "name": "BlogRobertoKaban",
+      "url": "https://kaban.my.id/",
+      "sameAs": [
+        "https://twitter.com/robertokaban"
+        , "https://github.com/robertokaban"
+        ],
+      "image": {
+          "@type": "ImageObject",
+          "@id": "https://kaban.my.id/#/schema/image/1",
+          "url": "https://kaban.my.id/doks.png",
+          "width":  1280 ,
+          "height":  640 ,
+          "caption": "BlogRobertoKaban"
+        }
+      },
+    {
+      "@type": "WebSite",
+      "@id": "https://kaban.my.id/#/schema/website/1",
+      "url": "https://kaban.my.id/",
+      "name": "Roberto Kaban Blog\u0027s",
+      "description": "Hanya sebuah catatan kecil untuk hal yang tidak ingin dilupakan.",
+      "publisher": {
+          "@id": "https://kaban.my.id/#/schema/person/1"
+        }
+      },
+    {
+      "@type": "WebPage",
+      "@id": "https://kaban.my.id/html/tutorial/elements/",
+      "url": "https://kaban.my.id/html/tutorial/elements/",
+      "name": "Elemen HTML",
+      "description": "Editor HTML",
+      "isPartOf": {
+        "@id": "https://kaban.my.id/#/schema/website/1"
+      },
+      "about": {
+          "@id": "https://kaban.my.id/#/schema/person/1"
+        },
+      "datePublished": "2021-12-06T08:49:31CET",
+      "dateModified": "2021-12-06T08:49:31CET",
+      "breadcrumb": {
+        "@id": "https://kaban.my.id/html/tutorial/elements/#/schema/breadcrumb/1"
+      },
+      "primaryImageOfPage": {
+        "@id": "https://kaban.my.id/html/tutorial/elements/#/schema/image/2"
+      },
+      "inLanguage": "en-US",
+      "potentialAction": [{
+        "@type": "ReadAction", "target": ["https://kaban.my.id/html/tutorial/elements/"]
+      }]
+    },
+    {
+      "@type": "BreadcrumbList",
+      "@id": "https://kaban.my.id/html/tutorial/elements/#/schema/breadcrumb/1",
+      "name": "Breadcrumbs",
+      "itemListElement": [{
+        "@type": "ListItem",
+        "position":  1 ,
+        "item": {
+          "@type": "WebPage",
+          "@id": "https://kaban.my.id/",
+          "url": "https://kaban.my.id/",
+          "name": "Home"
+          }
+        },{
+        "@type": "ListItem",
+        "position":  2 ,
+        "item": {
+          "@type": "WebPage",
+          "@id": "https://kaban.my.id/html/",
+          "url": "https://kaban.my.id/html/",
+          "name": "HTML"
+          }
+        },{
+        "@type": "ListItem",
+        "position":  3 ,
+        "item": {
+          "@type": "WebPage",
+          "@id": "https://kaban.my.id/html/tutorial/",
+          "url": "https://kaban.my.id/html/tutorial/",
+          "name": "Tutorial"
+          }
+        },{
+        "@type": "ListItem",
+        "position":  4 ,
+        "item": {
+          "@id": "https://kaban.my.id/html/tutorial/elements/"
+          }
+        }]
+    },
+
+    {
+      "@context": "https://schema.org",
+      "@graph": [
+        {
+          "@type": "ImageObject",
+          "@id": "https://kaban.my.id/html/tutorial/elements/#/schema/image/2",
+          "url": "https://kaban.my.id/doks.png",
+          "contentUrl": "https://kaban.my.id/doks.png",
+          "caption": "Elemen HTML"
+        }
+      ]
+    }
+
+  ]
+}
+</script>
+
+  <meta name="theme-color" content="#fff">
+<link rel="icon" href="https://kaban.my.id/favicon.ico" sizes="any">
+<link rel="icon" type="image/svg+xml" href="https://kaban.my.id/favicon.svg">
+<link rel="apple-touch-icon" sizes="180x180" href="https://kaban.my.id/apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="32x32" href="https://kaban.my.id/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="https://kaban.my.id/favicon-16x16.png">
+<link rel="manifest" crossorigin="use-credentials" href="https://kaban.my.id/site.webmanifest">
+
+  
+
+</head>
+
+  <body class="html single">
+    <div class="sticky-top">
+<div class="header-bar"></div>
+
+<header class="navbar navbar-expand-lg navbar-light doks-navbar">
+  <nav class="container-xxl flex-wrap flex-lg-nowrap" aria-label="Main navigation">
+
+    <a class="navbar-brand order-0" href="/" aria-label="Roberto Kaban Blog&#39;s">
+      Roberto Kaban Blog&#39;s
+    </a>
+
+    <button class="btn btn-menu order-2 d-block d-lg-none" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasDoks" aria-controls="offcanvasDoks" aria-label="Open main menu">
+      <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-menu"><line x1="3" y1="12" x2="21" y2="12"></line><line x1="3" y1="6" x2="21" y2="6"></line><line x1="3" y1="18" x2="21" y2="18"></line></svg>
+    </button>
+    <div class="offcanvas offcanvas-end border-0 py-lg-1" tabindex="-1" id="offcanvasDoks" data-bs-backdrop="true" aria-labelledby="offcanvasDoksLabel">
+      <div class="header-bar d-lg-none"></div>
+      <div class="offcanvas-header d-lg-none">
+        <h2 class="h5 offcanvas-title ps-2" id="offcanvasDoksLabel"><a class="text-dark" href="/">Roberto Kaban Blog&#39;s</a></h2>
+        <button type="button" class="btn-close text-reset me-2" data-bs-dismiss="offcanvas" aria-label="Close main menu"></button>
+      </div>
+      <div class="offcanvas-body p-4 p-lg-0">
+        <ul class="nav flex-column flex-lg-row align-items-lg-center mt-2 mt-lg-0 ms-lg-2 me-lg-auto">
+              <li class="nav-item">
+                <a class="nav-link ps-0 py-1" href="/about/">About Me</a>
+              </li>
+            
+          
+              <li class="nav-item">
+                <a class="nav-link ps-0 py-1" href="/contact/">Contact</a>
+              </li>
+            
+          
+              <li class="nav-item">
+                <a class="nav-link ps-0 py-1" href="/artikel/">Artikel</a>
+              </li>
+            
+          
+              <li class="nav-item">
+                <a class="nav-link ps-0 py-1" href="/coretanku/">Coretanku</a>
+              </li>
+            
+          </ul>
+
+        <hr class="text-black-50 my-4 d-lg-none">
+        <form class="doks-search position-relative flex-grow-1 ms-lg-auto me-lg-2">
+          <input id="search" class="form-control is-search" type="search" placeholder="Cari di blog ini..." aria-label="Cari di blog ini..." autocomplete="off">
+          <div id="suggestions" class="shadow bg-white rounded d-none"></div>
+        </form>
+        <hr class="text-black-50 my-4 d-lg-none">
+        <ul class="nav flex-column flex-lg-row">
+          <li class="nav-item">
+              <a class="nav-link social-link" href="https://github.com/robertokaban"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-github"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path></svg><small class="ms-2 d-lg-none">GitHub</small></a>
+            </li>
+          <li class="nav-item">
+              <a class="nav-link social-link" href="https://twitter.com/robertokaban"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-twitter"><path d="M23 3a10.9 10.9 0 0 1-3.14 1.53 4.48 4.48 0 0 0-7.86 3v1A10.66 10.66 0 0 1 3 4s-4 9 5 13a11.64 11.64 0 0 1-7 2c9 5 20 0 20-11.5a4.5 4.5 0 0 0-.08-.83A7.72 7.72 0 0 0 23 3z"></path></svg><small class="ms-2 d-lg-none">Twitter</small></a>
+            </li>
+          </ul>
+
+        
+        <hr class="text-black-50 my-4 d-lg-none">
+        <button id="mode" class="btn btn-link" type="button" aria-label="Toggle user interface mode">
+          <span class="toggle-dark"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-moon"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path></svg></span>
+          <span class="toggle-light"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-sun"><circle cx="12" cy="12" r="5"></circle><line x1="12" y1="1" x2="12" y2="3"></line><line x1="12" y1="21" x2="12" y2="23"></line><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line><line x1="1" y1="12" x2="3" y2="12"></line><line x1="21" y1="12" x2="23" y2="12"></line><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line></svg></span>
+        </button>
+        
+
+        </div>
+    </div>
+  </nav>
+</header>
+
+
+</div>
+
+
+<div class="container-xxl">
+  <aside class="doks-sidebar">
+    <nav id="doks-docs-nav" class="collapse d-lg-none" aria-label="Tertiary navigation">
+      
+<ul class="list-unstyled collapsible-sidebar">
+  
+    
+      
+      <li class="mb-1">
+        <button class="btn btn-toggle align-items-center rounded collapsed" data-bs-toggle="collapse" data-bs-target="#section-4786e7e277c22223d17baf9372f4f32b" aria-expanded="true">
+          Tutorial HTML
+        </button>
+        <div class="collapse show" id="section-4786e7e277c22223d17baf9372f4f32b">
+          <ul class="btn-toggle-nav list-unstyled fw-normal pb-1 small">
+            
+              
+                
+                <li><a class="docs-link rounded" href="https://kaban.my.id/html/tutorial/pengenalan/">Pengenalan HTML</a></li>
+              
+            
+              
+                
+                <li><a class="docs-link rounded" href="https://kaban.my.id/html/tutorial/editor/">Editor HTML</a></li>
+              
+            
+              
+                
+                <li><a class="docs-link rounded" href="https://kaban.my.id/html/tutorial/dokumen-html/">Dokumen HTML</a></li>
+              
+            
+              
+                
+                <li><a class="docs-link rounded active" href="https://kaban.my.id/html/tutorial/elements/">Elemen HTML</a></li>
+              
+            
+              
+                
+                <li><a class="docs-link rounded" href="https://kaban.my.id/html/tutorial/attributes/">Atribut HTML</a></li>
+              
+            
+              
+                
+                <li><a class="docs-link rounded" href="https://kaban.my.id/html/tutorial/heading/">Heading HTML</a></li>
+              
+            
+              
+                
+                <li><a class="docs-link rounded" href="https://kaban.my.id/html/tutorial/paragraph/">paragraph HTML</a></li>
+              
+            
+              
+                
+                <li><a class="docs-link rounded" href="https://kaban.my.id/html/tutorial/style/">Style HTML</a></li>
+              
+            
+              
+                
+                <li><a class="docs-link rounded" href="https://kaban.my.id/html/tutorial/text-formatiing/">Text Formatting HTML</a></li>
+              
+            
+              
+                
+                <li><a class="docs-link rounded" href="https://kaban.my.id/html/tutorial/quotation/">Quotation HTML</a></li>
+              
+            
+          </ul>
+        </div>
+      </li>
+    
+  
+</ul>
+
+    </nav>
+  </aside>
+</div>
+
+    <div class="wrap container-xxl" role="document">
+      <div class="content">
+        
+	<div class="row flex-xl-nowrap">
+		<div class="col-lg-5 col-xl-4 docs-sidebar d-none d-lg-block">
+			<nav class="docs-links" aria-label="Main navigation">
+				
+<ul class="list-unstyled collapsible-sidebar">
+  
+    
+      
+      <li class="mb-1">
+        <button class="btn btn-toggle align-items-center rounded collapsed" data-bs-toggle="collapse" data-bs-target="#section-4786e7e277c22223d17baf9372f4f32b" aria-expanded="true">
+          Tutorial HTML
+        </button>
+        <div class="collapse show" id="section-4786e7e277c22223d17baf9372f4f32b">
+          <ul class="btn-toggle-nav list-unstyled fw-normal pb-1 small">
+            
+              
+                
+                <li><a class="docs-link rounded" href="https://kaban.my.id/html/tutorial/pengenalan/">Pengenalan HTML</a></li>
+              
+            
+              
+                
+                <li><a class="docs-link rounded" href="https://kaban.my.id/html/tutorial/editor/">Editor HTML</a></li>
+              
+            
+              
+                
+                <li><a class="docs-link rounded" href="https://kaban.my.id/html/tutorial/dokumen-html/">Dokumen HTML</a></li>
+              
+            
+              
+                
+                <li><a class="docs-link rounded active" href="https://kaban.my.id/html/tutorial/elements/">Elemen HTML</a></li>
+              
+            
+              
+                
+                <li><a class="docs-link rounded" href="https://kaban.my.id/html/tutorial/attributes/">Atribut HTML</a></li>
+              
+            
+              
+                
+                <li><a class="docs-link rounded" href="https://kaban.my.id/html/tutorial/heading/">Heading HTML</a></li>
+              
+            
+              
+                
+                <li><a class="docs-link rounded" href="https://kaban.my.id/html/tutorial/paragraph/">paragraph HTML</a></li>
+              
+            
+              
+                
+                <li><a class="docs-link rounded" href="https://kaban.my.id/html/tutorial/style/">Style HTML</a></li>
+              
+            
+              
+                
+                <li><a class="docs-link rounded" href="https://kaban.my.id/html/tutorial/text-formatiing/">Text Formatting HTML</a></li>
+              
+            
+              
+                
+                <li><a class="docs-link rounded" href="https://kaban.my.id/html/tutorial/quotation/">Quotation HTML</a></li>
+              
+            
+          </ul>
+        </div>
+      </li>
+    
+  
+</ul>
+
+			</nav>
+		</div>
+		<nav class="docs-toc d-none d-xl-block col-xl-3" aria-label="Secondary navigation">
+			<div class="d-xl-none">
+  <button class="btn btn-outline-primary btn-sm doks-toc-toggle collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#onThisPage" aria-controls="doks-docs-nav" aria-expanded="false" aria-label="Toggle On this page navigation">
+    <span>Daftar isi</span>
+    <span>
+      <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" class="doks doks-expand" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><title>Expand</title><polyline points="7 13 12 18 17 13"></polyline><polyline points="7 6 12 11 17 6"></polyline></svg>
+      <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" class="doks doks-collapse" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><title>Collapse</title><polyline points="17 11 12 6 7 11"></polyline><polyline points="17 18 12 13 7 18"></polyline></svg>
+    </span>
+  </button>
+  <div class="collapse" id="onThisPage">
+    <div class="card card-body mt-3 py-1">
+      <div class="page-links">
+        <nav id="TableOfContents">
+  <ul>
+    <li><a href="#apa-itu-elemen-dalam-html-">Apa itu Elemen dalam HTML ?</a></li>
+    <li><a href="#contoh-elemen-html">Contoh Elemen HTML</a></li>
+  </ul>
+</nav>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="page-links d-none d-xl-block">
+  <h3>Daftar isi</h3>
+  <nav id="TableOfContents">
+  <ul>
+    <li><a href="#apa-itu-elemen-dalam-html-">Apa itu Elemen dalam HTML ?</a></li>
+    <li><a href="#contoh-elemen-html">Contoh Elemen HTML</a></li>
+  </ul>
+</nav>
+  </div>
+
+		</nav>
+		<main class="docs-content col-lg-11 col-xl-9">
+		
+				<nav aria-label="breadcrumb">
+					<ol class="breadcrumb">
+						<li class="breadcrumb-item"><a href="/">Home</a></li>
+<li class="breadcrumb-item"><a href="/html/">HTML</a></li>
+<li class="breadcrumb-item"><a href="/html/tutorial/">Tutorial HTML</a></li>
+<li class="breadcrumb-item active" aria-current="page">Elemen HTML</li>
+					</ol>
+				</nav>
+			
+			<h1>Elemen HTML</h1>
+			<p class="lead">HTML (Hypertext Markup Language) merupakan bahasa markup yang digunakan untuk menentukan konten dan struktur halaman web.</p>
+			<nav class="d-xl-none" aria-label="Quaternary navigation">
+				<div class="d-xl-none">
+  <button class="btn btn-outline-primary btn-sm doks-toc-toggle collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#onThisPage" aria-controls="doks-docs-nav" aria-expanded="false" aria-label="Toggle On this page navigation">
+    <span>Daftar isi</span>
+    <span>
+      <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" class="doks doks-expand" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><title>Expand</title><polyline points="7 13 12 18 17 13"></polyline><polyline points="7 6 12 11 17 6"></polyline></svg>
+      <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" class="doks doks-collapse" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><title>Collapse</title><polyline points="17 11 12 6 7 11"></polyline><polyline points="17 18 12 13 7 18"></polyline></svg>
+    </span>
+  </button>
+  <div class="collapse" id="onThisPage">
+    <div class="card card-body mt-3 py-1">
+      <div class="page-links">
+        <nav id="TableOfContents">
+  <ul>
+    <li><a href="#apa-itu-elemen-dalam-html-">Apa itu Elemen dalam HTML ?</a></li>
+    <li><a href="#contoh-elemen-html">Contoh Elemen HTML</a></li>
+  </ul>
+</nav>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="page-links d-none d-xl-block">
+  <h3>Daftar isi</h3>
+  <nav id="TableOfContents">
+  <ul>
+    <li><a href="#apa-itu-elemen-dalam-html-">Apa itu Elemen dalam HTML ?</a></li>
+    <li><a href="#contoh-elemen-html">Contoh Elemen HTML</a></li>
+  </ul>
+</nav>
+  </div>
+
+			</nav>
+			<h1 id="elemen-html">Elemen HTML <a href="#elemen-html" class="anchor" aria-hidden="true">#</a></h1>
+<h2 id="apa-itu-elemen-dalam-html-">Apa itu Elemen dalam HTML ? <a href="#apa-itu-elemen-dalam-html-" class="anchor" aria-hidden="true">#</a></h2>
+<p>Elemen <strong>HTML</strong>  bisa dikatakan segalanya mulai dari tag awal hingga tag akhir. Elemen <strong>HTML</strong> didefinisikan oleh tag awal. Jika elemen berisi konten lain, itu diakhiri dengan tag penutup, di mana nama elemen didahului oleh garis miring seperti yang ditunjukkan di bawah ini dengan beberapa tag.</p>
+<h2 id="contoh-elemen-html">Contoh Elemen HTML <a href="#contoh-elemen-html" class="anchor" aria-hidden="true">#</a></h2>
+<pre><code class="language-html">&lt;p&gt;Elemen HTML&lt;/p&gt;
+&lt;div&gt;Ini adalah Elemen HTML&lt;/div&gt;
+</code></pre>
+<p>Keterangan:</p>
+<table>
+<thead>
+<tr>
+<th>Konten</th>
+<th style="text-align:center">Tag Pembuka</th>
+<th style="text-align:center">Tag Penutup</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Paragraf</td>
+<td style="text-align:center"><code>&lt;p&gt;</code></td>
+<td style="text-align:center"><code>&lt;/p&gt;</code></td>
+</tr>
+<tr>
+<td>Divisi</td>
+<td style="text-align:center"><code>&lt;div&gt;</code></td>
+<td style="text-align:center"><code>&lt;/div&gt;</code></td>
+</tr>
+</tbody>
+</table>
+<p>Jadi di sini ada dua elemen HTML yaitu, elemen <code>&lt;p&gt;...&lt;/p&gt;</code> dan elemen <code>&lt;div&gt;...&lt;/div&gt;</code>. Ada beberapa elemen yang tidak memerlukan tag <strong>penutup</strong> seperti <code>&lt;img&gt;</code>, <code>&lt;br&gt;</code>, <code>&lt;hr&gt;</code>, <code>&lt;input&gt;</code>, dll.</p>
+
+			<div class="page-footer-meta d-flex flex-column flex-md-row justify-content-between">
+				</div>
+			<div class="docs-navigation d-flex justify-content-between">
+	
+	<a href="/html/tutorial/dokumen-html/">
+			<div class="card my-1">
+				<div class="card-body py-2">
+					&larr; Dokumen HTML
+				</div>
+			</div>
+		</a>
+	<a class="ms-auto" href="/html/tutorial/attributes/">
+			<div class="card my-1">
+				<div class="card-body py-2">
+					Atribut HTML &rarr;
+				</div>
+			</div>
+		</a>
+	</div>
+
+			
+		</main>
+	</div>
+
+      </div>
+    </div>
+    
+    
+    <footer class="footer text-muted">
+  <div class="container-xxl">
+    <div class="row">
+      <div class="col-lg-8 order-last order-lg-first">
+        <ul class="list-inline">
+          <li class="list-inline-item">Powered by <a class="text-muted" href="https://gohugo.io/">Hugo</a> and <a class="text-muted" href="https://github.com/">Github</a></li>
+        </ul>
+      </div>
+      <div class="col-lg-8 order-first order-lg-last text-lg-end">
+        <ul class="list-inline">
+          </ul>
+      </div>
+    </div>
+  </div>
+</footer>
+    
+
+<script src="/js/bootstrap.min.5cdeb20ef814d367b4d5429ada9d342419eb34734de4713a71e5706485eaa75fa8d5d760c7a7f7ef20cb5494737eb8811729431813f22744c177384758c19081.js" integrity="sha512-XN6yDvgU02e01UKa2p00JBnrNHNN5HE6ceVwZIXqp1&#43;o1ddgx6f37yDLVJRzfriBFylDGBPyJ0TBdzhHWMGQgQ==" crossorigin="anonymous" defer></script>
+  <script src="/js/highlight.min.6e0bbb1ba7e7c09c5287a998de4147da3f56f6fed3dc91b747789519a1de6486b086542ebb2ed60527cfc4c32b8ce175a08c257392e98d7bb3f09661f2bd5666.js" integrity="sha512-bgu7G6fnwJxSh6mY3kFH2j9W9v7T3JG3R3iVGaHeZIawhlQuuy7WBSfPxMMrjOF1oIwlc5LpjXuz8JZh8r1WZg==" crossorigin="anonymous" defer></script>
+  <script src="/main.min.124171d9dd7beef16c3e35cd8394ad0c5ca7699608f699d747030ef0b0c3e4c2782454dd406f78e14ef7336f4a15de8676a808261d92f9b1858f1ec3ff720269.js" integrity="sha512-EkFx2d177vFsPjXNg5StDFynaZYI9pnXRwMO8LDD5MJ4JFTdQG944U73M29KFd6GdqgIJh2S&#43;bGFjx7D/3ICaQ==" crossorigin="anonymous" defer></script>
+  <script src="https://kaban.my.id/index.min.5d49266105def0bf3c7ca4a7859a6b8e2d6d17a6a9fd5b2740435442ed71e9891f755081e535403021a5f015a84acf64e4bff79529004ea89b07f568ec6b07cd.js" integrity="sha512-XUkmYQXe8L88fKSnhZprji1tF6ap/VsnQENUQu1x6YkfdVCB5TVAMCGl8BWoSs9k5L/3lSkATqibB/Vo7GsHzQ==" crossorigin="anonymous" defer></script>
+  
+    <div class="d-flex fixed-bottom pb-4 pb-lg-5 pe-4 pe-lg-5">
+      <a id="toTop" href="#" class="btn btn-outline-primary rounded-circle ms-auto p-2"><span class="visually-hidden">Top</span><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-chevron-up"><polyline points="18 15 12 9 6 15"></polyline></svg></a>
+    </div>
+    
+  </body>
+</html>
