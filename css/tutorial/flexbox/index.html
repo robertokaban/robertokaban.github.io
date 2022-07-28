@@ -1,0 +1,1227 @@
+<!doctype html>
+<html lang="en-US">
+  <head>
+  <meta charset="utf-8">
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <link rel="preload" as="font" href="https://kaban.my.id/fonts/vendor/jost/jost-v4-latin-regular.woff2" type="font/woff2" crossorigin>
+<link rel="preload" as="font" href="https://kaban.my.id/fonts/vendor/jost/jost-v4-latin-500.woff2" type="font/woff2" crossorigin>
+<link rel="preload" as="font" href="https://kaban.my.id/fonts/vendor/jost/jost-v4-latin-700.woff2" type="font/woff2" crossorigin>
+
+  <script>(()=>{var b=window.matchMedia&&window.matchMedia("(prefers-color-scheme: dark)").matches,a=localStorage.getItem("theme");b&&a===null&&(localStorage.setItem("theme","dark"),document.documentElement.setAttribute("data-dark-mode","")),b&&a==="dark"&&document.documentElement.setAttribute("data-dark-mode",""),a==="dark"&&document.documentElement.setAttribute("data-dark-mode","")})()</script>
+
+  <link rel="stylesheet" href="https://kaban.my.id/main.db54f9bfe0e34af6df4b69bf090ea48671e03ba69b420b89320e0b7076cea1816068ce8c0730dd086b3bdfdd35a007c4a11e27a6f0497d19c43496ed0c6108c9.css" integrity="sha512-21T5v&#43;DjSvbfS2m/CQ6khnHgO6abQguJMg4LcHbOoYFgaM6MBzDdCGs73901oAfEoR4npvBJfRnENJbtDGEIyQ==" crossorigin="anonymous">
+<noscript><style>img.lazyload { display: none; }</style></noscript>
+  <meta name="robots" content="index, follow">
+    <meta name="googlebot" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1">
+    <meta name="bingbot" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1">
+  <title>Flexbox - Roberto Kaban Blog&#39;s</title>
+<meta name="description" content="Flexbox adalah metode tata letak satu dimensi untuk mengatur item dalam baris atau kolom.">
+<link rel="canonical" href="https://kaban.my.id/css/tutorial/flexbox/">
+<meta property="og:locale" content="en_US">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Flexbox">
+<meta property="og:description" content="Flexbox adalah metode tata letak satu dimensi untuk mengatur item dalam baris atau kolom.">
+<meta property="og:url" content="https://kaban.my.id/css/tutorial/flexbox/">
+<meta property="og:site_name" content="Roberto Kaban Blog&#39;s">
+<meta property="article:published_time" content="2021-12-06T08:49:31+00:00">
+  <meta property="article:modified_time" content="2021-12-06T08:49:31+00:00">
+  
+  <meta property="og:image" content="https://kaban.my.id/doks.png"/>
+      <meta property="og:image:alt" content="Roberto Kaban Blog&#39;s">
+    
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:site" content="@robertokaban">
+<meta name="twitter:creator" content="@robertokaban">
+<meta name="twitter:title" content="Flexbox">
+<meta name="twitter:description" content="Flexbox adalah metode tata letak satu dimensi untuk mengatur item dalam baris atau kolom.">
+<meta name="twitter:image" content="https://kaban.my.id/doks.png">
+    <meta name="twitter:image:alt" content="Flexbox">
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "Person",
+        "@id": "https://kaban.my.id/#/schema/person/1",
+      "name": "BlogRobertoKaban",
+      "url": "https://kaban.my.id/",
+      "sameAs": [
+        "https://twitter.com/robertokaban"
+        , "https://github.com/robertokaban"
+        ],
+      "image": {
+          "@type": "ImageObject",
+          "@id": "https://kaban.my.id/#/schema/image/1",
+          "url": "https://kaban.my.id/doks.png",
+          "width":  1280 ,
+          "height":  640 ,
+          "caption": "BlogRobertoKaban"
+        }
+      },
+    {
+      "@type": "WebSite",
+      "@id": "https://kaban.my.id/#/schema/website/1",
+      "url": "https://kaban.my.id/",
+      "name": "Roberto Kaban Blog\u0027s",
+      "description": "Hanya sebuah catatan kecil untuk hal yang tidak ingin dilupakan.",
+      "publisher": {
+          "@id": "https://kaban.my.id/#/schema/person/1"
+        }
+      },
+    {
+      "@type": "WebPage",
+      "@id": "https://kaban.my.id/css/tutorial/flexbox/",
+      "url": "https://kaban.my.id/css/tutorial/flexbox/",
+      "name": "Flexbox",
+      "description": "Flexbox adalah metode tata letak satu dimensi untuk mengatur item dalam baris atau kolom.",
+      "isPartOf": {
+        "@id": "https://kaban.my.id/#/schema/website/1"
+      },
+      "about": {
+          "@id": "https://kaban.my.id/#/schema/person/1"
+        },
+      "datePublished": "2021-12-06T08:49:31CET",
+      "dateModified": "2021-12-06T08:49:31CET",
+      "breadcrumb": {
+        "@id": "https://kaban.my.id/css/tutorial/flexbox/#/schema/breadcrumb/1"
+      },
+      "primaryImageOfPage": {
+        "@id": "https://kaban.my.id/css/tutorial/flexbox/#/schema/image/2"
+      },
+      "inLanguage": "en-US",
+      "potentialAction": [{
+        "@type": "ReadAction", "target": ["https://kaban.my.id/css/tutorial/flexbox/"]
+      }]
+    },
+    {
+      "@type": "BreadcrumbList",
+      "@id": "https://kaban.my.id/css/tutorial/flexbox/#/schema/breadcrumb/1",
+      "name": "Breadcrumbs",
+      "itemListElement": [{
+        "@type": "ListItem",
+        "position":  1 ,
+        "item": {
+          "@type": "WebPage",
+          "@id": "https://kaban.my.id/",
+          "url": "https://kaban.my.id/",
+          "name": "Home"
+          }
+        },{
+        "@type": "ListItem",
+        "position":  2 ,
+        "item": {
+          "@type": "WebPage",
+          "@id": "https://kaban.my.id/css/",
+          "url": "https://kaban.my.id/css/",
+          "name": "Css"
+          }
+        },{
+        "@type": "ListItem",
+        "position":  3 ,
+        "item": {
+          "@type": "WebPage",
+          "@id": "https://kaban.my.id/css/tutorial/",
+          "url": "https://kaban.my.id/css/tutorial/",
+          "name": "Tutorial"
+          }
+        },{
+        "@type": "ListItem",
+        "position":  4 ,
+        "item": {
+          "@id": "https://kaban.my.id/css/tutorial/flexbox/"
+          }
+        }]
+    },
+
+    {
+      "@context": "https://schema.org",
+      "@graph": [
+        {
+          "@type": "ImageObject",
+          "@id": "https://kaban.my.id/css/tutorial/flexbox/#/schema/image/2",
+          "url": "https://kaban.my.id/doks.png",
+          "contentUrl": "https://kaban.my.id/doks.png",
+          "caption": "Flexbox"
+        }
+      ]
+    }
+
+  ]
+}
+</script>
+
+  <meta name="theme-color" content="#fff">
+<link rel="icon" href="https://kaban.my.id/favicon.ico" sizes="any">
+<link rel="icon" type="image/svg+xml" href="https://kaban.my.id/favicon.svg">
+<link rel="apple-touch-icon" sizes="180x180" href="https://kaban.my.id/apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="32x32" href="https://kaban.my.id/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="https://kaban.my.id/favicon-16x16.png">
+<link rel="manifest" crossorigin="use-credentials" href="https://kaban.my.id/site.webmanifest">
+
+  
+
+</head>
+
+  <body class="css single">
+    <div class="sticky-top">
+<div class="header-bar"></div>
+
+<header class="navbar navbar-expand-lg navbar-light doks-navbar">
+  <nav class="container-xxl flex-wrap flex-lg-nowrap" aria-label="Main navigation">
+
+    <a class="navbar-brand order-0" href="/" aria-label="Roberto Kaban Blog&#39;s">
+      Roberto Kaban Blog&#39;s
+    </a>
+
+    <button class="btn btn-menu order-2 d-block d-lg-none" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasDoks" aria-controls="offcanvasDoks" aria-label="Open main menu">
+      <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-menu"><line x1="3" y1="12" x2="21" y2="12"></line><line x1="3" y1="6" x2="21" y2="6"></line><line x1="3" y1="18" x2="21" y2="18"></line></svg>
+    </button>
+    <div class="offcanvas offcanvas-end border-0 py-lg-1" tabindex="-1" id="offcanvasDoks" data-bs-backdrop="true" aria-labelledby="offcanvasDoksLabel">
+      <div class="header-bar d-lg-none"></div>
+      <div class="offcanvas-header d-lg-none">
+        <h2 class="h5 offcanvas-title ps-2" id="offcanvasDoksLabel"><a class="text-dark" href="/">Roberto Kaban Blog&#39;s</a></h2>
+        <button type="button" class="btn-close text-reset me-2" data-bs-dismiss="offcanvas" aria-label="Close main menu"></button>
+      </div>
+      <div class="offcanvas-body p-4 p-lg-0">
+        <ul class="nav flex-column flex-lg-row align-items-lg-center mt-2 mt-lg-0 ms-lg-2 me-lg-auto">
+              <li class="nav-item">
+                <a class="nav-link ps-0 py-1" href="/about/">About Me</a>
+              </li>
+            
+          
+              <li class="nav-item">
+                <a class="nav-link ps-0 py-1" href="/contact/">Contact</a>
+              </li>
+            
+          
+              <li class="nav-item">
+                <a class="nav-link ps-0 py-1" href="/artikel/">Artikel</a>
+              </li>
+            
+          
+              <li class="nav-item">
+                <a class="nav-link ps-0 py-1" href="/coretanku/">Coretanku</a>
+              </li>
+            
+          </ul>
+
+        <hr class="text-black-50 my-4 d-lg-none">
+        <form class="doks-search position-relative flex-grow-1 ms-lg-auto me-lg-2">
+          <input id="search" class="form-control is-search" type="search" placeholder="Cari di blog ini..." aria-label="Cari di blog ini..." autocomplete="off">
+          <div id="suggestions" class="shadow bg-white rounded d-none"></div>
+        </form>
+        <hr class="text-black-50 my-4 d-lg-none">
+        <ul class="nav flex-column flex-lg-row">
+          <li class="nav-item">
+              <a class="nav-link social-link" href="https://github.com/robertokaban"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-github"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path></svg><small class="ms-2 d-lg-none">GitHub</small></a>
+            </li>
+          <li class="nav-item">
+              <a class="nav-link social-link" href="https://twitter.com/robertokaban"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-twitter"><path d="M23 3a10.9 10.9 0 0 1-3.14 1.53 4.48 4.48 0 0 0-7.86 3v1A10.66 10.66 0 0 1 3 4s-4 9 5 13a11.64 11.64 0 0 1-7 2c9 5 20 0 20-11.5a4.5 4.5 0 0 0-.08-.83A7.72 7.72 0 0 0 23 3z"></path></svg><small class="ms-2 d-lg-none">Twitter</small></a>
+            </li>
+          </ul>
+
+        
+        <hr class="text-black-50 my-4 d-lg-none">
+        <button id="mode" class="btn btn-link" type="button" aria-label="Toggle user interface mode">
+          <span class="toggle-dark"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-moon"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path></svg></span>
+          <span class="toggle-light"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-sun"><circle cx="12" cy="12" r="5"></circle><line x1="12" y1="1" x2="12" y2="3"></line><line x1="12" y1="21" x2="12" y2="23"></line><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line><line x1="1" y1="12" x2="3" y2="12"></line><line x1="21" y1="12" x2="23" y2="12"></line><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line></svg></span>
+        </button>
+        
+
+        </div>
+    </div>
+  </nav>
+</header>
+
+
+</div>
+
+
+<div class="container-xxl">
+  <aside class="doks-sidebar">
+    <nav id="doks-docs-nav" class="collapse d-lg-none" aria-label="Tertiary navigation">
+      
+<ul class="list-unstyled collapsible-sidebar">
+  
+    
+      
+      <li class="mb-1">
+        <button class="btn btn-toggle align-items-center rounded collapsed" data-bs-toggle="collapse" data-bs-target="#section-420758e7531f11b46494cbfaeea9e72a" aria-expanded="true">
+          Tutorial CSS
+        </button>
+        <div class="collapse show" id="section-420758e7531f11b46494cbfaeea9e72a">
+          <ul class="btn-toggle-nav list-unstyled fw-normal pb-1 small">
+            
+              
+                
+                <li><a class="docs-link rounded" href="https://kaban.my.id/css/tutorial/pengenalan/">Pengenalan</a></li>
+              
+            
+              
+                
+                <li><a class="docs-link rounded" href="https://kaban.my.id/css/tutorial/basic/">Basic</a></li>
+              
+            
+              
+                
+                <li><a class="docs-link rounded" href="https://kaban.my.id/css/tutorial/sintax/">Sintax</a></li>
+              
+            
+              
+                
+                <li><a class="docs-link rounded" href="https://kaban.my.id/css/tutorial/selectors/">Selectors</a></li>
+              
+            
+              
+                
+                <li><a class="docs-link rounded" href="https://kaban.my.id/css/tutorial/comments/">Comments</a></li>
+              
+            
+              
+                
+                <li><a class="docs-link rounded" href="https://kaban.my.id/css/tutorial/colors/">Colors</a></li>
+              
+            
+              
+                
+                <li><a class="docs-link rounded" href="https://kaban.my.id/css/tutorial/backgroud/">Background</a></li>
+              
+            
+              
+                
+                <li><a class="docs-link rounded" href="https://kaban.my.id/css/tutorial/borders/">Borders</a></li>
+              
+            
+              
+                
+                <li><a class="docs-link rounded" href="https://kaban.my.id/css/tutorial/border-radius/">Border Radius</a></li>
+              
+            
+              
+                
+                <li><a class="docs-link rounded" href="https://kaban.my.id/css/tutorial/margin/">Margin</a></li>
+              
+            
+              
+                
+                <li><a class="docs-link rounded" href="https://kaban.my.id/css/tutorial/padding/">Padding</a></li>
+              
+            
+              
+                
+                <li><a class="docs-link rounded" href="https://kaban.my.id/css/tutorial/size/">Size</a></li>
+              
+            
+              
+                
+                <li><a class="docs-link rounded" href="https://kaban.my.id/css/tutorial/box-model/">Box Model</a></li>
+              
+            
+              
+                
+                <li><a class="docs-link rounded" href="https://kaban.my.id/css/tutorial/outline/">Outline</a></li>
+              
+            
+              
+                
+                <li><a class="docs-link rounded" href="https://kaban.my.id/css/tutorial/text-alignment/">Text Alignment</a></li>
+              
+            
+              
+                
+                <li><a class="docs-link rounded" href="https://kaban.my.id/css/tutorial/text-decoration/">Text Decoration</a></li>
+              
+            
+              
+                
+                <li><a class="docs-link rounded" href="https://kaban.my.id/css/tutorial/text-transform/">Text Transform</a></li>
+              
+            
+              
+                
+                <li><a class="docs-link rounded" href="https://kaban.my.id/css/tutorial/fonts/">Fonts</a></li>
+              
+            
+              
+                
+                <li><a class="docs-link rounded" href="https://kaban.my.id/css/tutorial/web-font/">Web Font</a></li>
+              
+            
+              
+                
+                <li><a class="docs-link rounded" href="https://kaban.my.id/css/tutorial/display/">Display</a></li>
+              
+            
+              
+                
+                <li><a class="docs-link rounded" href="https://kaban.my.id/css/tutorial/position/">Position</a></li>
+              
+            
+              
+                
+                <li><a class="docs-link rounded" href="https://kaban.my.id/css/tutorial/z-index/">Z Index</a></li>
+              
+            
+              
+                
+                <li><a class="docs-link rounded" href="https://kaban.my.id/css/tutorial/overflow/">Overflow</a></li>
+              
+            
+              
+                
+                <li><a class="docs-link rounded" href="https://kaban.my.id/css/tutorial/float/">Float</a></li>
+              
+            
+              
+                
+                <li><a class="docs-link rounded" href="https://kaban.my.id/css/tutorial/combinators/">Combinators</a></li>
+              
+            
+              
+                
+                <li><a class="docs-link rounded" href="https://kaban.my.id/css/tutorial/pseudo-classes/">Pseodo Classes</a></li>
+              
+            
+              
+                
+                <li><a class="docs-link rounded" href="https://kaban.my.id/css/tutorial/psesudo-elements/">Pseodo Elements</a></li>
+              
+            
+              
+                
+                <li><a class="docs-link rounded" href="https://kaban.my.id/css/tutorial/opocity/">Opocity</a></li>
+              
+            
+              
+                
+                <li><a class="docs-link rounded" href="https://kaban.my.id/css/tutorial/units/">Units</a></li>
+              
+            
+              
+                
+                <li><a class="docs-link rounded" href="https://kaban.my.id/css/tutorial/important/">Importants</a></li>
+              
+            
+              
+                
+                <li><a class="docs-link rounded" href="https://kaban.my.id/css/tutorial/math-function/">Math Function</a></li>
+              
+            
+              
+                
+                <li><a class="docs-link rounded" href="https://kaban.my.id/css/tutorial/gradient/">Gradients</a></li>
+              
+            
+              
+                
+                <li><a class="docs-link rounded" href="https://kaban.my.id/css/tutorial/shadow/">Shadows</a></li>
+              
+            
+              
+                
+                <li><a class="docs-link rounded" href="https://kaban.my.id/css/tutorial/word-wrap/">Word Wrap</a></li>
+              
+            
+              
+                
+                <li><a class="docs-link rounded" href="https://kaban.my.id/css/tutorial/word-spacing/">Word Spacing</a></li>
+              
+            
+              
+                
+                <li><a class="docs-link rounded" href="https://kaban.my.id/css/tutorial/writing-mode/">Writing Mode</a></li>
+              
+            
+              
+                
+                <li><a class="docs-link rounded" href="https://kaban.my.id/css/tutorial/ransform/">Transform</a></li>
+              
+            
+              
+                
+                <li><a class="docs-link rounded" href="https://kaban.my.id/css/tutorial/transitions/">Transitions</a></li>
+              
+            
+              
+                
+                <li><a class="docs-link rounded" href="https://kaban.my.id/css/tutorial/image-filter/">Image Filter</a></li>
+              
+            
+              
+                
+                <li><a class="docs-link rounded" href="https://kaban.my.id/css/tutorial/object-fit/">Image Fit</a></li>
+              
+            
+              
+                
+                <li><a class="docs-link rounded" href="https://kaban.my.id/css/tutorial/button/">Button</a></li>
+              
+            
+              
+                
+                <li><a class="docs-link rounded" href="https://kaban.my.id/css/tutorial/custom-property/">Custom Properties</a></li>
+              
+            
+              
+                
+                <li><a class="docs-link rounded" href="https://kaban.my.id/css/tutorial/box-sizing/">Box Sizing</a></li>
+              
+            
+              
+                
+                <li><a class="docs-link rounded" href="https://kaban.my.id/css/tutorial/media-query/">Media Query</a></li>
+              
+            
+              
+                
+                <li><a class="docs-link rounded active" href="https://kaban.my.id/css/tutorial/flexbox/">Flexbox</a></li>
+              
+            
+              
+                
+                <li><a class="docs-link rounded" href="https://kaban.my.id/css/tutorial/grid/">Grid</a></li>
+              
+            
+          </ul>
+        </div>
+      </li>
+    
+  
+</ul>
+
+    </nav>
+  </aside>
+</div>
+
+    <div class="wrap container-xxl" role="document">
+      <div class="content">
+        
+	<div class="row flex-xl-nowrap">
+		<div class="col-lg-5 col-xl-4 docs-sidebar d-none d-lg-block">
+			<nav class="docs-links" aria-label="Main navigation">
+				
+<ul class="list-unstyled collapsible-sidebar">
+  
+    
+      
+      <li class="mb-1">
+        <button class="btn btn-toggle align-items-center rounded collapsed" data-bs-toggle="collapse" data-bs-target="#section-420758e7531f11b46494cbfaeea9e72a" aria-expanded="true">
+          Tutorial CSS
+        </button>
+        <div class="collapse show" id="section-420758e7531f11b46494cbfaeea9e72a">
+          <ul class="btn-toggle-nav list-unstyled fw-normal pb-1 small">
+            
+              
+                
+                <li><a class="docs-link rounded" href="https://kaban.my.id/css/tutorial/pengenalan/">Pengenalan</a></li>
+              
+            
+              
+                
+                <li><a class="docs-link rounded" href="https://kaban.my.id/css/tutorial/basic/">Basic</a></li>
+              
+            
+              
+                
+                <li><a class="docs-link rounded" href="https://kaban.my.id/css/tutorial/sintax/">Sintax</a></li>
+              
+            
+              
+                
+                <li><a class="docs-link rounded" href="https://kaban.my.id/css/tutorial/selectors/">Selectors</a></li>
+              
+            
+              
+                
+                <li><a class="docs-link rounded" href="https://kaban.my.id/css/tutorial/comments/">Comments</a></li>
+              
+            
+              
+                
+                <li><a class="docs-link rounded" href="https://kaban.my.id/css/tutorial/colors/">Colors</a></li>
+              
+            
+              
+                
+                <li><a class="docs-link rounded" href="https://kaban.my.id/css/tutorial/backgroud/">Background</a></li>
+              
+            
+              
+                
+                <li><a class="docs-link rounded" href="https://kaban.my.id/css/tutorial/borders/">Borders</a></li>
+              
+            
+              
+                
+                <li><a class="docs-link rounded" href="https://kaban.my.id/css/tutorial/border-radius/">Border Radius</a></li>
+              
+            
+              
+                
+                <li><a class="docs-link rounded" href="https://kaban.my.id/css/tutorial/margin/">Margin</a></li>
+              
+            
+              
+                
+                <li><a class="docs-link rounded" href="https://kaban.my.id/css/tutorial/padding/">Padding</a></li>
+              
+            
+              
+                
+                <li><a class="docs-link rounded" href="https://kaban.my.id/css/tutorial/size/">Size</a></li>
+              
+            
+              
+                
+                <li><a class="docs-link rounded" href="https://kaban.my.id/css/tutorial/box-model/">Box Model</a></li>
+              
+            
+              
+                
+                <li><a class="docs-link rounded" href="https://kaban.my.id/css/tutorial/outline/">Outline</a></li>
+              
+            
+              
+                
+                <li><a class="docs-link rounded" href="https://kaban.my.id/css/tutorial/text-alignment/">Text Alignment</a></li>
+              
+            
+              
+                
+                <li><a class="docs-link rounded" href="https://kaban.my.id/css/tutorial/text-decoration/">Text Decoration</a></li>
+              
+            
+              
+                
+                <li><a class="docs-link rounded" href="https://kaban.my.id/css/tutorial/text-transform/">Text Transform</a></li>
+              
+            
+              
+                
+                <li><a class="docs-link rounded" href="https://kaban.my.id/css/tutorial/fonts/">Fonts</a></li>
+              
+            
+              
+                
+                <li><a class="docs-link rounded" href="https://kaban.my.id/css/tutorial/web-font/">Web Font</a></li>
+              
+            
+              
+                
+                <li><a class="docs-link rounded" href="https://kaban.my.id/css/tutorial/display/">Display</a></li>
+              
+            
+              
+                
+                <li><a class="docs-link rounded" href="https://kaban.my.id/css/tutorial/position/">Position</a></li>
+              
+            
+              
+                
+                <li><a class="docs-link rounded" href="https://kaban.my.id/css/tutorial/z-index/">Z Index</a></li>
+              
+            
+              
+                
+                <li><a class="docs-link rounded" href="https://kaban.my.id/css/tutorial/overflow/">Overflow</a></li>
+              
+            
+              
+                
+                <li><a class="docs-link rounded" href="https://kaban.my.id/css/tutorial/float/">Float</a></li>
+              
+            
+              
+                
+                <li><a class="docs-link rounded" href="https://kaban.my.id/css/tutorial/combinators/">Combinators</a></li>
+              
+            
+              
+                
+                <li><a class="docs-link rounded" href="https://kaban.my.id/css/tutorial/pseudo-classes/">Pseodo Classes</a></li>
+              
+            
+              
+                
+                <li><a class="docs-link rounded" href="https://kaban.my.id/css/tutorial/psesudo-elements/">Pseodo Elements</a></li>
+              
+            
+              
+                
+                <li><a class="docs-link rounded" href="https://kaban.my.id/css/tutorial/opocity/">Opocity</a></li>
+              
+            
+              
+                
+                <li><a class="docs-link rounded" href="https://kaban.my.id/css/tutorial/units/">Units</a></li>
+              
+            
+              
+                
+                <li><a class="docs-link rounded" href="https://kaban.my.id/css/tutorial/important/">Importants</a></li>
+              
+            
+              
+                
+                <li><a class="docs-link rounded" href="https://kaban.my.id/css/tutorial/math-function/">Math Function</a></li>
+              
+            
+              
+                
+                <li><a class="docs-link rounded" href="https://kaban.my.id/css/tutorial/gradient/">Gradients</a></li>
+              
+            
+              
+                
+                <li><a class="docs-link rounded" href="https://kaban.my.id/css/tutorial/shadow/">Shadows</a></li>
+              
+            
+              
+                
+                <li><a class="docs-link rounded" href="https://kaban.my.id/css/tutorial/word-wrap/">Word Wrap</a></li>
+              
+            
+              
+                
+                <li><a class="docs-link rounded" href="https://kaban.my.id/css/tutorial/word-spacing/">Word Spacing</a></li>
+              
+            
+              
+                
+                <li><a class="docs-link rounded" href="https://kaban.my.id/css/tutorial/writing-mode/">Writing Mode</a></li>
+              
+            
+              
+                
+                <li><a class="docs-link rounded" href="https://kaban.my.id/css/tutorial/ransform/">Transform</a></li>
+              
+            
+              
+                
+                <li><a class="docs-link rounded" href="https://kaban.my.id/css/tutorial/transitions/">Transitions</a></li>
+              
+            
+              
+                
+                <li><a class="docs-link rounded" href="https://kaban.my.id/css/tutorial/image-filter/">Image Filter</a></li>
+              
+            
+              
+                
+                <li><a class="docs-link rounded" href="https://kaban.my.id/css/tutorial/object-fit/">Image Fit</a></li>
+              
+            
+              
+                
+                <li><a class="docs-link rounded" href="https://kaban.my.id/css/tutorial/button/">Button</a></li>
+              
+            
+              
+                
+                <li><a class="docs-link rounded" href="https://kaban.my.id/css/tutorial/custom-property/">Custom Properties</a></li>
+              
+            
+              
+                
+                <li><a class="docs-link rounded" href="https://kaban.my.id/css/tutorial/box-sizing/">Box Sizing</a></li>
+              
+            
+              
+                
+                <li><a class="docs-link rounded" href="https://kaban.my.id/css/tutorial/media-query/">Media Query</a></li>
+              
+            
+              
+                
+                <li><a class="docs-link rounded active" href="https://kaban.my.id/css/tutorial/flexbox/">Flexbox</a></li>
+              
+            
+              
+                
+                <li><a class="docs-link rounded" href="https://kaban.my.id/css/tutorial/grid/">Grid</a></li>
+              
+            
+          </ul>
+        </div>
+      </li>
+    
+  
+</ul>
+
+			</nav>
+		</div>
+		<nav class="docs-toc d-none d-xl-block col-xl-3" aria-label="Secondary navigation">
+			<div class="d-xl-none">
+  <button class="btn btn-outline-primary btn-sm doks-toc-toggle collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#onThisPage" aria-controls="doks-docs-nav" aria-expanded="false" aria-label="Toggle On this page navigation">
+    <span>Daftar isi</span>
+    <span>
+      <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" class="doks doks-expand" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><title>Expand</title><polyline points="7 13 12 18 17 13"></polyline><polyline points="7 6 12 11 17 6"></polyline></svg>
+      <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" class="doks doks-collapse" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><title>Collapse</title><polyline points="17 11 12 6 7 11"></polyline><polyline points="17 18 12 13 7 18"></polyline></svg>
+    </span>
+  </button>
+  <div class="collapse" id="onThisPage">
+    <div class="card card-body mt-3 py-1">
+      <div class="page-links">
+        <nav id="TableOfContents">
+  <ul>
+    <li><a href="#apa-itu-flexbox">Apa Itu Flexbox</a></li>
+    <li><a href="#flexbox-layout">Flexbox Layout</a></li>
+    <li><a href="#properti-di-flex-container">Properti di Flex Container</a></li>
+    <li><a href="#properti-di-flex-item">Properti di Flex Item</a></li>
+    <li><a href="#referensi">Referensi</a></li>
+  </ul>
+</nav>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="page-links d-none d-xl-block">
+  <h3>Daftar isi</h3>
+  <nav id="TableOfContents">
+  <ul>
+    <li><a href="#apa-itu-flexbox">Apa Itu Flexbox</a></li>
+    <li><a href="#flexbox-layout">Flexbox Layout</a></li>
+    <li><a href="#properti-di-flex-container">Properti di Flex Container</a></li>
+    <li><a href="#properti-di-flex-item">Properti di Flex Item</a></li>
+    <li><a href="#referensi">Referensi</a></li>
+  </ul>
+</nav>
+  </div>
+
+		</nav>
+		<main class="docs-content col-lg-11 col-xl-9">
+		
+				<nav aria-label="breadcrumb">
+					<ol class="breadcrumb">
+						<li class="breadcrumb-item"><a href="/">Home</a></li>
+<li class="breadcrumb-item"><a href="/css/">Css</a></li>
+<li class="breadcrumb-item"><a href="/css/tutorial/">Tutorial CSS</a></li>
+<li class="breadcrumb-item active" aria-current="page">Flexbox</li>
+					</ol>
+				</nav>
+			
+			<h1>Flexbox</h1>
+			<p class="lead"></p>
+			<nav class="d-xl-none" aria-label="Quaternary navigation">
+				<div class="d-xl-none">
+  <button class="btn btn-outline-primary btn-sm doks-toc-toggle collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#onThisPage" aria-controls="doks-docs-nav" aria-expanded="false" aria-label="Toggle On this page navigation">
+    <span>Daftar isi</span>
+    <span>
+      <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" class="doks doks-expand" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><title>Expand</title><polyline points="7 13 12 18 17 13"></polyline><polyline points="7 6 12 11 17 6"></polyline></svg>
+      <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" class="doks doks-collapse" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><title>Collapse</title><polyline points="17 11 12 6 7 11"></polyline><polyline points="17 18 12 13 7 18"></polyline></svg>
+    </span>
+  </button>
+  <div class="collapse" id="onThisPage">
+    <div class="card card-body mt-3 py-1">
+      <div class="page-links">
+        <nav id="TableOfContents">
+  <ul>
+    <li><a href="#apa-itu-flexbox">Apa Itu Flexbox</a></li>
+    <li><a href="#flexbox-layout">Flexbox Layout</a></li>
+    <li><a href="#properti-di-flex-container">Properti di Flex Container</a></li>
+    <li><a href="#properti-di-flex-item">Properti di Flex Item</a></li>
+    <li><a href="#referensi">Referensi</a></li>
+  </ul>
+</nav>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="page-links d-none d-xl-block">
+  <h3>Daftar isi</h3>
+  <nav id="TableOfContents">
+  <ul>
+    <li><a href="#apa-itu-flexbox">Apa Itu Flexbox</a></li>
+    <li><a href="#flexbox-layout">Flexbox Layout</a></li>
+    <li><a href="#properti-di-flex-container">Properti di Flex Container</a></li>
+    <li><a href="#properti-di-flex-item">Properti di Flex Item</a></li>
+    <li><a href="#referensi">Referensi</a></li>
+  </ul>
+</nav>
+  </div>
+
+			</nav>
+			<h1 id="css-flexbox">CSS Flexbox <a href="#css-flexbox" class="anchor" aria-hidden="true">#</a></h1>
+<h2 id="apa-itu-flexbox">Apa Itu Flexbox <a href="#apa-itu-flexbox" class="anchor" aria-hidden="true">#</a></h2>
+<p>Flexbox adalah metode tata letak satu dimensi untuk mengatur item dalam baris atau kolom. Flexbox diperkenalkan di CSS versi terbaru yaitu, CSS3. Dengan flexbox, mudah untuk memusatkan elemen pada halaman dan membuat antarmuka pengguna dinamis yang menyusut dan meluas secara otomatis.</p>
+<p>Untuk membuat elemen HTML menjadi flexbox kita bisa pilih elemen tersebut dengan menggunakan CSS selector dan menambahkan properti <code>display</code> dengan value <code>flex</code>.</p>
+<pre><code class="language-css">.flex-container {
+  display: flex;
+}
+</code></pre>
+<h2 id="flexbox-layout">Flexbox Layout <a href="#flexbox-layout" class="anchor" aria-hidden="true">#</a></h2>
+<p><img class="img-fluid lazyload blur-up" src="https://developer.mozilla.org/en-US/docs/Learn/CSS/CSS_layout/Flexbox/flex_terms.png" alt="flex-model"></p>
+<ul>
+<li>Main axis merupakan sumbu utama yang arahnya horizontal atau mendatar. Awal sumbu disebut main start dan akhir sumbu disebut main end.</li>
+<li>Cross axis merupakan sumbu yang arahnya vertikal atau tegak. Awal sumbu disebut cross start dan akhir sumbu disebut cross end.</li>
+<li>Flex container merupakan parent elemen dari flex item yang telah kita atur dengan CSS menggunakan <code>display: flex;</code>.</li>
+<li>Flex item merupakan child elemen dari flex container.</li>
+<li>Main size merupakan lebar dari flex item.</li>
+<li>Cross size merupakan tinggi dari flex item.</li>
+<li>Beberapa CSS properti di flex container:
+<ul>
+<li><code>flex-direction</code></li>
+<li><code>flex-wrap</code></li>
+<li><code>flex-flow</code></li>
+<li><code>justify-content</code></li>
+<li><code>align-items</code></li>
+<li><code>align-content</code></li>
+</ul>
+</li>
+<li>Beberapa CSS properti di flex item:
+<ul>
+<li><code>order</code></li>
+<li><code>flex-grow</code></li>
+<li><code>flex-shrink</code></li>
+<li><code>flex-basis</code></li>
+<li><code>flex</code></li>
+<li><code>align-self</code></li>
+</ul>
+</li>
+</ul>
+<h2 id="properti-di-flex-container">Properti di Flex Container <a href="#properti-di-flex-container" class="anchor" aria-hidden="true">#</a></h2>
+<p>Berikut adalah beberapa properti CSS yang ada di flex container untuk mengatur flex item:</p>
+<ul>
+<li>
+<p><code>flex-direction</code> - Untuk menentukan arah flex item di dalam flex container.</p>
+<p>Contoh:</p>
+<p>Untuk mengatur flex item secara vertikal dengan arah dari atas ke bawah.</p>
+<pre><code class="language-css">.flex-container {
+  flex-direction: column;
+}
+</code></pre>
+<p>Untuk mengatur flex item secara horizontal dengan arah dari kiri ke kanan</p>
+<pre><code class="language-css">.flex-container {
+  flex-direction: row;
+}
+</code></pre>
+<p>Sama seperti row namun dengan arah sebaliknya</p>
+<pre><code class="language-css">.flex-container {
+  flex-direction: row-reverse;
+}
+</code></pre>
+<p>Sama seperti column namun dengan arah sebaliknya</p>
+<pre><code class="language-css">.flex-container {
+  flex-direction: column-reverse;
+}
+</code></pre>
+</li>
+<li>
+<p><code>flex-wrap</code> - Untuk menentukan apakah flex item harus wrap atau tidak, jika tidak ada cukup ruang untuk mereka pada main axis.</p>
+<p>Contoh:</p>
+<p>Flex item akan wrap jika tidak ada cukup ruang di dalam container</p>
+<pre><code class="language-css">.flex-container {
+  flex-wrap: wrap;
+}
+</code></pre>
+<p>Flex item tidak akan wrap meskipun tidak ada cukup ruang di dalam container</p>
+<pre><code class="language-css">.flex-container {
+  flex-wrap: nowrap;
+}
+</code></pre>
+<p>Flex item akan wrap dengan arah yang sebaliknya</p>
+<pre><code class="language-css">.flex-container {
+  flex-wrap: wrap-reverse;
+}
+</code></pre>
+</li>
+<li>
+<p><code>flex-flow</code> - Shorthand untuk <code>flex-direction</code> dan <code>flex-wrap</code>.</p>
+<p>Contoh:</p>
+<pre><code class="language-css">.flex-container {
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+</code></pre>
+<p>Maka shorthand nya akan seperti ini</p>
+<pre><code class="language-css">.flex-container {
+  flex-flow: row wrap;
+}
+</code></pre>
+</li>
+<li>
+<p><code>justify-content</code> - Untuk menyejajarkan flex item secara horizontal saat item tidak menggunakan semua ruang yang tersedia di main axis.</p>
+<p>Contoh:</p>
+<p>Menyejajarkan flex item di tengah main axis</p>
+<pre><code class="language-css">.flex-container {
+  justify-content: center;
+}
+</code></pre>
+<p>Menyejajarkan flex item di awal main axis</p>
+<pre><code class="language-css">.flex-container {
+  justify-content: flex-start;
+}
+</code></pre>
+<p>Menyejajarkan flex item di akhir main axis</p>
+<pre><code class="language-css">.flex-container {
+  justify-content: flex-end;
+}
+</code></pre>
+<p>Flex item akan memiliki ruang kosong diantara flex item</p>
+<pre><code class="language-css">.flex-container {
+  justify-content: space-between;
+}
+</code></pre>
+<p>Flex item akan memiliki ruang kosong disekitarnya</p>
+<pre><code class="language-css">.flex-container {
+  justify-content: space-around;
+}
+</code></pre>
+<p>Flex item akan memiliki ruang kosong disekitarnya dengan ukuran yang sama sesuai panjang main axis</p>
+<pre><code class="language-css">.flex-container {
+  justify-content: space-evenly; /* */
+}
+</code></pre>
+</li>
+<li>
+<p><code>align-items</code> - Untuk menyejajarkan flex item secara vertikal saat item tidak menggunakan semua ruang yang tersedia pada cross axis.</p>
+<p>Contoh:</p>
+<p>Menyejajarkan flex item di tengah cross axis</p>
+<pre><code class="language-css">.flex-container {
+  align-items: center;
+}
+</code></pre>
+<p>Flex item akan diregangkan sesuai dengan panjang cross axis</p>
+<pre><code class="language-css">.flex-container {
+  align-items: stretch;
+}
+</code></pre>
+<p>Menyejajarkan flex item di awal cross axis</p>
+<pre><code class="language-css">.flex-container {
+  align-items: flex-start;
+}
+</code></pre>
+<p>Menyejajarkan flex item di akhir cross axis</p>
+<pre><code class="language-css">.flex-container {
+  align-items: flex-end;
+}
+</code></pre>
+<p>Flex item akan diposisikan di garis dasar container</p>
+<pre><code class="language-css">.flex-container {
+  align-items: baseline;
+}
+</code></pre>
+</li>
+<li>
+<p><code>align-content</code> - Untuk memodifikasi perilaku properti flex-wrap. Hal ini mirip dengan align-item, tapi bukan untuk menyelaraskan flex item, melainkan untuk menyelaraskan garis flex.</p>
+<p>Contoh:</p>
+<p>Garis dikemas ke arah tengah container</p>
+<pre><code class="language-css">.flex-container {
+  align-content: center;
+}
+</code></pre>
+<p>Garis meregang untuk mengambil ruang yang tersisa di container</p>
+<pre><code class="language-css">.flex-container {
+  align-content: stretch;
+}
+</code></pre>
+<p>Garis dikemas ke awal cross axis</p>
+<pre><code class="language-css">.flex-container {
+  align-content: flex-start;
+}
+</code></pre>
+<p>Garis dikemas ke akhir cross axis</p>
+<pre><code class="language-css">.flex-container {
+  align-content: flex-end;
+}
+</code></pre>
+<p>Garis didistribusikan secara merata di dalam container</p>
+<pre><code class="language-css">.flex-container {
+  align-content: space-between;
+}
+</code></pre>
+<p>Garis didistribusikan secara merata di dalam container, dengan ruang setengah ukuran di kedua ujungnya</p>
+<pre><code class="language-css">.flex-container {
+  align-content: space-around;
+}
+</code></pre>
+<p>Garis didistribusikan secara merata di dalam container, dengan ruang yang sama di sekelilingnya</p>
+<pre><code class="language-css">.flex-container {
+  align-content: space-evenly;
+}
+</code></pre>
+</li>
+</ul>
+<h2 id="properti-di-flex-item">Properti di Flex Item <a href="#properti-di-flex-item" class="anchor" aria-hidden="true">#</a></h2>
+<p>Berikut adalah beberapa properti CSS yang ada di flex item:</p>
+<ul>
+<li>
+<p><code>order</code> - Untuk menentukan urutan flex item di dalam container yang sama.</p>
+<p>Contoh:</p>
+<p>Flex item akan berurutan mulai dari flex-item-1, flex-item-2, flex-item-3 sesuai order yang diberikan. Nilai defaultnya adalah 0.</p>
+<pre><code class="language-css">.flex-container {
+  display: flex;
+}
+
+.flex-container .flex-item-1 {
+  order: 3;
+}
+
+.flex-container .flex-item-2 {
+  order: 2;
+}
+
+.flex-container .flex-item-3 {
+  order: 1;
+}
+</code></pre>
+</li>
+<li>
+<p><code>flex-grow</code> - Untuk menentukan seberapa banyak flex item akan tumbuh relatif terhadap flex item lainnya di dalam container yang sama.</p>
+<p>Contoh:</p>
+<p>flex-item-1 akan memiliki ukuran lebih besar relatif terhadap flex item lainnya. Nilai defaultnya adalah 0.</p>
+<pre><code class="language-css">.flex-container {
+  display: flex;
+}
+
+.flex-container .flex-item-1 {
+  flex-grow: 3;
+}
+
+.flex-container .flex-item-2 {
+  flex-grow: 1;
+}
+
+.flex-container .flex-item-3 {
+  flex-grow: 1;
+}
+</code></pre>
+</li>
+<li>
+<p><code>flex-shrink</code> - Untuk menentukan seberapa banyak flex item akan menyusut relatif terhadap flex item lainnya di dalam wadah yang sama.</p>
+<p>Contoh:</p>
+<p>flex-item-1 akan menyusut lebih kecil relatif terhadap ukuran flex item lainnya. Nilai defaultnya adalah 1.</p>
+<pre><code class="language-css">.flex-container {
+  display: flex;
+}
+
+.flex-container .flex-item-1 {
+  flex-shrink: 3;
+}
+</code></pre>
+</li>
+<li>
+<p><code>flex-basis</code> - Untuk menentukan panjang awal flex item.</p>
+<p>Contoh:</p>
+<p>flex-item-1 akan memiliki panjang awal dengan ukuran 300px.</p>
+<pre><code class="language-css">.flex-container {
+  display: flex;
+}
+
+.flex-container .flex-item-1 {
+  flex-basis: 300px;
+}
+</code></pre>
+</li>
+<li>
+<p><code>flex</code> - Untuk shorthand properti flex-grow, flex-shrink, dan flex-basis.</p>
+<p>Contoh:</p>
+<p>Tidak menggunakan shorthand.</p>
+<pre><code class="language-css">.flex-container {
+  display: flex;
+}
+
+.flex-container .flex-item-1 {
+  flex-grow: 1;
+  flex-shrink: 2;
+  flex-basis: 300px;
+}
+</code></pre>
+<p>Saat menggunakan shorthand.</p>
+<pre><code class="language-css">.flex-container {
+  display: flex;
+}
+
+.flex-container .flex-item-1 {
+  flex: 1 2 300px;
+}
+</code></pre>
+</li>
+<li>
+<p><code>align-self</code> - Untuk menentukan perataan flex item secara spesifik untuk item tertentu (menimpa properti align-items container).</p>
+<p>Contoh:</p>
+<p>flex-item-1 akan berada di tengah cross axis, flex-item-2 akan berada di awal cross axis,
+flex-item-3 akan berada di akhir cross axis.</p>
+<pre><code class="language-css">.flex-container {
+  display: flex;
+}
+
+.flex-container .flex-item-1 {
+  align-self: flex-start;
+}
+
+.flex-container .flex-item-2 {
+  align-self: center;
+}
+
+.flex-container .flex-item-3 {
+  align-self: flex-end;
+}
+</code></pre>
+<h2 id="referensi">Referensi <a href="#referensi" class="anchor" aria-hidden="true">#</a></h2>
+<p>Untuk referensi lengkapnya, kalian bisa mengunjungi website berikut:</p>
+<ul>
+<li><a href="https://developer.mozilla.org/en-US/docs/Learn/CSS/CSS_layout/Flexbox">MDN Web Docs</a></li>
+<li><a href="https://www.w3schools.com/css/css3_flexbox.asp">W3Schools</a></li>
+</ul>
+</li>
+</ul>
+
+			<div class="page-footer-meta d-flex flex-column flex-md-row justify-content-between">
+				</div>
+			<div class="docs-navigation d-flex justify-content-between">
+	
+	<a href="/css/tutorial/media-query/">
+			<div class="card my-1">
+				<div class="card-body py-2">
+					&larr; Media Query
+				</div>
+			</div>
+		</a>
+	<a class="ms-auto" href="/css/tutorial/grid/">
+			<div class="card my-1">
+				<div class="card-body py-2">
+					Grid &rarr;
+				</div>
+			</div>
+		</a>
+	</div>
+
+			
+		</main>
+	</div>
+
+      </div>
+    </div>
+    
+    
+    <footer class="footer text-muted">
+  <div class="container-xxl">
+    <div class="row">
+      <div class="col-lg-8 order-last order-lg-first">
+        <ul class="list-inline">
+          <li class="list-inline-item">Powered by <a class="text-muted" href="https://gohugo.io/">Hugo</a> and <a class="text-muted" href="https://github.com/">Github</a></li>
+        </ul>
+      </div>
+      <div class="col-lg-8 order-first order-lg-last text-lg-end">
+        <ul class="list-inline">
+          </ul>
+      </div>
+    </div>
+  </div>
+</footer>
+    
+
+<script src="/js/bootstrap.min.5cdeb20ef814d367b4d5429ada9d342419eb34734de4713a71e5706485eaa75fa8d5d760c7a7f7ef20cb5494737eb8811729431813f22744c177384758c19081.js" integrity="sha512-XN6yDvgU02e01UKa2p00JBnrNHNN5HE6ceVwZIXqp1&#43;o1ddgx6f37yDLVJRzfriBFylDGBPyJ0TBdzhHWMGQgQ==" crossorigin="anonymous" defer></script>
+  <script src="/js/highlight.min.6e0bbb1ba7e7c09c5287a998de4147da3f56f6fed3dc91b747789519a1de6486b086542ebb2ed60527cfc4c32b8ce175a08c257392e98d7bb3f09661f2bd5666.js" integrity="sha512-bgu7G6fnwJxSh6mY3kFH2j9W9v7T3JG3R3iVGaHeZIawhlQuuy7WBSfPxMMrjOF1oIwlc5LpjXuz8JZh8r1WZg==" crossorigin="anonymous" defer></script>
+  <script src="/main.min.124171d9dd7beef16c3e35cd8394ad0c5ca7699608f699d747030ef0b0c3e4c2782454dd406f78e14ef7336f4a15de8676a808261d92f9b1858f1ec3ff720269.js" integrity="sha512-EkFx2d177vFsPjXNg5StDFynaZYI9pnXRwMO8LDD5MJ4JFTdQG944U73M29KFd6GdqgIJh2S&#43;bGFjx7D/3ICaQ==" crossorigin="anonymous" defer></script>
+  <script src="https://kaban.my.id/index.min.8a548e97da4f69aad50394ca9a3f006f894563cfab994cccf3d7296fff4b95ee3185ef939d31ef180d99294e2d167de11c84c6f11b7e5fe594c290887d82f5cb.js" integrity="sha512-ilSOl9pPaarVA5TKmj8Ab4lFY8&#43;rmUzM89cpb/9Lle4xhe&#43;TnTHvGA2ZKU4tFn3hHITG8Rt&#43;X&#43;WUwpCIfYL1yw==" crossorigin="anonymous" defer></script>
+  
+    <div class="d-flex fixed-bottom pb-4 pb-lg-5 pe-4 pe-lg-5">
+      <a id="toTop" href="#" class="btn btn-outline-primary rounded-circle ms-auto p-2"><span class="visually-hidden">Top</span><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-chevron-up"><polyline points="18 15 12 9 6 15"></polyline></svg></a>
+    </div>
+    
+  </body>
+</html>

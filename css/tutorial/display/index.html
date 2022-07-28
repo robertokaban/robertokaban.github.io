@@ -1,0 +1,1451 @@
+<!doctype html>
+<html lang="en-US">
+  <head>
+  <meta charset="utf-8">
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <link rel="preload" as="font" href="https://kaban.my.id/fonts/vendor/jost/jost-v4-latin-regular.woff2" type="font/woff2" crossorigin>
+<link rel="preload" as="font" href="https://kaban.my.id/fonts/vendor/jost/jost-v4-latin-500.woff2" type="font/woff2" crossorigin>
+<link rel="preload" as="font" href="https://kaban.my.id/fonts/vendor/jost/jost-v4-latin-700.woff2" type="font/woff2" crossorigin>
+
+  <script>(()=>{var b=window.matchMedia&&window.matchMedia("(prefers-color-scheme: dark)").matches,a=localStorage.getItem("theme");b&&a===null&&(localStorage.setItem("theme","dark"),document.documentElement.setAttribute("data-dark-mode","")),b&&a==="dark"&&document.documentElement.setAttribute("data-dark-mode",""),a==="dark"&&document.documentElement.setAttribute("data-dark-mode","")})()</script>
+
+  <link rel="stylesheet" href="https://kaban.my.id/main.db54f9bfe0e34af6df4b69bf090ea48671e03ba69b420b89320e0b7076cea1816068ce8c0730dd086b3bdfdd35a007c4a11e27a6f0497d19c43496ed0c6108c9.css" integrity="sha512-21T5v&#43;DjSvbfS2m/CQ6khnHgO6abQguJMg4LcHbOoYFgaM6MBzDdCGs73901oAfEoR4npvBJfRnENJbtDGEIyQ==" crossorigin="anonymous">
+<noscript><style>img.lazyload { display: none; }</style></noscript>
+  <meta name="robots" content="index, follow">
+    <meta name="googlebot" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1">
+    <meta name="bingbot" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1">
+  <title>Display - Roberto Kaban Blog&#39;s</title>
+<meta name="description" content="Setiap elemen pada halaman web didefinisikan sebagai kotak persegi panjang dan properti `display` di CSS lah yang menentukan bagaimana perilaku dari kotak persegi panjang tersebut.">
+<link rel="canonical" href="https://kaban.my.id/css/tutorial/display/">
+<meta property="og:locale" content="en_US">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Display">
+<meta property="og:description" content="Setiap elemen pada halaman web didefinisikan sebagai kotak persegi panjang dan properti `display` di CSS lah yang menentukan bagaimana perilaku dari kotak persegi panjang tersebut.">
+<meta property="og:url" content="https://kaban.my.id/css/tutorial/display/">
+<meta property="og:site_name" content="Roberto Kaban Blog&#39;s">
+<meta property="article:published_time" content="2021-12-06T08:49:31+00:00">
+  <meta property="article:modified_time" content="2021-12-06T08:49:31+00:00">
+  
+  <meta property="og:image" content="https://kaban.my.id/doks.png"/>
+      <meta property="og:image:alt" content="Roberto Kaban Blog&#39;s">
+    
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:site" content="@robertokaban">
+<meta name="twitter:creator" content="@robertokaban">
+<meta name="twitter:title" content="Display">
+<meta name="twitter:description" content="Setiap elemen pada halaman web didefinisikan sebagai kotak persegi panjang dan properti `display` di CSS lah yang menentukan bagaimana perilaku dari kotak persegi panjang tersebut.">
+<meta name="twitter:image" content="https://kaban.my.id/doks.png">
+    <meta name="twitter:image:alt" content="Display">
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "Person",
+        "@id": "https://kaban.my.id/#/schema/person/1",
+      "name": "BlogRobertoKaban",
+      "url": "https://kaban.my.id/",
+      "sameAs": [
+        "https://twitter.com/robertokaban"
+        , "https://github.com/robertokaban"
+        ],
+      "image": {
+          "@type": "ImageObject",
+          "@id": "https://kaban.my.id/#/schema/image/1",
+          "url": "https://kaban.my.id/doks.png",
+          "width":  1280 ,
+          "height":  640 ,
+          "caption": "BlogRobertoKaban"
+        }
+      },
+    {
+      "@type": "WebSite",
+      "@id": "https://kaban.my.id/#/schema/website/1",
+      "url": "https://kaban.my.id/",
+      "name": "Roberto Kaban Blog\u0027s",
+      "description": "Hanya sebuah catatan kecil untuk hal yang tidak ingin dilupakan.",
+      "publisher": {
+          "@id": "https://kaban.my.id/#/schema/person/1"
+        }
+      },
+    {
+      "@type": "WebPage",
+      "@id": "https://kaban.my.id/css/tutorial/display/",
+      "url": "https://kaban.my.id/css/tutorial/display/",
+      "name": "Display",
+      "description": "Setiap elemen pada halaman web didefinisikan sebagai kotak persegi panjang dan properti `display` di CSS lah yang menentukan bagaimana perilaku dari kotak persegi panjang tersebut.",
+      "isPartOf": {
+        "@id": "https://kaban.my.id/#/schema/website/1"
+      },
+      "about": {
+          "@id": "https://kaban.my.id/#/schema/person/1"
+        },
+      "datePublished": "2021-12-06T08:49:31CET",
+      "dateModified": "2021-12-06T08:49:31CET",
+      "breadcrumb": {
+        "@id": "https://kaban.my.id/css/tutorial/display/#/schema/breadcrumb/1"
+      },
+      "primaryImageOfPage": {
+        "@id": "https://kaban.my.id/css/tutorial/display/#/schema/image/2"
+      },
+      "inLanguage": "en-US",
+      "potentialAction": [{
+        "@type": "ReadAction", "target": ["https://kaban.my.id/css/tutorial/display/"]
+      }]
+    },
+    {
+      "@type": "BreadcrumbList",
+      "@id": "https://kaban.my.id/css/tutorial/display/#/schema/breadcrumb/1",
+      "name": "Breadcrumbs",
+      "itemListElement": [{
+        "@type": "ListItem",
+        "position":  1 ,
+        "item": {
+          "@type": "WebPage",
+          "@id": "https://kaban.my.id/",
+          "url": "https://kaban.my.id/",
+          "name": "Home"
+          }
+        },{
+        "@type": "ListItem",
+        "position":  2 ,
+        "item": {
+          "@type": "WebPage",
+          "@id": "https://kaban.my.id/css/",
+          "url": "https://kaban.my.id/css/",
+          "name": "Css"
+          }
+        },{
+        "@type": "ListItem",
+        "position":  3 ,
+        "item": {
+          "@type": "WebPage",
+          "@id": "https://kaban.my.id/css/tutorial/",
+          "url": "https://kaban.my.id/css/tutorial/",
+          "name": "Tutorial"
+          }
+        },{
+        "@type": "ListItem",
+        "position":  4 ,
+        "item": {
+          "@id": "https://kaban.my.id/css/tutorial/display/"
+          }
+        }]
+    },
+
+    {
+      "@context": "https://schema.org",
+      "@graph": [
+        {
+          "@type": "ImageObject",
+          "@id": "https://kaban.my.id/css/tutorial/display/#/schema/image/2",
+          "url": "https://kaban.my.id/doks.png",
+          "contentUrl": "https://kaban.my.id/doks.png",
+          "caption": "Display"
+        }
+      ]
+    }
+
+  ]
+}
+</script>
+
+  <meta name="theme-color" content="#fff">
+<link rel="icon" href="https://kaban.my.id/favicon.ico" sizes="any">
+<link rel="icon" type="image/svg+xml" href="https://kaban.my.id/favicon.svg">
+<link rel="apple-touch-icon" sizes="180x180" href="https://kaban.my.id/apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="32x32" href="https://kaban.my.id/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="https://kaban.my.id/favicon-16x16.png">
+<link rel="manifest" crossorigin="use-credentials" href="https://kaban.my.id/site.webmanifest">
+
+  
+
+</head>
+
+  <body class="css single">
+    <div class="sticky-top">
+<div class="header-bar"></div>
+
+<header class="navbar navbar-expand-lg navbar-light doks-navbar">
+  <nav class="container-xxl flex-wrap flex-lg-nowrap" aria-label="Main navigation">
+
+    <a class="navbar-brand order-0" href="/" aria-label="Roberto Kaban Blog&#39;s">
+      Roberto Kaban Blog&#39;s
+    </a>
+
+    <button class="btn btn-menu order-2 d-block d-lg-none" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasDoks" aria-controls="offcanvasDoks" aria-label="Open main menu">
+      <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-menu"><line x1="3" y1="12" x2="21" y2="12"></line><line x1="3" y1="6" x2="21" y2="6"></line><line x1="3" y1="18" x2="21" y2="18"></line></svg>
+    </button>
+    <div class="offcanvas offcanvas-end border-0 py-lg-1" tabindex="-1" id="offcanvasDoks" data-bs-backdrop="true" aria-labelledby="offcanvasDoksLabel">
+      <div class="header-bar d-lg-none"></div>
+      <div class="offcanvas-header d-lg-none">
+        <h2 class="h5 offcanvas-title ps-2" id="offcanvasDoksLabel"><a class="text-dark" href="/">Roberto Kaban Blog&#39;s</a></h2>
+        <button type="button" class="btn-close text-reset me-2" data-bs-dismiss="offcanvas" aria-label="Close main menu"></button>
+      </div>
+      <div class="offcanvas-body p-4 p-lg-0">
+        <ul class="nav flex-column flex-lg-row align-items-lg-center mt-2 mt-lg-0 ms-lg-2 me-lg-auto">
+              <li class="nav-item">
+                <a class="nav-link ps-0 py-1" href="/about/">About Me</a>
+              </li>
+            
+          
+              <li class="nav-item">
+                <a class="nav-link ps-0 py-1" href="/contact/">Contact</a>
+              </li>
+            
+          
+              <li class="nav-item">
+                <a class="nav-link ps-0 py-1" href="/artikel/">Artikel</a>
+              </li>
+            
+          
+              <li class="nav-item">
+                <a class="nav-link ps-0 py-1" href="/coretanku/">Coretanku</a>
+              </li>
+            
+          </ul>
+
+        <hr class="text-black-50 my-4 d-lg-none">
+        <form class="doks-search position-relative flex-grow-1 ms-lg-auto me-lg-2">
+          <input id="search" class="form-control is-search" type="search" placeholder="Cari di blog ini..." aria-label="Cari di blog ini..." autocomplete="off">
+          <div id="suggestions" class="shadow bg-white rounded d-none"></div>
+        </form>
+        <hr class="text-black-50 my-4 d-lg-none">
+        <ul class="nav flex-column flex-lg-row">
+          <li class="nav-item">
+              <a class="nav-link social-link" href="https://github.com/robertokaban"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-github"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path></svg><small class="ms-2 d-lg-none">GitHub</small></a>
+            </li>
+          <li class="nav-item">
+              <a class="nav-link social-link" href="https://twitter.com/robertokaban"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-twitter"><path d="M23 3a10.9 10.9 0 0 1-3.14 1.53 4.48 4.48 0 0 0-7.86 3v1A10.66 10.66 0 0 1 3 4s-4 9 5 13a11.64 11.64 0 0 1-7 2c9 5 20 0 20-11.5a4.5 4.5 0 0 0-.08-.83A7.72 7.72 0 0 0 23 3z"></path></svg><small class="ms-2 d-lg-none">Twitter</small></a>
+            </li>
+          </ul>
+
+        
+        <hr class="text-black-50 my-4 d-lg-none">
+        <button id="mode" class="btn btn-link" type="button" aria-label="Toggle user interface mode">
+          <span class="toggle-dark"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-moon"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path></svg></span>
+          <span class="toggle-light"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-sun"><circle cx="12" cy="12" r="5"></circle><line x1="12" y1="1" x2="12" y2="3"></line><line x1="12" y1="21" x2="12" y2="23"></line><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line><line x1="1" y1="12" x2="3" y2="12"></line><line x1="21" y1="12" x2="23" y2="12"></line><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line></svg></span>
+        </button>
+        
+
+        </div>
+    </div>
+  </nav>
+</header>
+
+
+</div>
+
+
+<div class="container-xxl">
+  <aside class="doks-sidebar">
+    <nav id="doks-docs-nav" class="collapse d-lg-none" aria-label="Tertiary navigation">
+      
+<ul class="list-unstyled collapsible-sidebar">
+  
+    
+      
+      <li class="mb-1">
+        <button class="btn btn-toggle align-items-center rounded collapsed" data-bs-toggle="collapse" data-bs-target="#section-420758e7531f11b46494cbfaeea9e72a" aria-expanded="true">
+          Tutorial CSS
+        </button>
+        <div class="collapse show" id="section-420758e7531f11b46494cbfaeea9e72a">
+          <ul class="btn-toggle-nav list-unstyled fw-normal pb-1 small">
+            
+              
+                
+                <li><a class="docs-link rounded" href="https://kaban.my.id/css/tutorial/pengenalan/">Pengenalan</a></li>
+              
+            
+              
+                
+                <li><a class="docs-link rounded" href="https://kaban.my.id/css/tutorial/basic/">Basic</a></li>
+              
+            
+              
+                
+                <li><a class="docs-link rounded" href="https://kaban.my.id/css/tutorial/sintax/">Sintax</a></li>
+              
+            
+              
+                
+                <li><a class="docs-link rounded" href="https://kaban.my.id/css/tutorial/selectors/">Selectors</a></li>
+              
+            
+              
+                
+                <li><a class="docs-link rounded" href="https://kaban.my.id/css/tutorial/comments/">Comments</a></li>
+              
+            
+              
+                
+                <li><a class="docs-link rounded" href="https://kaban.my.id/css/tutorial/colors/">Colors</a></li>
+              
+            
+              
+                
+                <li><a class="docs-link rounded" href="https://kaban.my.id/css/tutorial/backgroud/">Background</a></li>
+              
+            
+              
+                
+                <li><a class="docs-link rounded" href="https://kaban.my.id/css/tutorial/borders/">Borders</a></li>
+              
+            
+              
+                
+                <li><a class="docs-link rounded" href="https://kaban.my.id/css/tutorial/border-radius/">Border Radius</a></li>
+              
+            
+              
+                
+                <li><a class="docs-link rounded" href="https://kaban.my.id/css/tutorial/margin/">Margin</a></li>
+              
+            
+              
+                
+                <li><a class="docs-link rounded" href="https://kaban.my.id/css/tutorial/padding/">Padding</a></li>
+              
+            
+              
+                
+                <li><a class="docs-link rounded" href="https://kaban.my.id/css/tutorial/size/">Size</a></li>
+              
+            
+              
+                
+                <li><a class="docs-link rounded" href="https://kaban.my.id/css/tutorial/box-model/">Box Model</a></li>
+              
+            
+              
+                
+                <li><a class="docs-link rounded" href="https://kaban.my.id/css/tutorial/outline/">Outline</a></li>
+              
+            
+              
+                
+                <li><a class="docs-link rounded" href="https://kaban.my.id/css/tutorial/text-alignment/">Text Alignment</a></li>
+              
+            
+              
+                
+                <li><a class="docs-link rounded" href="https://kaban.my.id/css/tutorial/text-decoration/">Text Decoration</a></li>
+              
+            
+              
+                
+                <li><a class="docs-link rounded" href="https://kaban.my.id/css/tutorial/text-transform/">Text Transform</a></li>
+              
+            
+              
+                
+                <li><a class="docs-link rounded" href="https://kaban.my.id/css/tutorial/fonts/">Fonts</a></li>
+              
+            
+              
+                
+                <li><a class="docs-link rounded" href="https://kaban.my.id/css/tutorial/web-font/">Web Font</a></li>
+              
+            
+              
+                
+                <li><a class="docs-link rounded active" href="https://kaban.my.id/css/tutorial/display/">Display</a></li>
+              
+            
+              
+                
+                <li><a class="docs-link rounded" href="https://kaban.my.id/css/tutorial/position/">Position</a></li>
+              
+            
+              
+                
+                <li><a class="docs-link rounded" href="https://kaban.my.id/css/tutorial/z-index/">Z Index</a></li>
+              
+            
+              
+                
+                <li><a class="docs-link rounded" href="https://kaban.my.id/css/tutorial/overflow/">Overflow</a></li>
+              
+            
+              
+                
+                <li><a class="docs-link rounded" href="https://kaban.my.id/css/tutorial/float/">Float</a></li>
+              
+            
+              
+                
+                <li><a class="docs-link rounded" href="https://kaban.my.id/css/tutorial/combinators/">Combinators</a></li>
+              
+            
+              
+                
+                <li><a class="docs-link rounded" href="https://kaban.my.id/css/tutorial/pseudo-classes/">Pseodo Classes</a></li>
+              
+            
+              
+                
+                <li><a class="docs-link rounded" href="https://kaban.my.id/css/tutorial/psesudo-elements/">Pseodo Elements</a></li>
+              
+            
+              
+                
+                <li><a class="docs-link rounded" href="https://kaban.my.id/css/tutorial/opocity/">Opocity</a></li>
+              
+            
+              
+                
+                <li><a class="docs-link rounded" href="https://kaban.my.id/css/tutorial/units/">Units</a></li>
+              
+            
+              
+                
+                <li><a class="docs-link rounded" href="https://kaban.my.id/css/tutorial/important/">Importants</a></li>
+              
+            
+              
+                
+                <li><a class="docs-link rounded" href="https://kaban.my.id/css/tutorial/math-function/">Math Function</a></li>
+              
+            
+              
+                
+                <li><a class="docs-link rounded" href="https://kaban.my.id/css/tutorial/gradient/">Gradients</a></li>
+              
+            
+              
+                
+                <li><a class="docs-link rounded" href="https://kaban.my.id/css/tutorial/shadow/">Shadows</a></li>
+              
+            
+              
+                
+                <li><a class="docs-link rounded" href="https://kaban.my.id/css/tutorial/word-wrap/">Word Wrap</a></li>
+              
+            
+              
+                
+                <li><a class="docs-link rounded" href="https://kaban.my.id/css/tutorial/word-spacing/">Word Spacing</a></li>
+              
+            
+              
+                
+                <li><a class="docs-link rounded" href="https://kaban.my.id/css/tutorial/writing-mode/">Writing Mode</a></li>
+              
+            
+              
+                
+                <li><a class="docs-link rounded" href="https://kaban.my.id/css/tutorial/ransform/">Transform</a></li>
+              
+            
+              
+                
+                <li><a class="docs-link rounded" href="https://kaban.my.id/css/tutorial/transitions/">Transitions</a></li>
+              
+            
+              
+                
+                <li><a class="docs-link rounded" href="https://kaban.my.id/css/tutorial/image-filter/">Image Filter</a></li>
+              
+            
+              
+                
+                <li><a class="docs-link rounded" href="https://kaban.my.id/css/tutorial/object-fit/">Image Fit</a></li>
+              
+            
+              
+                
+                <li><a class="docs-link rounded" href="https://kaban.my.id/css/tutorial/button/">Button</a></li>
+              
+            
+              
+                
+                <li><a class="docs-link rounded" href="https://kaban.my.id/css/tutorial/custom-property/">Custom Properties</a></li>
+              
+            
+              
+                
+                <li><a class="docs-link rounded" href="https://kaban.my.id/css/tutorial/box-sizing/">Box Sizing</a></li>
+              
+            
+              
+                
+                <li><a class="docs-link rounded" href="https://kaban.my.id/css/tutorial/media-query/">Media Query</a></li>
+              
+            
+              
+                
+                <li><a class="docs-link rounded" href="https://kaban.my.id/css/tutorial/flexbox/">Flexbox</a></li>
+              
+            
+              
+                
+                <li><a class="docs-link rounded" href="https://kaban.my.id/css/tutorial/grid/">Grid</a></li>
+              
+            
+          </ul>
+        </div>
+      </li>
+    
+  
+</ul>
+
+    </nav>
+  </aside>
+</div>
+
+    <div class="wrap container-xxl" role="document">
+      <div class="content">
+        
+	<div class="row flex-xl-nowrap">
+		<div class="col-lg-5 col-xl-4 docs-sidebar d-none d-lg-block">
+			<nav class="docs-links" aria-label="Main navigation">
+				
+<ul class="list-unstyled collapsible-sidebar">
+  
+    
+      
+      <li class="mb-1">
+        <button class="btn btn-toggle align-items-center rounded collapsed" data-bs-toggle="collapse" data-bs-target="#section-420758e7531f11b46494cbfaeea9e72a" aria-expanded="true">
+          Tutorial CSS
+        </button>
+        <div class="collapse show" id="section-420758e7531f11b46494cbfaeea9e72a">
+          <ul class="btn-toggle-nav list-unstyled fw-normal pb-1 small">
+            
+              
+                
+                <li><a class="docs-link rounded" href="https://kaban.my.id/css/tutorial/pengenalan/">Pengenalan</a></li>
+              
+            
+              
+                
+                <li><a class="docs-link rounded" href="https://kaban.my.id/css/tutorial/basic/">Basic</a></li>
+              
+            
+              
+                
+                <li><a class="docs-link rounded" href="https://kaban.my.id/css/tutorial/sintax/">Sintax</a></li>
+              
+            
+              
+                
+                <li><a class="docs-link rounded" href="https://kaban.my.id/css/tutorial/selectors/">Selectors</a></li>
+              
+            
+              
+                
+                <li><a class="docs-link rounded" href="https://kaban.my.id/css/tutorial/comments/">Comments</a></li>
+              
+            
+              
+                
+                <li><a class="docs-link rounded" href="https://kaban.my.id/css/tutorial/colors/">Colors</a></li>
+              
+            
+              
+                
+                <li><a class="docs-link rounded" href="https://kaban.my.id/css/tutorial/backgroud/">Background</a></li>
+              
+            
+              
+                
+                <li><a class="docs-link rounded" href="https://kaban.my.id/css/tutorial/borders/">Borders</a></li>
+              
+            
+              
+                
+                <li><a class="docs-link rounded" href="https://kaban.my.id/css/tutorial/border-radius/">Border Radius</a></li>
+              
+            
+              
+                
+                <li><a class="docs-link rounded" href="https://kaban.my.id/css/tutorial/margin/">Margin</a></li>
+              
+            
+              
+                
+                <li><a class="docs-link rounded" href="https://kaban.my.id/css/tutorial/padding/">Padding</a></li>
+              
+            
+              
+                
+                <li><a class="docs-link rounded" href="https://kaban.my.id/css/tutorial/size/">Size</a></li>
+              
+            
+              
+                
+                <li><a class="docs-link rounded" href="https://kaban.my.id/css/tutorial/box-model/">Box Model</a></li>
+              
+            
+              
+                
+                <li><a class="docs-link rounded" href="https://kaban.my.id/css/tutorial/outline/">Outline</a></li>
+              
+            
+              
+                
+                <li><a class="docs-link rounded" href="https://kaban.my.id/css/tutorial/text-alignment/">Text Alignment</a></li>
+              
+            
+              
+                
+                <li><a class="docs-link rounded" href="https://kaban.my.id/css/tutorial/text-decoration/">Text Decoration</a></li>
+              
+            
+              
+                
+                <li><a class="docs-link rounded" href="https://kaban.my.id/css/tutorial/text-transform/">Text Transform</a></li>
+              
+            
+              
+                
+                <li><a class="docs-link rounded" href="https://kaban.my.id/css/tutorial/fonts/">Fonts</a></li>
+              
+            
+              
+                
+                <li><a class="docs-link rounded" href="https://kaban.my.id/css/tutorial/web-font/">Web Font</a></li>
+              
+            
+              
+                
+                <li><a class="docs-link rounded active" href="https://kaban.my.id/css/tutorial/display/">Display</a></li>
+              
+            
+              
+                
+                <li><a class="docs-link rounded" href="https://kaban.my.id/css/tutorial/position/">Position</a></li>
+              
+            
+              
+                
+                <li><a class="docs-link rounded" href="https://kaban.my.id/css/tutorial/z-index/">Z Index</a></li>
+              
+            
+              
+                
+                <li><a class="docs-link rounded" href="https://kaban.my.id/css/tutorial/overflow/">Overflow</a></li>
+              
+            
+              
+                
+                <li><a class="docs-link rounded" href="https://kaban.my.id/css/tutorial/float/">Float</a></li>
+              
+            
+              
+                
+                <li><a class="docs-link rounded" href="https://kaban.my.id/css/tutorial/combinators/">Combinators</a></li>
+              
+            
+              
+                
+                <li><a class="docs-link rounded" href="https://kaban.my.id/css/tutorial/pseudo-classes/">Pseodo Classes</a></li>
+              
+            
+              
+                
+                <li><a class="docs-link rounded" href="https://kaban.my.id/css/tutorial/psesudo-elements/">Pseodo Elements</a></li>
+              
+            
+              
+                
+                <li><a class="docs-link rounded" href="https://kaban.my.id/css/tutorial/opocity/">Opocity</a></li>
+              
+            
+              
+                
+                <li><a class="docs-link rounded" href="https://kaban.my.id/css/tutorial/units/">Units</a></li>
+              
+            
+              
+                
+                <li><a class="docs-link rounded" href="https://kaban.my.id/css/tutorial/important/">Importants</a></li>
+              
+            
+              
+                
+                <li><a class="docs-link rounded" href="https://kaban.my.id/css/tutorial/math-function/">Math Function</a></li>
+              
+            
+              
+                
+                <li><a class="docs-link rounded" href="https://kaban.my.id/css/tutorial/gradient/">Gradients</a></li>
+              
+            
+              
+                
+                <li><a class="docs-link rounded" href="https://kaban.my.id/css/tutorial/shadow/">Shadows</a></li>
+              
+            
+              
+                
+                <li><a class="docs-link rounded" href="https://kaban.my.id/css/tutorial/word-wrap/">Word Wrap</a></li>
+              
+            
+              
+                
+                <li><a class="docs-link rounded" href="https://kaban.my.id/css/tutorial/word-spacing/">Word Spacing</a></li>
+              
+            
+              
+                
+                <li><a class="docs-link rounded" href="https://kaban.my.id/css/tutorial/writing-mode/">Writing Mode</a></li>
+              
+            
+              
+                
+                <li><a class="docs-link rounded" href="https://kaban.my.id/css/tutorial/ransform/">Transform</a></li>
+              
+            
+              
+                
+                <li><a class="docs-link rounded" href="https://kaban.my.id/css/tutorial/transitions/">Transitions</a></li>
+              
+            
+              
+                
+                <li><a class="docs-link rounded" href="https://kaban.my.id/css/tutorial/image-filter/">Image Filter</a></li>
+              
+            
+              
+                
+                <li><a class="docs-link rounded" href="https://kaban.my.id/css/tutorial/object-fit/">Image Fit</a></li>
+              
+            
+              
+                
+                <li><a class="docs-link rounded" href="https://kaban.my.id/css/tutorial/button/">Button</a></li>
+              
+            
+              
+                
+                <li><a class="docs-link rounded" href="https://kaban.my.id/css/tutorial/custom-property/">Custom Properties</a></li>
+              
+            
+              
+                
+                <li><a class="docs-link rounded" href="https://kaban.my.id/css/tutorial/box-sizing/">Box Sizing</a></li>
+              
+            
+              
+                
+                <li><a class="docs-link rounded" href="https://kaban.my.id/css/tutorial/media-query/">Media Query</a></li>
+              
+            
+              
+                
+                <li><a class="docs-link rounded" href="https://kaban.my.id/css/tutorial/flexbox/">Flexbox</a></li>
+              
+            
+              
+                
+                <li><a class="docs-link rounded" href="https://kaban.my.id/css/tutorial/grid/">Grid</a></li>
+              
+            
+          </ul>
+        </div>
+      </li>
+    
+  
+</ul>
+
+			</nav>
+		</div>
+		<nav class="docs-toc d-none d-xl-block col-xl-3" aria-label="Secondary navigation">
+			<div class="d-xl-none">
+  <button class="btn btn-outline-primary btn-sm doks-toc-toggle collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#onThisPage" aria-controls="doks-docs-nav" aria-expanded="false" aria-label="Toggle On this page navigation">
+    <span>Daftar isi</span>
+    <span>
+      <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" class="doks doks-expand" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><title>Expand</title><polyline points="7 13 12 18 17 13"></polyline><polyline points="7 6 12 11 17 6"></polyline></svg>
+      <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" class="doks doks-collapse" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><title>Collapse</title><polyline points="17 11 12 6 7 11"></polyline><polyline points="17 18 12 13 7 18"></polyline></svg>
+    </span>
+  </button>
+  <div class="collapse" id="onThisPage">
+    <div class="card card-body mt-3 py-1">
+      <div class="page-links">
+        <nav id="TableOfContents">
+  <ul>
+    <li><a href="#value">Value</a>
+      <ul>
+        <li><a href="#inline">Inline</a></li>
+        <li><a href="#block">Block</a></li>
+        <li><a href="#inline-block">Inline-Block</a></li>
+        <li><a href="#none">None</a></li>
+        <li><a href="#table-dan-kawanannya">Table dan kawanannya</a></li>
+        <li><a href="#flow-root">Flow-Root</a></li>
+        <li><a href="#flexbox">Flexbox</a></li>
+        <li><a href="#grid">Grid</a></li>
+      </ul>
+    </li>
+    <li><a href="#kesimpulan">Kesimpulan</a>
+      <ul>
+        <li><a href="#referensi">Referensi</a></li>
+      </ul>
+    </li>
+  </ul>
+</nav>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="page-links d-none d-xl-block">
+  <h3>Daftar isi</h3>
+  <nav id="TableOfContents">
+  <ul>
+    <li><a href="#value">Value</a>
+      <ul>
+        <li><a href="#inline">Inline</a></li>
+        <li><a href="#block">Block</a></li>
+        <li><a href="#inline-block">Inline-Block</a></li>
+        <li><a href="#none">None</a></li>
+        <li><a href="#table-dan-kawanannya">Table dan kawanannya</a></li>
+        <li><a href="#flow-root">Flow-Root</a></li>
+        <li><a href="#flexbox">Flexbox</a></li>
+        <li><a href="#grid">Grid</a></li>
+      </ul>
+    </li>
+    <li><a href="#kesimpulan">Kesimpulan</a>
+      <ul>
+        <li><a href="#referensi">Referensi</a></li>
+      </ul>
+    </li>
+  </ul>
+</nav>
+  </div>
+
+		</nav>
+		<main class="docs-content col-lg-11 col-xl-9">
+		
+				<nav aria-label="breadcrumb">
+					<ol class="breadcrumb">
+						<li class="breadcrumb-item"><a href="/">Home</a></li>
+<li class="breadcrumb-item"><a href="/css/">Css</a></li>
+<li class="breadcrumb-item"><a href="/css/tutorial/">Tutorial CSS</a></li>
+<li class="breadcrumb-item active" aria-current="page">Display</li>
+					</ol>
+				</nav>
+			
+			<h1>Display</h1>
+			<p class="lead"></p>
+			<nav class="d-xl-none" aria-label="Quaternary navigation">
+				<div class="d-xl-none">
+  <button class="btn btn-outline-primary btn-sm doks-toc-toggle collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#onThisPage" aria-controls="doks-docs-nav" aria-expanded="false" aria-label="Toggle On this page navigation">
+    <span>Daftar isi</span>
+    <span>
+      <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" class="doks doks-expand" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><title>Expand</title><polyline points="7 13 12 18 17 13"></polyline><polyline points="7 6 12 11 17 6"></polyline></svg>
+      <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" class="doks doks-collapse" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><title>Collapse</title><polyline points="17 11 12 6 7 11"></polyline><polyline points="17 18 12 13 7 18"></polyline></svg>
+    </span>
+  </button>
+  <div class="collapse" id="onThisPage">
+    <div class="card card-body mt-3 py-1">
+      <div class="page-links">
+        <nav id="TableOfContents">
+  <ul>
+    <li><a href="#value">Value</a>
+      <ul>
+        <li><a href="#inline">Inline</a></li>
+        <li><a href="#block">Block</a></li>
+        <li><a href="#inline-block">Inline-Block</a></li>
+        <li><a href="#none">None</a></li>
+        <li><a href="#table-dan-kawanannya">Table dan kawanannya</a></li>
+        <li><a href="#flow-root">Flow-Root</a></li>
+        <li><a href="#flexbox">Flexbox</a></li>
+        <li><a href="#grid">Grid</a></li>
+      </ul>
+    </li>
+    <li><a href="#kesimpulan">Kesimpulan</a>
+      <ul>
+        <li><a href="#referensi">Referensi</a></li>
+      </ul>
+    </li>
+  </ul>
+</nav>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="page-links d-none d-xl-block">
+  <h3>Daftar isi</h3>
+  <nav id="TableOfContents">
+  <ul>
+    <li><a href="#value">Value</a>
+      <ul>
+        <li><a href="#inline">Inline</a></li>
+        <li><a href="#block">Block</a></li>
+        <li><a href="#inline-block">Inline-Block</a></li>
+        <li><a href="#none">None</a></li>
+        <li><a href="#table-dan-kawanannya">Table dan kawanannya</a></li>
+        <li><a href="#flow-root">Flow-Root</a></li>
+        <li><a href="#flexbox">Flexbox</a></li>
+        <li><a href="#grid">Grid</a></li>
+      </ul>
+    </li>
+    <li><a href="#kesimpulan">Kesimpulan</a>
+      <ul>
+        <li><a href="#referensi">Referensi</a></li>
+      </ul>
+    </li>
+  </ul>
+</nav>
+  </div>
+
+			</nav>
+			<h1 id="css-display">CSS Display <a href="#css-display" class="anchor" aria-hidden="true">#</a></h1>
+<p>Setiap elemen pada halaman web didefinisikan sebagai kotak persegi panjang dan properti <code>display</code> di CSS lah yang menentukan bagaimana perilaku dari kotak persegi panjang tersebut.</p>
+<p>Setiap tag pada HTML memiliki nilai default untuk properti <code>display</code>. Tetapi kita juga dapat mengubah perilaku dari tag tersebut dengan mengganti <em>valuenya</em>.</p>
+<p><em>Value</em> default untuk semua elemen adalah <code>inline</code>, tetapi kebanyakan <em>“User-Agent Stylesheets”</em> (<em>style</em> default yang diterapkan browser untuk semua situs) mengatur ulang banyak elemen menjadi <code>block</code>. Di bagian ini kita akan membahas masing-masing <em>value</em> dari CSS Display ini.</p>
+<h2 id="value">Value <a href="#value" class="anchor" aria-hidden="true">#</a></h2>
+<p>Properti <code>display</code> mempunyai banyak sekali kata kunci untuk <em>valuenya</em>. Kata kunci tersebut dapat dikelompokkan ke dalam beberapa kategori yang berbeda.</p>
+<pre><code class="language-css">/* &lt;display-outer&gt; (Mengatur perilaku dari sebuah elemen). */  
+display: block;  
+display: inline;
+
+/* &lt;display-inner&gt; (Mengatur perilaku 'konten/child' dari sebuah elemen) */  
+display: flex;  
+display: flow-root;  
+display: grid;  
+display: table;  
+display: ruby;  /* experimental */
+
+/* &lt;display-listitem&gt; (Membuat 'content box' dan 'inline list-item box') */
+display: list-tem;  
+display: inline list-tem;  
+
+/* &lt;display-internal&gt; (Mendefinisikan tabel dan 'ruby layouts') */  display: table-row-group;  
+display: table-header-group;  
+display: table-footer-group;  
+display: table-row;  
+display: table-cell;  
+display: table-column-group;  
+display: table-column;  
+display: table-caption;  
+display: ruby-base;  /* experimental */  
+display: ruby-text;  /* experimental */  
+display: ruby-base-container;  /* experimental */  
+display: ruby-text-container;  /* experimental */
+
+/* &lt;display-box&gt; (Mengatur sebuah elemen untuk ditampilkan atau tidak) */  
+display: contents;  
+display: none;  
+
+/* &lt;display-legacy&gt; (CSS2 single-keyword syntax) */  
+display: inline-block;  
+display: inline-flex;  
+display: inline-grid;  
+display: inline-table;
+
+/* Contoh menggunakan Two-value */  
+display: block flow;  
+display: inline flow;  
+display: inline flow-root;  
+display: block flex;  
+display: inline flex;  
+display: block grid;  
+display: inline grid;  
+display: block flow-root;  
+
+/* Value global */  
+display: inherit;  
+display: initial;  
+display: revert;  
+display: unset;
+</code></pre>
+<p>Ada banyak sekali bukan? Maka dari itu disini kami tidak akan membahas semua <em>value</em> tersebut. Kami akan membahas value yang sering digunakan saja. Jika ingin mengetahui apakah <em>value</em> tersebut sudah didukung oleh browser apa saja kalian bisa lihat di <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/display#browser_compatibility">MDN Web Docs</a>.</p>
+<h3 id="inline">Inline <a href="#inline" class="anchor" aria-hidden="true">#</a></h3>
+<p>Elemen yang secara default memiliki <code>display: inline;</code>:</p>
+<ul>
+<li><code>&lt;span&gt;</code></li>
+<li><code>&lt;a&gt;</code></li>
+<li><code>&lt;img&gt;</code></li>
+</ul>
+<p>Lebih lengkap bisa dilihat di <a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Inline_elements">MDN Web Docs</a>.</p>
+<p>Sesuai namanya, <code>display: inline;</code> artinya memanjang ke samping, sehingga elemen ini akan memenuhi tempat yang ada di sampingnya dan jika tidak ada ruang lagi, maka elemen tersebut akan turun kebawah. Bingung? Coba kita lihat contoh yang telah saya buat di bawah ini.</p>
+<p>Jika saya memiliki kode seperti ini:</p>
+<pre><code class="language-html">&lt;span&gt;Span merupakan salah satu elemen dengan display inline&lt;/span&gt;
+&lt;span&gt;Lorem ipsum dolor sit amet.&lt;/span&gt;
+&lt;span&gt;Consectetur adipisicing elit. Doloribus ducimus delectus ratione?&lt;/span&gt;
+</code></pre>
+<p>Maka saya akan mendapat hasil seperti ini:</p>
+<p><img class="img-fluid lazyload blur-up" src="https://i.ibb.co/LnrpKqF/Screenshot-38.png" alt="Hasil display inline 1"></p>
+<p>Terlihat dari hasil diatas, ketika tidak ada ruang lagi disamping, maka kalimat selanjutnya akan turun dan mengisi ruang dibawahnya. Jika masih belum paham, bisa lihat gambar dibawah ini:</p>
+<p><img class="img-fluid lazyload blur-up" src="https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Flow_Layout/Block_and_Inline_Layout_in_Normal_Flow/mdn-horizontal.png" alt="enter image description here"></p>
+<p>Perhatikan bahwa arah dari <code>inline</code> mengarah dari kiri ke kanan, atau menyamping.</p>
+<p>Selanjutnya, elemen yang memiliki property  <code>display: inline;</code> juga hanya memiliki <a href="https://github.com/bellshade/HTML-CSS/tree/main/CSS/012%20CSS%20Size">lebar dan tinggi</a> sesuai dengan konten yang ada pada elemen tersebut. Kita juga tidak dapat mengubah atau mengatur nilai <a href="https://github.com/bellshade/HTML-CSS/tree/main/CSS/012%20CSS%20Size">lebar dan tinggi</a> dari elemen inline tersebut <strong>kecuali</strong> untuk elemen <code>&lt;img&gt;</code>. Bisa dilihat contoh di bawah ini.</p>
+<pre><code class="language-html">&lt;p&gt;Lorem ipsum dolor sit amet consectetur adipisicing elit. Beatae perspiciatis &lt;span&gt;cupiditate numquam&lt;/span&gt; ipsum, doloribus architecto, praesentium, animi itaque eaque expedita eius.&lt;/p&gt;
+
+&lt;style&gt;
+    span {
+        border: 1px solid red;
+    }
+&lt;/style&gt;
+</code></pre>
+<p>Jika saya menambahkan <a href="https://github.com/bellshade/HTML-CSS/tree/main/CSS/008%20CSS%20Borders">border</a> pada sebuah elemen span yang secara default telah memiliki <code>display: inline;</code> seperti diatas, maka hasilnya akan seperti ini:</p>
+<p><img class="img-fluid lazyload blur-up" src="https://i.ibb.co/cXLbRjk/Screenshot-39.png" alt="Hasil display inline 2"></p>
+<p>Terlihat bahwa elemen tersebut hanya memiliki  <a href="https://github.com/bellshade/HTML-CSS/tree/main/CSS/012%20CSS%20Size">lebar dan tinggi</a> sesuai dengan isi kontennya, yakni <code>cupiditate numquam</code>. Dan jika saya mencoba menambahkan <a href="https://github.com/bellshade/HTML-CSS/tree/main/CSS/012%20CSS%20Size">lebar dan tinggi</a> pada elemen <code>span</code> tersebut seperti dibawah ini:</p>
+<pre><code class="language-html">&lt;p&gt;Lorem ipsum dolor sit amet consectetur adipisicing elit. Beatae perspiciatis &lt;span&gt;cupiditate numquam&lt;/span&gt; ipsum, doloribus architecto, praesentium, animi itaque eaque expedita eius.&lt;/p&gt;
+
+&lt;style&gt;
+    span {
+        border: 1px solid red;
+        width: 200px;
+        height: 200px;
+    }
+&lt;/style&gt;
+</code></pre>
+<p>Maka hasilnya akan tetap sama seperti yang sebelumnya:</p>
+<p><img class="img-fluid lazyload blur-up" src="https://i.ibb.co/cXLbRjk/Screenshot-39.png" alt="Hasil display inline 2"></p>
+<p>Elemen <code>inline</code> akan menerima <a href="https://github.com/bellshade/HTML-CSS/tree/main/CSS/010%20CSS%20Margin">margin</a> dan <a href="https://github.com/bellshade/HTML-CSS/tree/main/CSS/011%20CSS%20Padding">padding</a>, tetapi elemen tersebut tetap berada inline seperti yang seharusnya. <a href="https://github.com/bellshade/HTML-CSS/tree/main/CSS/010%20CSS%20Margin">Margin</a> dan <a href="https://github.com/bellshade/HTML-CSS/tree/main/CSS/011%20CSS%20Padding">padding</a> hanya akan mendorong elemen lain menjauh secara horizontal, bukan vertikal. Perhatikan kode dibawah ini:</p>
+<pre><code class="language-html">&lt;p&gt;Lorem ipsum dolor sit amet consectetur adipisicing elit. Beatae perspiciatis &lt;span&gt;cupiditate numquam&lt;/span&gt; ipsum, doloribus architecto, praesentium, animi itaque eaque expedita eius. Lorem ipsum dolor sit amet consectetur, adipisicing elit.&lt;/p&gt;
+
+&lt;style&gt;
+    span {
+        border: 1px solid red;
+        padding: 1rem;
+        margin: 1rem;
+    }
+&lt;/style&gt;
+</code></pre>
+<p>Jika saya menjalankan kode tersebut, maka hasilnya akan seperti ini:</p>
+<p><img class="img-fluid lazyload blur-up" src="https://i.ibb.co/gSzC90p/Screenshot-41.png" alt="Hasil display inline 3"></p>
+<p>Terlihat posisi <code>span</code> tersebut masih di tempat yang sama, hanya saja elemen lain terdorong menjauh oleh <a href="https://github.com/bellshade/HTML-CSS/tree/main/CSS/010%20CSS%20Margin">Margin</a> dan <a href="https://github.com/bellshade/HTML-CSS/tree/main/CSS/011%20CSS%20Padding">padding</a> yang telah diberikan pada elemen tersebut, tapi hanya secara horizontal.</p>
+<h3 id="block">Block <a href="#block" class="anchor" aria-hidden="true">#</a></h3>
+<p>Elemen yang secara default memiliki <code>display: block;</code>:</p>
+<ul>
+<li><code>&lt;div&gt;</code></li>
+<li><code>&lt;p&gt;</code></li>
+<li><code>&lt;form&gt;</code></li>
+</ul>
+<p>Lebih lengkap bisa dilihat di <a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Block-level_elements#elements">MDN Web Docs</a>.</p>
+<p>Elemen yang memiliki properti <code>display: block;</code> selalu membuat blok baru setiap kali dipanggil. Contoh jika saya punya kode seperti ini:</p>
+<pre><code class="language-html">&lt;p&gt;Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsum officiis beatae reprehenderit, ullam minima, accusamus veniam repellendus laboriosam praesentium non dolorum deserunt molestias officia temporibus adipisci? Ipsum, ipsa doloribus! Doloribus.&lt;/p&gt;
+&lt;p&gt;Lorem ipsum dolor sit amet consectetur, adipisicing elit. Dicta, deserunt?&lt;/p&gt;
+&lt;p&gt;Lorem ipsum dolor sit amet consectetur adipisicing elit. Officia soluta consequatur adipisci ad nulla eum!&lt;/p&gt;
+</code></pre>
+<p>Hasil yang saya dapatkan akan seperti ini:</p>
+<p><img class="img-fluid lazyload blur-up" src="https://i.ibb.co/4KdQS5k/Screenshot-44.png" alt="Hasil display inline 1"></p>
+<p>Bisa dilihat bahwa setiap kita memanggil elemen yang memiliki <code>display: block;</code> dia akan selalu membuat baris baru, tidak seperti <code>display: inline;</code> yang akan selalu mengisi ruang kosong di samping elemen.</p>
+<p>Secara default elemen ini akan membentang dari kiri ke kanan mengisi penuh <a href="https://github.com/bellshade/HTML-CSS/tree/main/CSS/012%20CSS%20Size">lebar</a> dari elemen <em>parent</em>-nya meskipun isi kontennya tidak sampai memenuhi elemen tersebut. Sebagai contoh, saya menggunakan tag <code>&lt;p&gt;</code> seperti di bawah ini:</p>
+<pre><code class="language-html">&lt;p&gt;Hi! Aku adalah elemen block&lt;/p&gt;
+
+&lt;style&gt;
+    p {
+        background-color: violet;
+    }
+&lt;/style&gt;
+</code></pre>
+<p>Hasil yang saya dapatkan seperti ini:</p>
+<p><img class="img-fluid lazyload blur-up" src="https://i.ibb.co/gwNkW11/Screenshot-45.png" alt="Hasil display inline 2"></p>
+<p>Bisa dilihat diatas bahwa elemen <code>&lt;p&gt;</code> tersebut memiliki <a href="https://github.com/bellshade/HTML-CSS/tree/main/CSS/012%20CSS%20Size">lebar</a> memenuhi elemen <em>parent</em>-nya yang dalam hal ini adalah elemen <code>&lt;body&gt;</code>, padahal isi kontennya hanya sedikit.</p>
+<p>Contoh lain jika saya memasukkan elemen <code>&lt;p&gt;</code> tersebut ke dalam sebuah <code>&lt;div&gt;</code> yang mempunyai <a href="https://github.com/bellshade/HTML-CSS/tree/main/CSS/012%20CSS%20Size">lebar</a> <code>30rem</code> seperti berikut ini:</p>
+<pre><code class="language-html">&lt;div&gt;
+    &lt;p&gt;Hi! Aku adalah elemen block&lt;/p&gt;
+&lt;/div&gt;
+
+&lt;style&gt;
+    div {
+        width: 30rem;
+    }
+
+    p {
+        background-color: violet;
+    }
+&lt;/style&gt;
+</code></pre>
+<p>Maka hasil yang saya dapatkan adalah seperti ini:</p>
+<p><img class="img-fluid lazyload blur-up" src="https://i.ibb.co/0jDqCb7/Screenshot-46.png" alt="Hasil display inline 3"></p>
+<p>Lebar elemen <code>&lt;p&gt;</code> tersebut akan memenuhi dan mengikuti <a href="https://github.com/bellshade/HTML-CSS/tree/main/CSS/012%20CSS%20Size">lebar</a> dari <code>&lt;div&gt;</code> yang merupakan elemen <em>parent</em>-nya.</p>
+<p>Selanjutnya kita dapat memanipulasi banyak hal pada elemen <code>block</code> ini, baik mengatur <a href="https://github.com/bellshade/HTML-CSS/tree/main/CSS/012%20CSS%20Size">lebar, tinggi</a>, <a href="https://github.com/bellshade/HTML-CSS/tree/main/CSS/010%20CSS%20Margin">margin</a>, dan <a href="https://github.com/bellshade/HTML-CSS/tree/main/CSS/011%20CSS%20Padding">padding</a> sesuai dengan yang kita inginkan seperti berikut ini:</p>
+<pre><code class="language-html">&lt;p&gt;Lorem ipsum dolor sit amet consectetur adipisicing elit. Magnam ea nemo velit aut praesentium.&lt;/p&gt;
+&lt;p&gt;Lorem ipsum dolor sit amet consectetur adipisicing elit. Iure, minima.&lt;/p&gt;
+
+&lt;style&gt;
+    p {
+        width: 50%;
+        height: 200px;
+        padding: 2rem;
+        margin: 2rem;
+        background-color: violet;
+    }
+&lt;/style&gt;
+</code></pre>
+<p>Hasil:</p>
+<p><img class="img-fluid lazyload blur-up" src="https://i.ibb.co/85QCcGB/Screenshot-47.png" alt="Hasil display inline 3"></p>
+<blockquote>
+<p><a href="https://github.com/bellshade/HTML-CSS/tree/main/CSS/010%20CSS%20Margin">Margin</a> dan <a href="https://github.com/bellshade/HTML-CSS/tree/main/CSS/011%20CSS%20Padding">padding</a> pada <code>display: block;</code> ini akan mendorong elemen
+lain menjauh secara horizontal dan juga vertikal.</p>
+</blockquote>
+<h3 id="inline-block">Inline-Block <a href="#inline-block" class="anchor" aria-hidden="true">#</a></h3>
+<p>Display yang memiliki <em>value</em> <code>inline-block</code> ini memiliki karakteristik gabungan dari dua <em>value</em> sebelumnya yaitu, <code>inline</code> dan <code>block</code>. Jadi, elemen ini akan tampil secara menyamping seperti <code>display: inline</code> namun tetap bisa diatur <a href="https://github.com/bellshade/HTML-CSS/tree/main/CSS/012%20CSS%20Size">lebar, tinggi</a>, <a href="https://github.com/bellshade/HTML-CSS/tree/main/CSS/010%20CSS%20Margin">margin</a>, dan <a href="https://github.com/bellshade/HTML-CSS/tree/main/CSS/011%20CSS%20Padding">padding</a>nya seperti <code>display: block</code>. Perhatikan contoh dibawah ini, saya sudah menambahkan <code>display: inline-block;</code> pada contoh sebelumnya seperti ini:</p>
+<pre><code class="language-html">&lt;p&gt;Lorem ipsum dolor sit amet consectetur adipisicing elit. Beatae perspiciatis &lt;span&gt;cupiditate numquam&lt;/span&gt; ipsum, doloribus architecto, praesentium, animi itaque eaque expedita eius. Lorem ipsum dolor sit amet consectetur, adipisicing elit.&lt;/p&gt;
+
+&lt;style&gt;
+    span {
+        border: 1px solid red;
+        display: inline-block;
+        width: 200px;
+        height: 200px;
+    }
+&lt;/style&gt;
+</code></pre>
+<p>Dan hasil yang saya dapatkan seperti ini:</p>
+<p><img class="img-fluid lazyload blur-up" src="https://i.ibb.co/qpVmDfQ/Screenshot-42.png" alt="Hasil display inline-block 1"></p>
+<p>Terlihat pada hasil diatas bahwa <a href="https://github.com/bellshade/HTML-CSS/tree/main/CSS/012%20CSS%20Size">lebar dan tinggi</a> dari elemen <code>span</code> yang sebelumnya diabaikan sekarang telah berubah dan bisa diatur.</p>
+<h3 id="none">None <a href="#none" class="anchor" aria-hidden="true">#</a></h3>
+<p>Singkatnya, elemen yang memiliki <code>display: none;</code> ini tidak akan ditampilkan di browser, namun kode HTMLnya akan tetap ada. Hal ini tidak akan berakibat pada elemen-elemen lainnya.</p>
+<h3 id="table-dan-kawanannya">Table dan kawanannya <a href="#table-dan-kawanannya" class="anchor" aria-hidden="true">#</a></h3>
+<p>Sekarang ini sangat jarang sekali orang menggunakan <code>display: table;</code>, <code>display: table-row;</code>, <code>display: table-cell;</code>, atau display lainnya yang berhubungan dengan <em>table</em>, tapi setidaknya kalian harus tau bagaimana dan apa kegunaan dari display-display tersebut, karena sebelum ada float, flex, ataupun grid display ini sangat sering digunakan untuk mengatur layout.</p>
+<p>Jadi, apa itu <code>display: table;</code> dan kawanannya? Sesuai namanya, display ini mengatur perilaku elemen menjadi seperti elemen <code>&lt;table&gt;</code>. Berikut ini beberapa <em>value</em> display yang memiliki kesamaan dengan elemen <code>&lt;table&gt;</code>:</p>
+<ul>
+<li><code>display: table;</code> sama seperti elemen <code>&lt;table&gt;</code>.</li>
+<li><code>display: table-caption;</code> sama seperti elemen <code>&lt;caption&gt;</code>.</li>
+<li><code>display: table-column-group;</code> sama seperti elemen <code>&lt;colgroup&gt;</code>.</li>
+<li><code>display: table-header-group;</code> sama seperti elemen <code>&lt;thead&gt;</code>.</li>
+<li><code>display: table-footer-group;</code> sama seperti elemen <code>&lt;tfoot&gt;</code>.</li>
+<li><code>display: table-row-group;</code> sama seperti elemen <code>&lt;tbody&gt;</code>.</li>
+<li><code>display: table-cell;</code> sama seperti elemen <code>&lt;td&gt;</code>.</li>
+<li><code>display: table-column;</code> sama seperti elemen <code>&lt;col&gt;</code>.</li>
+<li><code>display: table-row;</code> sama seperti elemen <code>&lt;tr&gt;</code>.</li>
+</ul>
+<p>Sebagai contoh, kita akan membuat tabel dengan dan tanpa menggunakan elemen <code>&lt;table&gt;</code>. Pertama-tama kita akan membuat tabel menggunakan elemen <code>&lt;table&gt;</code> seperti berikut ini:</p>
+<pre><code class="language-html">&lt;table border=&quot;1&quot;&gt;
+    &lt;thead&gt;
+        &lt;tr&gt;
+            &lt;th&gt;Materi&lt;/th&gt;
+            &lt;th&gt;Dibuat oleh&lt;/th&gt;
+            &lt;th&gt;Tanggal&lt;/th&gt;
+        &lt;/tr&gt;
+    &lt;/thead&gt;
+    &lt;tbody&gt;
+        &lt;tr&gt;
+            &lt;td&gt;CSS Display&lt;/td&gt;
+            &lt;td&gt;Abi Noval Fauzi&lt;/td&gt;
+            &lt;td&gt;06 Februari 2022&lt;/td&gt;
+        &lt;/tr&gt;
+    &lt;/tbody&gt;
+    &lt;tfoot&gt;
+        &lt;tr&gt;
+            &lt;td colspan=&quot;3&quot;&gt;Ini adalah tabel yang dibuat meggunakan elemen &lt;code&gt;&amp;lt;table&amp;gt;&lt;/code&lt; /td&gt;
+        &lt;/tr&gt;
+    &lt;/tfoot&gt;
+&lt;/table&gt;
+</code></pre>
+<p>Mudah saja ya, dan hasilnya seperti ini:</p>
+<p><img class="img-fluid lazyload blur-up" src="https://i.ibb.co/4gvTmkZ/Screenshot-48.png" alt="Hasil display table 2"></p>
+<p>Selanjutnya, bagaimana cara kita membuat tabel tanpa menggunakan <code>&lt;table&gt;</code>? Pertama, kita buat struktur HTMLnya terlebih dahulu seperti ini:</p>
+<pre><code class="language-html">&lt;div class=&quot;table&quot;&gt;
+    &lt;div class=&quot;thead&quot;&gt;
+        &lt;div class=&quot;tr&quot;&gt;
+            &lt;div class=&quot;th&quot;&gt;Materi&lt;/div&gt;
+            &lt;div class=&quot;th&quot;&gt;Dibuat Oleh&lt;/div&gt;
+            &lt;div class=&quot;th&quot;&gt;Tanggal&lt;/div&gt;
+        &lt;/div&gt;
+    &lt;/div&gt;
+    &lt;div class=&quot;tbody&quot;&gt;
+        &lt;div class=&quot;tr&quot;&gt;
+            &lt;div class=&quot;td&quot;&gt;CSS Display&lt;/div&gt;
+            &lt;div class=&quot;td&quot;&gt;Abi Noval Fauzi&lt;/div&gt;
+            &lt;div class=&quot;td&quot;&gt;06 Februari 2022&lt;/div&gt;
+        &lt;/div&gt;
+    &lt;/div&gt;
+    &lt;div class=&quot;tfoot&quot;&gt;
+        &lt;div class=&quot;tr&quot;&gt;
+            &lt;div class=&quot;td colspan-3&quot;&gt;
+                Ini adalah tabel yang dibuat tanpa meggunakan elemen &lt;code&gt;&amp;lt;table&amp;gt;&lt;/code&gt;
+            &lt;/div&gt;
+        &lt;/div&gt;
+    &lt;/div&gt;
+&lt;/div&gt;
+</code></pre>
+<p>Jika kita lihat hasilnya, maka kita akan mendapatkan halaman seperti ini:</p>
+<p><img class="img-fluid lazyload blur-up" src="https://i.ibb.co/CskSKMz/Screenshot-49.png" alt="Hasil display table 2"></p>
+<p>Tidak terlihat seperti tabel bukan? Maka dari itu, sekarang kita akan bermain menggunakan <code>display: table;</code> dan kawanannya. Kita akan mulai dengan membuat <code>&lt;div class=&quot;table&quot;&gt;</code> tersebut memiliki karakteristik seperti <code>&lt;table&gt;</code> dengan cara menambahkan <em>style</em> <code>display: table;</code> seperti ini:</p>
+<pre><code class="language-css">.table {
+    display: table;
+}
+</code></pre>
+<p>Lalu kita akan membuat <code>section</code> tabel seperti elemen <code>&lt;thead&gt;</code>, <code>&lt;tbody&gt;</code>, dan <code>&lt;tfoot&gt;</code> menggunakan display <em>table group</em> seperti dibawah ini:</p>
+<pre><code class="language-css">.thead {
+    display: table-header-group;
+}
+
+.tbody {
+    display: table-row-group;
+}
+
+.tfoot {
+    display: table-footer-group;
+}
+</code></pre>
+<p>Jika kita lihat hasilnya, ternyata masih belum ada perubahan, itu karena kita belum mengatur kolom dan barisnya. Sekarang mari kita tambahkan itu.</p>
+<p>Untuk membuat kolom (<code>&lt;tr&gt;</code>), kita akan menggunakan <code>display: table-row;</code> seperti dibawah ini:</p>
+<pre><code class="language-css">.tr {
+    display: table-row;
+}
+</code></pre>
+<p>Untuk membuat baris (<code>&lt;td&gt;</code> / <code>&lt;th&gt;</code>), kita akan menggunakan <code>display: table-cell;</code> seperti dibawah ini:</p>
+<pre><code class="language-css">.td, .th {
+    display: table-cell;
+}
+</code></pre>
+<p>Supaya <code>.th</code> kita mirip dengan elemen <code>&lt;th&gt;</code> milik <code>&lt;table&gt;</code>, maka kita harus menambahkan sedikit <em>style</em> tambahan seperti berikut ini:</p>
+<pre><code class="language-css">.th {
+    font-weight: 700;
+    text-align: center;
+}
+</code></pre>
+<p>Sekarang, jika kita lihat hasilnya, maka kita sudah mendapatkan sebuah tabel tanpa harus menggunakan elemen <code>&lt;table&gt;</code>:</p>
+<p><img class="img-fluid lazyload blur-up" src="https://i.ibb.co/Ttv9rzD/Screenshot-50.png" alt="Hasil display table 3"></p>
+<p>Tapi bukan seperti itu tabel yang kita inginkan bukan? Maka dari itu, kita akan lanjutkan lagi menambahkan beberapa <em>style</em> supaya mirip dengan tabel yang kita buat sebelumnya menggunakan <code>&lt;table&gt;</code>.</p>
+<p>Sekarang kita tambahkan border dulu pada tabel dan kolom kita seperti ini:</p>
+<pre><code class="language-css">.table {
+    display: table;
+    border: 1px solid #2c2c2c;
+    border-spacing: 2px;
+}
+
+.td,
+.th {
+    display: table-cell;
+    border: 1px solid #2c2c2c;
+}
+</code></pre>
+<p>Maka kita akan dapatkan hasil seperti ini:</p>
+<p><img class="img-fluid lazyload blur-up" src="https://i.ibb.co/6rcTNmm/Screenshot-51.png" alt="Hasil display table 4"></p>
+<p>Sudah mirip dengan tabel yang sebelumnya kita buat bukan? Sekarang tinggal kita akali atribut <code>colspan=&quot;3&quot;</code> yang terdapat di elemen <code>&lt;td&gt;</code> yang ada di dalam elemen <code>&lt;tfoot&gt;</code> karena di CSS tidak ada cara <code>elegan</code> untuk membuat <code>colspan</code>.</p>
+<p>Sekarang kita coba pakai properti <code>column-span</code> seperti dibawah ini:</p>
+<pre><code class="language-css">.colspan-3 {
+    column-span: 3;
+}
+</code></pre>
+<p>Ternyata tidak ada perubahan, bagaimana kalau kita pakai <em>value</em> <code>all</code> seperti ini:</p>
+<pre><code class="language-css">.colspan-3 {
+    column-span: all;
+}
+</code></pre>
+<p>Ternyata tidak bisa juga, karena bukan seperti itu cara menggunakan <code>column-span</code>, jadi kita harus menggunakan cara lain. Bagaimana kalau kita ubah <a href="https://github.com/bellshade/HTML-CSS/tree/main/CSS/012%20CSS%20Size">lebar</a> dari <code>&lt;div class=&quot;td colspan-3&quot;&gt;</code>nya sesuai dengan jumlah kolom?</p>
+<pre><code class="language-css">.colspan-3 {
+    width: 300%;
+}
+</code></pre>
+<p>Kita malah mendapatkan hasil seperti ini:</p>
+<p><img class="img-fluid lazyload blur-up" src="https://i.ibb.co/yFbqDzt/Screenshot-52.png" alt="Hasil display table 5"></p>
+<p>Karena dia adalah kolom, jadi dia akan terus melebar di kolom yang sama, jadi mungkin kita harus ubah <code>display: table-cell;</code>nya menjadi <code>display: table;</code> supaya dia tidak menjadi kolom lagi.</p>
+<pre><code class="language-css">.colspan-3 {
+    display: table;
+    width: 300%;
+}
+</code></pre>
+<p>Kita mendapatkan hasil seperti ini:</p>
+<p><img class="img-fluid lazyload blur-up" src="https://i.ibb.co/frNK8X0/Screenshot-53.png" alt="Hasil display table 6"></p>
+<p>Sepertinya hampir sudah benar, hanya saja dia terlalu melebar jauh sampai keluar dari elemen <em>parent</em>-nya, itu dikarenakan <code>width: 300%;</code> mengkalkulasi <a href="https://github.com/bellshade/HTML-CSS/tree/main/CSS/012%20CSS%20Size">lebar</a> kolom 1 (karena dia berada di kolom 1) lalu dikali 3 sedangkan kolom 2 dan kolom 3 memiliki <a href="https://github.com/bellshade/HTML-CSS/tree/main/CSS/012%20CSS%20Size">lebar</a> lebih kecil dari kolom 1 yang menyebabkan lebarnya lebih besar daripada elemen elemen <em>parent</em>-nya dan akhirnya keluar.</p>
+<p>Ada satu properti CSS bernama <code>table-layout</code> yang memiliki 2 <em>value</em>, yaitu <code>auto</code> dan <code>fixed</code>, properti ini digunakan untuk mengatur algoritma layout dari tabel yang kita buat. Secara default, <code>&lt;table&gt;</code> atau <code>display: table;</code> diatur agar memiliki <code>table-layout: auto;</code> dan sepertinya kita harus mengubahnya menjadi <code>table-layout: fixed;</code> agar <a href="https://github.com/bellshade/HTML-CSS/tree/main/CSS/012%20CSS%20Size">lebar</a> dari setiap kolomnya menjadi <code>fixed</code> atau sama semua, tapi kita juga harus mendefinisikan <a href="https://github.com/bellshade/HTML-CSS/tree/main/CSS/012%20CSS%20Size">lebar</a> dari tabelnya, kita akan menggunakan <code>width: 500px;</code> sebagai contoh seperti berikut ini:</p>
+<pre><code class="language-css">.table {
+    display: table;
+    border: 1px solid #2c2c2c;
+    border-spacing: 2px;
+    table-layout: fixed;
+    width: 500px;
+}
+</code></pre>
+<p>Kita akhirnya mendapatkan hasil seperti ini:</p>
+<p><img class="img-fluid lazyload blur-up" src="https://i.ibb.co/28S4Lc0/Screenshot-54.png" alt="Hasil display table 7"></p>
+<p>Tapi sayangnya <a href="https://github.com/bellshade/HTML-CSS/tree/main/CSS/012%20CSS%20Size">lebar</a> <code>.colspan-3</code> kita kurang sedikit <a href="https://github.com/bellshade/HTML-CSS/tree/main/CSS/012%20CSS%20Size">lebar</a> dikarenakan kita disini menggunakan <code>border-spacing</code>, jadi kita harus menambahkan <a href="https://github.com/bellshade/HTML-CSS/tree/main/CSS/012%20CSS%20Size">lebar</a> sebesar <code>2px</code> sama seperti <em>value</em> dari <code>border-spacing</code> kita, kita bisa memanfaatkan fungsi <code>calc()</code> di CSS seperti ini:</p>
+<pre><code class="language-css">.colspan-3 {
+    display: table;
+    width: calc(300% + 2px);
+}
+</code></pre>
+<p>Dan akhirnya kita dapatkan hasil yang sesuai dengan keinginan kita:</p>
+<p><img class="img-fluid lazyload blur-up" src="https://i.ibb.co/vh2QnzH/Screenshot-55.png" alt="Hasil display table 8"></p>
+<p>Sepertinya sampai sini kita sudah selesai, tapi nyatanya ada kesalahan kecil yang telah saya sampaikan sebelumnya, bahwa <a href="https://github.com/bellshade/HTML-CSS/tree/main/CSS/012%20CSS%20Size">lebar</a> dari <code>.colspan-3</code> harus ditambah dengan jumlah yang sama seperti <em>value</em> dari <code>border-spacing</code> kita, ternyata tidak seperti itu, jika kita ubah <code>border-spacing</code> kita menjadi <code>4px</code> dan <a href="https://github.com/bellshade/HTML-CSS/tree/main/CSS/012%20CSS%20Size">lebar</a> dari <code>.colspan-3</code>nya kita tambahkan dengan <code>4px</code>, sama seperti <em>value</em> dari <code>border-spacing</code> yang tadi kita ubah, maka kodenya akan menjadi seperti ini:</p>
+<pre><code class="language-css">.table {
+    display: table;
+    border: 1px solid #2c2c2c;
+    border-spacing: 4px;
+    table-layout: fixed;
+    width: 500px;
+}
+
+.colspan-3 {
+    display: table;
+    width: calc(300% + 4px);
+}
+</code></pre>
+<p>Setelah dilihat, ternyata hasilnya tidak sesuai dengan yang kita harapkan:</p>
+<p><img class="img-fluid lazyload blur-up" src="https://i.ibb.co/1J1Jxb4/Screenshot-56.png" alt="Hasil display table 8"></p>
+<p>Masalah yang sama seperti sebelumnya datang kembali, kira-kira kenapa? Padahal kita sudah tambah lebarnya sama dengan <code>border-spacing</code>.</p>
+<p>Setelah saya utak-atik kodenya, ternyata ada rumus agar <a href="https://github.com/bellshade/HTML-CSS/tree/main/CSS/012%20CSS%20Size">lebar</a> <code>.colspan-3</code>nya pas, kita harus menjumlahkan 2 <code>border-width</code> kita yang ada di <code>.table</code> (<code>1px</code>) dan di <code>.td, .th</code> (<code>1px</code>) dalam kasus ini kita punya <code>2px</code>, lalu kita kurangi <code>border-spacing</code> kita (<code>4px</code>) dengan hasil tambah <code>border-width</code> tadi (<code>2px</code>), <code>4px - 2px = 2px</code>, jadi kita punya <code>2px</code> sekarang, lalu kita tambahkan lagi dengan jumlah <code>border-spacing</code> kita (<code>4px</code>), <code>2px + 4px = 6px</code>, nah hasil tersebutlah yang harusnya kita tambah kedalam <a href="https://github.com/bellshade/HTML-CSS/tree/main/CSS/012%20CSS%20Size">lebar</a> dari <code>.colspan-3</code> itu. Jika kita coba, maka hasilnya akan sesuai dengan yang kita inginkan:</p>
+<pre><code class="language-css">.table {
+    display: table;
+    border: 1px solid #2c2c2c;
+    border-spacing: 4px;
+    table-layout: fixed;
+    width: 500px;
+}
+
+.colspan-3 {
+    display: table;
+    width: calc(300% + 6px);
+}
+</code></pre>
+<p><img class="img-fluid lazyload blur-up" src="https://i.ibb.co/pWR8jHH/Screenshot-57.png" alt="Hasil display table 9"></p>
+<p>Masih bingung? Coba baca ulang saja. Untuk mempermudah, kita sebenarnya bisa menggunakan custom property seperti ini:</p>
+<pre><code class="language-css">.table {
+    --border-spacing: 4px;
+    --border-width: 1px;
+    display: table;
+    table-layout: fixed;
+    border: var(--border-width) solid #2c2c2c;
+    border-spacing: var(--border-spacing);
+    width: 500px;
+}
+
+.thead {
+    display: table-header-group;
+}
+
+.tbody {
+    display: table-row-group;
+}
+
+.tfoot {
+    display: table-footer-group;
+}
+
+.tr {
+    display: table-row;
+}
+
+.td,
+.th {
+    display: table-cell;
+    border: var(--border-width) solid #2c2c2c;
+}
+
+.th {
+    font-weight: 700;
+    text-align: center;
+}
+
+.colspan-3 {
+    display: table;
+    width: calc(300% + (var(--border-spacing) - (var(--border-width) * 2) + var(--border-spacing)));
+}
+</code></pre>
+<p>Jadi kita tinggal ubah variabel <code>--border-spacing</code> dan <code>--border-width</code> saja, tanpa perlu pusing-pusing menghitung ulang semuanya. Jika masih belum mengerti custom property atau variabel dalam CSS, bisa membaca materi <a href="https://github.com/bellshade/HTML-CSS/tree/main/CSS/053%20CSS%20Custom%20Property">053 CSS Custom Property</a>.</p>
+<p>Ribet bukan? Untuk sekarang sepertinya kurang direkomendasikan menggunakan display <em>table</em> ini, untuk mengatur layout sudah ada <a href="https://github.com/bellshade/HTML-CSS/tree/main/CSS/056%20CSS%20Flexbox">flexbox</a> dan <a href="https://github.com/bellshade/HTML-CSS/tree/main/CSS/057%20CSS%20Grid">grid</a> dan untuk membuat tabel lebih baik menggunakan <code>&lt;table&gt;</code> saja.</p>
+<h3 id="flow-root">Flow-Root <a href="#flow-root" class="anchor" aria-hidden="true">#</a></h3>
+<p>Display ini mungkin akan susah dimengerti oleh sebagian besar pemula termasuk saya. Secara singkat, <code>display: flow-root;</code> ini bisa menyelesaikan masalah penggunaan <a href="https://github.com/bellshade/HTML-CSS/tree/main/CSS/027%20CSS%20Float">float</a> yang selama ini harus menggunakan <code>clearfix</code> untuk menyelesaikannya. Misalnya saya punya masalah <a href="https://github.com/bellshade/HTML-CSS/tree/main/CSS/027%20CSS%20Float">float</a> seperti ini:</p>
+<pre><code class="language-html">&lt;div&gt;
+    &lt;img src=&quot;https://images.unsplash.com/photo-1516259762381-22954d7d3ad2?ixlib=rb-1.2.1&amp;ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&amp;auto=format&amp;fit=crop&amp;w=889&amp;q=80&quot; width=&quot;200&quot;&gt;
+    &lt;p&gt;
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Nobis beatae eum veritatis consequatur amet inventore facilis quae unde accusantium.
+    &lt;/p&gt;
+&lt;/div&gt;
+&lt;br&gt;
+&lt;div&gt;
+    &lt;p&gt;
+        Lorem ipsum dolor sit amet consectetur, adipisicing elit. Fugit ducimus nisi reprehenderit sit tenetur aperiam dolorem pariatur quibusdam molestias vitae necessitatibus qui ratione magni, ullam tempore fugiat atque nobis error!
+    &lt;/p&gt;
+&lt;/div&gt;
+
+&lt;style&gt;
+    div {
+        padding: 1rem;
+        background-color: pink;
+    }
+    
+    img {
+        float: left;
+    }
+&lt;/style&gt;
+</code></pre>
+<p><img class="img-fluid lazyload blur-up" src="https://i.ibb.co/N1d08dp/Screenshot-58.png" alt="Hasil display flow-root 1"></p>
+<p>Terlihat kalau gambar yang telah diberi <code>float: left;</code> tersebut mengambang dan tidak mengisi elemen <em>parent</em>-nya. Kebanyakan orang akan menggunakan <em>clearfix hack</em> untuk menyelesaikan masalah ini, tapi sekarang dengan adanya <code>display: flow-root;</code>, kita bisa saja langsung menyelesaikannya tanpa perlu ribet menggunakan <em>clearfix</em>.</p>
+<p>Kita coba tambahkan <code>display: flow-root;</code> pada div kita:</p>
+<pre><code class="language-css">div {
+    padding: 1rem;
+    background-color: pink;
+    display: flow-root;
+}
+</code></pre>
+<p>Maka masalah tersebut selesai dengan cepat dan mudah:</p>
+<p><img class="img-fluid lazyload blur-up" src="https://i.ibb.co/16CCtn1/Screenshot-59.png" alt="Hasil display flow-root 2"></p>
+<h3 id="flexbox">Flexbox <a href="#flexbox" class="anchor" aria-hidden="true">#</a></h3>
+<p>Dikarenakan materi tentang <a href="https://github.com/bellshade/HTML-CSS/tree/main/CSS/056%20CSS%20Flexbox">flexbox</a> atau <code>display: flex;</code> sendiri sangatlah banyak, jadi kami memisahkan materi tersebut menjadi materi tersendiri, kalian bisa baca materi <a href="https://github.com/bellshade/HTML-CSS/tree/main/CSS/056%20CSS%20Flexbox">056 CSS Flexbox</a> untuk mengetahui cara penggunaan <code>display: flex;</code></p>
+<h3 id="grid">Grid <a href="#grid" class="anchor" aria-hidden="true">#</a></h3>
+<p>Dikarenakan materi tentang <code>display: grid;</code> sendiri sangatlah banyak, jadi kami memisahkan materi tersebut menjadi materi tersendiri, kalian bisa baca materi <a href="https://github.com/bellshade/HTML-CSS/tree/main/CSS/057%20CSS%20Grid">057 CSS Grid</a> untuk mengetahui cara penggunaan <code>display: grid;</code></p>
+<h2 id="kesimpulan">Kesimpulan <a href="#kesimpulan" class="anchor" aria-hidden="true">#</a></h2>
+<p>Masih banyak sekali <em>value</em> display yang belum kita bahas, bukan karena tidak mau, tapi karena keterbatasan informasi yang didapat dan kemungkinan untuk saat ini materi tersebut belum terlalu Penting. Tapi dari materi yang sudah dibahas diatas, saya rasa cukup untuk memahami apa itu display di CSS. Mungkin di lain waktu saya akan tambah materinya lagi.</p>
+<h3 id="referensi">Referensi <a href="#referensi" class="anchor" aria-hidden="true">#</a></h3>
+<p>Saya tidak akan bisa membuat materi ini tanpa membaca referensi-referensi ini:</p>
+<ul>
+<li><a href="https://sixv.com/cascading-style-sheets/css-display-inline-block-dan-inline-block/">https://sixv.com/cascading-style-sheets/css-display-inline-block-dan-inline-block/</a></li>
+<li><a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Block-level_elements">https://developer.mozilla.org/en-US/docs/Web/HTML/Block-level_elements</a></li>
+<li><a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Inline_elements">https://developer.mozilla.org/en-US/docs/Web/HTML/Inline_elements</a></li>
+<li><a href="https://medium.com/@elelvyra/learn-css-display-property-1-9ddc9e5f3fb0">https://medium.com/@elelvyra/learn-css-display-property-1-9ddc9e5f3fb0</a></li>
+<li><a href="https://css-tricks.com/almanac/properties/d/display/">https://css-tricks.com/almanac/properties/d/display/</a></li>
+<li><a href="https://developer.mozilla.org/en-US/docs/Web/CSS/display">https://developer.mozilla.org/en-US/docs/Web/CSS/display</a></li>
+<li><a href="https://www.freecodecamp.org/news/the-css-display-property-display-none-display-table-inline-block-and-more/">https://www.freecodecamp.org/news/the-css-display-property-display-none-display-table-inline-block-and-more/</a></li>
+<li><a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/table">https://developer.mozilla.org/en-US/docs/Web/HTML/Element/table</a></li>
+<li><a href="https://stackoverflow.com/questions/2403990/html-colspan-in-css">https://stackoverflow.com/questions/2403990/html-colspan-in-css</a></li>
+<li><a href="https://css-tricks.com/almanac/properties/t/table-layout/">https://css-tricks.com/almanac/properties/t/table-layout/</a></li>
+</ul>
+
+			<div class="page-footer-meta d-flex flex-column flex-md-row justify-content-between">
+				</div>
+			<div class="docs-navigation d-flex justify-content-between">
+	
+	<a href="/css/tutorial/web-font/">
+			<div class="card my-1">
+				<div class="card-body py-2">
+					&larr; Web Font
+				</div>
+			</div>
+		</a>
+	<a class="ms-auto" href="/css/tutorial/position/">
+			<div class="card my-1">
+				<div class="card-body py-2">
+					Position &rarr;
+				</div>
+			</div>
+		</a>
+	</div>
+
+			
+		</main>
+	</div>
+
+      </div>
+    </div>
+    
+    
+    <footer class="footer text-muted">
+  <div class="container-xxl">
+    <div class="row">
+      <div class="col-lg-8 order-last order-lg-first">
+        <ul class="list-inline">
+          <li class="list-inline-item">Powered by <a class="text-muted" href="https://gohugo.io/">Hugo</a> and <a class="text-muted" href="https://github.com/">Github</a></li>
+        </ul>
+      </div>
+      <div class="col-lg-8 order-first order-lg-last text-lg-end">
+        <ul class="list-inline">
+          </ul>
+      </div>
+    </div>
+  </div>
+</footer>
+    
+
+<script src="/js/bootstrap.min.5cdeb20ef814d367b4d5429ada9d342419eb34734de4713a71e5706485eaa75fa8d5d760c7a7f7ef20cb5494737eb8811729431813f22744c177384758c19081.js" integrity="sha512-XN6yDvgU02e01UKa2p00JBnrNHNN5HE6ceVwZIXqp1&#43;o1ddgx6f37yDLVJRzfriBFylDGBPyJ0TBdzhHWMGQgQ==" crossorigin="anonymous" defer></script>
+  <script src="/js/highlight.min.6e0bbb1ba7e7c09c5287a998de4147da3f56f6fed3dc91b747789519a1de6486b086542ebb2ed60527cfc4c32b8ce175a08c257392e98d7bb3f09661f2bd5666.js" integrity="sha512-bgu7G6fnwJxSh6mY3kFH2j9W9v7T3JG3R3iVGaHeZIawhlQuuy7WBSfPxMMrjOF1oIwlc5LpjXuz8JZh8r1WZg==" crossorigin="anonymous" defer></script>
+  <script src="/main.min.124171d9dd7beef16c3e35cd8394ad0c5ca7699608f699d747030ef0b0c3e4c2782454dd406f78e14ef7336f4a15de8676a808261d92f9b1858f1ec3ff720269.js" integrity="sha512-EkFx2d177vFsPjXNg5StDFynaZYI9pnXRwMO8LDD5MJ4JFTdQG944U73M29KFd6GdqgIJh2S&#43;bGFjx7D/3ICaQ==" crossorigin="anonymous" defer></script>
+  <script src="https://kaban.my.id/index.min.8a548e97da4f69aad50394ca9a3f006f894563cfab994cccf3d7296fff4b95ee3185ef939d31ef180d99294e2d167de11c84c6f11b7e5fe594c290887d82f5cb.js" integrity="sha512-ilSOl9pPaarVA5TKmj8Ab4lFY8&#43;rmUzM89cpb/9Lle4xhe&#43;TnTHvGA2ZKU4tFn3hHITG8Rt&#43;X&#43;WUwpCIfYL1yw==" crossorigin="anonymous" defer></script>
+  
+    <div class="d-flex fixed-bottom pb-4 pb-lg-5 pe-4 pe-lg-5">
+      <a id="toTop" href="#" class="btn btn-outline-primary rounded-circle ms-auto p-2"><span class="visually-hidden">Top</span><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-chevron-up"><polyline points="18 15 12 9 6 15"></polyline></svg></a>
+    </div>
+    
+  </body>
+</html>
