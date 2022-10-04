@@ -878,6 +878,13 @@
   </url>
   
   <url>
+    <loc>https://kaban.my.id/python/tutorial/</loc>
+    <lastmod>2020-10-06T08:49:15+00:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
     <loc>https://kaban.my.id/css/tutorial/</loc>
     <lastmod>2020-10-06T08:49:15+00:00</lastmod>
     <changefreq>weekly</changefreq>
@@ -886,13 +893,6 @@
   
   <url>
     <loc>https://kaban.my.id/html/tutorial/</loc>
-    <lastmod>2020-10-06T08:49:15+00:00</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.5</priority>
-  </url>
-  
-  <url>
-    <loc>https://kaban.my.id/python/tutorial/</loc>
     <lastmod>2020-10-06T08:49:15+00:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
@@ -1081,6 +1081,13 @@
   </url>
   
   <url>
+    <loc>https://kaban.my.id/php/tutorial/</loc>
+    <lastmod>2020-10-06T08:48:23+00:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
     <loc>https://kaban.my.id/python/</loc>
     <lastmod>2020-10-06T08:48:23+00:00</lastmod>
     <changefreq>weekly</changefreq>
@@ -1103,6 +1110,13 @@
   
   <url>
     <loc>https://kaban.my.id/contact/</loc>
+    <lastmod>2020-08-27T19:25:12+02:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://kaban.my.id/download/</loc>
     <lastmod>2020-08-27T19:25:12+02:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
