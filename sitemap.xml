@@ -66,6 +66,20 @@
   </url>
   
   <url>
+    <loc>https://kaban.my.id/filsafat-philosophia-cinta-pada-kebijaksanaan/</loc>
+    <lastmod>2022-10-27T09:57:55+07:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://kaban.my.id/coretanku/manusia-yang-tahu-bukan-tempe/</loc>
+    <lastmod>2022-10-27T09:57:55+07:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
     <loc>https://kaban.my.id/filsafat-ilmu-mahasiswa-adalah-pemikir-dan-ilmuwan/</loc>
     <lastmod>2022-10-16T01:54:26+07:00</lastmod>
     <changefreq>weekly</changefreq>
@@ -906,21 +920,70 @@
   </url>
   
   <url>
-    <loc>https://kaban.my.id/tags/belajar-filsafat/</loc>
-    <lastmod>2022-10-16T01:54:26+07:00</lastmod>
+    <loc>https://kaban.my.id/categories/blog/</loc>
+    <lastmod>2022-10-27T09:57:55+07:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url>
   
   <url>
     <loc>https://kaban.my.id/categories/</loc>
-    <lastmod>2022-10-16T01:54:26+07:00</lastmod>
+    <lastmod>2022-10-27T09:57:55+07:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://kaban.my.id/tags/filsafat/</loc>
+    <lastmod>2022-10-27T09:57:55+07:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://kaban.my.id/categories/filsafat/</loc>
+    <lastmod>2022-10-27T09:57:55+07:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url>
   
   <url>
     <loc>https://kaban.my.id/tags/filsafat-ilmu/</loc>
+    <lastmod>2022-10-27T09:57:55+07:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://kaban.my.id/tags/jenis-manusia/</loc>
+    <lastmod>2022-10-27T09:57:55+07:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://kaban.my.id/tags/pengetahuan-manusia/</loc>
+    <lastmod>2022-10-27T09:57:55+07:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://kaban.my.id/contributors/roberto-kaban/</loc>
+    <lastmod>2022-10-27T09:57:55+07:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://kaban.my.id/tags/</loc>
+    <lastmod>2022-10-27T09:57:55+07:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://kaban.my.id/tags/belajar-filsafat/</loc>
     <lastmod>2022-10-16T01:54:26+07:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
@@ -956,20 +1019,6 @@
   
   <url>
     <loc>https://kaban.my.id/categories/materi-kuliah/</loc>
-    <lastmod>2022-10-16T01:54:26+07:00</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.5</priority>
-  </url>
-  
-  <url>
-    <loc>https://kaban.my.id/contributors/roberto-kaban/</loc>
-    <lastmod>2022-10-16T01:54:26+07:00</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.5</priority>
-  </url>
-  
-  <url>
-    <loc>https://kaban.my.id/tags/</loc>
     <lastmod>2022-10-16T01:54:26+07:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
@@ -1020,13 +1069,6 @@
   <url>
     <loc>https://kaban.my.id/categories/tanah-karo/</loc>
     <lastmod>2022-07-01T13:57:55+07:00</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.5</priority>
-  </url>
-  
-  <url>
-    <loc>https://kaban.my.id/categories/blog/</loc>
-    <lastmod>2022-06-29T13:57:55+07:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url>

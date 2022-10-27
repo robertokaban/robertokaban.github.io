@@ -5,7 +5,25 @@
     <link>https://kaban.my.id/categories/</link>
     <description>Recent content in Categories on </description>
     <generator>Hugo -- gohugo.io</generator>
-    <lastBuildDate>Sun, 16 Oct 2022 01:54:26 +0700</lastBuildDate><atom:link href="https://kaban.my.id/categories/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Thu, 27 Oct 2022 09:57:55 +0700</lastBuildDate><atom:link href="https://kaban.my.id/categories/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Blog</title>
+      <link>https://kaban.my.id/categories/blog/</link>
+      <pubDate>Thu, 27 Oct 2022 09:57:55 +0700</pubDate>
+      
+      <guid>https://kaban.my.id/categories/blog/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Filsafat</title>
+      <link>https://kaban.my.id/categories/filsafat/</link>
+      <pubDate>Thu, 27 Oct 2022 09:57:55 +0700</pubDate>
+      
+      <guid>https://kaban.my.id/categories/filsafat/</guid>
+      <description></description>
+    </item>
+    
     <item>
       <title>Filsafat Ilmu</title>
       <link>https://kaban.my.id/categories/filsafat-ilmu/</link>
@@ -70,29 +88,11 @@
     </item>
     
     <item>
-      <title>Blog</title>
-      <link>https://kaban.my.id/categories/blog/</link>
-      <pubDate>Wed, 29 Jun 2022 13:57:55 +0700</pubDate>
-      
-      <guid>https://kaban.my.id/categories/blog/</guid>
-      <description></description>
-    </item>
-    
-    <item>
       <title>Networking</title>
       <link>https://kaban.my.id/categories/networking/</link>
       <pubDate>Sat, 18 Jul 2020 13:57:55 +0700</pubDate>
       
       <guid>https://kaban.my.id/categories/networking/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Pemrograman</title>
-      <link>https://kaban.my.id/categories/pemrograman/</link>
-      <pubDate>Sat, 18 Jul 2020 13:57:55 +0700</pubDate>
-      
-      <guid>https://kaban.my.id/categories/pemrograman/</guid>
       <description></description>
     </item>
     
