@@ -206,6 +206,13 @@
   </url>
   
   <url>
+    <loc>https://kaban.my.id/keamanan-cloud-computing-manfaat-resiko-dan-kontrol/</loc>
+    <lastmod>2012-04-16T02:55:26+07:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
     <loc>https://kaban.my.id/css/tutorial/colors/</loc>
     <lastmod>2021-12-06T08:49:31+00:00</lastmod>
     <changefreq>weekly</changefreq>
@@ -1517,6 +1524,41 @@
   <url>
     <loc>https://kaban.my.id/tags/ipv4/</loc>
     <lastmod>2012-07-01T13:54:26+07:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://kaban.my.id/tags/cloud-computing/</loc>
+    <lastmod>2012-04-16T02:55:26+07:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://kaban.my.id/categories/cloud-computing/</loc>
+    <lastmod>2012-04-16T02:55:26+07:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://kaban.my.id/tags/kemanan-cloud-computing/</loc>
+    <lastmod>2012-04-16T02:55:26+07:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://kaban.my.id/tags/manfaat-cloud-computing/</loc>
+    <lastmod>2012-04-16T02:55:26+07:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://kaban.my.id/tags/resiko-cloud-computing/</loc>
+    <lastmod>2012-04-16T02:55:26+07:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url>
