@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Composer PHP on </title>
+    <link>https://kaban.my.id/tags/composer-php/</link>
+    <description>Recent content in Composer PHP on </description>
+    <generator>Hugo -- gohugo.io</generator>
+    <lastBuildDate>Thu, 17 Nov 2022 02:55:26 +0700</lastBuildDate><atom:link href="https://kaban.my.id/tags/composer-php/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Mengenal Composer: Dependency Manager PHP</title>
+      <link>https://kaban.my.id/mengenal-composer-dependency-manager-php/</link>
+      <pubDate>Thu, 17 Nov 2022 02:55:26 +0700</pubDate>
+      
+      <guid>https://kaban.my.id/mengenal-composer-dependency-manager-php/</guid>
+      <description>Apa itu Composer? # Pada sebuah proyek aplikasi yang besar tentunya membutuhkan banyak library, dan umumnya setiap library ketergantungan dengan library yang lain. Instalasi library secara manual akan merepotkan dan membutuhkan waktu. Oleh karena itu, kita membutuhkan dependency manager yaitu Composer. Composer adalah dependency manager untuk PHP, yaitu sebuah tools yang digunakan untuk memudahkan kita dalam mengelola library PHP yang digunakan pada aplikasi kita beserta dependensinya.
+Sebagai gambaran, misalnya kita memiliki suatu aplikasi yang membutuhkan library Reporting untuk generate dan menampilkan laporan.</description>
+    </item>
+    
+  </channel>
+</rss>

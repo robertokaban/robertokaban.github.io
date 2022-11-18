@@ -5,7 +5,17 @@
     <link>https://kaban.my.id/contributors/roberto-kaban/</link>
     <description>Recent content in Roberto Kaban on </description>
     <generator>Hugo -- gohugo.io</generator>
-    <lastBuildDate>Fri, 28 Oct 2022 02:55:26 +0700</lastBuildDate><atom:link href="https://kaban.my.id/contributors/roberto-kaban/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Thu, 17 Nov 2022 02:55:26 +0700</lastBuildDate><atom:link href="https://kaban.my.id/contributors/roberto-kaban/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Mengenal Composer: Dependency Manager PHP</title>
+      <link>https://kaban.my.id/mengenal-composer-dependency-manager-php/</link>
+      <pubDate>Thu, 17 Nov 2022 02:55:26 +0700</pubDate>
+      
+      <guid>https://kaban.my.id/mengenal-composer-dependency-manager-php/</guid>
+      <description>Apa itu Composer? # Pada sebuah proyek aplikasi yang besar tentunya membutuhkan banyak library, dan umumnya setiap library ketergantungan dengan library yang lain. Instalasi library secara manual akan merepotkan dan membutuhkan waktu. Oleh karena itu, kita membutuhkan dependency manager yaitu Composer. Composer adalah dependency manager untuk PHP, yaitu sebuah tools yang digunakan untuk memudahkan kita dalam mengelola library PHP yang digunakan pada aplikasi kita beserta dependensinya.
+Sebagai gambaran, misalnya kita memiliki suatu aplikasi yang membutuhkan library Reporting untuk generate dan menampilkan laporan.</description>
+    </item>
+    
     <item>
       <title>Filsafat sebagai &#39;Ibu kandung&#39; Ilmu Pengetahuan</title>
       <link>https://kaban.my.id/filsafat-sebagai-ibu-kandung-ilmu-pengetahuan/</link>
@@ -95,15 +105,6 @@ Ketika mengoperasikan Linux, kita dapat menggunakan shell yang merupakan interfa
       <guid>https://kaban.my.id/mengenal-cli-command-line-interface/</guid>
       <description>Pengantar # Kita mungkin sering mendengar istilah CLI dalam hal yang bergubungan dengan dunia IT, khususnya di bidang programmer. Apa sebenarnya CLI ini? CLI merupakan singkatan dari Command Line Interface. CLI sebagai media untuk memberikan instruksi/perintah pada komputer dan perangkat lunak (software) yang ada di dalamnya. Pada CLI dapat diberikan berupa perintah dalam bentuk teks yang fungsinya untuk mengerjakan tugas (task) tertentu.
 Dengan berkembangnya perangkat lunak yg sifatnya GUI (Graphic User Interface) membuat banyak orang kurang familiar dengan CLI.</description>
-    </item>
-    
-    <item>
-      <title>10 Pertanyaan Mendasar Tentang Blockchain Yang Anda Harus Tahu Jawabannya</title>
-      <link>https://kaban.my.id/10-pertanyaan-mendasar-tentang-blockchain-yang-anda-harus-tahu-jawabannya/</link>
-      <pubDate>Fri, 12 Jun 2020 19:35:40 +0700</pubDate>
-      
-      <guid>https://kaban.my.id/10-pertanyaan-mendasar-tentang-blockchain-yang-anda-harus-tahu-jawabannya/</guid>
-      <description>Apa itu blockchain? # Blockchain adalah serangkaian blok yang berisi informasi. Blok-blok ini saling terkait dan dilindungi keunikannya dengan hash (seperti tanda tangan digital yang unik, bisa diumpamakan juga seperti sidik jari yang tidak mungkin sama di antara satu dengan lainnya). Setiap blok berisi informasi. Apabila ada yang mengubah satu blok, maka ia juga harus mengubah serangkaian blok lainnya sehingga kecurangan atau pencurian data menjadi sangat mungkin untuk ditiadakan. Ide siapakah blockchain ini?</description>
     </item>
     
   </channel>

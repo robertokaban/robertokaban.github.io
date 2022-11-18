@@ -66,6 +66,13 @@
   </url>
   
   <url>
+    <loc>https://kaban.my.id/mengenal-composer-dependency-manager-php/</loc>
+    <lastmod>2022-11-17T02:55:26+07:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
     <loc>https://kaban.my.id/filsafat-sebagai-ibu-kandung-ilmu-pengetahuan/</loc>
     <lastmod>2022-10-28T02:55:26+07:00</lastmod>
     <changefreq>weekly</changefreq>
@@ -934,14 +941,63 @@
   </url>
   
   <url>
-    <loc>https://kaban.my.id/tags/belajar-filsafat/</loc>
-    <lastmod>2022-10-28T02:55:26+07:00</lastmod>
+    <loc>https://kaban.my.id/categories/</loc>
+    <lastmod>2022-11-17T02:55:26+07:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url>
   
   <url>
-    <loc>https://kaban.my.id/categories/</loc>
+    <loc>https://kaban.my.id/tags/composer/</loc>
+    <lastmod>2022-11-17T02:55:26+07:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://kaban.my.id/tags/composer-php/</loc>
+    <lastmod>2022-11-17T02:55:26+07:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://kaban.my.id/tags/dependency-manager-php/</loc>
+    <lastmod>2022-11-17T02:55:26+07:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://kaban.my.id/categories/pemrograman/</loc>
+    <lastmod>2022-11-17T02:55:26+07:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://kaban.my.id/contributors/roberto-kaban/</loc>
+    <lastmod>2022-11-17T02:55:26+07:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://kaban.my.id/tags/</loc>
+    <lastmod>2022-11-17T02:55:26+07:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://kaban.my.id/categories/tools/</loc>
+    <lastmod>2022-11-17T02:55:26+07:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://kaban.my.id/tags/belajar-filsafat/</loc>
     <lastmod>2022-10-28T02:55:26+07:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
@@ -977,20 +1033,6 @@
   
   <url>
     <loc>https://kaban.my.id/categories/materi-kuliah/</loc>
-    <lastmod>2022-10-28T02:55:26+07:00</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.5</priority>
-  </url>
-  
-  <url>
-    <loc>https://kaban.my.id/contributors/roberto-kaban/</loc>
-    <lastmod>2022-10-28T02:55:26+07:00</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.5</priority>
-  </url>
-  
-  <url>
-    <loc>https://kaban.my.id/tags/</loc>
     <lastmod>2022-10-28T02:55:26+07:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
@@ -1284,21 +1326,7 @@
   </url>
   
   <url>
-    <loc>https://kaban.my.id/categories/pemrograman/</loc>
-    <lastmod>2020-07-18T13:57:55+07:00</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.5</priority>
-  </url>
-  
-  <url>
     <loc>https://kaban.my.id/tags/perintah-linux/</loc>
-    <lastmod>2020-07-18T13:57:55+07:00</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.5</priority>
-  </url>
-  
-  <url>
-    <loc>https://kaban.my.id/categories/tools/</loc>
     <lastmod>2020-07-18T13:57:55+07:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>

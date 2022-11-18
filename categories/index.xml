@@ -5,7 +5,25 @@
     <link>https://kaban.my.id/categories/</link>
     <description>Recent content in Categories on </description>
     <generator>Hugo -- gohugo.io</generator>
-    <lastBuildDate>Fri, 28 Oct 2022 02:55:26 +0700</lastBuildDate><atom:link href="https://kaban.my.id/categories/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Thu, 17 Nov 2022 02:55:26 +0700</lastBuildDate><atom:link href="https://kaban.my.id/categories/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Pemrograman</title>
+      <link>https://kaban.my.id/categories/pemrograman/</link>
+      <pubDate>Thu, 17 Nov 2022 02:55:26 +0700</pubDate>
+      
+      <guid>https://kaban.my.id/categories/pemrograman/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Tools</title>
+      <link>https://kaban.my.id/categories/tools/</link>
+      <pubDate>Thu, 17 Nov 2022 02:55:26 +0700</pubDate>
+      
+      <guid>https://kaban.my.id/categories/tools/</guid>
+      <description></description>
+    </item>
+    
     <item>
       <title>Filsafat Ilmu</title>
       <link>https://kaban.my.id/categories/filsafat-ilmu/</link>
@@ -66,24 +84,6 @@
       <pubDate>Sat, 18 Jul 2020 13:57:55 +0700</pubDate>
       
       <guid>https://kaban.my.id/categories/networking/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Pemrograman</title>
-      <link>https://kaban.my.id/categories/pemrograman/</link>
-      <pubDate>Sat, 18 Jul 2020 13:57:55 +0700</pubDate>
-      
-      <guid>https://kaban.my.id/categories/pemrograman/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Tools</title>
-      <link>https://kaban.my.id/categories/tools/</link>
-      <pubDate>Sat, 18 Jul 2020 13:57:55 +0700</pubDate>
-      
-      <guid>https://kaban.my.id/categories/tools/</guid>
       <description></description>
     </item>
     
