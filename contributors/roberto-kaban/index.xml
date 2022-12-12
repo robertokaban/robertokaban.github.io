@@ -5,7 +5,17 @@
     <link>https://kaban.my.id/contributors/roberto-kaban/</link>
     <description>Recent content in Roberto Kaban on </description>
     <generator>Hugo -- gohugo.io</generator>
-    <lastBuildDate>Thu, 17 Nov 2022 02:55:26 +0700</lastBuildDate><atom:link href="https://kaban.my.id/contributors/roberto-kaban/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Thu, 08 Dec 2022 23:30:55 +0700</lastBuildDate><atom:link href="https://kaban.my.id/contributors/roberto-kaban/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Berpartisipasi dalam menyukseskan ujian CAT PPK KPUD Karo</title>
+      <link>https://kaban.my.id/coretanku/berpartisipasi-dalam-menyukseskan-ujian-cat-ppk-kpud-karo/</link>
+      <pubDate>Thu, 08 Dec 2022 23:30:55 +0700</pubDate>
+      
+      <guid>https://kaban.my.id/coretanku/berpartisipasi-dalam-menyukseskan-ujian-cat-ppk-kpud-karo/</guid>
+      <description>Pengantar # Ujian CAT (Computer Assignment Test) dilaksakanan oleh Komisi Pemilihan Umum Daerah (KPUD) seluruh Indonesia untuk menyeleksi calon Panitia Pemilihan Kecamatan (PPK). Di kabupaten Karo, kebetulan KPUD Karo bekerjasama dengan Kampus Institut Teknologi dan Bisnis Indonesia Kabanjahe untuk support penyelenggaran CAT khususnya dalam instalasi jaringan dan aplikasi.
+Ujian CAT di kab. Karo dilaksanakan selama dua hari yaitu 6 - 7 Desember 2022, dengan lima gelombang setiap harinya. Setiap gelombang memiliki durasi waktu ujian selama 90 menit.</description>
+    </item>
+    
     <item>
       <title>Mengenal Composer: Dependency Manager PHP</title>
       <link>https://kaban.my.id/mengenal-composer-dependency-manager-php/</link>
@@ -95,16 +105,6 @@ Perayaan ini telah membudaya dan sudah terlaksana setiap tahunnya. Kabupaten Kar
       <description>Sepintas tentang Linux # Linux adalah keluarga sistem operasi turunan Unix yang bersifat open-source dan didasarkan pada Linux Kernel. Terdapat berbagai distribusi (Distro) linux yang populer seperti Ubuntu, Fedora, Mint, Debian, dan lain-lain.
 Sejak pertama kali dirilis pada tahun 1991, popularitas Linux terus meroket karena sifatnya yang open-source. User bebas memodifikasi Linux dan mendistribusikannya dengan memakai namanya sendiri.
 Ketika mengoperasikan Linux, kita dapat menggunakan shell yang merupakan interface yang menyediakan akses ke layanan sistem operasi.</description>
-    </item>
-    
-    <item>
-      <title>Mengenal Cli Command Line Interface</title>
-      <link>https://kaban.my.id/mengenal-cli-command-line-interface/</link>
-      <pubDate>Sun, 12 Jul 2020 13:57:55 +0700</pubDate>
-      
-      <guid>https://kaban.my.id/mengenal-cli-command-line-interface/</guid>
-      <description>Pengantar # Kita mungkin sering mendengar istilah CLI dalam hal yang bergubungan dengan dunia IT, khususnya di bidang programmer. Apa sebenarnya CLI ini? CLI merupakan singkatan dari Command Line Interface. CLI sebagai media untuk memberikan instruksi/perintah pada komputer dan perangkat lunak (software) yang ada di dalamnya. Pada CLI dapat diberikan berupa perintah dalam bentuk teks yang fungsinya untuk mengerjakan tugas (task) tertentu.
-Dengan berkembangnya perangkat lunak yg sifatnya GUI (Graphic User Interface) membuat banyak orang kurang familiar dengan CLI.</description>
     </item>
     
   </channel>
