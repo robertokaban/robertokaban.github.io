@@ -6,5 +6,15 @@
     <description>Recent content in Tutorial PHP on </description>
     <generator>Hugo -- gohugo.io</generator>
     <lastBuildDate>Tue, 06 Oct 2020 08:48:23 +0000</lastBuildDate><atom:link href="https://kaban.my.id/php/tutorial/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Pengenalan PHP</title>
+      <link>https://kaban.my.id/php/tutorial/pengenalan/</link>
+      <pubDate>Sun, 06 Nov 2022 08:49:31 +0000</pubDate>
+      
+      <guid>https://kaban.my.id/php/tutorial/pengenalan/</guid>
+      <description>PHP # PHP (Hypertext Preprocessor) adalah bahasa pemrograman server-side yang digunakan untuk mengembangkan aplikasi web dinamis. PHP memungkinkan kita untuk membuat halaman web yang dapat menampilkan konten dinamis yang dihasilkan dari pengolahan data di server. PHP banyak digunakan dalam pengembangan aplikasi web karena mudah dipelajari, mudah dipahami, dan mendukung berbagai macam basis data.
+Sebuah skrip PHP dieksekusi pada server web, dan hasilnya dikirimkan ke browser pengguna dalam bentuk halaman web statis.</description>
+    </item>
+    
   </channel>
 </rss>

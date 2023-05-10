@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Tutorial MySQL on </title>
+    <link>https://kaban.my.id/mysql/tutorial/</link>
+    <description>Recent content in Tutorial MySQL on </description>
+    <generator>Hugo -- gohugo.io</generator>
+    <lastBuildDate>Thu, 06 Oct 2022 08:49:15 +0000</lastBuildDate><atom:link href="https://kaban.my.id/mysql/tutorial/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Pengenalan MySQL</title>
+      <link>https://kaban.my.id/mysql/tutorial/pengenalan/</link>
+      <pubDate>Tue, 06 Dec 2022 08:49:31 +0000</pubDate>
+      
+      <guid>https://kaban.my.id/mysql/tutorial/pengenalan/</guid>
+      <description>Apa itu MySQL # MySQL adalah sebuah sistem manajemen basis data (database management system/DBMS) relasional yang open source atau gratis dan sangat populer. MySQL dikembangkan oleh perusahaan swasta asal Swedia, MySQL AB, yang kemudian diakuisisi oleh perusahaan raksasa teknologi Oracle pada tahun 2008.
+MySQL didesain untuk memudahkan pengguna dalam mengakses, mengelola, dan memanipulasi data dalam sebuah basis data secara efisien dan aman. MySQL menggunakan bahasa SQL (Structured Query Language) untuk mengelola dan mengakses data dalam basis data.</description>
+    </item>
+    
+  </channel>
+</rss>

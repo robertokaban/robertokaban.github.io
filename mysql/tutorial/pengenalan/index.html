@@ -15,17 +15,17 @@
   <meta name="robots" content="index, follow">
     <meta name="googlebot" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1">
     <meta name="bingbot" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1">
-  <title>Akses database di dalam Python - Roberto Kaban Blog&#39;s</title>
-<meta name="description" content="Kondisi dalam Python.">
+  <title>Pengenalan MySQL - Roberto Kaban Blog&#39;s</title>
+<meta name="description" content="Pengenalan MySQL.">
 <link rel="canonical" href="https://kaban.my.id/mysql/tutorial/pengenalan/">
 <meta property="og:locale" content="en_US">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Akses database di dalam Python">
-<meta property="og:description" content="Kondisi dalam Python.">
+<meta property="og:title" content="Pengenalan MySQL">
+<meta property="og:description" content="Pengenalan MySQL.">
 <meta property="og:url" content="https://kaban.my.id/mysql/tutorial/pengenalan/">
 <meta property="og:site_name" content="Roberto Kaban Blog&#39;s">
-<meta property="article:published_time" content="2021-12-06T08:49:31+00:00">
-  <meta property="article:modified_time" content="2021-12-06T08:49:31+00:00">
+<meta property="article:published_time" content="2022-12-06T08:49:31+00:00">
+  <meta property="article:modified_time" content="2022-12-06T08:49:31+00:00">
   
   <meta property="og:image" content="https://kaban.my.id/doks.png"/>
       <meta property="og:image:alt" content="Roberto Kaban Blog&#39;s">
@@ -33,10 +33,10 @@
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:site" content="@robertokaban">
 <meta name="twitter:creator" content="@robertokaban">
-<meta name="twitter:title" content="Akses database di dalam Python">
-<meta name="twitter:description" content="Kondisi dalam Python.">
+<meta name="twitter:title" content="Pengenalan MySQL">
+<meta name="twitter:description" content="Pengenalan MySQL.">
 <meta name="twitter:image" content="https://kaban.my.id/doks.png">
-    <meta name="twitter:image:alt" content="Akses database di dalam Python">
+    <meta name="twitter:image:alt" content="Pengenalan MySQL">
 
 <script type="application/ld+json">
 {
@@ -74,16 +74,16 @@
       "@type": "WebPage",
       "@id": "https://kaban.my.id/mysql/tutorial/pengenalan/",
       "url": "https://kaban.my.id/mysql/tutorial/pengenalan/",
-      "name": "Akses database di dalam Python",
-      "description": "Kondisi dalam Python.",
+      "name": "Pengenalan MySQL",
+      "description": "Pengenalan MySQL.",
       "isPartOf": {
         "@id": "https://kaban.my.id/#/schema/website/1"
       },
       "about": {
           "@id": "https://kaban.my.id/#/schema/person/1"
         },
-      "datePublished": "2021-12-06T08:49:31CET",
-      "dateModified": "2021-12-06T08:49:31CET",
+      "datePublished": "2022-12-06T08:49:31CET",
+      "dateModified": "2022-12-06T08:49:31CET",
       "breadcrumb": {
         "@id": "https://kaban.my.id/mysql/tutorial/pengenalan/#/schema/breadcrumb/1"
       },
@@ -143,7 +143,7 @@
           "@id": "https://kaban.my.id/mysql/tutorial/pengenalan/#/schema/image/2",
           "url": "https://kaban.my.id/doks.png",
           "contentUrl": "https://kaban.my.id/doks.png",
-          "caption": "Akses database di dalam Python"
+          "caption": "Pengenalan MySQL"
         }
       ]
     }
@@ -248,15 +248,15 @@
     
       
       <li class="mb-1">
-        <button class="btn btn-toggle align-items-center rounded collapsed" data-bs-toggle="collapse" data-bs-target="#section-22c0366a8255ce07495c87491e3356e0" aria-expanded="true">
-          Tuttorial MySQL
+        <button class="btn btn-toggle align-items-center rounded collapsed" data-bs-toggle="collapse" data-bs-target="#section-dd2f133c64f99bea60c3e743290ec287" aria-expanded="true">
+          Tutorial MySQL
         </button>
-        <div class="collapse show" id="section-22c0366a8255ce07495c87491e3356e0">
+        <div class="collapse show" id="section-dd2f133c64f99bea60c3e743290ec287">
           <ul class="btn-toggle-nav list-unstyled fw-normal pb-1 small">
             
               
                 
-                <li><a class="docs-link rounded active" href="https://kaban.my.id/mysql/tutorial/pengenalan/">Akses database di dalam Python</a></li>
+                <li><a class="docs-link rounded active" href="https://kaban.my.id/mysql/tutorial/pengenalan/">Pengenalan MySQL</a></li>
               
             
           </ul>
@@ -273,240 +273,196 @@
     <div class="wrap container-xxl" role="document">
       <div class="content">
         
-<div class="row justify-content-center">
-  <div class="col-md-8 col-lg-8 col-xl-8">
-    <nav aria-label="breadcrumb">
-      <ol class="breadcrumb">
-        <li class="breadcrumb-item"><a href="/">Home</a></li>
-<li class="breadcrumb-item"><a href="/mysql/">Mysql</a></li>
-<li class="breadcrumb-item"><a href="/mysql/tutorial/">Tuttorial MySQL</a></li>
-<li class="breadcrumb-item active" aria-current="page">Akses database di dalam Python</li>
-      </ol>
-    </nav>
-    <article>
-      <h1>Akses database di dalam Python</h1>
-      <p>Standar Interface Python untuk database adalah Python DB-API. Kebanyakan Interface database Python mematuhi standar ini.</p>
-<p>Anda bisa memilih database yang tepat untuk aplikasi Anda. API Database Python mendukung berbagai macam server database seperti.</p>
-<p>GadFly
-mSQL
-MySQL
-PostgreSQL
-Microsoft SQL Server 2000
-Informix
-Interbase
-Oracle
-Sybase
-SQLite
-Berikut adalah link untuk mempelajari lebih lengkap daftar antarmuka/interface database Python - Antarmuka dan API Database Python. Anda harus mendownload modul DB API terpisah untuk setiap database yang perlu Anda akses. Sebagai contoh, jika Anda perlu mengakses database Oracle dan juga database MySQL, Anda harus mendownload kedua modul database Oracle dan MySQL.</p>
-<p>API DB menyediakan standar minimal untuk bekerja dengan database menggunakan struktur dan sintaks Python sedapat mungkin. API ini meliputi:</p>
-<p>Mengimpor modul API.
-Mendapatkan koneksi dengan database.
-Menerbitkan pernyataan SQL dan prosedur tersimpan.
-Menutup koneksi
-Python memiliki dukungan built-in untuk SQLite. Pada bagian ini, kita akan mempelajari semua konsep menggunakan MySQL. Modul MySQLdb, antarmuka yang populer dengan MySQL tidak kompatibel dengan Python 3. Sebagai gantinya, kita akan menggunakan modul PyMySQL.</p>
-<p>Apa itu PyMySQL ?
-PyMySQL adalah sebuah antarmuka untuk menghubungkan ke server database MySQL dari Python. Ini mengimplementasikan API Database Python v2.0 dan berisi perpustakaan klien MySQL murni-Python. Tujuan PyMySQL adalah penggantian drop-in untuk MySQLdb. Anda dapat melihat dokumentasi lengkap penggunaan PyMySQL di https://pymysql.readthedocs.io/en/latest/.</p>
-<p>Cara Instal PyMySQL
-Sebelum melanjutka, pastikan Anda telah menginstal PyMySQL di komputer Anda. Cukup ketik berikut ini di skrip Python Anda dan jalankan.</p>
-<p>import pymysql.cursors</p>
-<p>Jika menghasilkan hasil berikut, berarti modul MySQLdb tidak terpasang:</p>
-<p>Traceback (most recent call last): File &ldquo;test.py&rdquo;, line 3, in Import PyMySQL ImportError: No module named PyMySQL</p>
-<p>Untuk menginstal modul PyMySQL silahkan gunakan command/perintah berikut di command prompt:</p>
-<p>python -m pip install PyMySQL</p>
-<p>Database Connection
-Sebelum terhubung ke database MySQL, pastikan beberapa hal dibawah ini :</p>
-<p>Anda telah membuat database TESTDB.
-Anda telah membuat tabel EMPLOYEE di TESTDB.
-Tabel ini memiliki bidang FIRST_NAME, LAST_NAME, AGE, SEX, dan INCOME.
-User ID “testuser” dan password “test123” diatur untuk mengakses TESTDB.
-Python modul PyMySQL terinstal dengan benar pada mesin Anda.
-Anda telah melalui tutorial MySQL untuk memahami Dasar-Dasar MySQL
-Berikut ini adalah contoh koneksi dengan database MySQL “TESTDB”</p>
-<p>import pymysql.cursors</p>
-<h1 id="open-database-connection">Open database connection <a href="#open-database-connection" class="anchor" aria-hidden="true">#</a></h1>
-<p>db = pymysql.connect(&ldquo;localhost&rdquo;,&ldquo;testuser&rdquo;,&ldquo;test123&rdquo;,&ldquo;TESTDB&rdquo; )</p>
-<h1 id="prepare-a-cursor-object-using-cursor-method">prepare a cursor object using cursor() method <a href="#prepare-a-cursor-object-using-cursor-method" class="anchor" aria-hidden="true">#</a></h1>
-<p>cursor = db.cursor()</p>
-<h1 id="execute-sql-query-using-execute-method">execute SQL query using execute() method. <a href="#execute-sql-query-using-execute-method" class="anchor" aria-hidden="true">#</a></h1>
-<p>cursor.execute(&ldquo;SELECT VERSION()&quot;)</p>
-<h1 id="fetch-a-single-row-using-fetchone-method">Fetch a single row using fetchone() method. <a href="#fetch-a-single-row-using-fetchone-method" class="anchor" aria-hidden="true">#</a></h1>
-<p>data = cursor.fetchone()</p>
-<p>print (&ldquo;Database version : %s &quot; % data)</p>
-<h1 id="disconnect-from-server">disconnect from server <a href="#disconnect-from-server" class="anchor" aria-hidden="true">#</a></h1>
-<p>db.close()
-Membuat Tabel Database
-import pymysql.cursors</p>
-<h1 id="open-database-connection-1">Open database connection <a href="#open-database-connection-1" class="anchor" aria-hidden="true">#</a></h1>
-<p>db = pymysql.connect(&ldquo;localhost&rdquo;,&ldquo;testuser&rdquo;,&ldquo;test123&rdquo;,&ldquo;TESTDB&rdquo; )</p>
-<h1 id="prepare-a-cursor-object-using-cursor-method-1">prepare a cursor object using cursor() method <a href="#prepare-a-cursor-object-using-cursor-method-1" class="anchor" aria-hidden="true">#</a></h1>
-<p>cursor = db.cursor()</p>
-<h1 id="drop-table-if-it-already-exist-using-execute-method">Drop table if it already exist using execute() method. <a href="#drop-table-if-it-already-exist-using-execute-method" class="anchor" aria-hidden="true">#</a></h1>
-<p>cursor.execute(&ldquo;DROP TABLE IF EXISTS EMPLOYEE&rdquo;)</p>
-<h1 id="create-table-as-per-requirement">Create table as per requirement <a href="#create-table-as-per-requirement" class="anchor" aria-hidden="true">#</a></h1>
-<p>sql = &ldquo;&ldquo;&ldquo;CREATE TABLE EMPLOYEE (
-FIRST_NAME  CHAR(20) NOT NULL,
-LAST_NAME  CHAR(20),
-AGE INT,
-SEX CHAR(1),
-INCOME FLOAT )&rdquo;&rdquo;&rdquo;</p>
-<p>cursor.execute(sql)</p>
-<h1 id="disconnect-from-server-1">disconnect from server <a href="#disconnect-from-server-1" class="anchor" aria-hidden="true">#</a></h1>
-<p>db.close()
-Operasi Insert
-Contoh berikut, mengeksekusi pernyataan SQL INSERT untuk membuat catatan di tabel EMPLOYEE</p>
-<p>import pymysql.cursors</p>
-<h1 id="open-database-connection-2">Open database connection <a href="#open-database-connection-2" class="anchor" aria-hidden="true">#</a></h1>
-<p>db = pymysql.connect(&ldquo;localhost&rdquo;,&ldquo;testuser&rdquo;,&ldquo;test123&rdquo;,&ldquo;TESTDB&rdquo; )</p>
-<h1 id="prepare-a-cursor-object-using-cursor-method-2">prepare a cursor object using cursor() method <a href="#prepare-a-cursor-object-using-cursor-method-2" class="anchor" aria-hidden="true">#</a></h1>
-<p>cursor = db.cursor()</p>
-<h1 id="prepare-sql-query-to-insert-a-record-into-the-database">Prepare SQL query to INSERT a record into the database. <a href="#prepare-sql-query-to-insert-a-record-into-the-database" class="anchor" aria-hidden="true">#</a></h1>
-<p>sql = &ldquo;&ldquo;&ldquo;INSERT INTO EMPLOYEE(FIRST_NAME,
-LAST_NAME, AGE, SEX, INCOME)
-VALUES (&lsquo;Mac&rsquo;, &lsquo;Mohan&rsquo;, 20, &lsquo;M&rsquo;, 2000)&rdquo;&rdquo;&rdquo;
-try:</p>
-<h1 id="execute-the-sql-command">Execute the SQL command <a href="#execute-the-sql-command" class="anchor" aria-hidden="true">#</a></h1>
-<p>cursor.execute(sql)</p>
-<h1 id="commit-your-changes-in-the-database">Commit your changes in the database <a href="#commit-your-changes-in-the-database" class="anchor" aria-hidden="true">#</a></h1>
-<p>db.commit()
-except:</p>
-<h1 id="rollback-in-case-there-is-any-error">Rollback in case there is any error <a href="#rollback-in-case-there-is-any-error" class="anchor" aria-hidden="true">#</a></h1>
-<p>db.rollback()</p>
-<h1 id="disconnect-from-server-2">disconnect from server <a href="#disconnect-from-server-2" class="anchor" aria-hidden="true">#</a></h1>
-<p>db.close()
-Contoh di atas bisa dituliskan sebagai berikut untuk membuat query SQL secara dinamis</p>
-<p>import pymysql.cursors</p>
-<h1 id="open-database-connection-3">Open database connection <a href="#open-database-connection-3" class="anchor" aria-hidden="true">#</a></h1>
-<p>db = pymysql.connect(&ldquo;localhost&rdquo;,&ldquo;testuser&rdquo;,&ldquo;test123&rdquo;,&ldquo;TESTDB&rdquo; )</p>
-<h1 id="prepare-a-cursor-object-using-cursor-method-3">prepare a cursor object using cursor() method <a href="#prepare-a-cursor-object-using-cursor-method-3" class="anchor" aria-hidden="true">#</a></h1>
-<p>cursor = db.cursor()</p>
-<h1 id="prepare-sql-query-to-insert-a-record-into-the-database-1">Prepare SQL query to INSERT a record into the database. <a href="#prepare-sql-query-to-insert-a-record-into-the-database-1" class="anchor" aria-hidden="true">#</a></h1>
-<p>sql = &ldquo;INSERT INTO EMPLOYEE(FIRST_NAME,<br>
-LAST_NAME, AGE, SEX, INCOME)<br>
-VALUES ('%s', &lsquo;%s&rsquo;, &lsquo;%d&rsquo;, &lsquo;%c&rsquo;, &lsquo;%d&rsquo; )&rdquo; %<br>
-(&lsquo;Mac&rsquo;, &lsquo;Mohan&rsquo;, 20, &lsquo;M&rsquo;, 2000)
-try:</p>
-<h1 id="execute-the-sql-command-1">Execute the SQL command <a href="#execute-the-sql-command-1" class="anchor" aria-hidden="true">#</a></h1>
-<p>cursor.execute(sql)</p>
-<h1 id="commit-your-changes-in-the-database-1">Commit your changes in the database <a href="#commit-your-changes-in-the-database-1" class="anchor" aria-hidden="true">#</a></h1>
-<p>db.commit()
-except:</p>
-<h1 id="rollback-in-case-there-is-any-error-1">Rollback in case there is any error <a href="#rollback-in-case-there-is-any-error-1" class="anchor" aria-hidden="true">#</a></h1>
-<p>db.rollback()</p>
-<h1 id="disconnect-from-server-3">disconnect from server <a href="#disconnect-from-server-3" class="anchor" aria-hidden="true">#</a></h1>
-<p>db.close()
-Read Operation
-READ Operation pada database apapun berarti mengambil beberapa informasi berguna dari database.</p>
-<p>Setelah koneksi database terbentuk, Anda siap untuk membuat query ke dalam database ini. Anda bisa menggunakan metode fetchone() untuk mengambil satu record atau fetchall() metode untuk mengambil beberapa nilai dari tabel database.</p>
-<p>Fetchone () - Ini mengambil baris berikut dari kumpulan hasil query. Set hasil adalah objek yang dikembalikan saat objek kursor digunakan untuk query tabel.</p>
-<p>Fetchall () - Ini menjemput semua baris dalam kumpulan hasil. Jika beberapa baris telah diekstraksi dari himpunan hasil, maka akan diambil baris yang tersisa dari kumpulan hasil.</p>
-<p>Rowcount - Ini adalah atribut read-only dan mengembalikan jumlah baris yang dipengaruhi oleh metode execute ().</p>
-<p>Prosedur berikut menanyakan semua catatan dari tabel EMPLOYEE yang memiliki gaji lebih dari 1000</p>
-<p>import pymysql.cursors</p>
-<h1 id="open-database-connection-4">Open database connection <a href="#open-database-connection-4" class="anchor" aria-hidden="true">#</a></h1>
-<p>db = pymysql.connect(&ldquo;localhost&rdquo;,&ldquo;testuser&rdquo;,&ldquo;test123&rdquo;,&ldquo;TESTDB&rdquo; )</p>
-<h1 id="prepare-a-cursor-object-using-cursor-method-4">prepare a cursor object using cursor() method <a href="#prepare-a-cursor-object-using-cursor-method-4" class="anchor" aria-hidden="true">#</a></h1>
-<p>cursor = db.cursor()</p>
-<h1 id="prepare-sql-query-to-insert-a-record-into-the-database-2">Prepare SQL query to INSERT a record into the database. <a href="#prepare-sql-query-to-insert-a-record-into-the-database-2" class="anchor" aria-hidden="true">#</a></h1>
-<p>sql = &ldquo;SELECT * FROM EMPLOYEE<br>
-WHERE INCOME &gt; &lsquo;%d&rsquo;&rdquo; % (1000)
-try:</p>
-<h1 id="execute-the-sql-command-2">Execute the SQL command <a href="#execute-the-sql-command-2" class="anchor" aria-hidden="true">#</a></h1>
-<p>cursor.execute(sql)</p>
-<h1 id="fetch-all-the-rows-in-a-list-of-lists">Fetch all the rows in a list of lists. <a href="#fetch-all-the-rows-in-a-list-of-lists" class="anchor" aria-hidden="true">#</a></h1>
-<p>results = cursor.fetchall()
-for row in results:
-fname = row[0]
-lname = row[1]
-age = row[2]
-sex = row[3]
-income = row[4]
-# Now print fetched result
-print (&ldquo;fname = %s,lname = %s,age = %d,sex = %s,income = %d&rdquo; %<br>
-(fname, lname, age, sex, income ))
-except:
-print (&ldquo;Error: unable to fetch data&rdquo;)</p>
-<h1 id="menutup-koneksi-ke-server">menutup koneksi ke server <a href="#menutup-koneksi-ke-server" class="anchor" aria-hidden="true">#</a></h1>
-<p>db.close()
-Setelah Anda eksekusi kode diatas, akan muncul hasil seperti dibawah ini : fname = Mac, lname = Mohan, age = 20, sex = M, income = 2000</p>
-<p>Update Operation
-Operasi UPDATE pada database apapun berarti mengupdate satu atau lebih catatan, yang sudah tersedia di database. Prosedur berikut memperbarui semua catatan yang memiliki SEX sebagai ‘M’. Di sini, kita meningkatkan UMUR semua laki-laki satu tahun.</p>
-<p>import pymysql.cursors</p>
-<h1 id="open-database-connection-5">Open database connection <a href="#open-database-connection-5" class="anchor" aria-hidden="true">#</a></h1>
-<p>db = pymysql.connect(&ldquo;localhost&rdquo;,&ldquo;testuser&rdquo;,&ldquo;test123&rdquo;,&ldquo;TESTDB&rdquo; )</p>
-<h1 id="prepare-a-cursor-object-using-cursor-method-5">prepare a cursor object using cursor() method <a href="#prepare-a-cursor-object-using-cursor-method-5" class="anchor" aria-hidden="true">#</a></h1>
-<p>cursor = db.cursor()</p>
-<h1 id="prepare-sql-query-to-update-required-records">Prepare SQL query to UPDATE required records <a href="#prepare-sql-query-to-update-required-records" class="anchor" aria-hidden="true">#</a></h1>
-<p>sql = &ldquo;UPDATE EMPLOYEE SET AGE = AGE + 1
-WHERE SEX = &lsquo;%c&rsquo;&rdquo; % (&lsquo;M&rsquo;)
-try:</p>
-<h1 id="execute-the-sql-command-3">Execute the SQL command <a href="#execute-the-sql-command-3" class="anchor" aria-hidden="true">#</a></h1>
-<p>cursor.execute(sql)</p>
-<h1 id="commit-your-changes-in-the-database-2">Commit your changes in the database <a href="#commit-your-changes-in-the-database-2" class="anchor" aria-hidden="true">#</a></h1>
-<p>db.commit()
-except:</p>
-<h1 id="rollback-in-case-there-is-any-error-2">Rollback in case there is any error <a href="#rollback-in-case-there-is-any-error-2" class="anchor" aria-hidden="true">#</a></h1>
-<p>db.rollback()</p>
-<h1 id="disconnect-from-server-4">disconnect from server <a href="#disconnect-from-server-4" class="anchor" aria-hidden="true">#</a></h1>
-<p>db.close()
-Delete Operation
-Operasi DELETE diperlukan bila Anda ingin menghapus beberapa catatan dari database Anda. Berikut ini adalah prosedur untuk menghapus semua catatan dari EMPLOYEE dimana AGE lebih dari 20</p>
-<p>import pymysql.cursors</p>
-<h1 id="open-database-connection-6">Open database connection <a href="#open-database-connection-6" class="anchor" aria-hidden="true">#</a></h1>
-<p>db = pymysql.connect(&ldquo;localhost&rdquo;,&ldquo;testuser&rdquo;,&ldquo;test123&rdquo;,&ldquo;TESTDB&rdquo; )</p>
-<h1 id="prepare-a-cursor-object-using-cursor-method-6">prepare a cursor object using cursor() method <a href="#prepare-a-cursor-object-using-cursor-method-6" class="anchor" aria-hidden="true">#</a></h1>
-<p>cursor = db.cursor()</p>
-<h1 id="prepare-sql-query-to-delete-required-records">Prepare SQL query to DELETE required records <a href="#prepare-sql-query-to-delete-required-records" class="anchor" aria-hidden="true">#</a></h1>
-<p>sql = &ldquo;DELETE FROM EMPLOYEE WHERE AGE &gt; &lsquo;%d&rsquo;&rdquo; % (20)
-try:</p>
-<h1 id="execute-the-sql-command-4">Execute the SQL command <a href="#execute-the-sql-command-4" class="anchor" aria-hidden="true">#</a></h1>
-<p>cursor.execute(sql)</p>
-<h1 id="commit-your-changes-in-the-database-3">Commit your changes in the database <a href="#commit-your-changes-in-the-database-3" class="anchor" aria-hidden="true">#</a></h1>
-<p>db.commit()
-except:</p>
-<h1 id="rollback-in-case-there-is-any-error-3">Rollback in case there is any error <a href="#rollback-in-case-there-is-any-error-3" class="anchor" aria-hidden="true">#</a></h1>
-<p>db.rollback()</p>
-<h1 id="disconnect-from-server-5">disconnect from server <a href="#disconnect-from-server-5" class="anchor" aria-hidden="true">#</a></h1>
-<p>db.close()
-Selain itu masih ada beberapa operasi sebagai berikut :</p>
-<p>Commit Operation db.commit()
-Rollback Operation db.rollback()
-Disconnect Operation db.close()
-Jika Anda menginginkan dokumentasi yang lebih lengkap dari bahasa pemrograman python, silahkan buka dokumentasi resmi dari Python</p>
+	<div class="row flex-xl-nowrap">
+		<div class="col-lg-5 col-xl-4 docs-sidebar d-none d-lg-block">
+			<nav class="docs-links" aria-label="Main navigation">
+				
+<ul class="list-unstyled collapsible-sidebar">
+  
+    
+      
+      <li class="mb-1">
+        <button class="btn btn-toggle align-items-center rounded collapsed" data-bs-toggle="collapse" data-bs-target="#section-dd2f133c64f99bea60c3e743290ec287" aria-expanded="true">
+          Tutorial MySQL
+        </button>
+        <div class="collapse show" id="section-dd2f133c64f99bea60c3e743290ec287">
+          <ul class="btn-toggle-nav list-unstyled fw-normal pb-1 small">
+            
+              
+                
+                <li><a class="docs-link rounded active" href="https://kaban.my.id/mysql/tutorial/pengenalan/">Pengenalan MySQL</a></li>
+              
+            
+          </ul>
+        </div>
+      </li>
+    
+  
+</ul>
 
-    </article>
+			</nav>
+		</div>
+		<nav class="docs-toc d-none d-xl-block col-xl-3" aria-label="Secondary navigation">
+			<div class="d-xl-none">
+  <button class="btn btn-outline-primary btn-sm doks-toc-toggle collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#onThisPage" aria-controls="doks-docs-nav" aria-expanded="false" aria-label="Toggle On this page navigation">
+    <span>Daftar isi</span>
+    <span>
+      <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" class="doks doks-expand" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><title>Expand</title><polyline points="7 13 12 18 17 13"></polyline><polyline points="7 6 12 11 17 6"></polyline></svg>
+      <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" class="doks doks-collapse" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><title>Collapse</title><polyline points="17 11 12 6 7 11"></polyline><polyline points="17 18 12 13 7 18"></polyline></svg>
+    </span>
+  </button>
+  <div class="collapse" id="onThisPage">
+    <div class="card card-body mt-3 py-1">
+      <div class="page-links">
+        <nav id="TableOfContents">
+  <ul>
+    <li><a href="#apa-itu-mysql">Apa itu MySQL</a></li>
+    <li><a href="#sejarah-mysql">Sejarah MySQL</a></li>
+    <li><a href="#keunggulan-mysql">Keunggulan MySQL</a></li>
+    <li><a href="#perbedaan-mysql-dengan-database-lain">Perbedaan MySQL dengan Database lain</a></li>
+  </ul>
+</nav>
+      </div>
+    </div>
   </div>
-
-  <div class="col-md-4 col-lg-4 col-xl-4">
-    <article>
-      <h1 class="text-center">Akses database di dalam Python</h1>
-			<div class="card-list">
-				
-				
-					
-						<div class="card my-3">
-							<div class="card-body">
-								<a class="stretched-link" href="/mysql/tutorial/pengenalan/">Akses Database Di Dalam Python &rarr;</a>
-							</div>
-						</div>
-					
-				
-			</div>
-    </article>
-  </div>
-
 </div>
+<div class="page-links d-none d-xl-block">
+  <h3>Daftar isi</h3>
+  <nav id="TableOfContents">
+  <ul>
+    <li><a href="#apa-itu-mysql">Apa itu MySQL</a></li>
+    <li><a href="#sejarah-mysql">Sejarah MySQL</a></li>
+    <li><a href="#keunggulan-mysql">Keunggulan MySQL</a></li>
+    <li><a href="#perbedaan-mysql-dengan-database-lain">Perbedaan MySQL dengan Database lain</a></li>
+  </ul>
+</nav>
+  </div>
+
+		</nav>
+		<main class="docs-content col-lg-11 col-xl-9">
+		
+				<nav aria-label="breadcrumb">
+					<ol class="breadcrumb">
+						<li class="breadcrumb-item"><a href="/">Home</a></li>
+<li class="breadcrumb-item"><a href="/mysql/">Mysql</a></li>
+<li class="breadcrumb-item"><a href="/mysql/tutorial/">Tutorial MySQL</a></li>
+<li class="breadcrumb-item active" aria-current="page">Pengenalan MySQL</li>
+					</ol>
+				</nav>
+			
+			<h1>Pengenalan MySQL</h1>
+			<p class="lead">MySQL merupakan sistem manajemen database relasional yang berbasis SQL (Structured Query Language).</p>
+			<nav class="d-xl-none" aria-label="Quaternary navigation">
+				<div class="d-xl-none">
+  <button class="btn btn-outline-primary btn-sm doks-toc-toggle collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#onThisPage" aria-controls="doks-docs-nav" aria-expanded="false" aria-label="Toggle On this page navigation">
+    <span>Daftar isi</span>
+    <span>
+      <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" class="doks doks-expand" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><title>Expand</title><polyline points="7 13 12 18 17 13"></polyline><polyline points="7 6 12 11 17 6"></polyline></svg>
+      <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" class="doks doks-collapse" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><title>Collapse</title><polyline points="17 11 12 6 7 11"></polyline><polyline points="17 18 12 13 7 18"></polyline></svg>
+    </span>
+  </button>
+  <div class="collapse" id="onThisPage">
+    <div class="card card-body mt-3 py-1">
+      <div class="page-links">
+        <nav id="TableOfContents">
+  <ul>
+    <li><a href="#apa-itu-mysql">Apa itu MySQL</a></li>
+    <li><a href="#sejarah-mysql">Sejarah MySQL</a></li>
+    <li><a href="#keunggulan-mysql">Keunggulan MySQL</a></li>
+    <li><a href="#perbedaan-mysql-dengan-database-lain">Perbedaan MySQL dengan Database lain</a></li>
+  </ul>
+</nav>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="page-links d-none d-xl-block">
+  <h3>Daftar isi</h3>
+  <nav id="TableOfContents">
+  <ul>
+    <li><a href="#apa-itu-mysql">Apa itu MySQL</a></li>
+    <li><a href="#sejarah-mysql">Sejarah MySQL</a></li>
+    <li><a href="#keunggulan-mysql">Keunggulan MySQL</a></li>
+    <li><a href="#perbedaan-mysql-dengan-database-lain">Perbedaan MySQL dengan Database lain</a></li>
+  </ul>
+</nav>
+  </div>
+
+			</nav>
+			<h2 id="apa-itu-mysql">Apa itu MySQL <a href="#apa-itu-mysql" class="anchor" aria-hidden="true">#</a></h2>
+<p>MySQL adalah sebuah sistem manajemen basis data (database management system/DBMS) relasional yang open source atau gratis dan sangat populer. MySQL dikembangkan oleh perusahaan swasta asal Swedia, MySQL AB, yang kemudian diakuisisi oleh perusahaan raksasa teknologi Oracle pada tahun 2008.</p>
+<p>MySQL didesain untuk memudahkan pengguna dalam mengakses, mengelola, dan memanipulasi data dalam sebuah basis data secara efisien dan aman. MySQL menggunakan bahasa SQL (Structured Query Language) untuk mengelola dan mengakses data dalam basis data. Bahasa SQL digunakan untuk membuat, memodifikasi, dan menghapus data dalam basis data MySQL.</p>
+<p>MySQL biasanya digunakan untuk membangun aplikasi web dan merupakan komponen penting dalam banyak sistem manajemen konten (content management system/CMS) seperti WordPress dan Drupal. MySQL juga mendukung beberapa fitur seperti transaksi ACID (atomicity, consistency, isolation, dan durability) yang memungkinkan pengguna untuk melakukan transaksi yang kompleks dalam basis data.</p>
+<p>MySQL memiliki keunggulan dalam hal keamanan, performa, skalabilitas, dan ketersediaan, sehingga membuatnya menjadi pilihan yang tepat untuk pengembangan aplikasi web dan enterprise. Selain itu, MySQL juga kompatibel dengan berbagai sistem operasi seperti Windows, macOS, Linux, dan BSD, sehingga membuatnya mudah digunakan oleh banyak pengembang aplikasi.</p>
+<h2 id="sejarah-mysql">Sejarah MySQL <a href="#sejarah-mysql" class="anchor" aria-hidden="true">#</a></h2>
+<p>MySQL didirikan pada tahun 1995 oleh tiga pengembang Swedia, yaitu Michael Widenius, David Axmark, dan Allan Larsson. Mereka awalnya mengembangkan MySQL sebagai proyek open source yang diberi nama &ldquo;Mysql&rdquo; (dengan huruf &ldquo;Y&rdquo; kecil), sebuah database management system untuk keperluan internal perusahaan tempat mereka bekerja.</p>
+<p>Pada tahun 1996, MySQL dirilis sebagai perangkat lunak open source untuk umum dengan nama &ldquo;MySQL&rdquo; (dengan huruf &ldquo;Y&rdquo; besar). MySQL menjadi populer di kalangan pengembang web, terutama setelah dibundel dengan bahasa pemrograman skrip server-side PHP pada tahun 2000. Pada tahun 2001, MySQL AB didirikan sebagai perusahaan swasta untuk mengembangkan dan memasarkan produk MySQL secara komersial.</p>
+<p>MySQL terus mengalami perkembangan dan inovasi, termasuk fitur dan teknologi baru seperti transaksi, indexing, clustering, dan replicasi. MySQL juga mendukung bahasa pemrograman seperti Java, Perl, Python, Ruby, dan C++, serta memiliki konektivitas dengan berbagai jenis platform dan aplikasi.</p>
+<p>Pada tahun 2008, Oracle mengakuisisi MySQL AB dengan nilai transaksi sekitar 1 miliar dolar AS. Setelah diakuisisi, MySQL tetap menjadi perangkat lunak open source, namun sejumlah pengembang dan komunitas teknologi menyatakan kekhawatiran atas masa depan MySQL dalam tangan Oracle.</p>
+<p>Pengembangan MySQL terus berlanjut dan sejumlah fork atau cabang pengembangan MySQL seperti MariaDB dan Percona Server juga tersedia sebagai alternatif bagi pengguna yang membutuhkan fitur dan kemampuan lebih dari MySQL. Hingga saat ini, MySQL masih digunakan oleh jutaan pengguna dan menjadi salah satu sistem manajemen basis data paling populer dan andal di dunia.</p>
+<h2 id="keunggulan-mysql">Keunggulan MySQL <a href="#keunggulan-mysql" class="anchor" aria-hidden="true">#</a></h2>
+<p>Berikut adalah beberapa keunggulan MySQL:</p>
+<ul>
+<li>
+<p>Open source: MySQL adalah perangkat lunak open source yang dapat diunduh dan digunakan secara gratis. Ini memungkinkan banyak pengembang dan organisasi untuk menggunakannya tanpa harus membayar biaya lisensi yang mahal.</p>
+</li>
+<li>
+<p>Kinerja yang baik: MySQL terkenal karena kinerjanya yang cepat dan efisien. Dalam banyak tes benchmark, MySQL seringkali menduduki peringkat atas dalam hal kinerja database.</p>
+</li>
+<li>
+<p>Skalabilitas: MySQL dapat digunakan untuk mengelola basis data yang sangat besar dan kompleks dengan jumlah transaksi yang tinggi. MySQL juga mendukung replikasi dan clustering, yang memungkinkan pengguna untuk membuat database yang lebih besar dan lebih andal.</p>
+</li>
+<li>
+<p>Ketersediaan: MySQL tersedia untuk berbagai jenis sistem operasi seperti Windows, Linux, macOS, dan BSD, sehingga membuatnya mudah digunakan oleh banyak pengembang aplikasi. MySQL juga memiliki dukungan yang baik dari komunitas pengembang dan tersedia dalam berbagai bahasa.</p>
+</li>
+<li>
+<p>Keamanan: MySQL menyediakan fitur keamanan yang kuat seperti enkripsi SSL dan autentikasi pengguna yang aman. MySQL juga memungkinkan pengguna untuk menerapkan aturan akses yang ketat dan kontrol akses pengguna.</p>
+</li>
+<li>
+<p>Dukungan untuk bahasa SQL: MySQL menggunakan bahasa SQL (Structured Query Language) yang populer dan mudah dipelajari. Bahasa SQL dapat digunakan untuk memanipulasi data dalam database, termasuk membuat, mengedit, dan menghapus data.</p>
+</li>
+<li>
+<p>Integrasi dengan berbagai aplikasi: MySQL kompatibel dengan banyak bahasa pemrograman dan teknologi, seperti PHP, Java, Perl, Python, dan Ruby, serta mendukung berbagai jenis aplikasi dan platform, seperti WordPress, Drupal, dan Joomla.</p>
+</li>
+</ul>
+<p>Secara keseluruhan, MySQL merupakan sebuah sistem manajemen basis data yang handal, cepat, dan fleksibel dengan dukungan yang baik dari komunitas pengembang. Karena itu, MySQL menjadi pilihan yang populer dan andal untuk pengembangan aplikasi web dan enterprise.</p>
+<h2 id="perbedaan-mysql-dengan-database-lain">Perbedaan MySQL dengan Database lain <a href="#perbedaan-mysql-dengan-database-lain" class="anchor" aria-hidden="true">#</a></h2>
+<p>Berikut adalah beberapa perbedaan antara MySQL dengan database lain:</p>
+<ul>
+<li>
+<p>Open source: MySQL adalah salah satu dari beberapa database open source yang tersedia secara gratis dan dapat diunduh oleh siapa saja. Hal ini berbeda dengan beberapa database lain seperti Oracle dan Microsoft SQL Server yang memerlukan lisensi berbayar.</p>
+</li>
+<li>
+<p>Skalabilitas: MySQL dapat digunakan untuk mengelola basis data yang sangat besar dan kompleks dengan jumlah transaksi yang tinggi. MySQL juga mendukung replikasi dan clustering, yang memungkinkan pengguna untuk membuat database yang lebih besar dan lebih andal.</p>
+</li>
+<li>
+<p>Ketersediaan: MySQL tersedia untuk berbagai jenis sistem operasi seperti Windows, Linux, macOS, dan BSD, sehingga membuatnya mudah digunakan oleh banyak pengembang aplikasi. MySQL juga memiliki dukungan yang baik dari komunitas pengembang dan tersedia dalam berbagai bahasa.</p>
+</li>
+<li>
+<p>Keamanan: MySQL menyediakan fitur keamanan yang kuat seperti enkripsi SSL dan autentikasi pengguna yang aman. MySQL juga memungkinkan pengguna untuk menerapkan aturan akses yang ketat dan kontrol akses pengguna.</p>
+</li>
+<li>
+<p>Bahasa SQL: MySQL menggunakan bahasa SQL (Structured Query Language) yang populer dan mudah dipelajari. Bahasa SQL dapat digunakan untuk memanipulasi data dalam database, termasuk membuat, mengedit, dan menghapus data.</p>
+</li>
+<li>
+<p>Integrasi dengan aplikasi: MySQL kompatibel dengan banyak bahasa pemrograman dan teknologi, seperti PHP, Java, Perl, Python, dan Ruby, serta mendukung berbagai jenis aplikasi dan platform, seperti WordPress, Drupal, dan Joomla.</p>
+</li>
+</ul>
+<p>Beberapa database lain seperti Oracle dan Microsoft SQL Server memiliki beberapa keunggulan dan fitur yang berbeda dibandingkan dengan MySQL. Oleh karena itu, pemilihan database terbaik tergantung pada kebutuhan dan kebutuhan spesifik pengguna.</p>
+
+			<div class="page-footer-meta d-flex flex-column flex-md-row justify-content-between">
+				</div>
+			<div class="docs-navigation d-flex justify-content-between">
+	
+	</div>
+
+			
+		</main>
+	</div>
 
       </div>
     </div>
     
-<section class="section section-sm">
-  <div class="container">
-    <div class="row justify-content-center text-center mt-lg-3">
-
-    </div>
-  </div>
-</section>
-
     
     <footer class="footer text-muted">
   <div class="container-xxl">
@@ -528,7 +484,7 @@ Jika Anda menginginkan dokumentasi yang lebih lengkap dari bahasa pemrograman py
 <script src="/js/bootstrap.min.5cdeb20ef814d367b4d5429ada9d342419eb34734de4713a71e5706485eaa75fa8d5d760c7a7f7ef20cb5494737eb8811729431813f22744c177384758c19081.js" integrity="sha512-XN6yDvgU02e01UKa2p00JBnrNHNN5HE6ceVwZIXqp1&#43;o1ddgx6f37yDLVJRzfriBFylDGBPyJ0TBdzhHWMGQgQ==" crossorigin="anonymous" defer></script>
   <script src="/js/highlight.min.6e0bbb1ba7e7c09c5287a998de4147da3f56f6fed3dc91b747789519a1de6486b086542ebb2ed60527cfc4c32b8ce175a08c257392e98d7bb3f09661f2bd5666.js" integrity="sha512-bgu7G6fnwJxSh6mY3kFH2j9W9v7T3JG3R3iVGaHeZIawhlQuuy7WBSfPxMMrjOF1oIwlc5LpjXuz8JZh8r1WZg==" crossorigin="anonymous" defer></script>
   <script src="/main.min.124171d9dd7beef16c3e35cd8394ad0c5ca7699608f699d747030ef0b0c3e4c2782454dd406f78e14ef7336f4a15de8676a808261d92f9b1858f1ec3ff720269.js" integrity="sha512-EkFx2d177vFsPjXNg5StDFynaZYI9pnXRwMO8LDD5MJ4JFTdQG944U73M29KFd6GdqgIJh2S&#43;bGFjx7D/3ICaQ==" crossorigin="anonymous" defer></script>
-  <script src="https://kaban.my.id/index.min.c9f69cc770828e72822cd23c346b40382e17e71607cacd3342477e58ccc8633963920a011fe3d9ffdd7c96c01c412bd6d70b76aea56314968be07cff88f4ef29.js" integrity="sha512-yfacx3CCjnKCLNI8NGtAOC4X5xYHys0zQkd&#43;WMzIYzljkgoBH&#43;PZ/918lsAcQSvW1wt2rqVjFJaL4Hz/iPTvKQ==" crossorigin="anonymous" defer></script>
+  <script src="https://kaban.my.id/index.min.696405e80be5e974fabccd474e1b5899ab67b8cb564127faae9419844716c765b43a4121f6d057e8f7484f481b1404e0f8d89bd37cc8169322dcf272baa9010c.js" integrity="sha512-aWQF6Avl6XT6vM1HThtYmatnuMtWQSf6rpQZhEcWx2W0OkEh9tBX6PdIT0gbFATg&#43;Nib03zIFpMi3PJyuqkBDA==" crossorigin="anonymous" defer></script>
   
     <div class="d-flex fixed-bottom pb-4 pb-lg-5 pe-4 pe-lg-5">
       <a id="toTop" href="#" class="btn btn-outline-primary rounded-circle ms-auto p-2"><span class="visually-hidden">Top</span><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-chevron-up"><polyline points="18 15 12 9 6 15"></polyline></svg></a>

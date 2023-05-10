@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Tutorial Javascript on </title>
+    <link>https://kaban.my.id/javascript/tutorial/</link>
+    <description>Recent content in Tutorial Javascript on </description>
+    <generator>Hugo -- gohugo.io</generator>
+    <lastBuildDate>Tue, 06 Oct 2020 08:49:15 +0000</lastBuildDate><atom:link href="https://kaban.my.id/javascript/tutorial/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Pengenalan Javascript</title>
+      <link>https://kaban.my.id/javascript/tutorial/pengenalan/</link>
+      <pubDate>Mon, 06 Dec 2021 08:49:31 +0000</pubDate>
+      
+      <guid>https://kaban.my.id/javascript/tutorial/pengenalan/</guid>
+      <description>Javascript # JavaScript adalah bahasa pemrograman yang digunakan untuk mengembangkan aplikasi web yang interaktif dan dinamis. Bahasa ini dapat dijalankan di sisi klien atau sisi server, namun biasanya digunakan untuk membuat interaksi antarmuka pengguna pada sisi klien.
+JavaScript pertama kali diperkenalkan pada tahun 1995 oleh Brendan Eich di Netscape, dan sejak saat itu telah menjadi bahasa pemrograman yang sangat populer dan umum digunakan di seluruh dunia.
+JavaScript dapat digunakan untuk membuat efek animasi, validasi form, dan validasi input data pada sisi klien, serta untuk mengambil dan memanipulasi data pada sisi server dengan menggunakan teknologi seperti Node.</description>
+    </item>
+    
+  </channel>
+</rss>

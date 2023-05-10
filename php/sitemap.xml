@@ -7,4 +7,10 @@
       <changefreq>weekly</changefreq>
       <priority>0.5</priority>
     </url>
-    </urlset>
+    <url>
+        <loc>https://kaban.my.id/php/tutorial/pengenalan/</loc>
+        <lastmod>2022-11-06T08:49:31+00:00</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.5</priority>
+      </url>
+      </urlset>
