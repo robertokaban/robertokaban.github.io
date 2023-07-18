@@ -1,1202 +1,1671 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<urlset
-      xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
-      xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-      xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9
-            http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd">
-<!-- created with Free Online Sitemap Generator www.xml-sitemaps.com -->
-
-
-<url>
-  <loc>https://kaban.my.id/</loc>
-  <lastmod>2023-07-18T05:04:22+00:00</lastmod>
-  <priority>1.00</priority>
-</url>
-<url>
-  <loc>https://kaban.my.id/about/</loc>
-  <lastmod>2023-07-18T05:04:22+00:00</lastmod>
-  <priority>0.80</priority>
-</url>
-<url>
-  <loc>https://kaban.my.id/contact/</loc>
-  <lastmod>2023-07-18T05:04:22+00:00</lastmod>
-  <priority>0.80</priority>
-</url>
-<url>
-  <loc>https://kaban.my.id/artikel/</loc>
-  <lastmod>2023-07-18T05:04:22+00:00</lastmod>
-  <priority>0.80</priority>
-</url>
-<url>
-  <loc>https://kaban.my.id/coretanku/</loc>
-  <lastmod>2023-07-18T05:04:22+00:00</lastmod>
-  <priority>0.80</priority>
-</url>
-<url>
-  <loc>https://kaban.my.id/html/</loc>
-  <lastmod>2023-07-18T05:04:22+00:00</lastmod>
-  <priority>0.80</priority>
-</url>
-<url>
-  <loc>https://kaban.my.id/mysql/</loc>
-  <lastmod>2023-07-18T05:04:22+00:00</lastmod>
-  <priority>0.80</priority>
-</url>
-<url>
-  <loc>https://kaban.my.id/php/</loc>
-  <lastmod>2023-07-18T05:04:22+00:00</lastmod>
-  <priority>0.80</priority>
-</url>
-<url>
-  <loc>https://kaban.my.id/javascript/</loc>
-  <lastmod>2023-07-18T05:04:22+00:00</lastmod>
-  <priority>0.80</priority>
-</url>
-<url>
-  <loc>https://kaban.my.id/vbnet/</loc>
-  <lastmod>2023-07-18T05:04:22+00:00</lastmod>
-  <priority>0.80</priority>
-</url>
-<url>
-  <loc>https://kaban.my.id/css/</loc>
-  <lastmod>2023-07-18T05:04:22+00:00</lastmod>
-  <priority>0.80</priority>
-</url>
-<url>
-  <loc>https://kaban.my.id/python/</loc>
-  <lastmod>2023-07-18T05:04:22+00:00</lastmod>
-  <priority>0.80</priority>
-</url>
-<url>
-  <loc>https://kaban.my.id/download/</loc>
-  <lastmod>2023-07-18T05:04:22+00:00</lastmod>
-  <priority>0.64</priority>
-</url>
-<url>
-  <loc>https://kaban.my.id/privacy-policy/</loc>
-  <lastmod>2023-07-18T05:04:22+00:00</lastmod>
-  <priority>0.64</priority>
-</url>
-<url>
-  <loc>https://kaban.my.id/mengenal-composer-dependency-manager-php/</loc>
-  <lastmod>2023-07-18T05:04:22+00:00</lastmod>
-  <priority>0.64</priority>
-</url>
-<url>
-  <loc>https://kaban.my.id/categories/tools/</loc>
-  <lastmod>2023-07-18T05:04:22+00:00</lastmod>
-  <priority>0.64</priority>
-</url>
-<url>
-  <loc>https://kaban.my.id/categories/pemrograman/</loc>
-  <lastmod>2023-07-18T05:04:22+00:00</lastmod>
-  <priority>0.64</priority>
-</url>
-<url>
-  <loc>https://kaban.my.id/contributors/roberto-kaban/</loc>
-  <lastmod>2023-07-18T05:04:22+00:00</lastmod>
-  <priority>0.64</priority>
-</url>
-<url>
-  <loc>https://kaban.my.id/filsafat-sebagai-ibu-kandung-ilmu-pengetahuan/</loc>
-  <lastmod>2023-07-18T05:04:22+00:00</lastmod>
-  <priority>0.64</priority>
-</url>
-<url>
-  <loc>https://kaban.my.id/categories/materi-kuliah/</loc>
-  <lastmod>2023-07-18T05:04:22+00:00</lastmod>
-  <priority>0.64</priority>
-</url>
-<url>
-  <loc>https://kaban.my.id/categories/filsafat-ilmu/</loc>
-  <lastmod>2023-07-18T05:04:22+00:00</lastmod>
-  <priority>0.64</priority>
-</url>
-<url>
-  <loc>https://kaban.my.id/filsafat-philosophia-cinta-pada-kebijaksanaan/</loc>
-  <lastmod>2023-07-18T05:04:22+00:00</lastmod>
-  <priority>0.64</priority>
-</url>
-<url>
-  <loc>https://kaban.my.id/filsafat-ilmu-mahasiswa-adalah-pemikir-dan-ilmuwan/</loc>
-  <lastmod>2023-07-18T05:04:22+00:00</lastmod>
-  <priority>0.64</priority>
-</url>
-<url>
-  <loc>https://kaban.my.id/perintah-dasar-linux/</loc>
-  <lastmod>2023-07-18T05:04:22+00:00</lastmod>
-  <priority>0.64</priority>
-</url>
-<url>
-  <loc>https://kaban.my.id/categories/networking/</loc>
-  <lastmod>2023-07-18T05:04:22+00:00</lastmod>
-  <priority>0.64</priority>
-</url>
-<url>
-  <loc>https://kaban.my.id/mengenal-cli-command-line-interface/</loc>
-  <lastmod>2023-07-18T05:04:22+00:00</lastmod>
-  <priority>0.64</priority>
-</url>
-<url>
-  <loc>https://kaban.my.id/10-pertanyaan-mendasar-tentang-blockchain-yang-anda-harus-tahu-jawabannya/</loc>
-  <lastmod>2023-07-18T05:04:22+00:00</lastmod>
-  <priority>0.64</priority>
-</url>
-<url>
-  <loc>https://kaban.my.id/categories/teknologi/</loc>
-  <lastmod>2023-07-18T05:04:22+00:00</lastmod>
-  <priority>0.64</priority>
-</url>
-<url>
-  <loc>https://kaban.my.id/categories/blockchain/</loc>
-  <lastmod>2023-07-18T05:04:22+00:00</lastmod>
-  <priority>0.64</priority>
-</url>
-<url>
-  <loc>https://kaban.my.id/blockchain-solusi-resiko-keterlibatan-pihak-ketiga-yang-tidak-bertanggung-jawab/</loc>
-  <lastmod>2023-07-18T05:04:22+00:00</lastmod>
-  <priority>0.64</priority>
-</url>
-<url>
-  <loc>https://kaban.my.id/categories/bitcoin/</loc>
-  <lastmod>2023-07-18T05:04:22+00:00</lastmod>
-  <priority>0.64</priority>
-</url>
-<url>
-  <loc>https://kaban.my.id/categories/desentralisasi/</loc>
-  <lastmod>2023-07-18T05:04:22+00:00</lastmod>
-  <priority>0.64</priority>
-</url>
-<url>
-  <loc>https://kaban.my.id/artikel/page/2/</loc>
-  <lastmod>2023-07-18T05:04:22+00:00</lastmod>
-  <priority>0.64</priority>
-</url>
-<url>
-  <loc>https://kaban.my.id/coretanku/pesta-tahunan-2023/</loc>
-  <lastmod>2023-07-18T05:04:22+00:00</lastmod>
-  <priority>0.64</priority>
-</url>
-<url>
-  <loc>https://kaban.my.id/categories/blog/</loc>
-  <lastmod>2023-07-18T05:04:22+00:00</lastmod>
-  <priority>0.64</priority>
-</url>
-<url>
-  <loc>https://kaban.my.id/coretanku/berpartisipasi-dalam-menyukseskan-ujian-cat-ppk-kpud-karo/</loc>
-  <lastmod>2023-07-18T05:04:22+00:00</lastmod>
-  <priority>0.64</priority>
-</url>
-<url>
-  <loc>https://kaban.my.id/coretanku/manusia-yang-tahu-bukan-tempe/</loc>
-  <lastmod>2023-07-18T05:04:22+00:00</lastmod>
-  <priority>0.64</priority>
-</url>
-<url>
-  <loc>https://kaban.my.id/categories/ceritaku/</loc>
-  <lastmod>2023-07-18T05:04:22+00:00</lastmod>
-  <priority>0.64</priority>
-</url>
-<url>
-  <loc>https://kaban.my.id/coretanku/pesta-bunga-dan-buah-di-berastagi-kabupaten-karo/</loc>
-  <lastmod>2023-07-18T05:04:22+00:00</lastmod>
-  <priority>0.64</priority>
-</url>
-<url>
-  <loc>https://kaban.my.id/categories/karo/</loc>
-  <lastmod>2023-07-18T05:04:22+00:00</lastmod>
-  <priority>0.64</priority>
-</url>
-<url>
-  <loc>https://kaban.my.id/categories/tanah-karo/</loc>
-  <lastmod>2023-07-18T05:04:22+00:00</lastmod>
-  <priority>0.64</priority>
-</url>
-<url>
-  <loc>https://kaban.my.id/coretanku/hello-world-buka-blog-lagi/</loc>
-  <lastmod>2023-07-18T05:04:22+00:00</lastmod>
-  <priority>0.64</priority>
-</url>
-<url>
-  <loc>https://kaban.my.id/coretanku/pernikahan-dan-pesta-adat-aro-roberto-kaban-dan-shella-sari-keliat-2021/</loc>
-  <lastmod>2023-07-18T05:04:22+00:00</lastmod>
-  <priority>0.64</priority>
-</url>
-<url>
-  <loc>https://kaban.my.id/coretanku/marga-suku-karo-beserta-kampung-asal/</loc>
-  <lastmod>2023-07-18T05:04:22+00:00</lastmod>
-  <priority>0.64</priority>
-</url>
-<url>
-  <loc>https://kaban.my.id/coretanku/pengalaman-terbang-dengan-pesawat-capung/</loc>
-  <lastmod>2023-07-18T05:04:22+00:00</lastmod>
-  <priority>0.64</priority>
-</url>
-<url>
-  <loc>https://kaban.my.id/html/tutorial/attributes/</loc>
-  <lastmod>2023-07-18T05:04:22+00:00</lastmod>
-  <priority>0.64</priority>
-</url>
-<url>
-  <loc>https://kaban.my.id/html/tutorial/audio/</loc>
-  <lastmod>2023-07-18T05:04:22+00:00</lastmod>
-  <priority>0.64</priority>
-</url>
-<url>
-  <loc>https://kaban.my.id/html/tutorial/block-inline/</loc>
-  <lastmod>2023-07-18T05:04:22+00:00</lastmod>
-  <priority>0.64</priority>
-</url>
-<url>
-  <loc>https://kaban.my.id/html/tutorial/button/</loc>
-  <lastmod>2023-07-18T05:04:22+00:00</lastmod>
-  <priority>0.64</priority>
-</url>
-<url>
-  <loc>https://kaban.my.id/html/tutorial/canvas/</loc>
-  <lastmod>2023-07-18T05:04:22+00:00</lastmod>
-  <priority>0.64</priority>
-</url>
-<url>
-  <loc>https://kaban.my.id/html/tutorial/classes/</loc>
-  <lastmod>2023-07-18T05:04:22+00:00</lastmod>
-  <priority>0.64</priority>
-</url>
-<url>
-  <loc>https://kaban.my.id/html/tutorial/color/</loc>
-  <lastmod>2023-07-18T05:04:22+00:00</lastmod>
-  <priority>0.64</priority>
-</url>
-<url>
-  <loc>https://kaban.my.id/html/tutorial/computer-code/</loc>
-  <lastmod>2023-07-18T05:04:22+00:00</lastmod>
-  <priority>0.64</priority>
-</url>
-<url>
-  <loc>https://kaban.my.id/html/tutorial/css/</loc>
-  <lastmod>2023-07-18T05:04:22+00:00</lastmod>
-  <priority>0.64</priority>
-</url>
-<url>
-  <loc>https://kaban.my.id/html/tutorial/data/</loc>
-  <lastmod>2023-07-18T05:04:22+00:00</lastmod>
-  <priority>0.64</priority>
-</url>
-<url>
-  <loc>https://kaban.my.id/html/tutorial/dokumen-html/</loc>
-  <lastmod>2023-07-18T05:04:22+00:00</lastmod>
-  <priority>0.64</priority>
-</url>
-<url>
-  <loc>https://kaban.my.id/html/tutorial/editor/</loc>
-  <lastmod>2023-07-18T05:04:22+00:00</lastmod>
-  <priority>0.64</priority>
-</url>
-<url>
-  <loc>https://kaban.my.id/html/tutorial/elements/</loc>
-  <lastmod>2023-07-18T05:04:22+00:00</lastmod>
-  <priority>0.64</priority>
-</url>
-<url>
-  <loc>https://kaban.my.id/html/tutorial/entity/</loc>
-  <lastmod>2023-07-18T05:04:22+00:00</lastmod>
-  <priority>0.64</priority>
-</url>
-<url>
-  <loc>https://kaban.my.id/html/tutorial/file-path/</loc>
-  <lastmod>2023-07-18T05:04:22+00:00</lastmod>
-  <priority>0.64</priority>
-</url>
-<url>
-  <loc>https://kaban.my.id/html/tutorial/form/</loc>
-  <lastmod>2023-07-18T05:04:22+00:00</lastmod>
-  <priority>0.64</priority>
-</url>
-<url>
-  <loc>https://kaban.my.id/html/tutorial/head/</loc>
-  <lastmod>2023-07-18T05:04:22+00:00</lastmod>
-  <priority>0.64</priority>
-</url>
-<url>
-  <loc>https://kaban.my.id/html/tutorial/heading/</loc>
-  <lastmod>2023-07-18T05:04:22+00:00</lastmod>
-  <priority>0.64</priority>
-</url>
-<url>
-  <loc>https://kaban.my.id/html/tutorial/html-id/</loc>
-  <lastmod>2023-07-18T05:04:22+00:00</lastmod>
-  <priority>0.64</priority>
-</url>
-<url>
-  <loc>https://kaban.my.id/html/tutorial/hyperlink/</loc>
-  <lastmod>2023-07-18T05:04:22+00:00</lastmod>
-  <priority>0.64</priority>
-</url>
-<url>
-  <loc>https://kaban.my.id/html/tutorial/iframe/</loc>
-  <lastmod>2023-07-18T05:04:22+00:00</lastmod>
-  <priority>0.64</priority>
-</url>
-<url>
-  <loc>https://kaban.my.id/html/tutorial/images/</loc>
-  <lastmod>2023-07-18T05:04:22+00:00</lastmod>
-  <priority>0.64</priority>
-</url>
-<url>
-  <loc>https://kaban.my.id/html/tutorial/input/</loc>
-  <lastmod>2023-07-18T05:04:22+00:00</lastmod>
-  <priority>0.64</priority>
-</url>
-<url>
-  <loc>https://kaban.my.id/html/tutorial/comments/</loc>
-  <lastmod>2023-07-18T05:04:22+00:00</lastmod>
-  <priority>0.64</priority>
-</url>
-<url>
-  <loc>https://kaban.my.id/html/tutorial/langcode/</loc>
-  <lastmod>2023-07-18T05:04:22+00:00</lastmod>
-  <priority>0.64</priority>
-</url>
-<url>
-  <loc>https://kaban.my.id/html/tutorial/link/</loc>
-  <lastmod>2023-07-18T05:04:22+00:00</lastmod>
-  <priority>0.64</priority>
-</url>
-<url>
-  <loc>https://kaban.my.id/html/tutorial/lists/</loc>
-  <lastmod>2023-07-18T05:04:22+00:00</lastmod>
-  <priority>0.64</priority>
-</url>
-<url>
-  <loc>https://kaban.my.id/html/tutorial/meta/</loc>
-  <lastmod>2023-07-18T05:04:22+00:00</lastmod>
-  <priority>0.64</priority>
-</url>
-<url>
-  <loc>https://kaban.my.id/html/tutorial/paragraph/</loc>
-  <lastmod>2023-07-18T05:04:22+00:00</lastmod>
-  <priority>0.64</priority>
-</url>
-<url>
-  <loc>https://kaban.my.id/html/tutorial/pengenalan/</loc>
-  <lastmod>2023-07-18T05:04:22+00:00</lastmod>
-  <priority>0.64</priority>
-</url>
-<url>
-  <loc>https://kaban.my.id/html/tutorial/picture/</loc>
-  <lastmod>2023-07-18T05:04:22+00:00</lastmod>
-  <priority>0.64</priority>
-</url>
-<url>
-  <loc>https://kaban.my.id/html/tutorial/quotation/</loc>
-  <lastmod>2023-07-18T05:04:22+00:00</lastmod>
-  <priority>0.64</priority>
-</url>
-<url>
-  <loc>https://kaban.my.id/html/tutorial/responsive/</loc>
-  <lastmod>2023-07-18T05:04:22+00:00</lastmod>
-  <priority>0.64</priority>
-</url>
-<url>
-  <loc>https://kaban.my.id/html/tutorial/script/</loc>
-  <lastmod>2023-07-18T05:04:22+00:00</lastmod>
-  <priority>0.64</priority>
-</url>
-<url>
-  <loc>https://kaban.my.id/html/tutorial/semantic/</loc>
-  <lastmod>2023-07-18T05:04:22+00:00</lastmod>
-  <priority>0.64</priority>
-</url>
-<url>
-  <loc>https://kaban.my.id/html/tutorial/style/</loc>
-  <lastmod>2023-07-18T05:04:22+00:00</lastmod>
-  <priority>0.64</priority>
-</url>
-<url>
-  <loc>https://kaban.my.id/html/tutorial/tables/</loc>
-  <lastmod>2023-07-18T05:04:22+00:00</lastmod>
-  <priority>0.64</priority>
-</url>
-<url>
-  <loc>https://kaban.my.id/html/tutorial/taglist/</loc>
-  <lastmod>2023-07-18T05:04:22+00:00</lastmod>
-  <priority>0.64</priority>
-</url>
-<url>
-  <loc>https://kaban.my.id/html/tutorial/textarea/</loc>
-  <lastmod>2023-07-18T05:04:22+00:00</lastmod>
-  <priority>0.64</priority>
-</url>
-<url>
-  <loc>https://kaban.my.id/html/tutorial/text-formatiing/</loc>
-  <lastmod>2023-07-18T05:04:22+00:00</lastmod>
-  <priority>0.64</priority>
-</url>
-<url>
-  <loc>https://kaban.my.id/html/tutorial/video/</loc>
-  <lastmod>2023-07-18T05:04:22+00:00</lastmod>
-  <priority>0.64</priority>
-</url>
-<url>
-  <loc>https://kaban.my.id/mysql/tutorial/pengenalan/</loc>
-  <lastmod>2023-07-18T05:04:22+00:00</lastmod>
-  <priority>0.64</priority>
-</url>
-<url>
-  <loc>https://kaban.my.id/php/tutorial/pengenalan/</loc>
-  <lastmod>2023-07-18T05:04:22+00:00</lastmod>
-  <priority>0.64</priority>
-</url>
-<url>
-  <loc>https://kaban.my.id/javascript/tutorial/pengenalan/</loc>
-  <lastmod>2023-07-18T05:04:22+00:00</lastmod>
-  <priority>0.64</priority>
-</url>
-<url>
-  <loc>https://kaban.my.id/vbnet/tutorial/pengenalan/</loc>
-  <lastmod>2023-07-18T05:04:22+00:00</lastmod>
-  <priority>0.64</priority>
-</url>
-<url>
-  <loc>https://kaban.my.id/css/tutorial/backgroud/</loc>
-  <lastmod>2023-07-18T05:04:22+00:00</lastmod>
-  <priority>0.64</priority>
-</url>
-<url>
-  <loc>https://kaban.my.id/css/tutorial/basic/</loc>
-  <lastmod>2023-07-18T05:04:22+00:00</lastmod>
-  <priority>0.64</priority>
-</url>
-<url>
-  <loc>https://kaban.my.id/css/tutorial/border-radius/</loc>
-  <lastmod>2023-07-18T05:04:22+00:00</lastmod>
-  <priority>0.64</priority>
-</url>
-<url>
-  <loc>https://kaban.my.id/css/tutorial/borders/</loc>
-  <lastmod>2023-07-18T05:04:22+00:00</lastmod>
-  <priority>0.64</priority>
-</url>
-<url>
-  <loc>https://kaban.my.id/css/tutorial/box-model/</loc>
-  <lastmod>2023-07-18T05:04:22+00:00</lastmod>
-  <priority>0.64</priority>
-</url>
-<url>
-  <loc>https://kaban.my.id/css/tutorial/box-sizing/</loc>
-  <lastmod>2023-07-18T05:04:22+00:00</lastmod>
-  <priority>0.64</priority>
-</url>
-<url>
-  <loc>https://kaban.my.id/css/tutorial/button/</loc>
-  <lastmod>2023-07-18T05:04:22+00:00</lastmod>
-  <priority>0.64</priority>
-</url>
-<url>
-  <loc>https://kaban.my.id/css/tutorial/colors/</loc>
-  <lastmod>2023-07-18T05:04:22+00:00</lastmod>
-  <priority>0.64</priority>
-</url>
-<url>
-  <loc>https://kaban.my.id/css/tutorial/combinators/</loc>
-  <lastmod>2023-07-18T05:04:22+00:00</lastmod>
-  <priority>0.64</priority>
-</url>
-<url>
-  <loc>https://kaban.my.id/css/tutorial/comments/</loc>
-  <lastmod>2023-07-18T05:04:22+00:00</lastmod>
-  <priority>0.64</priority>
-</url>
-<url>
-  <loc>https://kaban.my.id/css/tutorial/custom-property/</loc>
-  <lastmod>2023-07-18T05:04:22+00:00</lastmod>
-  <priority>0.64</priority>
-</url>
-<url>
-  <loc>https://kaban.my.id/css/tutorial/display/</loc>
-  <lastmod>2023-07-18T05:04:22+00:00</lastmod>
-  <priority>0.64</priority>
-</url>
-<url>
-  <loc>https://kaban.my.id/css/tutorial/flexbox/</loc>
-  <lastmod>2023-07-18T05:04:22+00:00</lastmod>
-  <priority>0.64</priority>
-</url>
-<url>
-  <loc>https://kaban.my.id/css/tutorial/float/</loc>
-  <lastmod>2023-07-18T05:04:22+00:00</lastmod>
-  <priority>0.64</priority>
-</url>
-<url>
-  <loc>https://kaban.my.id/css/tutorial/fonts/</loc>
-  <lastmod>2023-07-18T05:04:22+00:00</lastmod>
-  <priority>0.64</priority>
-</url>
-<url>
-  <loc>https://kaban.my.id/css/tutorial/gradient/</loc>
-  <lastmod>2023-07-18T05:04:22+00:00</lastmod>
-  <priority>0.64</priority>
-</url>
-<url>
-  <loc>https://kaban.my.id/css/tutorial/grid/</loc>
-  <lastmod>2023-07-18T05:04:22+00:00</lastmod>
-  <priority>0.64</priority>
-</url>
-<url>
-  <loc>https://kaban.my.id/css/tutorial/image-filter/</loc>
-  <lastmod>2023-07-18T05:04:22+00:00</lastmod>
-  <priority>0.64</priority>
-</url>
-<url>
-  <loc>https://kaban.my.id/css/tutorial/object-fit/</loc>
-  <lastmod>2023-07-18T05:04:22+00:00</lastmod>
-  <priority>0.64</priority>
-</url>
-<url>
-  <loc>https://kaban.my.id/css/tutorial/important/</loc>
-  <lastmod>2023-07-18T05:04:22+00:00</lastmod>
-  <priority>0.64</priority>
-</url>
-<url>
-  <loc>https://kaban.my.id/css/tutorial/margin/</loc>
-  <lastmod>2023-07-18T05:04:22+00:00</lastmod>
-  <priority>0.64</priority>
-</url>
-<url>
-  <loc>https://kaban.my.id/css/tutorial/math-function/</loc>
-  <lastmod>2023-07-18T05:04:22+00:00</lastmod>
-  <priority>0.64</priority>
-</url>
-<url>
-  <loc>https://kaban.my.id/css/tutorial/media-query/</loc>
-  <lastmod>2023-07-18T05:04:22+00:00</lastmod>
-  <priority>0.64</priority>
-</url>
-<url>
-  <loc>https://kaban.my.id/css/tutorial/opocity/</loc>
-  <lastmod>2023-07-18T05:04:22+00:00</lastmod>
-  <priority>0.64</priority>
-</url>
-<url>
-  <loc>https://kaban.my.id/css/tutorial/outline/</loc>
-  <lastmod>2023-07-18T05:04:22+00:00</lastmod>
-  <priority>0.64</priority>
-</url>
-<url>
-  <loc>https://kaban.my.id/css/tutorial/overflow/</loc>
-  <lastmod>2023-07-18T05:04:22+00:00</lastmod>
-  <priority>0.64</priority>
-</url>
-<url>
-  <loc>https://kaban.my.id/css/tutorial/padding/</loc>
-  <lastmod>2023-07-18T05:04:22+00:00</lastmod>
-  <priority>0.64</priority>
-</url>
-<url>
-  <loc>https://kaban.my.id/css/tutorial/pengenalan/</loc>
-  <lastmod>2023-07-18T05:04:22+00:00</lastmod>
-  <priority>0.64</priority>
-</url>
-<url>
-  <loc>https://kaban.my.id/css/tutorial/position/</loc>
-  <lastmod>2023-07-18T05:04:22+00:00</lastmod>
-  <priority>0.64</priority>
-</url>
-<url>
-  <loc>https://kaban.my.id/css/tutorial/pseudo-classes/</loc>
-  <lastmod>2023-07-18T05:04:22+00:00</lastmod>
-  <priority>0.64</priority>
-</url>
-<url>
-  <loc>https://kaban.my.id/css/tutorial/psesudo-elements/</loc>
-  <lastmod>2023-07-18T05:04:22+00:00</lastmod>
-  <priority>0.64</priority>
-</url>
-<url>
-  <loc>https://kaban.my.id/css/tutorial/selectors/</loc>
-  <lastmod>2023-07-18T05:04:22+00:00</lastmod>
-  <priority>0.64</priority>
-</url>
-<url>
-  <loc>https://kaban.my.id/css/tutorial/shadow/</loc>
-  <lastmod>2023-07-18T05:04:22+00:00</lastmod>
-  <priority>0.64</priority>
-</url>
-<url>
-  <loc>https://kaban.my.id/css/tutorial/sintax/</loc>
-  <lastmod>2023-07-18T05:04:22+00:00</lastmod>
-  <priority>0.64</priority>
-</url>
-<url>
-  <loc>https://kaban.my.id/css/tutorial/size/</loc>
-  <lastmod>2023-07-18T05:04:22+00:00</lastmod>
-  <priority>0.64</priority>
-</url>
-<url>
-  <loc>https://kaban.my.id/css/tutorial/text-alignment/</loc>
-  <lastmod>2023-07-18T05:04:22+00:00</lastmod>
-  <priority>0.64</priority>
-</url>
-<url>
-  <loc>https://kaban.my.id/css/tutorial/text-decoration/</loc>
-  <lastmod>2023-07-18T05:04:22+00:00</lastmod>
-  <priority>0.64</priority>
-</url>
-<url>
-  <loc>https://kaban.my.id/css/tutorial/text-transform/</loc>
-  <lastmod>2023-07-18T05:04:22+00:00</lastmod>
-  <priority>0.64</priority>
-</url>
-<url>
-  <loc>https://kaban.my.id/css/tutorial/ransform/</loc>
-  <lastmod>2023-07-18T05:04:22+00:00</lastmod>
-  <priority>0.64</priority>
-</url>
-<url>
-  <loc>https://kaban.my.id/css/tutorial/transitions/</loc>
-  <lastmod>2023-07-18T05:04:22+00:00</lastmod>
-  <priority>0.64</priority>
-</url>
-<url>
-  <loc>https://kaban.my.id/css/tutorial/units/</loc>
-  <lastmod>2023-07-18T05:04:22+00:00</lastmod>
-  <priority>0.64</priority>
-</url>
-<url>
-  <loc>https://kaban.my.id/css/tutorial/web-font/</loc>
-  <lastmod>2023-07-18T05:04:22+00:00</lastmod>
-  <priority>0.64</priority>
-</url>
-<url>
-  <loc>https://kaban.my.id/css/tutorial/word-spacing/</loc>
-  <lastmod>2023-07-18T05:04:22+00:00</lastmod>
-  <priority>0.64</priority>
-</url>
-<url>
-  <loc>https://kaban.my.id/css/tutorial/word-wrap/</loc>
-  <lastmod>2023-07-18T05:04:22+00:00</lastmod>
-  <priority>0.64</priority>
-</url>
-<url>
-  <loc>https://kaban.my.id/css/tutorial/writing-mode/</loc>
-  <lastmod>2023-07-18T05:04:22+00:00</lastmod>
-  <priority>0.64</priority>
-</url>
-<url>
-  <loc>https://kaban.my.id/css/tutorial/z-index/</loc>
-  <lastmod>2023-07-18T05:04:22+00:00</lastmod>
-  <priority>0.64</priority>
-</url>
-<url>
-  <loc>https://kaban.my.id/python/tutorial/akses-database/</loc>
-  <lastmod>2023-07-18T05:04:22+00:00</lastmod>
-  <priority>0.64</priority>
-</url>
-<url>
-  <loc>https://kaban.my.id/python/tutorial/aturan-penulisan/</loc>
-  <lastmod>2023-07-18T05:04:22+00:00</lastmod>
-  <priority>0.64</priority>
-</url>
-<url>
-  <loc>https://kaban.my.id/python/tutorial/dictionary/</loc>
-  <lastmod>2023-07-18T05:04:22+00:00</lastmod>
-  <priority>0.64</priority>
-</url>
-<url>
-  <loc>https://kaban.my.id/python/tutorial/exception/</loc>
-  <lastmod>2023-07-18T05:04:22+00:00</lastmod>
-  <priority>0.64</priority>
-</url>
-<url>
-  <loc>https://kaban.my.id/python/tutorial/fungsi/</loc>
-  <lastmod>2023-07-18T05:04:22+00:00</lastmod>
-  <priority>0.64</priority>
-</url>
-<url>
-  <loc>https://kaban.my.id/python/tutorial/input-output/</loc>
-  <lastmod>2023-07-18T05:04:22+00:00</lastmod>
-  <priority>0.64</priority>
-</url>
-<url>
-  <loc>https://kaban.my.id/python/tutorial/instalasi-python/</loc>
-  <lastmod>2023-07-18T05:04:22+00:00</lastmod>
-  <priority>0.64</priority>
-</url>
-<url>
-  <loc>https://kaban.my.id/python/tutorial/komentar-program/</loc>
-  <lastmod>2023-07-18T05:04:22+00:00</lastmod>
-  <priority>0.64</priority>
-</url>
-<url>
-  <loc>https://kaban.my.id/python/tutorial/kondisi/</loc>
-  <lastmod>2023-07-18T05:04:22+00:00</lastmod>
-  <priority>0.64</priority>
-</url>
-<url>
-  <loc>https://kaban.my.id/python/tutorial/list/</loc>
-  <lastmod>2023-07-18T05:04:22+00:00</lastmod>
-  <priority>0.64</priority>
-</url>
-<url>
-  <loc>https://kaban.my.id/python/tutorial/menjalankan-python/</loc>
-  <lastmod>2023-07-18T05:04:22+00:00</lastmod>
-  <priority>0.64</priority>
-</url>
-<url>
-  <loc>https://kaban.my.id/python/tutorial/modul/</loc>
-  <lastmod>2023-07-18T05:04:22+00:00</lastmod>
-  <priority>0.64</priority>
-</url>
-<url>
-  <loc>https://kaban.my.id/python/tutorial/netwotking/</loc>
-  <lastmod>2023-07-18T05:04:22+00:00</lastmod>
-  <priority>0.64</priority>
-</url>
-<url>
-  <loc>https://kaban.my.id/python/tutorial/number/</loc>
-  <lastmod>2023-07-18T05:04:22+00:00</lastmod>
-  <priority>0.64</priority>
-</url>
-<url>
-  <loc>https://kaban.my.id/python/tutorial/objek-class/</loc>
-  <lastmod>2023-07-18T05:04:22+00:00</lastmod>
-  <priority>0.64</priority>
-</url>
-<url>
-  <loc>https://kaban.my.id/python/tutorial/operator/</loc>
-  <lastmod>2023-07-18T05:04:22+00:00</lastmod>
-  <priority>0.64</priority>
-</url>
-<url>
-  <loc>https://kaban.my.id/python/tutorial/pengenalan-python/</loc>
-  <lastmod>2023-07-18T05:04:22+00:00</lastmod>
-  <priority>0.64</priority>
-</url>
-<url>
-  <loc>https://kaban.my.id/python/tutorial/perulangan/</loc>
-  <lastmod>2023-07-18T05:04:22+00:00</lastmod>
-  <priority>0.64</priority>
-</url>
-<url>
-  <loc>https://kaban.my.id/python/tutorial/string/</loc>
-  <lastmod>2023-07-18T05:04:22+00:00</lastmod>
-  <priority>0.64</priority>
-</url>
-<url>
-  <loc>https://kaban.my.id/python/tutorial/tanggal-waktu/</loc>
-  <lastmod>2023-07-18T05:04:22+00:00</lastmod>
-  <priority>0.64</priority>
-</url>
-<url>
-  <loc>https://kaban.my.id/python/tutorial/tipe-data/</loc>
-  <lastmod>2023-07-18T05:04:22+00:00</lastmod>
-  <priority>0.64</priority>
-</url>
-<url>
-  <loc>https://kaban.my.id/python/tutorial/tuple/</loc>
-  <lastmod>2023-07-18T05:04:22+00:00</lastmod>
-  <priority>0.64</priority>
-</url>
-<url>
-  <loc>https://kaban.my.id/python/tutorial/variabel/</loc>
-  <lastmod>2023-07-18T05:04:22+00:00</lastmod>
-  <priority>0.64</priority>
-</url>
-<url>
-  <loc>https://kaban.my.id/tags/composer/</loc>
-  <lastmod>2023-07-18T05:04:22+00:00</lastmod>
-  <priority>0.51</priority>
-</url>
-<url>
-  <loc>https://kaban.my.id/tags/dependency-manager-php/</loc>
-  <lastmod>2023-07-18T05:04:22+00:00</lastmod>
-  <priority>0.51</priority>
-</url>
-<url>
-  <loc>https://kaban.my.id/tags/composer-php/</loc>
-  <lastmod>2023-07-18T05:04:22+00:00</lastmod>
-  <priority>0.51</priority>
-</url>
-<url>
-  <loc>https://kaban.my.id/contributors/roberto-kaban/page/2/</loc>
-  <lastmod>2023-07-18T05:04:22+00:00</lastmod>
-  <priority>0.51</priority>
-</url>
-<url>
-  <loc>https://kaban.my.id/contributors/roberto-kaban/page/3/</loc>
-  <lastmod>2023-07-18T05:04:22+00:00</lastmod>
-  <priority>0.51</priority>
-</url>
-<url>
-  <loc>https://kaban.my.id/tags/filsafat-ilmu/</loc>
-  <lastmod>2023-07-18T05:04:22+00:00</lastmod>
-  <priority>0.51</priority>
-</url>
-<url>
-  <loc>https://kaban.my.id/tags/belajar-filsafat/</loc>
-  <lastmod>2023-07-18T05:04:22+00:00</lastmod>
-  <priority>0.51</priority>
-</url>
-<url>
-  <loc>https://kaban.my.id/tags/tugas-kuliah/</loc>
-  <lastmod>2023-07-18T05:04:22+00:00</lastmod>
-  <priority>0.51</priority>
-</url>
-<url>
-  <loc>https://kaban.my.id/tags/ibu-ilmu/</loc>
-  <lastmod>2023-07-18T05:04:22+00:00</lastmod>
-  <priority>0.51</priority>
-</url>
-<url>
-  <loc>https://kaban.my.id/tags/ibu-ilmu-pengetahuan/</loc>
-  <lastmod>2023-07-18T05:04:22+00:00</lastmod>
-  <priority>0.51</priority>
-</url>
-<url>
-  <loc>https://kaban.my.id/tags/filsafat/</loc>
-  <lastmod>2023-07-18T05:04:22+00:00</lastmod>
-  <priority>0.51</priority>
-</url>
-<url>
-  <loc>https://kaban.my.id/tags/materi-kuliah/</loc>
-  <lastmod>2023-07-18T05:04:22+00:00</lastmod>
-  <priority>0.51</priority>
-</url>
-<url>
-  <loc>https://kaban.my.id/tags/mahasiswa-pemikir/</loc>
-  <lastmod>2023-07-18T05:04:22+00:00</lastmod>
-  <priority>0.51</priority>
-</url>
-<url>
-  <loc>https://kaban.my.id/tags/mahasiswa-ilmuwan/</loc>
-  <lastmod>2023-07-18T05:04:22+00:00</lastmod>
-  <priority>0.51</priority>
-</url>
-<url>
-  <loc>https://kaban.my.id/tags/linux/</loc>
-  <lastmod>2023-07-18T05:04:22+00:00</lastmod>
-  <priority>0.51</priority>
-</url>
-<url>
-  <loc>https://kaban.my.id/tags/perintah-linux/</loc>
-  <lastmod>2023-07-18T05:04:22+00:00</lastmod>
-  <priority>0.51</priority>
-</url>
-<url>
-  <loc>https://kaban.my.id/tags/command-line/</loc>
-  <lastmod>2023-07-18T05:04:22+00:00</lastmod>
-  <priority>0.51</priority>
-</url>
-<url>
-  <loc>https://kaban.my.id/tags/command-line-linux/</loc>
-  <lastmod>2023-07-18T05:04:22+00:00</lastmod>
-  <priority>0.51</priority>
-</url>
-<url>
-  <loc>https://kaban.my.id/cybercrime-dan-ancaman-terhadap-keamanan-jaringan/</loc>
-  <lastmod>2023-07-18T05:04:22+00:00</lastmod>
-  <priority>0.51</priority>
-</url>
-<url>
-  <loc>https://kaban.my.id/alamat-ipv4-pengalamatan-internet-protocol-versi-4/</loc>
-  <lastmod>2023-07-18T05:04:22+00:00</lastmod>
-  <priority>0.51</priority>
-</url>
-<url>
-  <loc>https://kaban.my.id/tags/cli/</loc>
-  <lastmod>2023-07-18T05:04:22+00:00</lastmod>
-  <priority>0.51</priority>
-</url>
-<url>
-  <loc>https://kaban.my.id/tags/bitcoin/</loc>
-  <lastmod>2023-07-18T05:04:22+00:00</lastmod>
-  <priority>0.51</priority>
-</url>
-<url>
-  <loc>https://kaban.my.id/tags/blockchain/</loc>
-  <lastmod>2023-07-18T05:04:22+00:00</lastmod>
-  <priority>0.51</priority>
-</url>
-<url>
-  <loc>https://kaban.my.id/tags/apa-itu-bitcoin/</loc>
-  <lastmod>2023-07-18T05:04:22+00:00</lastmod>
-  <priority>0.51</priority>
-</url>
-<url>
-  <loc>https://kaban.my.id/mengenal-bitcoin-mata-uang-virtual/</loc>
-  <lastmod>2023-07-18T05:04:22+00:00</lastmod>
-  <priority>0.51</priority>
-</url>
-<url>
-  <loc>https://kaban.my.id/blockchains-penggebrak-desentralisasi-privasi/</loc>
-  <lastmod>2023-07-18T05:04:22+00:00</lastmod>
-  <priority>0.51</priority>
-</url>
-<url>
-  <loc>https://kaban.my.id/blockchain-dan-dunia-pendidikan/</loc>
-  <lastmod>2023-07-18T05:04:22+00:00</lastmod>
-  <priority>0.51</priority>
-</url>
-<url>
-  <loc>https://kaban.my.id/tags/desentralisasi-privasi/</loc>
-  <lastmod>2023-07-18T05:04:22+00:00</lastmod>
-  <priority>0.51</priority>
-</url>
-<url>
-  <loc>https://kaban.my.id/tags/keamanan-data/</loc>
-  <lastmod>2023-07-18T05:04:22+00:00</lastmod>
-  <priority>0.51</priority>
-</url>
-<url>
-  <loc>https://kaban.my.id/tags/ancaman-pihak-ketiga/</loc>
-  <lastmod>2023-07-18T05:04:22+00:00</lastmod>
-  <priority>0.51</priority>
-</url>
-<url>
-  <loc>https://kaban.my.id/pengertian-data-informasi-sistem-sistem-informasi-dan-sistem-informasi-manajemen/</loc>
-  <lastmod>2023-07-18T05:04:22+00:00</lastmod>
-  <priority>0.51</priority>
-</url>
-<url>
-  <loc>https://kaban.my.id/categories/sistem-informasi/</loc>
-  <lastmod>2023-07-18T05:04:22+00:00</lastmod>
-  <priority>0.51</priority>
-</url>
-<url>
-  <loc>https://kaban.my.id/categories/perancangan-sistem/</loc>
-  <lastmod>2023-07-18T05:04:22+00:00</lastmod>
-  <priority>0.51</priority>
-</url>
-<url>
-  <loc>https://kaban.my.id/keamanan-cloud-computing-manfaat-resiko-dan-kontrol/</loc>
-  <lastmod>2023-07-18T05:04:22+00:00</lastmod>
-  <priority>0.51</priority>
-</url>
-<url>
-  <loc>https://kaban.my.id/categories/cloud-computing/</loc>
-  <lastmod>2023-07-18T05:04:22+00:00</lastmod>
-  <priority>0.51</priority>
-</url>
-<url>
-  <loc>https://kaban.my.id/tags/pesta-tahunan/</loc>
-  <lastmod>2023-07-18T05:04:22+00:00</lastmod>
-  <priority>0.51</priority>
-</url>
-<url>
-  <loc>https://kaban.my.id/tags/kegiatanku/</loc>
-  <lastmod>2023-07-18T05:04:22+00:00</lastmod>
-  <priority>0.51</priority>
-</url>
-<url>
-  <loc>https://kaban.my.id/tags/jenis-manusia/</loc>
-  <lastmod>2023-07-18T05:04:22+00:00</lastmod>
-  <priority>0.51</priority>
-</url>
-<url>
-  <loc>https://kaban.my.id/tags/pengetahuan-manusia/</loc>
-  <lastmod>2023-07-18T05:04:22+00:00</lastmod>
-  <priority>0.51</priority>
-</url>
-<url>
-  <loc>https://kaban.my.id/tags/pesta-bunga/</loc>
-  <lastmod>2023-07-18T05:04:22+00:00</lastmod>
-  <priority>0.51</priority>
-</url>
-<url>
-  <loc>https://kaban.my.id/tags/pesta-buah/</loc>
-  <lastmod>2023-07-18T05:04:22+00:00</lastmod>
-  <priority>0.51</priority>
-</url>
-<url>
-  <loc>https://kaban.my.id/tags/pesta-bunga-buah-berastagi/</loc>
-  <lastmod>2023-07-18T05:04:22+00:00</lastmod>
-  <priority>0.51</priority>
-</url>
-<url>
-  <loc>https://kaban.my.id/tags/migrasi-blog/</loc>
-  <lastmod>2023-07-18T05:04:22+00:00</lastmod>
-  <priority>0.51</priority>
-</url>
-<url>
-  <loc>https://kaban.my.id/tags/core-blog/</loc>
-  <lastmod>2023-07-18T05:04:22+00:00</lastmod>
-  <priority>0.51</priority>
-</url>
-<url>
-  <loc>https://kaban.my.id/tags/pindah-ke-github/</loc>
-  <lastmod>2023-07-18T05:04:22+00:00</lastmod>
-  <priority>0.51</priority>
-</url>
-<url>
-  <loc>https://kaban.my.id/tags/pernikahanku/</loc>
-  <lastmod>2023-07-18T05:04:22+00:00</lastmod>
-  <priority>0.51</priority>
-</url>
-<url>
-  <loc>https://kaban.my.id/tags/pesta-karo/</loc>
-  <lastmod>2023-07-18T05:04:22+00:00</lastmod>
-  <priority>0.51</priority>
-</url>
-<url>
-  <loc>https://kaban.my.id/tags/adat-karo/</loc>
-  <lastmod>2023-07-18T05:04:22+00:00</lastmod>
-  <priority>0.51</priority>
-</url>
-<url>
-  <loc>https://kaban.my.id/tags/suku-karo/</loc>
-  <lastmod>2023-07-18T05:04:22+00:00</lastmod>
-  <priority>0.51</priority>
-</url>
-<url>
-  <loc>https://kaban.my.id/tags/marga-karo/</loc>
-  <lastmod>2023-07-18T05:04:22+00:00</lastmod>
-  <priority>0.51</priority>
-</url>
-<url>
-  <loc>https://kaban.my.id/tags/pesawat-mini/</loc>
-  <lastmod>2023-07-18T05:04:22+00:00</lastmod>
-  <priority>0.51</priority>
-</url>
-<url>
-  <loc>https://kaban.my.id/tags/meulaboh/</loc>
-  <lastmod>2023-07-18T05:04:22+00:00</lastmod>
-  <priority>0.51</priority>
-</url>
-<url>
-  <loc>https://kaban.my.id/tags/tembang-ke-meulaboh/</loc>
-  <lastmod>2023-07-18T05:04:22+00:00</lastmod>
-  <priority>0.51</priority>
-</url>
-<url>
-  <loc>https://kaban.my.id/html/tutorial/</loc>
-  <lastmod>2023-07-18T05:04:22+00:00</lastmod>
-  <priority>0.51</priority>
-</url>
-<url>
-  <loc>https://kaban.my.id/html/tutorial/picture/index.html</loc>
-  <lastmod>2023-07-18T05:04:22+00:00</lastmod>
-  <priority>0.51</priority>
-</url>
-<url>
-  <loc>https://kaban.my.id/mysql/tutorial/</loc>
-  <lastmod>2023-07-18T05:04:22+00:00</lastmod>
-  <priority>0.51</priority>
-</url>
-<url>
-  <loc>https://kaban.my.id/php/tutorial/</loc>
-  <lastmod>2023-07-18T05:04:22+00:00</lastmod>
-  <priority>0.51</priority>
-</url>
-<url>
-  <loc>https://kaban.my.id/javascript/tutorial/</loc>
-  <lastmod>2023-07-18T05:04:22+00:00</lastmod>
-  <priority>0.51</priority>
-</url>
-<url>
-  <loc>https://kaban.my.id/vbnet/tutorial/</loc>
-  <lastmod>2023-07-18T05:04:22+00:00</lastmod>
-  <priority>0.51</priority>
-</url>
-<url>
-  <loc>https://kaban.my.id/css/tutorial/</loc>
-  <lastmod>2023-07-18T05:04:22+00:00</lastmod>
-  <priority>0.51</priority>
-</url>
-<url>
-  <loc>https://kaban.my.id/python/tutorial/</loc>
-  <lastmod>2023-07-18T05:04:22+00:00</lastmod>
-  <priority>0.51</priority>
-</url>
-<url>
-  <loc>https://kaban.my.id/tags/keamanan-jaringan/</loc>
-  <lastmod>2023-07-18T05:04:22+00:00</lastmod>
-  <priority>0.41</priority>
-</url>
-<url>
-  <loc>https://kaban.my.id/tags/jaringan-internet/</loc>
-  <lastmod>2023-07-18T05:04:22+00:00</lastmod>
-  <priority>0.41</priority>
-</url>
-<url>
-  <loc>https://kaban.my.id/tags/cybercrime/</loc>
-  <lastmod>2023-07-18T05:04:22+00:00</lastmod>
-  <priority>0.41</priority>
-</url>
-<url>
-  <loc>https://kaban.my.id/tags/ancaman-jaringan/</loc>
-  <lastmod>2023-07-18T05:04:22+00:00</lastmod>
-  <priority>0.41</priority>
-</url>
-<url>
-  <loc>https://kaban.my.id/tags/ipv4/</loc>
-  <lastmod>2023-07-18T05:04:22+00:00</lastmod>
-  <priority>0.41</priority>
-</url>
-<url>
-  <loc>https://kaban.my.id/tags/internet-protocol/</loc>
-  <lastmod>2023-07-18T05:04:22+00:00</lastmod>
-  <priority>0.41</priority>
-</url>
-<url>
-  <loc>https://kaban.my.id/tags/ip-internet/</loc>
-  <lastmod>2023-07-18T05:04:22+00:00</lastmod>
-  <priority>0.41</priority>
-</url>
-<url>
-  <loc>https://kaban.my.id/tags/mengenal-bitcoin/</loc>
-  <lastmod>2023-07-18T05:04:22+00:00</lastmod>
-  <priority>0.41</priority>
-</url>
-<url>
-  <loc>https://kaban.my.id/tags/desentralisasi-pendidikan/</loc>
-  <lastmod>2023-07-18T05:04:22+00:00</lastmod>
-  <priority>0.41</priority>
-</url>
-<url>
-  <loc>https://kaban.my.id/tags/blockchain-dalam-pendidikan/</loc>
-  <lastmod>2023-07-18T05:04:22+00:00</lastmod>
-  <priority>0.41</priority>
-</url>
-<url>
-  <loc>https://kaban.my.id/tags/pengertian-data/</loc>
-  <lastmod>2023-07-18T05:04:22+00:00</lastmod>
-  <priority>0.41</priority>
-</url>
-<url>
-  <loc>https://kaban.my.id/tags/pengertian-sistem/</loc>
-  <lastmod>2023-07-18T05:04:22+00:00</lastmod>
-  <priority>0.41</priority>
-</url>
-<url>
-  <loc>https://kaban.my.id/tags/pengertian-informasi/</loc>
-  <lastmod>2023-07-18T05:04:22+00:00</lastmod>
-  <priority>0.41</priority>
-</url>
-<url>
-  <loc>https://kaban.my.id/tags/pengertian-sistem-informasi/</loc>
-  <lastmod>2023-07-18T05:04:22+00:00</lastmod>
-  <priority>0.41</priority>
-</url>
-<url>
-  <loc>https://kaban.my.id/tags/cloud-computing/</loc>
-  <lastmod>2023-07-18T05:04:22+00:00</lastmod>
-  <priority>0.41</priority>
-</url>
-<url>
-  <loc>https://kaban.my.id/tags/kemanan-cloud-computing/</loc>
-  <lastmod>2023-07-18T05:04:22+00:00</lastmod>
-  <priority>0.41</priority>
-</url>
-<url>
-  <loc>https://kaban.my.id/tags/manfaat-cloud-computing/</loc>
-  <lastmod>2023-07-18T05:04:22+00:00</lastmod>
-  <priority>0.41</priority>
-</url>
-<url>
-  <loc>https://kaban.my.id/tags/resiko-cloud-computing/</loc>
-  <lastmod>2023-07-18T05:04:22+00:00</lastmod>
-  <priority>0.41</priority>
-</url>
-
-
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+  xmlns:xhtml="http://www.w3.org/1999/xhtml">
+  
+  <url>
+    <loc>https://kaban.my.id/css/tutorial/pengenalan/</loc>
+    <lastmod>2021-12-06T08:49:31+00:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://kaban.my.id/html/tutorial/pengenalan/</loc>
+    <lastmod>2021-12-06T08:49:31+00:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://kaban.my.id/css/tutorial/basic/</loc>
+    <lastmod>2021-12-06T08:49:31+00:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://kaban.my.id/html/tutorial/editor/</loc>
+    <lastmod>2021-12-06T08:49:31+00:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://kaban.my.id/html/tutorial/dokumen-html/</loc>
+    <lastmod>2021-12-06T08:49:31+00:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://kaban.my.id/html/tutorial/elements/</loc>
+    <lastmod>2021-12-06T08:49:31+00:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://kaban.my.id/css/tutorial/sintax/</loc>
+    <lastmod>2021-12-06T08:49:31+00:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://kaban.my.id/mysql/tutorial/pengenalan/</loc>
+    <lastmod>2022-12-06T08:49:31+00:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://kaban.my.id/vbnet/tutorial/pengenalan/</loc>
+    <lastmod>2022-12-06T08:49:31+00:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://kaban.my.id/html/tutorial/attributes/</loc>
+    <lastmod>2021-12-06T08:49:31+00:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://kaban.my.id/css/tutorial/selectors/</loc>
+    <lastmod>2021-12-06T08:49:31+00:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://kaban.my.id/coretanku/pesta-tahunan-2023/</loc>
+    <lastmod>2023-07-10T21:50:50+07:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://kaban.my.id/coretanku/berpartisipasi-dalam-menyukseskan-ujian-cat-ppk-kpud-karo/</loc>
+    <lastmod>2022-12-08T23:30:55+07:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://kaban.my.id/mengenal-composer-dependency-manager-php/</loc>
+    <lastmod>2022-11-17T02:55:26+07:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://kaban.my.id/filsafat-sebagai-ibu-kandung-ilmu-pengetahuan/</loc>
+    <lastmod>2022-10-28T02:55:26+07:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://kaban.my.id/filsafat-philosophia-cinta-pada-kebijaksanaan/</loc>
+    <lastmod>2022-10-27T09:57:55+07:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://kaban.my.id/coretanku/manusia-yang-tahu-bukan-tempe/</loc>
+    <lastmod>2022-10-27T09:57:55+07:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://kaban.my.id/filsafat-ilmu-mahasiswa-adalah-pemikir-dan-ilmuwan/</loc>
+    <lastmod>2022-10-16T01:54:26+07:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://kaban.my.id/coretanku/pesta-bunga-dan-buah-di-berastagi-kabupaten-karo/</loc>
+    <lastmod>2022-07-01T13:57:55+07:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://kaban.my.id/coretanku/hello-world-buka-blog-lagi/</loc>
+    <lastmod>2022-06-29T13:57:55+07:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://kaban.my.id/css/tutorial/comments/</loc>
+    <lastmod>2021-12-06T08:49:31+00:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://kaban.my.id/html/tutorial/heading/</loc>
+    <lastmod>2021-12-06T08:49:31+00:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://kaban.my.id/coretanku/pernikahan-dan-pesta-adat-aro-roberto-kaban-dan-shella-sari-keliat-2021/</loc>
+    <lastmod>2021-02-20T23:30:55+07:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://kaban.my.id/perintah-dasar-linux/</loc>
+    <lastmod>2020-07-18T13:57:55+07:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://kaban.my.id/mengenal-cli-command-line-interface/</loc>
+    <lastmod>2020-07-12T13:57:55+07:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://kaban.my.id/10-pertanyaan-mendasar-tentang-blockchain-yang-anda-harus-tahu-jawabannya/</loc>
+    <lastmod>2020-06-12T19:35:40+07:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://kaban.my.id/blockchain-solusi-resiko-keterlibatan-pihak-ketiga-yang-tidak-bertanggung-jawab/</loc>
+    <lastmod>2020-06-04T09:19:42+01:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://kaban.my.id/mengenal-bitcoin-mata-uang-virtual/</loc>
+    <lastmod>2020-06-01T14:04:18+07:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://kaban.my.id/blockchain-dan-dunia-pendidikan/</loc>
+    <lastmod>2020-06-01T13:54:26+07:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://kaban.my.id/coretanku/marga-suku-karo-beserta-kampung-asal/</loc>
+    <lastmod>2014-12-19T13:57:55+07:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://kaban.my.id/pengertian-data-informasi-sistem-sistem-informasi-dan-sistem-informasi-manajemen/</loc>
+    <lastmod>2014-03-15T20:26:10+07:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://kaban.my.id/coretanku/pengalaman-terbang-dengan-pesawat-capung/</loc>
+    <lastmod>2013-02-28T01:30:55+07:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://kaban.my.id/cybercrime-dan-ancaman-terhadap-keamanan-jaringan/</loc>
+    <lastmod>2012-10-16T13:54:26+07:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://kaban.my.id/alamat-ipv4-pengalamatan-internet-protocol-versi-4/</loc>
+    <lastmod>2012-07-01T13:54:26+07:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://kaban.my.id/keamanan-cloud-computing-manfaat-resiko-dan-kontrol/</loc>
+    <lastmod>2012-04-16T02:55:26+07:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://kaban.my.id/css/tutorial/colors/</loc>
+    <lastmod>2021-12-06T08:49:31+00:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://kaban.my.id/html/tutorial/paragraph/</loc>
+    <lastmod>2021-12-06T08:49:31+00:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://kaban.my.id/html/tutorial/style/</loc>
+    <lastmod>2021-12-06T08:49:31+00:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://kaban.my.id/css/tutorial/backgroud/</loc>
+    <lastmod>2021-12-06T08:49:31+00:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://kaban.my.id/html/tutorial/text-formatiing/</loc>
+    <lastmod>2021-12-06T08:49:31+00:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://kaban.my.id/css/tutorial/borders/</loc>
+    <lastmod>2021-12-06T08:49:31+00:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://kaban.my.id/html/tutorial/quotation/</loc>
+    <lastmod>2021-12-06T08:49:31+00:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://kaban.my.id/css/tutorial/border-radius/</loc>
+    <lastmod>2021-12-06T08:49:31+00:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://kaban.my.id/html/tutorial/comments/</loc>
+    <lastmod>2021-12-06T08:49:31+00:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://kaban.my.id/html/tutorial/color/</loc>
+    <lastmod>2021-12-06T08:49:31+00:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://kaban.my.id/css/tutorial/margin/</loc>
+    <lastmod>2021-12-06T08:49:31+00:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://kaban.my.id/python/tutorial/pengenalan-python/</loc>
+    <lastmod>2020-12-06T08:49:31+00:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://kaban.my.id/html/tutorial/css/</loc>
+    <lastmod>2021-12-06T08:49:31+00:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://kaban.my.id/css/tutorial/padding/</loc>
+    <lastmod>2021-12-06T08:49:31+00:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://kaban.my.id/python/tutorial/instalasi-python/</loc>
+    <lastmod>2020-12-06T08:49:31+00:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://kaban.my.id/html/tutorial/hyperlink/</loc>
+    <lastmod>2021-12-06T08:49:31+00:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://kaban.my.id/css/tutorial/size/</loc>
+    <lastmod>2021-12-06T08:49:31+00:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://kaban.my.id/python/tutorial/menjalankan-python/</loc>
+    <lastmod>2020-12-06T08:49:31+00:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://kaban.my.id/css/tutorial/box-model/</loc>
+    <lastmod>2021-12-06T08:49:31+00:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://kaban.my.id/html/tutorial/images/</loc>
+    <lastmod>2021-12-06T08:49:31+00:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://kaban.my.id/python/tutorial/aturan-penulisan/</loc>
+    <lastmod>2020-12-06T08:49:31+00:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://kaban.my.id/css/tutorial/outline/</loc>
+    <lastmod>2021-12-06T08:49:31+00:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://kaban.my.id/html/tutorial/picture/</loc>
+    <lastmod>2021-12-06T08:49:31+00:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://kaban.my.id/python/tutorial/komentar-program/</loc>
+    <lastmod>2020-12-06T08:49:31+00:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://kaban.my.id/html/tutorial/tables/</loc>
+    <lastmod>2021-12-06T08:49:31+00:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://kaban.my.id/css/tutorial/text-alignment/</loc>
+    <lastmod>2021-12-06T08:49:31+00:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://kaban.my.id/python/tutorial/tipe-data/</loc>
+    <lastmod>2020-12-06T08:49:31+00:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://kaban.my.id/html/tutorial/lists/</loc>
+    <lastmod>2021-12-06T08:49:31+00:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://kaban.my.id/css/tutorial/text-decoration/</loc>
+    <lastmod>2021-12-06T08:49:31+00:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://kaban.my.id/python/tutorial/variabel/</loc>
+    <lastmod>2020-12-06T08:49:31+00:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://kaban.my.id/html/tutorial/block-inline/</loc>
+    <lastmod>2021-12-06T08:49:31+00:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://kaban.my.id/css/tutorial/text-transform/</loc>
+    <lastmod>2021-12-06T08:49:31+00:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://kaban.my.id/python/tutorial/operator/</loc>
+    <lastmod>2020-12-06T08:49:31+00:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://kaban.my.id/html/tutorial/classes/</loc>
+    <lastmod>2021-12-06T08:49:31+00:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://kaban.my.id/css/tutorial/fonts/</loc>
+    <lastmod>2021-12-06T08:49:31+00:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://kaban.my.id/python/tutorial/kondisi/</loc>
+    <lastmod>2021-12-06T08:49:31+00:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://kaban.my.id/html/tutorial/html-id/</loc>
+    <lastmod>2021-12-06T08:49:31+00:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://kaban.my.id/python/tutorial/perulangan/</loc>
+    <lastmod>2021-12-06T08:49:31+00:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://kaban.my.id/css/tutorial/web-font/</loc>
+    <lastmod>2021-12-06T08:49:31+00:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://kaban.my.id/html/tutorial/iframe/</loc>
+    <lastmod>2021-12-06T08:49:31+00:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://kaban.my.id/python/tutorial/number/</loc>
+    <lastmod>2021-12-06T08:49:31+00:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://kaban.my.id/html/tutorial/script/</loc>
+    <lastmod>2021-12-06T08:49:31+00:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://kaban.my.id/python/tutorial/string/</loc>
+    <lastmod>2021-12-06T08:49:31+00:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://kaban.my.id/html/tutorial/file-path/</loc>
+    <lastmod>2021-12-06T08:49:31+00:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://kaban.my.id/python/tutorial/list/</loc>
+    <lastmod>2021-12-06T08:49:31+00:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://kaban.my.id/css/tutorial/display/</loc>
+    <lastmod>2021-12-06T08:49:31+00:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://kaban.my.id/html/tutorial/head/</loc>
+    <lastmod>2021-12-06T08:49:31+00:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://kaban.my.id/python/tutorial/tuple/</loc>
+    <lastmod>2021-12-06T08:49:31+00:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://kaban.my.id/python/tutorial/dictionary/</loc>
+    <lastmod>2021-12-06T08:49:31+00:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://kaban.my.id/html/tutorial/link/</loc>
+    <lastmod>2021-12-06T08:49:31+00:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://kaban.my.id/css/tutorial/position/</loc>
+    <lastmod>2021-12-06T08:49:31+00:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://kaban.my.id/html/tutorial/meta/</loc>
+    <lastmod>2021-12-06T08:49:31+00:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://kaban.my.id/python/tutorial/tanggal-waktu/</loc>
+    <lastmod>2021-12-06T08:49:31+00:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://kaban.my.id/css/tutorial/z-index/</loc>
+    <lastmod>2021-12-06T08:49:31+00:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://kaban.my.id/blockchains-penggebrak-desentralisasi-privasi/</loc>
+    <lastmod>2020-06-04T09:19:42+01:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://kaban.my.id/python/tutorial/fungsi/</loc>
+    <lastmod>2021-12-06T08:49:31+00:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://kaban.my.id/python/tutorial/modul/</loc>
+    <lastmod>2021-12-06T08:49:31+00:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://kaban.my.id/css/tutorial/overflow/</loc>
+    <lastmod>2021-12-06T08:49:31+00:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://kaban.my.id/html/tutorial/responsive/</loc>
+    <lastmod>2021-12-06T08:49:31+00:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://kaban.my.id/html/tutorial/computer-code/</loc>
+    <lastmod>2021-12-06T08:49:31+00:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://kaban.my.id/css/tutorial/float/</loc>
+    <lastmod>2021-12-06T08:49:31+00:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://kaban.my.id/python/tutorial/input-output/</loc>
+    <lastmod>2021-12-06T08:49:31+00:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://kaban.my.id/css/tutorial/combinators/</loc>
+    <lastmod>2021-12-06T08:49:31+00:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://kaban.my.id/python/tutorial/exception/</loc>
+    <lastmod>2021-12-06T08:49:31+00:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://kaban.my.id/html/tutorial/semantic/</loc>
+    <lastmod>2021-12-06T08:49:31+00:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://kaban.my.id/html/tutorial/entity/</loc>
+    <lastmod>2021-12-06T08:49:31+00:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://kaban.my.id/python/tutorial/objek-class/</loc>
+    <lastmod>2021-12-06T08:49:31+00:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://kaban.my.id/css/tutorial/pseudo-classes/</loc>
+    <lastmod>2021-12-06T08:49:31+00:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://kaban.my.id/php/tutorial/pengenalan/</loc>
+    <lastmod>2022-11-06T08:49:31+00:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://kaban.my.id/python/tutorial/akses-database/</loc>
+    <lastmod>2021-12-06T08:49:31+00:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://kaban.my.id/html/tutorial/form/</loc>
+    <lastmod>2021-12-06T08:49:31+00:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://kaban.my.id/javascript/tutorial/pengenalan/</loc>
+    <lastmod>2021-12-06T08:49:31+00:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://kaban.my.id/css/tutorial/psesudo-elements/</loc>
+    <lastmod>2021-12-06T08:49:31+00:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://kaban.my.id/html/tutorial/input/</loc>
+    <lastmod>2021-12-06T08:49:31+00:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://kaban.my.id/python/tutorial/netwotking/</loc>
+    <lastmod>2021-12-06T08:49:31+00:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://kaban.my.id/css/tutorial/opocity/</loc>
+    <lastmod>2021-12-06T08:49:31+00:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://kaban.my.id/html/tutorial/button/</loc>
+    <lastmod>2021-12-06T08:49:31+00:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://kaban.my.id/html/tutorial/textarea/</loc>
+    <lastmod>2021-12-06T08:49:31+00:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://kaban.my.id/html/tutorial/data/</loc>
+    <lastmod>2021-12-06T08:49:31+00:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://kaban.my.id/css/tutorial/units/</loc>
+    <lastmod>2021-12-06T08:49:31+00:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://kaban.my.id/html/tutorial/canvas/</loc>
+    <lastmod>2021-12-06T08:49:31+00:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://kaban.my.id/css/tutorial/important/</loc>
+    <lastmod>2021-12-06T08:49:31+00:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://kaban.my.id/css/tutorial/math-function/</loc>
+    <lastmod>2021-12-06T08:49:31+00:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://kaban.my.id/css/tutorial/gradient/</loc>
+    <lastmod>2021-12-06T08:49:31+00:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://kaban.my.id/html/tutorial/video/</loc>
+    <lastmod>2021-12-06T08:49:31+00:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://kaban.my.id/html/tutorial/audio/</loc>
+    <lastmod>2021-12-06T08:49:31+00:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://kaban.my.id/css/tutorial/shadow/</loc>
+    <lastmod>2021-12-06T08:49:31+00:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://kaban.my.id/html/tutorial/langcode/</loc>
+    <lastmod>2021-12-06T08:49:31+00:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://kaban.my.id/css/tutorial/word-wrap/</loc>
+    <lastmod>2021-12-06T08:49:31+00:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://kaban.my.id/html/tutorial/taglist/</loc>
+    <lastmod>2021-12-06T08:49:31+00:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://kaban.my.id/css/tutorial/word-spacing/</loc>
+    <lastmod>2021-12-06T08:49:31+00:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://kaban.my.id/css/tutorial/writing-mode/</loc>
+    <lastmod>2021-12-06T08:49:31+00:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://kaban.my.id/css/tutorial/ransform/</loc>
+    <lastmod>2021-12-06T08:49:31+00:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://kaban.my.id/css/tutorial/transitions/</loc>
+    <lastmod>2021-12-06T08:49:31+00:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://kaban.my.id/css/tutorial/image-filter/</loc>
+    <lastmod>2021-12-06T08:49:31+00:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://kaban.my.id/css/tutorial/object-fit/</loc>
+    <lastmod>2021-12-06T08:49:31+00:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://kaban.my.id/css/tutorial/button/</loc>
+    <lastmod>2021-12-06T08:49:31+00:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://kaban.my.id/css/tutorial/custom-property/</loc>
+    <lastmod>2021-12-06T08:49:31+00:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://kaban.my.id/css/tutorial/box-sizing/</loc>
+    <lastmod>2021-12-06T08:49:31+00:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://kaban.my.id/css/tutorial/media-query/</loc>
+    <lastmod>2021-12-06T08:49:31+00:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://kaban.my.id/css/tutorial/flexbox/</loc>
+    <lastmod>2021-12-06T08:49:31+00:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://kaban.my.id/css/tutorial/grid/</loc>
+    <lastmod>2021-12-06T08:49:31+00:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://kaban.my.id/mysql/tutorial/</loc>
+    <lastmod>2022-10-06T08:49:15+00:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://kaban.my.id/vbnet/tutorial/</loc>
+    <lastmod>2022-10-06T08:49:15+00:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://kaban.my.id/python/tutorial/</loc>
+    <lastmod>2020-10-06T08:49:15+00:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://kaban.my.id/css/tutorial/</loc>
+    <lastmod>2020-10-06T08:49:15+00:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://kaban.my.id/html/tutorial/</loc>
+    <lastmod>2020-10-06T08:49:15+00:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://kaban.my.id/javascript/tutorial/</loc>
+    <lastmod>2020-10-06T08:49:15+00:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://kaban.my.id/categories/blog/</loc>
+    <lastmod>2023-07-10T21:50:50+07:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://kaban.my.id/categories/</loc>
+    <lastmod>2023-07-10T21:50:50+07:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://kaban.my.id/tags/pesta-tahunan/</loc>
+    <lastmod>2023-07-10T21:50:50+07:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://kaban.my.id/contributors/roberto-kaban/</loc>
+    <lastmod>2023-07-10T21:50:50+07:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://kaban.my.id/tags/</loc>
+    <lastmod>2023-07-10T21:50:50+07:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://kaban.my.id/tags/kegiatanku/</loc>
+    <lastmod>2022-12-08T23:30:55+07:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://kaban.my.id/tags/composer/</loc>
+    <lastmod>2022-11-17T02:55:26+07:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://kaban.my.id/tags/composer-php/</loc>
+    <lastmod>2022-11-17T02:55:26+07:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://kaban.my.id/tags/dependency-manager-php/</loc>
+    <lastmod>2022-11-17T02:55:26+07:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://kaban.my.id/categories/pemrograman/</loc>
+    <lastmod>2022-11-17T02:55:26+07:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://kaban.my.id/categories/tools/</loc>
+    <lastmod>2022-11-17T02:55:26+07:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://kaban.my.id/tags/belajar-filsafat/</loc>
+    <lastmod>2022-10-28T02:55:26+07:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://kaban.my.id/tags/filsafat-ilmu/</loc>
+    <lastmod>2022-10-28T02:55:26+07:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://kaban.my.id/categories/filsafat-ilmu/</loc>
+    <lastmod>2022-10-28T02:55:26+07:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://kaban.my.id/tags/ibu-ilmu/</loc>
+    <lastmod>2022-10-28T02:55:26+07:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://kaban.my.id/tags/ibu-ilmu-pengetahuan/</loc>
+    <lastmod>2022-10-28T02:55:26+07:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://kaban.my.id/categories/materi-kuliah/</loc>
+    <lastmod>2022-10-28T02:55:26+07:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://kaban.my.id/tags/tugas-kuliah/</loc>
+    <lastmod>2022-10-28T02:55:26+07:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://kaban.my.id/categories/ceritaku/</loc>
+    <lastmod>2022-10-27T09:57:55+07:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://kaban.my.id/tags/filsafat/</loc>
+    <lastmod>2022-10-27T09:57:55+07:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://kaban.my.id/tags/jenis-manusia/</loc>
+    <lastmod>2022-10-27T09:57:55+07:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://kaban.my.id/tags/pengetahuan-manusia/</loc>
+    <lastmod>2022-10-27T09:57:55+07:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://kaban.my.id/tags/mahasiswa-ilmuwan/</loc>
+    <lastmod>2022-10-16T01:54:26+07:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://kaban.my.id/tags/mahasiswa-pemikir/</loc>
+    <lastmod>2022-10-16T01:54:26+07:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://kaban.my.id/tags/materi-kuliah/</loc>
+    <lastmod>2022-10-16T01:54:26+07:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://kaban.my.id/</loc>
+    <lastmod>2022-07-06T08:47:36+00:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://kaban.my.id/categories/karo/</loc>
+    <lastmod>2022-07-01T13:57:55+07:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://kaban.my.id/tags/pesta-buah/</loc>
+    <lastmod>2022-07-01T13:57:55+07:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://kaban.my.id/tags/pesta-bunga/</loc>
+    <lastmod>2022-07-01T13:57:55+07:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://kaban.my.id/tags/pesta-bunga-buah-berastagi/</loc>
+    <lastmod>2022-07-01T13:57:55+07:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://kaban.my.id/categories/tanah-karo/</loc>
+    <lastmod>2022-07-01T13:57:55+07:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://kaban.my.id/tags/core-blog/</loc>
+    <lastmod>2022-06-29T13:57:55+07:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://kaban.my.id/tags/migrasi-blog/</loc>
+    <lastmod>2022-06-29T13:57:55+07:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://kaban.my.id/tags/pindah-ke-github/</loc>
+    <lastmod>2022-06-29T13:57:55+07:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://kaban.my.id/privacy-policy/</loc>
+    <lastmod>2021-08-27T19:23:18+02:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://kaban.my.id/tags/adat-karo/</loc>
+    <lastmod>2021-02-20T23:30:55+07:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://kaban.my.id/tags/pernikahanku/</loc>
+    <lastmod>2021-02-20T23:30:55+07:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://kaban.my.id/tags/pesta-karo/</loc>
+    <lastmod>2021-02-20T23:30:55+07:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://kaban.my.id/contributors/</loc>
+    <lastmod>2020-10-06T08:50:29+00:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://kaban.my.id/artikel/</loc>
+    <lastmod>2020-10-06T08:49:55+00:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://kaban.my.id/post/</loc>
+    <lastmod>2020-10-06T08:49:55+00:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://kaban.my.id/coretanku/</loc>
+    <lastmod>2020-10-06T08:49:55+00:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://kaban.my.id/css/</loc>
+    <lastmod>2020-10-06T08:48:23+00:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://kaban.my.id/html/</loc>
+    <lastmod>2020-10-06T08:48:23+00:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://kaban.my.id/javascript/</loc>
+    <lastmod>2020-10-06T08:48:23+00:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://kaban.my.id/mysql/</loc>
+    <lastmod>2020-10-06T08:48:23+00:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://kaban.my.id/php/</loc>
+    <lastmod>2020-10-06T08:48:23+00:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://kaban.my.id/php/tutorial/</loc>
+    <lastmod>2020-10-06T08:48:23+00:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://kaban.my.id/python/</loc>
+    <lastmod>2020-10-06T08:48:23+00:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://kaban.my.id/vbnet/</loc>
+    <lastmod>2020-10-06T08:48:23+00:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://kaban.my.id/about/</loc>
+    <lastmod>2020-08-27T19:25:12+02:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://kaban.my.id/contact/</loc>
+    <lastmod>2020-08-27T19:25:12+02:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://kaban.my.id/download/</loc>
+    <lastmod>2020-08-27T19:25:12+02:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://kaban.my.id/tags/command-line/</loc>
+    <lastmod>2020-07-18T13:57:55+07:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://kaban.my.id/tags/command-line-linux/</loc>
+    <lastmod>2020-07-18T13:57:55+07:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://kaban.my.id/tags/linux/</loc>
+    <lastmod>2020-07-18T13:57:55+07:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://kaban.my.id/categories/networking/</loc>
+    <lastmod>2020-07-18T13:57:55+07:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://kaban.my.id/tags/perintah-linux/</loc>
+    <lastmod>2020-07-18T13:57:55+07:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://kaban.my.id/tags/cli/</loc>
+    <lastmod>2020-07-12T13:57:55+07:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://kaban.my.id/tags/apa-itu-bitcoin/</loc>
+    <lastmod>2020-06-12T19:35:40+07:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://kaban.my.id/tags/bitcoin/</loc>
+    <lastmod>2020-06-12T19:35:40+07:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://kaban.my.id/tags/blockchain/</loc>
+    <lastmod>2020-06-12T19:35:40+07:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://kaban.my.id/categories/blockchain/</loc>
+    <lastmod>2020-06-12T19:35:40+07:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://kaban.my.id/categories/teknologi/</loc>
+    <lastmod>2020-06-12T19:35:40+07:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://kaban.my.id/tags/ancaman-pihak-ketiga/</loc>
+    <lastmod>2020-06-04T09:19:42+01:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://kaban.my.id/categories/bitcoin/</loc>
+    <lastmod>2020-06-04T09:19:42+01:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://kaban.my.id/categories/desentralisasi/</loc>
+    <lastmod>2020-06-04T09:19:42+01:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://kaban.my.id/tags/desentralisasi-privasi/</loc>
+    <lastmod>2020-06-04T09:19:42+01:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://kaban.my.id/tags/keamanan-data/</loc>
+    <lastmod>2020-06-04T09:19:42+01:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://kaban.my.id/tags/mengenal-bitcoin/</loc>
+    <lastmod>2020-06-01T14:04:18+07:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://kaban.my.id/tags/blockchain-dalam-pendidikan/</loc>
+    <lastmod>2020-06-01T13:54:26+07:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://kaban.my.id/tags/desentralisasi-pendidikan/</loc>
+    <lastmod>2020-06-01T13:54:26+07:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://kaban.my.id/tags/marga-karo/</loc>
+    <lastmod>2014-12-19T13:57:55+07:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://kaban.my.id/tags/suku-karo/</loc>
+    <lastmod>2014-12-19T13:57:55+07:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://kaban.my.id/tags/pengertian-data/</loc>
+    <lastmod>2014-03-15T20:26:10+07:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://kaban.my.id/tags/pengertian-informasi/</loc>
+    <lastmod>2014-03-15T20:26:10+07:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://kaban.my.id/tags/pengertian-sistem/</loc>
+    <lastmod>2014-03-15T20:26:10+07:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://kaban.my.id/tags/pengertian-sistem-informasi/</loc>
+    <lastmod>2014-03-15T20:26:10+07:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://kaban.my.id/categories/perancangan-sistem/</loc>
+    <lastmod>2014-03-15T20:26:10+07:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://kaban.my.id/categories/sistem-informasi/</loc>
+    <lastmod>2014-03-15T20:26:10+07:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://kaban.my.id/tags/meulaboh/</loc>
+    <lastmod>2013-02-28T01:30:55+07:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://kaban.my.id/tags/pesawat-mini/</loc>
+    <lastmod>2013-02-28T01:30:55+07:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://kaban.my.id/tags/tembang-ke-meulaboh/</loc>
+    <lastmod>2013-02-28T01:30:55+07:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://kaban.my.id/tags/ancaman-jaringan/</loc>
+    <lastmod>2012-10-16T13:54:26+07:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://kaban.my.id/tags/cybercrime/</loc>
+    <lastmod>2012-10-16T13:54:26+07:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://kaban.my.id/tags/jaringan-internet/</loc>
+    <lastmod>2012-10-16T13:54:26+07:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://kaban.my.id/tags/keamanan-jaringan/</loc>
+    <lastmod>2012-10-16T13:54:26+07:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://kaban.my.id/tags/internet-protocol/</loc>
+    <lastmod>2012-07-01T13:54:26+07:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://kaban.my.id/tags/ip-internet/</loc>
+    <lastmod>2012-07-01T13:54:26+07:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://kaban.my.id/tags/ipv4/</loc>
+    <lastmod>2012-07-01T13:54:26+07:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://kaban.my.id/tags/cloud-computing/</loc>
+    <lastmod>2012-04-16T02:55:26+07:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://kaban.my.id/categories/cloud-computing/</loc>
+    <lastmod>2012-04-16T02:55:26+07:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://kaban.my.id/tags/kemanan-cloud-computing/</loc>
+    <lastmod>2012-04-16T02:55:26+07:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://kaban.my.id/tags/manfaat-cloud-computing/</loc>
+    <lastmod>2012-04-16T02:55:26+07:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://kaban.my.id/tags/resiko-cloud-computing/</loc>
+    <lastmod>2012-04-16T02:55:26+07:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
 </urlset>
