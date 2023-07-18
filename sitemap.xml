@@ -80,6 +80,13 @@
   </url>
   
   <url>
+    <loc>https://kaban.my.id/coretanku/pesta-tahunan-2023/</loc>
+    <lastmod>2023-07-10T21:50:50+07:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
     <loc>https://kaban.my.id/coretanku/berpartisipasi-dalam-menyukseskan-ujian-cat-ppk-kpud-karo/</loc>
     <lastmod>2022-12-08T23:30:55+07:00</lastmod>
     <changefreq>weekly</changefreq>
@@ -998,34 +1005,41 @@
   
   <url>
     <loc>https://kaban.my.id/categories/blog/</loc>
-    <lastmod>2022-12-08T23:30:55+07:00</lastmod>
+    <lastmod>2023-07-10T21:50:50+07:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url>
   
   <url>
     <loc>https://kaban.my.id/categories/</loc>
-    <lastmod>2022-12-08T23:30:55+07:00</lastmod>
+    <lastmod>2023-07-10T21:50:50+07:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url>
   
   <url>
-    <loc>https://kaban.my.id/tags/kegiatanku/</loc>
-    <lastmod>2022-12-08T23:30:55+07:00</lastmod>
+    <loc>https://kaban.my.id/tags/pesta-tahunan/</loc>
+    <lastmod>2023-07-10T21:50:50+07:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url>
   
   <url>
     <loc>https://kaban.my.id/contributors/roberto-kaban/</loc>
-    <lastmod>2022-12-08T23:30:55+07:00</lastmod>
+    <lastmod>2023-07-10T21:50:50+07:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url>
   
   <url>
     <loc>https://kaban.my.id/tags/</loc>
+    <lastmod>2023-07-10T21:50:50+07:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://kaban.my.id/tags/kegiatanku/</loc>
     <lastmod>2022-12-08T23:30:55+07:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
