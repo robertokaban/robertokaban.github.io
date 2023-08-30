@@ -1046,7 +1046,14 @@
   </url>
   
   <url>
-    <loc>https://kaban.my.id/tags/kuliah-cerita-perkuliahan/</loc>
+    <loc>https://kaban.my.id/tags/cerita-perkuliahan/</loc>
+    <lastmod>2023-08-26T22:40:30+07:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://kaban.my.id/tags/kuliah/</loc>
     <lastmod>2023-08-26T22:40:30+07:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
@@ -1067,14 +1074,21 @@
   </url>
   
   <url>
-    <loc>https://kaban.my.id/tags/ceritaku-ulang-tahun-faresta/</loc>
+    <loc>https://kaban.my.id/tags/ceritaku/</loc>
     <lastmod>2023-08-22T20:40:30+07:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url>
   
   <url>
-    <loc>https://kaban.my.id/tags/ceritaku-kernel-panic/</loc>
+    <loc>https://kaban.my.id/tags/ulang-tahun-faresta/</loc>
+    <lastmod>2023-08-22T20:40:30+07:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://kaban.my.id/tags/kernel-panic/</loc>
     <lastmod>2023-08-19T22:50:30+07:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
@@ -1557,7 +1571,7 @@
   </url>
   
   <url>
-    <loc>https://kaban.my.id/tags/ceritaku-liburan/</loc>
+    <loc>https://kaban.my.id/tags/liburan/</loc>
     <lastmod>2019-01-12T20:50:30+07:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
