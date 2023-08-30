@@ -94,6 +94,13 @@
   </url>
   
   <url>
+    <loc>https://kaban.my.id/coretanku/ni-shi-wo-weiyi-de-zhizhuo/</loc>
+    <lastmod>2023-08-19T22:50:30+07:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
     <loc>https://kaban.my.id/coretanku/pesta-tahunan-2023/</loc>
     <lastmod>2023-07-10T21:50:50+07:00</lastmod>
     <changefreq>weekly</changefreq>
@@ -1062,6 +1069,13 @@
   <url>
     <loc>https://kaban.my.id/tags/ceritaku-ulang-tahun-faresta/</loc>
     <lastmod>2023-08-22T20:40:30+07:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://kaban.my.id/tags/ceritaku-kernel-panic/</loc>
+    <lastmod>2023-08-19T22:50:30+07:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url>
