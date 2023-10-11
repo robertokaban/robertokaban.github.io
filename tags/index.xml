@@ -5,7 +5,25 @@
     <link>https://kaban.my.id/tags/</link>
     <description>Recent content in Tags on </description>
     <generator>Hugo -- gohugo.io</generator>
-    <lastBuildDate>Sat, 26 Aug 2023 22:40:30 +0700</lastBuildDate><atom:link href="https://kaban.my.id/tags/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Mon, 04 Sep 2023 22:40:30 +0700</lastBuildDate><atom:link href="https://kaban.my.id/tags/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Motivasi</title>
+      <link>https://kaban.my.id/tags/motivasi/</link>
+      <pubDate>Mon, 04 Sep 2023 22:40:30 +0700</pubDate>
+      
+      <guid>https://kaban.my.id/tags/motivasi/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Motivasi Diri</title>
+      <link>https://kaban.my.id/tags/motivasi-diri/</link>
+      <pubDate>Mon, 04 Sep 2023 22:40:30 +0700</pubDate>
+      
+      <guid>https://kaban.my.id/tags/motivasi-diri/</guid>
+      <description></description>
+    </item>
+    
     <item>
       <title>Cerita Perkuliahan</title>
       <link>https://kaban.my.id/tags/cerita-perkuliahan/</link>
@@ -75,24 +93,6 @@
       <pubDate>Thu, 17 Nov 2022 02:55:26 +0700</pubDate>
       
       <guid>https://kaban.my.id/tags/composer/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Composer PHP</title>
-      <link>https://kaban.my.id/tags/composer-php/</link>
-      <pubDate>Thu, 17 Nov 2022 02:55:26 +0700</pubDate>
-      
-      <guid>https://kaban.my.id/tags/composer-php/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Dependency manager PHP</title>
-      <link>https://kaban.my.id/tags/dependency-manager-php/</link>
-      <pubDate>Thu, 17 Nov 2022 02:55:26 +0700</pubDate>
-      
-      <guid>https://kaban.my.id/tags/dependency-manager-php/</guid>
       <description></description>
     </item>
     
