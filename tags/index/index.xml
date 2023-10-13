@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Index on </title>
+    <link>https://kaban.my.id/tags/index/</link>
+    <description>Recent content in Index on </description>
+    <generator>Hugo -- gohugo.io</generator>
+    <lastBuildDate>Thu, 24 Aug 2023 22:40:30 +0700</lastBuildDate><atom:link href="https://kaban.my.id/tags/index/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Ho&#39;oh: Index Start at 0</title>
+      <link>https://kaban.my.id/hooh-index-start-at-0/</link>
+      <pubDate>Thu, 24 Aug 2023 22:40:30 +0700</pubDate>
+      
+      <guid>https://kaban.my.id/hooh-index-start-at-0/</guid>
+      <description>Index dalam bahasa pemrograman # Penggunaan index dalam bahasa pemrograman adalah salah satu konsep dasar yang sangat penting karena ini memungkinkan kita untuk mengakses, mengelola, dan memanipulasi data dalam struktur data seperti array, list, dan berbagai jenis koleksi data lainnya. Index dimulai dari 0 adalah aturan yang sangat umum dalam pemrograman, terutama dalam bahasa pemrograman seperti C, C++, Java, Python, Php dan banyak bahasa pemrograman lainnya.
+Tetapi harus kita ingat juga, bahwa tidak semua bahasa pemrograman mengadopsi index dimulai dari 0.</description>
+    </item>
+    
+  </channel>
+</rss>

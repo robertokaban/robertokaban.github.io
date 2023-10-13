@@ -5,7 +5,17 @@
     <link>https://kaban.my.id/contributors/roberto-kaban/</link>
     <description>Recent content in Roberto Kaban on </description>
     <generator>Hugo -- gohugo.io</generator>
-    <lastBuildDate>Mon, 04 Sep 2023 22:40:30 +0700</lastBuildDate><atom:link href="https://kaban.my.id/contributors/roberto-kaban/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Mon, 18 Sep 2023 13:57:55 +0700</lastBuildDate><atom:link href="https://kaban.my.id/contributors/roberto-kaban/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Ngrok: Mengenal Ngrok, Instalasi dan Konfigurasi </title>
+      <link>https://kaban.my.id/ngrok-mengenal-ngrok-instalasi-dan-konfigurasi/</link>
+      <pubDate>Mon, 18 Sep 2023 13:57:55 +0700</pubDate>
+      
+      <guid>https://kaban.my.id/ngrok-mengenal-ngrok-instalasi-dan-konfigurasi/</guid>
+      <description>Apa itu NGROK # Ngrok merupakan sebuah tools mungkin tepatnya layanan yang memungkinkan kita untuk melakukan tunnelling (tunneling tool) untuk membuat koneksi yang aman antara dua titik (endpoints) melalui internet atau jaringan lokal. Dengan Ngrok kita dapat memberikan akses di komputer lokal kedalam jaringan internet.
+Ngrok sering digunakan oleh programmer khususnya pengembang website untuk demo dan pengujian website yang dibangun. Contoh sederhananya, kita sedang membuat website di komputer lokal dan sebelum upload ke internet, kita ingin menampilkan hasil terlebih dahulu ke client yang memesan website.</description>
+    </item>
+    
     <item>
       <title>Momotivasi Diri Sendiri</title>
       <link>https://kaban.my.id/coretanku/memotivasi-diri-sendiri/</link>
@@ -23,6 +33,16 @@
       <guid>https://kaban.my.id/coretanku/predoctoral-bootcamp-usu-2023/</guid>
       <description>Predoctoral Bootcamp USU untuk angkatan 2022 # Tidak terasa sudah memasuki semester tiga, sepertinya pada semester ini perkuliahan program doktoral ini akan lebih menyita waktu. Dalam kurikulum, target yang harus diselesaikan mahasiswa pada semester ini terdiri dari perkuliahan (dua matakuliah) prakualifikasi dan satu publikasi internasional dalam bentuk prosiding.
 Mahasiswa yang memasuki semester tiga juga diwajibkan untuk mengikuti Bootcamp yang difasilitasi oleh kampus. Sertifikat keikutsertaan dalam Bootcamp adalah salah satu syarat untuk mengikuti prakualifikasi.</description>
+    </item>
+    
+    <item>
+      <title>Ho&#39;oh: Index Start at 0</title>
+      <link>https://kaban.my.id/hooh-index-start-at-0/</link>
+      <pubDate>Thu, 24 Aug 2023 22:40:30 +0700</pubDate>
+      
+      <guid>https://kaban.my.id/hooh-index-start-at-0/</guid>
+      <description>Index dalam bahasa pemrograman # Penggunaan index dalam bahasa pemrograman adalah salah satu konsep dasar yang sangat penting karena ini memungkinkan kita untuk mengakses, mengelola, dan memanipulasi data dalam struktur data seperti array, list, dan berbagai jenis koleksi data lainnya. Index dimulai dari 0 adalah aturan yang sangat umum dalam pemrograman, terutama dalam bahasa pemrograman seperti C, C++, Java, Python, Php dan banyak bahasa pemrograman lainnya.
+Tetapi harus kita ingat juga, bahwa tidak semua bahasa pemrograman mengadopsi index dimulai dari 0.</description>
     </item>
     
     <item>
@@ -82,27 +102,6 @@ Sebagai gambaran, misalnya kita memiliki suatu aplikasi yang membutuhkan library
       <guid>https://kaban.my.id/filsafat-sebagai-ibu-kandung-ilmu-pengetahuan/</guid>
       <description>Filsafat Sebagai Ibu dari ilmu pengetahuan # Filsafat merupakan ibu dari ilmu pengetahuan atau the mother of sciences. Disebut sebagai ibu dari ilmu pengetahuan karena dari awal filsafat sudah melewati proses layaknya seorang ibu yang mengandung, melahirkan, menyusui dan mendewasakan ilmu pengetahuan.
 Filsafat telah mengandung benih-benih pemikiran keilmuan, melahirkan bayi-bayi ilmu, menyusui, dan membina tumbuh kembang ilmu pengetahuan menjadi cabang dan ranting-ranting keilmuan, serta filsafat juga telah mendewasakan ilmu sebagai ilmu hingga mandiri.</description>
-    </item>
-    
-    <item>
-      <title>Filsafat: Philosophia, cinta pada kebijaksanaan</title>
-      <link>https://kaban.my.id/filsafat-philosophia-cinta-pada-kebijaksanaan/</link>
-      <pubDate>Thu, 27 Oct 2022 09:57:55 +0700</pubDate>
-      
-      <guid>https://kaban.my.id/filsafat-philosophia-cinta-pada-kebijaksanaan/</guid>
-      <description>Berfilsafat adalah berpikir, tetapi tidak semua berpikir itu adalah berfilsafat. Filsafat merupakan peletak dasar suatu pengetahuan. Oleh sebab itu, filsafat disebut sebagai induk segala ilmu pengetahuan (mater scientarium).
-Filsafat berasal dari kata Yunani yaitu “philosophia”. Philo artinya cinta dan Sophia artinya kebijaksanaan ataupun kebenaran. Jadi secara harfiah berarti mencintai kebijaksanaan atau cinta pada kebijaksanaan.
-Filsafat merupakan suatu studi yang mempelajari seluruh fenomena kehidupan dan pemikiran manusia secara kritis, mendeteksi permasalahan secara radikal, mencari solusi, memberikan argumentasi dan alasan yang tepat untuk solusi tertentu, serta akhir dari proses-proses itu dimasukkan ke dalam sebuah proses kerja ilmiah.</description>
-    </item>
-    
-    <item>
-      <title>Manusia yang Tahu (bukan tempe) dan Tahu, Tahu itu bukan Tempe</title>
-      <link>https://kaban.my.id/coretanku/manusia-yang-tahu-bukan-tempe/</link>
-      <pubDate>Thu, 27 Oct 2022 09:57:55 +0700</pubDate>
-      
-      <guid>https://kaban.my.id/coretanku/manusia-yang-tahu-bukan-tempe/</guid>
-      <description>Pengantar # Dengan berfilsafat kita didorong untuk mengetahui dengan kesungguhan hal apa saja yang telah kita ketahui, dan hal apa yang yang belum diketahui. Manusia yang pada dasarnya adalah sebagai homo sapiens (mahluk yg berpikir), secara otomatis membuat pengetahuan yang semakin banyak akan menghasilkan ketidaktahuan yang semakin besar juga.
-Manusia akan terus menggali ketidaktahuan tersebut. Dengan menggali misteri ketidaktahuan tersebut, manusia telah menciptakan penemuan-penemuan, inovasi-inovasi, manusia juga sudah menyelesaikan berbagai masalah-masalah kehidupan, tetapi ini juga menimbulkan ketidaktahuan yang semakin besar.</description>
     </item>
     
   </channel>
