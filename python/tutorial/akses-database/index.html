@@ -555,6 +555,7 @@
         <nav id="TableOfContents">
   <ul>
     <li><a href="#apa-itu-pymysql-">Apa itu PyMySQL ?</a></li>
+    <li><a href="#cara-instal-pymysql">Cara Instal PyMySQL</a></li>
     <li><a href="#database-connection">Database Connection</a></li>
   </ul>
 </nav>
@@ -567,6 +568,7 @@
   <nav id="TableOfContents">
   <ul>
     <li><a href="#apa-itu-pymysql-">Apa itu PyMySQL ?</a></li>
+    <li><a href="#cara-instal-pymysql">Cara Instal PyMySQL</a></li>
     <li><a href="#database-connection">Database Connection</a></li>
   </ul>
 </nav>
@@ -601,6 +603,7 @@
         <nav id="TableOfContents">
   <ul>
     <li><a href="#apa-itu-pymysql-">Apa itu PyMySQL ?</a></li>
+    <li><a href="#cara-instal-pymysql">Cara Instal PyMySQL</a></li>
     <li><a href="#database-connection">Database Connection</a></li>
   </ul>
 </nav>
@@ -613,14 +616,14 @@
   <nav id="TableOfContents">
   <ul>
     <li><a href="#apa-itu-pymysql-">Apa itu PyMySQL ?</a></li>
+    <li><a href="#cara-instal-pymysql">Cara Instal PyMySQL</a></li>
     <li><a href="#database-connection">Database Connection</a></li>
   </ul>
 </nav>
   </div>
 
 			</nav>
-			<p>Standar Interface Python untuk database adalah Python DB-API. Kebanyakan Interface database Python mematuhi standar ini.</p>
-<p>Anda bisa memilih database yang tepat untuk aplikasi Anda. API Database Python mendukung berbagai macam server database seperti.</p>
+			<p>Python mendukung konektivitas dengan berbagai jenis database, kita dapat memilih database yang tepat untuk aplikasi yang akan dibangun. Standar Interface Python untuk database adalah Python DB-API. Kebanyakan Interface database Python mematuhi standar ini. API (Application Programming Interface) Database Python mendukung berbagai macam server database, antara lain sebagai berikut:</p>
 <ul>
 <li>GadFly</li>
 <li>mSQL</li>
@@ -633,18 +636,18 @@
 <li>Sybase</li>
 <li>SQLite</li>
 </ul>
-<p>API DB menyediakan standar minimal untuk bekerja dengan database menggunakan struktur dan sintaks Python sedapat mungkin. API ini meliputi:</p>
+<p>API DB menyediakan standar minimal yang memungkinkan kita untuk terkoneksi dengan database menggunakan struktur dan sintaks Python. API ini meliputi:</p>
 <ul>
 <li>Mengimpor modul API.</li>
 <li>Mendapatkan koneksi dengan database.</li>
-<li>Menerbitkan pernyataan SQL dan prosedur tersimpan.</li>
+<li>Menampilkan hasil dari query  SQL dan prosedur tersimpan.</li>
 <li>Menutup koneksi</li>
 </ul>
-<p>Python memiliki dukungan built-in untuk <code>SQLite</code>. Pada bagian ini, kita akan mempelajari semua konsep menggunakan MySQL. Modul MySQLdb, antarmuka yang populer dengan MySQL tidak kompatibel dengan Python 3. Sebagai gantinya, kita akan menggunakan modul PyMySQL.</p>
+<p>Python memiliki dukungan built-in untuk <code>SQLite</code>. Namun disini, kita akan membahas tentang konsep konektifitas Python menggunakan MySQL. Disini kita akan menggunakan modul PyMySQL.</p>
 <h2 id="apa-itu-pymysql-">Apa itu PyMySQL ? <a href="#apa-itu-pymysql-" class="anchor" aria-hidden="true">#</a></h2>
-<p>PyMySQL adalah sebuah antarmuka untuk menghubungkan ke server database MySQL dari Python. Ini mengimplementasikan API Database Python v2.0 dan berisi perpustakaan klien MySQL murni-Python. Tujuan PyMySQL adalah penggantian drop-in untuk MySQLdb. Anda dapat melihat dokumentasi lengkap penggunaan PyMySQL di https://pymysql.readthedocs.io/en/latest/.</p>
-<p>Cara Instal PyMySQL
-Sebelum melanjutkan, pastikan Anda telah menginstal PyMySQL di komputer Anda. Cukup ketik berikut ini di skrip Python Anda dan jalankan.</p>
+<p>PyMySQL adalah sebuah antarmuka untuk menghubungkan ke server database MySQL dari Python. PyMySQL mengimplementasikan API Database Python v2.0 dan berisi perpustakaan klien MySQL murni-Python. Tujuan PyMySQL adalah penggantian drop-in untuk MySQLdb. Silakan akses dokumentasi lengkap penggunaan PyMySQL di https://pymysql.readthedocs.io/en/latest/.</p>
+<h2 id="cara-instal-pymysql">Cara Instal PyMySQL <a href="#cara-instal-pymysql" class="anchor" aria-hidden="true">#</a></h2>
+<p>Sebelum melanjutkan, pastikan Anda telah menginstal PyMySQL di komputer Anda. Cukup ketik berikut ini di skrip Python Anda dan jalankan.</p>
 <p><code>import pymysql.cursors</code></p>
 <p>Jika menghasilkan hasil berikut, berarti modul MySQLdb tidak terpasang:</p>
 <p><code>Traceback (most recent call last): File &quot;test.py&quot;, line 3, in Import PyMySQL ImportError: No module named PyMySQL</code></p>
@@ -652,163 +655,213 @@ Sebelum melanjutkan, pastikan Anda telah menginstal PyMySQL di komputer Anda. Cu
 <p><code>python -m pip install PyMySQL</code></p>
 <h2 id="database-connection">Database Connection <a href="#database-connection" class="anchor" aria-hidden="true">#</a></h2>
 <p>Sebelum terhubung ke database MySQL, pastikan beberapa hal dibawah ini :</p>
-<p>Anda telah membuat database TESTDB.
-Anda telah membuat tabel EMPLOYEE di TESTDB.
-Tabel ini memiliki bidang FIRST_NAME, LAST_NAME, AGE, SEX, dan INCOME.
-User ID “testuser” dan password “test123” diatur untuk mengakses TESTDB.
-Python modul PyMySQL terinstal dengan benar pada mesin Anda.
-Anda telah melalui tutorial MySQL untuk memahami Dasar-Dasar MySQL
-Berikut ini adalah contoh koneksi dengan database MySQL “TESTDB”</p>
-<p>import pymysql.cursors</p>
-<h1 id="open-database-connection">Open database connection <a href="#open-database-connection" class="anchor" aria-hidden="true">#</a></h1>
-<p>db = pymysql.connect(&ldquo;localhost&rdquo;,&ldquo;testuser&rdquo;,&ldquo;test123&rdquo;,&ldquo;TESTDB&rdquo; )</p>
-<h1 id="prepare-a-cursor-object-using-cursor-method">prepare a cursor object using cursor() method <a href="#prepare-a-cursor-object-using-cursor-method" class="anchor" aria-hidden="true">#</a></h1>
-<p>cursor = db.cursor()</p>
-<h1 id="execute-sql-query-using-execute-method">execute SQL query using execute() method. <a href="#execute-sql-query-using-execute-method" class="anchor" aria-hidden="true">#</a></h1>
-<p>cursor.execute(&ldquo;SELECT VERSION()&quot;)</p>
-<h1 id="fetch-a-single-row-using-fetchone-method">Fetch a single row using fetchone() method. <a href="#fetch-a-single-row-using-fetchone-method" class="anchor" aria-hidden="true">#</a></h1>
-<p>data = cursor.fetchone()</p>
-<p>print (&ldquo;Database version : %s &quot; % data)</p>
-<h1 id="disconnect-from-server">disconnect from server <a href="#disconnect-from-server" class="anchor" aria-hidden="true">#</a></h1>
-<p>db.close()
-Membuat Tabel Database
-import pymysql.cursors</p>
-<h1 id="open-database-connection-1">Open database connection <a href="#open-database-connection-1" class="anchor" aria-hidden="true">#</a></h1>
-<p>db = pymysql.connect(&ldquo;localhost&rdquo;,&ldquo;testuser&rdquo;,&ldquo;test123&rdquo;,&ldquo;TESTDB&rdquo; )</p>
-<h1 id="prepare-a-cursor-object-using-cursor-method-1">prepare a cursor object using cursor() method <a href="#prepare-a-cursor-object-using-cursor-method-1" class="anchor" aria-hidden="true">#</a></h1>
-<p>cursor = db.cursor()</p>
-<h1 id="drop-table-if-it-already-exist-using-execute-method">Drop table if it already exist using execute() method. <a href="#drop-table-if-it-already-exist-using-execute-method" class="anchor" aria-hidden="true">#</a></h1>
-<p>cursor.execute(&ldquo;DROP TABLE IF EXISTS EMPLOYEE&rdquo;)</p>
-<h1 id="create-table-as-per-requirement">Create table as per requirement <a href="#create-table-as-per-requirement" class="anchor" aria-hidden="true">#</a></h1>
-<p>sql = &ldquo;&ldquo;&ldquo;CREATE TABLE EMPLOYEE (
-FIRST_NAME  CHAR(20) NOT NULL,
-LAST_NAME  CHAR(20),
-AGE INT,
-SEX CHAR(1),
-INCOME FLOAT )&rdquo;&rdquo;&rdquo;</p>
-<p>cursor.execute(sql)</p>
-<h1 id="disconnect-from-server-1">disconnect from server <a href="#disconnect-from-server-1" class="anchor" aria-hidden="true">#</a></h1>
-<p>db.close()
-Operasi Insert
-Contoh berikut, mengeksekusi pernyataan SQL INSERT untuk membuat catatan di tabel EMPLOYEE</p>
-<p>import pymysql.cursors</p>
-<h1 id="open-database-connection-2">Open database connection <a href="#open-database-connection-2" class="anchor" aria-hidden="true">#</a></h1>
-<p>db = pymysql.connect(&ldquo;localhost&rdquo;,&ldquo;testuser&rdquo;,&ldquo;test123&rdquo;,&ldquo;TESTDB&rdquo; )</p>
-<h1 id="prepare-a-cursor-object-using-cursor-method-2">prepare a cursor object using cursor() method <a href="#prepare-a-cursor-object-using-cursor-method-2" class="anchor" aria-hidden="true">#</a></h1>
-<p>cursor = db.cursor()</p>
-<h1 id="prepare-sql-query-to-insert-a-record-into-the-database">Prepare SQL query to INSERT a record into the database. <a href="#prepare-sql-query-to-insert-a-record-into-the-database" class="anchor" aria-hidden="true">#</a></h1>
-<p>sql = &ldquo;&ldquo;&ldquo;INSERT INTO EMPLOYEE(FIRST_NAME,
-LAST_NAME, AGE, SEX, INCOME)
-VALUES (&lsquo;Mac&rsquo;, &lsquo;Mohan&rsquo;, 20, &lsquo;M&rsquo;, 2000)&rdquo;&rdquo;&rdquo;
-try:</p>
-<h1 id="execute-the-sql-command">Execute the SQL command <a href="#execute-the-sql-command" class="anchor" aria-hidden="true">#</a></h1>
-<p>cursor.execute(sql)</p>
-<h1 id="commit-your-changes-in-the-database">Commit your changes in the database <a href="#commit-your-changes-in-the-database" class="anchor" aria-hidden="true">#</a></h1>
-<p>db.commit()
-except:</p>
-<h1 id="rollback-in-case-there-is-any-error">Rollback in case there is any error <a href="#rollback-in-case-there-is-any-error" class="anchor" aria-hidden="true">#</a></h1>
-<p>db.rollback()</p>
-<h1 id="disconnect-from-server-2">disconnect from server <a href="#disconnect-from-server-2" class="anchor" aria-hidden="true">#</a></h1>
-<p>db.close()
-Contoh di atas bisa dituliskan sebagai berikut untuk membuat query SQL secara dinamis</p>
-<p>import pymysql.cursors</p>
-<h1 id="open-database-connection-3">Open database connection <a href="#open-database-connection-3" class="anchor" aria-hidden="true">#</a></h1>
-<p>db = pymysql.connect(&ldquo;localhost&rdquo;,&ldquo;testuser&rdquo;,&ldquo;test123&rdquo;,&ldquo;TESTDB&rdquo; )</p>
-<h1 id="prepare-a-cursor-object-using-cursor-method-3">prepare a cursor object using cursor() method <a href="#prepare-a-cursor-object-using-cursor-method-3" class="anchor" aria-hidden="true">#</a></h1>
-<p>cursor = db.cursor()</p>
-<h1 id="prepare-sql-query-to-insert-a-record-into-the-database-1">Prepare SQL query to INSERT a record into the database. <a href="#prepare-sql-query-to-insert-a-record-into-the-database-1" class="anchor" aria-hidden="true">#</a></h1>
-<p>sql = &ldquo;INSERT INTO EMPLOYEE(FIRST_NAME,<br>
-LAST_NAME, AGE, SEX, INCOME)<br>
-VALUES ('%s', &lsquo;%s&rsquo;, &lsquo;%d&rsquo;, &lsquo;%c&rsquo;, &lsquo;%d&rsquo; )&rdquo; %<br>
-(&lsquo;Mac&rsquo;, &lsquo;Mohan&rsquo;, 20, &lsquo;M&rsquo;, 2000)
-try:</p>
-<h1 id="execute-the-sql-command-1">Execute the SQL command <a href="#execute-the-sql-command-1" class="anchor" aria-hidden="true">#</a></h1>
-<p>cursor.execute(sql)</p>
-<h1 id="commit-your-changes-in-the-database-1">Commit your changes in the database <a href="#commit-your-changes-in-the-database-1" class="anchor" aria-hidden="true">#</a></h1>
-<p>db.commit()
-except:</p>
-<h1 id="rollback-in-case-there-is-any-error-1">Rollback in case there is any error <a href="#rollback-in-case-there-is-any-error-1" class="anchor" aria-hidden="true">#</a></h1>
-<p>db.rollback()</p>
-<h1 id="disconnect-from-server-3">disconnect from server <a href="#disconnect-from-server-3" class="anchor" aria-hidden="true">#</a></h1>
-<p>db.close()
-Read Operation
-READ Operation pada database apapun berarti mengambil beberapa informasi berguna dari database.</p>
-<p>Setelah koneksi database terbentuk, Anda siap untuk membuat query ke dalam database ini. Anda bisa menggunakan metode fetchone() untuk mengambil satu record atau fetchall() metode untuk mengambil beberapa nilai dari tabel database.</p>
-<p>Fetchone () - Ini mengambil baris berikut dari kumpulan hasil query. Set hasil adalah objek yang dikembalikan saat objek kursor digunakan untuk query tabel.</p>
-<p>Fetchall () - Ini menjemput semua baris dalam kumpulan hasil. Jika beberapa baris telah diekstraksi dari himpunan hasil, maka akan diambil baris yang tersisa dari kumpulan hasil.</p>
-<p>Rowcount - Ini adalah atribut read-only dan mengembalikan jumlah baris yang dipengaruhi oleh metode execute ().</p>
-<p>Prosedur berikut menanyakan semua catatan dari tabel EMPLOYEE yang memiliki gaji lebih dari 1000</p>
-<p>import pymysql.cursors</p>
-<h1 id="open-database-connection-4">Open database connection <a href="#open-database-connection-4" class="anchor" aria-hidden="true">#</a></h1>
-<p>db = pymysql.connect(&ldquo;localhost&rdquo;,&ldquo;testuser&rdquo;,&ldquo;test123&rdquo;,&ldquo;TESTDB&rdquo; )</p>
-<h1 id="prepare-a-cursor-object-using-cursor-method-4">prepare a cursor object using cursor() method <a href="#prepare-a-cursor-object-using-cursor-method-4" class="anchor" aria-hidden="true">#</a></h1>
-<p>cursor = db.cursor()</p>
-<h1 id="prepare-sql-query-to-insert-a-record-into-the-database-2">Prepare SQL query to INSERT a record into the database. <a href="#prepare-sql-query-to-insert-a-record-into-the-database-2" class="anchor" aria-hidden="true">#</a></h1>
-<p>sql = &ldquo;SELECT * FROM EMPLOYEE<br>
-WHERE INCOME &gt; &lsquo;%d&rsquo;&rdquo; % (1000)
-try:</p>
-<h1 id="execute-the-sql-command-2">Execute the SQL command <a href="#execute-the-sql-command-2" class="anchor" aria-hidden="true">#</a></h1>
-<p>cursor.execute(sql)</p>
-<h1 id="fetch-all-the-rows-in-a-list-of-lists">Fetch all the rows in a list of lists. <a href="#fetch-all-the-rows-in-a-list-of-lists" class="anchor" aria-hidden="true">#</a></h1>
-<p>results = cursor.fetchall()
-for row in results:
-fname = row[0]
-lname = row[1]
-age = row[2]
-sex = row[3]
-income = row[4]
-# Now print fetched result
-print (&ldquo;fname = %s,lname = %s,age = %d,sex = %s,income = %d&rdquo; %<br>
-(fname, lname, age, sex, income ))
+<ul>
+<li>Anda telah membuat database TESTDB.</li>
+<li>Anda telah membuat tabel EMPLOYEE di TESTDB.</li>
+<li>Tabel ini memiliki field FIRST_NAME, LAST_NAME, AGE, SEX, dan INCOME.</li>
+<li>User ID “testuser” dan password “test123” diatur untuk mengakses TESTDB.</li>
+<li>Python modul PyMySQL terinstal dengan benar pada komputer Anda.</li>
+<li>Anda telah melalui tutorial MySQL untuk memahami Dasar-Dasar MySQL</li>
+</ul>
+<p>Berikut ini adalah contoh koneksi dengan database MySQL “TESTDB”</p>
+<pre><code>import pymysql.cursors
+
+## Open database connection
+db = pymysql.connect(&quot;localhost&quot;,&quot;testuser&quot;,&quot;test123&quot;,&quot;TESTDB&quot; )
+
+## prepare a cursor object using cursor() method
+cursor = db.cursor()
+
+## execute SQL query using execute() method.
+cursor.execute(&quot;SELECT VERSION()&quot;)
+
+## Fetch a single row using fetchone() method.
+data = cursor.fetchone()
+
+print (&quot;Database version : %s &quot; % data) 
+
+## disconnect from server
+db.close()
+
+## Open database connection
+db = pymysql.connect(&quot;localhost&quot;,&quot;testuser&quot;,&quot;test123&quot;,&quot;TESTDB&quot; )
+
+## prepare a cursor object using cursor() method
+cursor = db.cursor()
+
+## Drop table if it already exist using execute() method.
+cursor.execute(&quot;DROP TABLE IF EXISTS EMPLOYEE&quot;)
+
+## Create table as per requirement
+sql = &quot;&quot;&quot;CREATE TABLE EMPLOYEE (
+   FIRST_NAME  CHAR(20) NOT NULL,
+   LAST_NAME  CHAR(20),
+   AGE INT,
+   SEX CHAR(1),
+   INCOME FLOAT )&quot;&quot;&quot;
+
+cursor.execute(sql)
+## disconnect from server
+db.close()
+</code></pre>
+<h1 id="operasi-insert">Operasi Insert <a href="#operasi-insert" class="anchor" aria-hidden="true">#</a></h1>
+<p>Contoh berikut, mengeksekusi pernyataan SQL INSERT untuk membuat record di tabel EMPLOYEE</p>
+<pre><code>import pymysql.cursors
+
+## Open database connection
+db = pymysql.connect(&quot;localhost&quot;,&quot;testuser&quot;,&quot;test123&quot;,&quot;TESTDB&quot; )
+
+## prepare a cursor object using cursor() method
+cursor = db.cursor()
+
+## Prepare SQL query to INSERT a record into the database.
+sql = &quot;&quot;&quot;INSERT INTO EMPLOYEE(FIRST_NAME,
+   LAST_NAME, AGE, SEX, INCOME)
+   VALUES ('Mac', 'Mohan', 20, 'M', 2000)&quot;&quot;&quot;
+try:
+   # Execute the SQL command
+   cursor.execute(sql)
+   # Commit your changes in the database
+   db.commit()
 except:
-print (&ldquo;Error: unable to fetch data&rdquo;)</p>
-<h1 id="menutup-koneksi-ke-server">menutup koneksi ke server <a href="#menutup-koneksi-ke-server" class="anchor" aria-hidden="true">#</a></h1>
-<p>db.close()
-Setelah Anda eksekusi kode diatas, akan muncul hasil seperti dibawah ini : fname = Mac, lname = Mohan, age = 20, sex = M, income = 2000</p>
-<p>Update Operation
-Operasi UPDATE pada database apapun berarti mengupdate satu atau lebih catatan, yang sudah tersedia di database. Prosedur berikut memperbarui semua catatan yang memiliki SEX sebagai ‘M’. Di sini, kita meningkatkan UMUR semua laki-laki satu tahun.</p>
-<p>import pymysql.cursors</p>
-<h1 id="open-database-connection-5">Open database connection <a href="#open-database-connection-5" class="anchor" aria-hidden="true">#</a></h1>
-<p>db = pymysql.connect(&ldquo;localhost&rdquo;,&ldquo;testuser&rdquo;,&ldquo;test123&rdquo;,&ldquo;TESTDB&rdquo; )</p>
-<h1 id="prepare-a-cursor-object-using-cursor-method-5">prepare a cursor object using cursor() method <a href="#prepare-a-cursor-object-using-cursor-method-5" class="anchor" aria-hidden="true">#</a></h1>
-<p>cursor = db.cursor()</p>
-<h1 id="prepare-sql-query-to-update-required-records">Prepare SQL query to UPDATE required records <a href="#prepare-sql-query-to-update-required-records" class="anchor" aria-hidden="true">#</a></h1>
-<p>sql = &ldquo;UPDATE EMPLOYEE SET AGE = AGE + 1
-WHERE SEX = &lsquo;%c&rsquo;&rdquo; % (&lsquo;M&rsquo;)
-try:</p>
-<h1 id="execute-the-sql-command-3">Execute the SQL command <a href="#execute-the-sql-command-3" class="anchor" aria-hidden="true">#</a></h1>
-<p>cursor.execute(sql)</p>
-<h1 id="commit-your-changes-in-the-database-2">Commit your changes in the database <a href="#commit-your-changes-in-the-database-2" class="anchor" aria-hidden="true">#</a></h1>
-<p>db.commit()
-except:</p>
-<h1 id="rollback-in-case-there-is-any-error-2">Rollback in case there is any error <a href="#rollback-in-case-there-is-any-error-2" class="anchor" aria-hidden="true">#</a></h1>
-<p>db.rollback()</p>
-<h1 id="disconnect-from-server-4">disconnect from server <a href="#disconnect-from-server-4" class="anchor" aria-hidden="true">#</a></h1>
-<p>db.close()
-Delete Operation
-Operasi DELETE diperlukan bila Anda ingin menghapus beberapa catatan dari database Anda. Berikut ini adalah prosedur untuk menghapus semua catatan dari EMPLOYEE dimana AGE lebih dari 20</p>
-<p>import pymysql.cursors</p>
-<h1 id="open-database-connection-6">Open database connection <a href="#open-database-connection-6" class="anchor" aria-hidden="true">#</a></h1>
-<p>db = pymysql.connect(&ldquo;localhost&rdquo;,&ldquo;testuser&rdquo;,&ldquo;test123&rdquo;,&ldquo;TESTDB&rdquo; )</p>
-<h1 id="prepare-a-cursor-object-using-cursor-method-6">prepare a cursor object using cursor() method <a href="#prepare-a-cursor-object-using-cursor-method-6" class="anchor" aria-hidden="true">#</a></h1>
-<p>cursor = db.cursor()</p>
-<h1 id="prepare-sql-query-to-delete-required-records">Prepare SQL query to DELETE required records <a href="#prepare-sql-query-to-delete-required-records" class="anchor" aria-hidden="true">#</a></h1>
-<p>sql = &ldquo;DELETE FROM EMPLOYEE WHERE AGE &gt; &lsquo;%d&rsquo;&rdquo; % (20)
-try:</p>
-<h1 id="execute-the-sql-command-4">Execute the SQL command <a href="#execute-the-sql-command-4" class="anchor" aria-hidden="true">#</a></h1>
-<p>cursor.execute(sql)</p>
-<h1 id="commit-your-changes-in-the-database-3">Commit your changes in the database <a href="#commit-your-changes-in-the-database-3" class="anchor" aria-hidden="true">#</a></h1>
-<p>db.commit()
-except:</p>
-<h1 id="rollback-in-case-there-is-any-error-3">Rollback in case there is any error <a href="#rollback-in-case-there-is-any-error-3" class="anchor" aria-hidden="true">#</a></h1>
-<p>db.rollback()</p>
-<h1 id="disconnect-from-server-5">disconnect from server <a href="#disconnect-from-server-5" class="anchor" aria-hidden="true">#</a></h1>
-<p>db.close()
-Selain itu masih ada beberapa operasi sebagai berikut :</p>
-<p>Commit Operation db.commit()
-Rollback Operation db.rollback()
-Disconnect Operation db.close()
-Jika Anda menginginkan dokumentasi yang lebih lengkap dari bahasa pemrograman python, silahkan buka dokumentasi resmi dari Python</p>
+   # Rollback in case there is any error
+   db.rollback()
+## disconnect from server
+
+db.close()
+</code></pre>
+<p>Contoh di atas bisa dituliskan sebagai berikut untuk membuat query SQL secara dinamis</p>
+<pre><code>import pymysql.cursors
+
+## Open database connection
+db = pymysql.connect(&quot;localhost&quot;,&quot;testuser&quot;,&quot;test123&quot;,&quot;TESTDB&quot; )
+
+## prepare a cursor object using cursor() method
+`cursor = db.cursor()`
+
+## Prepare SQL query to INSERT a record into the database.
+
+sql = &quot;INSERT INTO EMPLOYEE(FIRST_NAME, \
+   LAST_NAME, AGE, SEX, INCOME) \
+   VALUES ('%s', '%s', '%d', '%c', '%d' )&quot; % \
+   ('Mac', 'Mohan', 20, 'M', 2000)
+try:
+   # Execute the SQL command
+   cursor.execute(sql)
+   # Commit your changes in the database
+   db.commit()
+except:
+   # Rollback in case there is any error
+   db.rollback()
+
+## disconnect from server
+db.close()
+</code></pre>
+<h1 id="read-operation">Read Operation <a href="#read-operation" class="anchor" aria-hidden="true">#</a></h1>
+<p>READ Operation pada database apapun berarti mengambil beberapa informasi berguna dari database. Setelah koneksi database terbentuk, kita dapat untuk membuat query ke dalam database. Kita dapat menggunakan metode fetchone() untuk mengambil satu record atau fetchall() metode untuk mengambil beberapa nilai dari tabel database.</p>
+<ul>
+<li>
+<p>Fetchone () - Ini mengambil baris berikut dari kumpulan hasil query. Set hasil adalah objek yang dikembalikan saat objek kursor digunakan untuk query tabel.</p>
+</li>
+<li>
+<p>Fetchall () - Ini menjemput semua baris dalam kumpulan hasil. Jika beberapa baris telah diekstraksi dari himpunan hasil, maka akan diambil baris yang tersisa dari kumpulan hasil.</p>
+</li>
+<li>
+<p>Rowcount - Ini adalah atribut read-only dan mengembalikan jumlah baris yang dipengaruhi oleh metode execute ().</p>
+</li>
+</ul>
+<p>Berikut ini contoh untuk menampilkan record dari tabel EMPLOYEE yang memiliki gaji lebih dari 1000</p>
+<pre><code>import pymysql.cursors
+
+# Open database connection
+db = pymysql.connect(&quot;localhost&quot;,&quot;testuser&quot;,&quot;test123&quot;,&quot;TESTDB&quot; )
+
+# prepare a cursor object using cursor() method
+cursor = db.cursor()
+
+# Prepare SQL query to INSERT a record into the database.
+sql = &quot;SELECT * FROM EMPLOYEE \
+       WHERE INCOME &gt; '%d'&quot; % (1000)
+try:
+   # Execute the SQL command
+   cursor.execute(sql)
+   # Fetch all the rows in a list of lists.
+   results = cursor.fetchall()
+   for row in results:
+      fname = row[0]
+      lname = row[1]
+      age = row[2]
+      sex = row[3]
+      income = row[4]
+      # Now print fetched result
+      print (&quot;fname = %s,lname = %s,age = %d,sex = %s,income = %d&quot; % \
+             (fname, lname, age, sex, income ))
+except:
+   print (&quot;Error: unable to fetch data&quot;)
+
+# menutup koneksi ke server
+db.close()
+</code></pre>
+<p>Setelah perintah diatas dieksekusi, akan muncul hasil seperti dibawah ini :
+<code>fname = Mac, lname = Mohan, age = 20, sex = M, income = 2000</code></p>
+<h1 id="update-operation">Update Operation <a href="#update-operation" class="anchor" aria-hidden="true">#</a></h1>
+<p>Operasi UPDATE pada database berarti mengupdate satu atau lebih record, yang sudah tersedia di database. Contoh berikut memperbarui semua record yang memiliki SEX sebagai ‘M’. Di sini, kita meningkatkan UMUR semua laki-laki satu tahun.</p>
+<pre><code>import pymysql.cursors
+
+# Open database connection
+db = pymysql.connect(&quot;localhost&quot;,&quot;testuser&quot;,&quot;test123&quot;,&quot;TESTDB&quot; )
+
+# prepare a cursor object using cursor() method
+cursor = db.cursor()
+
+# Prepare SQL query to UPDATE required records
+sql = &quot;UPDATE EMPLOYEE SET AGE = AGE + 1
+                          WHERE SEX = '%c'&quot; % ('M')
+try:
+   # Execute the SQL command
+   cursor.execute(sql)
+   # Commit your changes in the database
+   db.commit()
+except:
+   # Rollback in case there is any error
+   db.rollback()
+
+# disconnect from server
+db.close()
+</code></pre>
+<h1 id="delete-operation">Delete Operation <a href="#delete-operation" class="anchor" aria-hidden="true">#</a></h1>
+<p>Operasi DELETE diperlukan bila kita ingin menghapus beberapa record dari database. Berikut ini adalah contoh untuk menghapus semua record dari EMPLOYEE dimana AGE lebih dari 20</p>
+<pre><code>import pymysql.cursors
+
+# Open database connection
+db = pymysql.connect(&quot;localhost&quot;,&quot;testuser&quot;,&quot;test123&quot;,&quot;TESTDB&quot; )
+
+# prepare a cursor object using cursor() method
+cursor = db.cursor()
+
+# Prepare SQL query to DELETE required records
+sql = &quot;DELETE FROM EMPLOYEE WHERE AGE &gt; '%d'&quot; % (20)
+try:
+   # Execute the SQL command
+   cursor.execute(sql)
+   # Commit your changes in the database
+   db.commit()
+except:
+   # Rollback in case there is any error
+   db.rollback()
+
+# disconnect from server
+db.close()
+</code></pre>
+<p>Selain itu masih ada beberapa operasi sebagai berikut :</p>
+<ul>
+<li>Commit Operation
+<code>db.commit()</code></li>
+<li>Rollback Operation
+<code>db.rollback()</code></li>
+<li>Disconnect Operation
+<code>db.close()</code></li>
+</ul>
 
 			<div class="page-footer-meta d-flex flex-column flex-md-row justify-content-between">
 				</div>
@@ -858,7 +911,7 @@ Jika Anda menginginkan dokumentasi yang lebih lengkap dari bahasa pemrograman py
 <script src="/js/bootstrap.min.5cdeb20ef814d367b4d5429ada9d342419eb34734de4713a71e5706485eaa75fa8d5d760c7a7f7ef20cb5494737eb8811729431813f22744c177384758c19081.js" integrity="sha512-XN6yDvgU02e01UKa2p00JBnrNHNN5HE6ceVwZIXqp1&#43;o1ddgx6f37yDLVJRzfriBFylDGBPyJ0TBdzhHWMGQgQ==" crossorigin="anonymous" defer></script>
   <script src="/js/highlight.min.6e0bbb1ba7e7c09c5287a998de4147da3f56f6fed3dc91b747789519a1de6486b086542ebb2ed60527cfc4c32b8ce175a08c257392e98d7bb3f09661f2bd5666.js" integrity="sha512-bgu7G6fnwJxSh6mY3kFH2j9W9v7T3JG3R3iVGaHeZIawhlQuuy7WBSfPxMMrjOF1oIwlc5LpjXuz8JZh8r1WZg==" crossorigin="anonymous" defer></script>
   <script src="/main.min.124171d9dd7beef16c3e35cd8394ad0c5ca7699608f699d747030ef0b0c3e4c2782454dd406f78e14ef7336f4a15de8676a808261d92f9b1858f1ec3ff720269.js" integrity="sha512-EkFx2d177vFsPjXNg5StDFynaZYI9pnXRwMO8LDD5MJ4JFTdQG944U73M29KFd6GdqgIJh2S&#43;bGFjx7D/3ICaQ==" crossorigin="anonymous" defer></script>
-  <script src="https://kaban.my.id/index.min.516056de7a682705aaaf783199fa76c00b222be9b0163b7059cc10feb046f8df42bed2e3c3f8c149f54b5406c35e8f10f805631c4b4abcce913a6373fdd82943.js" integrity="sha512-UWBW3npoJwWqr3gxmfp2wAsiK&#43;mwFjtwWcwQ/rBG&#43;N9CvtLjw/jBSfVLVAbDXo8Q&#43;AVjHEtKvM6ROmNz/dgpQw==" crossorigin="anonymous" defer></script>
+  <script src="https://kaban.my.id/index.min.3f4e25b72c4c038a050074a2747ad284ab5ebbf72994405027d9eac11253a59206a63d44fe079fe75325768f7fb12ea50acfb59f7e995b93921b6ba84ba05c43.js" integrity="sha512-P04ltyxMA4oFAHSidHrShKteu/cplEBQJ9nqwRJTpZIGpj1E/gef51Mldo9/sS6lCs&#43;1n36ZW5OSG2uoS6BcQw==" crossorigin="anonymous" defer></script>
   
     <div class="d-flex fixed-bottom pb-4 pb-lg-5 pe-4 pe-lg-5">
       <a id="toTop" href="#" class="btn btn-outline-primary rounded-circle ms-auto p-2"><span class="visually-hidden">Top</span><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-chevron-up"><polyline points="18 15 12 9 6 15"></polyline></svg></a>

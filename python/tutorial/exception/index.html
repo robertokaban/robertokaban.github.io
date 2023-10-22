@@ -541,7 +541,37 @@
 			</nav>
 		</div>
 		<nav class="docs-toc d-none d-xl-block col-xl-3" aria-label="Secondary navigation">
-			
+			<div class="d-xl-none">
+  <button class="btn btn-outline-primary btn-sm doks-toc-toggle collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#onThisPage" aria-controls="doks-docs-nav" aria-expanded="false" aria-label="Toggle On this page navigation">
+    <span>Daftar isi</span>
+    <span>
+      <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" class="doks doks-expand" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><title>Expand</title><polyline points="7 13 12 18 17 13"></polyline><polyline points="7 6 12 11 17 6"></polyline></svg>
+      <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" class="doks doks-collapse" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><title>Collapse</title><polyline points="17 11 12 6 7 11"></polyline><polyline points="17 18 12 13 7 18"></polyline></svg>
+    </span>
+  </button>
+  <div class="collapse" id="onThisPage">
+    <div class="card card-body mt-3 py-1">
+      <div class="page-links">
+        <nav id="TableOfContents">
+  <ul>
+    <li><a href="#exception-handling">Exception Handling</a></li>
+    <li><a href="#standard-exceptions">Standard Exceptions</a></li>
+  </ul>
+</nav>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="page-links d-none d-xl-block">
+  <h3>Daftar isi</h3>
+  <nav id="TableOfContents">
+  <ul>
+    <li><a href="#exception-handling">Exception Handling</a></li>
+    <li><a href="#standard-exceptions">Standard Exceptions</a></li>
+  </ul>
+</nav>
+  </div>
+
 		</nav>
 		<main class="docs-content col-lg-11 col-xl-9">
 		
@@ -557,43 +587,169 @@
 			<h1>Exception</h1>
 			<p class="lead">Exception dalam Python.</p>
 			<nav class="d-xl-none" aria-label="Quaternary navigation">
-				
+				<div class="d-xl-none">
+  <button class="btn btn-outline-primary btn-sm doks-toc-toggle collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#onThisPage" aria-controls="doks-docs-nav" aria-expanded="false" aria-label="Toggle On this page navigation">
+    <span>Daftar isi</span>
+    <span>
+      <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" class="doks doks-expand" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><title>Expand</title><polyline points="7 13 12 18 17 13"></polyline><polyline points="7 6 12 11 17 6"></polyline></svg>
+      <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" class="doks doks-collapse" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><title>Collapse</title><polyline points="17 11 12 6 7 11"></polyline><polyline points="17 18 12 13 7 18"></polyline></svg>
+    </span>
+  </button>
+  <div class="collapse" id="onThisPage">
+    <div class="card card-body mt-3 py-1">
+      <div class="page-links">
+        <nav id="TableOfContents">
+  <ul>
+    <li><a href="#exception-handling">Exception Handling</a></li>
+    <li><a href="#standard-exceptions">Standard Exceptions</a></li>
+  </ul>
+</nav>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="page-links d-none d-xl-block">
+  <h3>Daftar isi</h3>
+  <nav id="TableOfContents">
+  <ul>
+    <li><a href="#exception-handling">Exception Handling</a></li>
+    <li><a href="#standard-exceptions">Standard Exceptions</a></li>
+  </ul>
+</nav>
+  </div>
+
 			</nav>
 			<p>Python menyediakan dua fitur yang sangat penting untuk menangani kesalahan tak terduga dalam program Python Anda dan menambahkan kemampuan debugging di dalamnya.</p>
-<p>Exception Handling
-Assertions Exception adalah sebuah peristiwa, yang terjadi selama pelaksanaan program yang mengganggu aliran normal instruksi program. Secara umum, ketika skrip Python menemukan situasi yang tidak dapat diatasi, hal itu menimbulkan pengecualian. Exception adalah objek Python yang mewakili kesalahan.
-Ketika skrip Python menimbulkan Exception, ia harus menangani Exception begitu saja sehingga berhenti dan berhenti.</p>
-<p>Standard Exceptions
-Nama	Penjelasan
-Exception	Kelas dasar untuk semua pengecualian / exception
-StopIteration	Dibesarkan ketika metode (iterator) berikutnya dari iterator tidak mengarah ke objek apa pun.
-SystemExit	Dibesarkan oleh fungsi sys.exit ().
-StandardError	Kelas dasar untuk semua pengecualian built-in kecuali StopIteration dan SystemExit.
-ArithmeticError	Kelas dasar untuk semua kesalahan yang terjadi untuk perhitungan numerik.
-OverflowError	Dibesarkan saat perhitungan melebihi batas maksimum untuk tipe numerik.
-FloatingPointError	Dibesarkan saat perhitungan floating point gagal.
-ZeroDivisonError	Dibesarkan saat pembagian atau modulo nol dilakukan untuk semua tipe numerik.
-AssertionError	Dibesarkan jika terjadi kegagalan pernyataan Assert.
-AttributeError	Dibesarkan jika terjadi kegagalan referensi atribut atau penugasan.
-EOFError	Dibesarkan bila tidak ada input dari fungsi raw_input () atau input () dan akhir file tercapai.
-ImportError	Dibesarkan saat sebuah pernyataan impor gagal.
-KeyboardInterrupt	Dibesarkan saat pengguna menyela eksekusi program, biasanya dengan menekan Ctrl + c.
-LookupError	Kelas dasar untuk semua kesalahan pencarian.
-IndexError	Dibesarkan saat sebuah indeks tidak ditemukan secara berurutan.
-KeyError	Dibesarkan saat kunci yang ditentukan tidak ditemukan dalam kamus.
-NameError	Dibesarkan saat pengenal tidak ditemukan di namespace lokal atau global.
-UnboundLocalError	Dibesarkan saat mencoba mengakses variabel lokal dalam suatu fungsi atau metode namun tidak ada nilai yang ditugaskan padanya.
-EnvironmentError	Kelas dasar untuk semua pengecualian yang terjadi di luar lingkungan Python.
-IOError	Dibesarkan saat operasi input / output gagal, seperti pernyataan cetak atau fungsi open () saat mencoba membuka file yang tidak ada.
-OSError	Dibangkitkan untuk kesalahan terkait sistem operasi.
-SyntaxError	Dibesarkan saat ada kesalahan dengan sintaks Python.
-IndentationError	Dibesarkan saat indentasi tidak ditentukan dengan benar.
-SystemError	Dibesarkan saat penafsir menemukan masalah internal, namun bila kesalahan ini ditemui juru bahasa Python tidak keluar.
-SystemExit	Dibesarkan saat juru bahasa Python berhenti dengan menggunakan fungsi sys.exit (). Jika tidak ditangani dalam kode, menyebabkan penafsir untuk keluar.
-TypeError	Dibesarkan saat operasi atau fungsi dicoba yang tidak valid untuk tipe data yang ditentukan.
-ValueError	Dibesarkan ketika fungsi bawaan untuk tipe data memiliki jenis argumen yang valid, namun argumen tersebut memiliki nilai yang tidak valid yang ditentukan.
-RuntimeError	Dibesarkan saat kesalahan yang dihasilkan tidak termasuk dalam kategori apa pun.
-NotImplementedError	Dibesarkan ketika metode abstrak yang perlu diimplementasikan di kelas warisan sebenarnya tidak dilaksanakan.</p>
+<h2 id="exception-handling">Exception Handling <a href="#exception-handling" class="anchor" aria-hidden="true">#</a></h2>
+<p>Assertions Exception adalah sebuah peristiwa, yang terjadi selama pelaksanaan program yang mengganggu aliran normal instruksi program. Secara umum, ketika skrip Python menemukan situasi yang tidak dapat diatasi, hal itu menimbulkan pengecualian. Exception adalah objek Python yang mewakili kesalahan.
+Ketika skrip Python menimbulkan Exception, maka harus menangani Exception begitu saja sehingga berhenti dan berhenti.</p>
+<h2 id="standard-exceptions">Standard Exceptions <a href="#standard-exceptions" class="anchor" aria-hidden="true">#</a></h2>
+<table>
+<thead>
+<tr>
+<th>Nama</th>
+<th>Penjelasan</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Exception</td>
+<td>Kelas dasar untuk semua pengecualian / exception</td>
+</tr>
+<tr>
+<td>StopIteration</td>
+<td>Ditampilkan ketika metode (iterator) berikutnya dari iterator tidak mengarah ke objek apa pun.</td>
+</tr>
+<tr>
+<td>SystemExit</td>
+<td>Ditampilkan oleh fungsi sys.exit ().</td>
+</tr>
+<tr>
+<td>StandardError</td>
+<td>Kelas dasar untuk semua pengecualian built-in kecuali StopIteration dan SystemExit.</td>
+</tr>
+<tr>
+<td>ArithmeticError</td>
+<td>Kelas dasar untuk semua kesalahan yang terjadi untuk perhitungan numerik.</td>
+</tr>
+<tr>
+<td>OverflowError</td>
+<td>Ditampilkan saat perhitungan melebihi batas maksimum untuk tipe numerik.</td>
+</tr>
+<tr>
+<td>FloatingPointError</td>
+<td>Ditampilkan saat perhitungan floating point gagal.</td>
+</tr>
+<tr>
+<td>ZeroDivisonError</td>
+<td>Ditampilkan saat pembagian atau modulo nol dilakukan untuk semua tipe numerik.</td>
+</tr>
+<tr>
+<td>AssertionError</td>
+<td>Ditampilkan jika terjadi kegagalan pernyataan Assert.</td>
+</tr>
+<tr>
+<td>AttributeError</td>
+<td>Ditampilkan jika terjadi kegagalan referensi atribut atau penugasan.</td>
+</tr>
+<tr>
+<td>EOFError</td>
+<td>Ditampilkan bila tidak ada input dari fungsi raw_input () atau input () dan akhir file tercapai.</td>
+</tr>
+<tr>
+<td>ImportError</td>
+<td>Ditampilkan saat sebuah pernyataan impor gagal.</td>
+</tr>
+<tr>
+<td>KeyboardInterrupt</td>
+<td>Ditampilkan saat pengguna menyela eksekusi program, biasanya dengan menekan Ctrl + c.</td>
+</tr>
+<tr>
+<td>LookupError</td>
+<td>Kelas dasar untuk semua kesalahan pencarian.</td>
+</tr>
+<tr>
+<td>IndexError</td>
+<td>Ditampilkan saat sebuah indeks tidak ditemukan secara berurutan.</td>
+</tr>
+<tr>
+<td>KeyError</td>
+<td>Ditampilkan saat kunci yang ditentukan tidak ditemukan dalam kamus.</td>
+</tr>
+<tr>
+<td>NameError</td>
+<td>Ditampilkan saat pengenal tidak ditemukan di namespace lokal atau global.</td>
+</tr>
+<tr>
+<td>UnboundLocalError</td>
+<td>Ditampilkan saat mencoba mengakses variabel lokal dalam suatu fungsi atau metode namun tidak ada nilai yang ditugaskan padanya.</td>
+</tr>
+<tr>
+<td>EnvironmentError</td>
+<td>Kelas dasar untuk semua pengecualian yang terjadi di luar lingkungan Python.</td>
+</tr>
+<tr>
+<td>IOError</td>
+<td>Ditampilkan saat operasi input / output gagal, seperti pernyataan cetak atau fungsi open () saat mencoba membuka file yang tidak ada.</td>
+</tr>
+<tr>
+<td>OSError</td>
+<td>Dibangkitkan untuk kesalahan terkait sistem operasi.</td>
+</tr>
+<tr>
+<td>SyntaxError</td>
+<td>Ditampilkan saat ada kesalahan dengan sintaks Python.</td>
+</tr>
+<tr>
+<td>IndentationError</td>
+<td>Ditampilkan saat indentasi tidak ditentukan dengan benar.</td>
+</tr>
+<tr>
+<td>SystemError</td>
+<td>Ditampilkan saat penafsir menemukan masalah internal, namun bila kesalahan ini ditemui juru bahasa Python tidak keluar.</td>
+</tr>
+<tr>
+<td>SystemExit</td>
+<td>Ditampilkan saat juru bahasa Python berhenti dengan menggunakan fungsi sys.exit (). Jika tidak ditangani dalam kode, menyebabkan penafsir untuk keluar.</td>
+</tr>
+<tr>
+<td>TypeError</td>
+<td>Ditampilkan saat operasi atau fungsi dicoba yang tidak valid untuk tipe data yang ditentukan.</td>
+</tr>
+<tr>
+<td>ValueError</td>
+<td>Ditampilkan ketika fungsi bawaan untuk tipe data memiliki jenis argumen yang valid, namun argumen tersebut memiliki nilai yang tidak valid yang ditentukan.</td>
+</tr>
+<tr>
+<td>RuntimeError</td>
+<td>Ditampilkan saat kesalahan yang dihasilkan tidak termasuk dalam kategori apa pun.</td>
+</tr>
+<tr>
+<td>NotImplementedError</td>
+<td>Ditampilkan ketika metode abstrak yang perlu diimplementasikan di kelas warisan sebenarnya tidak dilaksanakan.</td>
+</tr>
+</tbody>
+</table>
 
 			<div class="page-footer-meta d-flex flex-column flex-md-row justify-content-between">
 				</div>
@@ -643,7 +799,7 @@ NotImplementedError	Dibesarkan ketika metode abstrak yang perlu diimplementasika
 <script src="/js/bootstrap.min.5cdeb20ef814d367b4d5429ada9d342419eb34734de4713a71e5706485eaa75fa8d5d760c7a7f7ef20cb5494737eb8811729431813f22744c177384758c19081.js" integrity="sha512-XN6yDvgU02e01UKa2p00JBnrNHNN5HE6ceVwZIXqp1&#43;o1ddgx6f37yDLVJRzfriBFylDGBPyJ0TBdzhHWMGQgQ==" crossorigin="anonymous" defer></script>
   <script src="/js/highlight.min.6e0bbb1ba7e7c09c5287a998de4147da3f56f6fed3dc91b747789519a1de6486b086542ebb2ed60527cfc4c32b8ce175a08c257392e98d7bb3f09661f2bd5666.js" integrity="sha512-bgu7G6fnwJxSh6mY3kFH2j9W9v7T3JG3R3iVGaHeZIawhlQuuy7WBSfPxMMrjOF1oIwlc5LpjXuz8JZh8r1WZg==" crossorigin="anonymous" defer></script>
   <script src="/main.min.124171d9dd7beef16c3e35cd8394ad0c5ca7699608f699d747030ef0b0c3e4c2782454dd406f78e14ef7336f4a15de8676a808261d92f9b1858f1ec3ff720269.js" integrity="sha512-EkFx2d177vFsPjXNg5StDFynaZYI9pnXRwMO8LDD5MJ4JFTdQG944U73M29KFd6GdqgIJh2S&#43;bGFjx7D/3ICaQ==" crossorigin="anonymous" defer></script>
-  <script src="https://kaban.my.id/index.min.516056de7a682705aaaf783199fa76c00b222be9b0163b7059cc10feb046f8df42bed2e3c3f8c149f54b5406c35e8f10f805631c4b4abcce913a6373fdd82943.js" integrity="sha512-UWBW3npoJwWqr3gxmfp2wAsiK&#43;mwFjtwWcwQ/rBG&#43;N9CvtLjw/jBSfVLVAbDXo8Q&#43;AVjHEtKvM6ROmNz/dgpQw==" crossorigin="anonymous" defer></script>
+  <script src="https://kaban.my.id/index.min.3f4e25b72c4c038a050074a2747ad284ab5ebbf72994405027d9eac11253a59206a63d44fe079fe75325768f7fb12ea50acfb59f7e995b93921b6ba84ba05c43.js" integrity="sha512-P04ltyxMA4oFAHSidHrShKteu/cplEBQJ9nqwRJTpZIGpj1E/gef51Mldo9/sS6lCs&#43;1n36ZW5OSG2uoS6BcQw==" crossorigin="anonymous" defer></script>
   
     <div class="d-flex fixed-bottom pb-4 pb-lg-5 pe-4 pe-lg-5">
       <a id="toTop" href="#" class="btn btn-outline-primary rounded-circle ms-auto p-2"><span class="visually-hidden">Top</span><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-chevron-up"><polyline points="18 15 12 9 6 15"></polyline></svg></a>

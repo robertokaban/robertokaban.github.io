@@ -23,8 +23,9 @@ Python digunakan untuk:
       <pubDate>Sun, 06 Dec 2020 08:49:31 +0000</pubDate>
       
       <guid>https://kaban.my.id/python/tutorial/instalasi-python/</guid>
-      <description>Cek Instalasi Python # Untuk memeriksa apakah Anda telah menginstal python pada PC Windows, buka command prompt Windows, atau dari menu Run dengan menekan tombol Winkey + R kemudian ketikkan &amp;lsquo;cmd&amp;rsquo; kemudian tekan enter, selanjutnya ketikkan python --version seperti contoh dibawah:
-C:\Users\ Your Name&amp;gt;python --version  Untuk memeriksa apakah Anda telah menginstal python di Linux atau Mac, lalu di linux buka command prompt atau di Mac buka Terminal dan ketik:</description>
+      <description>Cek Instalasi Python # Untuk mengetahui apakah kita telah menginstal python (Windows), buka command prompt Windows, atau dari menu Run dengan menekan tombol Winkey + R kemudian ketikkan &amp;lsquo;cmd&amp;rsquo; kemudian tekan enter, selanjutnya ketikkan python --version seperti contoh dibawah:
+C:\Users\ Your Name&amp;gt;python --version  Untuk OS Linux atau Mac, buka command prompt (linux) atau di Mac buka Terminal dan ketik:
+python --version  Instalasi Python # Jika belum menginstal Python, silakan download secara gratis dari situs resminya python.</description>
     </item>
     
     <item>
@@ -33,8 +34,8 @@ C:\Users\ Your Name&amp;gt;python --version  Untuk memeriksa apakah Anda telah m
       <pubDate>Sun, 06 Dec 2020 08:49:31 +0000</pubDate>
       
       <guid>https://kaban.my.id/python/tutorial/menjalankan-python/</guid>
-      <description>Untuk menjalankan Python ada banyak cara yang bisa dilakukan. Anda bisa menggunakan shell, terminal atau menggunakan IDE (Integrated Development Environment). Di bawah ini adalah langkah-langkah menjalankan Python dengan cara yang paling mudah.
-Cara menjalankan file python di Linux # Buka terminal CTRL+ALT+T Ketik python maka Anda akan masuk ke Python shell. Tuliskan script Python Anda, contoh: print(&amp;quot;Selamat datang di Python&amp;quot;). jika sudah tekan tombol ENTER, dan script Python akan dijalankan/eksekusi. Untuk keluar dari Python shell ketik exit() atau</description>
+      <description>Untuk menjalankan Python ada banyak cara yang bisa dilakukan. Kita dapat menggunakan shell, terminal atau menggunakan IDE (Integrated Development Environment). Di bawah ini adalah langkah-langkah menjalankan Python dengan cara yang paling mudah.
+Cara menjalankan file python di Linux #  Buka terminal CTRL+ALT+T Ketik python maka akan masuk ke Python shell. Tuliskan script Python, contoh: print(&amp;quot;Selamat datang di Python&amp;quot;). jika sudah tekan tombol ENTER, dan script Python akan dijalankan/eksekusi. Untuk keluar dari Python shell ketik exit()  atau</description>
     </item>
     
     <item>
@@ -54,9 +55,9 @@ Jika ingin mencetak tipe data String langsung, Anda harus memasukanya ke dalam t
       <pubDate>Sun, 06 Dec 2020 08:49:31 +0000</pubDate>
       
       <guid>https://kaban.my.id/python/tutorial/komentar-program/</guid>
-      <description>Apa itu komentar program? # Komentar (comment) adalah kode di dalam script Python yang tidak dieksekusi atau tidak dijalankan mesin. Komentar hanya digunakan untuk menandai atau memberikan keterangan tertulis pada script.
+      <description>Apa itu komentar program? # Komentar (comment) adalah kode di dalam script Python yang tidak dieksekusi atau tidak dijalankan komputer. Komentar hanya digunakan untuk menandai atau memberikan keterangan tertulis pada script.
 Komentar biasa digunakan untuk membiarkan orang lain memahami apa yang dilakukan script. atau untuk mengingatkan kepada programmer sendiri jika suatu saat kembali mengedit script tersebut.
-Untuk menggunakan komentar anda cukup menulis tanda pagar #, diikuti dengan komentar Anda.
+Untuk menggunakan komentar Kita cukup menulis tanda pagar #, diikuti dengan komentar.
 Dibawah ini adalah contoh penggunaan komentar pada Python</description>
     </item>
     

@@ -541,7 +541,39 @@
 			</nav>
 		</div>
 		<nav class="docs-toc d-none d-xl-block col-xl-3" aria-label="Secondary navigation">
-			
+			<div class="d-xl-none">
+  <button class="btn btn-outline-primary btn-sm doks-toc-toggle collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#onThisPage" aria-controls="doks-docs-nav" aria-expanded="false" aria-label="Toggle On this page navigation">
+    <span>Daftar isi</span>
+    <span>
+      <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" class="doks doks-expand" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><title>Expand</title><polyline points="7 13 12 18 17 13"></polyline><polyline points="7 6 12 11 17 6"></polyline></svg>
+      <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" class="doks doks-collapse" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><title>Collapse</title><polyline points="17 11 12 6 7 11"></polyline><polyline points="17 18 12 13 7 18"></polyline></svg>
+    </span>
+  </button>
+  <div class="collapse" id="onThisPage">
+    <div class="card card-body mt-3 py-1">
+      <div class="page-links">
+        <nav id="TableOfContents">
+  <ul>
+    <li><a href="#print">Print</a></li>
+    <li><a href="#membaca-input-keyboard">Membaca Input Keyboard</a></li>
+    <li><a href="#fungsi-input-python">Fungsi Input Python</a></li>
+  </ul>
+</nav>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="page-links d-none d-xl-block">
+  <h3>Daftar isi</h3>
+  <nav id="TableOfContents">
+  <ul>
+    <li><a href="#print">Print</a></li>
+    <li><a href="#membaca-input-keyboard">Membaca Input Keyboard</a></li>
+    <li><a href="#fungsi-input-python">Fungsi Input Python</a></li>
+  </ul>
+</nav>
+  </div>
+
 		</nav>
 		<main class="docs-content col-lg-11 col-xl-9">
 		
@@ -557,49 +589,61 @@
 			<h1>Input Output di dalam Python</h1>
 			<p class="lead">Input Output di dalam Python.</p>
 			<nav class="d-xl-none" aria-label="Quaternary navigation">
-				
+				<div class="d-xl-none">
+  <button class="btn btn-outline-primary btn-sm doks-toc-toggle collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#onThisPage" aria-controls="doks-docs-nav" aria-expanded="false" aria-label="Toggle On this page navigation">
+    <span>Daftar isi</span>
+    <span>
+      <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" class="doks doks-expand" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><title>Expand</title><polyline points="7 13 12 18 17 13"></polyline><polyline points="7 6 12 11 17 6"></polyline></svg>
+      <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" class="doks doks-collapse" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><title>Collapse</title><polyline points="17 11 12 6 7 11"></polyline><polyline points="17 18 12 13 7 18"></polyline></svg>
+    </span>
+  </button>
+  <div class="collapse" id="onThisPage">
+    <div class="card card-body mt-3 py-1">
+      <div class="page-links">
+        <nav id="TableOfContents">
+  <ul>
+    <li><a href="#print">Print</a></li>
+    <li><a href="#membaca-input-keyboard">Membaca Input Keyboard</a></li>
+    <li><a href="#fungsi-input-python">Fungsi Input Python</a></li>
+  </ul>
+</nav>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="page-links d-none d-xl-block">
+  <h3>Daftar isi</h3>
+  <nav id="TableOfContents">
+  <ul>
+    <li><a href="#print">Print</a></li>
+    <li><a href="#membaca-input-keyboard">Membaca Input Keyboard</a></li>
+    <li><a href="#fungsi-input-python">Fungsi Input Python</a></li>
+  </ul>
+</nav>
+  </div>
+
 			</nav>
-			<p>Disini kita akan belajar semua fungsi dasar I/O yang tersedia pada Python 3. Jika Anda ingin mempelajari lebih detail, lihat dokumentasi standar Python.</p>
-<p>Print
-Cara termudah untuk menghasilkan output adalah dengan menggunakan pernyataan cetak di mana Anda bisa melewati nol atau lebih banyak ekspresi yang dipisahkan dengan koma. Fungsi ini mengubah ekspresi yang Anda berikan ke string dan menulis hasilnya ke output standar sebagai berikut :</p>
-<p>print (&ldquo;Python adalah bahasa pemrograman yang hebat&rdquo;)
-Membaca Input Keyboard
-Python 2 memiliki dua fungsi built-in untuk membaca data dari input standar, yang secara default berasal dari keyboard. Fungsi ini adalah input() dan raw_input()</p>
-<p>Dengan Python 3, fungsi raw_input() tidak digunakan lagi. Selain itu, input() berfungsi membaca data dari keyboard sebagai string, terlepas dari apakah itu tertutup dengan tanda kutip (‘’ atau ‘”) atau tidak.</p>
-<p>Fungsi Input Python
-Fungsi input([prompt]) setara dengan raw_input, kecuali mengasumsikan bahwa input adalah ekspresi Python yang valid dan mengembalikan hasil yang dievaluasi ke Anda.</p>
-<blockquote>
-<blockquote>
-<blockquote>
-<p>x = input(&ldquo;something:&quot;)
-something:10</p>
-</blockquote>
-</blockquote>
-</blockquote>
-<blockquote>
-<blockquote>
-<blockquote>
-<p>x
-&lsquo;10&rsquo;</p>
-</blockquote>
-</blockquote>
-</blockquote>
-<blockquote>
-<blockquote>
-<blockquote>
-<p>x = input(&ldquo;something:&quot;)
-something:&lsquo;10&rsquo; #entered data treated as string with or without ''</p>
-</blockquote>
-</blockquote>
-</blockquote>
-<blockquote>
-<blockquote>
-<blockquote>
-<p>x
-&ldquo;&lsquo;10&rsquo;&rdquo;</p>
-</blockquote>
-</blockquote>
-</blockquote>
+			<p>Disini kita akan belajar semua fungsi dasar I/O yang tersedia pada Python 3.</p>
+<h2 id="print">Print <a href="#print" class="anchor" aria-hidden="true">#</a></h2>
+<p>Cara termudah untuk menghasilkan output adalah dengan menggunakan pernyataan cetak di mana Kita bisa melewati nol atau lebih banyak ekspresi yang dipisahkan dengan koma. Fungsi ini mengubah ekspresi yang Kita berikan ke string dan menulis hasilnya ke output standar sebagai berikut :</p>
+<p><code>print (&quot;Python adalah bahasa pemrograman yang hebat&quot;)</code></p>
+<h2 id="membaca-input-keyboard">Membaca Input Keyboard <a href="#membaca-input-keyboard" class="anchor" aria-hidden="true">#</a></h2>
+<p>Python 2 memiliki dua fungsi built-in untuk membaca data dari input standar, yang secara default berasal dari keyboard. Fungsi ini adalah input() dan raw_input()</p>
+<p>Dengan Python 3, fungsi <code>raw_input()</code> tidak digunakan lagi. Selain itu, <code>input()</code> berfungsi membaca data dari keyboard sebagai string, terlepas dari apakah itu tertutup dengan tanda kutip (‘’ atau ‘”) atau tidak.</p>
+<h2 id="fungsi-input-python">Fungsi Input Python <a href="#fungsi-input-python" class="anchor" aria-hidden="true">#</a></h2>
+<p>Fungsi <code>input([prompt])</code> sama dengan <code>raw_input</code>, kecuali mengasumsikan bahwa input adalah ekspresi Python yang valid dan mengembalikan hasil yang smemungkinkan kita evaluasi.</p>
+<pre><code>&gt;&gt;&gt; x = input(&quot;something:&quot;)
+something:10
+
+&gt;&gt;&gt; x
+'10'
+
+&gt;&gt;&gt; x = input(&quot;something:&quot;)
+something:'10' #entered data treated as string with or without ''
+
+&gt;&gt;&gt; x
+&quot;'10'&quot;
+</code></pre>
 
 			<div class="page-footer-meta d-flex flex-column flex-md-row justify-content-between">
 				</div>
@@ -649,7 +693,7 @@ something:&lsquo;10&rsquo; #entered data treated as string with or without ''</p
 <script src="/js/bootstrap.min.5cdeb20ef814d367b4d5429ada9d342419eb34734de4713a71e5706485eaa75fa8d5d760c7a7f7ef20cb5494737eb8811729431813f22744c177384758c19081.js" integrity="sha512-XN6yDvgU02e01UKa2p00JBnrNHNN5HE6ceVwZIXqp1&#43;o1ddgx6f37yDLVJRzfriBFylDGBPyJ0TBdzhHWMGQgQ==" crossorigin="anonymous" defer></script>
   <script src="/js/highlight.min.6e0bbb1ba7e7c09c5287a998de4147da3f56f6fed3dc91b747789519a1de6486b086542ebb2ed60527cfc4c32b8ce175a08c257392e98d7bb3f09661f2bd5666.js" integrity="sha512-bgu7G6fnwJxSh6mY3kFH2j9W9v7T3JG3R3iVGaHeZIawhlQuuy7WBSfPxMMrjOF1oIwlc5LpjXuz8JZh8r1WZg==" crossorigin="anonymous" defer></script>
   <script src="/main.min.124171d9dd7beef16c3e35cd8394ad0c5ca7699608f699d747030ef0b0c3e4c2782454dd406f78e14ef7336f4a15de8676a808261d92f9b1858f1ec3ff720269.js" integrity="sha512-EkFx2d177vFsPjXNg5StDFynaZYI9pnXRwMO8LDD5MJ4JFTdQG944U73M29KFd6GdqgIJh2S&#43;bGFjx7D/3ICaQ==" crossorigin="anonymous" defer></script>
-  <script src="https://kaban.my.id/index.min.516056de7a682705aaaf783199fa76c00b222be9b0163b7059cc10feb046f8df42bed2e3c3f8c149f54b5406c35e8f10f805631c4b4abcce913a6373fdd82943.js" integrity="sha512-UWBW3npoJwWqr3gxmfp2wAsiK&#43;mwFjtwWcwQ/rBG&#43;N9CvtLjw/jBSfVLVAbDXo8Q&#43;AVjHEtKvM6ROmNz/dgpQw==" crossorigin="anonymous" defer></script>
+  <script src="https://kaban.my.id/index.min.3f4e25b72c4c038a050074a2747ad284ab5ebbf72994405027d9eac11253a59206a63d44fe079fe75325768f7fb12ea50acfb59f7e995b93921b6ba84ba05c43.js" integrity="sha512-P04ltyxMA4oFAHSidHrShKteu/cplEBQJ9nqwRJTpZIGpj1E/gef51Mldo9/sS6lCs&#43;1n36ZW5OSG2uoS6BcQw==" crossorigin="anonymous" defer></script>
   
     <div class="d-flex fixed-bottom pb-4 pb-lg-5 pe-4 pe-lg-5">
       <a id="toTop" href="#" class="btn btn-outline-primary rounded-circle ms-auto p-2"><span class="visually-hidden">Top</span><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-chevron-up"><polyline points="18 15 12 9 6 15"></polyline></svg></a>

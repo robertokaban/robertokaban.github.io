@@ -541,7 +541,41 @@
 			</nav>
 		</div>
 		<nav class="docs-toc d-none d-xl-block col-xl-3" aria-label="Secondary navigation">
-			
+			<div class="d-xl-none">
+  <button class="btn btn-outline-primary btn-sm doks-toc-toggle collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#onThisPage" aria-controls="doks-docs-nav" aria-expanded="false" aria-label="Toggle On this page navigation">
+    <span>Daftar isi</span>
+    <span>
+      <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" class="doks doks-expand" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><title>Expand</title><polyline points="7 13 12 18 17 13"></polyline><polyline points="7 6 12 11 17 6"></polyline></svg>
+      <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" class="doks doks-collapse" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><title>Collapse</title><polyline points="17 11 12 6 7 11"></polyline><polyline points="17 18 12 13 7 18"></polyline></svg>
+    </span>
+  </button>
+  <div class="collapse" id="onThisPage">
+    <div class="card card-body mt-3 py-1">
+      <div class="page-links">
+        <nav id="TableOfContents">
+  <ul>
+    <li><a href="#istilah-dalam-oop">Istilah Dalam OOP</a></li>
+    <li><a href="#membuat-class-python">Membuat Class Python</a></li>
+    <li><a href="#membuat-instance-objects">Membuat Instance Objects</a></li>
+    <li><a href="#mengakses-atribut">Mengakses Atribut</a></li>
+  </ul>
+</nav>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="page-links d-none d-xl-block">
+  <h3>Daftar isi</h3>
+  <nav id="TableOfContents">
+  <ul>
+    <li><a href="#istilah-dalam-oop">Istilah Dalam OOP</a></li>
+    <li><a href="#membuat-class-python">Membuat Class Python</a></li>
+    <li><a href="#membuat-instance-objects">Membuat Instance Objects</a></li>
+    <li><a href="#mengakses-atribut">Mengakses Atribut</a></li>
+  </ul>
+</nav>
+  </div>
+
 		</nav>
 		<main class="docs-content col-lg-11 col-xl-9">
 		
@@ -557,69 +591,156 @@
 			<h1>Objek dan class di dalam Python</h1>
 			<p class="lead">Objek dan class di dalam Python.</p>
 			<nav class="d-xl-none" aria-label="Quaternary navigation">
-				
+				<div class="d-xl-none">
+  <button class="btn btn-outline-primary btn-sm doks-toc-toggle collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#onThisPage" aria-controls="doks-docs-nav" aria-expanded="false" aria-label="Toggle On this page navigation">
+    <span>Daftar isi</span>
+    <span>
+      <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" class="doks doks-expand" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><title>Expand</title><polyline points="7 13 12 18 17 13"></polyline><polyline points="7 6 12 11 17 6"></polyline></svg>
+      <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" class="doks doks-collapse" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><title>Collapse</title><polyline points="17 11 12 6 7 11"></polyline><polyline points="17 18 12 13 7 18"></polyline></svg>
+    </span>
+  </button>
+  <div class="collapse" id="onThisPage">
+    <div class="card card-body mt-3 py-1">
+      <div class="page-links">
+        <nav id="TableOfContents">
+  <ul>
+    <li><a href="#istilah-dalam-oop">Istilah Dalam OOP</a></li>
+    <li><a href="#membuat-class-python">Membuat Class Python</a></li>
+    <li><a href="#membuat-instance-objects">Membuat Instance Objects</a></li>
+    <li><a href="#mengakses-atribut">Mengakses Atribut</a></li>
+  </ul>
+</nav>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="page-links d-none d-xl-block">
+  <h3>Daftar isi</h3>
+  <nav id="TableOfContents">
+  <ul>
+    <li><a href="#istilah-dalam-oop">Istilah Dalam OOP</a></li>
+    <li><a href="#membuat-class-python">Membuat Class Python</a></li>
+    <li><a href="#membuat-instance-objects">Membuat Instance Objects</a></li>
+    <li><a href="#mengakses-atribut">Mengakses Atribut</a></li>
+  </ul>
+</nav>
+  </div>
+
 			</nav>
-			<p>Python telah menjadi bahasa berorientasi objek sejak bahasa Python sendiri dibuat. Untuk membuat dan menggunakan kelas dan objek pada Python benar-benar mudah. Pada tutorial ini Anda akan dibantu untuk menjadi ahli dalam penggunaan pemrograman berorientasi objek Python.</p>
-<p>Jika Anda tidak memiliki pengalaman sebelumnya dengan pemrograman berorientasi objek (OOP), Anda mempelajarinya terlebih dahulu agar Anda dapat memahami konsep dasarnya.</p>
-<p>Jika memang sudah mengerti konsep dasar OOP berikut ini adalah pengenalan dari Object-Oriented Programming (OOP) untuk membantu Anda.</p>
-<p>Istilah Dalam OOP
-Istilah	Penjelasan
-Class	Prototipe yang ditentukan pengguna untuk objek yang mendefinisikan seperangkat atribut yang menjadi ciri objek kelas apa pun. Atribut adalah data anggota (variabel kelas dan variabel contoh) dan metode, diakses melalui notasi titik.
-Class variable	Sebuah variabel yang dibagi oleh semua contoh kelas. Variabel kelas didefinisikan dalam kelas tapi di luar metode kelas manapun. Variabel kelas tidak digunakan sesering variabel contoh.
-Data member	Variabel kelas atau variabel contoh yang menyimpan data yang terkait dengan kelas dan objeknya.
-Function overloading	Penugasan lebih dari satu perilaku ke fungsi tertentu. Operasi yang dilakukan bervariasi menurut jenis objek atau argumen yang terlibat.
-Instance variable	Variabel yang didefinisikan di dalam sebuah metode dan hanya dimiliki oleh instance kelas saat ini.
-Inheritance	Pengalihan karakteristik kelas ke kelas lain yang berasal darinya.
-Instance	Objek individu dari kelas tertentu. Obyek obj yang termasuk dalam Lingkaran kelas, misalnya, adalah turunan dari Lingkaran kelas.
-Instantiation	Penciptaan sebuah instance dari sebuah kelas.
-Method	Jenis fungsi khusus yang didefinisikan dalam definisi kelas.
-Object	Contoh unik dari struktur data yang didefinisikan oleh kelasnya. Objek terdiri dari kedua anggota data (variabel kelas dan variabel contoh) dan metode.
-Operator overloading	Penugasan lebih dari satu fungsi ke operator tertentu.
-Membuat Class Python
-Statement class digunakan untuk membuat definisi kelas baru. Nama kelas segera mengikuti kelas kata kunci diikuti oleh titik dua sebagai berikut.</p>
+			<p>Python telah menjadi bahasa berorientasi objek sejak bahasa Python sendiri dibuat. Untuk membuat dan menggunakan kelas dan objek pada Python benar-benar mudah.
+Jika Anda tidak memiliki pengalaman sebelumnya dengan pemrograman berorientasi objek (OOP), Anda mempelajarinya terlebih dahulu agar Anda dapat memahami konsep dasarnya.</p>
+<h2 id="istilah-dalam-oop">Istilah Dalam OOP <a href="#istilah-dalam-oop" class="anchor" aria-hidden="true">#</a></h2>
+<table>
+<thead>
+<tr>
+<th>Istilah</th>
+<th>Penjelasan</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Class</td>
+<td>Prototipe yang ditentukan pengguna untuk objek yang mendefinisikan seperangkat atribut yang menjadi ciri objek kelas apa pun. Atribut adalah data anggota (variabel kelas dan variabel contoh) dan metode, diakses melalui notasi titik.</td>
+</tr>
+<tr>
+<td>Class variable</td>
+<td>Sebuah variabel yang dibagi oleh semua contoh kelas. Variabel kelas didefinisikan dalam kelas tapi di luar metode kelas manapun. Variabel kelas tidak digunakan sesering variabel contoh.</td>
+</tr>
+<tr>
+<td>Data member</td>
+<td>Variabel kelas atau variabel contoh yang menyimpan data yang terkait dengan kelas dan objeknya.</td>
+</tr>
+<tr>
+<td>Function overloading</td>
+<td>Penugasan lebih dari satu perilaku ke fungsi tertentu. Operasi yang dilakukan bervariasi menurut jenis objek atau argumen yang terlibat.</td>
+</tr>
+<tr>
+<td>Instance variable</td>
+<td>Variabel yang didefinisikan di dalam sebuah metode dan hanya dimiliki oleh instance kelas saat ini.</td>
+</tr>
+<tr>
+<td>Inheritance</td>
+<td>Pengalihan karakteristik kelas ke kelas lain yang berasal darinya.</td>
+</tr>
+<tr>
+<td>Instance</td>
+<td>Objek individu dari kelas tertentu. Obyek obj yang termasuk dalam Lingkaran kelas, misalnya, adalah turunan dari Lingkaran kelas.</td>
+</tr>
+<tr>
+<td>Instantiation</td>
+<td>Penciptaan sebuah instance dari sebuah kelas.</td>
+</tr>
+<tr>
+<td>Method</td>
+<td>Jenis fungsi khusus yang didefinisikan dalam definisi kelas.</td>
+</tr>
+<tr>
+<td>Object</td>
+<td>Contoh unik dari struktur data yang didefinisikan oleh kelasnya. Objek terdiri dari kedua anggota data (variabel kelas dan variabel contoh) dan metode.</td>
+</tr>
+<tr>
+<td>Operator overloading</td>
+<td>Penugasan lebih dari satu fungsi ke operator tertentu.</td>
+</tr>
+</tbody>
+</table>
+<h2 id="membuat-class-python">Membuat Class Python <a href="#membuat-class-python" class="anchor" aria-hidden="true">#</a></h2>
+<p>Statement class digunakan untuk membuat definisi kelas baru. Nama kelas segera mengikuti kelas kata kunci diikuti oleh titik dua sebagai berikut.</p>
 <p>class ClassName: &lsquo;Optional class documentation string&rsquo; class_suite</p>
 <p>Dibawah ini adalah contoh cara membuat class dan penggunaanya :</p>
-<p>class Employee:
-&lsquo;Common base class for all employees&rsquo;
-empCount = 0</p>
-<p>def <strong>init</strong>(self, name, salary):
-self.name = name
-self.salary = salary
-Employee.empCount += 1</p>
-<p>def displayCount(self):
-print &ldquo;Total Employee %d&rdquo; % Employee.empCount</p>
-<p>def displayEmployee(self):
-print &ldquo;Name : &ldquo;, self.name,  &ldquo;, Salary: &ldquo;, self.salary
-Membuat Instance Objects
-Untuk membuat instances kelas, Anda memanggil class menggunakan nama class dan meneruskan argumen apa pun yang metode init terima.</p>
-<p>This would create first object of Employee class
-emp1 = Employee(&ldquo;Zara&rdquo;, 2000)
+<pre><code>class Employee:
+   'Common base class for all employees'
+   empCount = 0
+
+   def __init__(self, name, salary):
+      self.name = name
+      self.salary = salary
+      Employee.empCount += 1
+   
+   def displayCount(self):
+     print &quot;Total Employee %d&quot; % Employee.empCount
+
+   def displayEmployee(self):
+      print &quot;Name : &quot;, self.name,  &quot;, Salary: &quot;, self.salary
+</code></pre>
+<h2 id="membuat-instance-objects">Membuat Instance Objects <a href="#membuat-instance-objects" class="anchor" aria-hidden="true">#</a></h2>
+<p>Untuk membuat instances kelas, Anda memanggil class menggunakan nama class dan meneruskan argumen apa pun yang metode init terima.</p>
+<pre><code>## This would create first object of Employee class
+emp1 = Employee(&quot;Zara&quot;, 2000)
 This would create second object of Employee class
-emp2 = Employee(&ldquo;Manni&rdquo;, 5000)
-Mengakses Atribut
-Anda mengakses atribut objek menggunakan dot operator dengan objek. Variabel kelas akan diakses dengan menggunakan nama kelas sebagai berikut :</p>
-<p>emp1.displayEmployee()
+emp2 = Employee(&quot;Manni&quot;, 5000)
+</code></pre>
+<h2 id="mengakses-atribut">Mengakses Atribut <a href="#mengakses-atribut" class="anchor" aria-hidden="true">#</a></h2>
+<p>Kita mengakses atribut objek menggunakan dot operator dengan objek. Variabel kelas akan diakses dengan menggunakan nama kelas sebagai berikut :</p>
+<pre><code>emp1.displayEmployee()
 emp2.displayEmployee()
-print (&ldquo;Total Employee %d&rdquo; % Employee.empCount)
-Contoh lengkapnya, silahkan lihat kode dibawah ini.</p>
-<p>class Employee:
-&lsquo;Common base class for all employees&rsquo;
-empCount = 0</p>
-<p>def <strong>init</strong>(self, name, salary):
-self.name = name
-self.salary = salary
-Employee.empCount += 1</p>
-<p>def displayCount(self):
-print (&ldquo;Total Employee %d&rdquo; % Employee.empCount)</p>
-<p>def displayEmployee(self):
-print (&ldquo;Name : &ldquo;, self.name,  &ldquo;, Salary: &ldquo;, self.salary)</p>
-<p>#This would create first object of Employee class&rdquo;
-emp1 = Employee(&ldquo;Zara&rdquo;, 2000)
-#This would create second object of Employee class&rdquo;
-emp2 = Employee(&ldquo;Manni&rdquo;, 5000)
+print (&quot;Total Employee %d&quot; % Employee.empCount)
+</code></pre>
+<p>Contoh lengkapnya, silahkan lihat kode dibawah ini.</p>
+<pre><code>class Employee:
+   'Common base class for all employees'
+   empCount = 0
+
+   def __init__(self, name, salary):
+      self.name = name
+      self.salary = salary
+      Employee.empCount += 1
+   
+   def displayCount(self):
+     print (&quot;Total Employee %d&quot; % Employee.empCount)
+
+   def displayEmployee(self):
+      print (&quot;Name : &quot;, self.name,  &quot;, Salary: &quot;, self.salary)
+
+
+#This would create first object of Employee class&quot;
+emp1 = Employee(&quot;Zara&quot;, 2000)
+#This would create second object of Employee class&quot;
+emp2 = Employee(&quot;Manni&quot;, 5000)
 emp1.displayEmployee()
 emp2.displayEmployee()
-print (&ldquo;Total Employee %d&rdquo; % Employee.empCount)</p>
+print (&quot;Total Employee %d&quot; % Employee.empCount)
+</code></pre>
 
 			<div class="page-footer-meta d-flex flex-column flex-md-row justify-content-between">
 				</div>
@@ -669,7 +790,7 @@ print (&ldquo;Total Employee %d&rdquo; % Employee.empCount)</p>
 <script src="/js/bootstrap.min.5cdeb20ef814d367b4d5429ada9d342419eb34734de4713a71e5706485eaa75fa8d5d760c7a7f7ef20cb5494737eb8811729431813f22744c177384758c19081.js" integrity="sha512-XN6yDvgU02e01UKa2p00JBnrNHNN5HE6ceVwZIXqp1&#43;o1ddgx6f37yDLVJRzfriBFylDGBPyJ0TBdzhHWMGQgQ==" crossorigin="anonymous" defer></script>
   <script src="/js/highlight.min.6e0bbb1ba7e7c09c5287a998de4147da3f56f6fed3dc91b747789519a1de6486b086542ebb2ed60527cfc4c32b8ce175a08c257392e98d7bb3f09661f2bd5666.js" integrity="sha512-bgu7G6fnwJxSh6mY3kFH2j9W9v7T3JG3R3iVGaHeZIawhlQuuy7WBSfPxMMrjOF1oIwlc5LpjXuz8JZh8r1WZg==" crossorigin="anonymous" defer></script>
   <script src="/main.min.124171d9dd7beef16c3e35cd8394ad0c5ca7699608f699d747030ef0b0c3e4c2782454dd406f78e14ef7336f4a15de8676a808261d92f9b1858f1ec3ff720269.js" integrity="sha512-EkFx2d177vFsPjXNg5StDFynaZYI9pnXRwMO8LDD5MJ4JFTdQG944U73M29KFd6GdqgIJh2S&#43;bGFjx7D/3ICaQ==" crossorigin="anonymous" defer></script>
-  <script src="https://kaban.my.id/index.min.516056de7a682705aaaf783199fa76c00b222be9b0163b7059cc10feb046f8df42bed2e3c3f8c149f54b5406c35e8f10f805631c4b4abcce913a6373fdd82943.js" integrity="sha512-UWBW3npoJwWqr3gxmfp2wAsiK&#43;mwFjtwWcwQ/rBG&#43;N9CvtLjw/jBSfVLVAbDXo8Q&#43;AVjHEtKvM6ROmNz/dgpQw==" crossorigin="anonymous" defer></script>
+  <script src="https://kaban.my.id/index.min.3f4e25b72c4c038a050074a2747ad284ab5ebbf72994405027d9eac11253a59206a63d44fe079fe75325768f7fb12ea50acfb59f7e995b93921b6ba84ba05c43.js" integrity="sha512-P04ltyxMA4oFAHSidHrShKteu/cplEBQJ9nqwRJTpZIGpj1E/gef51Mldo9/sS6lCs&#43;1n36ZW5OSG2uoS6BcQw==" crossorigin="anonymous" defer></script>
   
     <div class="d-flex fixed-bottom pb-4 pb-lg-5 pe-4 pe-lg-5">
       <a id="toTop" href="#" class="btn btn-outline-primary rounded-circle ms-auto p-2"><span class="visually-hidden">Top</span><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-chevron-up"><polyline points="18 15 12 9 6 15"></polyline></svg></a>
