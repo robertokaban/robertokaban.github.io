@@ -5,6 +5,7 @@
     <link>https://kaban.my.id/html/tutorial/</link>
     <description>Recent content in Tutorial HTML on </description>
     <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
     <lastBuildDate>Tue, 06 Oct 2020 08:49:15 +0000</lastBuildDate><atom:link href="https://kaban.my.id/html/tutorial/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Pengenalan HTML</title>
@@ -12,7 +13,7 @@
       <pubDate>Mon, 06 Dec 2021 08:49:31 +0000</pubDate>
       
       <guid>https://kaban.my.id/html/tutorial/pengenalan/</guid>
-      <description>Apa itu HTML? #  HTML adalah HyperText Markup Language. HTML adalah bahasa markup standard untuk membuat halaman Web. HTML mendeskripsikan struktur halaman Web. HTML terdiri dari serangkaian elemen. Elemen HTML memberi tahu browser cara menampilkan konten. Elemen HTML memberi label potongan konten seperti &amp;ldquo;ini adalah judul&amp;rdquo;, &amp;ldquo;ini adalah paragraf&amp;rdquo;, &amp;ldquo;ini adalah tautan&amp;rdquo;, dll.  Penulisan Tag HTML # Elemen dalam dokumen HTML ditunjukkan dengan menggunakan tag. Penulisan tag HTML seperti di bawah ini:</description>
+      <description>Apa itu HTML? # HTML adalah HyperText Markup Language. HTML adalah bahasa markup standard untuk membuat halaman Web. HTML mendeskripsikan struktur halaman Web. HTML terdiri dari serangkaian elemen. Elemen HTML memberi tahu browser cara menampilkan konten. Elemen HTML memberi label potongan konten seperti &amp;ldquo;ini adalah judul&amp;rdquo;, &amp;ldquo;ini adalah paragraf&amp;rdquo;, &amp;ldquo;ini adalah tautan&amp;rdquo;, dll. Penulisan Tag HTML # Elemen dalam dokumen HTML ditunjukkan dengan menggunakan tag. Penulisan tag HTML seperti di bawah ini:</description>
     </item>
     
     <item>
@@ -35,10 +36,11 @@ Membuat file HTML # Ikuti langkah-langkah di bawah ini untuk membuat halaman web
       <pubDate>Mon, 06 Dec 2021 08:49:31 +0000</pubDate>
       
       <guid>https://kaban.my.id/html/tutorial/dokumen-html/</guid>
-      <description>Dokumen HTML #   Dokumen HTML harus dimulai dengan deklarasi tipe dokumen &amp;lt;!DOCTYPE html&amp;gt;
-  Dokumen HTML harus mempunyai tag html. Dimulai dengan tag pembuka &amp;lt;html&amp;gt; dan diakhiri dengan tag penutup &amp;lt;/html&amp;gt;
-  Dokumen HTML harus mempunyai tag head. Dimulai dengan tag pembuka &amp;lt;head&amp;gt; dan diakhiri dengan tag penutup &amp;lt;/head&amp;gt;
-  Dokumen HTML harus mempunyai tag body. Dimulai dengan tag pembuka &amp;lt;body dan di akhiri dengan tag penutup &amp;lt;/body&amp;gt;</description>
+      <description>Dokumen HTML # Dokumen HTML harus dimulai dengan deklarasi tipe dokumen &amp;lt;!DOCTYPE html&amp;gt;
+Dokumen HTML harus mempunyai tag html. Dimulai dengan tag pembuka &amp;lt;html&amp;gt; dan diakhiri dengan tag penutup &amp;lt;/html&amp;gt;
+Dokumen HTML harus mempunyai tag head. Dimulai dengan tag pembuka &amp;lt;head&amp;gt; dan diakhiri dengan tag penutup &amp;lt;/head&amp;gt;
+Dokumen HTML harus mempunyai tag body. Dimulai dengan tag pembuka &amp;lt;body dan di akhiri dengan tag penutup &amp;lt;/body&amp;gt;
+Element HTML harus terletak di dalam tag body</description>
     </item>
     
     <item>
@@ -48,8 +50,8 @@ Membuat file HTML # Ikuti langkah-langkah di bawah ini untuk membuat halaman web
       
       <guid>https://kaban.my.id/html/tutorial/elements/</guid>
       <description>Elemen HTML # Apa itu Elemen dalam HTML ? # Elemen HTML bisa dikatakan segalanya mulai dari tag awal hingga tag akhir. Elemen HTML didefinisikan oleh tag awal. Jika elemen berisi konten lain, itu diakhiri dengan tag penutup, di mana nama elemen didahului oleh garis miring seperti yang ditunjukkan di bawah ini dengan beberapa tag.
-Contoh Elemen HTML # &amp;lt;p&amp;gt;Elemen HTML&amp;lt;/p&amp;gt; &amp;lt;div&amp;gt;Ini adalah Elemen HTML&amp;lt;/div&amp;gt;  Keterangan:
-   Konten Tag Pembuka Tag Penutup     Paragraf &amp;lt;p&amp;gt; &amp;lt;/p&amp;gt;   Divisi &amp;lt;div&amp;gt; &amp;lt;/div&amp;gt;    Jadi di sini ada dua elemen HTML yaitu, elemen &amp;lt;p&amp;gt;.</description>
+Contoh Elemen HTML # &amp;lt;p&amp;gt;Elemen HTML&amp;lt;/p&amp;gt; &amp;lt;div&amp;gt;Ini adalah Elemen HTML&amp;lt;/div&amp;gt; Keterangan:
+Konten Tag Pembuka Tag Penutup Paragraf &amp;lt;p&amp;gt; &amp;lt;/p&amp;gt; Divisi &amp;lt;div&amp;gt; &amp;lt;/div&amp;gt; Jadi di sini ada dua elemen HTML yaitu, elemen &amp;lt;p&amp;gt;.</description>
     </item>
     
     <item>
@@ -59,12 +61,12 @@ Contoh Elemen HTML # &amp;lt;p&amp;gt;Elemen HTML&amp;lt;/p&amp;gt; &amp;lt;div&
       
       <guid>https://kaban.my.id/html/tutorial/attributes/</guid>
       <description>Apa Itu HtML Attribute ? # HTML Attribute adalah suatu atribut untuk melengkapi informasi dari suatu elemen HTML
-  Semua elemen HTML dapat memiliki Attribute.
-  Attribute HtML memberikan informasi tambahan terhadap elemen HTML.
-  Attribute selalu berada diawal tag, seperti:
-&amp;lt;a href=&amp;quot;google.com&amp;quot;&amp;gt;Google&amp;lt;/a&amp;gt;    Attribute selalu berbapasangan dengan value/nilai, seperti: href=&amp;quot;google.com&amp;quot;
-  Value/Nilai dari attribute harus selalu dibungkus menggunakan double quote/petik dua (&amp;quot;).
-  Contoh Penerapan Attribute Pada HTML # href Attribute # href berfungsi untuk menentukan URL halaman yang ingin dituju.</description>
+Semua elemen HTML dapat memiliki Attribute.
+Attribute HtML memberikan informasi tambahan terhadap elemen HTML.
+Attribute selalu berada diawal tag, seperti:
+&amp;lt;a href=&amp;quot;google.com&amp;quot;&amp;gt;Google&amp;lt;/a&amp;gt; Attribute selalu berbapasangan dengan value/nilai, seperti: href=&amp;quot;google.com&amp;quot;
+Value/Nilai dari attribute harus selalu dibungkus menggunakan double quote/petik dua (&amp;quot;).
+Contoh Penerapan Attribute Pada HTML # href Attribute # href berfungsi untuk menentukan URL halaman yang ingin dituju.</description>
     </item>
     
     <item>
@@ -77,7 +79,7 @@ Contoh Elemen HTML # &amp;lt;p&amp;gt;Elemen HTML&amp;lt;/p&amp;gt; &amp;lt;div&
 HTML Headings didefinisikan dengan &amp;lt;h1&amp;gt; hingga &amp;lt;h6&amp;gt;, contohnya:
 Dalam Bentuk Tulisan
 Heading 1 # Heading 2 # Heading 3 # Heading 4 # Heading 5 # Heading 6 # Dalam Bentuk Code
-&amp;lt;h1&amp;gt;Heading 1&amp;lt;/h1&amp;gt; &amp;lt;h2&amp;gt;Heading 2&amp;lt;/h2&amp;gt; &amp;lt;h3&amp;gt;Heading 3&amp;lt;/h3&amp;gt; &amp;lt;h4&amp;gt;Heading 4&amp;lt;/h4&amp;gt; &amp;lt;h5&amp;gt;Heading 5&amp;lt;/h5&amp;gt; &amp;lt;h6&amp;gt;Heading 6&amp;lt;/h6&amp;gt;  Urutan Penulisan Heading # Apakah boleh menulis judul yang tidak urut?</description>
+&amp;lt;h1&amp;gt;Heading 1&amp;lt;/h1&amp;gt; &amp;lt;h2&amp;gt;Heading 2&amp;lt;/h2&amp;gt; &amp;lt;h3&amp;gt;Heading 3&amp;lt;/h3&amp;gt; &amp;lt;h4&amp;gt;Heading 4&amp;lt;/h4&amp;gt; &amp;lt;h5&amp;gt;Heading 5&amp;lt;/h5&amp;gt; &amp;lt;h6&amp;gt;Heading 6&amp;lt;/h6&amp;gt; Urutan Penulisan Heading # Apakah boleh menulis judul yang tidak urut?</description>
     </item>
     
     <item>
@@ -89,7 +91,7 @@ Heading 1 # Heading 2 # Heading 3 # Heading 4 # Heading 5 # Heading 6 # Dalam Be
       <description>HTML Paragraphs # Apa Itu HTML Paragraphs # HTML Paragraphs adalah suatu kalimat pada barisan baru yang biasanya berupa blok teks.
 Tag HTML &amp;lt;p&amp;gt; yang mendefinisikan sebuah paragraf.
 Sebuah paragraf akan selalu dimulai pada baris baru, dan browser secara otomatis menambahkan margin sebelum dan sesudah paragraf.
-Contoh Penerapan &amp;lt;p&amp;gt; # &amp;lt;p&amp;gt;Ini Paragraf Pertama.&amp;lt;/p&amp;gt; &amp;lt;p&amp;gt;Ini Paragraf Kedua.&amp;lt;/p&amp;gt;  Membuat HTML Paragraphs # Paragraf adalah kumpulan dari beberapa kalimat. Pada web, Paragraf biasanya digunakan untuk menampilkan teks atau artikel.</description>
+Contoh Penerapan &amp;lt;p&amp;gt; # &amp;lt;p&amp;gt;Ini Paragraf Pertama.&amp;lt;/p&amp;gt; &amp;lt;p&amp;gt;Ini Paragraf Kedua.&amp;lt;/p&amp;gt; Membuat HTML Paragraphs # Paragraf adalah kumpulan dari beberapa kalimat. Pada web, Paragraf biasanya digunakan untuk menampilkan teks atau artikel.</description>
     </item>
     
     <item>
@@ -100,8 +102,8 @@ Contoh Penerapan &amp;lt;p&amp;gt; # &amp;lt;p&amp;gt;Ini Paragraf Pertama.&amp;
       <guid>https://kaban.my.id/html/tutorial/style/</guid>
       <description>HTML Style # Apa Itu HTML Style ? # HTML Style adalah atribut yang digunakan untuk memberikan style/gaya pada suatu elemen, seperti color, font, size, dan sebagainya.
 Atribut Style memiliki sintaks seperti berikut:
-&amp;lt;tag style=&amp;quot;property:value;&amp;quot;&amp;gt;  Contoh Penerapan Style # Background Color # Background color berfungsi untuk mendefinisikan warna latar belakang pada suatu elemen HTML.
-&amp;lt;body style=&amp;quot;background-color:white;&amp;quot;&amp;gt; &amp;lt;h1&amp;gt;Hello World&amp;lt;/h1&amp;gt; &amp;lt;/body&amp;gt;  Hasilnya :
+&amp;lt;tag style=&amp;quot;property:value;&amp;quot;&amp;gt; Contoh Penerapan Style # Background Color # Background color berfungsi untuk mendefinisikan warna latar belakang pada suatu elemen HTML.
+&amp;lt;body style=&amp;quot;background-color:white;&amp;quot;&amp;gt; &amp;lt;h1&amp;gt;Hello World&amp;lt;/h1&amp;gt; &amp;lt;/body&amp;gt; Hasilnya :
 Text Color # Color berfungsi untuk mendefinisikan warna teks pada suatu elemen HTML.</description>
     </item>
     
@@ -113,7 +115,7 @@ Text Color # Color berfungsi untuk mendefinisikan warna teks pada suatu elemen H
       <guid>https://kaban.my.id/html/tutorial/text-formatiing/</guid>
       <description>HTML Text Formatting # Apa Itu HTML Text Formatting ? # HTML Text Formatting adalah elemen yang mendefinisikan teks dengan arti khusus.
 Ada 10 elemen text formatting yang dirancang untuk menampilkan jenis teks khusus.
- &amp;lt;b&amp;gt; - Teks Bold &amp;lt;strong&amp;gt; - Teks Penting &amp;lt;i&amp;gt; - Teks miring / Italic &amp;lt;em&amp;gt; - Teks yang ditekankan &amp;lt;mark&amp;gt; - Teks yang diberi tanda (seperti efek stabilo) &amp;lt;small&amp;gt; - Teks Kecil &amp;lt;del&amp;gt; - Teks yang diberi coret &amp;lt;ins&amp;gt; - Teks yang diberi garis bawah &amp;lt;sub&amp;gt; - Teks subskrip &amp;lt;sup&amp;gt; - Teks superskrip  Contoh Penerapan Text Formatting Pada HTML # Elemen &amp;lt;b&amp;gt; dan &amp;lt;strong&amp;gt;</description>
+&amp;lt;b&amp;gt; - Teks Bold &amp;lt;strong&amp;gt; - Teks Penting &amp;lt;i&amp;gt; - Teks miring / Italic &amp;lt;em&amp;gt; - Teks yang ditekankan &amp;lt;mark&amp;gt; - Teks yang diberi tanda (seperti efek stabilo) &amp;lt;small&amp;gt; - Teks Kecil &amp;lt;del&amp;gt; - Teks yang diberi coret &amp;lt;ins&amp;gt; - Teks yang diberi garis bawah &amp;lt;sub&amp;gt; - Teks subskrip &amp;lt;sup&amp;gt; - Teks superskrip Contoh Penerapan Text Formatting Pada HTML # Elemen &amp;lt;b&amp;gt; dan &amp;lt;strong&amp;gt;</description>
     </item>
     
     <item>
@@ -124,7 +126,7 @@ Ada 10 elemen text formatting yang dirancang untuk menampilkan jenis teks khusus
       <guid>https://kaban.my.id/html/tutorial/quotation/</guid>
       <description>HTML Quotation # Apa Itu HTML Quotation ? # HTML Quotation berisi elemen-elemen ditujukan untuk menyajikan kutipan pada halaman HTML.
 Elemen-elemen tersebut adalah,
- &amp;lt;blockquote&amp;gt; - Mendefinisikan teks kutipan yang panjang. &amp;lt;q&amp;gt; - Mendefinisikan teks kutipan yang pendek. &amp;lt;abbr&amp;gt; - Mendefinisikan teks singkatan. &amp;lt;address&amp;gt; - Mendefinisikan informasi kontak. &amp;lt;cite&amp;gt; - Mendefinisikan judul karya. &amp;lt;bdo&amp;gt; - Membalikan arah teks.  Contoh Penerapan Elemen Quotation Pada HTML # Elemen &amp;lt;blockquote&amp;gt; # &amp;lt;p&amp;gt;Arti Quotes:&amp;lt;/p&amp;gt; &amp;lt;blockquote&amp;gt; Kutipan adalah pengulangan satu ekspresi sebagai bagian dari yang lain, terutama ketika ekspresi yang dikutip itu terkenal atau secara tersurat dihubungkan dengan kutipan ke sumber yang asli, dan ditandai oleh tanda kutip.</description>
+&amp;lt;blockquote&amp;gt; - Mendefinisikan teks kutipan yang panjang. &amp;lt;q&amp;gt; - Mendefinisikan teks kutipan yang pendek. &amp;lt;abbr&amp;gt; - Mendefinisikan teks singkatan. &amp;lt;address&amp;gt; - Mendefinisikan informasi kontak. &amp;lt;cite&amp;gt; - Mendefinisikan judul karya. &amp;lt;bdo&amp;gt; - Membalikan arah teks. Contoh Penerapan Elemen Quotation Pada HTML # Elemen &amp;lt;blockquote&amp;gt; # &amp;lt;p&amp;gt;Arti Quotes:&amp;lt;/p&amp;gt; &amp;lt;blockquote&amp;gt; Kutipan adalah pengulangan satu ekspresi sebagai bagian dari yang lain, terutama ketika ekspresi yang dikutip itu terkenal atau secara tersurat dihubungkan dengan kutipan ke sumber yang asli, dan ditandai oleh tanda kutip.</description>
     </item>
     
   </channel>

@@ -5,6 +5,7 @@
     <link>https://kaban.my.id/css/tutorial/</link>
     <description>Recent content in Tutorial CSS on </description>
     <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
     <lastBuildDate>Tue, 06 Oct 2020 08:49:15 +0000</lastBuildDate><atom:link href="https://kaban.my.id/css/tutorial/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Pengenalan</title>
@@ -15,7 +16,7 @@
       <description>Mengapa Menggunakan CSS? # CSS (Cascading Style Sheets) digunakan untuk menata halaman web — misalnya untuk mengubah font, warna, ukuran, dan spasi konten kita, membaginya menjadi beberapa kolom, atau menambahkan animasi dan fitur dekoratif lainnya.
 CSS Memecahkan Masalah Besar # HTML TIDAK PERNAH dimaksudkan untuk memuat tag untuk memformat halaman web!
 HTML dibuat untuk menggambarkan konten halaman web, seperti:
-&amp;lt;h1&amp;gt;Ini adalah judul&amp;lt;/h1&amp;gt; &amp;lt;p&amp;gt;Ini adalah paragraf.&amp;lt;/p&amp;gt;  Ketika tag seperti &amp;lt;font&amp;gt; dan atribut warna ditambahkan ke spesifikasi HTML 3.</description>
+&amp;lt;h1&amp;gt;Ini adalah judul&amp;lt;/h1&amp;gt; &amp;lt;p&amp;gt;Ini adalah paragraf.&amp;lt;/p&amp;gt; Ketika tag seperti &amp;lt;font&amp;gt; dan atribut warna ditambahkan ke spesifikasi HTML 3.</description>
     </item>
     
     <item>
@@ -25,9 +26,9 @@ HTML dibuat untuk menggambarkan konten halaman web, seperti:
       
       <guid>https://kaban.my.id/css/tutorial/basic/</guid>
       <description>Cara menuliskan CSS # Bagaimana cara untuk menuliskan CSS? # Ada 3 cara untuk menuliskan CSS. Antara lain:
- Inline CSS Internal CSS External CSS  Inline CSS # Inline CSS adalah code css yang ditulis secara langsung, pada elemen HTML. Cara penulisannya cukup dengan menambahkan style pada tag HTML.
+Inline CSS Internal CSS External CSS Inline CSS # Inline CSS adalah code css yang ditulis secara langsung, pada elemen HTML. Cara penulisannya cukup dengan menambahkan style pada tag HTML.
 Contoh Inline CSS:
-&amp;lt;p style=&amp;quot;color:red;&amp;quot;&amp;gt;Text warna merah&amp;lt;/p&amp;gt;  Internal CSS # Internal CSS adalah code css yang ditulis pada tag &amp;lt;style&amp;gt;, dan di dalam tag &amp;lt;head&amp;gt;.</description>
+&amp;lt;p style=&amp;quot;color:red;&amp;quot;&amp;gt;Text warna merah&amp;lt;/p&amp;gt; Internal CSS # Internal CSS adalah code css yang ditulis pada tag &amp;lt;style&amp;gt;, dan di dalam tag &amp;lt;head&amp;gt;.</description>
     </item>
     
     <item>
@@ -38,7 +39,7 @@ Contoh Inline CSS:
       <guid>https://kaban.my.id/css/tutorial/sintax/</guid>
       <description>CSS Syntax # Apa itu CSS Syntax? # CSS Syntax sendiri mencerminkan tujuan dari penulisan Syntax CSS yang baku, terdiri dari selector dan declaration.
 Terdapat 2 unsur penting yaitu selector dan declaration, berikut penjelasannya :
- Selector : Selector sendiri digunakan untuk mendeklarasikan attribute HTML yang ingin diberi style CSS kedalamnya. Declaration : Declaration digunakan untuk mendeklarasikan properti dan value didalam sebuah block element yang biasanya dipisahkan oleh semicolon atau titik-koma.</description>
+Selector : Selector sendiri digunakan untuk mendeklarasikan attribute HTML yang ingin diberi style CSS kedalamnya. Declaration : Declaration digunakan untuk mendeklarasikan properti dan value didalam sebuah block element yang biasanya dipisahkan oleh semicolon atau titik-koma. Contoh lain :</description>
     </item>
     
     <item>
@@ -49,10 +50,10 @@ Terdapat 2 unsur penting yaitu selector dan declaration, berikut penjelasannya :
       <guid>https://kaban.my.id/css/tutorial/selectors/</guid>
       <description>CSS Selectors # Apa Itu CSS Selectors? # CSS Selectors adalah cara yang digunakan untuk memilih elemen HTML yang ingin diberi style.
 Terdapat beberapa jenis selectors, antara lain:
- Element Selectors ID Selectors Class Selectors Grouping Selectors Universal Selectors  Element Selectors # Element Selectors adalah selector yang digunakan untuk memilih elemen berdasarkan nama tag atau nama elemen.
+Element Selectors ID Selectors Class Selectors Grouping Selectors Universal Selectors Element Selectors # Element Selectors adalah selector yang digunakan untuk memilih elemen berdasarkan nama tag atau nama elemen.
 Contoh penggunaan Element Selector.
 Kita memiliki HTML seperti ini:
-&amp;lt;p&amp;gt;Paragraf pertama&amp;lt;/p&amp;gt; &amp;lt;p&amp;gt;Paragraf kedua&amp;lt;/p&amp;gt;  Lalu kita ingin memberi style berdasarkan nama tag.</description>
+&amp;lt;p&amp;gt;Paragraf pertama&amp;lt;/p&amp;gt; &amp;lt;p&amp;gt;Paragraf kedua&amp;lt;/p&amp;gt; Lalu kita ingin memberi style berdasarkan nama tag.</description>
     </item>
     
     <item>
@@ -63,7 +64,7 @@ Kita memiliki HTML seperti ini:
       <guid>https://kaban.my.id/css/tutorial/comments/</guid>
       <description>CSS Comments # Apa Itu CSS Comments ? # CSS Comments berfungsi untuk membantu menjelaskan serta mendokumentasikan style anda.
 Anda dapat menggunakan Comments pada CSS dengan bentuk penulisan style internal, external hingga inline style
-/* ini adalah penggunaan comments menggunakan satu baris */ div{ background-color : red; } /* ini adalah penggunaan comments menggunakan lebih dari satu baris */ p{ color : blue }  Contoh Penerapan Comment pada CSS # Comment Biasa</description>
+/* ini adalah penggunaan comments menggunakan satu baris */ div{ background-color : red; } /* ini adalah penggunaan comments menggunakan lebih dari satu baris */ p{ color : blue } Contoh Penerapan Comment pada CSS # Comment Biasa</description>
     </item>
     
     <item>
@@ -73,7 +74,7 @@ Anda dapat menggunakan Comments pada CSS dengan bentuk penulisan style internal,
       
       <guid>https://kaban.my.id/css/tutorial/colors/</guid>
       <description>CSS Colors # Apa Itu CSS Colors? # Sesuai dengan namanya, css colors adalah syntax untuk memberi warna pada elemen HTML. Warna dapat ditentukan menggunakan:
- Nama warna yang telah ditentukan Nilai RGB Nilai RGBA Nilai HSL Nilai HSLA Nilai HEX  Nama warna dalam CSS # Di CSS, warna dapat ditentukan dengan menggunakan nama warna yang telah ditentukan:
+Nama warna yang telah ditentukan Nilai RGB Nilai RGBA Nilai HSL Nilai HSLA Nilai HEX Nama warna dalam CSS # Di CSS, warna dapat ditentukan dengan menggunakan nama warna yang telah ditentukan:
 Dan masih banyak lagi.
 Nilai RGB # Di CSS, warna dapat ditentukan sebagai nilai RGB, menggunakan rumus ini:</description>
     </item>
@@ -86,7 +87,7 @@ Nilai RGB # Di CSS, warna dapat ditentukan sebagai nilai RGB, menggunakan rumus 
       <guid>https://kaban.my.id/css/tutorial/backgroud/</guid>
       <description>CSS Background # Apa Itu CSS Background # Properti untuk menentukan sebuah background elemen.
 Background memiliki beberapa property, antara lain:
- background - (shorthand) - Untuk menentukan sebuah background elemen yang mewakili beberapa properti background lainnya. background-color - Untuk menentukan warna latar belakang sebuah elemen html. background-image - Untuk menjadi gambar sebagai latar belakang dokumen html atau elemen html. background-repeat - Untuk mengatur kontrol pengulangan pada background gambar. background-position - Untuk mengatur kontrol posisi pada background gambar.</description>
+background - (shorthand) - Untuk menentukan sebuah background elemen yang mewakili beberapa properti background lainnya. background-color - Untuk menentukan warna latar belakang sebuah elemen html. background-image - Untuk menjadi gambar sebagai latar belakang dokumen html atau elemen html. background-repeat - Untuk mengatur kontrol pengulangan pada background gambar. background-position - Untuk mengatur kontrol posisi pada background gambar.</description>
     </item>
     
     <item>
@@ -97,8 +98,8 @@ Background memiliki beberapa property, antara lain:
       <guid>https://kaban.my.id/css/tutorial/borders/</guid>
       <description>CSS Border # Apa itu CSS border? # Properti CSS border ini adalah untuk memberikan efek garis ke sekitar elemen yang diterapkan properti ini.
 Nilai-nilai dalam CSS Border ini # border-width: mengatur ketebalan border.
- Nilai numeric seperti unit px, rem, em, vw dan vh. thin nilai setara dengan 1px. medium nilai setara dengan 3px. thick nilai setara dengan 5px.  Contoh:
-#border { border-width: thin / medium / thick / (px/rem/em/vw/vh); }  border-style: mengatur bagaimana bentuk garis border digambar disekitar elemen.</description>
+Nilai numeric seperti unit px, rem, em, vw dan vh. thin nilai setara dengan 1px. medium nilai setara dengan 3px. thick nilai setara dengan 5px. Contoh:
+#border { border-width: thin / medium / thick / (px/rem/em/vw/vh); } border-style: mengatur bagaimana bentuk garis border digambar disekitar elemen.</description>
     </item>
     
     <item>
@@ -110,7 +111,7 @@ Nilai-nilai dalam CSS Border ini # border-width: mengatur ketebalan border.
       <description>CSS Border Radius # Apa Itu CSS Border Radius? # CSS Border Radius adalah syntax untuk membuat lengkungan di tag HTML.
 Jika border-radius tidak ditentukan propertinya, maka secara default semua sudut akan terbentuk lengkungan sesuai nilai yang telah tentukan :
 Contoh:
-.div { border-radius: 5px; /* Terbentuk lengkungan di keempat sudutnya dan nilai nya sama*/ }  Properti Border Radius # Properti border-radius memiliki 4 nilai yang dapat digunakan untuk menentukan sudut dimana lengkungan yang ingin kita buat.</description>
+.div { border-radius: 5px; /* Terbentuk lengkungan di keempat sudutnya dan nilai nya sama*/ } Properti Border Radius # Properti border-radius memiliki 4 nilai yang dapat digunakan untuk menentukan sudut dimana lengkungan yang ingin kita buat.</description>
     </item>
     
     <item>
@@ -121,8 +122,8 @@ Contoh:
       <guid>https://kaban.my.id/css/tutorial/margin/</guid>
       <description>CSS Margins # Apa Itu CSS Margins? # Properti CSS margin digunakan untuk membuat jarak pada antar elemen, di bagian luar.
 Margin memiliki beberapa property, antara lain:
- margin-top - Untuk mengatur margin atas margin-right - Untuk mengatur margin kanan margin-bottom - Untuk mengatur margin bawah margin-left - Untuk mengatur margin kiri margin (shorthand) - Untuk mengatur margin di semua arah  Contoh:
-p { margin-top: 10px; margin-right: 20px; margin-bottom: 30px; margin-left: 40px; }  Margin Shorthand # Properti margin (shorthand) ini, memiliki beberapa parameter nilai.</description>
+margin-top - Untuk mengatur margin atas margin-right - Untuk mengatur margin kanan margin-bottom - Untuk mengatur margin bawah margin-left - Untuk mengatur margin kiri margin (shorthand) - Untuk mengatur margin di semua arah Contoh:
+p { margin-top: 10px; margin-right: 20px; margin-bottom: 30px; margin-left: 40px; } Margin Shorthand # Properti margin (shorthand) ini, memiliki beberapa parameter nilai.</description>
     </item>
     
   </channel>
