@@ -5,6 +5,97 @@
     <link>https://kaban.my.id/categories/</link>
     <description>Recent content in Categories on </description>
     <generator>Hugo -- gohugo.io</generator>
-    <language>en</language><atom:link href="https://kaban.my.id/categories/index.xml" rel="self" type="application/rss+xml" />
+    <language>en</language>
+    <lastBuildDate>Mon, 18 Sep 2023 13:57:55 +0700</lastBuildDate><atom:link href="https://kaban.my.id/categories/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Pemrograman</title>
+      <link>https://kaban.my.id/categories/pemrograman/</link>
+      <pubDate>Mon, 18 Sep 2023 13:57:55 +0700</pubDate>
+      
+      <guid>https://kaban.my.id/categories/pemrograman/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Blog</title>
+      <link>https://kaban.my.id/categories/blog/</link>
+      <pubDate>Mon, 04 Sep 2023 22:40:30 +0700</pubDate>
+      
+      <guid>https://kaban.my.id/categories/blog/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Tools</title>
+      <link>https://kaban.my.id/categories/tools/</link>
+      <pubDate>Thu, 17 Nov 2022 02:55:26 +0700</pubDate>
+      
+      <guid>https://kaban.my.id/categories/tools/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Filsafat Ilmu</title>
+      <link>https://kaban.my.id/categories/filsafat-ilmu/</link>
+      <pubDate>Fri, 28 Oct 2022 02:55:26 +0700</pubDate>
+      
+      <guid>https://kaban.my.id/categories/filsafat-ilmu/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Materi Kuliah</title>
+      <link>https://kaban.my.id/categories/materi-kuliah/</link>
+      <pubDate>Fri, 28 Oct 2022 02:55:26 +0700</pubDate>
+      
+      <guid>https://kaban.my.id/categories/materi-kuliah/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Ceritaku</title>
+      <link>https://kaban.my.id/categories/ceritaku/</link>
+      <pubDate>Thu, 27 Oct 2022 09:57:55 +0700</pubDate>
+      
+      <guid>https://kaban.my.id/categories/ceritaku/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Karo</title>
+      <link>https://kaban.my.id/categories/karo/</link>
+      <pubDate>Fri, 01 Jul 2022 13:57:55 +0700</pubDate>
+      
+      <guid>https://kaban.my.id/categories/karo/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Tanah Karo</title>
+      <link>https://kaban.my.id/categories/tanah-karo/</link>
+      <pubDate>Fri, 01 Jul 2022 13:57:55 +0700</pubDate>
+      
+      <guid>https://kaban.my.id/categories/tanah-karo/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Networking</title>
+      <link>https://kaban.my.id/categories/networking/</link>
+      <pubDate>Sat, 18 Jul 2020 13:57:55 +0700</pubDate>
+      
+      <guid>https://kaban.my.id/categories/networking/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Blockchain</title>
+      <link>https://kaban.my.id/categories/blockchain/</link>
+      <pubDate>Fri, 12 Jun 2020 19:35:40 +0700</pubDate>
+      
+      <guid>https://kaban.my.id/categories/blockchain/</guid>
+      <description></description>
+    </item>
+    
   </channel>
 </rss>
