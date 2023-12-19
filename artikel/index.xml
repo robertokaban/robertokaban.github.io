@@ -8,6 +8,16 @@
     <language>en</language>
     <lastBuildDate>Tue, 06 Oct 2020 08:49:55 +0000</lastBuildDate><atom:link href="https://kaban.my.id/artikel/index.xml" rel="self" type="application/rss+xml" />
     <item>
+      <title>Ringkasan 10 Jurnal dengan topik Cybercrime (Kejahatan dunia maya)</title>
+      <link>https://kaban.my.id/ringkasan-10-jurnal-dengan-topik-cybercrime-kejahatan-dunia-maya/</link>
+      <pubDate>Mon, 04 Dec 2023 13:57:55 +0700</pubDate>
+      
+      <guid>https://kaban.my.id/ringkasan-10-jurnal-dengan-topik-cybercrime-kejahatan-dunia-maya/</guid>
+      <description>Pengantar # Cybercrime merupakan kegiatan kejahatan yang dilakukan secara online atau melalui jaringan internet. Cybercrime mencakup serangkaian aktivitas kriminal yang melibatkan penggunaan teknologi informasi atau komputer sebagai alat utama untuk melakukan kejahatan. Cybercrime bisa beragam, mulai dari pencurian identitas, penipuan online, peretasan (hacking), penyebaran malware (perangkat lunak berbahaya), pencurian data, hingga kegiatan ilegal lainnya yang dilakukan melalui internet atau jaringan komputer.
+Artikel ini merupakan tugas perkuliahan saya, kebetulan dapat tugas untuk mencari dan meringkas 10 jurnal, saya posting di sini siapa tau nanti ada teman-teman yang butuh untuk dijadikan referensi.</description>
+    </item>
+    
+    <item>
       <title>Ngrok: Mengenal Ngrok, Instalasi dan Konfigurasi </title>
       <link>https://kaban.my.id/ngrok-mengenal-ngrok-instalasi-dan-konfigurasi/</link>
       <pubDate>Mon, 18 Sep 2023 13:57:55 +0700</pubDate>
@@ -97,16 +107,6 @@ Dengan berkembangnya perangkat lunak yg sifatnya GUI (Graphic User Interface) me
       
       <guid>https://kaban.my.id/10-pertanyaan-mendasar-tentang-blockchain-yang-anda-harus-tahu-jawabannya/</guid>
       <description>Apa itu blockchain? # Blockchain adalah serangkaian blok yang berisi informasi. Blok-blok ini saling terkait dan dilindungi keunikannya dengan hash (seperti tanda tangan digital yang unik, bisa diumpamakan juga seperti sidik jari yang tidak mungkin sama di antara satu dengan lainnya). Setiap blok berisi informasi. Apabila ada yang mengubah satu blok, maka ia juga harus mengubah serangkaian blok lainnya sehingga kecurangan atau pencurian data menjadi sangat mungkin untuk ditiadakan. Ide siapakah blockchain ini?</description>
-    </item>
-    
-    <item>
-      <title>Blockchain: Solusi Resiko Keterlibatan Pihak Ketiga yang Tidak Bertanggung Jawab</title>
-      <link>https://kaban.my.id/blockchain-solusi-resiko-keterlibatan-pihak-ketiga-yang-tidak-bertanggung-jawab/</link>
-      <pubDate>Thu, 04 Jun 2020 09:19:42 +0100</pubDate>
-      
-      <guid>https://kaban.my.id/blockchain-solusi-resiko-keterlibatan-pihak-ketiga-yang-tidak-bertanggung-jawab/</guid>
-      <description>Pengantar # Begitu banyak kegiatan/transaksi di dalam kehidupan kita memanfaatkan pihak ketiga. Ketiga Anda menggunakan jasa bank, sistem informasi pendaftaran ke sekolah pilihan, bahkan untuk bersosialisasi di dunia maya seperti facebook. Dan, siapa pun tahu bahwa facebook pernah menjual data para user-nya dan mendapatkan keuntungan.
-Tidak ada satu pun transaksi dalam kehidupan manusia modern yang berhubungan dengan internet yang benar-benar terlepas dari pihak ketiga. Dalam sistem blockchain, pihak ketiga ini disebut “services” (yang memberikan layanan), bedanya mereka diberikan aturan yang kuat dan aman yang membuat mereka hanya bisa mengakses apa yang diizinkan oleh user.</description>
     </item>
     
   </channel>
