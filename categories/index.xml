@@ -6,11 +6,11 @@
     <description>Recent content in Categories on </description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
-    <lastBuildDate>Thu, 07 Dec 2023 22:40:30 +0700</lastBuildDate><atom:link href="https://kaban.my.id/categories/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Wed, 20 Dec 2023 09:40:30 +0700</lastBuildDate><atom:link href="https://kaban.my.id/categories/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Blog</title>
       <link>https://kaban.my.id/categories/blog/</link>
-      <pubDate>Thu, 07 Dec 2023 22:40:30 +0700</pubDate>
+      <pubDate>Wed, 20 Dec 2023 09:40:30 +0700</pubDate>
       
       <guid>https://kaban.my.id/categories/blog/</guid>
       <description></description>
@@ -22,15 +22,6 @@
       <pubDate>Mon, 04 Dec 2023 13:57:55 +0700</pubDate>
       
       <guid>https://kaban.my.id/categories/cybercrime/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Cybercrime, Teknologi, Networking</title>
-      <link>https://kaban.my.id/categories/cybercrime-teknologi-networking/</link>
-      <pubDate>Mon, 04 Dec 2023 13:57:55 +0700</pubDate>
-      
-      <guid>https://kaban.my.id/categories/cybercrime-teknologi-networking/</guid>
       <description></description>
     </item>
     
@@ -94,6 +85,15 @@
       <pubDate>Fri, 01 Jul 2022 13:57:55 +0700</pubDate>
       
       <guid>https://kaban.my.id/categories/tanah-karo/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Networking</title>
+      <link>https://kaban.my.id/categories/networking/</link>
+      <pubDate>Sat, 18 Jul 2020 13:57:55 +0700</pubDate>
+      
+      <guid>https://kaban.my.id/categories/networking/</guid>
       <description></description>
     </item>
     
