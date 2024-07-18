@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Manet on </title>
+    <link>https://kaban.my.id/tags/manet/</link>
+    <description>Recent content in Manet on </description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
+    <lastBuildDate>Fri, 21 Jun 2024 13:57:55 +0700</lastBuildDate><atom:link href="https://kaban.my.id/tags/manet/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Mobile Ad hoc Network (MANET): Protokol dan Aplikasinya</title>
+      <link>https://kaban.my.id/mobile-ad-hoc-network-manet-protokol-dan-aplikasinya/</link>
+      <pubDate>Fri, 21 Jun 2024 13:57:55 +0700</pubDate>
+      
+      <guid>https://kaban.my.id/mobile-ad-hoc-network-manet-protokol-dan-aplikasinya/</guid>
+      <description>Mobile Ad hoc Network (MANET) # Mobile Ad hoc Network (MANET) adalah jenis jaringan nirkabel yang terdiri dari sekelompok perangkat mobile yang dapat berkomunikasi satu sama lain tanpa perlu infrastruktur jaringan tetap, seperti router atau access point. Perangkat dalam MANET dapat bergerak bebas dan secara dinamis membentuk jaringan sementara. Manet memiliki karakteristik seperti Infrastruktur yang otonom, Skalabilitas jaringan dan kemampuan node dan variasi tautan.
+Karakterisitik Manet # Tanpa infrastruktur dan otonom MANET tidak bergantung pada infrastruktur terpusat atau mapan.</description>
+    </item>
+    
+  </channel>
+</rss>

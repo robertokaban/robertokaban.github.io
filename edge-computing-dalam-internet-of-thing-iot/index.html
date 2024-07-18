@@ -1,0 +1,584 @@
+<!doctype html>
+<html lang="en-US">
+  <head>
+  <meta charset="utf-8">
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <link rel="preload" as="font" href="https://kaban.my.id/fonts/vendor/jost/jost-v4-latin-regular.woff2" type="font/woff2" crossorigin>
+<link rel="preload" as="font" href="https://kaban.my.id/fonts/vendor/jost/jost-v4-latin-500.woff2" type="font/woff2" crossorigin>
+<link rel="preload" as="font" href="https://kaban.my.id/fonts/vendor/jost/jost-v4-latin-700.woff2" type="font/woff2" crossorigin>
+
+  <script>(()=>{var t=window.matchMedia&&window.matchMedia("(prefers-color-scheme: dark)").matches,e=localStorage.getItem("theme");t&&e===null&&(localStorage.setItem("theme","dark"),document.documentElement.setAttribute("data-dark-mode","")),t&&e==="dark"&&document.documentElement.setAttribute("data-dark-mode",""),e==="dark"&&document.documentElement.setAttribute("data-dark-mode","")})()</script>
+
+  <link rel="stylesheet" href="https://kaban.my.id/main.9f87974e4c1caf828d7f6300ecd98102083d1763683fe424f26c4c7b80fa72a094aa3c62fe333b5026c22ff50b82f74220d559e730c1f032fd8bcec957ac2bb4.css" integrity="sha512-n4eXTkwcr4KNf2MA7NmBAgg9F2NoP&#43;Qk8mxMe4D6cqCUqjxi/jM7UCbCL/ULgvdCINVZ5zDB8DL9i87JV6wrtA==" crossorigin="anonymous">
+<noscript><style>img.lazyload { display: none; }</style></noscript>
+  <meta name="robots" content="index, follow">
+    <meta name="googlebot" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1">
+    <meta name="bingbot" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1">
+  <title>Edge Computing dalam Internet of Thing (IoT) - Roberto Kaban Blog&#39;s</title>
+<meta name="description" content="Penggunaan Internet of Things (IoT), layanan dan aplikasi mobile dalam skenario kompleks seperti Smart City dan Industri 4.0 telah menimbulkan tantangan baru bagi solusi yang berorientasi pada Cloud Computing. Cloud Computing merupakan paradigma komputasi dengan visi sentralisasi sumber daya dengan skema terpusat di mana komputasi dan penyimpanan diterapkan di pusat data jarak jauh. Cloud Computing mengalami keterbatasan signifikan saat berkaitan dengan teknologi yang membutuhkan respons real-time. ">
+<link rel="canonical" href="https://kaban.my.id/edge-computing-dalam-internet-of-thing-iot/">
+<meta property="og:locale" content="en_US">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Edge Computing dalam Internet of Thing (IoT)">
+<meta property="og:description" content="Penggunaan Internet of Things (IoT), layanan dan aplikasi mobile dalam skenario kompleks seperti Smart City dan Industri 4.0 telah menimbulkan tantangan baru bagi solusi yang berorientasi pada Cloud Computing. Cloud Computing merupakan paradigma komputasi dengan visi sentralisasi sumber daya dengan skema terpusat di mana komputasi dan penyimpanan diterapkan di pusat data jarak jauh. Cloud Computing mengalami keterbatasan signifikan saat berkaitan dengan teknologi yang membutuhkan respons real-time. ">
+<meta property="og:url" content="https://kaban.my.id/edge-computing-dalam-internet-of-thing-iot/">
+<meta property="og:site_name" content="Roberto Kaban Blog&#39;s">
+<meta property="article:published_time" content="2024-06-21T13:57:55+07:00">
+  <meta property="article:modified_time" content="2024-06-21T13:57:55+07:00">
+  
+  <meta property="og:image" content="https://kaban.my.id/doks.png"/>
+      <meta property="og:image:alt" content="Roberto Kaban Blog&#39;s">
+    
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:site" content="@robertokaban">
+<meta name="twitter:creator" content="@robertokaban">
+<meta name="twitter:title" content="Edge Computing dalam Internet of Thing (IoT)">
+<meta name="twitter:description" content="Penggunaan Internet of Things (IoT), layanan dan aplikasi mobile dalam skenario kompleks seperti Smart City dan Industri 4.0 telah menimbulkan tantangan baru bagi solusi yang berorientasi pada Cloud Computing. Cloud Computing merupakan paradigma komputasi dengan visi sentralisasi sumber daya dengan skema terpusat di mana komputasi dan penyimpanan diterapkan di pusat data jarak jauh. Cloud Computing mengalami keterbatasan signifikan saat berkaitan dengan teknologi yang membutuhkan respons real-time. ">
+<meta name="twitter:image" content="https://kaban.my.id/doks.png">
+    <meta name="twitter:image:alt" content="Edge Computing dalam Internet of Thing (IoT)">
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "Person",
+        "@id": "https://kaban.my.id/#/schema/person/1",
+      "name": "BlogRobertoKaban",
+      "url": "https://kaban.my.id/",
+      "sameAs": [
+        "https://twitter.com/robertokaban"
+        , "https://github.com/robertokaban"
+        ],
+      "image": {
+          "@type": "ImageObject",
+          "@id": "https://kaban.my.id/#/schema/image/1",
+          "url": "https://kaban.my.id/doks.png",
+          "width":  1280 ,
+          "height":  640 ,
+          "caption": "BlogRobertoKaban"
+        }
+      },
+    {
+      "@type": "WebSite",
+      "@id": "https://kaban.my.id/#/schema/website/1",
+      "url": "https://kaban.my.id/",
+      "name": "Roberto Kaban Blog\u0027s",
+      "description": "Hanya sebuah catatan kecil untuk hal yang tidak ingin dilupakan.",
+      "publisher": {
+          "@id": "https://kaban.my.id/#/schema/person/1"
+        }
+      },
+    {
+      "@type": "WebPage",
+      "@id": "https://kaban.my.id/edge-computing-dalam-internet-of-thing-iot/",
+      "url": "https://kaban.my.id/edge-computing-dalam-internet-of-thing-iot/",
+      "name": "Edge Computing dalam Internet of Thing (IoT)",
+      "description": "Penggunaan Internet of Things (IoT), layanan dan aplikasi mobile dalam skenario kompleks seperti Smart City dan Industri 4.0 telah menimbulkan tantangan baru bagi solusi yang berorientasi pada Cloud Computing. Cloud Computing merupakan paradigma komputasi dengan visi sentralisasi sumber daya dengan skema terpusat di mana komputasi dan penyimpanan diterapkan di pusat data jarak jauh. Cloud Computing mengalami keterbatasan signifikan saat berkaitan dengan teknologi yang membutuhkan respons real-time. ",
+      "isPartOf": {
+        "@id": "https://kaban.my.id/#/schema/website/1"
+      },
+      "about": {
+          "@id": "https://kaban.my.id/#/schema/person/1"
+        },
+      "datePublished": "2024-06-21T13:57:55CET",
+      "dateModified": "2024-06-21T13:57:55CET",
+      "breadcrumb": {
+        "@id": "https://kaban.my.id/edge-computing-dalam-internet-of-thing-iot/#/schema/breadcrumb/1"
+      },
+      "primaryImageOfPage": {
+        "@id": "https://kaban.my.id/edge-computing-dalam-internet-of-thing-iot/#/schema/image/2"
+      },
+      "inLanguage": "en-US",
+      "potentialAction": [{
+        "@type": "ReadAction", "target": ["https://kaban.my.id/edge-computing-dalam-internet-of-thing-iot/"]
+      }]
+    },
+    {
+      "@type": "BreadcrumbList",
+      "@id": "https://kaban.my.id/edge-computing-dalam-internet-of-thing-iot/#/schema/breadcrumb/1",
+      "name": "Breadcrumbs",
+      "itemListElement": [{
+        "@type": "ListItem",
+        "position":  1 ,
+        "item": {
+          "@type": "WebPage",
+          "@id": "https://kaban.my.id/",
+          "url": "https://kaban.my.id/",
+          "name": "Home"
+          }
+        },{
+        "@type": "ListItem",
+        "position":  2 ,
+        "item": {
+          "@id": "https://kaban.my.id/edge-computing-dalam-internet-of-thing-iot/"
+          }
+        }]
+    },
+
+    {
+      "@context": "https://schema.org",
+      "@graph": [
+        {
+          "@type": "ImageObject",
+          "@id": "https://kaban.my.id/edge-computing-dalam-internet-of-thing-iot/#/schema/image/2",
+          "url": "https://kaban.my.id/doks.png",
+          "contentUrl": "https://kaban.my.id/doks.png",
+          "caption": "Edge Computing dalam Internet of Thing (IoT)"
+        }
+      ]
+    }
+
+  ]
+}
+</script>
+
+  <meta name="theme-color" content="#fff">
+<link rel="icon" href="https://kaban.my.id/favicon.ico" sizes="any">
+<link rel="icon" type="image/svg+xml" href="https://kaban.my.id/favicon.svg">
+<link rel="apple-touch-icon" sizes="180x180" href="https://kaban.my.id/apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="32x32" href="https://kaban.my.id/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="https://kaban.my.id/favicon-16x16.png">
+<link rel="manifest" crossorigin="use-credentials" href="https://kaban.my.id/site.webmanifest">
+
+  
+
+
+  
+  
+  
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-60VSDZFQR5"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-60VSDZFQR5');
+</script>
+</head>
+
+  <body class="artikel single">
+    <div class="sticky-top">
+<div class="header-bar"></div>
+
+<header class="navbar navbar-expand-lg navbar-light doks-navbar">
+  <nav class="container-xxl flex-wrap flex-lg-nowrap" aria-label="Main navigation">
+
+    <a class="navbar-brand order-0" href="/" aria-label="Roberto Kaban Blog&#39;s">
+      Roberto Kaban Blog&#39;s
+    </a>
+
+    <button class="btn btn-menu order-2 d-block d-lg-none" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasDoks" aria-controls="offcanvasDoks" aria-label="Open main menu">
+      <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-menu"><line x1="3" y1="12" x2="21" y2="12"></line><line x1="3" y1="6" x2="21" y2="6"></line><line x1="3" y1="18" x2="21" y2="18"></line></svg>
+    </button>
+    <div class="offcanvas offcanvas-end border-0 py-lg-1" tabindex="-1" id="offcanvasDoks" data-bs-backdrop="true" aria-labelledby="offcanvasDoksLabel">
+      <div class="header-bar d-lg-none"></div>
+      <div class="offcanvas-header d-lg-none">
+        <h2 class="h5 offcanvas-title ps-2" id="offcanvasDoksLabel"><a class="text-dark" href="/">Roberto Kaban Blog&#39;s</a></h2>
+        <button type="button" class="btn-close text-reset me-2" data-bs-dismiss="offcanvas" aria-label="Close main menu"></button>
+      </div>
+      <div class="offcanvas-body p-4 p-lg-0">
+        <ul class="nav flex-column flex-lg-row align-items-lg-center mt-2 mt-lg-0 ms-lg-2 me-lg-auto">
+              <li class="nav-item">
+                <a class="nav-link ps-0 py-1" href="/about/">About Me</a>
+              </li>
+            
+          
+              <li class="nav-item">
+                <a class="nav-link ps-0 py-1" href="/contact/">Contact</a>
+              </li>
+            
+          
+              <li class="nav-item">
+                <a class="nav-link ps-0 py-1 active" href="/artikel/">Artikel</a>
+              </li>
+            
+          
+              <li class="nav-item">
+                <a class="nav-link ps-0 py-1" href="/coretanku/">Coretanku</a>
+              </li>
+            
+          </ul>
+
+        <hr class="text-black-50 my-4 d-lg-none">
+        <form class="doks-search position-relative flex-grow-1 ms-lg-auto me-lg-2">
+          <input id="search" class="form-control is-search" type="search" placeholder="Cari di blog ini..." aria-label="Cari di blog ini..." autocomplete="off">
+          <div id="suggestions" class="shadow bg-white rounded d-none"></div>
+        </form>
+        <hr class="text-black-50 my-4 d-lg-none">
+        <ul class="nav flex-column flex-lg-row">
+          <li class="nav-item">
+              <a class="nav-link social-link" href="https://github.com/robertokaban"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-github"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path></svg><small class="ms-2 d-lg-none">GitHub</small></a>
+            </li>
+          <li class="nav-item">
+              <a class="nav-link social-link" href="https://facebook.com/roberto.kaban"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-facebook"><path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"></path></svg><small class="ms-2 d-lg-none">Facebook</small></a>
+            </li>
+          <li class="nav-item">
+              <a class="nav-link social-link" href="https://twitter.com/robertokaban"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-twitter"><path d="M23 3a10.9 10.9 0 0 1-3.14 1.53 4.48 4.48 0 0 0-7.86 3v1A10.66 10.66 0 0 1 3 4s-4 9 5 13a11.64 11.64 0 0 1-7 2c9 5 20 0 20-11.5a4.5 4.5 0 0 0-.08-.83A7.72 7.72 0 0 0 23 3z"></path></svg><small class="ms-2 d-lg-none">Twitter</small></a>
+            </li>
+          <li class="nav-item">
+              <a class="nav-link social-link" href="https://youtube.com/@robertokaban"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-youtube"><path d="M10,15L15.19,12L10,9V15M21.56,7.17C21.69,7.64 21.78,8.27 21.84,9.07C21.91,9.87 21.94,10.56 21.94,11.16L22,12C22,14.19 21.84,15.8 21.56,16.83C21.31,17.73 20.73,18.31 19.83,18.56C19.36,18.69 18.5,18.78 17.18,18.84C15.88,18.91 14.69,18.94 13.59,18.94L12,19C7.81,19 5.2,18.84 4.17,18.56C3.27,18.31 2.69,17.73 2.44,16.83C2.31,16.36 2.22,15.73 2.16,14.93C2.09,14.13 2.06,13.44 2.06,12.84L2,12C2,9.81 2.16,8.2 2.44,7.17C2.69,6.27 3.27,5.69 4.17,5.44C4.64,5.31 5.5,5.22 6.82,5.16C8.12,5.09 9.31,5.06 10.41,5.06L12,5C16.19,5 18.8,5.16 19.83,5.44C20.73,5.69 21.31,6.27 21.56,7.17Z"></path></svg><small class="ms-2 d-lg-none">Youtube</small></a>
+            </li>
+          </ul>
+
+        
+        <hr class="text-black-50 my-4 d-lg-none">
+        <button id="mode" class="btn btn-link" type="button" aria-label="Toggle user interface mode">
+          <span class="toggle-dark"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-moon"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path></svg></span>
+          <span class="toggle-light"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-sun"><circle cx="12" cy="12" r="5"></circle><line x1="12" y1="1" x2="12" y2="3"></line><line x1="12" y1="21" x2="12" y2="23"></line><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line><line x1="1" y1="12" x2="3" y2="12"></line><line x1="21" y1="12" x2="23" y2="12"></line><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line></svg></span>
+        </button>
+        
+
+        </div>
+    </div>
+  </nav>
+</header>
+
+
+</div>
+
+    <div class="wrap container-xxl" role="document">
+      <div class="content">
+        
+<article>
+  <div class="row flex-lg-nowrap">
+    <div class="col-lg-2 col-xl-2">
+
+    </div>
+    
+    <nav class="docs-toc d-none d-xl-block col-xl-4" aria-label="Secondary navigation">
+      <div class="d-xl-none">
+  <button class="btn btn-outline-primary btn-sm doks-toc-toggle collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#onThisPage" aria-controls="doks-docs-nav" aria-expanded="false" aria-label="Toggle On this page navigation">
+    <span>Daftar isi</span>
+    <span>
+      <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" class="doks doks-expand" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><title>Expand</title><polyline points="7 13 12 18 17 13"></polyline><polyline points="7 6 12 11 17 6"></polyline></svg>
+      <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" class="doks doks-collapse" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><title>Collapse</title><polyline points="17 11 12 6 7 11"></polyline><polyline points="17 18 12 13 7 18"></polyline></svg>
+    </span>
+  </button>
+  <div class="collapse" id="onThisPage">
+    <div class="card card-body mt-3 py-1">
+      <div class="page-links">
+        <nav id="TableOfContents">
+  <ul>
+    <li><a href="#pendahuluan">Pendahuluan</a></li>
+    <li><a href="#edge-computing">Edge Computing</a></li>
+    <li><a href="#keuntungan-teknologi-edge">Keuntungan teknologi Edge</a></li>
+    <li><a href="#tantangan-teknologi-egde">Tantangan Teknologi Egde</a></li>
+    <li><a href="#edge-computing-dan-iot">Edge Computing dan IoT</a>
+      <ul>
+        <li><a href="#1an-integrated-iot-sensor-camera-system-toward-leveraging-edge-computing-for-smart-greenhouse-mushroom-cultivation">1.	An Integrated IoT Sensor-Camera System toward Leveraging Edge Computing for Smart Greenhouse Mushroom Cultivation</a></li>
+        <li><a href="#2scalable-digital-health-sdh-an-iot-based-scalable-framework-for-remote-patient-monitoring">2.	Scalable Digital Health (SDH): An IoT-Based Scalable Framework for Remote Patient Monitoring</a></li>
+        <li><a href="#3progressive-adoption-of-rina-in-iot-networks-enhancing-scalability-and-network-management-via-sdn-integration">3.	Progressive Adoption of RINA in IoT Networks: Enhancing Scalability and Network Management via SDN Integration</a></li>
+        <li><a href="#4deep-learning-inspired-iot-ids-mechanism-for-edge-computing-environments">4.	Deep Learning-Inspired IoT-IDS Mechanism for Edge Computing Environments</a></li>
+        <li><a href="#5global-resource-scheduling-for-distributed-edge-computing">5.	Global Resource Scheduling for Distributed Edge Computing</a></li>
+      </ul>
+    </li>
+    <li><a href="#kesimpulan">Kesimpulan</a></li>
+    <li><a href="#daftar-pustaka">Daftar Pustaka</a></li>
+  </ul>
+</nav>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="page-links d-none d-xl-block">
+  <h3>Daftar isi</h3>
+  <nav id="TableOfContents">
+  <ul>
+    <li><a href="#pendahuluan">Pendahuluan</a></li>
+    <li><a href="#edge-computing">Edge Computing</a></li>
+    <li><a href="#keuntungan-teknologi-edge">Keuntungan teknologi Edge</a></li>
+    <li><a href="#tantangan-teknologi-egde">Tantangan Teknologi Egde</a></li>
+    <li><a href="#edge-computing-dan-iot">Edge Computing dan IoT</a>
+      <ul>
+        <li><a href="#1an-integrated-iot-sensor-camera-system-toward-leveraging-edge-computing-for-smart-greenhouse-mushroom-cultivation">1.	An Integrated IoT Sensor-Camera System toward Leveraging Edge Computing for Smart Greenhouse Mushroom Cultivation</a></li>
+        <li><a href="#2scalable-digital-health-sdh-an-iot-based-scalable-framework-for-remote-patient-monitoring">2.	Scalable Digital Health (SDH): An IoT-Based Scalable Framework for Remote Patient Monitoring</a></li>
+        <li><a href="#3progressive-adoption-of-rina-in-iot-networks-enhancing-scalability-and-network-management-via-sdn-integration">3.	Progressive Adoption of RINA in IoT Networks: Enhancing Scalability and Network Management via SDN Integration</a></li>
+        <li><a href="#4deep-learning-inspired-iot-ids-mechanism-for-edge-computing-environments">4.	Deep Learning-Inspired IoT-IDS Mechanism for Edge Computing Environments</a></li>
+        <li><a href="#5global-resource-scheduling-for-distributed-edge-computing">5.	Global Resource Scheduling for Distributed Edge Computing</a></li>
+      </ul>
+    </li>
+    <li><a href="#kesimpulan">Kesimpulan</a></li>
+    <li><a href="#daftar-pustaka">Daftar Pustaka</a></li>
+  </ul>
+</nav>
+  </div>
+
+    </nav>
+    <main class="docs-content col-lg-11 col-xl-9">
+    
+        <nav aria-label="breadcrumb">
+          <ol class="breadcrumb">
+            <li class="breadcrumb-item"><a href="/">Home</a></li>
+<li class="breadcrumb-item"><a href="/artikel/">Artikel</a></li>
+<li class="breadcrumb-item active" aria-current="page">Edge Computing dalam Internet of Thing (IoT)</li>
+          </ol>
+        </nav>
+      
+          <h1>Edge Computing dalam Internet of Thing (IoT)</h1>
+          
+<p><small>Posted&nbsp;in&nbsp;<a class="stretched-link position-relative link-muted" href="https://kaban.my.id/categories/jaringan-komputer/">Jaringan Komputer</a>, <a class="stretched-link position-relative link-muted" href="https://kaban.my.id/categories/iot/">IoT</a>&nbsp;on&nbsp;June 21, 2024 by <a class="stretched-link position-relative" href="/contributors/roberto-kaban/">Roberto Kaban</a>&nbsp;&hyphen;&nbsp;<strong>10&nbsp;min read</strong></small><p>
+      <p class="lead"></p>
+      <nav class="d-xl-none" aria-label="Quaternary navigation">
+        <div class="d-xl-none">
+  <button class="btn btn-outline-primary btn-sm doks-toc-toggle collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#onThisPage" aria-controls="doks-docs-nav" aria-expanded="false" aria-label="Toggle On this page navigation">
+    <span>Daftar isi</span>
+    <span>
+      <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" class="doks doks-expand" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><title>Expand</title><polyline points="7 13 12 18 17 13"></polyline><polyline points="7 6 12 11 17 6"></polyline></svg>
+      <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" class="doks doks-collapse" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><title>Collapse</title><polyline points="17 11 12 6 7 11"></polyline><polyline points="17 18 12 13 7 18"></polyline></svg>
+    </span>
+  </button>
+  <div class="collapse" id="onThisPage">
+    <div class="card card-body mt-3 py-1">
+      <div class="page-links">
+        <nav id="TableOfContents">
+  <ul>
+    <li><a href="#pendahuluan">Pendahuluan</a></li>
+    <li><a href="#edge-computing">Edge Computing</a></li>
+    <li><a href="#keuntungan-teknologi-edge">Keuntungan teknologi Edge</a></li>
+    <li><a href="#tantangan-teknologi-egde">Tantangan Teknologi Egde</a></li>
+    <li><a href="#edge-computing-dan-iot">Edge Computing dan IoT</a>
+      <ul>
+        <li><a href="#1an-integrated-iot-sensor-camera-system-toward-leveraging-edge-computing-for-smart-greenhouse-mushroom-cultivation">1.	An Integrated IoT Sensor-Camera System toward Leveraging Edge Computing for Smart Greenhouse Mushroom Cultivation</a></li>
+        <li><a href="#2scalable-digital-health-sdh-an-iot-based-scalable-framework-for-remote-patient-monitoring">2.	Scalable Digital Health (SDH): An IoT-Based Scalable Framework for Remote Patient Monitoring</a></li>
+        <li><a href="#3progressive-adoption-of-rina-in-iot-networks-enhancing-scalability-and-network-management-via-sdn-integration">3.	Progressive Adoption of RINA in IoT Networks: Enhancing Scalability and Network Management via SDN Integration</a></li>
+        <li><a href="#4deep-learning-inspired-iot-ids-mechanism-for-edge-computing-environments">4.	Deep Learning-Inspired IoT-IDS Mechanism for Edge Computing Environments</a></li>
+        <li><a href="#5global-resource-scheduling-for-distributed-edge-computing">5.	Global Resource Scheduling for Distributed Edge Computing</a></li>
+      </ul>
+    </li>
+    <li><a href="#kesimpulan">Kesimpulan</a></li>
+    <li><a href="#daftar-pustaka">Daftar Pustaka</a></li>
+  </ul>
+</nav>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="page-links d-none d-xl-block">
+  <h3>Daftar isi</h3>
+  <nav id="TableOfContents">
+  <ul>
+    <li><a href="#pendahuluan">Pendahuluan</a></li>
+    <li><a href="#edge-computing">Edge Computing</a></li>
+    <li><a href="#keuntungan-teknologi-edge">Keuntungan teknologi Edge</a></li>
+    <li><a href="#tantangan-teknologi-egde">Tantangan Teknologi Egde</a></li>
+    <li><a href="#edge-computing-dan-iot">Edge Computing dan IoT</a>
+      <ul>
+        <li><a href="#1an-integrated-iot-sensor-camera-system-toward-leveraging-edge-computing-for-smart-greenhouse-mushroom-cultivation">1.	An Integrated IoT Sensor-Camera System toward Leveraging Edge Computing for Smart Greenhouse Mushroom Cultivation</a></li>
+        <li><a href="#2scalable-digital-health-sdh-an-iot-based-scalable-framework-for-remote-patient-monitoring">2.	Scalable Digital Health (SDH): An IoT-Based Scalable Framework for Remote Patient Monitoring</a></li>
+        <li><a href="#3progressive-adoption-of-rina-in-iot-networks-enhancing-scalability-and-network-management-via-sdn-integration">3.	Progressive Adoption of RINA in IoT Networks: Enhancing Scalability and Network Management via SDN Integration</a></li>
+        <li><a href="#4deep-learning-inspired-iot-ids-mechanism-for-edge-computing-environments">4.	Deep Learning-Inspired IoT-IDS Mechanism for Edge Computing Environments</a></li>
+        <li><a href="#5global-resource-scheduling-for-distributed-edge-computing">5.	Global Resource Scheduling for Distributed Edge Computing</a></li>
+      </ul>
+    </li>
+    <li><a href="#kesimpulan">Kesimpulan</a></li>
+    <li><a href="#daftar-pustaka">Daftar Pustaka</a></li>
+  </ul>
+</nav>
+  </div>
+
+      </nav>
+      <h2 id="pendahuluan">Pendahuluan <a href="#pendahuluan" class="anchor" aria-hidden="true">#</a></h2>
+<p>Penggunaan Internet of Things (IoT), layanan dan aplikasi mobile dalam skenario kompleks seperti Smart City dan Industri 4.0 telah menimbulkan tantangan baru bagi solusi yang berorientasi pada Cloud Computing. Cloud Computing merupakan paradigma komputasi dengan visi sentralisasi sumber daya dengan skema terpusat di mana komputasi dan penyimpanan diterapkan di pusat data jarak jauh. Cloud Computing mengalami keterbatasan signifikan saat berkaitan dengan teknologi yang membutuhkan respons real-time. Beberapa tahun terakhir, tren baru dalam komputasi sedang berkembang dengan fungsi cloud yang semakin beralih ke jaringan edge. Edge Computing adalah solusi optimal untuk meminimalkan latensi, meningkatkan privasi, dan mengurangi biaya bandwidth dalam skenario berbasis IoT[1]. Edge Computing menghilangkan kebutuhan untuk memproses data di cloud atau sistem terpusat lainnya dengan memproses data terdekat dengan sumbernya. Hal ini mengakibatkan transmisi data yang lebih cepat dan peningkatan kinerja perangkat beserta aplikasi di dalam teknologi Edge Computing.</p>
+<h2 id="edge-computing">Edge Computing <a href="#edge-computing" class="anchor" aria-hidden="true">#</a></h2>
+<p>Edge Computing adalah platform terbuka terdistribusi dekat dengan benda atau sumber data, mengintegrasikan kemampuan jaringan, penyimpanan, dan aplikasi. Dengan menghadirkan layanan intelijen edge, Edge Computing memenuhi persyaratan utama digitalisasi industri untuk konektivitas tangkas, layanan real-time, optimalisasi data, kecerdasan aplikasi, keamanan, dan perlindungan privasi [1]. Sehingga dapat didefenisikan Edge cloud computing adalah model komputasi yang menempatkan sumber daya komputasi, seperti server, penyimpanan data, dan jaringan, lebih dekat dengan lokasi pengguna akhir atau perangkat IoT (Internet of Things). Konsep ini bertujuan untuk meningkatkan kinerja, mengurangi latensi, dan mengatasi masalah bandwidth dengan mendekatkan sumber daya komputasi ke sumber data atau pengguna akhir.</p>
+<h2 id="keuntungan-teknologi-edge">Keuntungan teknologi Edge <a href="#keuntungan-teknologi-edge" class="anchor" aria-hidden="true">#</a></h2>
+<p>Dengan mengunakan teknologi EDGE dapat meningkatkan berbagai aspek berikut. [1]</p>
+<ol>
+<li>Menghemat bandwidth dan sumber daya penyimpanan; untuk memfilter aliran data kebisingan yang berasal dari sumber data berbeda yang diproses oleh node sebelum mengirim data ke Cloud.</li>
+<li>Kedekatan dan latensi rendah dicapai dengan memproses informasi dekat dengan sumber asalnya.</li>
+<li>Peningkatan skalabilitas dicapai melalui desentralisasi penyimpanan dan pemrosesan.</li>
+<li>Node arsitektur Edge menyediakan isolasi dan privasi pada setiap node jaringan.</li>
+</ol>
+<h2 id="tantangan-teknologi-egde">Tantangan Teknologi Egde <a href="#tantangan-teknologi-egde" class="anchor" aria-hidden="true">#</a></h2>
+<p>Dibalik kelebihan yang dapat diperoleh dari teknologi EDGE, terdapat tantangan yang harus dijawab untuk meningkatkan kinerja teknologi ini diantarnya : [1]</p>
+<ol>
+<li>Keterbatasan Sumber Daya. Hal Ini dapat menjadi hambatan dalam menjalankan aplikasi yang membutuhkan sumber daya yang besar atau dalam situasi di mana infrastruktur tepi harus beroperasi dalam kondisi sumber daya terbatas.</li>
+<li>Kesulitan Manajemen, pengelolan jaringan ini menjadi lebih rumit dibandingkan dengan pusat data sentral terutama jika lokasi tersebut tersebar secara luas.</li>
+<li>Keterbatasan Koneksi Jaringan, Meskipun jaringan 5G menawarkan potensi konektivitas yang cepat dan rendah latensi, implementasi edge computing masih bergantung pada ketersediaan jaringan yang dapat diandalkan.</li>
+<li>Keamanan dan Privasi yang dapat meningkatkan risiko karena data diproses di dekat sumbernya. Penanganan yang tidak tepat dari data sensitif atau celah keamanan di perangkat tepi dapat mengakibatkan pelanggaran data yang serius.</li>
+<li>Interoperabilitas yaitu Kurangnya standar yang konsisten dapat menghambat integrasi dan kolaborasi antara infrastruktur tepi yang berbeda.</li>
+<li>Biaya Implementasi dan Pemeliharaan jika infrastruktur harus ditempatkan di banyak lokasi yang tersebar dapat menjadi beban tambahan bagi perusahaan.</li>
+<li>Skalabilitas Terbatas, beberapa implementasi EDGE mungkin menghadapi batasan dalam kemampuan untuk menangani lonjakan lalu lintas atau pertumbuhan yang cepat dalam jumlah perangkat terhubung.</li>
+</ol>
+<h2 id="edge-computing-dan-iot">Edge Computing dan IoT <a href="#edge-computing-dan-iot" class="anchor" aria-hidden="true">#</a></h2>
+<p>Berikut ini adalah beberapa penelitian terbaru tentang teknologi edge computing dalam Internet of Thing (IoT):</p>
+<h3 id="1an-integrated-iot-sensor-camera-system-toward-leveraging-edge-computing-for-smart-greenhouse-mushroom-cultivation">1.	An Integrated IoT Sensor-Camera System toward Leveraging Edge Computing for Smart Greenhouse Mushroom Cultivation <a href="#1an-integrated-iot-sensor-camera-system-toward-leveraging-edge-computing-for-smart-greenhouse-mushroom-cultivation" class="anchor" aria-hidden="true">#</a></h3>
+<p>Penelitian ini[2] bertujuan untuk meningkatkan efisiensi dalam industri budidaya jamur di rumah kaca dengan memanfaatkan teknologi edge computing. Tujuan utamanya adalah merancang dan mengimplementasikan arsitektur Smart Agriculture Information System (SAIS) untuk budidaya jamur di rumah kaca dengan memanfaatkan teknologi edge computing. Sistem terintegrasi sensor IoT dan kamera yang digunakan untuk memantau parameter lingkungan dan pertumbuhan jamur secara real-time. Penelitian ini menggunakan tiga layer dalam arsitektur SAIS, yaitu device layer, edge layer dan cloud layer. Device layer terdiri dari sensor IoT dan kamera yang terpasang di rumah kaca. Fungsinya adalah untuk mengumpulkan data lingkungan dan pertumbuhan jamur secara real-time. Edge layer berfungsi sebagai pengolahan awal (preprocessing) dan analisis data di lokasi terdekat dengan sumber data.</p>
+<p>Tujuannya adalah untuk mengolah dan menganalisis data dari sensor IoT dan kamera sebelum mengirimkannya ke lapisan Cloud. Lapisan ini juga mengintegrasikan mekanisme komunikasi dua arah untuk memisahkan aliran jaringan ke dalam forward domain dan backward domain. Cloud layer berfungsi sebagai pusat penyimpanan dan pemrosesan data yang lebih lanjut setelah data diolah di edge layer. Fungsinya adalah untuk menyimpan data dalam jangka panjang dan melakukan pemrosesan data yang lebih lanjut berdasarkan data yang dikumpulkan dari lapisan Device dan Edge.
+<img src='https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEgDQmzDn_7Ex1-14gQ_HLv_lfORu8re1aIjpF6oliMYyPXV7_HL5c1k5Zbn8ay5k0cT74I-vfGzlxeh57s8wgv-vUj35rd6VuEm3DrO3SjoMB7net9oNuXEkUax_ckJ_IuWZK7__7AshIhsKF6Zdeb1F2JTIJalmF8w_mJg76VzF1okV10F15kCfmoA90M/w640-h192/Screen%20Shot%202024-07-18%20at%2020.47.03.png' width="100%" class="border-0 rounded"></p>
+<div style="text-align:center">Gambar 1. Layer dalam Smart Agriculture Information System</div>
+<p>Dengan menggunakan arsitektur SAIS berlapis dan memanfaatkan teknologi edge computing, memungkinkan pemantauan parameter lingkungan secara real-time untuk pengambilan keputusan berdasarkan data yang terkumpul. Arsitektur SAIS berlapis yang diusulkan dapat diadaptasi untuk berbagai kebutuhan bisnis dalam pertanian cerdas sehingga dapat meningkatkan hasil pertanian dan mengurangi biaya produksi.</p>
+<h3 id="2scalable-digital-health-sdh-an-iot-based-scalable-framework-for-remote-patient-monitoring">2.	Scalable Digital Health (SDH): An IoT-Based Scalable Framework for Remote Patient Monitoring <a href="#2scalable-digital-health-sdh-an-iot-based-scalable-framework-for-remote-patient-monitoring" class="anchor" aria-hidden="true">#</a></h3>
+<p>Pemantauan pasien jarak jauh, terutama bagi lansia dan individu yang memiliki keterbatasan mobilitas, merupakan fokus utama dari penelitian ini. Penelitian ini[3] mengusulkan framework smart digital health  yang disebut dengan Scalable Digital Health (SDH). Framework ini mengintegrasikan solusi smart digital health dengan autoscaling edge computing yang peka terhadap latensi dalam pemantauan pasien jarak jauh. Dengan memanfaatkan teknologi IoT, memungkinkan SDH melakukan pelacakan real-time dari parameter kesehatan kritis, seperti suhu tubuh, tekanan darah, dan saturasi oksigen.
+Metrik vital ini ditransmisikan secara efisien dalam waktu nyata ke penyimpanan cloud AWS melalui arsitektur jaringan berlapis.</p>
+<p>Penelitian ini menyediakan aksesibilitas yang lebih baik, efisiensi biaya, dan respons yang cepat terhadap kebutuhan pasien. SDH menggunakan tiga layer fungsional utama, yaitu: Perception layer, Network layer dan Application layer. Perception layer menghubungkan pasien, sensor, dan perangkat IoT untuk mengumpulkan data kesehatan vital menggunakan modul IoT. Data ini kemudian ditransmisikan melalui jaringan ke AWS cloud. Network layer mengelola transmisi data, penyimpanan yang aman, serta pemrosesan dinamis dalam ekosistem cloud.</p>
+<img src='https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEgv8lmVPe6xRaVWhCUgYQAvlNY6QmUwiOSIguoR3l9js2F8Zz-Sbtemutc6z1e8HxRYltvuue-ZiZcv09zlH8uu6c0dzBIDVmvZzpBLQoelU2O6qCrUzeBgKDZVnK4Qk4vteVzpknJsVnKzF2yi6jsckwRayL1ZHBGIEkYQiXjLxdGRkXj5oOcRypvXY_c/w640-h278/Screen%20Shot%202024-07-18%20at%2020.47.11.png' width="100%" class="border-0 rounded">
+<div style="text-align:center">Gambar 2. Layer dalam Scalable Digital Health</div>
+<p>Responsivitas ditingkatkan dengan menggunakan Kubernetes Horizontal Pod Autoscaling yang berbasis latensi, sehingga meningkatkan pengalaman pengguna SDH. Application layer menyediakan antarmuka pengguna bagi para profesional medis, bagian klinik, pasien, dan pengasuh untuk mengakses data pasien, merespons dengan cepat, dan berinteraksi dengan sistem. Dengan terus mengembangkan solusi perawatan kesehatan terintegrasi seperti SDH, perawatan yang berpusat pada pasien dapat melampaui batasan geografis, memudahkan pasien dan penyedia layanan kesehatan.</p>
+<h3 id="3progressive-adoption-of-rina-in-iot-networks-enhancing-scalability-and-network-management-via-sdn-integration">3.	Progressive Adoption of RINA in IoT Networks: Enhancing Scalability and Network Management via SDN Integration <a href="#3progressive-adoption-of-rina-in-iot-networks-enhancing-scalability-and-network-management-via-sdn-integration" class="anchor" aria-hidden="true">#</a></h3>
+<p>Penelitian ini[4] membahas tentang pengembangan dan penerapan RINA (Recursive InterNetwork Architecture) dalam jaringan IoT. RINA adalah sebuah arsitektur jaringan yang bersifat clean slate yang menyediakan kerangka kerja yang skalabel, aman, dan fleksibel. Di dalam konteks Internet of Things (IoT), banyak tantangan yang dihadapi terutama dalam manajemen jaringan dan skalabilitas. Untuk mengatasinya, penelitian ini mengeksplorasi RINA dengan teknologi SDN (Software Defined Networking). Integrasi ini diharapkan dapat menurunkan hambatan dalam adopsi RINA dalam lingkungan IoT.</p>
+<p>Dalam implementasi RINA, edge computing memungkinkan data dari perangkat IoT untuk diproses dan dianalisis di lokasi yang sama, sebelum dikirim ke pusat data atau cloud. Arsitektur yang diusulkan mengikuti arsitektur generik SDN yang berbasis pada tiga lapisan, yaitu Application layer, Control layer dan Infrastructure layer.  Lapisan kontrol, dan lapisan infrastruktur untuk memfasilitasi adopsi RINA dalam jaringan SDN. Infrastructure layer  untuk manajemen perangkat RINA (perangkat IoT berbasis RINA, gateway IoT berbasis RINA  dan EdgeNodes berbasis RINA).</p>
+<img src='https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEhzPVgqRFPw42V3vJkLMIftskbjl7QGm86-Z_8lwrQHY5NMoCQ_4waQHGRCTSVwq5tCqd3J76ZqgaQALjhPPz3dXLejyL2E11oWecDe5NUlJv_GpMZLz3dNFSKy4jW_uLTpBOcKz70rO-kwS1A4aQ2EBn2O4qdkp5P9Pvpirw6-BXTmlm4VjaillVjfqBk/w630-h640/Screen%20Shot%202024-07-18%20at%2020.47.24.png' width="100%" class="border-0 rounded">
+<div style="text-align:center">Gambar 3. Arsitektur RINA</div>
+<p>Hasil dari penelitian ini menunjukkan bahwa integrasi RINA dan SDN, dengan mempertimbangkan prinsip-prinsip edge computing, berhasil mengatasi beberapa tantangan utama dalam implementasi IoT, seperti manajemen jaringan yang kompleks dan skalabilitas yang kurang. Dengan integrasi ini, jaringan IoT dapat menjadi lebih efisien, aman, dan responsif terhadap kebutuhan aplikasi yang beragam.</p>
+<h3 id="4deep-learning-inspired-iot-ids-mechanism-for-edge-computing-environments">4.	Deep Learning-Inspired IoT-IDS Mechanism for Edge Computing Environments <a href="#4deep-learning-inspired-iot-ids-mechanism-for-edge-computing-environments" class="anchor" aria-hidden="true">#</a></h3>
+<p>Teknologi IoT telah menjadi fokus penelitian yang signifikan dalam penerapan teknik Deep Learning (DL) untuk mendeteksi serangan cyber. Infrastruktur yang kritis harus dapat mendeteksi secara cepat serangan cyber di dekat perangkat edge untuk mencegah gangguan layanan. Pendekatan DL unggul dalam deteksi serangan sehingga menjadi alternatif yang layak untuk digunakan dalam deteksi intrusi. Solusi Intrusion Detection System(IDS) IoT berbasis DL yang diusulkan pada penelitian ini[5] memiliki kemampuan dari segi skalabilitas dalam menghadapi volume data IoT yang besar, sehingga menjadikannya salah satu cara yang dapat di implementasikan dalan teknologi IoT dan edge computing. Pada Gambar 4 menunjukkan infrastruktur berbasis edge-cloud yang diusulkan untuk memantau lalu lintas IoT.</p>
+<p>Akses data, praprocessing, identifikasi atribut, pelatihan, validasi, dan pengujian dilakukan dengan bantuan model deteksi intrusi IoT yang telah dilatih menggunakan teknik DL. Kerangka kerja yang diusulkan terdiri dari tiga komponen utama yaitu: perangkat IoT, edge layer, dan cloud layer. Perangkat IoT beroperasi dan berkomunikasi pada tingkat dasar. Di lapisan edge, alat seperti TCP mengumpulkan lalu lintas jaringan mentah dari perangkat IoT tersebut. Selanjutnya, paket data diubah menjadi data deret waktu pada tahap praprocessing. Pelatihan, pengujian, dan validasi dilakukan berdasarkan partisi dataset berdasarkan timestamp. Selain itu, pendekatan yang diusulkan menggunakan metodologi pemilihan atribut untuk mengurangi ukuran dataset sebelum mengirimkannya ke cloud untuk pelatihan. Dataset kemudian disusutkan dengan seleksi atribut di lapisan edge sebelum ditransfer ke cloud.</p>
+<img src='https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEi6ZD95Jmj_4_B3smIP-bukHDMNVvQ9_CkWKeHqmdse0cAQrW8HHbpRrLqed_UjpLitvqYmY-AUXCqOEQxUKRP19LhDtyTcySPwUhUCKPOiqUc7auHvgoOVyLW5J3BJrbAww4jq0XXdIbsA5EkdziFfDhDmRcOLvTUwFEo1YInsa2dLsWXmoaznomugOu4/w640-h386/Screen%20Shot%202024-07-18%20at%2020.47.34.png' width="100%" class="border-0 rounded">
+<div style="text-align:center">Gambar 4. Intrusion Detection System (IDS) berbasis ML</div>
+<p>Hasil dari penelitian ini, menemukan bahwa IDS berbasis DL berhasil mengenali pola serangan secara cepat terhadap perangkat IoT. Meskipun demikian, penerapan IDS berbasis DL di edge IoT menghadapi hambatan seperti volume data IoT yang besar dan kebutuhan komputasi DL yang tinggi.</p>
+<h3 id="5global-resource-scheduling-for-distributed-edge-computing">5.	Global Resource Scheduling for Distributed Edge Computing <a href="#5global-resource-scheduling-for-distributed-edge-computing" class="anchor" aria-hidden="true">#</a></h3>
+<p>Penelitian ini[6]  membahas tentang penjadwalan sumber daya dalam edge computing. Sistem lalu lintas dan pemantauan dalam IoT memerlukan penjadwalan dan migrasi sumber daya yang efektif. Dalam mengatasi tantangan ini, penjadwalan sumber daya harus mempertimbangkan biaya yang terkait dengan penjadwalan, dengan tujuan mengidentifikasi strategi optimal di antara berbagai solusi yang layak. Berbagai skenario aplikasi memperkenalkan tujuan optimasi yang beragam, termasuk pertimbangan seperti biaya, keterlambatan transmisi (latensi), dan konsumsi energi.</p>
+<p>Penelitian ini memberikan kontribusi khususnya pemodelan matematis dalam hal penjadwalan dengan mendefinisikan masalah penjadwalan sumber daya global untuk edge computing. Penelitian ini mengusulkan strategi solusi heuristik berdasarkan algoritma Ant Colony Algorithm (ACO) dengan optimasi menggunakan parameter Particle Swarm Optimization (PSO). Algoritma penjadwalan pada penelitian ini memiliki kemampuan untuk mencapai hasil yang mendekati optimal dengan jumlah iterasi yang berkurang.</p>
+<h2 id="kesimpulan">Kesimpulan <a href="#kesimpulan" class="anchor" aria-hidden="true">#</a></h2>
+<p>IoT dan edge computing digunakan di berbagai bidang seperti kesehatan dan pertanian. Dalam sektor kesehatan, diperkenalkannya framework untuk pemantauan pasien jarak jauh berbasis IoT menunjukkan potensi besar dari integrasi ini. Di bidang pertanian, integrasi IoT dan edge computing digunakan untuk meningkatkan produksi jamur dalam rumah kaca cerdas. Dari sisi arsitektur, adopsi arsitektur RINA dengan SDN menjadi alternatif untuk meningkatkan skalabilitas jaringan IoT.</p>
+<p>Sistem keamanan yang ditingkatkan menggunakan teknik Deep Learning memberikan pendekatan yang efektif untuk deteksi serangan dalam lingkungan edge computing. Selain itu, penjadwalan sumber daya edge computing yang efisien sangat penting, seperti yang ditunjukkan dalam penelitian tentang penjadwalan sumber daya global untuk edge computing yang terdistribusi.</p>
+<h2 id="daftar-pustaka">Daftar Pustaka <a href="#daftar-pustaka" class="anchor" aria-hidden="true">#</a></h2>
+<ol>
+<li>
+<p>I. Sittón-Candanedo, R. S. Alonso, J. M. Corchado, S. Rodríguez-González, and R. Casado-Vara, “A review of edge computing reference architectures and a new global edge proposal,” Future Generation Computer Systems, vol. 99, pp. 278–294, Oct. 2019, doi: 10.1016/j.future.2019.04.016.</p>
+</li>
+<li>
+<p>H. H. Nguyen, D.-Y. Shin, W.-S. Jung, T.-Y. Kim, and D.-H. Lee, “An Integrated IoT Sensor-Camera System toward Leveraging Edge Computing for Smart Greenhouse Mushroom Cultivation,” Agriculture, vol. 14, no. 3, p. 489, Mar. 2024, doi: 10.3390/agriculture14030489.</p>
+</li>
+<li>
+<p>H. Alasmary, “ScalableDigitalHealth (SDH): An IoT-Based Scalable Framework for Remote Patient Monitoring,” Sensors, vol. 24, no. 4, p. 1346, Feb. 2024, doi: 10.3390/s24041346.</p>
+</li>
+<li>
+<p>D. Sarabia-Jácome, S. Giménez-Antón, A. Liatifis, E. Grasa, M. Catalán, and D. Pliatsios, “Progressive Adoption of RINA in IoT Networks: Enhancing Scalability and Network Management via SDN Integration,” Applied Sciences, vol. 14, no. 6, p. 2300, Mar. 2024, doi: 10.3390/app14062300.</p>
+</li>
+<li>
+<p>A. Aldaej, T. A. Ahanger, and I. Ullah, “Deep Learning-Inspired IoT-IDS Mechanism for Edge Computing Environments,” Sensors, vol. 23, no. 24, p. 9869, Dec. 2023, doi: 10.3390/s23249869.</p>
+</li>
+<li>
+<p>A. Tan, Y. Li, Y. Wang, and Y. Yang, “Global Resource Scheduling for Distributed Edge Computing,” Applied Sciences, vol. 13, no. 22, p. 12490, Nov. 2023, doi: 10.3390/app132212490.</p>
+</li>
+</ol>
+
+
+      <div class="mt-4">
+        <a class="btn btn-light" href="https://kaban.my.id/tags/edge-computing/" role="button">Edge Computing</a>
+        <a class="btn btn-light" href="https://kaban.my.id/tags/internet-of-thing/" role="button">Internet of Thing</a>
+        <a class="btn btn-light" href="https://kaban.my.id/tags/iot/" role="button">IoT</a>
+        </div>
+      <div id="disqus_thread"></div>
+<script type="application/javascript">
+    window.disqus_config = function () {
+    
+    
+    
+    };
+    (function() {
+        if (["localhost", "127.0.0.1"].indexOf(window.location.hostname) != -1) {
+            document.getElementById('disqus_thread').innerHTML = 'Disqus comments not available by default when the website is previewed locally.';
+            return;
+        }
+        var d = document, s = d.createElement('script'); s.async = true;
+        s.src = '//' + "kaban-my-id" + '.disqus.com/embed.js';
+        s.setAttribute('data-timestamp', +new Date());
+        (d.head || d.body).appendChild(s);
+    })();
+</script>
+<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+<a href="https://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
+      <div class="page-footer-meta d-flex flex-column flex-md-row justify-content-between">
+       
+        </div>
+      <div class="docs-navigation d-flex justify-content-between">
+	
+	<a href="/pemanfaatan-artificial-intelegence-ai-dalam-bidang-cybersecurity/">
+			<div class="card my-1">
+				<div class="card-body py-2">
+					&larr; Pemanfaatan Artificial Intelegence (AI) dalam bidang Cybersecurity
+				</div>
+			</div>
+		</a>
+	<a class="ms-auto" href="/mobile-ad-hoc-network-manet-protokol-dan-aplikasinya/">
+			<div class="card my-1">
+				<div class="card-body py-2">
+					Mobile Ad hoc Network (MANET): Protokol dan Aplikasinya &rarr;
+				</div>
+			</div>
+		</a>
+	</div>
+
+      
+    </main>
+    
+  </div>
+ 
+</article>
+<div class="related-posts">
+<div class="row justify-content-center">
+  <div class="col">
+    <h2 class="section-title">Informasi Lainnya</h2>
+  </div>
+</div>
+<div class="row row-cols-1 row-cols-md-2 row-cols-lg-3 g-lg-5">
+  <div class="col">
+    <div class="card">
+      <div class="card-body">
+        <article>
+          <h2 class="h3"><a class="stretched-link text-body" href="/pemanfaatan-artificial-intelegence-ai-dalam-bidang-cybersecurity/">Pemanfaatan Artificial Intelegence (AI) dalam bidang Cybersecurity</a></h2>
+          <p>Dalam era digital yang berkembang pesat, teknologi canggih seperti Industrial Internet of Things (IIoT), sistem mengemudi otonom, dan Internet of Things (IoT) telah menjadi tulang punggung transformasi industri dan gaya hidup modern. IIoT memungkinkan integrasi perangkat pintar dan sensor dalam industri, yang meningkatkan efisiensi operasional dan produktivitas. Peningkatan penggunaan perangkat IIoT juga membawa tantangan signifikan terkait keamanan dan efisiensi operasional karena perangkat ini seringkali menjadi target serangan siber[1]. </p>
+          
+<p><small>Posted&nbsp;in&nbsp;<a class="stretched-link position-relative link-muted" href="https://kaban.my.id/categories/artificial-intelegence/">Artificial Intelegence</a>, <a class="stretched-link position-relative link-muted" href="https://kaban.my.id/categories/jaringan-komputer/">Jaringan Komputer</a>, <a class="stretched-link position-relative link-muted" href="https://kaban.my.id/categories/iot/">IoT</a>&nbsp;on&nbsp;June 26, 2024 by <a class="stretched-link position-relative" href="/contributors/roberto-kaban/">Roberto Kaban</a>&nbsp;&hyphen;&nbsp;<strong>10&nbsp;min read</strong></small><p></article>
+      </div>
+    </div>
+  </div>
+  <div class="col">
+    <div class="card">
+      <div class="card-body">
+        <article>
+          <h2 class="h3"><a class="stretched-link text-body" href="/mobile-ad-hoc-network-manet-protokol-dan-aplikasinya/">Mobile Ad hoc Network (MANET): Protokol dan Aplikasinya</a></h2>
+          <p>Mobile Ad hoc Network (MANET) adalah jenis jaringan nirkabel yang terdiri dari sekelompok perangkat mobile yang dapat berkomunikasi satu sama lain tanpa perlu infrastruktur jaringan tetap, seperti router atau access point. Perangkat dalam MANET dapat bergerak bebas dan secara dinamis membentuk jaringan sementara. Manet memiliki karakteristik seperti Infrastruktur yang otonom, Skalabilitas jaringan dan kemampuan node dan variasi tautan. </p>
+          
+<p><small>Posted&nbsp;in&nbsp;<a class="stretched-link position-relative link-muted" href="https://kaban.my.id/categories/jaringan-komputer/">Jaringan Komputer</a>&nbsp;on&nbsp;June 21, 2024 by <a class="stretched-link position-relative" href="/contributors/roberto-kaban/">Roberto Kaban</a>&nbsp;&hyphen;&nbsp;<strong>9&nbsp;min read</strong></small><p></article>
+      </div>
+    </div>
+  </div>
+  </div>
+</div>
+<section class="section section-sm">
+  <div class="container">
+    <div class="row justify-content-center text-center mt-lg-3">
+     
+    </div>
+  </div>
+</section>
+
+
+      </div>
+    </div>
+    
+    
+    <footer class="footer text-muted">
+  <div class="container-xxl">
+    <div class="row">
+      <div class="col-lg-8 order-last order-lg-first">
+        <ul class="list-inline">
+          <li class="list-inline-item">Powered by <a class="text-muted" href="https://gohugo.io/">Hugo</a> and <a class="text-muted" href="https://github.com/">Github</a></li>
+        </ul>
+      </div>
+      <div class="col-lg-8 order-first order-lg-last text-lg-end">
+        <ul class="list-inline">
+          </ul>
+      </div>
+    </div>
+  </div>
+</footer>
+    
+
+<script src="/js/bootstrap.min.650aeec64c81d69d4c0850fc73c93da3f0330cec0a27772feed7f90f60baa5f47f1c45687d71914bdafd1c4e860d40f6dc08ede27a2f08431ff929c9a2d24621.js" integrity="sha512-ZQruxkyB1p1MCFD8c8k9o/AzDOwKJ3cv7tf5D2C6pfR/HEVofXGRS9r9HE6GDUD23Ajt4novCEMf&#43;SnJotJGIQ==" crossorigin="anonymous" defer></script>
+  <script src="/js/highlight.min.ec234bd8a5f487aaffe50a89f17b14501b1bb65633cf177cffd4cb84702dd7030edc08712dceb8dc27ac7e54b53240a08bf0b8d951572ee582bcdbbd06a48a7b.js" integrity="sha512-7CNL2KX0h6r/5QqJ8XsUUBsbtlYzzxd8/9TLhHAt1wMO3AhxLc643CesflS1MkCgi/C42VFXLuWCvNu9BqSKew==" crossorigin="anonymous" defer></script>
+  <script src="/main.min.cd1e5e6b40065b3f7f7fd8548a528fac67019754eda0f37b9918d02d154fc9ef6a22742f6513b0572ad9163152e151ec36221fbeafbecd7759c3dab1f19b64b9.js" integrity="sha512-zR5ea0AGWz9/f9hUilKPrGcBl1TtoPN7mRjQLRVPye9qInQvZROwVyrZFjFS4VHsNiIfvq&#43;&#43;zXdZw9qx8ZtkuQ==" crossorigin="anonymous" defer></script>
+  <script src="https://kaban.my.id/index.min.a7b093015f6c60ca063ee8730df15c0e449733836ef478da254697ffa31e70ba39b17df497b207eedf5ff788a1a86a2c597b3965c3ca4c4287ac2282b8aa0860.js" integrity="sha512-p7CTAV9sYMoGPuhzDfFcDkSXM4Nu9HjaJUaX/6MecLo5sX30l7IH7t9f94ihqGosWXs5ZcPKTEKHrCKCuKoIYA==" crossorigin="anonymous" defer></script>
+  
+    <div class="d-flex fixed-bottom pb-4 pb-lg-5 pe-4 pe-lg-5">
+      <a id="toTop" href="#" class="btn btn-outline-primary rounded-circle ms-auto p-2"><span class="visually-hidden">Top</span><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-chevron-up"><polyline points="18 15 12 9 6 15"></polyline></svg></a>
+    </div>
+    
+  </body>
+</html>

@@ -5,15 +5,34 @@
     <link>https://kaban.my.id/categories/jaringan-komputer/</link>
     <description>Recent content in Jaringan Komputer on </description>
     <generator>Hugo -- gohugo.io</generator>
-    <lastBuildDate>Sun, 01 Jul 2012 13:54:26 +0700</lastBuildDate><atom:link href="https://kaban.my.id/categories/jaringan-komputer/index.xml" rel="self" type="application/rss+xml" />
+    <language>en</language>
+    <lastBuildDate>Wed, 26 Jun 2024 13:57:55 +0700</lastBuildDate><atom:link href="https://kaban.my.id/categories/jaringan-komputer/index.xml" rel="self" type="application/rss+xml" />
     <item>
-      <title>Alamat Ipv4: Pengalamatan Internet Protocol Versi 4</title>
-      <link>https://kaban.my.id/alamat-ipv4-pengalamatan-internet-protocol-versi-4/</link>
-      <pubDate>Sun, 01 Jul 2012 13:54:26 +0700</pubDate>
+      <title>Pemanfaatan Artificial Intelegence (AI) dalam bidang Cybersecurity</title>
+      <link>https://kaban.my.id/pemanfaatan-artificial-intelegence-ai-dalam-bidang-cybersecurity/</link>
+      <pubDate>Wed, 26 Jun 2024 13:57:55 +0700</pubDate>
       
-      <guid>https://kaban.my.id/alamat-ipv4-pengalamatan-internet-protocol-versi-4/</guid>
-      <description>IP Address (Internet Protocol) Versi 4 # IP (Internet Protocol) Address Versi 4 sering disebut dengan Alamat IPv4 merupakan sebuah sistem pengalamatan 32-bit yang digunakan di dalam protokol jaringan TCP/IP sebagai alamat identifikasi untuk tiap host komputer dalam jaringan Internet.
-IPv4 disebut dengan sistem pengalamatan 32 bit karena total jumlah bit ip dalam biner adalah sebanyak 32 bit yang dibagi kedalam 4 oktet/blok. Dalam penerapannya dan untuk lebih mudah mengingatnya ke empat oktet/blok tersebut di representasikan kedalam bentuk desimal dan dipisahkan dengan.</description>
+      <guid>https://kaban.my.id/pemanfaatan-artificial-intelegence-ai-dalam-bidang-cybersecurity/</guid>
+      <description>Latar belakang # Dalam era digital yang berkembang pesat, teknologi canggih seperti Industrial Internet of Things (IIoT), sistem mengemudi otonom, dan Internet of Things (IoT) telah menjadi tulang punggung transformasi industri dan gaya hidup modern. IIoT memungkinkan integrasi perangkat pintar dan sensor dalam industri, yang meningkatkan efisiensi operasional dan produktivitas. Peningkatan penggunaan perangkat IIoT juga membawa tantangan signifikan terkait keamanan dan efisiensi operasional karena perangkat ini seringkali menjadi target serangan siber[1].</description>
+    </item>
+    
+    <item>
+      <title>Edge Computing dalam Internet of Thing (IoT)</title>
+      <link>https://kaban.my.id/edge-computing-dalam-internet-of-thing-iot/</link>
+      <pubDate>Fri, 21 Jun 2024 13:57:55 +0700</pubDate>
+      
+      <guid>https://kaban.my.id/edge-computing-dalam-internet-of-thing-iot/</guid>
+      <description>Pendahuluan # Penggunaan Internet of Things (IoT), layanan dan aplikasi mobile dalam skenario kompleks seperti Smart City dan Industri 4.0 telah menimbulkan tantangan baru bagi solusi yang berorientasi pada Cloud Computing. Cloud Computing merupakan paradigma komputasi dengan visi sentralisasi sumber daya dengan skema terpusat di mana komputasi dan penyimpanan diterapkan di pusat data jarak jauh. Cloud Computing mengalami keterbatasan signifikan saat berkaitan dengan teknologi yang membutuhkan respons real-time. Beberapa tahun terakhir, tren baru dalam komputasi sedang berkembang dengan fungsi cloud yang semakin beralih ke jaringan edge.</description>
+    </item>
+    
+    <item>
+      <title>Mobile Ad hoc Network (MANET): Protokol dan Aplikasinya</title>
+      <link>https://kaban.my.id/mobile-ad-hoc-network-manet-protokol-dan-aplikasinya/</link>
+      <pubDate>Fri, 21 Jun 2024 13:57:55 +0700</pubDate>
+      
+      <guid>https://kaban.my.id/mobile-ad-hoc-network-manet-protokol-dan-aplikasinya/</guid>
+      <description>Mobile Ad hoc Network (MANET) # Mobile Ad hoc Network (MANET) adalah jenis jaringan nirkabel yang terdiri dari sekelompok perangkat mobile yang dapat berkomunikasi satu sama lain tanpa perlu infrastruktur jaringan tetap, seperti router atau access point. Perangkat dalam MANET dapat bergerak bebas dan secara dinamis membentuk jaringan sementara. Manet memiliki karakteristik seperti Infrastruktur yang otonom, Skalabilitas jaringan dan kemampuan node dan variasi tautan.
+Karakterisitik Manet # Tanpa infrastruktur dan otonom MANET tidak bergantung pada infrastruktur terpusat atau mapan.</description>
     </item>
     
   </channel>

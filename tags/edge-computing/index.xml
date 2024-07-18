@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Edge Computing on </title>
+    <link>https://kaban.my.id/tags/edge-computing/</link>
+    <description>Recent content in Edge Computing on </description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
+    <lastBuildDate>Fri, 21 Jun 2024 13:57:55 +0700</lastBuildDate><atom:link href="https://kaban.my.id/tags/edge-computing/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Edge Computing dalam Internet of Thing (IoT)</title>
+      <link>https://kaban.my.id/edge-computing-dalam-internet-of-thing-iot/</link>
+      <pubDate>Fri, 21 Jun 2024 13:57:55 +0700</pubDate>
+      
+      <guid>https://kaban.my.id/edge-computing-dalam-internet-of-thing-iot/</guid>
+      <description>Pendahuluan # Penggunaan Internet of Things (IoT), layanan dan aplikasi mobile dalam skenario kompleks seperti Smart City dan Industri 4.0 telah menimbulkan tantangan baru bagi solusi yang berorientasi pada Cloud Computing. Cloud Computing merupakan paradigma komputasi dengan visi sentralisasi sumber daya dengan skema terpusat di mana komputasi dan penyimpanan diterapkan di pusat data jarak jauh. Cloud Computing mengalami keterbatasan signifikan saat berkaitan dengan teknologi yang membutuhkan respons real-time. Beberapa tahun terakhir, tren baru dalam komputasi sedang berkembang dengan fungsi cloud yang semakin beralih ke jaringan edge.</description>
+    </item>
+    
+  </channel>
+</rss>

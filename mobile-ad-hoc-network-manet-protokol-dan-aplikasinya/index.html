@@ -1,0 +1,737 @@
+<!doctype html>
+<html lang="en-US">
+  <head>
+  <meta charset="utf-8">
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <link rel="preload" as="font" href="https://kaban.my.id/fonts/vendor/jost/jost-v4-latin-regular.woff2" type="font/woff2" crossorigin>
+<link rel="preload" as="font" href="https://kaban.my.id/fonts/vendor/jost/jost-v4-latin-500.woff2" type="font/woff2" crossorigin>
+<link rel="preload" as="font" href="https://kaban.my.id/fonts/vendor/jost/jost-v4-latin-700.woff2" type="font/woff2" crossorigin>
+
+  <script>(()=>{var t=window.matchMedia&&window.matchMedia("(prefers-color-scheme: dark)").matches,e=localStorage.getItem("theme");t&&e===null&&(localStorage.setItem("theme","dark"),document.documentElement.setAttribute("data-dark-mode","")),t&&e==="dark"&&document.documentElement.setAttribute("data-dark-mode",""),e==="dark"&&document.documentElement.setAttribute("data-dark-mode","")})()</script>
+
+  <link rel="stylesheet" href="https://kaban.my.id/main.9f87974e4c1caf828d7f6300ecd98102083d1763683fe424f26c4c7b80fa72a094aa3c62fe333b5026c22ff50b82f74220d559e730c1f032fd8bcec957ac2bb4.css" integrity="sha512-n4eXTkwcr4KNf2MA7NmBAgg9F2NoP&#43;Qk8mxMe4D6cqCUqjxi/jM7UCbCL/ULgvdCINVZ5zDB8DL9i87JV6wrtA==" crossorigin="anonymous">
+<noscript><style>img.lazyload { display: none; }</style></noscript>
+  <meta name="robots" content="index, follow">
+    <meta name="googlebot" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1">
+    <meta name="bingbot" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1">
+  <title>Mobile Ad hoc Network (MANET): Protokol dan Aplikasinya - Roberto Kaban Blog&#39;s</title>
+<meta name="description" content="Mobile Ad hoc Network (MANET) adalah jenis jaringan nirkabel yang terdiri dari sekelompok perangkat mobile yang dapat berkomunikasi satu sama lain tanpa perlu infrastruktur jaringan tetap, seperti router atau access point. Perangkat dalam MANET dapat bergerak bebas dan secara dinamis membentuk jaringan sementara. Manet memiliki karakteristik seperti Infrastruktur yang otonom, Skalabilitas jaringan dan kemampuan node dan variasi tautan.">
+<link rel="canonical" href="https://kaban.my.id/mobile-ad-hoc-network-manet-protokol-dan-aplikasinya/">
+<meta property="og:locale" content="en_US">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Mobile Ad hoc Network (MANET): Protokol dan Aplikasinya">
+<meta property="og:description" content="Mobile Ad hoc Network (MANET) adalah jenis jaringan nirkabel yang terdiri dari sekelompok perangkat mobile yang dapat berkomunikasi satu sama lain tanpa perlu infrastruktur jaringan tetap, seperti router atau access point. Perangkat dalam MANET dapat bergerak bebas dan secara dinamis membentuk jaringan sementara. Manet memiliki karakteristik seperti Infrastruktur yang otonom, Skalabilitas jaringan dan kemampuan node dan variasi tautan.">
+<meta property="og:url" content="https://kaban.my.id/mobile-ad-hoc-network-manet-protokol-dan-aplikasinya/">
+<meta property="og:site_name" content="Roberto Kaban Blog&#39;s">
+<meta property="article:published_time" content="2024-06-21T13:57:55+07:00">
+  <meta property="article:modified_time" content="2024-06-21T13:57:55+07:00">
+  
+  <meta property="og:image" content="https://kaban.my.id/doks.png"/>
+      <meta property="og:image:alt" content="Roberto Kaban Blog&#39;s">
+    
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:site" content="@robertokaban">
+<meta name="twitter:creator" content="@robertokaban">
+<meta name="twitter:title" content="Mobile Ad hoc Network (MANET): Protokol dan Aplikasinya">
+<meta name="twitter:description" content="Mobile Ad hoc Network (MANET) adalah jenis jaringan nirkabel yang terdiri dari sekelompok perangkat mobile yang dapat berkomunikasi satu sama lain tanpa perlu infrastruktur jaringan tetap, seperti router atau access point. Perangkat dalam MANET dapat bergerak bebas dan secara dinamis membentuk jaringan sementara. Manet memiliki karakteristik seperti Infrastruktur yang otonom, Skalabilitas jaringan dan kemampuan node dan variasi tautan.">
+<meta name="twitter:image" content="https://kaban.my.id/doks.png">
+    <meta name="twitter:image:alt" content="Mobile Ad hoc Network (MANET): Protokol dan Aplikasinya">
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "Person",
+        "@id": "https://kaban.my.id/#/schema/person/1",
+      "name": "BlogRobertoKaban",
+      "url": "https://kaban.my.id/",
+      "sameAs": [
+        "https://twitter.com/robertokaban"
+        , "https://github.com/robertokaban"
+        ],
+      "image": {
+          "@type": "ImageObject",
+          "@id": "https://kaban.my.id/#/schema/image/1",
+          "url": "https://kaban.my.id/doks.png",
+          "width":  1280 ,
+          "height":  640 ,
+          "caption": "BlogRobertoKaban"
+        }
+      },
+    {
+      "@type": "WebSite",
+      "@id": "https://kaban.my.id/#/schema/website/1",
+      "url": "https://kaban.my.id/",
+      "name": "Roberto Kaban Blog\u0027s",
+      "description": "Hanya sebuah catatan kecil untuk hal yang tidak ingin dilupakan.",
+      "publisher": {
+          "@id": "https://kaban.my.id/#/schema/person/1"
+        }
+      },
+    {
+      "@type": "WebPage",
+      "@id": "https://kaban.my.id/mobile-ad-hoc-network-manet-protokol-dan-aplikasinya/",
+      "url": "https://kaban.my.id/mobile-ad-hoc-network-manet-protokol-dan-aplikasinya/",
+      "name": "Mobile Ad hoc Network (MANET): Protokol dan Aplikasinya",
+      "description": "Mobile Ad hoc Network (MANET) adalah jenis jaringan nirkabel yang terdiri dari sekelompok perangkat mobile yang dapat berkomunikasi satu sama lain tanpa perlu infrastruktur jaringan tetap, seperti router atau access point. Perangkat dalam MANET dapat bergerak bebas dan secara dinamis membentuk jaringan sementara. Manet memiliki karakteristik seperti Infrastruktur yang otonom, Skalabilitas jaringan dan kemampuan node dan variasi tautan.",
+      "isPartOf": {
+        "@id": "https://kaban.my.id/#/schema/website/1"
+      },
+      "about": {
+          "@id": "https://kaban.my.id/#/schema/person/1"
+        },
+      "datePublished": "2024-06-21T13:57:55CET",
+      "dateModified": "2024-06-21T13:57:55CET",
+      "breadcrumb": {
+        "@id": "https://kaban.my.id/mobile-ad-hoc-network-manet-protokol-dan-aplikasinya/#/schema/breadcrumb/1"
+      },
+      "primaryImageOfPage": {
+        "@id": "https://kaban.my.id/mobile-ad-hoc-network-manet-protokol-dan-aplikasinya/#/schema/image/2"
+      },
+      "inLanguage": "en-US",
+      "potentialAction": [{
+        "@type": "ReadAction", "target": ["https://kaban.my.id/mobile-ad-hoc-network-manet-protokol-dan-aplikasinya/"]
+      }]
+    },
+    {
+      "@type": "BreadcrumbList",
+      "@id": "https://kaban.my.id/mobile-ad-hoc-network-manet-protokol-dan-aplikasinya/#/schema/breadcrumb/1",
+      "name": "Breadcrumbs",
+      "itemListElement": [{
+        "@type": "ListItem",
+        "position":  1 ,
+        "item": {
+          "@type": "WebPage",
+          "@id": "https://kaban.my.id/",
+          "url": "https://kaban.my.id/",
+          "name": "Home"
+          }
+        },{
+        "@type": "ListItem",
+        "position":  2 ,
+        "item": {
+          "@id": "https://kaban.my.id/mobile-ad-hoc-network-manet-protokol-dan-aplikasinya/"
+          }
+        }]
+    },
+
+    {
+      "@context": "https://schema.org",
+      "@graph": [
+        {
+          "@type": "ImageObject",
+          "@id": "https://kaban.my.id/mobile-ad-hoc-network-manet-protokol-dan-aplikasinya/#/schema/image/2",
+          "url": "https://kaban.my.id/doks.png",
+          "contentUrl": "https://kaban.my.id/doks.png",
+          "caption": "Mobile Ad hoc Network (MANET): Protokol dan Aplikasinya"
+        }
+      ]
+    }
+
+  ]
+}
+</script>
+
+  <meta name="theme-color" content="#fff">
+<link rel="icon" href="https://kaban.my.id/favicon.ico" sizes="any">
+<link rel="icon" type="image/svg+xml" href="https://kaban.my.id/favicon.svg">
+<link rel="apple-touch-icon" sizes="180x180" href="https://kaban.my.id/apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="32x32" href="https://kaban.my.id/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="https://kaban.my.id/favicon-16x16.png">
+<link rel="manifest" crossorigin="use-credentials" href="https://kaban.my.id/site.webmanifest">
+
+  
+
+
+  
+  
+  
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-60VSDZFQR5"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-60VSDZFQR5');
+</script>
+</head>
+
+  <body class="artikel single">
+    <div class="sticky-top">
+<div class="header-bar"></div>
+
+<header class="navbar navbar-expand-lg navbar-light doks-navbar">
+  <nav class="container-xxl flex-wrap flex-lg-nowrap" aria-label="Main navigation">
+
+    <a class="navbar-brand order-0" href="/" aria-label="Roberto Kaban Blog&#39;s">
+      Roberto Kaban Blog&#39;s
+    </a>
+
+    <button class="btn btn-menu order-2 d-block d-lg-none" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasDoks" aria-controls="offcanvasDoks" aria-label="Open main menu">
+      <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-menu"><line x1="3" y1="12" x2="21" y2="12"></line><line x1="3" y1="6" x2="21" y2="6"></line><line x1="3" y1="18" x2="21" y2="18"></line></svg>
+    </button>
+    <div class="offcanvas offcanvas-end border-0 py-lg-1" tabindex="-1" id="offcanvasDoks" data-bs-backdrop="true" aria-labelledby="offcanvasDoksLabel">
+      <div class="header-bar d-lg-none"></div>
+      <div class="offcanvas-header d-lg-none">
+        <h2 class="h5 offcanvas-title ps-2" id="offcanvasDoksLabel"><a class="text-dark" href="/">Roberto Kaban Blog&#39;s</a></h2>
+        <button type="button" class="btn-close text-reset me-2" data-bs-dismiss="offcanvas" aria-label="Close main menu"></button>
+      </div>
+      <div class="offcanvas-body p-4 p-lg-0">
+        <ul class="nav flex-column flex-lg-row align-items-lg-center mt-2 mt-lg-0 ms-lg-2 me-lg-auto">
+              <li class="nav-item">
+                <a class="nav-link ps-0 py-1" href="/about/">About Me</a>
+              </li>
+            
+          
+              <li class="nav-item">
+                <a class="nav-link ps-0 py-1" href="/contact/">Contact</a>
+              </li>
+            
+          
+              <li class="nav-item">
+                <a class="nav-link ps-0 py-1 active" href="/artikel/">Artikel</a>
+              </li>
+            
+          
+              <li class="nav-item">
+                <a class="nav-link ps-0 py-1" href="/coretanku/">Coretanku</a>
+              </li>
+            
+          </ul>
+
+        <hr class="text-black-50 my-4 d-lg-none">
+        <form class="doks-search position-relative flex-grow-1 ms-lg-auto me-lg-2">
+          <input id="search" class="form-control is-search" type="search" placeholder="Cari di blog ini..." aria-label="Cari di blog ini..." autocomplete="off">
+          <div id="suggestions" class="shadow bg-white rounded d-none"></div>
+        </form>
+        <hr class="text-black-50 my-4 d-lg-none">
+        <ul class="nav flex-column flex-lg-row">
+          <li class="nav-item">
+              <a class="nav-link social-link" href="https://github.com/robertokaban"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-github"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path></svg><small class="ms-2 d-lg-none">GitHub</small></a>
+            </li>
+          <li class="nav-item">
+              <a class="nav-link social-link" href="https://facebook.com/roberto.kaban"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-facebook"><path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"></path></svg><small class="ms-2 d-lg-none">Facebook</small></a>
+            </li>
+          <li class="nav-item">
+              <a class="nav-link social-link" href="https://twitter.com/robertokaban"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-twitter"><path d="M23 3a10.9 10.9 0 0 1-3.14 1.53 4.48 4.48 0 0 0-7.86 3v1A10.66 10.66 0 0 1 3 4s-4 9 5 13a11.64 11.64 0 0 1-7 2c9 5 20 0 20-11.5a4.5 4.5 0 0 0-.08-.83A7.72 7.72 0 0 0 23 3z"></path></svg><small class="ms-2 d-lg-none">Twitter</small></a>
+            </li>
+          <li class="nav-item">
+              <a class="nav-link social-link" href="https://youtube.com/@robertokaban"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-youtube"><path d="M10,15L15.19,12L10,9V15M21.56,7.17C21.69,7.64 21.78,8.27 21.84,9.07C21.91,9.87 21.94,10.56 21.94,11.16L22,12C22,14.19 21.84,15.8 21.56,16.83C21.31,17.73 20.73,18.31 19.83,18.56C19.36,18.69 18.5,18.78 17.18,18.84C15.88,18.91 14.69,18.94 13.59,18.94L12,19C7.81,19 5.2,18.84 4.17,18.56C3.27,18.31 2.69,17.73 2.44,16.83C2.31,16.36 2.22,15.73 2.16,14.93C2.09,14.13 2.06,13.44 2.06,12.84L2,12C2,9.81 2.16,8.2 2.44,7.17C2.69,6.27 3.27,5.69 4.17,5.44C4.64,5.31 5.5,5.22 6.82,5.16C8.12,5.09 9.31,5.06 10.41,5.06L12,5C16.19,5 18.8,5.16 19.83,5.44C20.73,5.69 21.31,6.27 21.56,7.17Z"></path></svg><small class="ms-2 d-lg-none">Youtube</small></a>
+            </li>
+          </ul>
+
+        
+        <hr class="text-black-50 my-4 d-lg-none">
+        <button id="mode" class="btn btn-link" type="button" aria-label="Toggle user interface mode">
+          <span class="toggle-dark"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-moon"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path></svg></span>
+          <span class="toggle-light"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-sun"><circle cx="12" cy="12" r="5"></circle><line x1="12" y1="1" x2="12" y2="3"></line><line x1="12" y1="21" x2="12" y2="23"></line><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line><line x1="1" y1="12" x2="3" y2="12"></line><line x1="21" y1="12" x2="23" y2="12"></line><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line></svg></span>
+        </button>
+        
+
+        </div>
+    </div>
+  </nav>
+</header>
+
+
+</div>
+
+    <div class="wrap container-xxl" role="document">
+      <div class="content">
+        
+<article>
+  <div class="row flex-lg-nowrap">
+    <div class="col-lg-2 col-xl-2">
+
+    </div>
+    
+    <nav class="docs-toc d-none d-xl-block col-xl-4" aria-label="Secondary navigation">
+      <div class="d-xl-none">
+  <button class="btn btn-outline-primary btn-sm doks-toc-toggle collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#onThisPage" aria-controls="doks-docs-nav" aria-expanded="false" aria-label="Toggle On this page navigation">
+    <span>Daftar isi</span>
+    <span>
+      <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" class="doks doks-expand" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><title>Expand</title><polyline points="7 13 12 18 17 13"></polyline><polyline points="7 6 12 11 17 6"></polyline></svg>
+      <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" class="doks doks-collapse" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><title>Collapse</title><polyline points="17 11 12 6 7 11"></polyline><polyline points="17 18 12 13 7 18"></polyline></svg>
+    </span>
+  </button>
+  <div class="collapse" id="onThisPage">
+    <div class="card card-body mt-3 py-1">
+      <div class="page-links">
+        <nav id="TableOfContents">
+  <ul>
+    <li><a href="#mobile-ad-hoc-network-manet">Mobile Ad hoc Network (MANET)</a></li>
+    <li><a href="#karakterisitik-manet">Karakterisitik Manet</a></li>
+    <li><a href="#tantangan-dalam-manet">Tantangan dalam Manet</a></li>
+    <li><a href="#jenis-jenis-manet">Jenis-jenis Manet</a></li>
+    <li><a href="#isu-keamanan-dalam-manet">Isu Keamanan dalam Manet</a></li>
+    <li><a href="#perbandingan-protokol-routing">Perbandingan Protokol Routing</a></li>
+    <li><a href="#aplikasi-manet">Aplikasi Manet</a></li>
+    <li><a href="#kesimpulan">Kesimpulan</a></li>
+    <li><a href="#referensi">Referensi</a></li>
+  </ul>
+</nav>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="page-links d-none d-xl-block">
+  <h3>Daftar isi</h3>
+  <nav id="TableOfContents">
+  <ul>
+    <li><a href="#mobile-ad-hoc-network-manet">Mobile Ad hoc Network (MANET)</a></li>
+    <li><a href="#karakterisitik-manet">Karakterisitik Manet</a></li>
+    <li><a href="#tantangan-dalam-manet">Tantangan dalam Manet</a></li>
+    <li><a href="#jenis-jenis-manet">Jenis-jenis Manet</a></li>
+    <li><a href="#isu-keamanan-dalam-manet">Isu Keamanan dalam Manet</a></li>
+    <li><a href="#perbandingan-protokol-routing">Perbandingan Protokol Routing</a></li>
+    <li><a href="#aplikasi-manet">Aplikasi Manet</a></li>
+    <li><a href="#kesimpulan">Kesimpulan</a></li>
+    <li><a href="#referensi">Referensi</a></li>
+  </ul>
+</nav>
+  </div>
+
+    </nav>
+    <main class="docs-content col-lg-11 col-xl-9">
+    
+        <nav aria-label="breadcrumb">
+          <ol class="breadcrumb">
+            <li class="breadcrumb-item"><a href="/">Home</a></li>
+<li class="breadcrumb-item"><a href="/artikel/">Artikel</a></li>
+<li class="breadcrumb-item active" aria-current="page">Mobile Ad hoc Network (MANET): Protokol dan Aplikasinya</li>
+          </ol>
+        </nav>
+      
+          <h1>Mobile Ad hoc Network (MANET): Protokol dan Aplikasinya</h1>
+          
+<p><small>Posted&nbsp;in&nbsp;<a class="stretched-link position-relative link-muted" href="https://kaban.my.id/categories/jaringan-komputer/">Jaringan Komputer</a>&nbsp;on&nbsp;June 21, 2024 by <a class="stretched-link position-relative" href="/contributors/roberto-kaban/">Roberto Kaban</a>&nbsp;&hyphen;&nbsp;<strong>9&nbsp;min read</strong></small><p>
+      <p class="lead"></p>
+      <nav class="d-xl-none" aria-label="Quaternary navigation">
+        <div class="d-xl-none">
+  <button class="btn btn-outline-primary btn-sm doks-toc-toggle collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#onThisPage" aria-controls="doks-docs-nav" aria-expanded="false" aria-label="Toggle On this page navigation">
+    <span>Daftar isi</span>
+    <span>
+      <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" class="doks doks-expand" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><title>Expand</title><polyline points="7 13 12 18 17 13"></polyline><polyline points="7 6 12 11 17 6"></polyline></svg>
+      <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" class="doks doks-collapse" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><title>Collapse</title><polyline points="17 11 12 6 7 11"></polyline><polyline points="17 18 12 13 7 18"></polyline></svg>
+    </span>
+  </button>
+  <div class="collapse" id="onThisPage">
+    <div class="card card-body mt-3 py-1">
+      <div class="page-links">
+        <nav id="TableOfContents">
+  <ul>
+    <li><a href="#mobile-ad-hoc-network-manet">Mobile Ad hoc Network (MANET)</a></li>
+    <li><a href="#karakterisitik-manet">Karakterisitik Manet</a></li>
+    <li><a href="#tantangan-dalam-manet">Tantangan dalam Manet</a></li>
+    <li><a href="#jenis-jenis-manet">Jenis-jenis Manet</a></li>
+    <li><a href="#isu-keamanan-dalam-manet">Isu Keamanan dalam Manet</a></li>
+    <li><a href="#perbandingan-protokol-routing">Perbandingan Protokol Routing</a></li>
+    <li><a href="#aplikasi-manet">Aplikasi Manet</a></li>
+    <li><a href="#kesimpulan">Kesimpulan</a></li>
+    <li><a href="#referensi">Referensi</a></li>
+  </ul>
+</nav>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="page-links d-none d-xl-block">
+  <h3>Daftar isi</h3>
+  <nav id="TableOfContents">
+  <ul>
+    <li><a href="#mobile-ad-hoc-network-manet">Mobile Ad hoc Network (MANET)</a></li>
+    <li><a href="#karakterisitik-manet">Karakterisitik Manet</a></li>
+    <li><a href="#tantangan-dalam-manet">Tantangan dalam Manet</a></li>
+    <li><a href="#jenis-jenis-manet">Jenis-jenis Manet</a></li>
+    <li><a href="#isu-keamanan-dalam-manet">Isu Keamanan dalam Manet</a></li>
+    <li><a href="#perbandingan-protokol-routing">Perbandingan Protokol Routing</a></li>
+    <li><a href="#aplikasi-manet">Aplikasi Manet</a></li>
+    <li><a href="#kesimpulan">Kesimpulan</a></li>
+    <li><a href="#referensi">Referensi</a></li>
+  </ul>
+</nav>
+  </div>
+
+      </nav>
+      <h2 id="mobile-ad-hoc-network-manet">Mobile Ad hoc Network (MANET) <a href="#mobile-ad-hoc-network-manet" class="anchor" aria-hidden="true">#</a></h2>
+<p>Mobile Ad hoc Network (MANET) adalah jenis jaringan nirkabel yang terdiri dari sekelompok perangkat mobile yang dapat berkomunikasi satu sama lain tanpa perlu infrastruktur jaringan tetap, seperti router atau access point. Perangkat dalam MANET dapat bergerak bebas dan secara dinamis membentuk jaringan sementara. Manet memiliki karakteristik seperti Infrastruktur yang otonom, Skalabilitas jaringan dan kemampuan node dan variasi tautan.</p>
+<h2 id="karakterisitik-manet">Karakterisitik Manet <a href="#karakterisitik-manet" class="anchor" aria-hidden="true">#</a></h2>
+<ul>
+<li>Tanpa infrastruktur dan otonom
+<ul>
+<li>MANET tidak bergantung pada infrastruktur terpusat atau mapan.</li>
+<li>Setiap node dapat berperan sebagai router atau menghasilkan data untuk transmisi</li>
+</ul>
+</li>
+<li>Skalabilitas Jaringan
+<ul>
+<li>Algoritma umum untuk manajemen jaringan ditujukan untuk beroperasi pada jaringan Wi-Fi tetap atau kecil.</li>
+<li>Jaringan besar menimbulkan banyak tantangan seperti skalabilitas, pengalamatan, manajemen lokasi, perutean, keamanan,   interoperabilitas, dan bandwidth yang tinggi</li>
+</ul>
+</li>
+<li>Kemampuan Node dan Variasi Tautan
+<ul>
+<li>Setiap node lebih antarmuka radio, bekerja pada pita frekuensi berbeda dan memiliki kemampuan transmisi/penerimaan berbeda mengakibatkan hubungan asimetris dalam kemampuan node</li>
+<li>Masalah utama dalam MANET adalah setiap node berfungsi sebagai router dan perangkat akhir</li>
+</ul>
+</li>
+</ul>
+<h2 id="tantangan-dalam-manet">Tantangan dalam Manet <a href="#tantangan-dalam-manet" class="anchor" aria-hidden="true">#</a></h2>
+<ul>
+<li>Topologi yang fleksibel
+<ul>
+<li>Node dapat berpindah secara acak</li>
+<li>Topologi jaringan yang biasanya memiliki banyak hop dapat berpindah secara spontan dan cepat pada waktu yang tidak terduga, dan dapat terdiri dari koneksi dua arah dan satu arah</li>
+</ul>
+</li>
+<li>Route
+<ul>
+<li>Sulit untuk merutekan paket antar node.</li>
+<li>Mayoritas protokol menggunakan perutean reaktif.</li>
+<li>Pergerakan acak dari node pada jaringan berarti perutean multi-cast menjadi masalah lain karena Multi Casting Tree tidak lagi statis.</li>
+<li>Ada beberapa rute hop antar node yang lebih kompleks daripada komunikasi satu hop.</li>
+</ul>
+</li>
+</ul>
+<h2 id="jenis-jenis-manet">Jenis-jenis Manet <a href="#jenis-jenis-manet" class="anchor" aria-hidden="true">#</a></h2>
+<ul>
+<li>
+<p>Vehicular Ad hoc Network (VANET)</p>
+<p>VANET merupakan jenis jaringan MANET yang memungkinkan komunikasi antar kendaraan atau perangkat keselamatan yang ada di pinggir jalan. VANET bertujuan agar memastikan semua kendaraan menjadi lancar dan aman di jalan.</p>
+</li>
+<li>
+<p>Smart Phone Ad hoc Network (SPAN)</p>
+<p>Digunakan di seluruh perangkat telepon seluler dengan membuat jaringan peer-to-peer melalui bantuan Teknologi Wi-Fi dan Bluetooth</p>
+</li>
+<li>
+<p>Internet based Mobile Ad hoc Network (iMANET)</p>
+<p>Menghubungkan node seluler dan menetapkan rute yang didistribusikan secara otomatis berdasarkan konsep protokol jaringan seperti User Datagram Protocol (UDP), Transmission Control Protocol (TCP), Internet Protocol (IP) dan Routing Information Protocol.</p>
+</li>
+<li>
+<p>Hub-Spoke MANET</p>
+<p>Jaringan yang dibentuk dari beberapa sub MANET yang dihubungkan dalam VPN hub-spoke agar jaringan terdistribusi secara geografis.</p>
+</li>
+<li>
+<p>Military MANET</p>
+<p>Menekankan pada kecepatan data, request secara realtime, routing yang cepat selama perangkat bergerak, keamanan yang tinggi, dan adanya jangkauan radio yang digunakan pada perangkat militer</p>
+</li>
+<li>
+<p>Flying Ad hoc Network (FANET)</p>
+<p>digunakan pada kendaraan udara tak berawak (umumnya dikenal sebagai drone)</p>
+</li>
+</ul>
+<h2 id="isu-keamanan-dalam-manet">Isu Keamanan dalam Manet <a href="#isu-keamanan-dalam-manet" class="anchor" aria-hidden="true">#</a></h2>
+<ul>
+<li>
+<p>Tidak ada Batasan yg ditentukan sebelumnya</p>
+<p>Tidak memiliki batas fisik tetap dan node beroperasi dalam lingkungan yang dinamis. Serangan seperti peniruan identitas dan DoS sulit dideteksi karena koneksi nirkabel bisa terputus secara acak.</p>
+</li>
+<li>
+<p>Tidak ada sistem operasi pusat</p>
+<p>Tanpa sistem kendali terpusat, masalah keamanan meningkat. Serangan sulit dideteksi karena kendali didistribusikan ke setiap node, dan sulit mengidentifikasi node yang dipercaya karena kurangnya perlindungan.</p>
+</li>
+<li>
+<p>Penyusup di dalam jaringan</p>
+<p>Node seluler rentan terhadap serangan karena sulit mendeteksi node yang tidak diinginkan dan memantau aktivitas yang mencurigakan. Akibatnya berupa pencurian informasi dan serangan berbahaya, terutama pada transfer data sensitif antar node. Serangan seperti man-in-the-middle mudah diatur karena banyaknya titik akses dalam jaringan.</p>
+</li>
+<li>
+<p>Keterbatasan sumber energi</p>
+<p>Node di MANET rentan terhadap serangan DoS yang menyebabkan pengurasan daya baterai dengan membanjiri node target dengan lalu lintas atau meminta layanan komputasi berat.</p>
+</li>
+</ul>
+<h2 id="perbandingan-protokol-routing">Perbandingan Protokol Routing <a href="#perbandingan-protokol-routing" class="anchor" aria-hidden="true">#</a></h2>
+<table>
+<thead>
+<tr>
+<th>Parameters</th>
+<th>Proactive protocols</th>
+<th>Reactive protocols</th>
+<th>Hybrid and nature-inspired protocols</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Skema Routing</td>
+<td>Penggunaan tabel routing dan memerlukan pemeliharaan melalui pembaruan periodik dari tetangga</td>
+<td>Sesuai permintaan; rute dihitung hanya saat diperlukan</td>
+<td>Kombinasi kedua model berbasis tabel dan sesuai permintaan untuk memberikan skema routing yang lebih baik</td>
+</tr>
+<tr>
+<td>Aksesibilitas Rute</td>
+<td>Rute selalu tersedia; diperbarui secara otomatis saat node bergabung dengan jaringan</td>
+<td>Rute dihitung sesuai kebutuhan transmisi; diidentifikasi saat komunikasi diperlukan</td>
+<td>Ketersediaan routing bergantung pada lokasi node sumber dan tujuan di zona-zona</td>
+</tr>
+<tr>
+<td>Kualitas Layanan (QoS)</td>
+<td>QoS dijamin karena rute terdefinisi dengan baik dalam tabel routing; paket mengikuti rute yang sama</td>
+<td>QoS tidak dijamin; tidak ada rute khusus yang ditetapkan untuk perjalanan paket</td>
+<td>QoS dijamin di dalam zona-zona; rute diketahui dan disimpan dalam tabel routing, tetapi tidak dijamin untuk komunikasi antar-zona</td>
+</tr>
+<tr>
+<td>Overhead</td>
+<td>Lebih banyak overhead karena pembaruan periodik untuk pemeliharaan tabel routing</td>
+<td>Lebih sedikit overhead dibandingkan dengan proaktif; tidak perlu pembaruan periodik</td>
+<td>Overhead ada karena node hanya menyimpan tabel routing untuk node tetangga</td>
+</tr>
+<tr>
+<td>Dukungan Mobilitas</td>
+<td>Memerlukan pembaruan periodik untuk mendeteksi tetangga dan pembaruan tabel routing; komunikasi tersedia kapan saja</td>
+<td>Memerlukan pemeliharaan rute untuk mendeteksi perubahan topologi jaringan</td>
+<td>Kombinasi pembaruan periodik dan pemeliharaan rute; pembaruan periodik di dalam zona-zona dan pemeliharaan rute untuk komunikasi antar-zona</td>
+</tr>
+<tr>
+<td>Skalabilitas</td>
+<td>Terbatas pada sekitar 100 node; skalabilitas sulit karena komunikasi yang meningkat saat penambahan node</td>
+<td>Lebih dari 100 node mungkin; rute diidentifikasi hanya saat diperlukan untuk komunikasi</td>
+<td>Lebih dari 1000 node mungkin; kombinasi routing proaktif dan reaktif memungkinkan skalabilitas yang lebih besar</td>
+</tr>
+<tr>
+<td>Keterlambatan</td>
+<td>Latensi rute rendah karena rute sudah tersedia dalam tabel routing untuk setiap komunikasi antar node</td>
+<td>Latensi rute tinggi karena node harus menemukan rute terlebih dahulu dan kemudian melanjutkan transmisi.</td>
+<td>Semakin panjang rutenya, semakin tinggi latensinya</td>
+</tr>
+<tr>
+<td>Penyimpanan Data</td>
+<td>Kapasitas penyimpanan lebih tinggi diperlukan untuk memelihara tabel routing yang terbaru tergantung pada jumlah rute yang dibutuhkan.</td>
+<td>Untuk pemeliharaan rute, tergantung sepenuhnya pada apakah ada kerusakan rute.</td>
+<td>Semakin besar zona, semakin tinggi penyimpanan yang diperlukan untuk menyimpan tabel routing</td>
+</tr>
+<tr>
+<td>Pembaruan Rute</td>
+<td>Pembaruan periodik selalu diperlukan untuk memelihara tabel routing; setiap node meminta informasi untuk mengkonfirmasi keberadaan node di jaringan</td>
+<td>Dalam skenario ini, pembaruan periodik tidak diperlukan karena node tidak menyimpan tabel routing.</td>
+<td>Pembaruan periodik digunakan hanya di dalam zona-zona; setiap node di dalam setiap zona berkomunikasi dengan tetangganya untuk  memperbarui tabel routing</td>
+</tr>
+<tr>
+<td>Informasi Routing</td>
+<td>Ini adalah pendekatan paling dasar di mana setiap node memelihara tabel routing untuk merutekan paket dari sumber ke tujuan</td>
+<td>Karena rute ditentukan sesuai permintaan, tidak perlu menyimpan informasi routing untuk node berkomunikasi</td>
+<td>Informasi routing disimpan dalam tabel routing untuk setiap node di setiap zona. Tidak ada rute yang tersedia dalam tabel routing untuk berkomunikasi di luar zona</td>
+</tr>
+<tr>
+<td>Kontrol Data Plane</td>
+<td>Lalu lintas kontrol lebih tinggi daripada reaktif karena lebih banyak lalu lintas dalam jaringan proaktif untuk pembaruan tabel routing</td>
+<td>Lalu lintas kontrol biasanya rendah tetapi meningkat dengan mobilitas rute aktif.</td>
+<td>Untuk hibrida, lebih rendah dari proaktif dan reaktif karena lebih banyak lalu lintas di setiap zona tetapi tidak di antar zona.</td>
+</tr>
+<tr>
+<td>Konsep Routing</td>
+<td>Sebagian besar adalah routing datar karena semua node dalam jaringan memiliki peran dan fungsionalitas yang sama</td>
+<td>Juga sebagian besar datar karena peran dan fungsionalitas yang sama dari setiap node dalam jaringan</td>
+<td>Skema routing hierarkis diadopsi. Ada node dengan peran yang berbeda. Sebagian besar node melakukan komunikasi intra-zona sementara beberapa node melakukan komunikasi antar zona.</td>
+</tr>
+<tr>
+<td>Konsumsi Bandwidth</td>
+<td>Kebutuhan bandwidth lebih tinggi karena pembaruan periodik untuk pemeliharaan tabel routing</td>
+<td>Konsumsi bandwidth rendah karena transfer data terjadi hanya saat diperlukan untuk komunikasi. Tidak ada paket ekstra yang melakukan perjalanan secara periodik dibandingkan dengan proaktif</td>
+<td>Kebutuhan bandwidth sedang karena paket ekstra dikirim hanya di setiap zona untuk memperbarui tabel routing; tidak ada komunikasi antar zona untuk memperbarui.</td>
+</tr>
+<tr>
+<td>Konsumsi Daya</td>
+<td>Kebutuhan daya tinggi karena setiap kali node harus mengirim paket ekstra untuk memperbarui tabel routing secara periodik.</td>
+<td>Kebutuhan daya rendah karena tidak perlu mengirim paket ekstra untuk memperbarui tabel routing. Konsumsi daya diperlukan hanya saat ada kebutuhan untuk komunikasi.</td>
+<td>Kebutuhan daya sedang karena pembaruan periodik dilakukan hanya di dalam setiap zona untuk node tetangga.</td>
+</tr>
+</tbody>
+</table>
+<h2 id="aplikasi-manet">Aplikasi Manet <a href="#aplikasi-manet" class="anchor" aria-hidden="true">#</a></h2>
+<ul>
+<li>
+<p>Jaringan Sensor</p>
+<ul>
+<li>Jaringan sensor terdiri dari sensor-sensor kecil yang mengumpulkan informasi lingkungan seperti tekanan, suhu, dan emisi gas. Contohnya adalah penggunaan sensor-sensor ini dalam aplikasi pemantauan cuaca atau kualitas udara di kota-kota.</li>
+<li>Setiap sensor memiliki keterbatasan kapasitas dan harus saling bergantung untuk mengirimkan data ke pusat pengolahan informasi. Sebagai contoh, dalam pemantauan lingkungan, sensor-sensor ini dapat digunakan untuk memantau polusi udara di area perkotaan.</li>
+<li>Dukungan teknologi Internet of Things (IoT) dan kecerdasan buatan (AI) semakin meningkatkan popularitas jaringan sensor dalam berbagai aplikasi, termasuk pertanian pintar.</li>
+<li>Topologi jaringan sensor dapat berubah secara dinamis dengan bergabungnya sensor-sensor baru, memungkinkan adaptasi terhadap perubahan lingkungan secara real-time.</li>
+</ul>
+</li>
+<li>
+<p>Manajemen Bencana</p>
+<ul>
+<li>MANET digunakan dalam operasi penyelamatan darurat, seperti saat tim penyelamat merespons gempa bumi atau banjir.</li>
+<li>Penyelamat dapat membentuk jaringan ad-hoc dengan menggunakan peralatan sederhana, seperti smartphone atau radio komunikasi portabel.</li>
+<li>Contohnya, ketika terjadi gempa bumi, tim penyelamat dapat menggunakan MANET untuk berkoordinasi dan memberikan bantuan kepada korban di area terdampak.</li>
+<li>Selain itu, jaringan sosial seperti Facebook dan Twitter juga dapat digunakan untuk menyebarkan informasi penting kepada masyarakat luas selama keadaan darurat.</li>
+<li>Dengan bantuan MANET, penyelamat dapat dengan cepat mengirimkan informasi vital kepada pusat komando dan mendapatkan bantuan tambahan dari sumber daya eksternal.</li>
+<li>Melalui penggunaan teknologi komunikasi modern seperti MANET, upaya penyelamatan dapat ditingkatkan efisiensinya dalam situasi darurat.</li>
+</ul>
+</li>
+<li>
+<p>Militer</p>
+<ul>
+<li>Jaringan ad-hoc memungkinkan militer untuk membentuk jaringan informasi antara kendaraan, prajurit, dan markas menggunakan infrastruktur jaringan yang ada di lokasi.</li>
+<li>Di masa depan, militer akan menuju model Network-Centric Warfare (NCW), di mana kekuatan komunikasi jaringan dan pertukaran pengetahuan menjadi fokus utama.</li>
+<li>Contoh dari hal ini adalah penggunaan jaringan ad-hoc oleh pasukan militer di medan perang untuk berbagi informasi secara real-time dan memperkuat koordinasi antarunit.</li>
+<li>Model NCW memungkinkan akses ke jaringan yang mirip dengan akses internet, untuk mendukung komunikasi yang efektif kapan pun dan di mana pun.</li>
+</ul>
+</li>
+<li>
+<p>Bluetooth dan Jaringan Area Personal (PAN)</p>
+<ul>
+<li>Bluetooth dan Jaringan Area Personal (PAN) adalah jaringan lokal kecil di mana node-node terhubung ke perangkat tertentu, seperti laptop atau ponsel. Contoh: Sebuah kantor yang menggunakan PAN untuk menghubungkan komputer-komputer di sekitar area kerja.</li>
+<li>MANET jarak pendek, seperti Bluetooth, dapat menyederhanakan koneksi dengan perangkat bergerak. Contoh: Menghubungkan headset Bluetooth dengan ponsel saat berjalan-jalan.</li>
+<li>Operasi daya rendah sangat penting terutama dalam populasi yang padat dan besar. Contoh: Headset Bluetooth yang dirancang untuk menghemat daya agar tahan lama dalam penggunaan sehari-hari.</li>
+<li>Penting untuk mengoptimalkan ukuran perangkat, jumlah siklus CPU, bandwidth nirkabel, dan kapasitas baterai. Contoh: Ponsel cerdas yang menggunakan teknologi Bluetooth Low Energy (BLE) untuk menghemat daya dan memperpanjang masa pakai baterai.</li>
+</ul>
+</li>
+<li>
+<p>Pendidikan</p>
+<ul>
+<li>MANET memperkuat interaksi dalam pendidikan dengan jaringan Ad-Hoc untuk pertukaran informasi antara siswa dan guru.</li>
+<li>Digunakan di kelas, ruang rapat virtual, dan sinyal nirkabel di kampus universitas.</li>
+<li>Memungkinkan berbagi materi pelajaran secara real-time di dalam ruang kuliah.</li>
+<li>Cakupan jaringan dapat diperluas tanpa perlu menambah titik akses baru.</li>
+<li>Koneksi perangkat seluler meningkatkan akses ke sumber daya pendidikan, seperti perpustakaan universitas.</li>
+</ul>
+<h2 id="kesimpulan">Kesimpulan <a href="#kesimpulan" class="anchor" aria-hidden="true">#</a></h2>
+</li>
+<li>
+<p>Paper ini menjelaskan protokol routing MANET yang dibagi menjadi proaktif, reaktif, hibrida, dan terinspirasi alam.</p>
+</li>
+<li>
+<p>Protokol proaktif berusaha mengelola rute terus-menerus, namun dapat menghasilkan overhead yang tidak perlu.</p>
+</li>
+<li>
+<p>Protokol reaktif menemukan rute hanya saat diperlukan, tetapi dapat menyebabkan lalu lintas yang besar jika jaringan berubah sering.</p>
+</li>
+<li>
+<p>Protokol hibrida menggabungkan fitur terbaik dari proaktif dan reaktif, sering menjadi pilihan terbaik untuk MANET.</p>
+</li>
+<li>
+<p>Masalah utama dalam MANET meliputi kesulitan dalam transmisi yang aman dan perluasan bandwidth untuk komunikasi nirkabel.
+Protokol multicast telah diusulkan sebagai solusi untuk beberapa masalah tersebut.</p>
+</li>
+</ul>
+<h2 id="referensi">Referensi <a href="#referensi" class="anchor" aria-hidden="true">#</a></h2>
+<p>D. Ramphull, A. Mungur, S. Armoogum and S. Pudaruth, &ldquo;A Review of Mobile Ad hoc NETwork (MANET) Protocols and their Applications,&rdquo; 2021 5th International Conference on Intelligent Computing and Control Systems (ICICCS), Madurai, India, 2021, pp. 204-211, doi: 10.1109/ICICCS51141.2021.9432258.</p>
+
+
+      <div class="mt-4">
+        <a class="btn btn-light" href="https://kaban.my.id/tags/mobile-ad-hoc-network/" role="button">Mobile Ad hoc Network</a>
+        <a class="btn btn-light" href="https://kaban.my.id/tags/manet/" role="button">Manet</a>
+        <a class="btn btn-light" href="https://kaban.my.id/tags/protokol-manet/" role="button">Protokol Manet</a>
+        <a class="btn btn-light" href="https://kaban.my.id/tags/aplikasi-manet/" role="button">Aplikasi Manet</a>
+        </div>
+      <div id="disqus_thread"></div>
+<script type="application/javascript">
+    window.disqus_config = function () {
+    
+    
+    
+    };
+    (function() {
+        if (["localhost", "127.0.0.1"].indexOf(window.location.hostname) != -1) {
+            document.getElementById('disqus_thread').innerHTML = 'Disqus comments not available by default when the website is previewed locally.';
+            return;
+        }
+        var d = document, s = d.createElement('script'); s.async = true;
+        s.src = '//' + "kaban-my-id" + '.disqus.com/embed.js';
+        s.setAttribute('data-timestamp', +new Date());
+        (d.head || d.body).appendChild(s);
+    })();
+</script>
+<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+<a href="https://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
+      <div class="page-footer-meta d-flex flex-column flex-md-row justify-content-between">
+       
+        </div>
+      <div class="docs-navigation d-flex justify-content-between">
+	
+	<a href="/edge-computing-dalam-internet-of-thing-iot/">
+			<div class="card my-1">
+				<div class="card-body py-2">
+					&larr; Edge Computing dalam Internet of Thing (IoT)
+				</div>
+			</div>
+		</a>
+	<a class="ms-auto" href="/ringkasan-10-jurnal-dengan-topik-cybercrime-kejahatan-dunia-maya/">
+			<div class="card my-1">
+				<div class="card-body py-2">
+					Ringkasan 10 Jurnal dengan topik Cybercrime (Kejahatan dunia maya) &rarr;
+				</div>
+			</div>
+		</a>
+	</div>
+
+      
+    </main>
+    
+  </div>
+ 
+</article>
+<div class="related-posts">
+<div class="row justify-content-center">
+  <div class="col">
+    <h2 class="section-title">Informasi Lainnya</h2>
+  </div>
+</div>
+<div class="row row-cols-1 row-cols-md-2 row-cols-lg-3 g-lg-5">
+  <div class="col">
+    <div class="card">
+      <div class="card-body">
+        <article>
+          <h2 class="h3"><a class="stretched-link text-body" href="/pemanfaatan-artificial-intelegence-ai-dalam-bidang-cybersecurity/">Pemanfaatan Artificial Intelegence (AI) dalam bidang Cybersecurity</a></h2>
+          <p>Dalam era digital yang berkembang pesat, teknologi canggih seperti Industrial Internet of Things (IIoT), sistem mengemudi otonom, dan Internet of Things (IoT) telah menjadi tulang punggung transformasi industri dan gaya hidup modern. IIoT memungkinkan integrasi perangkat pintar dan sensor dalam industri, yang meningkatkan efisiensi operasional dan produktivitas. Peningkatan penggunaan perangkat IIoT juga membawa tantangan signifikan terkait keamanan dan efisiensi operasional karena perangkat ini seringkali menjadi target serangan siber[1]. </p>
+          
+<p><small>Posted&nbsp;in&nbsp;<a class="stretched-link position-relative link-muted" href="https://kaban.my.id/categories/artificial-intelegence/">Artificial Intelegence</a>, <a class="stretched-link position-relative link-muted" href="https://kaban.my.id/categories/jaringan-komputer/">Jaringan Komputer</a>, <a class="stretched-link position-relative link-muted" href="https://kaban.my.id/categories/iot/">IoT</a>&nbsp;on&nbsp;June 26, 2024 by <a class="stretched-link position-relative" href="/contributors/roberto-kaban/">Roberto Kaban</a>&nbsp;&hyphen;&nbsp;<strong>10&nbsp;min read</strong></small><p></article>
+      </div>
+    </div>
+  </div>
+  <div class="col">
+    <div class="card">
+      <div class="card-body">
+        <article>
+          <h2 class="h3"><a class="stretched-link text-body" href="/edge-computing-dalam-internet-of-thing-iot/">Edge Computing dalam Internet of Thing (IoT)</a></h2>
+          <p>Penggunaan Internet of Things (IoT), layanan dan aplikasi mobile dalam skenario kompleks seperti Smart City dan Industri 4.0 telah menimbulkan tantangan baru bagi solusi yang berorientasi pada Cloud Computing. Cloud Computing merupakan paradigma komputasi dengan visi sentralisasi sumber daya dengan skema terpusat di mana komputasi dan penyimpanan diterapkan di pusat data jarak jauh. Cloud Computing mengalami keterbatasan signifikan saat berkaitan dengan teknologi yang membutuhkan respons real-time. </p>
+          
+<p><small>Posted&nbsp;in&nbsp;<a class="stretched-link position-relative link-muted" href="https://kaban.my.id/categories/jaringan-komputer/">Jaringan Komputer</a>, <a class="stretched-link position-relative link-muted" href="https://kaban.my.id/categories/iot/">IoT</a>&nbsp;on&nbsp;June 21, 2024 by <a class="stretched-link position-relative" href="/contributors/roberto-kaban/">Roberto Kaban</a>&nbsp;&hyphen;&nbsp;<strong>10&nbsp;min read</strong></small><p></article>
+      </div>
+    </div>
+  </div>
+  </div>
+</div>
+<section class="section section-sm">
+  <div class="container">
+    <div class="row justify-content-center text-center mt-lg-3">
+     
+    </div>
+  </div>
+</section>
+
+
+      </div>
+    </div>
+    
+    
+    <footer class="footer text-muted">
+  <div class="container-xxl">
+    <div class="row">
+      <div class="col-lg-8 order-last order-lg-first">
+        <ul class="list-inline">
+          <li class="list-inline-item">Powered by <a class="text-muted" href="https://gohugo.io/">Hugo</a> and <a class="text-muted" href="https://github.com/">Github</a></li>
+        </ul>
+      </div>
+      <div class="col-lg-8 order-first order-lg-last text-lg-end">
+        <ul class="list-inline">
+          </ul>
+      </div>
+    </div>
+  </div>
+</footer>
+    
+
+<script src="/js/bootstrap.min.650aeec64c81d69d4c0850fc73c93da3f0330cec0a27772feed7f90f60baa5f47f1c45687d71914bdafd1c4e860d40f6dc08ede27a2f08431ff929c9a2d24621.js" integrity="sha512-ZQruxkyB1p1MCFD8c8k9o/AzDOwKJ3cv7tf5D2C6pfR/HEVofXGRS9r9HE6GDUD23Ajt4novCEMf&#43;SnJotJGIQ==" crossorigin="anonymous" defer></script>
+  <script src="/js/highlight.min.ec234bd8a5f487aaffe50a89f17b14501b1bb65633cf177cffd4cb84702dd7030edc08712dceb8dc27ac7e54b53240a08bf0b8d951572ee582bcdbbd06a48a7b.js" integrity="sha512-7CNL2KX0h6r/5QqJ8XsUUBsbtlYzzxd8/9TLhHAt1wMO3AhxLc643CesflS1MkCgi/C42VFXLuWCvNu9BqSKew==" crossorigin="anonymous" defer></script>
+  <script src="/main.min.cd1e5e6b40065b3f7f7fd8548a528fac67019754eda0f37b9918d02d154fc9ef6a22742f6513b0572ad9163152e151ec36221fbeafbecd7759c3dab1f19b64b9.js" integrity="sha512-zR5ea0AGWz9/f9hUilKPrGcBl1TtoPN7mRjQLRVPye9qInQvZROwVyrZFjFS4VHsNiIfvq&#43;&#43;zXdZw9qx8ZtkuQ==" crossorigin="anonymous" defer></script>
+  <script src="https://kaban.my.id/index.min.a7b093015f6c60ca063ee8730df15c0e449733836ef478da254697ffa31e70ba39b17df497b207eedf5ff788a1a86a2c597b3965c3ca4c4287ac2282b8aa0860.js" integrity="sha512-p7CTAV9sYMoGPuhzDfFcDkSXM4Nu9HjaJUaX/6MecLo5sX30l7IH7t9f94ihqGosWXs5ZcPKTEKHrCKCuKoIYA==" crossorigin="anonymous" defer></script>
+  
+    <div class="d-flex fixed-bottom pb-4 pb-lg-5 pe-4 pe-lg-5">
+      <a id="toTop" href="#" class="btn btn-outline-primary rounded-circle ms-auto p-2"><span class="visually-hidden">Top</span><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-chevron-up"><polyline points="18 15 12 9 6 15"></polyline></svg></a>
+    </div>
+    
+  </body>
+</html>

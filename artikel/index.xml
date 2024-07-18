@@ -8,6 +8,34 @@
     <language>en</language>
     <lastBuildDate>Tue, 06 Oct 2020 08:49:55 +0000</lastBuildDate><atom:link href="https://kaban.my.id/artikel/index.xml" rel="self" type="application/rss+xml" />
     <item>
+      <title>Pemanfaatan Artificial Intelegence (AI) dalam bidang Cybersecurity</title>
+      <link>https://kaban.my.id/pemanfaatan-artificial-intelegence-ai-dalam-bidang-cybersecurity/</link>
+      <pubDate>Wed, 26 Jun 2024 13:57:55 +0700</pubDate>
+      
+      <guid>https://kaban.my.id/pemanfaatan-artificial-intelegence-ai-dalam-bidang-cybersecurity/</guid>
+      <description>Latar belakang # Dalam era digital yang berkembang pesat, teknologi canggih seperti Industrial Internet of Things (IIoT), sistem mengemudi otonom, dan Internet of Things (IoT) telah menjadi tulang punggung transformasi industri dan gaya hidup modern. IIoT memungkinkan integrasi perangkat pintar dan sensor dalam industri, yang meningkatkan efisiensi operasional dan produktivitas. Peningkatan penggunaan perangkat IIoT juga membawa tantangan signifikan terkait keamanan dan efisiensi operasional karena perangkat ini seringkali menjadi target serangan siber[1].</description>
+    </item>
+    
+    <item>
+      <title>Edge Computing dalam Internet of Thing (IoT)</title>
+      <link>https://kaban.my.id/edge-computing-dalam-internet-of-thing-iot/</link>
+      <pubDate>Fri, 21 Jun 2024 13:57:55 +0700</pubDate>
+      
+      <guid>https://kaban.my.id/edge-computing-dalam-internet-of-thing-iot/</guid>
+      <description>Pendahuluan # Penggunaan Internet of Things (IoT), layanan dan aplikasi mobile dalam skenario kompleks seperti Smart City dan Industri 4.0 telah menimbulkan tantangan baru bagi solusi yang berorientasi pada Cloud Computing. Cloud Computing merupakan paradigma komputasi dengan visi sentralisasi sumber daya dengan skema terpusat di mana komputasi dan penyimpanan diterapkan di pusat data jarak jauh. Cloud Computing mengalami keterbatasan signifikan saat berkaitan dengan teknologi yang membutuhkan respons real-time. Beberapa tahun terakhir, tren baru dalam komputasi sedang berkembang dengan fungsi cloud yang semakin beralih ke jaringan edge.</description>
+    </item>
+    
+    <item>
+      <title>Mobile Ad hoc Network (MANET): Protokol dan Aplikasinya</title>
+      <link>https://kaban.my.id/mobile-ad-hoc-network-manet-protokol-dan-aplikasinya/</link>
+      <pubDate>Fri, 21 Jun 2024 13:57:55 +0700</pubDate>
+      
+      <guid>https://kaban.my.id/mobile-ad-hoc-network-manet-protokol-dan-aplikasinya/</guid>
+      <description>Mobile Ad hoc Network (MANET) # Mobile Ad hoc Network (MANET) adalah jenis jaringan nirkabel yang terdiri dari sekelompok perangkat mobile yang dapat berkomunikasi satu sama lain tanpa perlu infrastruktur jaringan tetap, seperti router atau access point. Perangkat dalam MANET dapat bergerak bebas dan secara dinamis membentuk jaringan sementara. Manet memiliki karakteristik seperti Infrastruktur yang otonom, Skalabilitas jaringan dan kemampuan node dan variasi tautan.
+Karakterisitik Manet # Tanpa infrastruktur dan otonom MANET tidak bergantung pada infrastruktur terpusat atau mapan.</description>
+    </item>
+    
+    <item>
       <title>Ringkasan 10 Jurnal dengan topik Cybercrime (Kejahatan dunia maya)</title>
       <link>https://kaban.my.id/ringkasan-10-jurnal-dengan-topik-cybercrime-kejahatan-dunia-maya/</link>
       <pubDate>Mon, 04 Dec 2023 13:57:55 +0700</pubDate>
@@ -77,36 +105,6 @@ Filsafat merupakan suatu studi yang mempelajari seluruh fenomena kehidupan dan p
       <description>Berpikir Keilmuan # Berpikir Keilmuan merupakan sebuah tugas kemanusian dan tugas budaya yang makin memperluas kesadaran (reasoning). Dengan berpikir keilmuan diharapkan mampu mendongkrak keterbatasan-keterbatasan kodrati manusia untuk melakukan penemuan- penemuan (invention) serta karya-karya budaya.
 Berpikir keilmuan juga akan memanusiakan diri dan lingkungannya menjadi pribadi dan lingkungan yang manusiawi serta berbudaya😁. Berpikir keilmuan bukanlah Berkhayal untuk mencari kepuasan temporer, tetapi lebih kepada proses yang mesti membuahkan pengetahuan ilmu.
 Mahasiswa sebagai pemikir # Berpikir keilmuan bukanlah, berkhayal untuk mencari kepuasan temporer, tetapi proses yang mesti membuahkan pengetahuan ilmu.</description>
-    </item>
-    
-    <item>
-      <title>Perintah dasar Linux</title>
-      <link>https://kaban.my.id/perintah-dasar-linux/</link>
-      <pubDate>Sat, 18 Jul 2020 13:57:55 +0700</pubDate>
-      
-      <guid>https://kaban.my.id/perintah-dasar-linux/</guid>
-      <description>Sepintas tentang Linux # Linux adalah keluarga sistem operasi turunan Unix yang bersifat open-source dan didasarkan pada Linux Kernel. Terdapat berbagai distribusi (Distro) linux yang populer seperti Ubuntu, Fedora, Mint, Debian, dan lain-lain.
-Sejak pertama kali dirilis pada tahun 1991, popularitas Linux terus meroket karena sifatnya yang open-source. User bebas memodifikasi Linux dan mendistribusikannya dengan memakai namanya sendiri.
-Ketika mengoperasikan Linux, kita dapat menggunakan shell yang merupakan interface yang menyediakan akses ke layanan sistem operasi.</description>
-    </item>
-    
-    <item>
-      <title>Mengenal Cli Command Line Interface</title>
-      <link>https://kaban.my.id/mengenal-cli-command-line-interface/</link>
-      <pubDate>Sun, 12 Jul 2020 13:57:55 +0700</pubDate>
-      
-      <guid>https://kaban.my.id/mengenal-cli-command-line-interface/</guid>
-      <description>Pengantar # Kita mungkin sering mendengar istilah CLI dalam hal yang bergubungan dengan dunia IT, khususnya di bidang programmer. Apa sebenarnya CLI ini? CLI merupakan singkatan dari Command Line Interface. CLI sebagai media untuk memberikan instruksi/perintah pada komputer dan perangkat lunak (software) yang ada di dalamnya. Pada CLI dapat diberikan berupa perintah dalam bentuk teks yang fungsinya untuk mengerjakan tugas (task) tertentu.
-Dengan berkembangnya perangkat lunak yg sifatnya GUI (Graphic User Interface) membuat banyak orang kurang familiar dengan CLI.</description>
-    </item>
-    
-    <item>
-      <title>10 Pertanyaan Mendasar Tentang Blockchain Yang Anda Harus Tahu Jawabannya</title>
-      <link>https://kaban.my.id/10-pertanyaan-mendasar-tentang-blockchain-yang-anda-harus-tahu-jawabannya/</link>
-      <pubDate>Fri, 12 Jun 2020 19:35:40 +0700</pubDate>
-      
-      <guid>https://kaban.my.id/10-pertanyaan-mendasar-tentang-blockchain-yang-anda-harus-tahu-jawabannya/</guid>
-      <description>Apa itu blockchain? # Blockchain adalah serangkaian blok yang berisi informasi. Blok-blok ini saling terkait dan dilindungi keunikannya dengan hash (seperti tanda tangan digital yang unik, bisa diumpamakan juga seperti sidik jari yang tidak mungkin sama di antara satu dengan lainnya). Setiap blok berisi informasi. Apabila ada yang mengubah satu blok, maka ia juga harus mengubah serangkaian blok lainnya sehingga kecurangan atau pencurian data menjadi sangat mungkin untuk ditiadakan. Ide siapakah blockchain ini?</description>
     </item>
     
   </channel>
