@@ -35,8 +35,8 @@ python --version Instalasi Python # Jika belum menginstal Python, silakan downlo
       <pubDate>Sun, 06 Dec 2020 08:49:31 +0000</pubDate>
       
       <guid>https://kaban.my.id/python/tutorial/menjalankan-python/</guid>
-      <description>Untuk menjalankan Python ada banyak cara yang bisa dilakukan. Kita dapat menggunakan shell, terminal atau menggunakan IDE (Integrated Development Environment). Di bawah ini adalah langkah-langkah menjalankan Python dengan cara yang paling mudah.
-Cara menjalankan file python di Linux # Buka terminal CTRL+ALT+T Ketik python maka akan masuk ke Python shell. Tuliskan script Python, contoh: print(&amp;quot;Selamat datang di Python&amp;quot;). jika sudah tekan tombol ENTER, dan script Python akan dijalankan/eksekusi. Untuk keluar dari Python shell ketik exit() atau</description>
+      <description>Panduan Lengkap Menjalankan Python di Berbagai Sistem Operasi # Python adalah bahasa pemrograman yang dapat dijalankan di berbagai sistem operasi seperti Linux, Windows, dan Mac OS. Ada banyak cara untuk menjalankan Python, seperti melalui shell/terminal atau menggunakan Integrated Development Environment (IDE). Berikut adalah panduan langkah demi langkah untuk menjalankan Python di masing-masing sistem operasi.
+Cara Menjalankan File Python di Linux # 1. Menggunakan Python Shell # Buka Terminal dengan menekan tombol CTRL + ALT + T secara bersamaan.</description>
     </item>
     
     <item>
@@ -45,9 +45,10 @@ Cara menjalankan file python di Linux # Buka terminal CTRL+ALT+T Ketik python ma
       <pubDate>Sun, 06 Dec 2020 08:49:31 +0000</pubDate>
       
       <guid>https://kaban.my.id/python/tutorial/aturan-penulisan/</guid>
-      <description>Syntax bahasa Python hampir sama dengan bahasa pemrograman pada umumnya seperti Java atau PHP.
-Syntax Dasar # Dibawah ini adalah contoh fungsi Python yang digunakan untuk mencetak. Di Python untuk mencetak cukup gunakan fungsi print() , dimana sesuatu yang akan dicetak harus diletakkan diantara kurung buka dan kurung tutup, bahkan di Python versi 2.x Anda tidak harus menggunakan tanda kurung kurawal, cukup pisahkan dengan spasi.
-Jika ingin mencetak tipe data String langsung, Anda harus memasukanya ke dalam tanda kutip terlebih dahulu.</description>
+      <description>Panduan Dasar Syntax Python # Python adalah salah satu bahasa pemrograman yang sederhana dan mudah dipahami, dengan syntax yang mirip dengan bahasa pemrograman lain seperti Java atau PHP. Tutorial ini akan membahas dasar-dasar syntax Python untuk pemula.
+Syntax Dasar # Python menyediakan fungsi bawaan untuk mencetak output, yaitu print().
+Berikut adalah beberapa hal penting yang perlu diperhatikan tentang penggunaan print():
+Penulisan Fungsi: Fungsi print() memerlukan tanda kurung buka ( dan kurung tutup ) untuk membungkus apa yang ingin dicetak.</description>
     </item>
     
     <item>
