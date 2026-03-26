@@ -6,7 +6,16 @@
     <description>Recent content in Categories on </description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
-    <lastBuildDate>Thu, 11 Dec 2025 22:40:30 +0700</lastBuildDate><atom:link href="https://kaban.my.id/categories/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sun, 11 Jan 2026 22:40:30 +0700</lastBuildDate><atom:link href="https://kaban.my.id/categories/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Artikel</title>
+      <link>https://kaban.my.id/categories/artikel/</link>
+      <pubDate>Sun, 11 Jan 2026 22:40:30 +0700</pubDate>
+      
+      <guid>https://kaban.my.id/categories/artikel/</guid>
+      <description></description>
+    </item>
+    
     <item>
       <title>Blog</title>
       <link>https://kaban.my.id/categories/blog/</link>
@@ -85,15 +94,6 @@
       <pubDate>Fri, 28 Oct 2022 02:55:26 +0700</pubDate>
       
       <guid>https://kaban.my.id/categories/materi-kuliah/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Ceritaku</title>
-      <link>https://kaban.my.id/categories/ceritaku/</link>
-      <pubDate>Thu, 27 Oct 2022 09:57:55 +0700</pubDate>
-      
-      <guid>https://kaban.my.id/categories/ceritaku/</guid>
       <description></description>
     </item>
     
