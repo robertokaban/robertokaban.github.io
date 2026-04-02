@@ -6,7 +6,16 @@
     <description>Recent content in Roberto Kaban on </description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
-    <lastBuildDate>Sun, 11 Jan 2026 22:40:30 +0700</lastBuildDate><atom:link href="https://kaban.my.id/contributors/roberto-kaban/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Mon, 12 Jan 2026 09:00:00 +0700</lastBuildDate><atom:link href="https://kaban.my.id/contributors/roberto-kaban/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Memahami Basis Data Vektor: Cara Mencari Data Mirip di Era AI</title>
+      <link>https://kaban.my.id/memahami-basis-data-vektor-cara-mencari-data-mirip-di-era-ai/</link>
+      <pubDate>Mon, 12 Jan 2026 09:00:00 +0700</pubDate>
+      
+      <guid>https://kaban.my.id/memahami-basis-data-vektor-cara-mencari-data-mirip-di-era-ai/</guid>
+      <description>Basis Data Vektor Dijelaskan # Pendahuluan # Basis data tradisional biasanya menjawab pertanyaan sederhana: apakah ada data yang cocok dengan kriteria tertentu? Basis data vektor menjawab pertanyaan yang berbeda: data mana yang paling mirip dengan ini? Perubahan ini penting karena banyak data modern, seperti dokumen teks, gambar, audio, dan perilaku pengguna, tidak dapat dicari dengan pencocokan persis. Oleh karena itu, pertanyaan yang tepat bukanlah “temukan ini,” tetapi “temukan yang paling mirip.</description>
+    </item>
+    
     <item>
       <title>Machine Learning: Jenis, Model, dan Penerapannya</title>
       <link>https://kaban.my.id/machine-learning-jenis-model-dan-penerapannya/</link>
@@ -91,15 +100,6 @@ Perjalanan menuju usia ini tentu bukan hal yang sederhana.</description>
       
       <guid>https://kaban.my.id/coretanku/ngawur-ngidul-dikandung-hidup-dan-mati/</guid>
       <description>Kehidupan manusia dibagi menjadi beberapa tahapan yang sangat mendasar: dari kehidupan dalam kandungan, hidup di dunia, hingga menghadapi kematian. Tampak sebagai jalur alami yang linier, tetapi menyimpan berbagai pertanyaan mendalam tentang hakikat eksistensi, kebebasan, dan bahkan realitas itu sendiri. Menariknya, kita dapat melihat hubungan yang erat antara ketiga tahapan ini dan konsep-konsep dalam dunia fiksi ilmiah seperti yang digambarkan dalam film The Matrix (1999), serta pertanyaan filosofis yang terus berkembang.</description>
-    </item>
-    
-    <item>
-      <title>Mengikuti Pelatihan dan Sertifikasi Administrator Jaringan Komputer</title>
-      <link>https://kaban.my.id/coretanku/mengikuti-pelatihan-dan-sertifikasi-jaringan-komputer/</link>
-      <pubDate>Mon, 12 Aug 2024 23:32:30 +0700</pubDate>
-      
-      <guid>https://kaban.my.id/coretanku/mengikuti-pelatihan-dan-sertifikasi-jaringan-komputer/</guid>
-      <description>Pada tanggal 5–7 Agustus 2024, saya bersama rekan (senior), Pak Sumarlin, mengikuti Pelatihan dan Sertifikasi Administrator Jaringan Komputer yang diadakan di Malyabhara Hotel, Yogyakarta. Pelatihan ini diselenggarakan dengan dukungan dana hibah PKKM Liga 3 Tahun 2024 dan bertujuan meningkatkan kompetensi tenaga pengajar dalam bidang teknologi informasi. Kami merasa sangat bersyukur karena pada akhir kegiatan, kami berhasil lulus pelatihan ini dan memperoleh sertifikat kompetensi resmi dari Badan Nasional Sertifikasi Profesi (BNSP).</description>
     </item>
     
   </channel>

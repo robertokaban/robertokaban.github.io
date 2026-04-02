@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>AI on </title>
+    <link>https://kaban.my.id/categories/ai/</link>
+    <description>Recent content in AI on </description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
+    <lastBuildDate>Wed, 01 Apr 2026 09:00:00 +0700</lastBuildDate><atom:link href="https://kaban.my.id/categories/ai/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Memahami Basis Data Vektor: Cara Mencari Data Mirip di Era AI</title>
+      <link>https://kaban.my.id/memahami-basis-data-vektor-cara-mencari-data-mirip-di-era-ai/</link>
+      <pubDate>Wed, 01 Apr 2026 09:00:00 +0700</pubDate>
+      
+      <guid>https://kaban.my.id/memahami-basis-data-vektor-cara-mencari-data-mirip-di-era-ai/</guid>
+      <description>Basis Data Vektor Dijelaskan # Pendahuluan # Basis data tradisional biasanya menjawab pertanyaan sederhana: apakah ada data yang cocok dengan kriteria tertentu? Basis data vektor menjawab pertanyaan yang berbeda: data mana yang paling mirip dengan ini? Perubahan ini penting karena banyak data modern, seperti dokumen teks, gambar, audio, dan perilaku pengguna, tidak dapat dicari dengan pencocokan persis. Oleh karena itu, pertanyaan yang tepat bukanlah “temukan ini,” tetapi “temukan yang paling mirip.</description>
+    </item>
+    
+  </channel>
+</rss>
