@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Algoritma on </title>
+    <link>https://kaban.my.id/tags/algoritma/</link>
+    <description>Recent content in Algoritma on </description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
+    <lastBuildDate>Thu, 02 Apr 2026 09:00:00 +0700</lastBuildDate><atom:link href="https://kaban.my.id/tags/algoritma/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Mengenal Algoritma Machine Learning dan AI</title>
+      <link>https://kaban.my.id/mengenal-algoritma-machine-learning-dan-ai/</link>
+      <pubDate>Thu, 02 Apr 2026 09:00:00 +0700</pubDate>
+      
+      <guid>https://kaban.my.id/mengenal-algoritma-machine-learning-dan-ai/</guid>
+      <description>Di era digital saat ini, kemampuan memahami dan menerapkan algoritma machine learning (ML) dan artificial intelligence (AI) menjadi salah satu kompetensi penting bagi mahasiswa. Algoritma-algoritma ini digunakan untuk analisis data, sistem rekomendasi, pengenalan wajah, prediksi finansial, pengolahan bahasa alami (NLP), dan berbagai aplikasi inovatif lainnya.
+Artikel ini menyajikan kumpulan algoritma ML dan AI beserta kategori, domain aplikasi, dan keunggulannya. Informasi ini disusun agar mahasiswa dapat memahami konsep, membandingkan algoritma, dan memilih metode yang sesuai untuk tugas kuliah, proyek riset, atau eksperimen data.</description>
+    </item>
+    
+  </channel>
+</rss>

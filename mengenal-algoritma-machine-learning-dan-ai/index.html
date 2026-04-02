@@ -1,0 +1,727 @@
+<!doctype html>
+<html lang="en-US">
+  <head>
+  <meta charset="utf-8">
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <link rel="preload" as="font" href="https://kaban.my.id/fonts/vendor/jost/jost-v4-latin-regular.woff2" type="font/woff2" crossorigin>
+<link rel="preload" as="font" href="https://kaban.my.id/fonts/vendor/jost/jost-v4-latin-500.woff2" type="font/woff2" crossorigin>
+<link rel="preload" as="font" href="https://kaban.my.id/fonts/vendor/jost/jost-v4-latin-700.woff2" type="font/woff2" crossorigin>
+
+  <script>(()=>{var t=window.matchMedia&&window.matchMedia("(prefers-color-scheme: dark)").matches,e=localStorage.getItem("theme");t&&e===null&&(localStorage.setItem("theme","dark"),document.documentElement.setAttribute("data-dark-mode","")),t&&e==="dark"&&document.documentElement.setAttribute("data-dark-mode",""),e==="dark"&&document.documentElement.setAttribute("data-dark-mode","")})()</script>
+
+  <link rel="stylesheet" href="https://kaban.my.id/main.9f87974e4c1caf828d7f6300ecd98102083d1763683fe424f26c4c7b80fa72a094aa3c62fe333b5026c22ff50b82f74220d559e730c1f032fd8bcec957ac2bb4.css" integrity="sha512-n4eXTkwcr4KNf2MA7NmBAgg9F2NoP&#43;Qk8mxMe4D6cqCUqjxi/jM7UCbCL/ULgvdCINVZ5zDB8DL9i87JV6wrtA==" crossorigin="anonymous">
+<noscript><style>img.lazyload { display: none; }</style></noscript>
+  <meta name="robots" content="index, follow">
+    <meta name="googlebot" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1">
+    <meta name="bingbot" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1">
+  <title>Mengenal Algoritma Machine Learning dan AI - Roberto Kaban Blog&#39;s</title>
+<meta name="description" content="Artikel ini membahas kumpulan algoritma machine learning dan artificial intelligence (AI) yang umum digunakan dalam penelitian, pendidikan, dan aplikasi praktis. Mulai dari supervised, unsupervised, hybrid, hingga reinforcement learning, artikel ini memberikan gambaran domain penerapan, keunggulan, dan konteks penggunaan masing-masing algoritma, sehingga menjadi referensi lengkap bagi mahasiswa dan pemula.">
+<link rel="canonical" href="https://kaban.my.id/mengenal-algoritma-machine-learning-dan-ai/">
+<meta property="og:locale" content="en_US">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Mengenal Algoritma Machine Learning dan AI">
+<meta property="og:description" content="Artikel ini membahas kumpulan algoritma machine learning dan artificial intelligence (AI) yang umum digunakan dalam penelitian, pendidikan, dan aplikasi praktis. Mulai dari supervised, unsupervised, hybrid, hingga reinforcement learning, artikel ini memberikan gambaran domain penerapan, keunggulan, dan konteks penggunaan masing-masing algoritma, sehingga menjadi referensi lengkap bagi mahasiswa dan pemula.">
+<meta property="og:url" content="https://kaban.my.id/mengenal-algoritma-machine-learning-dan-ai/">
+<meta property="og:site_name" content="Roberto Kaban Blog&#39;s">
+<meta property="article:published_time" content="2026-04-02T09:00:00+07:00">
+  <meta property="article:modified_time" content="2026-04-02T09:00:00+07:00">
+  
+  <meta property="og:image" content="https://kaban.my.id/doks.png"/>
+      <meta property="og:image:alt" content="Roberto Kaban Blog&#39;s">
+    
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:site" content="@robertokaban">
+<meta name="twitter:creator" content="@robertokaban">
+<meta name="twitter:title" content="Mengenal Algoritma Machine Learning dan AI">
+<meta name="twitter:description" content="Artikel ini membahas kumpulan algoritma machine learning dan artificial intelligence (AI) yang umum digunakan dalam penelitian, pendidikan, dan aplikasi praktis. Mulai dari supervised, unsupervised, hybrid, hingga reinforcement learning, artikel ini memberikan gambaran domain penerapan, keunggulan, dan konteks penggunaan masing-masing algoritma, sehingga menjadi referensi lengkap bagi mahasiswa dan pemula.">
+<meta name="twitter:image" content="https://kaban.my.id/doks.png">
+    <meta name="twitter:image:alt" content="Mengenal Algoritma Machine Learning dan AI">
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "Person",
+        "@id": "https://kaban.my.id/#/schema/person/1",
+      "name": "BlogRobertoKaban",
+      "url": "https://kaban.my.id/",
+      "sameAs": [
+        "https://twitter.com/robertokaban"
+        , "https://github.com/robertokaban"
+        ],
+      "image": {
+          "@type": "ImageObject",
+          "@id": "https://kaban.my.id/#/schema/image/1",
+          "url": "https://kaban.my.id/doks.png",
+          "width":  1280 ,
+          "height":  640 ,
+          "caption": "BlogRobertoKaban"
+        }
+      },
+    {
+      "@type": "WebSite",
+      "@id": "https://kaban.my.id/#/schema/website/1",
+      "url": "https://kaban.my.id/",
+      "name": "Roberto Kaban Blog\u0027s",
+      "description": "Hanya sebuah catatan kecil untuk hal yang tidak ingin dilupakan.",
+      "publisher": {
+          "@id": "https://kaban.my.id/#/schema/person/1"
+        }
+      },
+    {
+      "@type": "WebPage",
+      "@id": "https://kaban.my.id/mengenal-algoritma-machine-learning-dan-ai/",
+      "url": "https://kaban.my.id/mengenal-algoritma-machine-learning-dan-ai/",
+      "name": "Mengenal Algoritma Machine Learning dan AI",
+      "description": "Artikel ini membahas kumpulan algoritma machine learning dan artificial intelligence (AI) yang umum digunakan dalam penelitian, pendidikan, dan aplikasi praktis. Mulai dari supervised, unsupervised, hybrid, hingga reinforcement learning, artikel ini memberikan gambaran domain penerapan, keunggulan, dan konteks penggunaan masing-masing algoritma, sehingga menjadi referensi lengkap bagi mahasiswa dan pemula.",
+      "isPartOf": {
+        "@id": "https://kaban.my.id/#/schema/website/1"
+      },
+      "about": {
+          "@id": "https://kaban.my.id/#/schema/person/1"
+        },
+      "datePublished": "2026-04-02T09:00:00CET",
+      "dateModified": "2026-04-02T09:00:00CET",
+      "breadcrumb": {
+        "@id": "https://kaban.my.id/mengenal-algoritma-machine-learning-dan-ai/#/schema/breadcrumb/1"
+      },
+      "primaryImageOfPage": {
+        "@id": "https://kaban.my.id/mengenal-algoritma-machine-learning-dan-ai/#/schema/image/2"
+      },
+      "inLanguage": "en-US",
+      "potentialAction": [{
+        "@type": "ReadAction", "target": ["https://kaban.my.id/mengenal-algoritma-machine-learning-dan-ai/"]
+      }]
+    },
+    {
+      "@type": "BreadcrumbList",
+      "@id": "https://kaban.my.id/mengenal-algoritma-machine-learning-dan-ai/#/schema/breadcrumb/1",
+      "name": "Breadcrumbs",
+      "itemListElement": [{
+        "@type": "ListItem",
+        "position":  1 ,
+        "item": {
+          "@type": "WebPage",
+          "@id": "https://kaban.my.id/",
+          "url": "https://kaban.my.id/",
+          "name": "Home"
+          }
+        },{
+        "@type": "ListItem",
+        "position":  2 ,
+        "item": {
+          "@id": "https://kaban.my.id/mengenal-algoritma-machine-learning-dan-ai/"
+          }
+        }]
+    },
+
+    {
+      "@context": "https://schema.org",
+      "@graph": [
+        {
+          "@type": "ImageObject",
+          "@id": "https://kaban.my.id/mengenal-algoritma-machine-learning-dan-ai/#/schema/image/2",
+          "url": "https://kaban.my.id/doks.png",
+          "contentUrl": "https://kaban.my.id/doks.png",
+          "caption": "Mengenal Algoritma Machine Learning dan AI"
+        }
+      ]
+    }
+
+  ]
+}
+</script>
+
+  <meta name="theme-color" content="#fff">
+<link rel="icon" href="https://kaban.my.id/favicon.ico" sizes="any">
+<link rel="icon" type="image/svg+xml" href="https://kaban.my.id/favicon.svg">
+<link rel="apple-touch-icon" sizes="180x180" href="https://kaban.my.id/apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="32x32" href="https://kaban.my.id/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="https://kaban.my.id/favicon-16x16.png">
+<link rel="manifest" crossorigin="use-credentials" href="https://kaban.my.id/site.webmanifest">
+
+  
+
+
+  
+  
+  
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-60VSDZFQR5"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-60VSDZFQR5');
+</script>
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6664512614760985"
+     crossorigin="anonymous"></script>
+</head>
+
+  <body class="artikel single">
+    <div class="sticky-top">
+<div class="header-bar"></div>
+
+<header class="navbar navbar-expand-lg navbar-light doks-navbar">
+  <nav class="container-xxl flex-wrap flex-lg-nowrap" aria-label="Main navigation">
+
+    <a class="navbar-brand order-0" href="/" aria-label="Roberto Kaban Blog&#39;s">
+      Roberto Kaban Blog&#39;s
+    </a>
+
+    <button class="btn btn-menu order-2 d-block d-lg-none" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasDoks" aria-controls="offcanvasDoks" aria-label="Open main menu">
+      <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-menu"><line x1="3" y1="12" x2="21" y2="12"></line><line x1="3" y1="6" x2="21" y2="6"></line><line x1="3" y1="18" x2="21" y2="18"></line></svg>
+    </button>
+    <div class="offcanvas offcanvas-end border-0 py-lg-1" tabindex="-1" id="offcanvasDoks" data-bs-backdrop="true" aria-labelledby="offcanvasDoksLabel">
+      <div class="header-bar d-lg-none"></div>
+      <div class="offcanvas-header d-lg-none">
+        <h2 class="h5 offcanvas-title ps-2" id="offcanvasDoksLabel"><a class="text-dark" href="/">Roberto Kaban Blog&#39;s</a></h2>
+        <button type="button" class="btn-close text-reset me-2" data-bs-dismiss="offcanvas" aria-label="Close main menu"></button>
+      </div>
+      <div class="offcanvas-body p-4 p-lg-0">
+        <ul class="nav flex-column flex-lg-row align-items-lg-center mt-2 mt-lg-0 ms-lg-2 me-lg-auto">
+              <li class="nav-item">
+                <a class="nav-link ps-0 py-1" href="/about/">About Me</a>
+              </li>
+            
+          
+              <li class="nav-item">
+                <a class="nav-link ps-0 py-1" href="/contact/">Contact</a>
+              </li>
+            
+          
+              <li class="nav-item">
+                <a class="nav-link ps-0 py-1 active" href="/artikel/">Artikel</a>
+              </li>
+            
+          
+              <li class="nav-item">
+                <a class="nav-link ps-0 py-1" href="/coretanku/">Coretanku</a>
+              </li>
+            
+          </ul>
+
+        <hr class="text-black-50 my-4 d-lg-none">
+        <form class="doks-search position-relative flex-grow-1 ms-lg-auto me-lg-2">
+          <input id="search" class="form-control is-search" type="search" placeholder="Cari di blog ini..." aria-label="Cari di blog ini..." autocomplete="off">
+          <div id="suggestions" class="shadow bg-white rounded d-none"></div>
+        </form>
+        <hr class="text-black-50 my-4 d-lg-none">
+        <ul class="nav flex-column flex-lg-row">
+          <li class="nav-item">
+              <a class="nav-link social-link" href="https://github.com/robertokaban"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-github"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path></svg><small class="ms-2 d-lg-none">GitHub</small></a>
+            </li>
+          <li class="nav-item">
+              <a class="nav-link social-link" href="https://facebook.com/roberto.kaban"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-facebook"><path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"></path></svg><small class="ms-2 d-lg-none">Facebook</small></a>
+            </li>
+          <li class="nav-item">
+              <a class="nav-link social-link" href="https://twitter.com/robertokaban"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-twitter"><path d="M23 3a10.9 10.9 0 0 1-3.14 1.53 4.48 4.48 0 0 0-7.86 3v1A10.66 10.66 0 0 1 3 4s-4 9 5 13a11.64 11.64 0 0 1-7 2c9 5 20 0 20-11.5a4.5 4.5 0 0 0-.08-.83A7.72 7.72 0 0 0 23 3z"></path></svg><small class="ms-2 d-lg-none">Twitter</small></a>
+            </li>
+          <li class="nav-item">
+              <a class="nav-link social-link" href="https://youtube.com/@robertokaban"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-youtube"><path d="M10,15L15.19,12L10,9V15M21.56,7.17C21.69,7.64 21.78,8.27 21.84,9.07C21.91,9.87 21.94,10.56 21.94,11.16L22,12C22,14.19 21.84,15.8 21.56,16.83C21.31,17.73 20.73,18.31 19.83,18.56C19.36,18.69 18.5,18.78 17.18,18.84C15.88,18.91 14.69,18.94 13.59,18.94L12,19C7.81,19 5.2,18.84 4.17,18.56C3.27,18.31 2.69,17.73 2.44,16.83C2.31,16.36 2.22,15.73 2.16,14.93C2.09,14.13 2.06,13.44 2.06,12.84L2,12C2,9.81 2.16,8.2 2.44,7.17C2.69,6.27 3.27,5.69 4.17,5.44C4.64,5.31 5.5,5.22 6.82,5.16C8.12,5.09 9.31,5.06 10.41,5.06L12,5C16.19,5 18.8,5.16 19.83,5.44C20.73,5.69 21.31,6.27 21.56,7.17Z"></path></svg><small class="ms-2 d-lg-none">Youtube</small></a>
+            </li>
+          </ul>
+
+        
+        <hr class="text-black-50 my-4 d-lg-none">
+        <button id="mode" class="btn btn-link" type="button" aria-label="Toggle user interface mode">
+          <span class="toggle-dark"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-moon"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path></svg></span>
+          <span class="toggle-light"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-sun"><circle cx="12" cy="12" r="5"></circle><line x1="12" y1="1" x2="12" y2="3"></line><line x1="12" y1="21" x2="12" y2="23"></line><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line><line x1="1" y1="12" x2="3" y2="12"></line><line x1="21" y1="12" x2="23" y2="12"></line><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line></svg></span>
+        </button>
+        
+
+        </div>
+    </div>
+  </nav>
+</header>
+
+
+</div>
+
+    <div class="wrap container-xxl" role="document">
+      <div class="content">
+        
+<article>
+  <div class="row flex-lg-nowrap">
+    <div class="col-lg-2 col-xl-2">
+
+    </div>
+    
+    <nav class="docs-toc d-none d-xl-block col-xl-4" aria-label="Secondary navigation">
+      <div class="d-xl-none">
+  <button class="btn btn-outline-primary btn-sm doks-toc-toggle collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#onThisPage" aria-controls="doks-docs-nav" aria-expanded="false" aria-label="Toggle On this page navigation">
+    <span>Daftar isi</span>
+    <span>
+      <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" class="doks doks-expand" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><title>Expand</title><polyline points="7 13 12 18 17 13"></polyline><polyline points="7 6 12 11 17 6"></polyline></svg>
+      <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" class="doks doks-collapse" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><title>Collapse</title><polyline points="17 11 12 6 7 11"></polyline><polyline points="17 18 12 13 7 18"></polyline></svg>
+    </span>
+  </button>
+  <div class="collapse" id="onThisPage">
+    <div class="card card-body mt-3 py-1">
+      <div class="page-links">
+        <nav id="TableOfContents">
+  <ul>
+    <li><a href="#supervised-learning">Supervised Learning</a></li>
+    <li><a href="#unsupervised-learning--probabilistic--bayesian-models">Unsupervised Learning &amp; Probabilistic / Bayesian Models</a></li>
+    <li><a href="#reinforcement-learning-hybrid-advanced-few-shot--self-supervised">Reinforcement Learning, Hybrid Advanced, Few-shot / Self-supervised</a></li>
+  </ul>
+</nav>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="page-links d-none d-xl-block">
+  <h3>Daftar isi</h3>
+  <nav id="TableOfContents">
+  <ul>
+    <li><a href="#supervised-learning">Supervised Learning</a></li>
+    <li><a href="#unsupervised-learning--probabilistic--bayesian-models">Unsupervised Learning &amp; Probabilistic / Bayesian Models</a></li>
+    <li><a href="#reinforcement-learning-hybrid-advanced-few-shot--self-supervised">Reinforcement Learning, Hybrid Advanced, Few-shot / Self-supervised</a></li>
+  </ul>
+</nav>
+  </div>
+
+    </nav>
+    <main class="docs-content col-lg-11 col-xl-9">
+    
+        <nav aria-label="breadcrumb">
+          <ol class="breadcrumb">
+            <li class="breadcrumb-item"><a href="/">Home</a></li>
+<li class="breadcrumb-item"><a href="/artikel/">Artikel</a></li>
+<li class="breadcrumb-item active" aria-current="page">Mengenal Algoritma Machine Learning dan AI</li>
+          </ol>
+        </nav>
+      
+          <h1>Mengenal Algoritma Machine Learning dan AI</h1>
+          
+<p><small>Posted&nbsp;in&nbsp;<a class="stretched-link position-relative link-muted" href="https://kaban.my.id/categories/artikel/">Artikel</a>&nbsp;on&nbsp;April 2, 2026 by <a class="stretched-link position-relative" href="/contributors/roberto-kaban/">Roberto Kaban</a>&nbsp;&hyphen;&nbsp;<strong>5&nbsp;min read</strong></small><p>
+      <p class="lead"></p>
+      <nav class="d-xl-none" aria-label="Quaternary navigation">
+        <div class="d-xl-none">
+  <button class="btn btn-outline-primary btn-sm doks-toc-toggle collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#onThisPage" aria-controls="doks-docs-nav" aria-expanded="false" aria-label="Toggle On this page navigation">
+    <span>Daftar isi</span>
+    <span>
+      <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" class="doks doks-expand" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><title>Expand</title><polyline points="7 13 12 18 17 13"></polyline><polyline points="7 6 12 11 17 6"></polyline></svg>
+      <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" class="doks doks-collapse" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><title>Collapse</title><polyline points="17 11 12 6 7 11"></polyline><polyline points="17 18 12 13 7 18"></polyline></svg>
+    </span>
+  </button>
+  <div class="collapse" id="onThisPage">
+    <div class="card card-body mt-3 py-1">
+      <div class="page-links">
+        <nav id="TableOfContents">
+  <ul>
+    <li><a href="#supervised-learning">Supervised Learning</a></li>
+    <li><a href="#unsupervised-learning--probabilistic--bayesian-models">Unsupervised Learning &amp; Probabilistic / Bayesian Models</a></li>
+    <li><a href="#reinforcement-learning-hybrid-advanced-few-shot--self-supervised">Reinforcement Learning, Hybrid Advanced, Few-shot / Self-supervised</a></li>
+  </ul>
+</nav>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="page-links d-none d-xl-block">
+  <h3>Daftar isi</h3>
+  <nav id="TableOfContents">
+  <ul>
+    <li><a href="#supervised-learning">Supervised Learning</a></li>
+    <li><a href="#unsupervised-learning--probabilistic--bayesian-models">Unsupervised Learning &amp; Probabilistic / Bayesian Models</a></li>
+    <li><a href="#reinforcement-learning-hybrid-advanced-few-shot--self-supervised">Reinforcement Learning, Hybrid Advanced, Few-shot / Self-supervised</a></li>
+  </ul>
+</nav>
+  </div>
+
+      </nav>
+      <p>Di era digital saat ini, kemampuan memahami dan menerapkan algoritma machine learning (ML) dan artificial intelligence (AI) menjadi salah satu kompetensi penting bagi mahasiswa. Algoritma-algoritma ini digunakan untuk analisis data, sistem rekomendasi, pengenalan wajah, prediksi finansial, pengolahan bahasa alami (NLP), dan berbagai aplikasi inovatif lainnya.</p>
+<p>Artikel ini menyajikan kumpulan algoritma ML dan AI beserta kategori, domain aplikasi, dan keunggulannya. Informasi ini disusun agar mahasiswa dapat memahami konsep, membandingkan algoritma, dan memilih metode yang sesuai untuk tugas kuliah, proyek riset, atau eksperimen data.</p>
+<p>Saya mengelompokkan algoritma berdasarkan pendekatan utama: Supervised Learning, Unsupervised Learning, Reinforcement Learning, Hybrid Models, hingga teknik Few-shot &amp; Self-supervised Learning.</p>
+<h2 id="supervised-learning">Supervised Learning <a href="#supervised-learning" class="anchor" aria-hidden="true">#</a></h2>
+<table>
+<thead>
+<tr>
+<th>Kategori / Model</th>
+<th>Domain / Aplikasi &amp; Kelebihan Utama</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Linear Regression (Supervised Klasik / Statistical)</td>
+<td>Prediksi numerik — Sederhana, interpretasi mudah</td>
+</tr>
+<tr>
+<td>Logistic Regression (Supervised Klasik / Statistical)</td>
+<td>Klasifikasi biner — Cepat, baseline classification</td>
+</tr>
+<tr>
+<td>Ridge / Lasso / Elastic Net (Supervised Klasik / Statistical)</td>
+<td>Tabular regression — Regularisasi, mengurangi overfitting</td>
+</tr>
+<tr>
+<td>ARIMA / SARIMA / VARIMA (Supervised Klasik / Statistical)</td>
+<td>Time series forecasting — Efektif untuk data linear</td>
+</tr>
+<tr>
+<td>Naive Bayes (Supervised Klasik / Statistical)</td>
+<td>NLP, klasifikasi teks — Cepat, sederhana</td>
+</tr>
+<tr>
+<td>Hidden Markov Model (HMM) (Supervised Klasik / Statistical)</td>
+<td>Sequential data — Probabilistic sequence modeling</td>
+</tr>
+<tr>
+<td>Decision Tree (Supervised Modern ML)</td>
+<td>Tabular data — Interpretasi mudah</td>
+</tr>
+<tr>
+<td>Random Forest (Supervised Modern ML)</td>
+<td>Tabular, prediksi bisnis — Robust terhadap overfitting</td>
+</tr>
+<tr>
+<td>Extra Trees (Supervised Modern ML)</td>
+<td>Tabular data — Variance rendah, cepat</td>
+</tr>
+<tr>
+<td>Gradient Boosting Machine (GBM) (Supervised Modern ML)</td>
+<td>Tabular data — Akurat, menangani data numerik/kategorikal</td>
+</tr>
+<tr>
+<td>General Linear Model (GLM) (Supervised Modern ML)</td>
+<td>Regression &amp; classification — Fleksibel untuk berbagai distribusi output</td>
+</tr>
+<tr>
+<td>XGBoost (Supervised Modern ML)</td>
+<td>Tabular data, kompetisi ML — Performa tinggi, cepat</td>
+</tr>
+<tr>
+<td>LightGBM (Supervised Modern ML)</td>
+<td>Tabular data — Cepat &amp; hemat memori</td>
+</tr>
+<tr>
+<td>CatBoost (Supervised Modern ML)</td>
+<td>Data kategorikal — Optimal untuk categorical features</td>
+</tr>
+<tr>
+<td>CNN (ResNet, EfficientNet, DenseNet, MobileNet) (Supervised Modern ML)</td>
+<td>Computer vision — Memahami pola spasial</td>
+</tr>
+<tr>
+<td>RNN / LSTM / GRU (Supervised Modern ML)</td>
+<td>NLP, time series — Memproses data sekuensial</td>
+</tr>
+<tr>
+<td>Temporal Convolutional Network (TCN) (Supervised Modern ML)</td>
+<td>Time series — Alternatif RNN, paralelisasi lebih baik</td>
+</tr>
+<tr>
+<td>Transformer (BERT, RoBERTa, GPT-4, T5, XLNet) (Supervised Modern ML)</td>
+<td>NLP, QA, summarization — Memahami konteks global</td>
+</tr>
+<tr>
+<td>Vision Transformer (ViT, DeiT, Swin Transformer) (Supervised Modern ML)</td>
+<td>Computer vision — Alternatif CNN, performa tinggi</td>
+</tr>
+<tr>
+<td>CLIP (OpenAI) (Supervised Modern ML)</td>
+<td>Multimodal (gambar &amp; teks) — Memahami hubungan teks-gambar</td>
+</tr>
+<tr>
+<td>Graph Neural Networks (GNN, GraphSAGE, GAT) (Supervised Modern ML)</td>
+<td>Graph / social networks — Memanfaatkan struktur graf</td>
+</tr>
+<tr>
+<td>TabNet (Supervised Modern ML)</td>
+<td>Tabular data — Deep learning tabular, interpretabel</td>
+</tr>
+<tr>
+<td>Temporal Fusion Transformer (TFT) (Supervised Modern ML)</td>
+<td>Time series forecasting — Memproses data sekuensial kompleks</td>
+</tr>
+<tr>
+<td>Neural Collaborative Filtering (NCF) (Supervised Modern ML)</td>
+<td>Recommender system — Personalized recommendations</td>
+</tr>
+<tr>
+<td>Meta-learning / Few-shot (MAML, Prototypical Networks) (Supervised Modern ML)</td>
+<td>Few-shot learning — Prediksi dengan data sangat sedikit</td>
+</tr>
+<tr>
+<td>Adaptive Neuro-Fuzzy Inference System (ANFIS) (Supervised / Hybrid)</td>
+<td>Regression, classification, time series — Neural network + fuzzy logic</td>
+</tr>
+<tr>
+<td>Fuzzy Rule Learning (FRL) (Supervised / Rule Learning)</td>
+<td>Classification, decision-making — Menemukan aturan fuzzy otomatis, interpretable</td>
+</tr>
+</tbody>
+</table>
+<h2 id="unsupervised-learning--probabilistic--bayesian-models">Unsupervised Learning &amp; Probabilistic / Bayesian Models <a href="#unsupervised-learning--probabilistic--bayesian-models" class="anchor" aria-hidden="true">#</a></h2>
+<table>
+<thead>
+<tr>
+<th>Kategori / Model</th>
+<th>Domain / Aplikasi &amp; Kelebihan Utama</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Fuzzy c-means (FCM) (Unsupervised / Fuzzy Clustering)</td>
+<td>Clustering, pattern recognition — Membership probabilistik, fleksibel dari k-Means</td>
+</tr>
+<tr>
+<td>Neuro-Fuzzy Deep Learning (Hybrid Neuro-Fuzzy)</td>
+<td>Computer vision, time series, NLP — Representasi deep learning + aturan fuzzy</td>
+</tr>
+<tr>
+<td>k-Means / k-Medoids (Unsupervised Klasik / Statistical)</td>
+<td>Clustering, segmentasi — Cepat, sederhana</td>
+</tr>
+<tr>
+<td>Hierarchical Clustering (Unsupervised Klasik / Statistical)</td>
+<td>Customer profiling — Melihat struktur cluster bertingkat</td>
+</tr>
+<tr>
+<td>Gaussian Mixture Model (GMM) (Unsupervised Klasik / Statistical)</td>
+<td>Probabilistic clustering — Probabilitas anggota cluster</td>
+</tr>
+<tr>
+<td>PCA (Principal Component Analysis) (Unsupervised Klasik / Statistical)</td>
+<td>Dimensionality reduction — Menyederhanakan data</td>
+</tr>
+<tr>
+<td>ICA (Independent Component Analysis) (Unsupervised Klasik / Statistical)</td>
+<td>Signal processing, EEG — Memisahkan sumber independen</td>
+</tr>
+<tr>
+<td>Self-Organizing Map (SOM) (Unsupervised Klasik / Statistical)</td>
+<td>Visualisasi &amp; clustering — Memetakan high-dimensional ke 2D</td>
+</tr>
+<tr>
+<td>Autoencoder / VAE (Unsupervised Modern / Representation / Generative)</td>
+<td>Feature extraction, anomaly detection — Representasi latent, fleksibel</td>
+</tr>
+<tr>
+<td>Masked Autoencoder (MAE)</td>
+<td>Self-supervised image representation — Memanfaatkan patch masking</td>
+</tr>
+<tr>
+<td>GANs (StyleGAN, BigGAN, CycleGAN, InfoGAN)</td>
+<td>Generative citra/video — Menghasilkan data realistis</td>
+</tr>
+<tr>
+<td>Diffusion Models (Stable Diffusion, DDPM, Latent Diffusion)</td>
+<td>Generative citra — Kualitas citra tinggi</td>
+</tr>
+<tr>
+<td>Contrastive Learning (SimCLR, MoCo v2, BYOL, SwAV, SimSiam, DINO)</td>
+<td>Self-supervised representation — Representasi kuat tanpa label</td>
+</tr>
+<tr>
+<td>Deep Graph Infomax (DGI)</td>
+<td>Graph embedding — Representasi node tanpa label</td>
+</tr>
+<tr>
+<td>Node2Vec</td>
+<td>Graph embedding — Representasi node/graf</td>
+</tr>
+<tr>
+<td>Graph Contrastive Learning (GraphCL, GCA)</td>
+<td>Graph embedding — Self-supervised, transfer learning</td>
+</tr>
+<tr>
+<td>Deep Clustering (DEC, DeepCluster, IIC)</td>
+<td>Image clustering — Feature learning + clustering</td>
+</tr>
+<tr>
+<td>Bayesian Neural Networks (BNN)</td>
+<td>Regression, classification — Uncertainty estimation</td>
+</tr>
+<tr>
+<td>Gaussian Processes (GP)</td>
+<td>Regression, forecasting — Non-parametric, probabilistic</td>
+</tr>
+<tr>
+<td>Hidden Markov Model (HMM)</td>
+<td>Sequential / time series — Probabilistic sequence modeling</td>
+</tr>
+<tr>
+<td>Variational Bayesian methods</td>
+<td>Probabilistic inference — Approximate Bayesian inference</td>
+</tr>
+</tbody>
+</table>
+<h2 id="reinforcement-learning-hybrid-advanced-few-shot--self-supervised">Reinforcement Learning, Hybrid Advanced, Few-shot / Self-supervised <a href="#reinforcement-learning-hybrid-advanced-few-shot--self-supervised" class="anchor" aria-hidden="true">#</a></h2>
+<table>
+<thead>
+<tr>
+<th>Kategori / Model</th>
+<th>Domain / Aplikasi &amp; Kelebihan Utama</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Q-Learning / Deep Q-Network (DQN) (RL)</td>
+<td>Game AI, robotics — Value-based RL, belajar policy</td>
+</tr>
+<tr>
+<td>Policy Gradient / REINFORCE (RL)</td>
+<td>Continuous action RL — Policy-based optimization</td>
+</tr>
+<tr>
+<td>Actor-Critic (A3C, PPO, SAC) (RL)</td>
+<td>Robotics, games — Kombinasi value &amp; policy</td>
+</tr>
+<tr>
+<td>AlphaZero / MuZero (RL)</td>
+<td>Game AI, simulasi kompleks — RL + search, performa tinggi</td>
+</tr>
+<tr>
+<td>Neural ODEs (Hybrid Models / Advanced)</td>
+<td>Continuous-time modeling — Model dinamik, sekuensial</td>
+</tr>
+<tr>
+<td>GBM + Neural Network hybrid</td>
+<td>Tabular + deep learning — Performa maksimal tabular</td>
+</tr>
+<tr>
+<td>Diffusion + Transformer hybrids</td>
+<td>Generative multimodal — Generasi citra + teks berkualitas tinggi</td>
+</tr>
+<tr>
+<td>Prototypical Networks / Matching Networks (Few-shot / Meta-learning)</td>
+<td>Few-shot classification — Prediksi dengan data sangat sedikit</td>
+</tr>
+<tr>
+<td>Masked Language Models (MLM, BERT pretraining)</td>
+<td>Self-supervised NLP — Representasi teks tanpa label</td>
+</tr>
+<tr>
+<td>Prompt-based LLMs (GPT, T5, LLaMA, Falcon)</td>
+<td>Zero-shot / few-shot NLP — Prediksi dengan data minimal</td>
+</tr>
+</tbody>
+</table>
+<p>Semoga bermanfaat!</p>
+
+
+      <div class="mt-4">
+        <a class="btn btn-light" href="https://kaban.my.id/tags/machine-learning/" role="button">Machine Learning</a>
+        <a class="btn btn-light" href="https://kaban.my.id/tags/artificial-intelligence/" role="button">Artificial Intelligence</a>
+        <a class="btn btn-light" href="https://kaban.my.id/tags/algoritma/" role="button">Algoritma</a>
+        <a class="btn btn-light" href="https://kaban.my.id/tags/supervised/" role="button">Supervised</a>
+        <a class="btn btn-light" href="https://kaban.my.id/tags/unsupervised/" role="button">Unsupervised</a>
+        <a class="btn btn-light" href="https://kaban.my.id/tags/reinforcement-learning/" role="button">Reinforcement Learning</a>
+        <a class="btn btn-light" href="https://kaban.my.id/tags/hybrid-models/" role="button">Hybrid Models</a>
+        </div>
+      <div id="disqus_thread"></div>
+<script type="application/javascript">
+    window.disqus_config = function () {
+    
+    
+    
+    };
+    (function() {
+        if (["localhost", "127.0.0.1"].indexOf(window.location.hostname) != -1) {
+            document.getElementById('disqus_thread').innerHTML = 'Disqus comments not available by default when the website is previewed locally.';
+            return;
+        }
+        var d = document, s = d.createElement('script'); s.async = true;
+        s.src = '//' + "kaban-my-id" + '.disqus.com/embed.js';
+        s.setAttribute('data-timestamp', +new Date());
+        (d.head || d.body).appendChild(s);
+    })();
+</script>
+<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+<a href="https://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
+      <div class="page-footer-meta d-flex flex-column flex-md-row justify-content-between">
+       
+        </div>
+      <div class="docs-navigation d-flex justify-content-between">
+	
+	<a class="ms-auto" href="/memahami-basis-data-vektor-cara-mencari-data-mirip-di-era-ai/">
+			<div class="card my-1">
+				<div class="card-body py-2">
+					Memahami Basis Data Vektor: Cara Mencari Data Mirip di Era AI &rarr;
+				</div>
+			</div>
+		</a>
+	</div>
+
+      
+    </main>
+    
+  </div>
+ 
+</article>
+<div class="related-posts">
+<div class="row justify-content-center">
+  <div class="col">
+    <h2 class="section-title">Informasi Lainnya</h2>
+  </div>
+</div>
+<div class="row row-cols-1 row-cols-md-2 row-cols-lg-3 g-lg-5">
+  <div class="col">
+    <div class="card">
+      <div class="card-body">
+        <article>
+          <h2 class="h3"><a class="stretched-link text-body" href="/machine-learning-jenis-model-dan-penerapannya/">Machine Learning: Jenis, Model, dan Penerapannya</a></h2>
+          <p>Machine learning memungkinkan sistem untuk belajar dari data tanpa harus diprogram secara eksplisit. Melalui penerapan berbagai algoritma, sistem mampu mengidentifikasi pola tersembunyi, melakukan prediksi terhadap data baru, serta menghasilkan rekomendasi yang relevan. Kemampuan ini menjadikan machine learning banyak diterapkan di berbagai bidang, seperti pendidikan untuk prediksi kinerja siswa, bisnis untuk analisis pelanggan, kesehatan untuk diagnosis penyakit, hingga industri untuk optimasi proses produksi.</p>
+          
+<p><small>Posted&nbsp;in&nbsp;<a class="stretched-link position-relative link-muted" href="https://kaban.my.id/categories/artikel/">Artikel</a>&nbsp;on&nbsp;January 11, 2026 by <a class="stretched-link position-relative" href="/contributors/roberto-kaban/">Roberto Kaban</a>&nbsp;&hyphen;&nbsp;<strong>13&nbsp;min read</strong></small><p></article>
+      </div>
+    </div>
+  </div>
+  <div class="col">
+    <div class="card">
+      <div class="card-body">
+        <article>
+          <h2 class="h3"><a class="stretched-link text-body" href="/memahami-basis-data-vektor-cara-mencari-data-mirip-di-era-ai/">Memahami Basis Data Vektor: Cara Mencari Data Mirip di Era AI</a></h2>
+          <p>basis data vektor mempermudah pencarian data serupa dalam skala besar, mulai dari teks, gambar, hingga perilaku pengguna. dengan memanfaatkan model embedding dan algoritma approximate nearest neighbor (ANN), sistem ini mampu menemukan item yang paling relevan secara cepat dan akurat, menjadikannya solusi ideal untuk aplikasi modern yang membutuhkan pencarian berbasis kesamaan semantik.</p>
+          
+<p><small>Posted&nbsp;in&nbsp;<a class="stretched-link position-relative link-muted" href="https://kaban.my.id/categories/artikel/">Artikel</a>&nbsp;on&nbsp;January 12, 2026 by <a class="stretched-link position-relative" href="/contributors/roberto-kaban/">Roberto Kaban</a>&nbsp;&hyphen;&nbsp;<strong>5&nbsp;min read</strong></small><p></article>
+      </div>
+    </div>
+  </div>
+  </div>
+</div>
+<section class="section section-sm">
+  <div class="container">
+    <div class="row justify-content-center text-center mt-lg-3">
+     
+    </div>
+  </div>
+</section>
+
+
+      </div>
+    </div>
+    
+    
+    <footer class="footer text-muted">
+  <div class="container-xxl">
+    <div class="row">
+      <div class="col-lg-8 order-last order-lg-first">
+        <ul class="list-inline">
+          <li class="list-inline-item">Powered by <a class="text-muted" href="https://gohugo.io/">Hugo</a> and <a class="text-muted" href="https://github.com/">Github</a></li>
+        </ul>
+      </div>
+      <div class="col-lg-8 order-first order-lg-last text-lg-end">
+        <ul class="list-inline">
+          </ul>
+      </div>
+    </div>
+  </div>
+</footer>
+    
+
+<script src="/js/bootstrap.min.650aeec64c81d69d4c0850fc73c93da3f0330cec0a27772feed7f90f60baa5f47f1c45687d71914bdafd1c4e860d40f6dc08ede27a2f08431ff929c9a2d24621.js" integrity="sha512-ZQruxkyB1p1MCFD8c8k9o/AzDOwKJ3cv7tf5D2C6pfR/HEVofXGRS9r9HE6GDUD23Ajt4novCEMf&#43;SnJotJGIQ==" crossorigin="anonymous" defer></script>
+  <script src="/js/highlight.min.ec234bd8a5f487aaffe50a89f17b14501b1bb65633cf177cffd4cb84702dd7030edc08712dceb8dc27ac7e54b53240a08bf0b8d951572ee582bcdbbd06a48a7b.js" integrity="sha512-7CNL2KX0h6r/5QqJ8XsUUBsbtlYzzxd8/9TLhHAt1wMO3AhxLc643CesflS1MkCgi/C42VFXLuWCvNu9BqSKew==" crossorigin="anonymous" defer></script>
+  <script src="/main.min.cd1e5e6b40065b3f7f7fd8548a528fac67019754eda0f37b9918d02d154fc9ef6a22742f6513b0572ad9163152e151ec36221fbeafbecd7759c3dab1f19b64b9.js" integrity="sha512-zR5ea0AGWz9/f9hUilKPrGcBl1TtoPN7mRjQLRVPye9qInQvZROwVyrZFjFS4VHsNiIfvq&#43;&#43;zXdZw9qx8ZtkuQ==" crossorigin="anonymous" defer></script>
+  <script src="https://kaban.my.id/index.min.da6efd5b4b49fec127b95220550967af08660eb824f2db1f6b177f1cc3e3458bc194523c0715598534cbda37c61b530e8f15c79eb31adfbc8f783d83ede03715.js" integrity="sha512-2m79W0tJ/sEnuVIgVQlnrwhmDrgk8tsfaxd/HMPjRYvBlFI8BxVZhTTL2jfGG1MOjxXHnrMa37yPeD2D7eA3FQ==" crossorigin="anonymous" defer></script>
+  
+    <div class="d-flex fixed-bottom pb-4 pb-lg-5 pe-4 pe-lg-5">
+      <a id="toTop" href="#" class="btn btn-outline-primary rounded-circle ms-auto p-2"><span class="visually-hidden">Top</span><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-chevron-up"><polyline points="18 15 12 9 6 15"></polyline></svg></a>
+    </div>
+    
+  </body>
+</html>

@@ -2,6 +2,13 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
     <url>
+      <loc>https://kaban.my.id/mengenal-algoritma-machine-learning-dan-ai/</loc>
+      <lastmod>2026-04-02T09:00:00+07:00</lastmod>
+      <changefreq>weekly</changefreq>
+      <priority>0.5</priority>
+    </url>
+    
+    <url>
       <loc>https://kaban.my.id/memahami-basis-data-vektor-cara-mencari-data-mirip-di-era-ai/</loc>
       <lastmod>2026-01-22T09:00:00+07:00</lastmod>
       <changefreq>weekly</changefreq>
