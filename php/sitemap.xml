@@ -13,4 +13,28 @@
         <changefreq>weekly</changefreq>
         <priority>0.5</priority>
       </url>
+      <url>
+        <loc>https://kaban.my.id/php/tutorial/02-instalasi-persiapan/</loc>
+        <lastmod>2023-01-04T08:00:00+00:00</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.5</priority>
+      </url>
+      <url>
+        <loc>https://kaban.my.id/php/tutorial/03-sintaks-variabel/</loc>
+        <lastmod>2023-01-05T08:00:00+00:00</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.5</priority>
+      </url>
+      <url>
+        <loc>https://kaban.my.id/php/tutorial/04-tipe-data-konversi/</loc>
+        <lastmod>2023-01-06T08:00:00+00:00</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.5</priority>
+      </url>
+      <url>
+        <loc>https://kaban.my.id/php/tutorial/05-struktur-kontrol/</loc>
+        <lastmod>2023-01-07T08:00:00+00:00</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.5</priority>
+      </url>
       </urlset>

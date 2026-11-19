@@ -17,5 +17,50 @@
 Sebuah skrip PHP dieksekusi pada server web, dan hasilnya dikirimkan ke browser pengguna dalam bentuk halaman web statis.</description>
     </item>
     
+    <item>
+      <title>Instalasi &amp; Persiapan Lingkungan PHP</title>
+      <link>https://kaban.my.id/php/tutorial/02-instalasi-persiapan/</link>
+      <pubDate>Wed, 04 Jan 2023 08:00:00 +0000</pubDate>
+      
+      <guid>https://kaban.my.id/php/tutorial/02-instalasi-persiapan/</guid>
+      <description>Pendahuluan # PHP adalah bahasa server-side — kode PHP dieksekusi di server, bukan di browser. Agar bisa menjalankan file .php, kita memerlukan PHP runtime dan biasanya web server (Apache atau Nginx).
+Berbeda dengan JavaScript yang langsung berjalan di browser, PHP memerlukan instalasi. Untungnya, ada banyak paket instalasi yang menyederhanakan proses ini.
+Artikel ini membahas:
+Instalasi PHP di Windows (via XAMPP — cara termudah). Instalasi PHP di Linux Ubuntu (via APT). Instalasi PHP di macOS (via Homebrew).</description>
+    </item>
+    
+    <item>
+      <title>Sintaks Dasar &amp; Variabel PHP</title>
+      <link>https://kaban.my.id/php/tutorial/03-sintaks-variabel/</link>
+      <pubDate>Thu, 05 Jan 2023 08:00:00 +0000</pubDate>
+      
+      <guid>https://kaban.my.id/php/tutorial/03-sintaks-variabel/</guid>
+      <description>Pendahuluan # Setelah lingkungan PHP siap, saatnya menulis kode. Artikel ini membahas fondasi sintaks PHP: cara menyisipkan kode PHP ke HTML, mendeklarasikan variabel, mengenal tipe data, menggunakan operator, dan mendefinisikan konstanta.
+PHP adalah bahasa yang loosely typed — tipe data variabel ditentukan otomatis berdasarkan nilai yang diberikan, dan bisa berubah saat runtime. Ini mirip JavaScript, tetapi dengan sintaks yang berbeda.
+Asumsi: Anda sudah menginstal PHP dan bisa menjalankan file .php (dari artikel sebelumnya).</description>
+    </item>
+    
+    <item>
+      <title>Tipe Data &amp; Konversi</title>
+      <link>https://kaban.my.id/php/tutorial/04-tipe-data-konversi/</link>
+      <pubDate>Fri, 06 Jan 2023 08:00:00 +0000</pubDate>
+      
+      <guid>https://kaban.my.id/php/tutorial/04-tipe-data-konversi/</guid>
+      <description>Pendahuluan # Pada artikel sebelumnya kita sudah mengenal tipe data PHP secara singkat. Sekarang kita akan membahasnya lebih mendalam — terutama konversi tipe (type juggling) yang menjadi sumber bug paling umum di PHP.
+PHP adalah bahasa loosely typed (atau dynamically typed) — variabel tidak memiliki tipe tetap, dan PHP otomatis mengonversi tipe dalam banyak situasi. Fleksibilitas ini memudahkan penulisan kode, tetapi juga bisa mengejutkan jika tidak dipahami.
+Artikel ini membahas:</description>
+    </item>
+    
+    <item>
+      <title>Struktur Kontrol &amp; Perulangan</title>
+      <link>https://kaban.my.id/php/tutorial/05-struktur-kontrol/</link>
+      <pubDate>Sat, 07 Jan 2023 08:00:00 +0000</pubDate>
+      
+      <guid>https://kaban.my.id/php/tutorial/05-struktur-kontrol/</guid>
+      <description>Pendahuluan # Tanpa struktur kontrol, program hanya berjalan lurus dari atas ke bawah. Struktur kontrol memungkinkan program untuk:
+Mengambil keputusan — menjalankan blok kode berdasarkan kondisi (if, switch, match). Mengulang pekerjaan — menjalankan blok kode berkali-kali (for, while, foreach). Mengontrol alur — keluar dari perulangan atau melompati iterasi (break, continue). Artikel ini membahas semua struktur kontrol di PHP dengan contoh praktis.
+Asumsi: Anda sudah memahami variabel, tipe data, dan operator dari artikel sebelumnya.</description>
+    </item>
+    
   </channel>
 </rss>

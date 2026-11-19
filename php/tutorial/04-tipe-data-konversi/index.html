@@ -1,0 +1,1758 @@
+<!doctype html>
+<html lang="en-US">
+  <head>
+  <meta charset="utf-8">
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <link rel="preload" as="font" href="https://kaban.my.id/fonts/vendor/jost/jost-v4-latin-regular.woff2" type="font/woff2" crossorigin>
+<link rel="preload" as="font" href="https://kaban.my.id/fonts/vendor/jost/jost-v4-latin-500.woff2" type="font/woff2" crossorigin>
+<link rel="preload" as="font" href="https://kaban.my.id/fonts/vendor/jost/jost-v4-latin-700.woff2" type="font/woff2" crossorigin>
+
+  <script>(()=>{var t=window.matchMedia&&window.matchMedia("(prefers-color-scheme: dark)").matches,e=localStorage.getItem("theme");t&&e===null&&(localStorage.setItem("theme","dark"),document.documentElement.setAttribute("data-dark-mode","")),t&&e==="dark"&&document.documentElement.setAttribute("data-dark-mode",""),e==="dark"&&document.documentElement.setAttribute("data-dark-mode","")})()</script>
+
+  <link rel="stylesheet" href="https://kaban.my.id/main.4296e689affcd00e933b8954c10fc43cd1a5f16d5552e78183d12ea50d3e0bf5a596df23a379a4936743f01a7cd8ba048a628b2b9b60b34aa49fad468287100a.css" integrity="sha512-Qpbmia/80A6TO4lUwQ/EPNGl8W1VUueBg9EupQ0&#43;C/Wllt8jo3mkk2dD8Bp82LoEimKLK5tgs0qkn61GgocQCg==" crossorigin="anonymous">
+<noscript><style>img.lazyload { display: none; }</style></noscript>
+  <meta name="robots" content="index, follow">
+    <meta name="googlebot" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1">
+    <meta name="bingbot" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1">
+  <title>Tipe Data &amp; Konversi - Roberto Kaban Blog&#39;s</title>
+<meta name="description" content="Panduan lengkap tipe data PHP: string, integer, float, boolean, null, array, serta konversi implisit dan eksplisit.">
+<link rel="canonical" href="https://kaban.my.id/php/tutorial/04-tipe-data-konversi/">
+<meta property="og:locale" content="en_US">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Tipe Data &amp; Konversi">
+<meta property="og:description" content="Panduan lengkap tipe data PHP: string, integer, float, boolean, null, array, serta konversi implisit dan eksplisit.">
+<meta property="og:url" content="https://kaban.my.id/php/tutorial/04-tipe-data-konversi/">
+<meta property="og:site_name" content="Roberto Kaban Blog&#39;s">
+<meta property="article:published_time" content="2023-01-06T08:00:00+00:00">
+  <meta property="article:modified_time" content="2023-01-06T08:00:00+00:00">
+  
+  <meta property="og:image" content="https://kaban.my.id/doks.png"/>
+      <meta property="og:image:alt" content="Roberto Kaban Blog&#39;s">
+    
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:site" content="@robertokaban">
+<meta name="twitter:creator" content="@robertokaban">
+<meta name="twitter:title" content="Tipe Data &amp; Konversi">
+<meta name="twitter:description" content="Panduan lengkap tipe data PHP: string, integer, float, boolean, null, array, serta konversi implisit dan eksplisit.">
+<meta name="twitter:image" content="https://kaban.my.id/doks.png">
+    <meta name="twitter:image:alt" content="Tipe Data &amp; Konversi">
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "Person",
+        "@id": "https://kaban.my.id/#/schema/person/1",
+      "name": "BlogRobertoKaban",
+      "url": "https://kaban.my.id/",
+      "sameAs": [
+        "https://twitter.com/robertokaban"
+        , "https://github.com/robertokaban"
+        ],
+      "image": {
+          "@type": "ImageObject",
+          "@id": "https://kaban.my.id/#/schema/image/1",
+          "url": "https://kaban.my.id/doks.png",
+          "width":  1280 ,
+          "height":  640 ,
+          "caption": "BlogRobertoKaban"
+        }
+      },
+    {
+      "@type": "WebSite",
+      "@id": "https://kaban.my.id/#/schema/website/1",
+      "url": "https://kaban.my.id/",
+      "name": "Roberto Kaban Blog\u0027s",
+      "description": "Hanya sebuah catatan kecil untuk hal yang tidak ingin dilupakan.",
+      "publisher": {
+          "@id": "https://kaban.my.id/#/schema/person/1"
+        }
+      },
+    {
+      "@type": "WebPage",
+      "@id": "https://kaban.my.id/php/tutorial/04-tipe-data-konversi/",
+      "url": "https://kaban.my.id/php/tutorial/04-tipe-data-konversi/",
+      "name": "Tipe Data \u0026 Konversi",
+      "description": "Panduan lengkap tipe data PHP: string, integer, float, boolean, null, array, serta konversi implisit dan eksplisit.",
+      "isPartOf": {
+        "@id": "https://kaban.my.id/#/schema/website/1"
+      },
+      "about": {
+          "@id": "https://kaban.my.id/#/schema/person/1"
+        },
+      "datePublished": "2023-01-06T08:00:00CET",
+      "dateModified": "2023-01-06T08:00:00CET",
+      "breadcrumb": {
+        "@id": "https://kaban.my.id/php/tutorial/04-tipe-data-konversi/#/schema/breadcrumb/1"
+      },
+      "primaryImageOfPage": {
+        "@id": "https://kaban.my.id/php/tutorial/04-tipe-data-konversi/#/schema/image/2"
+      },
+      "inLanguage": "en-US",
+      "potentialAction": [{
+        "@type": "ReadAction", "target": ["https://kaban.my.id/php/tutorial/04-tipe-data-konversi/"]
+      }]
+    },
+    {
+      "@type": "BreadcrumbList",
+      "@id": "https://kaban.my.id/php/tutorial/04-tipe-data-konversi/#/schema/breadcrumb/1",
+      "name": "Breadcrumbs",
+      "itemListElement": [{
+        "@type": "ListItem",
+        "position":  1 ,
+        "item": {
+          "@type": "WebPage",
+          "@id": "https://kaban.my.id/",
+          "url": "https://kaban.my.id/",
+          "name": "Home"
+          }
+        },{
+        "@type": "ListItem",
+        "position":  2 ,
+        "item": {
+          "@type": "WebPage",
+          "@id": "https://kaban.my.id/php/",
+          "url": "https://kaban.my.id/php/",
+          "name": "Php"
+          }
+        },{
+        "@type": "ListItem",
+        "position":  3 ,
+        "item": {
+          "@type": "WebPage",
+          "@id": "https://kaban.my.id/php/tutorial/",
+          "url": "https://kaban.my.id/php/tutorial/",
+          "name": "Tutorial"
+          }
+        },{
+        "@type": "ListItem",
+        "position":  4 ,
+        "item": {
+          "@id": "https://kaban.my.id/php/tutorial/04-tipe-data-konversi/"
+          }
+        }]
+    },
+
+    {
+      "@context": "https://schema.org",
+      "@graph": [
+        {
+          "@type": "ImageObject",
+          "@id": "https://kaban.my.id/php/tutorial/04-tipe-data-konversi/#/schema/image/2",
+          "url": "https://kaban.my.id/doks.png",
+          "contentUrl": "https://kaban.my.id/doks.png",
+          "caption": "Tipe Data \u0026 Konversi"
+        }
+      ]
+    }
+
+  ]
+}
+</script>
+
+  <meta name="theme-color" content="#fff">
+<link rel="icon" href="https://kaban.my.id/favicon.ico" sizes="any">
+<link rel="icon" type="image/svg+xml" href="https://kaban.my.id/favicon.svg">
+<link rel="apple-touch-icon" sizes="180x180" href="https://kaban.my.id/apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="32x32" href="https://kaban.my.id/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="https://kaban.my.id/favicon-16x16.png">
+<link rel="manifest" crossorigin="use-credentials" href="https://kaban.my.id/site.webmanifest">
+
+  
+
+
+  
+  
+  
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-60VSDZFQR5"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-60VSDZFQR5');
+</script>
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6664512614760985"
+     crossorigin="anonymous"></script>
+</head>
+
+  <body class="php single">
+    <div class="sticky-top">
+<div class="header-bar"></div>
+
+<header class="navbar navbar-expand-lg navbar-light doks-navbar">
+  <nav class="container-xxl flex-wrap flex-lg-nowrap" aria-label="Main navigation">
+
+    <a class="navbar-brand order-0" href="/" aria-label="Roberto Kaban Blog&#39;s">
+      Roberto Kaban Blog&#39;s
+    </a>
+
+    <button class="btn btn-menu order-2 d-block d-lg-none" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasDoks" aria-controls="offcanvasDoks" aria-label="Open main menu">
+      <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-menu"><line x1="3" y1="12" x2="21" y2="12"></line><line x1="3" y1="6" x2="21" y2="6"></line><line x1="3" y1="18" x2="21" y2="18"></line></svg>
+    </button>
+    <div class="offcanvas offcanvas-end border-0 py-lg-1" tabindex="-1" id="offcanvasDoks" data-bs-backdrop="true" aria-labelledby="offcanvasDoksLabel">
+      <div class="header-bar d-lg-none"></div>
+      <div class="offcanvas-header d-lg-none">
+        <h2 class="h5 offcanvas-title ps-2" id="offcanvasDoksLabel"><a class="text-dark" href="/">Roberto Kaban Blog&#39;s</a></h2>
+        <button type="button" class="btn-close text-reset me-2" data-bs-dismiss="offcanvas" aria-label="Close main menu"></button>
+      </div>
+      <div class="offcanvas-body p-4 p-lg-0">
+        <ul class="nav flex-column flex-lg-row align-items-lg-center mt-2 mt-lg-0 ms-lg-2 me-lg-auto">
+              <li class="nav-item">
+                <a class="nav-link ps-0 py-1" href="/about/">About Me</a>
+              </li>
+            
+          
+              <li class="nav-item">
+                <a class="nav-link ps-0 py-1" href="/contact/">Contact</a>
+              </li>
+            
+          
+              <li class="nav-item">
+                <a class="nav-link ps-0 py-1" href="/artikel/">Artikel</a>
+              </li>
+            
+          
+              <li class="nav-item">
+                <a class="nav-link ps-0 py-1" href="/coretanku/">Coretanku</a>
+              </li>
+            
+          </ul>
+
+        <hr class="text-black-50 my-4 d-lg-none">
+        <form class="doks-search position-relative flex-grow-1 ms-lg-auto me-lg-2">
+          <input id="search" class="form-control is-search" type="search" placeholder="Cari di blog ini..." aria-label="Cari di blog ini..." autocomplete="off">
+          <div id="suggestions" class="shadow bg-white rounded d-none"></div>
+        </form>
+        <hr class="text-black-50 my-4 d-lg-none">
+        <ul class="nav flex-column flex-lg-row">
+          <li class="nav-item">
+              <a class="nav-link social-link" href="https://github.com/robertokaban"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-github"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path></svg><small class="ms-2 d-lg-none">GitHub</small></a>
+            </li>
+          <li class="nav-item">
+              <a class="nav-link social-link" href="https://facebook.com/roberto.kaban"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-facebook"><path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"></path></svg><small class="ms-2 d-lg-none">Facebook</small></a>
+            </li>
+          <li class="nav-item">
+              <a class="nav-link social-link" href="https://twitter.com/robertokaban"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-twitter"><path d="M23 3a10.9 10.9 0 0 1-3.14 1.53 4.48 4.48 0 0 0-7.86 3v1A10.66 10.66 0 0 1 3 4s-4 9 5 13a11.64 11.64 0 0 1-7 2c9 5 20 0 20-11.5a4.5 4.5 0 0 0-.08-.83A7.72 7.72 0 0 0 23 3z"></path></svg><small class="ms-2 d-lg-none">Twitter</small></a>
+            </li>
+          <li class="nav-item">
+              <a class="nav-link social-link" href="https://youtube.com/@robertokaban"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-youtube"><path d="M10,15L15.19,12L10,9V15M21.56,7.17C21.69,7.64 21.78,8.27 21.84,9.07C21.91,9.87 21.94,10.56 21.94,11.16L22,12C22,14.19 21.84,15.8 21.56,16.83C21.31,17.73 20.73,18.31 19.83,18.56C19.36,18.69 18.5,18.78 17.18,18.84C15.88,18.91 14.69,18.94 13.59,18.94L12,19C7.81,19 5.2,18.84 4.17,18.56C3.27,18.31 2.69,17.73 2.44,16.83C2.31,16.36 2.22,15.73 2.16,14.93C2.09,14.13 2.06,13.44 2.06,12.84L2,12C2,9.81 2.16,8.2 2.44,7.17C2.69,6.27 3.27,5.69 4.17,5.44C4.64,5.31 5.5,5.22 6.82,5.16C8.12,5.09 9.31,5.06 10.41,5.06L12,5C16.19,5 18.8,5.16 19.83,5.44C20.73,5.69 21.31,6.27 21.56,7.17Z"></path></svg><small class="ms-2 d-lg-none">Youtube</small></a>
+            </li>
+          </ul>
+
+        
+        <hr class="text-black-50 my-4 d-lg-none">
+        <button id="mode" class="btn btn-link" type="button" aria-label="Toggle user interface mode">
+          <span class="toggle-dark"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-moon"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path></svg></span>
+          <span class="toggle-light"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-sun"><circle cx="12" cy="12" r="5"></circle><line x1="12" y1="1" x2="12" y2="3"></line><line x1="12" y1="21" x2="12" y2="23"></line><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line><line x1="1" y1="12" x2="3" y2="12"></line><line x1="21" y1="12" x2="23" y2="12"></line><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line></svg></span>
+        </button>
+        
+
+        </div>
+    </div>
+  </nav>
+</header>
+
+
+</div>
+
+
+<div class="container-xxl">
+  <aside class="doks-sidebar">
+    <nav id="doks-docs-nav" class="collapse d-lg-none" aria-label="Tertiary navigation">
+      
+<ul class="list-unstyled collapsible-sidebar">
+  
+    
+      
+      <li class="mb-1">
+        <button class="btn btn-toggle align-items-center rounded collapsed" data-bs-toggle="collapse" data-bs-target="#section-de2591224751442a3b2101e94880333c" aria-expanded="true">
+          Tutorial PHP
+        </button>
+        <div class="collapse show" id="section-de2591224751442a3b2101e94880333c">
+          <ul class="btn-toggle-nav list-unstyled fw-normal pb-1 small">
+            
+              
+                
+                <li><a class="docs-link rounded" href="https://kaban.my.id/php/tutorial/pengenalan/">Pengenalan PHP</a></li>
+              
+            
+              
+                
+                <li><a class="docs-link rounded" href="https://kaban.my.id/php/tutorial/02-instalasi-persiapan/">Instalasi &amp; Persiapan Lingkungan PHP</a></li>
+              
+            
+              
+                
+                <li><a class="docs-link rounded" href="https://kaban.my.id/php/tutorial/03-sintaks-variabel/">Sintaks Dasar &amp; Variabel PHP</a></li>
+              
+            
+              
+                
+                <li><a class="docs-link rounded active" href="https://kaban.my.id/php/tutorial/04-tipe-data-konversi/">Tipe Data &amp; Konversi</a></li>
+              
+            
+              
+                
+                <li><a class="docs-link rounded" href="https://kaban.my.id/php/tutorial/05-struktur-kontrol/">Struktur Kontrol &amp; Perulangan</a></li>
+              
+            
+          </ul>
+        </div>
+      </li>
+    
+  
+</ul>
+
+    </nav>
+  </aside>
+</div>
+
+    <div class="wrap container-xxl" role="document">
+      <div class="content">
+        
+	<div class="row flex-xl-nowrap">
+		<div class="col-lg-5 col-xl-4 docs-sidebar d-none d-lg-block">
+			<nav class="docs-links" aria-label="Main navigation">
+				
+<ul class="list-unstyled collapsible-sidebar">
+  
+    
+      
+      <li class="mb-1">
+        <button class="btn btn-toggle align-items-center rounded collapsed" data-bs-toggle="collapse" data-bs-target="#section-de2591224751442a3b2101e94880333c" aria-expanded="true">
+          Tutorial PHP
+        </button>
+        <div class="collapse show" id="section-de2591224751442a3b2101e94880333c">
+          <ul class="btn-toggle-nav list-unstyled fw-normal pb-1 small">
+            
+              
+                
+                <li><a class="docs-link rounded" href="https://kaban.my.id/php/tutorial/pengenalan/">Pengenalan PHP</a></li>
+              
+            
+              
+                
+                <li><a class="docs-link rounded" href="https://kaban.my.id/php/tutorial/02-instalasi-persiapan/">Instalasi &amp; Persiapan Lingkungan PHP</a></li>
+              
+            
+              
+                
+                <li><a class="docs-link rounded" href="https://kaban.my.id/php/tutorial/03-sintaks-variabel/">Sintaks Dasar &amp; Variabel PHP</a></li>
+              
+            
+              
+                
+                <li><a class="docs-link rounded active" href="https://kaban.my.id/php/tutorial/04-tipe-data-konversi/">Tipe Data &amp; Konversi</a></li>
+              
+            
+              
+                
+                <li><a class="docs-link rounded" href="https://kaban.my.id/php/tutorial/05-struktur-kontrol/">Struktur Kontrol &amp; Perulangan</a></li>
+              
+            
+          </ul>
+        </div>
+      </li>
+    
+  
+</ul>
+
+			</nav>
+		</div>
+		<nav class="docs-toc d-none d-xl-block col-xl-3" aria-label="Secondary navigation">
+			<div class="d-xl-none">
+  <button class="btn btn-outline-primary btn-sm doks-toc-toggle collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#onThisPage" aria-controls="doks-docs-nav" aria-expanded="false" aria-label="Toggle On this page navigation">
+    <span>Daftar isi</span>
+    <span>
+      <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" class="doks doks-expand" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><title>Expand</title><polyline points="7 13 12 18 17 13"></polyline><polyline points="7 6 12 11 17 6"></polyline></svg>
+      <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" class="doks doks-collapse" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><title>Collapse</title><polyline points="17 11 12 6 7 11"></polyline><polyline points="17 18 12 13 7 18"></polyline></svg>
+    </span>
+  </button>
+  <div class="collapse" id="onThisPage">
+    <div class="card card-body mt-3 py-1">
+      <div class="page-links">
+        <nav id="TableOfContents">
+  <ul>
+    <li><a href="#pendahuluan">Pendahuluan</a></li>
+    <li><a href="#tipe-data-primitif">Tipe Data Primitif</a></li>
+    <li><a href="#string">String</a>
+      <ul>
+        <li><a href="#membuat-string">Membuat String</a></li>
+        <li><a href="#perbedaan-single-vs-double-quote">Perbedaan Single vs Double Quote</a></li>
+        <li><a href="#interpolasi-kompleks">Interpolasi Kompleks</a></li>
+        <li><a href="#fungsi-string-umum">Fungsi String Umum</a></li>
+        <li><a href="#multibyte-string">Multibyte String</a></li>
+      </ul>
+    </li>
+    <li><a href="#integer">Integer</a>
+      <ul>
+        <li><a href="#rentang-integer">Rentang Integer</a></li>
+        <li><a href="#overflow">Overflow</a></li>
+        <li><a href="#cek-integer">Cek Integer</a></li>
+      </ul>
+    </li>
+    <li><a href="#float">Float</a>
+      <ul>
+        <li><a href="#presisi-float">Presisi Float</a></li>
+        <li><a href="#nan-dan-inf"><code>NAN</code> dan <code>INF</code></a></li>
+        <li><a href="#cek-float">Cek Float</a></li>
+      </ul>
+    </li>
+    <li><a href="#boolean">Boolean</a>
+      <ul>
+        <li><a href="#nilai-boolean">Nilai Boolean</a></li>
+        <li><a href="#konversi-ke-boolean-truthyfalsy">Konversi ke Boolean (Truthy/Falsy)</a></li>
+        <li><a href="#cek-boolean">Cek Boolean</a></li>
+        <li><a href="#konversi-eksplisit-ke-boolean">Konversi Eksplisit ke Boolean</a></li>
+      </ul>
+    </li>
+    <li><a href="#null">Null</a>
+      <ul>
+        <li><a href="#karakteristik">Karakteristik</a></li>
+        <li><a href="#unset"><code>unset()</code></a></li>
+        <li><a href="#cek-null">Cek Null</a></li>
+        <li><a href="#null-coalescing">Null Coalescing</a></li>
+      </ul>
+    </li>
+    <li><a href="#array">Array</a></li>
+    <li><a href="#konversi-tipe-implisit-type-juggling">Konversi Tipe Implisit (Type Juggling)</a>
+      <ul>
+        <li><a href="#konversi-ke-string">Konversi ke String</a></li>
+        <li><a href="#konversi-ke-integer">Konversi ke Integer</a></li>
+        <li><a href="#konversi-ke-float">Konversi ke Float</a></li>
+        <li><a href="#konversi-ke-boolean">Konversi ke Boolean</a></li>
+        <li><a href="#konversi-ke-null">Konversi ke Null</a></li>
+      </ul>
+    </li>
+    <li><a href="#konversi-tipe-eksplisit-casting">Konversi Tipe Eksplisit (Casting)</a>
+      <ul>
+        <li><a href="#casting-dengan-tipe">Casting dengan <code>(tipe)</code></a></li>
+        <li><a href="#tipe-casting-yang-tersedia">Tipe Casting yang Tersedia</a></li>
+        <li><a href="#fungsi-konversi">Fungsi Konversi</a></li>
+        <li><a href="#contoh-casting">Contoh Casting</a></li>
+        <li><a href="#casting-array">Casting Array</a></li>
+      </ul>
+    </li>
+    <li><a href="#perbandingan-longgar-vs-ketat">Perbandingan Longgar vs Ketat</a>
+      <ul>
+        <li><a href="#-longgar--konversi-tipe"><code>==</code> (Longgar) — Konversi Tipe</a></li>
+        <li><a href="#-ketat--tanpa-konversi"><code>===</code> (Ketat) — Tanpa Konversi</a></li>
+        <li><a href="#tabel-perbandingan">Tabel Perbandingan</a></li>
+        <li><a href="#in_array-dan-array_search--mode-ketat"><code>in_array()</code> dan <code>array_search()</code> — Mode Ketat</a></li>
+      </ul>
+    </li>
+    <li><a href="#fungsi-konversi-berguna">Fungsi Konversi Berguna</a>
+      <ul>
+        <li><a href="#is_numeric"><code>is_numeric()</code></a></li>
+        <li><a href="#ctype_-functions"><code>ctype_*</code> Functions</a></li>
+        <li><a href="#filter_var"><code>filter_var()</code></a></li>
+        <li><a href="#settype--mengubah-tipe-in-place"><code>settype()</code> — Mengubah Tipe In-Place</a></li>
+      </ul>
+    </li>
+    <li><a href="#contoh-praktis-validasi-input-form">Contoh Praktis: Validasi Input Form</a></li>
+    <li><a href="#ringkasan">Ringkasan</a></li>
+  </ul>
+</nav>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="page-links d-none d-xl-block">
+  <h3>Daftar isi</h3>
+  <nav id="TableOfContents">
+  <ul>
+    <li><a href="#pendahuluan">Pendahuluan</a></li>
+    <li><a href="#tipe-data-primitif">Tipe Data Primitif</a></li>
+    <li><a href="#string">String</a>
+      <ul>
+        <li><a href="#membuat-string">Membuat String</a></li>
+        <li><a href="#perbedaan-single-vs-double-quote">Perbedaan Single vs Double Quote</a></li>
+        <li><a href="#interpolasi-kompleks">Interpolasi Kompleks</a></li>
+        <li><a href="#fungsi-string-umum">Fungsi String Umum</a></li>
+        <li><a href="#multibyte-string">Multibyte String</a></li>
+      </ul>
+    </li>
+    <li><a href="#integer">Integer</a>
+      <ul>
+        <li><a href="#rentang-integer">Rentang Integer</a></li>
+        <li><a href="#overflow">Overflow</a></li>
+        <li><a href="#cek-integer">Cek Integer</a></li>
+      </ul>
+    </li>
+    <li><a href="#float">Float</a>
+      <ul>
+        <li><a href="#presisi-float">Presisi Float</a></li>
+        <li><a href="#nan-dan-inf"><code>NAN</code> dan <code>INF</code></a></li>
+        <li><a href="#cek-float">Cek Float</a></li>
+      </ul>
+    </li>
+    <li><a href="#boolean">Boolean</a>
+      <ul>
+        <li><a href="#nilai-boolean">Nilai Boolean</a></li>
+        <li><a href="#konversi-ke-boolean-truthyfalsy">Konversi ke Boolean (Truthy/Falsy)</a></li>
+        <li><a href="#cek-boolean">Cek Boolean</a></li>
+        <li><a href="#konversi-eksplisit-ke-boolean">Konversi Eksplisit ke Boolean</a></li>
+      </ul>
+    </li>
+    <li><a href="#null">Null</a>
+      <ul>
+        <li><a href="#karakteristik">Karakteristik</a></li>
+        <li><a href="#unset"><code>unset()</code></a></li>
+        <li><a href="#cek-null">Cek Null</a></li>
+        <li><a href="#null-coalescing">Null Coalescing</a></li>
+      </ul>
+    </li>
+    <li><a href="#array">Array</a></li>
+    <li><a href="#konversi-tipe-implisit-type-juggling">Konversi Tipe Implisit (Type Juggling)</a>
+      <ul>
+        <li><a href="#konversi-ke-string">Konversi ke String</a></li>
+        <li><a href="#konversi-ke-integer">Konversi ke Integer</a></li>
+        <li><a href="#konversi-ke-float">Konversi ke Float</a></li>
+        <li><a href="#konversi-ke-boolean">Konversi ke Boolean</a></li>
+        <li><a href="#konversi-ke-null">Konversi ke Null</a></li>
+      </ul>
+    </li>
+    <li><a href="#konversi-tipe-eksplisit-casting">Konversi Tipe Eksplisit (Casting)</a>
+      <ul>
+        <li><a href="#casting-dengan-tipe">Casting dengan <code>(tipe)</code></a></li>
+        <li><a href="#tipe-casting-yang-tersedia">Tipe Casting yang Tersedia</a></li>
+        <li><a href="#fungsi-konversi">Fungsi Konversi</a></li>
+        <li><a href="#contoh-casting">Contoh Casting</a></li>
+        <li><a href="#casting-array">Casting Array</a></li>
+      </ul>
+    </li>
+    <li><a href="#perbandingan-longgar-vs-ketat">Perbandingan Longgar vs Ketat</a>
+      <ul>
+        <li><a href="#-longgar--konversi-tipe"><code>==</code> (Longgar) — Konversi Tipe</a></li>
+        <li><a href="#-ketat--tanpa-konversi"><code>===</code> (Ketat) — Tanpa Konversi</a></li>
+        <li><a href="#tabel-perbandingan">Tabel Perbandingan</a></li>
+        <li><a href="#in_array-dan-array_search--mode-ketat"><code>in_array()</code> dan <code>array_search()</code> — Mode Ketat</a></li>
+      </ul>
+    </li>
+    <li><a href="#fungsi-konversi-berguna">Fungsi Konversi Berguna</a>
+      <ul>
+        <li><a href="#is_numeric"><code>is_numeric()</code></a></li>
+        <li><a href="#ctype_-functions"><code>ctype_*</code> Functions</a></li>
+        <li><a href="#filter_var"><code>filter_var()</code></a></li>
+        <li><a href="#settype--mengubah-tipe-in-place"><code>settype()</code> — Mengubah Tipe In-Place</a></li>
+      </ul>
+    </li>
+    <li><a href="#contoh-praktis-validasi-input-form">Contoh Praktis: Validasi Input Form</a></li>
+    <li><a href="#ringkasan">Ringkasan</a></li>
+  </ul>
+</nav>
+  </div>
+
+		</nav>
+		<main class="docs-content col-lg-11 col-xl-9">
+		
+				<nav aria-label="breadcrumb">
+					<ol class="breadcrumb">
+						<li class="breadcrumb-item"><a href="/">Home</a></li>
+<li class="breadcrumb-item"><a href="/php/">Php</a></li>
+<li class="breadcrumb-item"><a href="/php/tutorial/">Tutorial PHP</a></li>
+<li class="breadcrumb-item active" aria-current="page">Tipe Data &amp; Konversi</li>
+					</ol>
+				</nav>
+			
+			<h1>Tipe Data &amp; Konversi</h1>
+			<p class="lead">PHP adalah bahasa loosely typed — tipe data ditentukan otomatis dan bisa berubah saat runtime. Artikel ini membahas tipe data secara mendalam, cara mengecek tipe, serta konversi implisit dan eksplisit antar tipe.</p>
+			<nav class="d-xl-none" aria-label="Quaternary navigation">
+				<div class="d-xl-none">
+  <button class="btn btn-outline-primary btn-sm doks-toc-toggle collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#onThisPage" aria-controls="doks-docs-nav" aria-expanded="false" aria-label="Toggle On this page navigation">
+    <span>Daftar isi</span>
+    <span>
+      <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" class="doks doks-expand" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><title>Expand</title><polyline points="7 13 12 18 17 13"></polyline><polyline points="7 6 12 11 17 6"></polyline></svg>
+      <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" class="doks doks-collapse" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><title>Collapse</title><polyline points="17 11 12 6 7 11"></polyline><polyline points="17 18 12 13 7 18"></polyline></svg>
+    </span>
+  </button>
+  <div class="collapse" id="onThisPage">
+    <div class="card card-body mt-3 py-1">
+      <div class="page-links">
+        <nav id="TableOfContents">
+  <ul>
+    <li><a href="#pendahuluan">Pendahuluan</a></li>
+    <li><a href="#tipe-data-primitif">Tipe Data Primitif</a></li>
+    <li><a href="#string">String</a>
+      <ul>
+        <li><a href="#membuat-string">Membuat String</a></li>
+        <li><a href="#perbedaan-single-vs-double-quote">Perbedaan Single vs Double Quote</a></li>
+        <li><a href="#interpolasi-kompleks">Interpolasi Kompleks</a></li>
+        <li><a href="#fungsi-string-umum">Fungsi String Umum</a></li>
+        <li><a href="#multibyte-string">Multibyte String</a></li>
+      </ul>
+    </li>
+    <li><a href="#integer">Integer</a>
+      <ul>
+        <li><a href="#rentang-integer">Rentang Integer</a></li>
+        <li><a href="#overflow">Overflow</a></li>
+        <li><a href="#cek-integer">Cek Integer</a></li>
+      </ul>
+    </li>
+    <li><a href="#float">Float</a>
+      <ul>
+        <li><a href="#presisi-float">Presisi Float</a></li>
+        <li><a href="#nan-dan-inf"><code>NAN</code> dan <code>INF</code></a></li>
+        <li><a href="#cek-float">Cek Float</a></li>
+      </ul>
+    </li>
+    <li><a href="#boolean">Boolean</a>
+      <ul>
+        <li><a href="#nilai-boolean">Nilai Boolean</a></li>
+        <li><a href="#konversi-ke-boolean-truthyfalsy">Konversi ke Boolean (Truthy/Falsy)</a></li>
+        <li><a href="#cek-boolean">Cek Boolean</a></li>
+        <li><a href="#konversi-eksplisit-ke-boolean">Konversi Eksplisit ke Boolean</a></li>
+      </ul>
+    </li>
+    <li><a href="#null">Null</a>
+      <ul>
+        <li><a href="#karakteristik">Karakteristik</a></li>
+        <li><a href="#unset"><code>unset()</code></a></li>
+        <li><a href="#cek-null">Cek Null</a></li>
+        <li><a href="#null-coalescing">Null Coalescing</a></li>
+      </ul>
+    </li>
+    <li><a href="#array">Array</a></li>
+    <li><a href="#konversi-tipe-implisit-type-juggling">Konversi Tipe Implisit (Type Juggling)</a>
+      <ul>
+        <li><a href="#konversi-ke-string">Konversi ke String</a></li>
+        <li><a href="#konversi-ke-integer">Konversi ke Integer</a></li>
+        <li><a href="#konversi-ke-float">Konversi ke Float</a></li>
+        <li><a href="#konversi-ke-boolean">Konversi ke Boolean</a></li>
+        <li><a href="#konversi-ke-null">Konversi ke Null</a></li>
+      </ul>
+    </li>
+    <li><a href="#konversi-tipe-eksplisit-casting">Konversi Tipe Eksplisit (Casting)</a>
+      <ul>
+        <li><a href="#casting-dengan-tipe">Casting dengan <code>(tipe)</code></a></li>
+        <li><a href="#tipe-casting-yang-tersedia">Tipe Casting yang Tersedia</a></li>
+        <li><a href="#fungsi-konversi">Fungsi Konversi</a></li>
+        <li><a href="#contoh-casting">Contoh Casting</a></li>
+        <li><a href="#casting-array">Casting Array</a></li>
+      </ul>
+    </li>
+    <li><a href="#perbandingan-longgar-vs-ketat">Perbandingan Longgar vs Ketat</a>
+      <ul>
+        <li><a href="#-longgar--konversi-tipe"><code>==</code> (Longgar) — Konversi Tipe</a></li>
+        <li><a href="#-ketat--tanpa-konversi"><code>===</code> (Ketat) — Tanpa Konversi</a></li>
+        <li><a href="#tabel-perbandingan">Tabel Perbandingan</a></li>
+        <li><a href="#in_array-dan-array_search--mode-ketat"><code>in_array()</code> dan <code>array_search()</code> — Mode Ketat</a></li>
+      </ul>
+    </li>
+    <li><a href="#fungsi-konversi-berguna">Fungsi Konversi Berguna</a>
+      <ul>
+        <li><a href="#is_numeric"><code>is_numeric()</code></a></li>
+        <li><a href="#ctype_-functions"><code>ctype_*</code> Functions</a></li>
+        <li><a href="#filter_var"><code>filter_var()</code></a></li>
+        <li><a href="#settype--mengubah-tipe-in-place"><code>settype()</code> — Mengubah Tipe In-Place</a></li>
+      </ul>
+    </li>
+    <li><a href="#contoh-praktis-validasi-input-form">Contoh Praktis: Validasi Input Form</a></li>
+    <li><a href="#ringkasan">Ringkasan</a></li>
+  </ul>
+</nav>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="page-links d-none d-xl-block">
+  <h3>Daftar isi</h3>
+  <nav id="TableOfContents">
+  <ul>
+    <li><a href="#pendahuluan">Pendahuluan</a></li>
+    <li><a href="#tipe-data-primitif">Tipe Data Primitif</a></li>
+    <li><a href="#string">String</a>
+      <ul>
+        <li><a href="#membuat-string">Membuat String</a></li>
+        <li><a href="#perbedaan-single-vs-double-quote">Perbedaan Single vs Double Quote</a></li>
+        <li><a href="#interpolasi-kompleks">Interpolasi Kompleks</a></li>
+        <li><a href="#fungsi-string-umum">Fungsi String Umum</a></li>
+        <li><a href="#multibyte-string">Multibyte String</a></li>
+      </ul>
+    </li>
+    <li><a href="#integer">Integer</a>
+      <ul>
+        <li><a href="#rentang-integer">Rentang Integer</a></li>
+        <li><a href="#overflow">Overflow</a></li>
+        <li><a href="#cek-integer">Cek Integer</a></li>
+      </ul>
+    </li>
+    <li><a href="#float">Float</a>
+      <ul>
+        <li><a href="#presisi-float">Presisi Float</a></li>
+        <li><a href="#nan-dan-inf"><code>NAN</code> dan <code>INF</code></a></li>
+        <li><a href="#cek-float">Cek Float</a></li>
+      </ul>
+    </li>
+    <li><a href="#boolean">Boolean</a>
+      <ul>
+        <li><a href="#nilai-boolean">Nilai Boolean</a></li>
+        <li><a href="#konversi-ke-boolean-truthyfalsy">Konversi ke Boolean (Truthy/Falsy)</a></li>
+        <li><a href="#cek-boolean">Cek Boolean</a></li>
+        <li><a href="#konversi-eksplisit-ke-boolean">Konversi Eksplisit ke Boolean</a></li>
+      </ul>
+    </li>
+    <li><a href="#null">Null</a>
+      <ul>
+        <li><a href="#karakteristik">Karakteristik</a></li>
+        <li><a href="#unset"><code>unset()</code></a></li>
+        <li><a href="#cek-null">Cek Null</a></li>
+        <li><a href="#null-coalescing">Null Coalescing</a></li>
+      </ul>
+    </li>
+    <li><a href="#array">Array</a></li>
+    <li><a href="#konversi-tipe-implisit-type-juggling">Konversi Tipe Implisit (Type Juggling)</a>
+      <ul>
+        <li><a href="#konversi-ke-string">Konversi ke String</a></li>
+        <li><a href="#konversi-ke-integer">Konversi ke Integer</a></li>
+        <li><a href="#konversi-ke-float">Konversi ke Float</a></li>
+        <li><a href="#konversi-ke-boolean">Konversi ke Boolean</a></li>
+        <li><a href="#konversi-ke-null">Konversi ke Null</a></li>
+      </ul>
+    </li>
+    <li><a href="#konversi-tipe-eksplisit-casting">Konversi Tipe Eksplisit (Casting)</a>
+      <ul>
+        <li><a href="#casting-dengan-tipe">Casting dengan <code>(tipe)</code></a></li>
+        <li><a href="#tipe-casting-yang-tersedia">Tipe Casting yang Tersedia</a></li>
+        <li><a href="#fungsi-konversi">Fungsi Konversi</a></li>
+        <li><a href="#contoh-casting">Contoh Casting</a></li>
+        <li><a href="#casting-array">Casting Array</a></li>
+      </ul>
+    </li>
+    <li><a href="#perbandingan-longgar-vs-ketat">Perbandingan Longgar vs Ketat</a>
+      <ul>
+        <li><a href="#-longgar--konversi-tipe"><code>==</code> (Longgar) — Konversi Tipe</a></li>
+        <li><a href="#-ketat--tanpa-konversi"><code>===</code> (Ketat) — Tanpa Konversi</a></li>
+        <li><a href="#tabel-perbandingan">Tabel Perbandingan</a></li>
+        <li><a href="#in_array-dan-array_search--mode-ketat"><code>in_array()</code> dan <code>array_search()</code> — Mode Ketat</a></li>
+      </ul>
+    </li>
+    <li><a href="#fungsi-konversi-berguna">Fungsi Konversi Berguna</a>
+      <ul>
+        <li><a href="#is_numeric"><code>is_numeric()</code></a></li>
+        <li><a href="#ctype_-functions"><code>ctype_*</code> Functions</a></li>
+        <li><a href="#filter_var"><code>filter_var()</code></a></li>
+        <li><a href="#settype--mengubah-tipe-in-place"><code>settype()</code> — Mengubah Tipe In-Place</a></li>
+      </ul>
+    </li>
+    <li><a href="#contoh-praktis-validasi-input-form">Contoh Praktis: Validasi Input Form</a></li>
+    <li><a href="#ringkasan">Ringkasan</a></li>
+  </ul>
+</nav>
+  </div>
+
+			</nav>
+			<h2 id="pendahuluan">Pendahuluan <a href="#pendahuluan" class="anchor" aria-hidden="true">#</a></h2>
+<p>Pada artikel sebelumnya kita sudah mengenal tipe data PHP secara singkat. Sekarang kita akan membahasnya lebih mendalam — terutama <strong>konversi tipe</strong> (type juggling) yang menjadi sumber bug paling umum di PHP.</p>
+<p>PHP adalah bahasa <strong>loosely typed</strong> (atau <strong>dynamically typed</strong>) — variabel tidak memiliki tipe tetap, dan PHP otomatis mengonversi tipe dalam banyak situasi. Fleksibilitas ini memudahkan penulisan kode, tetapi juga bisa mengejutkan jika tidak dipahami.</p>
+<p>Artikel ini membahas:</p>
+<ul>
+<li>Tipe data primitif secara mendalam.</li>
+<li>Cara mengecek tipe.</li>
+<li>Konversi <strong>implisit</strong> (type juggling).</li>
+<li>Konversi <strong>eksplisit</strong> (casting).</li>
+<li>Perbandingan longgar (<code>==</code>) vs ketat (<code>===</code>).</li>
+<li>Best practice.</li>
+</ul>
+<blockquote>
+<p><strong>Asumsi:</strong> Anda sudah memahami sintaks dasar, variabel, dan operator dari artikel sebelumnya.</p>
+</blockquote>
+<hr>
+<h2 id="tipe-data-primitif">Tipe Data Primitif <a href="#tipe-data-primitif" class="anchor" aria-hidden="true">#</a></h2>
+<p>PHP memiliki beberapa tipe data primitif:</p>
+<table>
+<thead>
+<tr>
+<th>Tipe</th>
+<th><code>gettype()</code></th>
+<th>Contoh</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>string</code></td>
+<td><code>&quot;string&quot;</code></td>
+<td><code>&quot;Hello&quot;</code></td>
+</tr>
+<tr>
+<td><code>int</code></td>
+<td><code>&quot;integer&quot;</code></td>
+<td><code>42</code></td>
+</tr>
+<tr>
+<td><code>float</code></td>
+<td><code>&quot;double&quot;</code></td>
+<td><code>3.14</code></td>
+</tr>
+<tr>
+<td><code>bool</code></td>
+<td><code>&quot;boolean&quot;</code></td>
+<td><code>true</code></td>
+</tr>
+<tr>
+<td><code>null</code></td>
+<td><code>&quot;NULL&quot;</code></td>
+<td><code>null</code></td>
+</tr>
+<tr>
+<td><code>array</code></td>
+<td><code>&quot;array&quot;</code></td>
+<td><code>[1, 2, 3]</code></td>
+</tr>
+<tr>
+<td><code>object</code></td>
+<td><code>&quot;object&quot;</code></td>
+<td><code>new User()</code></td>
+</tr>
+<tr>
+<td><code>resource</code></td>
+<td><code>&quot;resource&quot;</code></td>
+<td><code>fopen(...)</code></td>
+</tr>
+</tbody>
+</table>
+<hr>
+<h2 id="string">String <a href="#string" class="anchor" aria-hidden="true">#</a></h2>
+<h3 id="membuat-string">Membuat String <a href="#membuat-string" class="anchor" aria-hidden="true">#</a></h3>
+<pre><code class="language-php">&lt;?php
+$single = 'Hello';
+$double = &quot;Hello&quot;;
+$heredoc = &lt;&lt;&lt;EOT
+Hello, World!
+EOT;
+$nowdoc = &lt;&lt;&lt;'EOT'
+Hello, World!
+EOT;
+</code></pre>
+<h3 id="perbedaan-single-vs-double-quote">Perbedaan Single vs Double Quote <a href="#perbedaan-single-vs-double-quote" class="anchor" aria-hidden="true">#</a></h3>
+<table>
+<thead>
+<tr>
+<th>Aspek</th>
+<th>Single Quote <code>'...'</code></th>
+<th>Double Quote <code>&quot;...&quot;</code></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Interpolasi variabel</td>
+<td>❌</td>
+<td>✅</td>
+</tr>
+<tr>
+<td>Escape <code>\n</code>, <code>\t</code></td>
+<td>❌ (literal)</td>
+<td>✅</td>
+</tr>
+<tr>
+<td>Escape <code>\'</code></td>
+<td>✅</td>
+<td>❌ (pakai <code>\&quot;</code>)</td>
+</tr>
+<tr>
+<td>Performa</td>
+<td>Sedikit lebih cepat</td>
+<td>Sedikit lebih lambat</td>
+</tr>
+</tbody>
+</table>
+<pre><code class="language-php">&lt;?php
+$nama = &quot;Budi&quot;;
+
+echo 'Halo, $nama!';   // &quot;Halo, $nama!&quot; (literal)
+echo &quot;Halo, $nama!&quot;;   // &quot;Halo, Budi!&quot; (interpolasi)
+echo &quot;Halo, {$nama}!&quot;; // &quot;Halo, Budi!&quot; (kurung kurawal)
+</code></pre>
+<blockquote>
+<p><strong>Tips:</strong> Gunakan <strong>single quote</strong> untuk string statis (performa lebih baik), <strong>double quote</strong> jika butuh interpolasi.</p>
+</blockquote>
+<h3 id="interpolasi-kompleks">Interpolasi Kompleks <a href="#interpolasi-kompleks" class="anchor" aria-hidden="true">#</a></h3>
+<pre><code class="language-php">&lt;?php
+$user = [&quot;nama&quot; =&gt; &quot;Budi&quot;, &quot;umur&quot; =&gt; 25];
+
+// ❌ Error — array tidak bisa diinterpolasi langsung
+// echo &quot;Nama: $user['nama']&quot;;
+
+// ✅ Gunakan kurung kurawal
+echo &quot;Nama: {$user['nama']}, Umur: {$user['umur']}&quot;;
+
+// Atau concatenation
+echo &quot;Nama: &quot; . $user['nama'];
+</code></pre>
+<h3 id="fungsi-string-umum">Fungsi String Umum <a href="#fungsi-string-umum" class="anchor" aria-hidden="true">#</a></h3>
+<pre><code class="language-php">&lt;?php
+$teks = &quot;  Hello World  &quot;;
+
+echo strlen($teks);              // 15 (termasuk spasi)
+echo trim($teks);                // &quot;Hello World&quot;
+echo strtoupper($teks);          // &quot;  HELLO WORLD  &quot;
+echo strtolower($teks);          // &quot;  hello world  &quot;
+echo str_replace(&quot;World&quot;, &quot;PHP&quot;, $teks); // &quot;  Hello PHP  &quot;
+echo substr($teks, 2, 5);        // &quot;Hello&quot;
+echo strpos($teks, &quot;World&quot;);     // 8
+echo str_contains($teks, &quot;World&quot;); // true (PHP 8+)
+echo str_starts_with($teks, &quot;  H&quot;); // true (PHP 8+)
+echo str_ends_with($teks, &quot;  &quot;);    // true (PHP 8+)
+echo ucfirst(&quot;hello&quot;);           // &quot;Hello&quot;
+echo ucwords(&quot;hello world&quot;);     // &quot;Hello World&quot;
+echo str_repeat(&quot;ab&quot;, 3);        // &quot;ababab&quot;
+echo str_pad(&quot;5&quot;, 3, &quot;0&quot;, STR_PAD_LEFT); // &quot;005&quot;
+echo nl2br(&quot;Baris 1\nBaris 2&quot;);  // &quot;Baris 1&lt;br /&gt;Baris 2&quot;
+echo number_format(1500000, 0, &quot;,&quot;, &quot;.&quot;); // &quot;1.500.000&quot;
+echo sprintf(&quot;Halo, %s! Umur %d&quot;, &quot;Budi&quot;, 25); // &quot;Halo, Budi! Umur 25&quot;
+</code></pre>
+<h3 id="multibyte-string">Multibyte String <a href="#multibyte-string" class="anchor" aria-hidden="true">#</a></h3>
+<p>Untuk karakter Unicode (misalnya emoji, huruf non-Latin), gunakan <code>mb_*</code> functions:</p>
+<pre><code class="language-php">&lt;?php
+$teks = &quot;Halo, 世界!&quot;;
+
+echo strlen($teks);       // 13 (byte)
+echo mb_strlen($teks);    // 10 (karakter)
+echo mb_substr($teks, 0, 5); // &quot;Halo,&quot;
+</code></pre>
+<blockquote>
+<p><strong>Tips:</strong> Jika aplikasi Anda menangani teks non-ASCII, selalu gunakan <code>mb_*</code> functions dan set <code>default_charset = &quot;UTF-8&quot;</code> di <code>php.ini</code>.</p>
+</blockquote>
+<hr>
+<h2 id="integer">Integer <a href="#integer" class="anchor" aria-hidden="true">#</a></h2>
+<h3 id="rentang-integer">Rentang Integer <a href="#rentang-integer" class="anchor" aria-hidden="true">#</a></h3>
+<p>Bergantung pada platform (32-bit vs 64-bit):</p>
+<table>
+<thead>
+<tr>
+<th>Platform</th>
+<th>Nilai Maksimum</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>32-bit</td>
+<td><code>2.147.483.647</code> (<code>PHP_INT_MAX</code>)</td>
+</tr>
+<tr>
+<td>64-bit</td>
+<td><code>9.223.372.036.854.775.807</code></td>
+</tr>
+</tbody>
+</table>
+<pre><code class="language-php">&lt;?php
+echo PHP_INT_MAX;   // 9223372036854775807 (64-bit)
+echo PHP_INT_MIN;   // -9223372036854775808
+echo PHP_INT_SIZE;  // 8 (byte, 64-bit)
+</code></pre>
+<h3 id="overflow">Overflow <a href="#overflow" class="anchor" aria-hidden="true">#</a></h3>
+<p>Jika hasil operasi melebihi <code>PHP_INT_MAX</code>, PHP otomatis mengonversi ke <strong>float</strong>:</p>
+<pre><code class="language-php">&lt;?php
+var_dump(PHP_INT_MAX + 1);  // float(9.2233720368548E+18)
+</code></pre>
+<blockquote>
+<p>⚠️ <strong>Peringatan:</strong> Overflow bisa menyebabkan <strong>kehilangan presisi</strong>. Untuk angka sangat besar, gunakan <strong>BCMath</strong> (<code>bcadd</code>, <code>bcmul</code>, dll.) atau <strong>GMP</strong>.</p>
+</blockquote>
+<h3 id="cek-integer">Cek Integer <a href="#cek-integer" class="anchor" aria-hidden="true">#</a></h3>
+<pre><code class="language-php">&lt;?php
+var_dump(is_int(42));      // bool(true)
+var_dump(is_int(&quot;42&quot;));    // bool(false) — string!
+var_dump(is_integer(42));  // bool(true) — alias
+var_dump(is_long(42));     // bool(true) — alias
+
+// PHP 8+: cek tipe dari input
+var_dump(filter_var(&quot;42&quot;, FILTER_VALIDATE_INT));     // int(42)
+var_dump(filter_var(&quot;abc&quot;, FILTER_VALIDATE_INT));    // bool(false)
+</code></pre>
+<hr>
+<h2 id="float">Float <a href="#float" class="anchor" aria-hidden="true">#</a></h2>
+<h3 id="presisi-float">Presisi Float <a href="#presisi-float" class="anchor" aria-hidden="true">#</a></h3>
+<p>Float di PHP mengikuti standar <strong>IEEE 754 double precision</strong> (64-bit). Ini menyebabkan masalah presisi yang sama dengan JavaScript:</p>
+<pre><code class="language-php">&lt;?php
+var_dump(0.1 + 0.2);           // float(0.30000000000000004)
+var_dump(0.1 + 0.2 === 0.3);   // bool(false) (!!)
+
+// Bandingkan dengan toleransi
+$epsilon = 1e-10;
+var_dump(abs((0.1 + 0.2) - 0.3) &lt; $epsilon); // bool(true)
+</code></pre>
+<blockquote>
+<p><strong>Tips:</strong> Untuk uang, <strong>jangan</strong> gunakan float. Gunakan <strong>integer</strong> (dalam sen) atau <strong>string</strong> dengan BCMath.</p>
+</blockquote>
+<pre><code class="language-php">&lt;?php
+// ❌ Buruk untuk uang
+$harga = 0.1 + 0.2;  // 0.30000000000000004
+
+// ✅ Baik — integer (dalam sen)
+$hargaSen = 10 + 20;  // 30 (Rp0,30)
+echo number_format($hargaSen / 100, 2);  // &quot;0.30&quot;
+
+// ✅ Baik — BCMath
+echo bcadd(&quot;0.1&quot;, &quot;0.2&quot;, 2);  // &quot;0.30&quot;
+</code></pre>
+<h3 id="nan-dan-inf"><code>NAN</code> dan <code>INF</code> <a href="#nan-dan-inf" class="anchor" aria-hidden="true">#</a></h3>
+<pre><code class="language-php">&lt;?php
+$inf = fdiv(1, 0);    // INF
+$nan = fdiv(0, 0);    // NAN
+
+var_dump(is_infinite($inf));  // bool(true)
+var_dump(is_nan($nan));       // bool(true)
+var_dump(is_finite(3.14));    // bool(true)
+
+// NAN tidak sama dengan dirinya sendiri
+var_dump($nan === $nan);      // bool(false)
+</code></pre>
+<h3 id="cek-float">Cek Float <a href="#cek-float" class="anchor" aria-hidden="true">#</a></h3>
+<pre><code class="language-php">&lt;?php
+var_dump(is_float(3.14));    // bool(true)
+var_dump(is_float(42));      // bool(false) — int
+var_dump(is_double(3.14));   // bool(true) — alias
+var_dump(is_real(3.14));     // bool(true) — alias
+</code></pre>
+<hr>
+<h2 id="boolean">Boolean <a href="#boolean" class="anchor" aria-hidden="true">#</a></h2>
+<h3 id="nilai-boolean">Nilai Boolean <a href="#nilai-boolean" class="anchor" aria-hidden="true">#</a></h3>
+<p>Hanya <code>true</code> dan <code>false</code> (case-insensitive: <code>TRUE</code>, <code>True</code>, <code>true</code>).</p>
+<pre><code class="language-php">&lt;?php
+$aktif = true;
+$selesai = false;
+
+var_dump($aktif);   // bool(true)
+var_dump($selesai); // bool(false)
+</code></pre>
+<h3 id="konversi-ke-boolean-truthyfalsy">Konversi ke Boolean (Truthy/Falsy) <a href="#konversi-ke-boolean-truthyfalsy" class="anchor" aria-hidden="true">#</a></h3>
+<p>Saat nilai non-boolean digunakan dalam konteks boolean (misalnya <code>if</code>), PHP mengonversinya:</p>
+<table>
+<thead>
+<tr>
+<th>Nilai</th>
+<th>Boolean</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>false</code></td>
+<td><code>false</code></td>
+</tr>
+<tr>
+<td><code>0</code> (int)</td>
+<td><code>false</code></td>
+</tr>
+<tr>
+<td><code>0.0</code> (float)</td>
+<td><code>false</code></td>
+</tr>
+<tr>
+<td><code>-0.0</code> (float)</td>
+<td><code>false</code></td>
+</tr>
+<tr>
+<td><code>&quot;&quot;</code> (string kosong)</td>
+<td><code>false</code></td>
+</tr>
+<tr>
+<td><code>&quot;0&quot;</code> (string nol)</td>
+<td><strong><code>false</code></strong> ⚠️</td>
+</tr>
+<tr>
+<td><code>[]</code> (array kosong)</td>
+<td><code>false</code></td>
+</tr>
+<tr>
+<td><code>null</code></td>
+<td><code>false</code></td>
+</tr>
+<tr>
+<td><code>&quot;0.0&quot;</code></td>
+<td><code>true</code></td>
+</tr>
+<tr>
+<td><code>&quot;false&quot;</code></td>
+<td><code>true</code></td>
+</tr>
+<tr>
+<td><code>&quot; &quot;</code> (spasi)</td>
+<td><code>true</code></td>
+</tr>
+<tr>
+<td><code>-1</code></td>
+<td><code>true</code></td>
+</tr>
+<tr>
+<td><code>[]</code> dengan elemen</td>
+<td><code>true</code></td>
+</tr>
+<tr>
+<td><code>new stdClass()</code></td>
+<td><code>true</code></td>
+</tr>
+</tbody>
+</table>
+<blockquote>
+<p>⚠️ <strong>Peringatan penting:</strong> String <strong><code>&quot;0&quot;</code></strong> adalah <strong>falsy</strong> di PHP! Ini berbeda dengan JavaScript, di mana <code>&quot;0&quot;</code> adalah truthy. Ini sering menjadi sumber bug.</p>
+</blockquote>
+<pre><code class="language-php">&lt;?php
+if (&quot;0&quot;) {
+    echo &quot;Truthy&quot;;  // TIDAK dijalankan
+} else {
+    echo &quot;Falsy&quot;;   // Dijalankan
+}
+</code></pre>
+<h3 id="cek-boolean">Cek Boolean <a href="#cek-boolean" class="anchor" aria-hidden="true">#</a></h3>
+<pre><code class="language-php">&lt;?php
+var_dump(is_bool(true));   // bool(true)
+var_dump(is_bool(1));      // bool(false) — int
+var_dump(is_bool(&quot;true&quot;)); // bool(false) — string
+</code></pre>
+<h3 id="konversi-eksplisit-ke-boolean">Konversi Eksplisit ke Boolean <a href="#konversi-eksplisit-ke-boolean" class="anchor" aria-hidden="true">#</a></h3>
+<pre><code class="language-php">&lt;?php
+var_dump((bool) 0);       // bool(false)
+var_dump((bool) 1);       // bool(true)
+var_dump((bool) &quot;&quot;);      // bool(false)
+var_dump((bool) &quot;0&quot;);     // bool(false)
+var_dump((bool) &quot;0.0&quot;);   // bool(true)
+var_dump((bool) &quot;false&quot;); // bool(true)
+var_dump((bool) []);      // bool(false)
+var_dump((bool) [0]);     // bool(true)
+var_dump((bool) null);    // bool(false)
+var_dump(boolval(&quot;0&quot;));   // bool(false) — fungsi alternatif
+</code></pre>
+<hr>
+<h2 id="null">Null <a href="#null" class="anchor" aria-hidden="true">#</a></h2>
+<h3 id="karakteristik">Karakteristik <a href="#karakteristik" class="anchor" aria-hidden="true">#</a></h3>
+<ul>
+<li><code>null</code> adalah tipe khusus dengan satu nilai: <code>null</code> (case-insensitive).</li>
+<li>Variabel dianggap <code>null</code> jika:
+<ul>
+<li>Di-assign <code>null</code> secara eksplisit.</li>
+<li>Belum pernah di-assign.</li>
+<li>Di-<code>unset()</code>.</li>
+</ul>
+</li>
+</ul>
+<pre><code class="language-php">&lt;?php
+$nama = null;
+var_dump($nama);       // NULL
+var_dump(is_null($nama)); // bool(true)
+var_dump($nama === null); // bool(true)
+
+// Variabel yang belum di-assign
+var_dump($undefined);  // Warning: Undefined variable + NULL
+</code></pre>
+<h3 id="unset"><code>unset()</code> <a href="#unset" class="anchor" aria-hidden="true">#</a></h3>
+<pre><code class="language-php">&lt;?php
+$x = 10;
+unset($x);
+var_dump(isset($x));  // bool(false)
+</code></pre>
+<h3 id="cek-null">Cek Null <a href="#cek-null" class="anchor" aria-hidden="true">#</a></h3>
+<pre><code class="language-php">&lt;?php
+$nama = null;
+
+var_dump(is_null($nama));      // bool(true)
+var_dump($nama === null);      // bool(true)
+var_dump(isset($nama));        // bool(false) — isset() false untuk null
+var_dump(isset($nama) &amp;&amp; $nama !== null); // bool(false)
+</code></pre>
+<p><strong><code>isset()</code> vs <code>is_null()</code>:</strong></p>
+<table>
+<thead>
+<tr>
+<th>Aspek</th>
+<th><code>isset($x)</code></th>
+<th><code>is_null($x)</code></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>$x = null</code></td>
+<td><code>false</code></td>
+<td><code>true</code></td>
+</tr>
+<tr>
+<td><code>$x</code> tidak didefinisikan</td>
+<td><code>false</code> (tanpa warning)</td>
+<td><code>true</code> (dengan warning)</td>
+</tr>
+<tr>
+<td><code>$x = 0</code></td>
+<td><code>true</code></td>
+<td><code>false</code></td>
+</tr>
+</tbody>
+</table>
+<blockquote>
+<p><strong>Tips:</strong> Gunakan <code>isset()</code> untuk mengecek apakah variabel ada dan tidak <code>null</code>. Gunakan <code>array_key_exists()</code> untuk mengecek key array yang mungkin bernilai <code>null</code>.</p>
+</blockquote>
+<h3 id="null-coalescing">Null Coalescing <a href="#null-coalescing" class="anchor" aria-hidden="true">#</a></h3>
+<pre><code class="language-php">&lt;?php
+$nama = $userInput ?? &quot;Anonim&quot;;        // jika null/undefined
+$nama = $userInput ?: &quot;Anonim&quot;;        // jika falsy (termasuk &quot;0&quot;)
+$nama = $userInput ?? $namaDefault ?? &quot;Anonim&quot;; // chaining
+</code></pre>
+<hr>
+<h2 id="array">Array <a href="#array" class="anchor" aria-hidden="true">#</a></h2>
+<p>Array di PHP adalah struktur yang sangat fleksibel — berfungsi sebagai <strong>list</strong> (indexed) maupun <strong>map</strong> (associative). Detailnya dibahas di artikel Array, tetapi berikut ringkasan tipenya:</p>
+<pre><code class="language-php">&lt;?php
+// Indexed array
+$buah = [&quot;apel&quot;, &quot;jeruk&quot;, &quot;mangga&quot;];
+
+// Associative array
+$user = [&quot;nama&quot; =&gt; &quot;Budi&quot;, &quot;umur&quot; =&gt; 25];
+
+// Multidimensional
+$matrix = [[1, 2], [3, 4]];
+
+// Campuran
+$campur = [0 =&gt; &quot;nol&quot;, &quot;satu&quot; =&gt; 1, 2 =&gt; true];
+
+// Array kosong
+$kosong = [];
+</code></pre>
+<hr>
+<h2 id="konversi-tipe-implisit-type-juggling">Konversi Tipe Implisit (Type Juggling) <a href="#konversi-tipe-implisit-type-juggling" class="anchor" aria-hidden="true">#</a></h2>
+<p>PHP otomatis mengonversi tipe dalam banyak konteks. Ini disebut <strong>type juggling</strong>.</p>
+<h3 id="konversi-ke-string">Konversi ke String <a href="#konversi-ke-string" class="anchor" aria-hidden="true">#</a></h3>
+<pre><code class="language-php">&lt;?php
+$angka = 42;
+echo &quot;Angka: &quot; . $angka;  // &quot;Angka: 42&quot;
+
+$bool = true;
+echo &quot;Aktif: &quot; . $bool;   // &quot;Aktif: 1&quot; (true → &quot;1&quot;)
+$bool = false;
+echo &quot;Aktif: &quot; . $bool;   // &quot;Aktif: &quot; (false → &quot;&quot;)
+
+$null = null;
+echo &quot;Nilai: &quot; . $null;   // &quot;Nilai: &quot;
+
+$array = [1, 2, 3];
+echo &quot;Array: &quot; . $array;  // &quot;Array: Array&quot; + warning
+</code></pre>
+<h3 id="konversi-ke-integer">Konversi ke Integer <a href="#konversi-ke-integer" class="anchor" aria-hidden="true">#</a></h3>
+<pre><code class="language-php">&lt;?php
+var_dump(10 + &quot;5&quot;);       // int(15)
+var_dump(10 + &quot;5.5&quot;);     // float(15.5)
+var_dump(10 + &quot;abc&quot;);     // TypeError (PHP 8) / int(10) + warning (PHP 7)
+var_dump(10 + &quot;5abc&quot;);    // int(15) + warning (PHP 7) / TypeError (PHP 8)
+var_dump(10 + true);      // int(11)
+var_dump(10 + null);      // int(10)
+var_dump(10 + []);        // TypeError (PHP 8)
+</code></pre>
+<blockquote>
+<p>⚠️ <strong>Peringatan:</strong> Di <strong>PHP 8</strong>, penambahan string non-numerik ke number melempar <strong><code>TypeError</code></strong> — perubahan besar dari PHP 7 yang menghasilkan warning. Ini membuat bug lebih mudah ditemukan.</p>
+</blockquote>
+<h3 id="konversi-ke-float">Konversi ke Float <a href="#konversi-ke-float" class="anchor" aria-hidden="true">#</a></h3>
+<pre><code class="language-php">&lt;?php
+var_dump(1.5 + &quot;2.5&quot;);    // float(4.0)
+var_dump(&quot;3.14&quot; * 2);     // float(6.28)
+</code></pre>
+<h3 id="konversi-ke-boolean">Konversi ke Boolean <a href="#konversi-ke-boolean" class="anchor" aria-hidden="true">#</a></h3>
+<pre><code class="language-php">&lt;?php
+if (&quot;Hello&quot;) { }       // true
+if (&quot;&quot;) { }            // false
+if (&quot;0&quot;) { }           // false (!!)
+if (0) { }             // false
+if ([]) { }            // false
+if ([0]) { }           // true
+</code></pre>
+<h3 id="konversi-ke-null">Konversi ke Null <a href="#konversi-ke-null" class="anchor" aria-hidden="true">#</a></h3>
+<pre><code class="language-php">&lt;?php
+var_dump((null) &quot;Hello&quot;);  // Syntax error — tidak valid
+// null hanya bisa di-assign langsung
+</code></pre>
+<hr>
+<h2 id="konversi-tipe-eksplisit-casting">Konversi Tipe Eksplisit (Casting) <a href="#konversi-tipe-eksplisit-casting" class="anchor" aria-hidden="true">#</a></h2>
+<h3 id="casting-dengan-tipe">Casting dengan <code>(tipe)</code> <a href="#casting-dengan-tipe" class="anchor" aria-hidden="true">#</a></h3>
+<pre><code class="language-php">&lt;?php
+$nilai = &quot;42&quot;;
+
+var_dump((int) $nilai);     // int(42)
+var_dump((float) $nilai);   // float(42.0)
+var_dump((string) 42);      // string(2) &quot;42&quot;
+var_dump((bool) $nilai);    // bool(true)
+var_dump((array) $nilai);   // array(1) { [0]=&gt; string(2) &quot;42&quot; }
+var_dump((object) $nilai);  // object(stdClass)
+</code></pre>
+<h3 id="tipe-casting-yang-tersedia">Tipe Casting yang Tersedia <a href="#tipe-casting-yang-tersedia" class="anchor" aria-hidden="true">#</a></h3>
+<table>
+<thead>
+<tr>
+<th>Cast</th>
+<th>Kegunaan</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>(int)</code> / <code>(integer)</code></td>
+<td>Integer</td>
+</tr>
+<tr>
+<td><code>(float)</code> / <code>(double)</code> / <code>(real)</code></td>
+<td>Float</td>
+</tr>
+<tr>
+<td><code>(string)</code></td>
+<td>String</td>
+</tr>
+<tr>
+<td><code>(bool)</code> / <code>(boolean)</code></td>
+<td>Boolean</td>
+</tr>
+<tr>
+<td><code>(array)</code></td>
+<td>Array</td>
+</tr>
+<tr>
+<td><code>(object)</code></td>
+<td>Object</td>
+</tr>
+<tr>
+<td><code>(unset)</code></td>
+<td>NULL (deprecated di PHP 8)</td>
+</tr>
+</tbody>
+</table>
+<h3 id="fungsi-konversi">Fungsi Konversi <a href="#fungsi-konversi" class="anchor" aria-hidden="true">#</a></h3>
+<pre><code class="language-php">&lt;?php
+$nilai = &quot;42&quot;;
+
+var_dump(intval($nilai));       // int(42)
+var_dump(floatval($nilai));     // float(42.0)
+var_dump(strval(42));           // string(2) &quot;42&quot;
+var_dump(boolval(&quot;0&quot;));         // bool(false)
+
+// settype() — mengubah tipe variabel in-place
+$angka = &quot;42&quot;;
+settype($angka, &quot;integer&quot;);
+var_dump($angka);  // int(42)
+</code></pre>
+<h3 id="contoh-casting">Contoh Casting <a href="#contoh-casting" class="anchor" aria-hidden="true">#</a></h3>
+<pre><code class="language-php">&lt;?php
+// String ke integer
+$str = &quot;42abc&quot;;
+var_dump((int) $str);      // int(42) — berhenti di non-digit
+var_dump(intval(&quot;abc&quot;));   // int(0)
+
+// String ke float
+var_dump((float) &quot;3.14abc&quot;); // float(3.14)
+
+// Float ke integer (truncate)
+var_dump((int) 3.99);      // int(3) — truncate, bukan round!
+var_dump(round(3.99));     // float(4.0)
+var_dump(ceil(3.01));      // float(4.0)
+var_dump(floor(3.99));     // float(3.0)
+
+// Integer ke string
+$num = 42;
+var_dump((string) $num);   // string(2) &quot;42&quot;
+
+// Array ke string (hati-hati!)
+$arr = [1, 2, 3];
+var_dump((string) $arr);   // &quot;Array&quot; + warning
+
+// Boolean ke integer
+var_dump((int) true);      // int(1)
+var_dump((int) false);     // int(0)
+</code></pre>
+<h3 id="casting-array">Casting Array <a href="#casting-array" class="anchor" aria-hidden="true">#</a></h3>
+<pre><code class="language-php">&lt;?php
+// Scalar ke array
+var_dump((array) &quot;Hello&quot;);
+// array(1) { [0]=&gt; string(5) &quot;Hello&quot; }
+
+var_dump((array) 42);
+// array(1) { [0]=&gt; int(42) }
+
+var_dump((array) null);
+// array(0) {}
+
+// Object ke array
+class User {
+    public $nama = &quot;Budi&quot;;
+    public $umur = 25;
+}
+$user = new User();
+var_dump((array) $user);
+// array(2) { [&quot;nama&quot;]=&gt; string(4) &quot;Budi&quot; [&quot;umur&quot;]=&gt; int(25) }
+
+// Array ke object
+$arr = [&quot;nama&quot; =&gt; &quot;Budi&quot;, &quot;umur&quot; =&gt; 25];
+$obj = (object) $arr;
+echo $obj-&gt;nama;  // &quot;Budi&quot;
+</code></pre>
+<hr>
+<h2 id="perbandingan-longgar-vs-ketat">Perbandingan Longgar vs Ketat <a href="#perbandingan-longgar-vs-ketat" class="anchor" aria-hidden="true">#</a></h2>
+<p>Perbedaan antara <code>==</code> dan <code>===</code> adalah sumber bug paling umum di PHP.</p>
+<h3 id="-longgar--konversi-tipe"><code>==</code> (Longgar) — Konversi Tipe <a href="#-longgar--konversi-tipe" class="anchor" aria-hidden="true">#</a></h3>
+<pre><code class="language-php">&lt;?php
+var_dump(0 == &quot;&quot;);        // bool(true)  (!!)
+var_dump(0 == &quot;0&quot;);       // bool(true)
+var_dump(&quot;&quot; == &quot;0&quot;);      // bool(false)
+var_dump(1 == &quot;1&quot;);       // bool(true)
+var_dump(1 == &quot;1.0&quot;);     // bool(true)
+var_dump(&quot;abc&quot; == 0);     // bool(false) di PHP 8 (sebelumnya true!)
+var_dump(null == false);  // bool(true)
+var_dump([] == false);    // bool(true)
+var_dump(&quot;1&quot; == &quot;01&quot;);    // bool(true)
+var_dump(&quot;10&quot; == &quot;1e1&quot;);  // bool(true)
+var_dump(100 == &quot;1e2&quot;);   // bool(true)
+</code></pre>
+<h3 id="-ketat--tanpa-konversi"><code>===</code> (Ketat) — Tanpa Konversi <a href="#-ketat--tanpa-konversi" class="anchor" aria-hidden="true">#</a></h3>
+<pre><code class="language-php">&lt;?php
+var_dump(0 === &quot;&quot;);       // bool(false)
+var_dump(0 === &quot;0&quot;);      // bool(false)
+var_dump(1 === &quot;1&quot;);      // bool(false)
+var_dump(1 === 1.0);      // bool(false) — int vs float
+var_dump(null === false); // bool(false)
+var_dump([] === false);   // bool(false)
+</code></pre>
+<h3 id="tabel-perbandingan">Tabel Perbandingan <a href="#tabel-perbandingan" class="anchor" aria-hidden="true">#</a></h3>
+<table>
+<thead>
+<tr>
+<th>Ekspresi</th>
+<th><code>==</code></th>
+<th><code>===</code></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>0 == &quot;&quot;</code></td>
+<td><code>true</code></td>
+<td><code>false</code></td>
+</tr>
+<tr>
+<td><code>0 == &quot;0&quot;</code></td>
+<td><code>true</code></td>
+<td><code>false</code></td>
+</tr>
+<tr>
+<td><code>1 == &quot;1&quot;</code></td>
+<td><code>true</code></td>
+<td><code>false</code></td>
+</tr>
+<tr>
+<td><code>1 == 1.0</code></td>
+<td><code>true</code></td>
+<td><code>false</code></td>
+</tr>
+<tr>
+<td><code>null == false</code></td>
+<td><code>true</code></td>
+<td><code>false</code></td>
+</tr>
+<tr>
+<td><code>[] == false</code></td>
+<td><code>true</code></td>
+<td><code>false</code></td>
+</tr>
+<tr>
+<td><code>&quot;abc&quot; == 0</code></td>
+<td><code>false</code> (PHP 8)</td>
+<td><code>false</code></td>
+</tr>
+</tbody>
+</table>
+<blockquote>
+<p><strong>Rekomendasi:</strong> <strong>Selalu gunakan <code>===</code> dan <code>!==</code></strong> kecuali Anda benar-benar memahami konsekuensi konversi tipe.</p>
+</blockquote>
+<h3 id="in_array-dan-array_search--mode-ketat"><code>in_array()</code> dan <code>array_search()</code> — Mode Ketat <a href="#in_array-dan-array_search--mode-ketat" class="anchor" aria-hidden="true">#</a></h3>
+<pre><code class="language-php">&lt;?php
+$arr = [0, 1, 2, 3];
+
+// ❌ Longgar — &quot;abc&quot; dianggap sama dengan 0
+var_dump(in_array(&quot;abc&quot;, $arr));       // bool(true) di PHP 7, false di PHP 8
+
+// ✅ Ketat — gunakan parameter ketiga
+var_dump(in_array(&quot;abc&quot;, $arr, true)); // bool(false)
+
+var_dump(array_search(&quot;1&quot;, $arr));        // int(1) — longgar
+var_dump(array_search(&quot;1&quot;, $arr, true));  // bool(false) — ketat
+</code></pre>
+<blockquote>
+<p><strong>Tips:</strong> Selalu berikan <code>true</code> sebagai parameter ketiga pada <code>in_array()</code> dan <code>array_search()</code>.</p>
+</blockquote>
+<hr>
+<h2 id="fungsi-konversi-berguna">Fungsi Konversi Berguna <a href="#fungsi-konversi-berguna" class="anchor" aria-hidden="true">#</a></h2>
+<h3 id="is_numeric"><code>is_numeric()</code> <a href="#is_numeric" class="anchor" aria-hidden="true">#</a></h3>
+<p>Mengecek apakah nilai adalah angka atau string numerik.</p>
+<pre><code class="language-php">&lt;?php
+var_dump(is_numeric(42));       // bool(true)
+var_dump(is_numeric(&quot;42&quot;));     // bool(true)
+var_dump(is_numeric(&quot;42.5&quot;));   // bool(true)
+var_dump(is_numeric(&quot;0x1A&quot;));   // bool(false) sejak PHP 7
+var_dump(is_numeric(&quot;abc&quot;));    // bool(false)
+var_dump(is_numeric(&quot;42abc&quot;));  // bool(false)
+var_dump(is_numeric(&quot;&quot;));       // bool(false)
+var_dump(is_numeric(null));     // bool(false)
+</code></pre>
+<h3 id="ctype_-functions"><code>ctype_*</code> Functions <a href="#ctype_-functions" class="anchor" aria-hidden="true">#</a></h3>
+<pre><code class="language-php">&lt;?php
+var_dump(ctype_digit(&quot;12345&quot;));    // bool(true)
+var_dump(ctype_digit(&quot;123a&quot;));     // bool(false)
+var_dump(ctype_alpha(&quot;Hello&quot;));    // bool(true)
+var_dump(ctype_alnum(&quot;Hello123&quot;)); // bool(true)
+var_dump(ctype_upper(&quot;HELLO&quot;));    // bool(true)
+var_dump(ctype_lower(&quot;hello&quot;));    // bool(true)
+</code></pre>
+<h3 id="filter_var"><code>filter_var()</code> <a href="#filter_var" class="anchor" aria-hidden="true">#</a></h3>
+<p>Validasi dan sanitasi input — sangat berguna untuk data dari user.</p>
+<pre><code class="language-php">&lt;?php
+// Validasi integer
+var_dump(filter_var(&quot;42&quot;, FILTER_VALIDATE_INT));     // int(42)
+var_dump(filter_var(&quot;abc&quot;, FILTER_VALIDATE_INT));    // bool(false)
+var_dump(filter_var(&quot;0&quot;, FILTER_VALIDATE_INT));      // int(0)
+var_dump(filter_var(&quot;42&quot;, FILTER_VALIDATE_INT, [
+    &quot;options&quot; =&gt; [&quot;min_range&quot; =&gt; 1, &quot;max_range&quot; =&gt; 100]
+])); // bool(false) — di luar rentang
+
+// Validasi email
+var_dump(filter_var(&quot;budi@example.com&quot;, FILTER_VALIDATE_EMAIL)); // string
+var_dump(filter_var(&quot;bukan-email&quot;, FILTER_VALIDATE_EMAIL));      // bool(false)
+
+// Validasi URL
+var_dump(filter_var(&quot;https://example.com&quot;, FILTER_VALIDATE_URL)); // string
+
+// Validasi boolean
+var_dump(filter_var(&quot;true&quot;, FILTER_VALIDATE_BOOLEAN));  // bool(true)
+var_dump(filter_var(&quot;false&quot;, FILTER_VALIDATE_BOOLEAN)); // bool(false)
+var_dump(filter_var(&quot;1&quot;, FILTER_VALIDATE_BOOLEAN));     // bool(true)
+var_dump(filter_var(&quot;0&quot;, FILTER_VALIDATE_BOOLEAN));     // bool(false)
+
+// Sanitasi string (hapus karakter berbahaya)
+var_dump(filter_var(&quot;&lt;script&gt;alert('xss')&lt;/script&gt;&quot;, FILTER_SANITIZE_SPECIAL_CHARS));
+// &quot;&amp;lt;script&amp;gt;alert(&amp;#039;xss&amp;#039;)&amp;lt;/script&amp;gt;&quot;
+
+// Sanitasi email
+var_dump(filter_var(&quot;budi@example.com&lt;script&gt;&quot;, FILTER_SANITIZE_EMAIL));
+// &quot;budi@example.comscript&quot;
+</code></pre>
+<h3 id="settype--mengubah-tipe-in-place"><code>settype()</code> — Mengubah Tipe In-Place <a href="#settype--mengubah-tipe-in-place" class="anchor" aria-hidden="true">#</a></h3>
+<pre><code class="language-php">&lt;?php
+$nilai = &quot;42&quot;;
+settype($nilai, &quot;integer&quot;);
+var_dump($nilai);  // int(42)
+
+$nilai = 42;
+settype($nilai, &quot;string&quot;);
+var_dump($nilai);  // string(2) &quot;42&quot;
+
+$nilai = &quot;3.14&quot;;
+settype($nilai, &quot;float&quot;);
+var_dump($nilai);  // float(3.14)
+
+// Tipe yang didukung: &quot;int&quot;, &quot;integer&quot;, &quot;float&quot;, &quot;double&quot;, &quot;string&quot;, &quot;bool&quot;, &quot;boolean&quot;, &quot;array&quot;, &quot;object&quot;, &quot;null&quot;
+</code></pre>
+<hr>
+<h2 id="contoh-praktis-validasi-input-form">Contoh Praktis: Validasi Input Form <a href="#contoh-praktis-validasi-input-form" class="anchor" aria-hidden="true">#</a></h2>
+<p>Mari gabungkan konsep tipe data dan konversi untuk validasi input:</p>
+<pre><code class="language-php">&lt;?php
+function validasiForm(array $input): array {
+    $error = [];
+
+    // Nama — string, minimal 3 karakter
+    $nama = trim($input['nama'] ?? '');
+    if ($nama === '') {
+        $error['nama'] = 'Nama wajib diisi';
+    } elseif (mb_strlen($nama) &lt; 3) {
+        $error['nama'] = 'Nama minimal 3 karakter';
+    }
+
+    // Umur — integer, 17-100
+    $umurRaw = $input['umur'] ?? '';
+    $umur = filter_var($umurRaw, FILTER_VALIDATE_INT, [
+        'options' =&gt; ['min_range' =&gt; 17, 'max_range' =&gt; 100]
+    ]);
+    if ($umur === false) {
+        $error['umur'] = 'Umur harus bilangan bulat antara 17 dan 100';
+    }
+
+    // Email — valid
+    $email = filter_var($input['email'] ?? '', FILTER_VALIDATE_EMAIL);
+    if ($email === false) {
+        $error['email'] = 'Email tidak valid';
+    }
+
+    // Harga — float positif
+    $hargaRaw = $input['harga'] ?? '';
+    $harga = filter_var($hargaRaw, FILTER_VALIDATE_FLOAT);
+    if ($harga === false || $harga &lt; 0) {
+        $error['harga'] = 'Harga harus angka positif';
+    }
+
+    // Aktif — boolean
+    $aktif = filter_var($input['aktif'] ?? false, FILTER_VALIDATE_BOOLEAN);
+
+    return [
+        'valid' =&gt; empty($error),
+        'error' =&gt; $error,
+        'data' =&gt; empty($error) ? [
+            'nama' =&gt; $nama,
+            'umur' =&gt; $umur,
+            'email' =&gt; $email,
+            'harga' =&gt; $harga,
+            'aktif' =&gt; $aktif,
+        ] : null,
+    ];
+}
+
+// Uji
+$hasil = validasiForm([
+    'nama' =&gt; 'Budi Santoso',
+    'umur' =&gt; '25',
+    'email' =&gt; 'budi@example.com',
+    'harga' =&gt; '150000.50',
+    'aktif' =&gt; 'true',
+]);
+
+var_dump($hasil);
+// [
+//   &quot;valid&quot; =&gt; true,
+//   &quot;error&quot; =&gt; [],
+//   &quot;data&quot; =&gt; [
+//     &quot;nama&quot; =&gt; &quot;Budi Santoso&quot;,
+//     &quot;umur&quot; =&gt; 25,
+//     &quot;email&quot; =&gt; &quot;budi@example.com&quot;,
+//     &quot;harga&quot; =&gt; 150000.5,
+//     &quot;aktif&quot; =&gt; true,
+//   ]
+// ]
+
+$hasil2 = validasiForm([
+    'nama' =&gt; 'B',
+    'umur' =&gt; '15',
+    'email' =&gt; 'bukan-email',
+    'harga' =&gt; '-100',
+]);
+
+var_dump($hasil2['error']);
+// [
+//   &quot;nama&quot; =&gt; &quot;Nama minimal 3 karakter&quot;,
+//   &quot;umur&quot; =&gt; &quot;Umur harus bilangan bulat antara 17 dan 100&quot;,
+//   &quot;email&quot; =&gt; &quot;Email tidak valid&quot;,
+//   &quot;harga&quot; =&gt; &quot;Harga harus angka positif&quot;,
+// ]
+</code></pre>
+<hr>
+<h2 id="ringkasan">Ringkasan <a href="#ringkasan" class="anchor" aria-hidden="true">#</a></h2>
+<table>
+<thead>
+<tr>
+<th>Tipe</th>
+<th>Cek</th>
+<th>Cast</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>string</code></td>
+<td><code>is_string()</code></td>
+<td><code>(string)</code></td>
+</tr>
+<tr>
+<td><code>int</code></td>
+<td><code>is_int()</code></td>
+<td><code>(int)</code></td>
+</tr>
+<tr>
+<td><code>float</code></td>
+<td><code>is_float()</code></td>
+<td><code>(float)</code></td>
+</tr>
+<tr>
+<td><code>bool</code></td>
+<td><code>is_bool()</code></td>
+<td><code>(bool)</code></td>
+</tr>
+<tr>
+<td><code>null</code></td>
+<td><code>is_null()</code></td>
+<td>—</td>
+</tr>
+<tr>
+<td><code>array</code></td>
+<td><code>is_array()</code></td>
+<td><code>(array)</code></td>
+</tr>
+<tr>
+<td><code>object</code></td>
+<td><code>is_object()</code></td>
+<td><code>(object)</code></td>
+</tr>
+<tr>
+<td><code>numeric</code></td>
+<td><code>is_numeric()</code></td>
+<td>—</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Falsy values di PHP:</strong> <code>false</code>, <code>0</code>, <code>0.0</code>, <code>&quot;&quot;</code>, <strong><code>&quot;0&quot;</code></strong>, <code>[]</code>, <code>null</code>.</p>
+<p>Poin penting:</p>
+<ul>
+<li>PHP <strong>loosely typed</strong> — konversi tipe terjadi otomatis.</li>
+<li><strong><code>&quot;0&quot;</code> adalah falsy</strong> di PHP (beda dengan JavaScript).</li>
+<li><strong>Selalu gunakan <code>===</code></strong> dan <code>!==</code> untuk perbandingan.</li>
+<li><code>in_array()</code> dan <code>array_search()</code> — <strong>selalu</strong> berikan <code>true</code> sebagai parameter ketiga.</li>
+<li><strong>Jangan gunakan float untuk uang</strong> — gunakan integer atau BCMath.</li>
+<li><code>(int) 3.99</code> → <code>3</code> (truncate, bukan round).</li>
+<li><strong>PHP 8</strong> melempar <code>TypeError</code> untuk operasi string non-numerik — lebih aman dari PHP 7.</li>
+<li>Gunakan <strong><code>filter_var()</code></strong> untuk validasi input dari user.</li>
+<li>Gunakan <strong><code>mb_*</code></strong> functions untuk string Unicode.</li>
+<li><strong><code>isset()</code></strong> false untuk <code>null</code>; <strong><code>is_null()</code></strong> true untuk <code>null</code>.</li>
+</ul>
+<p>Pada artikel berikutnya, kita akan membahas <strong>Struktur Kontrol &amp; Perulangan</strong> — <code>if</code>, <code>switch</code>, <code>for</code>, <code>while</code>, <code>foreach</code>, dan lainnya.</p>
+
+			<div class="page-footer-meta d-flex flex-column flex-md-row justify-content-between">
+				</div>
+			<div class="docs-navigation d-flex justify-content-between">
+	
+	<a href="/php/tutorial/03-sintaks-variabel/">
+			<div class="card my-1">
+				<div class="card-body py-2">
+					&larr; Sintaks Dasar &amp; Variabel PHP
+				</div>
+			</div>
+		</a>
+	<a class="ms-auto" href="/php/tutorial/05-struktur-kontrol/">
+			<div class="card my-1">
+				<div class="card-body py-2">
+					Struktur Kontrol &amp; Perulangan &rarr;
+				</div>
+			</div>
+		</a>
+	</div>
+
+			
+		</main>
+	</div>
+
+      </div>
+    </div>
+    
+    
+    <footer class="footer text-muted">
+  <div class="container-xxl">
+    <div class="row">
+      <div class="col-lg-8 order-last order-lg-first">
+        <ul class="list-inline">
+          <li class="list-inline-item">Powered by <a class="text-muted" href="https://gohugo.io/">Hugo</a> and <a class="text-muted" href="https://github.com/">Github</a></li>
+        </ul>
+      </div>
+      <div class="col-lg-8 order-first order-lg-last text-lg-end">
+        <ul class="list-inline">
+          </ul>
+      </div>
+    </div>
+  </div>
+</footer>
+    
+
+<script src="/js/bootstrap.min.650aeec64c81d69d4c0850fc73c93da3f0330cec0a27772feed7f90f60baa5f47f1c45687d71914bdafd1c4e860d40f6dc08ede27a2f08431ff929c9a2d24621.js" integrity="sha512-ZQruxkyB1p1MCFD8c8k9o/AzDOwKJ3cv7tf5D2C6pfR/HEVofXGRS9r9HE6GDUD23Ajt4novCEMf&#43;SnJotJGIQ==" crossorigin="anonymous" defer></script>
+  <script src="/js/highlight.min.ec234bd8a5f487aaffe50a89f17b14501b1bb65633cf177cffd4cb84702dd7030edc08712dceb8dc27ac7e54b53240a08bf0b8d951572ee582bcdbbd06a48a7b.js" integrity="sha512-7CNL2KX0h6r/5QqJ8XsUUBsbtlYzzxd8/9TLhHAt1wMO3AhxLc643CesflS1MkCgi/C42VFXLuWCvNu9BqSKew==" crossorigin="anonymous" defer></script>
+  <script src="/main.min.cd1e5e6b40065b3f7f7fd8548a528fac67019754eda0f37b9918d02d154fc9ef6a22742f6513b0572ad9163152e151ec36221fbeafbecd7759c3dab1f19b64b9.js" integrity="sha512-zR5ea0AGWz9/f9hUilKPrGcBl1TtoPN7mRjQLRVPye9qInQvZROwVyrZFjFS4VHsNiIfvq&#43;&#43;zXdZw9qx8ZtkuQ==" crossorigin="anonymous" defer></script>
+  <script src="https://kaban.my.id/index.min.46a4c59d74237f1f9d9ebd686fe4545183e6a6c20893b8229aebc3844e6219b64f2f9675871fb41ea7cf595279ed0e6cdb4b62fe45c1690693acf75d76c798c1.js" integrity="sha512-RqTFnXQjfx&#43;dnr1ob&#43;RUUYPmpsIIk7gimuvDhE5iGbZPL5Z1hx&#43;0HqfPWVJ57Q5s20ti/kXBaQaTrPdddseYwQ==" crossorigin="anonymous" defer></script>
+  
+    <div class="d-flex fixed-bottom pb-4 pb-lg-5 pe-4 pe-lg-5">
+      <a id="toTop" href="#" class="btn btn-outline-primary rounded-circle ms-auto p-2"><span class="visually-hidden">Top</span><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-chevron-up"><polyline points="18 15 12 9 6 15"></polyline></svg></a>
+    </div>
+    
+  </body>
+</html>

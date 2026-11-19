@@ -1,0 +1,1652 @@
+<!doctype html>
+<html lang="en-US">
+  <head>
+  <meta charset="utf-8">
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <link rel="preload" as="font" href="https://kaban.my.id/fonts/vendor/jost/jost-v4-latin-regular.woff2" type="font/woff2" crossorigin>
+<link rel="preload" as="font" href="https://kaban.my.id/fonts/vendor/jost/jost-v4-latin-500.woff2" type="font/woff2" crossorigin>
+<link rel="preload" as="font" href="https://kaban.my.id/fonts/vendor/jost/jost-v4-latin-700.woff2" type="font/woff2" crossorigin>
+
+  <script>(()=>{var t=window.matchMedia&&window.matchMedia("(prefers-color-scheme: dark)").matches,e=localStorage.getItem("theme");t&&e===null&&(localStorage.setItem("theme","dark"),document.documentElement.setAttribute("data-dark-mode","")),t&&e==="dark"&&document.documentElement.setAttribute("data-dark-mode",""),e==="dark"&&document.documentElement.setAttribute("data-dark-mode","")})()</script>
+
+  <link rel="stylesheet" href="https://kaban.my.id/main.4296e689affcd00e933b8954c10fc43cd1a5f16d5552e78183d12ea50d3e0bf5a596df23a379a4936743f01a7cd8ba048a628b2b9b60b34aa49fad468287100a.css" integrity="sha512-Qpbmia/80A6TO4lUwQ/EPNGl8W1VUueBg9EupQ0&#43;C/Wllt8jo3mkk2dD8Bp82LoEimKLK5tgs0qkn61GgocQCg==" crossorigin="anonymous">
+<noscript><style>img.lazyload { display: none; }</style></noscript>
+  <meta name="robots" content="index, follow">
+    <meta name="googlebot" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1">
+    <meta name="bingbot" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1">
+  <title>Sintaks Dasar &amp; Variabel PHP - Roberto Kaban Blog&#39;s</title>
+<meta name="description" content="Panduan lengkap sintaks dasar PHP: tag PHP, variabel, tipe data, operator, dan konstanta.">
+<link rel="canonical" href="https://kaban.my.id/php/tutorial/03-sintaks-variabel/">
+<meta property="og:locale" content="en_US">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Sintaks Dasar &amp; Variabel PHP">
+<meta property="og:description" content="Panduan lengkap sintaks dasar PHP: tag PHP, variabel, tipe data, operator, dan konstanta.">
+<meta property="og:url" content="https://kaban.my.id/php/tutorial/03-sintaks-variabel/">
+<meta property="og:site_name" content="Roberto Kaban Blog&#39;s">
+<meta property="article:published_time" content="2023-01-05T08:00:00+00:00">
+  <meta property="article:modified_time" content="2023-01-05T08:00:00+00:00">
+  
+  <meta property="og:image" content="https://kaban.my.id/doks.png"/>
+      <meta property="og:image:alt" content="Roberto Kaban Blog&#39;s">
+    
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:site" content="@robertokaban">
+<meta name="twitter:creator" content="@robertokaban">
+<meta name="twitter:title" content="Sintaks Dasar &amp; Variabel PHP">
+<meta name="twitter:description" content="Panduan lengkap sintaks dasar PHP: tag PHP, variabel, tipe data, operator, dan konstanta.">
+<meta name="twitter:image" content="https://kaban.my.id/doks.png">
+    <meta name="twitter:image:alt" content="Sintaks Dasar &amp; Variabel PHP">
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "Person",
+        "@id": "https://kaban.my.id/#/schema/person/1",
+      "name": "BlogRobertoKaban",
+      "url": "https://kaban.my.id/",
+      "sameAs": [
+        "https://twitter.com/robertokaban"
+        , "https://github.com/robertokaban"
+        ],
+      "image": {
+          "@type": "ImageObject",
+          "@id": "https://kaban.my.id/#/schema/image/1",
+          "url": "https://kaban.my.id/doks.png",
+          "width":  1280 ,
+          "height":  640 ,
+          "caption": "BlogRobertoKaban"
+        }
+      },
+    {
+      "@type": "WebSite",
+      "@id": "https://kaban.my.id/#/schema/website/1",
+      "url": "https://kaban.my.id/",
+      "name": "Roberto Kaban Blog\u0027s",
+      "description": "Hanya sebuah catatan kecil untuk hal yang tidak ingin dilupakan.",
+      "publisher": {
+          "@id": "https://kaban.my.id/#/schema/person/1"
+        }
+      },
+    {
+      "@type": "WebPage",
+      "@id": "https://kaban.my.id/php/tutorial/03-sintaks-variabel/",
+      "url": "https://kaban.my.id/php/tutorial/03-sintaks-variabel/",
+      "name": "Sintaks Dasar \u0026 Variabel PHP",
+      "description": "Panduan lengkap sintaks dasar PHP: tag PHP, variabel, tipe data, operator, dan konstanta.",
+      "isPartOf": {
+        "@id": "https://kaban.my.id/#/schema/website/1"
+      },
+      "about": {
+          "@id": "https://kaban.my.id/#/schema/person/1"
+        },
+      "datePublished": "2023-01-05T08:00:00CET",
+      "dateModified": "2023-01-05T08:00:00CET",
+      "breadcrumb": {
+        "@id": "https://kaban.my.id/php/tutorial/03-sintaks-variabel/#/schema/breadcrumb/1"
+      },
+      "primaryImageOfPage": {
+        "@id": "https://kaban.my.id/php/tutorial/03-sintaks-variabel/#/schema/image/2"
+      },
+      "inLanguage": "en-US",
+      "potentialAction": [{
+        "@type": "ReadAction", "target": ["https://kaban.my.id/php/tutorial/03-sintaks-variabel/"]
+      }]
+    },
+    {
+      "@type": "BreadcrumbList",
+      "@id": "https://kaban.my.id/php/tutorial/03-sintaks-variabel/#/schema/breadcrumb/1",
+      "name": "Breadcrumbs",
+      "itemListElement": [{
+        "@type": "ListItem",
+        "position":  1 ,
+        "item": {
+          "@type": "WebPage",
+          "@id": "https://kaban.my.id/",
+          "url": "https://kaban.my.id/",
+          "name": "Home"
+          }
+        },{
+        "@type": "ListItem",
+        "position":  2 ,
+        "item": {
+          "@type": "WebPage",
+          "@id": "https://kaban.my.id/php/",
+          "url": "https://kaban.my.id/php/",
+          "name": "Php"
+          }
+        },{
+        "@type": "ListItem",
+        "position":  3 ,
+        "item": {
+          "@type": "WebPage",
+          "@id": "https://kaban.my.id/php/tutorial/",
+          "url": "https://kaban.my.id/php/tutorial/",
+          "name": "Tutorial"
+          }
+        },{
+        "@type": "ListItem",
+        "position":  4 ,
+        "item": {
+          "@id": "https://kaban.my.id/php/tutorial/03-sintaks-variabel/"
+          }
+        }]
+    },
+
+    {
+      "@context": "https://schema.org",
+      "@graph": [
+        {
+          "@type": "ImageObject",
+          "@id": "https://kaban.my.id/php/tutorial/03-sintaks-variabel/#/schema/image/2",
+          "url": "https://kaban.my.id/doks.png",
+          "contentUrl": "https://kaban.my.id/doks.png",
+          "caption": "Sintaks Dasar \u0026 Variabel PHP"
+        }
+      ]
+    }
+
+  ]
+}
+</script>
+
+  <meta name="theme-color" content="#fff">
+<link rel="icon" href="https://kaban.my.id/favicon.ico" sizes="any">
+<link rel="icon" type="image/svg+xml" href="https://kaban.my.id/favicon.svg">
+<link rel="apple-touch-icon" sizes="180x180" href="https://kaban.my.id/apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="32x32" href="https://kaban.my.id/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="https://kaban.my.id/favicon-16x16.png">
+<link rel="manifest" crossorigin="use-credentials" href="https://kaban.my.id/site.webmanifest">
+
+  
+
+
+  
+  
+  
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-60VSDZFQR5"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-60VSDZFQR5');
+</script>
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6664512614760985"
+     crossorigin="anonymous"></script>
+</head>
+
+  <body class="php single">
+    <div class="sticky-top">
+<div class="header-bar"></div>
+
+<header class="navbar navbar-expand-lg navbar-light doks-navbar">
+  <nav class="container-xxl flex-wrap flex-lg-nowrap" aria-label="Main navigation">
+
+    <a class="navbar-brand order-0" href="/" aria-label="Roberto Kaban Blog&#39;s">
+      Roberto Kaban Blog&#39;s
+    </a>
+
+    <button class="btn btn-menu order-2 d-block d-lg-none" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasDoks" aria-controls="offcanvasDoks" aria-label="Open main menu">
+      <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-menu"><line x1="3" y1="12" x2="21" y2="12"></line><line x1="3" y1="6" x2="21" y2="6"></line><line x1="3" y1="18" x2="21" y2="18"></line></svg>
+    </button>
+    <div class="offcanvas offcanvas-end border-0 py-lg-1" tabindex="-1" id="offcanvasDoks" data-bs-backdrop="true" aria-labelledby="offcanvasDoksLabel">
+      <div class="header-bar d-lg-none"></div>
+      <div class="offcanvas-header d-lg-none">
+        <h2 class="h5 offcanvas-title ps-2" id="offcanvasDoksLabel"><a class="text-dark" href="/">Roberto Kaban Blog&#39;s</a></h2>
+        <button type="button" class="btn-close text-reset me-2" data-bs-dismiss="offcanvas" aria-label="Close main menu"></button>
+      </div>
+      <div class="offcanvas-body p-4 p-lg-0">
+        <ul class="nav flex-column flex-lg-row align-items-lg-center mt-2 mt-lg-0 ms-lg-2 me-lg-auto">
+              <li class="nav-item">
+                <a class="nav-link ps-0 py-1" href="/about/">About Me</a>
+              </li>
+            
+          
+              <li class="nav-item">
+                <a class="nav-link ps-0 py-1" href="/contact/">Contact</a>
+              </li>
+            
+          
+              <li class="nav-item">
+                <a class="nav-link ps-0 py-1" href="/artikel/">Artikel</a>
+              </li>
+            
+          
+              <li class="nav-item">
+                <a class="nav-link ps-0 py-1" href="/coretanku/">Coretanku</a>
+              </li>
+            
+          </ul>
+
+        <hr class="text-black-50 my-4 d-lg-none">
+        <form class="doks-search position-relative flex-grow-1 ms-lg-auto me-lg-2">
+          <input id="search" class="form-control is-search" type="search" placeholder="Cari di blog ini..." aria-label="Cari di blog ini..." autocomplete="off">
+          <div id="suggestions" class="shadow bg-white rounded d-none"></div>
+        </form>
+        <hr class="text-black-50 my-4 d-lg-none">
+        <ul class="nav flex-column flex-lg-row">
+          <li class="nav-item">
+              <a class="nav-link social-link" href="https://github.com/robertokaban"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-github"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path></svg><small class="ms-2 d-lg-none">GitHub</small></a>
+            </li>
+          <li class="nav-item">
+              <a class="nav-link social-link" href="https://facebook.com/roberto.kaban"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-facebook"><path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"></path></svg><small class="ms-2 d-lg-none">Facebook</small></a>
+            </li>
+          <li class="nav-item">
+              <a class="nav-link social-link" href="https://twitter.com/robertokaban"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-twitter"><path d="M23 3a10.9 10.9 0 0 1-3.14 1.53 4.48 4.48 0 0 0-7.86 3v1A10.66 10.66 0 0 1 3 4s-4 9 5 13a11.64 11.64 0 0 1-7 2c9 5 20 0 20-11.5a4.5 4.5 0 0 0-.08-.83A7.72 7.72 0 0 0 23 3z"></path></svg><small class="ms-2 d-lg-none">Twitter</small></a>
+            </li>
+          <li class="nav-item">
+              <a class="nav-link social-link" href="https://youtube.com/@robertokaban"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-youtube"><path d="M10,15L15.19,12L10,9V15M21.56,7.17C21.69,7.64 21.78,8.27 21.84,9.07C21.91,9.87 21.94,10.56 21.94,11.16L22,12C22,14.19 21.84,15.8 21.56,16.83C21.31,17.73 20.73,18.31 19.83,18.56C19.36,18.69 18.5,18.78 17.18,18.84C15.88,18.91 14.69,18.94 13.59,18.94L12,19C7.81,19 5.2,18.84 4.17,18.56C3.27,18.31 2.69,17.73 2.44,16.83C2.31,16.36 2.22,15.73 2.16,14.93C2.09,14.13 2.06,13.44 2.06,12.84L2,12C2,9.81 2.16,8.2 2.44,7.17C2.69,6.27 3.27,5.69 4.17,5.44C4.64,5.31 5.5,5.22 6.82,5.16C8.12,5.09 9.31,5.06 10.41,5.06L12,5C16.19,5 18.8,5.16 19.83,5.44C20.73,5.69 21.31,6.27 21.56,7.17Z"></path></svg><small class="ms-2 d-lg-none">Youtube</small></a>
+            </li>
+          </ul>
+
+        
+        <hr class="text-black-50 my-4 d-lg-none">
+        <button id="mode" class="btn btn-link" type="button" aria-label="Toggle user interface mode">
+          <span class="toggle-dark"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-moon"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path></svg></span>
+          <span class="toggle-light"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-sun"><circle cx="12" cy="12" r="5"></circle><line x1="12" y1="1" x2="12" y2="3"></line><line x1="12" y1="21" x2="12" y2="23"></line><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line><line x1="1" y1="12" x2="3" y2="12"></line><line x1="21" y1="12" x2="23" y2="12"></line><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line></svg></span>
+        </button>
+        
+
+        </div>
+    </div>
+  </nav>
+</header>
+
+
+</div>
+
+
+<div class="container-xxl">
+  <aside class="doks-sidebar">
+    <nav id="doks-docs-nav" class="collapse d-lg-none" aria-label="Tertiary navigation">
+      
+<ul class="list-unstyled collapsible-sidebar">
+  
+    
+      
+      <li class="mb-1">
+        <button class="btn btn-toggle align-items-center rounded collapsed" data-bs-toggle="collapse" data-bs-target="#section-de2591224751442a3b2101e94880333c" aria-expanded="true">
+          Tutorial PHP
+        </button>
+        <div class="collapse show" id="section-de2591224751442a3b2101e94880333c">
+          <ul class="btn-toggle-nav list-unstyled fw-normal pb-1 small">
+            
+              
+                
+                <li><a class="docs-link rounded" href="https://kaban.my.id/php/tutorial/pengenalan/">Pengenalan PHP</a></li>
+              
+            
+              
+                
+                <li><a class="docs-link rounded" href="https://kaban.my.id/php/tutorial/02-instalasi-persiapan/">Instalasi &amp; Persiapan Lingkungan PHP</a></li>
+              
+            
+              
+                
+                <li><a class="docs-link rounded active" href="https://kaban.my.id/php/tutorial/03-sintaks-variabel/">Sintaks Dasar &amp; Variabel PHP</a></li>
+              
+            
+              
+                
+                <li><a class="docs-link rounded" href="https://kaban.my.id/php/tutorial/04-tipe-data-konversi/">Tipe Data &amp; Konversi</a></li>
+              
+            
+              
+                
+                <li><a class="docs-link rounded" href="https://kaban.my.id/php/tutorial/05-struktur-kontrol/">Struktur Kontrol &amp; Perulangan</a></li>
+              
+            
+          </ul>
+        </div>
+      </li>
+    
+  
+</ul>
+
+    </nav>
+  </aside>
+</div>
+
+    <div class="wrap container-xxl" role="document">
+      <div class="content">
+        
+	<div class="row flex-xl-nowrap">
+		<div class="col-lg-5 col-xl-4 docs-sidebar d-none d-lg-block">
+			<nav class="docs-links" aria-label="Main navigation">
+				
+<ul class="list-unstyled collapsible-sidebar">
+  
+    
+      
+      <li class="mb-1">
+        <button class="btn btn-toggle align-items-center rounded collapsed" data-bs-toggle="collapse" data-bs-target="#section-de2591224751442a3b2101e94880333c" aria-expanded="true">
+          Tutorial PHP
+        </button>
+        <div class="collapse show" id="section-de2591224751442a3b2101e94880333c">
+          <ul class="btn-toggle-nav list-unstyled fw-normal pb-1 small">
+            
+              
+                
+                <li><a class="docs-link rounded" href="https://kaban.my.id/php/tutorial/pengenalan/">Pengenalan PHP</a></li>
+              
+            
+              
+                
+                <li><a class="docs-link rounded" href="https://kaban.my.id/php/tutorial/02-instalasi-persiapan/">Instalasi &amp; Persiapan Lingkungan PHP</a></li>
+              
+            
+              
+                
+                <li><a class="docs-link rounded active" href="https://kaban.my.id/php/tutorial/03-sintaks-variabel/">Sintaks Dasar &amp; Variabel PHP</a></li>
+              
+            
+              
+                
+                <li><a class="docs-link rounded" href="https://kaban.my.id/php/tutorial/04-tipe-data-konversi/">Tipe Data &amp; Konversi</a></li>
+              
+            
+              
+                
+                <li><a class="docs-link rounded" href="https://kaban.my.id/php/tutorial/05-struktur-kontrol/">Struktur Kontrol &amp; Perulangan</a></li>
+              
+            
+          </ul>
+        </div>
+      </li>
+    
+  
+</ul>
+
+			</nav>
+		</div>
+		<nav class="docs-toc d-none d-xl-block col-xl-3" aria-label="Secondary navigation">
+			<div class="d-xl-none">
+  <button class="btn btn-outline-primary btn-sm doks-toc-toggle collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#onThisPage" aria-controls="doks-docs-nav" aria-expanded="false" aria-label="Toggle On this page navigation">
+    <span>Daftar isi</span>
+    <span>
+      <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" class="doks doks-expand" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><title>Expand</title><polyline points="7 13 12 18 17 13"></polyline><polyline points="7 6 12 11 17 6"></polyline></svg>
+      <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" class="doks doks-collapse" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><title>Collapse</title><polyline points="17 11 12 6 7 11"></polyline><polyline points="17 18 12 13 7 18"></polyline></svg>
+    </span>
+  </button>
+  <div class="collapse" id="onThisPage">
+    <div class="card card-body mt-3 py-1">
+      <div class="page-links">
+        <nav id="TableOfContents">
+  <ul>
+    <li><a href="#pendahuluan">Pendahuluan</a></li>
+    <li><a href="#tag-php">Tag PHP</a>
+      <ul>
+        <li><a href="#1-tag-standar-rekomendasikan">1. Tag Standar (Rekomendasikan)</a></li>
+        <li><a href="#2-tag-echo-singkat">2. Tag Echo Singkat</a></li>
+        <li><a href="#3-tag-pendek-hindari">3. Tag Pendek (Hindari)</a></li>
+        <li><a href="#4-tag-asp-hindari">4. Tag ASP (Hindari)</a></li>
+        <li><a href="#menyisipkan-php-ke-html">Menyisipkan PHP ke HTML</a></li>
+      </ul>
+    </li>
+    <li><a href="#komentar">Komentar</a></li>
+    <li><a href="#statement-dan-ekspresi">Statement dan Ekspresi</a></li>
+    <li><a href="#variabel">Variabel</a>
+      <ul>
+        <li><a href="#deklarasi-variabel">Deklarasi Variabel</a></li>
+        <li><a href="#aturan-penamaan-variabel">Aturan Penamaan Variabel</a></li>
+        <li><a href="#convention">Convention</a></li>
+        <li><a href="#variable-variables">Variable Variables</a></li>
+        <li><a href="#variabel-global-dan-globals">Variabel Global dan <code>$GLOBALS</code></a></li>
+      </ul>
+    </li>
+    <li><a href="#tipe-data">Tipe Data</a>
+      <ul>
+        <li><a href="#1-string">1. String</a></li>
+        <li><a href="#2-integer">2. Integer</a></li>
+        <li><a href="#3-float-double">3. Float (Double)</a></li>
+        <li><a href="#4-boolean">4. Boolean</a></li>
+        <li><a href="#5-null">5. Null</a></li>
+        <li><a href="#6-array">6. Array</a></li>
+        <li><a href="#7-object">7. Object</a></li>
+        <li><a href="#8-resource">8. Resource</a></li>
+        <li><a href="#ringkasan-tipe-data">Ringkasan Tipe Data</a></li>
+      </ul>
+    </li>
+    <li><a href="#mengecek-tipe-data">Mengecek Tipe Data</a>
+      <ul>
+        <li><a href="#var_dump--informasi-lengkap"><code>var_dump()</code> — Informasi Lengkap</a></li>
+        <li><a href="#gettype--nama-tipe"><code>gettype()</code> — Nama Tipe</a></li>
+        <li><a href="#is_-functions"><code>is_*</code> Functions</a></li>
+      </ul>
+    </li>
+    <li><a href="#operator">Operator</a>
+      <ul>
+        <li><a href="#1-operator-aritmatika">1. Operator Aritmatika</a></li>
+        <li><a href="#2-operator-penugasan">2. Operator Penugasan</a></li>
+        <li><a href="#3-operator-incrementdecrement">3. Operator Increment/Decrement</a></li>
+        <li><a href="#4-operator-perbandingan">4. Operator Perbandingan</a></li>
+        <li><a href="#5-operator-logika">5. Operator Logika</a></li>
+        <li><a href="#6-operator-string">6. Operator String</a></li>
+        <li><a href="#7-operator-ternary">7. Operator Ternary</a></li>
+        <li><a href="#8-operator-null-coalescing-">8. Operator Null Coalescing (<code>??</code>)</a></li>
+        <li><a href="#9-operator-nullsafe----php-8">9. Operator Nullsafe (<code>?-&gt;</code>) — PHP 8+</a></li>
+        <li><a href="#10-operator-instanceof">10. Operator <code>instanceof</code></a></li>
+      </ul>
+    </li>
+    <li><a href="#konstanta">Konstanta</a>
+      <ul>
+        <li><a href="#define"><code>define()</code></a></li>
+        <li><a href="#const-php-53-di-luar-class"><code>const</code> (PHP 5.3+, di luar class)</a></li>
+        <li><a href="#konstanta-class">Konstanta Class</a></li>
+        <li><a href="#konstanta-magic">Konstanta Magic</a></li>
+        <li><a href="#cek-konstanta">Cek Konstanta</a></li>
+      </ul>
+    </li>
+    <li><a href="#contoh-praktis-menghitung-total-belanja">Contoh Praktis: Menghitung Total Belanja</a></li>
+    <li><a href="#ringkasan">Ringkasan</a></li>
+  </ul>
+</nav>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="page-links d-none d-xl-block">
+  <h3>Daftar isi</h3>
+  <nav id="TableOfContents">
+  <ul>
+    <li><a href="#pendahuluan">Pendahuluan</a></li>
+    <li><a href="#tag-php">Tag PHP</a>
+      <ul>
+        <li><a href="#1-tag-standar-rekomendasikan">1. Tag Standar (Rekomendasikan)</a></li>
+        <li><a href="#2-tag-echo-singkat">2. Tag Echo Singkat</a></li>
+        <li><a href="#3-tag-pendek-hindari">3. Tag Pendek (Hindari)</a></li>
+        <li><a href="#4-tag-asp-hindari">4. Tag ASP (Hindari)</a></li>
+        <li><a href="#menyisipkan-php-ke-html">Menyisipkan PHP ke HTML</a></li>
+      </ul>
+    </li>
+    <li><a href="#komentar">Komentar</a></li>
+    <li><a href="#statement-dan-ekspresi">Statement dan Ekspresi</a></li>
+    <li><a href="#variabel">Variabel</a>
+      <ul>
+        <li><a href="#deklarasi-variabel">Deklarasi Variabel</a></li>
+        <li><a href="#aturan-penamaan-variabel">Aturan Penamaan Variabel</a></li>
+        <li><a href="#convention">Convention</a></li>
+        <li><a href="#variable-variables">Variable Variables</a></li>
+        <li><a href="#variabel-global-dan-globals">Variabel Global dan <code>$GLOBALS</code></a></li>
+      </ul>
+    </li>
+    <li><a href="#tipe-data">Tipe Data</a>
+      <ul>
+        <li><a href="#1-string">1. String</a></li>
+        <li><a href="#2-integer">2. Integer</a></li>
+        <li><a href="#3-float-double">3. Float (Double)</a></li>
+        <li><a href="#4-boolean">4. Boolean</a></li>
+        <li><a href="#5-null">5. Null</a></li>
+        <li><a href="#6-array">6. Array</a></li>
+        <li><a href="#7-object">7. Object</a></li>
+        <li><a href="#8-resource">8. Resource</a></li>
+        <li><a href="#ringkasan-tipe-data">Ringkasan Tipe Data</a></li>
+      </ul>
+    </li>
+    <li><a href="#mengecek-tipe-data">Mengecek Tipe Data</a>
+      <ul>
+        <li><a href="#var_dump--informasi-lengkap"><code>var_dump()</code> — Informasi Lengkap</a></li>
+        <li><a href="#gettype--nama-tipe"><code>gettype()</code> — Nama Tipe</a></li>
+        <li><a href="#is_-functions"><code>is_*</code> Functions</a></li>
+      </ul>
+    </li>
+    <li><a href="#operator">Operator</a>
+      <ul>
+        <li><a href="#1-operator-aritmatika">1. Operator Aritmatika</a></li>
+        <li><a href="#2-operator-penugasan">2. Operator Penugasan</a></li>
+        <li><a href="#3-operator-incrementdecrement">3. Operator Increment/Decrement</a></li>
+        <li><a href="#4-operator-perbandingan">4. Operator Perbandingan</a></li>
+        <li><a href="#5-operator-logika">5. Operator Logika</a></li>
+        <li><a href="#6-operator-string">6. Operator String</a></li>
+        <li><a href="#7-operator-ternary">7. Operator Ternary</a></li>
+        <li><a href="#8-operator-null-coalescing-">8. Operator Null Coalescing (<code>??</code>)</a></li>
+        <li><a href="#9-operator-nullsafe----php-8">9. Operator Nullsafe (<code>?-&gt;</code>) — PHP 8+</a></li>
+        <li><a href="#10-operator-instanceof">10. Operator <code>instanceof</code></a></li>
+      </ul>
+    </li>
+    <li><a href="#konstanta">Konstanta</a>
+      <ul>
+        <li><a href="#define"><code>define()</code></a></li>
+        <li><a href="#const-php-53-di-luar-class"><code>const</code> (PHP 5.3+, di luar class)</a></li>
+        <li><a href="#konstanta-class">Konstanta Class</a></li>
+        <li><a href="#konstanta-magic">Konstanta Magic</a></li>
+        <li><a href="#cek-konstanta">Cek Konstanta</a></li>
+      </ul>
+    </li>
+    <li><a href="#contoh-praktis-menghitung-total-belanja">Contoh Praktis: Menghitung Total Belanja</a></li>
+    <li><a href="#ringkasan">Ringkasan</a></li>
+  </ul>
+</nav>
+  </div>
+
+		</nav>
+		<main class="docs-content col-lg-11 col-xl-9">
+		
+				<nav aria-label="breadcrumb">
+					<ol class="breadcrumb">
+						<li class="breadcrumb-item"><a href="/">Home</a></li>
+<li class="breadcrumb-item"><a href="/php/">Php</a></li>
+<li class="breadcrumb-item"><a href="/php/tutorial/">Tutorial PHP</a></li>
+<li class="breadcrumb-item active" aria-current="page">Sintaks Dasar &amp; Variabel PHP</li>
+					</ol>
+				</nav>
+			
+			<h1>Sintaks Dasar &amp; Variabel PHP</h1>
+			<p class="lead">PHP memiliki sintaks yang mudah dipelajari, terutama bagi yang sudah familiar dengan bahasa C-like. Artikel ini membahas tag PHP, variabel, tipe data, operator, dan konstanta dengan contoh praktis.</p>
+			<nav class="d-xl-none" aria-label="Quaternary navigation">
+				<div class="d-xl-none">
+  <button class="btn btn-outline-primary btn-sm doks-toc-toggle collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#onThisPage" aria-controls="doks-docs-nav" aria-expanded="false" aria-label="Toggle On this page navigation">
+    <span>Daftar isi</span>
+    <span>
+      <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" class="doks doks-expand" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><title>Expand</title><polyline points="7 13 12 18 17 13"></polyline><polyline points="7 6 12 11 17 6"></polyline></svg>
+      <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" class="doks doks-collapse" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><title>Collapse</title><polyline points="17 11 12 6 7 11"></polyline><polyline points="17 18 12 13 7 18"></polyline></svg>
+    </span>
+  </button>
+  <div class="collapse" id="onThisPage">
+    <div class="card card-body mt-3 py-1">
+      <div class="page-links">
+        <nav id="TableOfContents">
+  <ul>
+    <li><a href="#pendahuluan">Pendahuluan</a></li>
+    <li><a href="#tag-php">Tag PHP</a>
+      <ul>
+        <li><a href="#1-tag-standar-rekomendasikan">1. Tag Standar (Rekomendasikan)</a></li>
+        <li><a href="#2-tag-echo-singkat">2. Tag Echo Singkat</a></li>
+        <li><a href="#3-tag-pendek-hindari">3. Tag Pendek (Hindari)</a></li>
+        <li><a href="#4-tag-asp-hindari">4. Tag ASP (Hindari)</a></li>
+        <li><a href="#menyisipkan-php-ke-html">Menyisipkan PHP ke HTML</a></li>
+      </ul>
+    </li>
+    <li><a href="#komentar">Komentar</a></li>
+    <li><a href="#statement-dan-ekspresi">Statement dan Ekspresi</a></li>
+    <li><a href="#variabel">Variabel</a>
+      <ul>
+        <li><a href="#deklarasi-variabel">Deklarasi Variabel</a></li>
+        <li><a href="#aturan-penamaan-variabel">Aturan Penamaan Variabel</a></li>
+        <li><a href="#convention">Convention</a></li>
+        <li><a href="#variable-variables">Variable Variables</a></li>
+        <li><a href="#variabel-global-dan-globals">Variabel Global dan <code>$GLOBALS</code></a></li>
+      </ul>
+    </li>
+    <li><a href="#tipe-data">Tipe Data</a>
+      <ul>
+        <li><a href="#1-string">1. String</a></li>
+        <li><a href="#2-integer">2. Integer</a></li>
+        <li><a href="#3-float-double">3. Float (Double)</a></li>
+        <li><a href="#4-boolean">4. Boolean</a></li>
+        <li><a href="#5-null">5. Null</a></li>
+        <li><a href="#6-array">6. Array</a></li>
+        <li><a href="#7-object">7. Object</a></li>
+        <li><a href="#8-resource">8. Resource</a></li>
+        <li><a href="#ringkasan-tipe-data">Ringkasan Tipe Data</a></li>
+      </ul>
+    </li>
+    <li><a href="#mengecek-tipe-data">Mengecek Tipe Data</a>
+      <ul>
+        <li><a href="#var_dump--informasi-lengkap"><code>var_dump()</code> — Informasi Lengkap</a></li>
+        <li><a href="#gettype--nama-tipe"><code>gettype()</code> — Nama Tipe</a></li>
+        <li><a href="#is_-functions"><code>is_*</code> Functions</a></li>
+      </ul>
+    </li>
+    <li><a href="#operator">Operator</a>
+      <ul>
+        <li><a href="#1-operator-aritmatika">1. Operator Aritmatika</a></li>
+        <li><a href="#2-operator-penugasan">2. Operator Penugasan</a></li>
+        <li><a href="#3-operator-incrementdecrement">3. Operator Increment/Decrement</a></li>
+        <li><a href="#4-operator-perbandingan">4. Operator Perbandingan</a></li>
+        <li><a href="#5-operator-logika">5. Operator Logika</a></li>
+        <li><a href="#6-operator-string">6. Operator String</a></li>
+        <li><a href="#7-operator-ternary">7. Operator Ternary</a></li>
+        <li><a href="#8-operator-null-coalescing-">8. Operator Null Coalescing (<code>??</code>)</a></li>
+        <li><a href="#9-operator-nullsafe----php-8">9. Operator Nullsafe (<code>?-&gt;</code>) — PHP 8+</a></li>
+        <li><a href="#10-operator-instanceof">10. Operator <code>instanceof</code></a></li>
+      </ul>
+    </li>
+    <li><a href="#konstanta">Konstanta</a>
+      <ul>
+        <li><a href="#define"><code>define()</code></a></li>
+        <li><a href="#const-php-53-di-luar-class"><code>const</code> (PHP 5.3+, di luar class)</a></li>
+        <li><a href="#konstanta-class">Konstanta Class</a></li>
+        <li><a href="#konstanta-magic">Konstanta Magic</a></li>
+        <li><a href="#cek-konstanta">Cek Konstanta</a></li>
+      </ul>
+    </li>
+    <li><a href="#contoh-praktis-menghitung-total-belanja">Contoh Praktis: Menghitung Total Belanja</a></li>
+    <li><a href="#ringkasan">Ringkasan</a></li>
+  </ul>
+</nav>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="page-links d-none d-xl-block">
+  <h3>Daftar isi</h3>
+  <nav id="TableOfContents">
+  <ul>
+    <li><a href="#pendahuluan">Pendahuluan</a></li>
+    <li><a href="#tag-php">Tag PHP</a>
+      <ul>
+        <li><a href="#1-tag-standar-rekomendasikan">1. Tag Standar (Rekomendasikan)</a></li>
+        <li><a href="#2-tag-echo-singkat">2. Tag Echo Singkat</a></li>
+        <li><a href="#3-tag-pendek-hindari">3. Tag Pendek (Hindari)</a></li>
+        <li><a href="#4-tag-asp-hindari">4. Tag ASP (Hindari)</a></li>
+        <li><a href="#menyisipkan-php-ke-html">Menyisipkan PHP ke HTML</a></li>
+      </ul>
+    </li>
+    <li><a href="#komentar">Komentar</a></li>
+    <li><a href="#statement-dan-ekspresi">Statement dan Ekspresi</a></li>
+    <li><a href="#variabel">Variabel</a>
+      <ul>
+        <li><a href="#deklarasi-variabel">Deklarasi Variabel</a></li>
+        <li><a href="#aturan-penamaan-variabel">Aturan Penamaan Variabel</a></li>
+        <li><a href="#convention">Convention</a></li>
+        <li><a href="#variable-variables">Variable Variables</a></li>
+        <li><a href="#variabel-global-dan-globals">Variabel Global dan <code>$GLOBALS</code></a></li>
+      </ul>
+    </li>
+    <li><a href="#tipe-data">Tipe Data</a>
+      <ul>
+        <li><a href="#1-string">1. String</a></li>
+        <li><a href="#2-integer">2. Integer</a></li>
+        <li><a href="#3-float-double">3. Float (Double)</a></li>
+        <li><a href="#4-boolean">4. Boolean</a></li>
+        <li><a href="#5-null">5. Null</a></li>
+        <li><a href="#6-array">6. Array</a></li>
+        <li><a href="#7-object">7. Object</a></li>
+        <li><a href="#8-resource">8. Resource</a></li>
+        <li><a href="#ringkasan-tipe-data">Ringkasan Tipe Data</a></li>
+      </ul>
+    </li>
+    <li><a href="#mengecek-tipe-data">Mengecek Tipe Data</a>
+      <ul>
+        <li><a href="#var_dump--informasi-lengkap"><code>var_dump()</code> — Informasi Lengkap</a></li>
+        <li><a href="#gettype--nama-tipe"><code>gettype()</code> — Nama Tipe</a></li>
+        <li><a href="#is_-functions"><code>is_*</code> Functions</a></li>
+      </ul>
+    </li>
+    <li><a href="#operator">Operator</a>
+      <ul>
+        <li><a href="#1-operator-aritmatika">1. Operator Aritmatika</a></li>
+        <li><a href="#2-operator-penugasan">2. Operator Penugasan</a></li>
+        <li><a href="#3-operator-incrementdecrement">3. Operator Increment/Decrement</a></li>
+        <li><a href="#4-operator-perbandingan">4. Operator Perbandingan</a></li>
+        <li><a href="#5-operator-logika">5. Operator Logika</a></li>
+        <li><a href="#6-operator-string">6. Operator String</a></li>
+        <li><a href="#7-operator-ternary">7. Operator Ternary</a></li>
+        <li><a href="#8-operator-null-coalescing-">8. Operator Null Coalescing (<code>??</code>)</a></li>
+        <li><a href="#9-operator-nullsafe----php-8">9. Operator Nullsafe (<code>?-&gt;</code>) — PHP 8+</a></li>
+        <li><a href="#10-operator-instanceof">10. Operator <code>instanceof</code></a></li>
+      </ul>
+    </li>
+    <li><a href="#konstanta">Konstanta</a>
+      <ul>
+        <li><a href="#define"><code>define()</code></a></li>
+        <li><a href="#const-php-53-di-luar-class"><code>const</code> (PHP 5.3+, di luar class)</a></li>
+        <li><a href="#konstanta-class">Konstanta Class</a></li>
+        <li><a href="#konstanta-magic">Konstanta Magic</a></li>
+        <li><a href="#cek-konstanta">Cek Konstanta</a></li>
+      </ul>
+    </li>
+    <li><a href="#contoh-praktis-menghitung-total-belanja">Contoh Praktis: Menghitung Total Belanja</a></li>
+    <li><a href="#ringkasan">Ringkasan</a></li>
+  </ul>
+</nav>
+  </div>
+
+			</nav>
+			<h2 id="pendahuluan">Pendahuluan <a href="#pendahuluan" class="anchor" aria-hidden="true">#</a></h2>
+<p>Setelah lingkungan PHP siap, saatnya menulis kode. Artikel ini membahas fondasi sintaks PHP: cara menyisipkan kode PHP ke HTML, mendeklarasikan variabel, mengenal tipe data, menggunakan operator, dan mendefinisikan konstanta.</p>
+<p>PHP adalah bahasa yang <strong>loosely typed</strong> — tipe data variabel ditentukan otomatis berdasarkan nilai yang diberikan, dan bisa berubah saat runtime. Ini mirip JavaScript, tetapi dengan sintaks yang berbeda.</p>
+<blockquote>
+<p><strong>Asumsi:</strong> Anda sudah menginstal PHP dan bisa menjalankan file <code>.php</code> (dari artikel sebelumnya).</p>
+</blockquote>
+<hr>
+<h2 id="tag-php">Tag PHP <a href="#tag-php" class="anchor" aria-hidden="true">#</a></h2>
+<p>Kode PHP harus berada di dalam <strong>tag PHP</strong> agar diproses oleh server. Ada beberapa cara:</p>
+<h3 id="1-tag-standar-rekomendasikan">1. Tag Standar (Rekomendasikan) <a href="#1-tag-standar-rekomendasikan" class="anchor" aria-hidden="true">#</a></h3>
+<pre><code class="language-php">&lt;?php
+echo &quot;Hello, PHP!&quot;;
+?&gt;
+</code></pre>
+<p>Atau tanpa tag penutup (jika file hanya berisi PHP):</p>
+<pre><code class="language-php">&lt;?php
+echo &quot;Hello, PHP!&quot;;
+</code></pre>
+<blockquote>
+<p><strong>Tips:</strong> Untuk file yang <strong>hanya</strong> berisi kode PHP (tanpa HTML), <strong>hilangkan tag penutup</strong> <code>?&gt;</code>. Ini mencegah output tak sengaja (misalnya spasi atau newline setelah <code>?&gt;</code>) yang bisa menyebabkan error &ldquo;headers already sent&rdquo;.</p>
+</blockquote>
+<h3 id="2-tag-echo-singkat">2. Tag Echo Singkat <a href="#2-tag-echo-singkat" class="anchor" aria-hidden="true">#</a></h3>
+<pre><code class="language-php">&lt;?= &quot;Hello, PHP!&quot; ?&gt;
+</code></pre>
+<p><code>&lt;?=</code> adalah singkatan dari <code>&lt;?php echo</code>. Selalu tersedia sejak PHP 5.4, terlepas dari setting <code>short_open_tag</code>.</p>
+<h3 id="3-tag-pendek-hindari">3. Tag Pendek (Hindari) <a href="#3-tag-pendek-hindari" class="anchor" aria-hidden="true">#</a></h3>
+<pre><code class="language-php">&lt;? echo &quot;Hello&quot;; ?&gt;
+</code></pre>
+<p>Membutuhkan <code>short_open_tag = On</code> di <code>php.ini</code>. <strong>Hindari</strong> karena tidak selalu tersedia.</p>
+<h3 id="4-tag-asp-hindari">4. Tag ASP (Hindari) <a href="#4-tag-asp-hindari" class="anchor" aria-hidden="true">#</a></h3>
+<pre><code class="language-php">&lt;% echo &quot;Hello&quot;; %&gt;
+</code></pre>
+<p>Membutuhkan <code>asp_tags = On</code> (dihapus di PHP 7). <strong>Jangan gunakan.</strong></p>
+<h3 id="menyisipkan-php-ke-html">Menyisipkan PHP ke HTML <a href="#menyisipkan-php-ke-html" class="anchor" aria-hidden="true">#</a></h3>
+<p>PHP bisa disisipkan di mana saja dalam HTML:</p>
+<pre><code class="language-html">&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+&lt;head&gt;
+  &lt;title&gt;Latihan PHP&lt;/title&gt;
+&lt;/head&gt;
+&lt;body&gt;
+  &lt;h1&gt;&lt;?php echo &quot;Halo dari PHP!&quot;; ?&gt;&lt;/h1&gt;
+
+  &lt;?php if (date(&quot;H&quot;) &lt; 12): ?&gt;
+    &lt;p&gt;Selamat pagi!&lt;/p&gt;
+  &lt;?php else: ?&gt;
+    &lt;p&gt;Selamat siang!&lt;/p&gt;
+  &lt;?php endif; ?&gt;
+&lt;/body&gt;
+&lt;/html&gt;
+</code></pre>
+<hr>
+<h2 id="komentar">Komentar <a href="#komentar" class="anchor" aria-hidden="true">#</a></h2>
+<pre><code class="language-php">&lt;?php
+// Komentar satu baris (C++ style)
+
+# Komentar satu baris (shell style)
+
+/*
+  Komentar
+  multi-baris
+*/
+
+/**
+ * Komentar PHPDoc — untuk dokumentasi fungsi/class
+ * @param string $nama
+ * @return string
+ */
+function sapa($nama) {
+    return &quot;Halo, $nama!&quot;;
+}
+</code></pre>
+<blockquote>
+<p><strong>Tips:</strong> Gunakan <code>//</code> untuk komentar singkat dan <code>/* */</code> untuk komentar multi-baris atau menonaktifkan blok kode sementara.</p>
+</blockquote>
+<hr>
+<h2 id="statement-dan-ekspresi">Statement dan Ekspresi <a href="#statement-dan-ekspresi" class="anchor" aria-hidden="true">#</a></h2>
+<p>Setiap statement PHP diakhiri <strong>titik koma</strong> (<code>;</code>). Berbeda dengan JavaScript, titik koma di PHP <strong>wajib</strong> (tidak ada ASI).</p>
+<pre><code class="language-php">&lt;?php
+$x = 5;           // statement
+$y = $x + 3;      // statement
+echo $y;          // statement
+</code></pre>
+<hr>
+<h2 id="variabel">Variabel <a href="#variabel" class="anchor" aria-hidden="true">#</a></h2>
+<h3 id="deklarasi-variabel">Deklarasi Variabel <a href="#deklarasi-variabel" class="anchor" aria-hidden="true">#</a></h3>
+<p>Variabel di PHP diawali <strong>tanda dolar</strong> (<code>$</code>), diikuti nama variabel. Tidak perlu kata kunci <code>let</code>/<code>const</code>.</p>
+<pre><code class="language-php">&lt;?php
+$nama = &quot;Budi&quot;;
+$umur = 25;
+$aktif = true;
+
+echo $nama;  // &quot;Budi&quot;
+echo $umur;  // 25
+</code></pre>
+<h3 id="aturan-penamaan-variabel">Aturan Penamaan Variabel <a href="#aturan-penamaan-variabel" class="anchor" aria-hidden="true">#</a></h3>
+<ol>
+<li>
+<p><strong>Diawali huruf atau underscore</strong> — tidak boleh angka.</p>
+<pre><code class="language-php">$nama = &quot;Budi&quot;;     // ✅
+$_private = 1;      // ✅
+$1nama = &quot;Budi&quot;;    // ❌ ParseError
+</code></pre>
+</li>
+<li>
+<p><strong>Hanya berisi huruf, angka, dan underscore</strong> — tanpa spasi atau karakter khusus.</p>
+<pre><code class="language-php">$nama_lengkap = &quot;Budi&quot;;  // ✅
+$nama-lengkap = &quot;Budi&quot;;  // ❌ (dianggap pengurangan)
+</code></pre>
+</li>
+<li>
+<p><strong>Case-sensitive</strong> — <code>$nama</code> dan <code>$Nama</code> adalah variabel berbeda.</p>
+</li>
+<li>
+<p><strong>Tidak boleh menggunakan reserved words</strong> — seperti <code>$this</code>, <code>$GLOBALS</code>, dll.</p>
+</li>
+</ol>
+<h3 id="convention">Convention <a href="#convention" class="anchor" aria-hidden="true">#</a></h3>
+<table>
+<thead>
+<tr>
+<th>Gaya</th>
+<th>Contoh</th>
+<th>Digunakan Untuk</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>camelCase</code></td>
+<td><code>$namaLengkap</code>, <code>$totalHarga</code></td>
+<td>Variabel &amp; fungsi (PSR-12)</td>
+</tr>
+<tr>
+<td><code>snake_case</code></td>
+<td><code>$nama_lengkap</code>, <code>$total_harga</code></td>
+<td>Variabel (WordPress, Laravel)</td>
+</tr>
+<tr>
+<td><code>UPPER_SNAKE_CASE</code></td>
+<td><code>MAX_SIZE</code>, <code>API_URL</code></td>
+<td>Konstanta</td>
+</tr>
+</tbody>
+</table>
+<blockquote>
+<p><strong>Rekomendasi:</strong> Ikuti <strong>PSR-12</strong> — gunakan <code>camelCase</code> untuk variabel dan method, <code>PascalCase</code> untuk class, <code>UPPER_SNAKE_CASE</code> untuk konstanta.</p>
+</blockquote>
+<h3 id="variable-variables">Variable Variables <a href="#variable-variables" class="anchor" aria-hidden="true">#</a></h3>
+<p>PHP mendukung <strong>variable variables</strong> — nama variabel diambil dari nilai variabel lain.</p>
+<pre><code class="language-php">&lt;?php
+$nama = &quot;Budi&quot;;
+$$nama = &quot;Santoso&quot;;  // membuat variabel $Budi
+
+echo $Budi;  // &quot;Santoso&quot;
+</code></pre>
+<blockquote>
+<p>⚠️ <strong>Peringatan:</strong> Fitur ini jarang dipakai dan bisa membingungkan. Hindari kecuali benar-benar perlu.</p>
+</blockquote>
+<h3 id="variabel-global-dan-globals">Variabel Global dan <code>$GLOBALS</code> <a href="#variabel-global-dan-globals" class="anchor" aria-hidden="true">#</a></h3>
+<p>Variabel yang dideklarasikan di luar fungsi memiliki <strong>global scope</strong>. Untuk mengaksesnya di dalam fungsi, gunakan kata kunci <code>global</code> atau array <code>$GLOBALS</code>.</p>
+<pre><code class="language-php">&lt;?php
+$x = 10;
+
+function tampilkan() {
+    global $x;
+    echo $x;  // 10
+}
+
+function tampilkan2() {
+    echo $GLOBALS['x'];  // 10
+}
+
+tampilkan();
+tampilkan2();
+</code></pre>
+<blockquote>
+<p><strong>Tips:</strong> Hindari variabel global sebisa mungkin — sulit dilacak dan menyebabkan bug. Gunakan parameter fungsi atau dependency injection.</p>
+</blockquote>
+<hr>
+<h2 id="tipe-data">Tipe Data <a href="#tipe-data" class="anchor" aria-hidden="true">#</a></h2>
+<p>PHP mendukung beberapa tipe data:</p>
+<h3 id="1-string">1. String <a href="#1-string" class="anchor" aria-hidden="true">#</a></h3>
+<p>Teks, diapit <strong>single quote</strong> (<code>'</code>) atau <strong>double quote</strong> (<code>&quot;</code>).</p>
+<pre><code class="language-php">&lt;?php
+$nama1 = 'Budi';
+$nama2 = &quot;Andi&quot;;
+
+echo $nama1;  // &quot;Budi&quot;
+</code></pre>
+<p><strong>Perbedaan single vs double quote:</strong></p>
+<pre><code class="language-php">&lt;?php
+$nama = &quot;Budi&quot;;
+
+echo 'Halo, $nama!';  // &quot;Halo, $nama!&quot; (tidak diinterpolasi)
+echo &quot;Halo, $nama!&quot;;  // &quot;Halo, Budi!&quot; (diinterpolasi)
+
+// Double quote mendukung escape character
+echo &quot;Baris 1\nBaris 2&quot;;  // newline
+echo &quot;Tab\tDi sini&quot;;      // tab
+
+// Single quote hanya escape \' dan \\
+echo 'It\'s okay';        // &quot;It's okay&quot;
+</code></pre>
+<p><strong>Heredoc dan Nowdoc:</strong></p>
+<pre><code class="language-php">&lt;?php
+$nama = &quot;Budi&quot;;
+
+// Heredoc — seperti double quote, mendukung interpolasi
+$teks1 = &lt;&lt;&lt;EOT
+Halo, $nama!
+Ini multi-baris.
+EOT;
+
+// Nowdoc — seperti single quote, tidak ada interpolasi
+$teks2 = &lt;&lt;&lt;'EOT'
+Halo, $nama!
+Ini multi-baris.
+EOT;
+
+echo $teks1;  // &quot;Halo, Budi!...&quot;
+echo $teks2;  // &quot;Halo, $nama!...&quot;
+</code></pre>
+<h3 id="2-integer">2. Integer <a href="#2-integer" class="anchor" aria-hidden="true">#</a></h3>
+<p>Bilangan bulat (tanpa desimal).</p>
+<pre><code class="language-php">&lt;?php
+$umur = 25;
+$negatif = -10;
+$besar = 1_000_000;  // separator underscore (PHP 7.4+)
+
+// Basis bilangan
+$desimal = 255;
+$heksadesimal = 0xFF;   // 255
+$oktal = 0755;          // 493
+$biner = 0b11111111;    // 255
+
+echo $umur;  // 25
+</code></pre>
+<h3 id="3-float-double">3. Float (Double) <a href="#3-float-double" class="anchor" aria-hidden="true">#</a></h3>
+<p>Bilangan desimal.</p>
+<pre><code class="language-php">&lt;?php
+$pi = 3.14;
+$suhu = -2.5;
+$besar = 1.5e3;  // 1500
+
+echo $pi;  // 3.14
+
+// Cek tipe
+var_dump($pi);  // float(3.14)
+</code></pre>
+<p><strong>Nilai khusus:</strong></p>
+<pre><code class="language-php">&lt;?php
+var_dump(1 / 0);         // Fatal error di PHP 8 (DivisionByZeroError)
+var_dump(fdiv(1, 0));    // float(INF)
+var_dump(fdiv(0, 0));    // float(NAN)
+var_dump(is_nan(NAN));   // bool(true)
+var_dump(is_infinite(fdiv(1, 0))); // bool(true)
+</code></pre>
+<blockquote>
+<p><strong>Catatan:</strong> Di PHP 8, <code>1 / 0</code> melempar <code>DivisionByZeroError</code>. Gunakan <code>fdiv()</code> untuk mendapatkan <code>INF</code>/<code>NAN</code>.</p>
+</blockquote>
+<h3 id="4-boolean">4. Boolean <a href="#4-boolean" class="anchor" aria-hidden="true">#</a></h3>
+<p><code>true</code> atau <code>false</code>.</p>
+<pre><code class="language-php">&lt;?php
+$aktif = true;
+$selesai = false;
+
+var_dump($aktif);  // bool(true)
+
+// Konversi ke boolean
+var_dump((bool) 0);       // bool(false)
+var_dump((bool) 1);       // bool(true)
+var_dump((bool) &quot;&quot;);      // bool(false)
+var_dump((bool) &quot;0&quot;);     // bool(false) — beda dengan JS!
+var_dump((bool) &quot;Hello&quot;); // bool(true)
+var_dump((bool) []);      // bool(false)
+var_dump((bool) [0]);     // bool(true)
+var_dump((bool) null);    // bool(false)
+</code></pre>
+<p><strong>Truthy/Falsy di PHP:</strong></p>
+<table>
+<thead>
+<tr>
+<th>Falsy</th>
+<th>Truthy</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>false</code></td>
+<td><code>true</code></td>
+</tr>
+<tr>
+<td><code>0</code>, <code>0.0</code>, <code>-0</code></td>
+<td>Angka selain 0</td>
+</tr>
+<tr>
+<td><code>&quot;&quot;</code>, <code>&quot;0&quot;</code></td>
+<td>String selain <code>&quot;&quot;</code> dan <code>&quot;0&quot;</code></td>
+</tr>
+<tr>
+<td><code>[]</code> (array kosong)</td>
+<td>Array berisi elemen</td>
+</tr>
+<tr>
+<td><code>null</code></td>
+<td>Object, resource</td>
+</tr>
+</tbody>
+</table>
+<blockquote>
+<p>⚠️ <strong>Peringatan:</strong> Di PHP, string <code>&quot;0&quot;</code> adalah <strong>falsy</strong> — berbeda dengan JavaScript! Ini sering menjadi sumber bug.</p>
+</blockquote>
+<h3 id="5-null">5. Null <a href="#5-null" class="anchor" aria-hidden="true">#</a></h3>
+<p>Menandakan variabel tanpa nilai.</p>
+<pre><code class="language-php">&lt;?php
+$user = null;
+
+var_dump($user);       // NULL
+var_dump(is_null($user)); // bool(true)
+var_dump($user === null); // bool(true)
+
+// Null coalescing
+$nama = $user ?? &quot;Anonim&quot;;  // &quot;Anonim&quot;
+</code></pre>
+<h3 id="6-array">6. Array <a href="#6-array" class="anchor" aria-hidden="true">#</a></h3>
+<p>PHP memiliki array yang bisa berfungsi sebagai <strong>list</strong> (indexed) maupun <strong>map</strong> (associative). Dibahas detail di artikel Array.</p>
+<pre><code class="language-php">&lt;?php
+$buah = [&quot;apel&quot;, &quot;jeruk&quot;, &quot;mangga&quot;];           // indexed
+$user = [&quot;nama&quot; =&gt; &quot;Budi&quot;, &quot;umur&quot; =&gt; 25];       // associative
+$nested = [[1, 2], [3, 4]];                     // multidimensional
+</code></pre>
+<h3 id="7-object">7. Object <a href="#7-object" class="anchor" aria-hidden="true">#</a></h3>
+<p>Instance dari class. Dibahas detail di artikel OOP.</p>
+<pre><code class="language-php">&lt;?php
+class User {
+    public $nama;
+    public function __construct($nama) {
+        $this-&gt;nama = $nama;
+    }
+}
+
+$user = new User(&quot;Budi&quot;);
+echo $user-&gt;nama;  // &quot;Budi&quot;
+</code></pre>
+<h3 id="8-resource">8. Resource <a href="#8-resource" class="anchor" aria-hidden="true">#</a></h3>
+<p>Referensi ke sumber daya eksternal (file handle, koneksi database). Jarang disentuh langsung.</p>
+<pre><code class="language-php">&lt;?php
+$file = fopen(&quot;data.txt&quot;, &quot;r&quot;);
+var_dump($file);  // resource(5) of type (stream)
+fclose($file);
+</code></pre>
+<h3 id="ringkasan-tipe-data">Ringkasan Tipe Data <a href="#ringkasan-tipe-data" class="anchor" aria-hidden="true">#</a></h3>
+<table>
+<thead>
+<tr>
+<th>Tipe</th>
+<th>Contoh</th>
+<th><code>gettype()</code></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>string</code></td>
+<td><code>&quot;Hello&quot;</code></td>
+<td><code>&quot;string&quot;</code></td>
+</tr>
+<tr>
+<td><code>int</code></td>
+<td><code>42</code></td>
+<td><code>&quot;integer&quot;</code></td>
+</tr>
+<tr>
+<td><code>float</code></td>
+<td><code>3.14</code></td>
+<td><code>&quot;double&quot;</code></td>
+</tr>
+<tr>
+<td><code>bool</code></td>
+<td><code>true</code></td>
+<td><code>&quot;boolean&quot;</code></td>
+</tr>
+<tr>
+<td><code>null</code></td>
+<td><code>null</code></td>
+<td><code>&quot;NULL&quot;</code></td>
+</tr>
+<tr>
+<td><code>array</code></td>
+<td><code>[1, 2, 3]</code></td>
+<td><code>&quot;array&quot;</code></td>
+</tr>
+<tr>
+<td><code>object</code></td>
+<td><code>new User()</code></td>
+<td><code>&quot;object&quot;</code></td>
+</tr>
+<tr>
+<td><code>resource</code></td>
+<td><code>fopen(...)</code></td>
+<td><code>&quot;resource&quot;</code></td>
+</tr>
+</tbody>
+</table>
+<hr>
+<h2 id="mengecek-tipe-data">Mengecek Tipe Data <a href="#mengecek-tipe-data" class="anchor" aria-hidden="true">#</a></h2>
+<h3 id="var_dump--informasi-lengkap"><code>var_dump()</code> — Informasi Lengkap <a href="#var_dump--informasi-lengkap" class="anchor" aria-hidden="true">#</a></h3>
+<pre><code class="language-php">&lt;?php
+var_dump(&quot;Hello&quot;);   // string(5) &quot;Hello&quot;
+var_dump(42);        // int(42)
+var_dump(3.14);      // float(3.14)
+var_dump(true);      // bool(true)
+var_dump(null);      // NULL
+var_dump([1, 2, 3]); // array(3) { [0]=&gt; int(1) ... }
+</code></pre>
+<h3 id="gettype--nama-tipe"><code>gettype()</code> — Nama Tipe <a href="#gettype--nama-tipe" class="anchor" aria-hidden="true">#</a></h3>
+<pre><code class="language-php">&lt;?php
+echo gettype(&quot;Hello&quot;);  // &quot;string&quot;
+echo gettype(42);       // &quot;integer&quot;
+echo gettype(3.14);     // &quot;double&quot;
+echo gettype(true);     // &quot;boolean&quot;
+echo gettype(null);     // &quot;NULL&quot;
+echo gettype([]);       // &quot;array&quot;
+</code></pre>
+<h3 id="is_-functions"><code>is_*</code> Functions <a href="#is_-functions" class="anchor" aria-hidden="true">#</a></h3>
+<pre><code class="language-php">&lt;?php
+var_dump(is_string(&quot;Hello&quot;));  // bool(true)
+var_dump(is_int(42));          // bool(true)
+var_dump(is_float(3.14));      // bool(true)
+var_dump(is_bool(true));       // bool(true)
+var_dump(is_null(null));       // bool(true)
+var_dump(is_array([]));        // bool(true)
+var_dump(is_object(new stdClass())); // bool(true)
+var_dump(is_numeric(&quot;42&quot;));    // bool(true) — string angka
+var_dump(is_numeric(&quot;abc&quot;));   // bool(false)
+</code></pre>
+<hr>
+<h2 id="operator">Operator <a href="#operator" class="anchor" aria-hidden="true">#</a></h2>
+<h3 id="1-operator-aritmatika">1. Operator Aritmatika <a href="#1-operator-aritmatika" class="anchor" aria-hidden="true">#</a></h3>
+<pre><code class="language-php">&lt;?php
+$a = 10;
+$b = 3;
+
+echo $a + $b;   // 13
+echo $a - $b;   // 7
+echo $a * $b;   // 30
+echo $a / $b;   // 3.3333...
+echo $a % $b;   // 1
+echo $a ** $b;  // 1000 (pangkat)
+</code></pre>
+<blockquote>
+<p><strong>Catatan:</strong> Pembagian <code>/</code> selalu menghasilkan <code>float</code> jika tidak habis dibagi. Gunakan <code>intdiv()</code> untuk pembagian integer.</p>
+</blockquote>
+<pre><code class="language-php">&lt;?php
+echo intdiv(10, 3);  // 3
+echo 10 % 3;         // 1
+</code></pre>
+<h3 id="2-operator-penugasan">2. Operator Penugasan <a href="#2-operator-penugasan" class="anchor" aria-hidden="true">#</a></h3>
+<pre><code class="language-php">&lt;?php
+$x = 10;
+$x += 5;   // 15
+$x -= 3;   // 12
+$x *= 2;   // 24
+$x /= 4;   // 6
+$x %= 4;   // 2
+$x **= 3;  // 8
+</code></pre>
+<p><strong>Null coalescing assignment (<code>??=</code>)</strong> (PHP 7.4+):</p>
+<pre><code class="language-php">&lt;?php
+$nama = null;
+$nama ??= &quot;Anonim&quot;;  // $nama = &quot;Anonim&quot; jika null
+echo $nama;  // &quot;Anonim&quot;
+</code></pre>
+<h3 id="3-operator-incrementdecrement">3. Operator Increment/Decrement <a href="#3-operator-incrementdecrement" class="anchor" aria-hidden="true">#</a></h3>
+<pre><code class="language-php">&lt;?php
+$counter = 0;
+$counter++;    // 1 (post-increment)
+$counter--;    // 0
+++$counter;    // 1 (pre-increment)
+--$counter;    // 0
+
+// Perbedaan pre dan post
+$x = 5;
+echo $x++;  // 5 (kembalikan 5, lalu x jadi 6)
+echo $x;    // 6
+
+$y = 5;
+echo ++$y;  // 6 (y jadi 6 dulu, lalu kembalikan 6)
+</code></pre>
+<h3 id="4-operator-perbandingan">4. Operator Perbandingan <a href="#4-operator-perbandingan" class="anchor" aria-hidden="true">#</a></h3>
+<table>
+<thead>
+<tr>
+<th>Operator</th>
+<th>Arti</th>
+<th>Contoh</th>
+<th>Hasil</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>==</code></td>
+<td>Sama (longgar, dengan konversi tipe)</td>
+<td><code>5 == &quot;5&quot;</code></td>
+<td><code>true</code></td>
+</tr>
+<tr>
+<td><code>===</code></td>
+<td>Sama (ketat, tanpa konversi)</td>
+<td><code>5 === &quot;5&quot;</code></td>
+<td><code>false</code></td>
+</tr>
+<tr>
+<td><code>!=</code></td>
+<td>Tidak sama (longgar)</td>
+<td><code>5 != &quot;5&quot;</code></td>
+<td><code>false</code></td>
+</tr>
+<tr>
+<td><code>!==</code></td>
+<td>Tidak sama (ketat)</td>
+<td><code>5 !== &quot;5&quot;</code></td>
+<td><code>true</code></td>
+</tr>
+<tr>
+<td><code>&gt;</code></td>
+<td>Lebih besar</td>
+<td><code>5 &gt; 3</code></td>
+<td><code>true</code></td>
+</tr>
+<tr>
+<td><code>&lt;</code></td>
+<td>Lebih kecil</td>
+<td><code>5 &lt; 3</code></td>
+<td><code>false</code></td>
+</tr>
+<tr>
+<td><code>&gt;=</code></td>
+<td>Lebih besar atau sama</td>
+<td><code>5 &gt;= 5</code></td>
+<td><code>true</code></td>
+</tr>
+<tr>
+<td><code>&lt;=</code></td>
+<td>Lebih kecil atau sama</td>
+<td><code>5 &lt;= 3</code></td>
+<td><code>false</code></td>
+</tr>
+<tr>
+<td><code>&lt;=&gt;</code></td>
+<td>Spaceship — <code>-1</code>, <code>0</code>, <code>1</code></td>
+<td><code>5 &lt;=&gt; 3</code></td>
+<td><code>1</code></td>
+</tr>
+</tbody>
+</table>
+<p><strong>Selalu gunakan <code>===</code> dan <code>!==</code></strong> — hindari <code>==</code> karena konversi tipe yang tidak terduga:</p>
+<pre><code class="language-php">&lt;?php
+var_dump(0 == &quot;&quot;);        // bool(true)  (!!)
+var_dump(0 == &quot;0&quot;);       // bool(true)
+var_dump(&quot;&quot; == &quot;0&quot;);      // bool(false)
+var_dump(null == false);  // bool(true)
+var_dump(null === false); // bool(false)
+
+// Spaceship operator
+var_dump(5 &lt;=&gt; 3);  // int(1)
+var_dump(5 &lt;=&gt; 5);  // int(0)
+var_dump(3 &lt;=&gt; 5);  // int(-1)
+</code></pre>
+<h3 id="5-operator-logika">5. Operator Logika <a href="#5-operator-logika" class="anchor" aria-hidden="true">#</a></h3>
+<table>
+<thead>
+<tr>
+<th>Operator</th>
+<th>Arti</th>
+<th>Contoh</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>&amp;&amp;</code></td>
+<td>AND</td>
+<td><code>true &amp;&amp; false</code> → <code>false</code></td>
+</tr>
+<tr>
+<td><code>||</code></td>
+<td>OR</td>
+<td><code>true || false</code> → <code>true</code></td>
+</tr>
+<tr>
+<td><code>!</code></td>
+<td>NOT</td>
+<td><code>!true</code> → <code>false</code></td>
+</tr>
+<tr>
+<td><code>and</code></td>
+<td>AND (prioritas lebih rendah)</td>
+<td><code>$a and $b</code></td>
+</tr>
+<tr>
+<td><code>or</code></td>
+<td>OR (prioritas lebih rendah)</td>
+<td><code>$a or $b</code></td>
+</tr>
+<tr>
+<td><code>xor</code></td>
+<td>XOR</td>
+<td><code>$a xor $b</code></td>
+</tr>
+</tbody>
+</table>
+<blockquote>
+<p><strong>Catatan:</strong> <code>&amp;&amp;</code> dan <code>||</code> memiliki prioritas lebih tinggi daripada <code>and</code> dan <code>or</code>. Dalam kebanyakan kasus, gunakan <code>&amp;&amp;</code> dan <code>||</code>.</p>
+</blockquote>
+<h3 id="6-operator-string">6. Operator String <a href="#6-operator-string" class="anchor" aria-hidden="true">#</a></h3>
+<pre><code class="language-php">&lt;?php
+$nama = &quot;Budi&quot;;
+$sapaan = &quot;Halo, &quot; . $nama . &quot;!&quot;;  // concatenation
+echo $sapaan;  // &quot;Halo, Budi!&quot;
+
+// Concatenation assignment
+$teks = &quot;Hello&quot;;
+$teks .= &quot; World&quot;;
+echo $teks;  // &quot;Hello World&quot;
+</code></pre>
+<h3 id="7-operator-ternary">7. Operator Ternary <a href="#7-operator-ternary" class="anchor" aria-hidden="true">#</a></h3>
+<pre><code class="language-php">&lt;?php
+$umur = 20;
+$status = $umur &gt;= 18 ? &quot;Dewasa&quot; : &quot;Anak-anak&quot;;
+echo $status;  // &quot;Dewasa&quot;
+
+// Ternary singkat (PHP 5.3+, deprecated di PHP 7.4, dihapus di PHP 8)
+// $status = $umur ?: &quot;Anonim&quot;;  // ❌
+
+// Null coalescing (pengganti yang aman)
+$nama = $userInput ?? &quot;Anonim&quot;;
+</code></pre>
+<h3 id="8-operator-null-coalescing-">8. Operator Null Coalescing (<code>??</code>) <a href="#8-operator-null-coalescing-" class="anchor" aria-hidden="true">#</a></h3>
+<p>Mengembalikan operand kanan jika operand kiri <code>null</code> atau tidak ada (undefined).</p>
+<pre><code class="language-php">&lt;?php
+$nama = $_GET['nama'] ?? &quot;Anonim&quot;;
+echo $nama;
+
+// Chaining
+$nilai = $a ?? $b ?? $c ?? &quot;default&quot;;
+</code></pre>
+<blockquote>
+<p><strong>Tips:</strong> <code>??</code> berbeda dengan <code>?:</code> (ternary singkat). <code>??</code> hanya mengecek <code>null</code>/undefined, sedangkan <code>?:</code> mengecek truthy/falsy.</p>
+</blockquote>
+<h3 id="9-operator-nullsafe----php-8">9. Operator Nullsafe (<code>?-&gt;</code>) — PHP 8+ <a href="#9-operator-nullsafe----php-8" class="anchor" aria-hidden="true">#</a></h3>
+<p>Mengakses properti/method dengan aman — jika object <code>null</code>, hasilnya <code>null</code> alih-alih error.</p>
+<pre><code class="language-php">&lt;?php
+$user = getUser(); // mungkin null
+echo $user?-&gt;nama ?? &quot;Anonim&quot;;
+</code></pre>
+<h3 id="10-operator-instanceof">10. Operator <code>instanceof</code> <a href="#10-operator-instanceof" class="anchor" aria-hidden="true">#</a></h3>
+<p>Mengecek apakah object adalah instance dari class tertentu.</p>
+<pre><code class="language-php">&lt;?php
+class User {}
+$user = new User();
+
+var_dump($user instanceof User);  // bool(true)
+</code></pre>
+<hr>
+<h2 id="konstanta">Konstanta <a href="#konstanta" class="anchor" aria-hidden="true">#</a></h2>
+<p><strong>Konstanta</strong> adalah nilai yang tidak bisa diubah setelah didefinisikan.</p>
+<h3 id="define"><code>define()</code> <a href="#define" class="anchor" aria-hidden="true">#</a></h3>
+<pre><code class="language-php">&lt;?php
+define(&quot;PI&quot;, 3.14159);
+define(&quot;APP_NAME&quot;, &quot;Toko Online&quot;);
+define(&quot;MAX_LOGIN_ATTEMPTS&quot;, 5);
+
+echo PI;          // 3.14159
+echo APP_NAME;    // &quot;Toko Online&quot;
+
+// PI = 3.14;  // ❌ Error — konstanta tidak bisa diubah
+</code></pre>
+<h3 id="const-php-53-di-luar-class"><code>const</code> (PHP 5.3+, di luar class) <a href="#const-php-53-di-luar-class" class="anchor" aria-hidden="true">#</a></h3>
+<pre><code class="language-php">&lt;?php
+const PI = 3.14159;
+const APP_NAME = &quot;Toko Online&quot;;
+</code></pre>
+<p><strong>Perbedaan <code>define()</code> vs <code>const</code>:</strong></p>
+<table>
+<thead>
+<tr>
+<th>Aspek</th>
+<th><code>define()</code></th>
+<th><code>const</code></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Didefinisikan di</td>
+<td>Runtime</td>
+<td>Compile-time</td>
+</tr>
+<tr>
+<td>Bisa di dalam <code>if</code>?</td>
+<td>✅</td>
+<td>❌ (harus top-level)</td>
+</tr>
+<tr>
+<td>Bisa di dalam class?</td>
+<td>❌</td>
+<td>✅</td>
+</tr>
+<tr>
+<td>Nama dinamis?</td>
+<td>✅</td>
+<td>❌</td>
+</tr>
+<tr>
+<td>Kecepatan</td>
+<td>Lebih lambat</td>
+<td>Lebih cepat</td>
+</tr>
+</tbody>
+</table>
+<h3 id="konstanta-class">Konstanta Class <a href="#konstanta-class" class="anchor" aria-hidden="true">#</a></h3>
+<pre><code class="language-php">&lt;?php
+class Config {
+    const APP_NAME = &quot;Toko Online&quot;;
+    const VERSION = &quot;1.0.0&quot;;
+}
+
+echo Config::APP_NAME;   // &quot;Toko Online&quot;
+echo Config::VERSION;    // &quot;1.0.0&quot;
+</code></pre>
+<h3 id="konstanta-magic">Konstanta Magic <a href="#konstanta-magic" class="anchor" aria-hidden="true">#</a></h3>
+<p>PHP menyediakan konstanta &ldquo;magic&rdquo; yang nilainya berubah tergantung konteks:</p>
+<table>
+<thead>
+<tr>
+<th>Konstanta</th>
+<th>Arti</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>__LINE__</code></td>
+<td>Nomor baris saat ini</td>
+</tr>
+<tr>
+<td><code>__FILE__</code></td>
+<td>Path lengkap file</td>
+</tr>
+<tr>
+<td><code>__DIR__</code></td>
+<td>Direktori file</td>
+</tr>
+<tr>
+<td><code>__FUNCTION__</code></td>
+<td>Nama fungsi</td>
+</tr>
+<tr>
+<td><code>__CLASS__</code></td>
+<td>Nama class</td>
+</tr>
+<tr>
+<td><code>__METHOD__</code></td>
+<td>Nama method (Class::method)</td>
+</tr>
+<tr>
+<td><code>__NAMESPACE__</code></td>
+<td>Nama namespace</td>
+</tr>
+</tbody>
+</table>
+<pre><code class="language-php">&lt;?php
+echo __LINE__;   // nomor baris
+echo __FILE__;   // &quot;/var/www/html/index.php&quot;
+echo __DIR__;    // &quot;/var/www/html&quot;
+</code></pre>
+<h3 id="cek-konstanta">Cek Konstanta <a href="#cek-konstanta" class="anchor" aria-hidden="true">#</a></h3>
+<pre><code class="language-php">&lt;?php
+define(&quot;APP_NAME&quot;, &quot;Toko Online&quot;);
+
+var_dump(defined(&quot;APP_NAME&quot;));  // bool(true)
+var_dump(defined(&quot;TIDAK_ADA&quot;)); // bool(false)
+</code></pre>
+<hr>
+<h2 id="contoh-praktis-menghitung-total-belanja">Contoh Praktis: Menghitung Total Belanja <a href="#contoh-praktis-menghitung-total-belanja" class="anchor" aria-hidden="true">#</a></h2>
+<p>Mari gabungkan semua yang telah dipelajari:</p>
+<pre><code class="language-php">&lt;?php
+// Konstanta
+const HARGA_PRODUK = 150000;
+const DISKON_PERSEN = 10;
+const MINIMAL_GRATIS_ONGKIR = 300000;
+
+// Variabel
+$jumlahBeli = 3;
+$totalSebelumDiskon = HARGA_PRODUK * $jumlahBeli;
+$nilaiDiskon = $totalSebelumDiskon * (DISKON_PERSEN / 100);
+$totalAkhir = $totalSebelumDiskon - $nilaiDiskon;
+
+// Cek gratis ongkir
+$gratisOngkir = $totalAkhir &gt;= MINIMAL_GRATIS_ONGKIR;
+
+// Output
+echo &quot;Jumlah beli: $jumlahBeli\n&quot;;
+echo &quot;Total sebelum diskon: Rp&quot; . number_format($totalSebelumDiskon, 0, &quot;,&quot;, &quot;.&quot;) . &quot;\n&quot;;
+echo &quot;Diskon (&quot; . DISKON_PERSEN . &quot;%): Rp&quot; . number_format($nilaiDiskon, 0, &quot;,&quot;, &quot;.&quot;) . &quot;\n&quot;;
+echo &quot;Total akhir: Rp&quot; . number_format($totalAkhir, 0, &quot;,&quot;, &quot;.&quot;) . &quot;\n&quot;;
+echo &quot;Gratis ongkir: &quot; . ($gratisOngkir ? &quot;Ya&quot; : &quot;Tidak&quot;) . &quot;\n&quot;;
+</code></pre>
+<p>Output:</p>
+<pre><code>Jumlah beli: 3
+Total sebelum diskon: Rp450.000
+Diskon (10%): Rp45.000
+Total akhir: Rp405.000
+Gratis ongkir: Ya
+</code></pre>
+<hr>
+<h2 id="ringkasan">Ringkasan <a href="#ringkasan" class="anchor" aria-hidden="true">#</a></h2>
+<table>
+<thead>
+<tr>
+<th>Konsep</th>
+<th>Poin Penting</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Tag PHP</td>
+<td><code>&lt;?php ... ?&gt;</code>, <code>&lt;?= ... ?&gt;</code></td>
+</tr>
+<tr>
+<td>Variabel</td>
+<td>Diawali <code>$</code>, case-sensitive, loosely typed</td>
+</tr>
+<tr>
+<td>String</td>
+<td>Single quote (literal), double quote (interpolasi)</td>
+</tr>
+<tr>
+<td>Integer</td>
+<td>Bilangan bulat, bisa heksadesimal/oktal/biner</td>
+</tr>
+<tr>
+<td>Float</td>
+<td>Bilangan desimal, <code>INF</code>/<code>NAN</code> via <code>fdiv()</code></td>
+</tr>
+<tr>
+<td>Boolean</td>
+<td><code>true</code>/<code>false</code>; <code>&quot;0&quot;</code> adalah <strong>falsy</strong> (beda dengan JS!)</td>
+</tr>
+<tr>
+<td>Null</td>
+<td><code>null</code>, cek dengan <code>is_null()</code>, <code>??</code></td>
+</tr>
+<tr>
+<td>Array</td>
+<td>List &amp; map dalam satu tipe</td>
+</tr>
+<tr>
+<td><code>var_dump</code></td>
+<td>Info lengkap tipe &amp; nilai</td>
+</tr>
+<tr>
+<td><code>gettype</code></td>
+<td>Nama tipe</td>
+</tr>
+<tr>
+<td><code>is_*</code></td>
+<td>Cek tipe</td>
+</tr>
+<tr>
+<td><code>===</code> vs <code>==</code></td>
+<td>Selalu gunakan <code>===</code> (strict)</td>
+</tr>
+<tr>
+<td><code>??</code></td>
+<td>Null coalescing</td>
+</tr>
+<tr>
+<td><code>?-&gt;</code></td>
+<td>Nullsafe (PHP 8+)</td>
+</tr>
+<tr>
+<td><code>define</code> / <code>const</code></td>
+<td>Konstanta</td>
+</tr>
+</tbody>
+</table>
+<p>Poin penting:</p>
+<ul>
+<li><strong>Titik koma wajib</strong> di akhir statement.</li>
+<li><strong>Hilangkan <code>?&gt;</code></strong> di file yang hanya berisi PHP.</li>
+<li>Variabel diawali <code>$</code> — case-sensitive.</li>
+<li>String <code>&quot;0&quot;</code> adalah <strong>falsy</strong> di PHP (beda dengan JavaScript).</li>
+<li>Selalu gunakan <strong><code>===</code></strong> dan <strong><code>!==</code></strong> untuk perbandingan.</li>
+<li><code>??</code> hanya mengecek <code>null</code>, berbeda dengan <code>?:</code> yang mengecek truthy/falsy.</li>
+<li>Gunakan <strong><code>const</code></strong> untuk konstanta di top-level, <strong><code>define()</code></strong> jika butuh dinamis.</li>
+<li><strong>Hindari variabel global</strong> — gunakan parameter atau dependency injection.</li>
+</ul>
+<p>Pada artikel berikutnya, kita akan membahas <strong>Tipe Data &amp; Konversi</strong> secara lebih mendalam — string, array, dan konversi antar tipe.</p>
+
+			<div class="page-footer-meta d-flex flex-column flex-md-row justify-content-between">
+				</div>
+			<div class="docs-navigation d-flex justify-content-between">
+	
+	<a href="/php/tutorial/02-instalasi-persiapan/">
+			<div class="card my-1">
+				<div class="card-body py-2">
+					&larr; Instalasi &amp; Persiapan Lingkungan PHP
+				</div>
+			</div>
+		</a>
+	<a class="ms-auto" href="/php/tutorial/04-tipe-data-konversi/">
+			<div class="card my-1">
+				<div class="card-body py-2">
+					Tipe Data &amp; Konversi &rarr;
+				</div>
+			</div>
+		</a>
+	</div>
+
+			
+		</main>
+	</div>
+
+      </div>
+    </div>
+    
+    
+    <footer class="footer text-muted">
+  <div class="container-xxl">
+    <div class="row">
+      <div class="col-lg-8 order-last order-lg-first">
+        <ul class="list-inline">
+          <li class="list-inline-item">Powered by <a class="text-muted" href="https://gohugo.io/">Hugo</a> and <a class="text-muted" href="https://github.com/">Github</a></li>
+        </ul>
+      </div>
+      <div class="col-lg-8 order-first order-lg-last text-lg-end">
+        <ul class="list-inline">
+          </ul>
+      </div>
+    </div>
+  </div>
+</footer>
+    
+
+<script src="/js/bootstrap.min.650aeec64c81d69d4c0850fc73c93da3f0330cec0a27772feed7f90f60baa5f47f1c45687d71914bdafd1c4e860d40f6dc08ede27a2f08431ff929c9a2d24621.js" integrity="sha512-ZQruxkyB1p1MCFD8c8k9o/AzDOwKJ3cv7tf5D2C6pfR/HEVofXGRS9r9HE6GDUD23Ajt4novCEMf&#43;SnJotJGIQ==" crossorigin="anonymous" defer></script>
+  <script src="/js/highlight.min.ec234bd8a5f487aaffe50a89f17b14501b1bb65633cf177cffd4cb84702dd7030edc08712dceb8dc27ac7e54b53240a08bf0b8d951572ee582bcdbbd06a48a7b.js" integrity="sha512-7CNL2KX0h6r/5QqJ8XsUUBsbtlYzzxd8/9TLhHAt1wMO3AhxLc643CesflS1MkCgi/C42VFXLuWCvNu9BqSKew==" crossorigin="anonymous" defer></script>
+  <script src="/main.min.cd1e5e6b40065b3f7f7fd8548a528fac67019754eda0f37b9918d02d154fc9ef6a22742f6513b0572ad9163152e151ec36221fbeafbecd7759c3dab1f19b64b9.js" integrity="sha512-zR5ea0AGWz9/f9hUilKPrGcBl1TtoPN7mRjQLRVPye9qInQvZROwVyrZFjFS4VHsNiIfvq&#43;&#43;zXdZw9qx8ZtkuQ==" crossorigin="anonymous" defer></script>
+  <script src="https://kaban.my.id/index.min.46a4c59d74237f1f9d9ebd686fe4545183e6a6c20893b8229aebc3844e6219b64f2f9675871fb41ea7cf595279ed0e6cdb4b62fe45c1690693acf75d76c798c1.js" integrity="sha512-RqTFnXQjfx&#43;dnr1ob&#43;RUUYPmpsIIk7gimuvDhE5iGbZPL5Z1hx&#43;0HqfPWVJ57Q5s20ti/kXBaQaTrPdddseYwQ==" crossorigin="anonymous" defer></script>
+  
+    <div class="d-flex fixed-bottom pb-4 pb-lg-5 pe-4 pe-lg-5">
+      <a id="toTop" href="#" class="btn btn-outline-primary rounded-circle ms-auto p-2"><span class="visually-hidden">Top</span><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-chevron-up"><polyline points="18 15 12 9 6 15"></polyline></svg></a>
+    </div>
+    
+  </body>
+</html>

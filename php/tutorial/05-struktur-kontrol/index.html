@@ -1,0 +1,1663 @@
+<!doctype html>
+<html lang="en-US">
+  <head>
+  <meta charset="utf-8">
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <link rel="preload" as="font" href="https://kaban.my.id/fonts/vendor/jost/jost-v4-latin-regular.woff2" type="font/woff2" crossorigin>
+<link rel="preload" as="font" href="https://kaban.my.id/fonts/vendor/jost/jost-v4-latin-500.woff2" type="font/woff2" crossorigin>
+<link rel="preload" as="font" href="https://kaban.my.id/fonts/vendor/jost/jost-v4-latin-700.woff2" type="font/woff2" crossorigin>
+
+  <script>(()=>{var t=window.matchMedia&&window.matchMedia("(prefers-color-scheme: dark)").matches,e=localStorage.getItem("theme");t&&e===null&&(localStorage.setItem("theme","dark"),document.documentElement.setAttribute("data-dark-mode","")),t&&e==="dark"&&document.documentElement.setAttribute("data-dark-mode",""),e==="dark"&&document.documentElement.setAttribute("data-dark-mode","")})()</script>
+
+  <link rel="stylesheet" href="https://kaban.my.id/main.4296e689affcd00e933b8954c10fc43cd1a5f16d5552e78183d12ea50d3e0bf5a596df23a379a4936743f01a7cd8ba048a628b2b9b60b34aa49fad468287100a.css" integrity="sha512-Qpbmia/80A6TO4lUwQ/EPNGl8W1VUueBg9EupQ0&#43;C/Wllt8jo3mkk2dD8Bp82LoEimKLK5tgs0qkn61GgocQCg==" crossorigin="anonymous">
+<noscript><style>img.lazyload { display: none; }</style></noscript>
+  <meta name="robots" content="index, follow">
+    <meta name="googlebot" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1">
+    <meta name="bingbot" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1">
+  <title>Struktur Kontrol &amp; Perulangan - Roberto Kaban Blog&#39;s</title>
+<meta name="description" content="Panduan lengkap struktur kontrol PHP: if, else, switch, match, for, while, do-while, foreach, break, dan continue.">
+<link rel="canonical" href="https://kaban.my.id/php/tutorial/05-struktur-kontrol/">
+<meta property="og:locale" content="en_US">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Struktur Kontrol &amp; Perulangan">
+<meta property="og:description" content="Panduan lengkap struktur kontrol PHP: if, else, switch, match, for, while, do-while, foreach, break, dan continue.">
+<meta property="og:url" content="https://kaban.my.id/php/tutorial/05-struktur-kontrol/">
+<meta property="og:site_name" content="Roberto Kaban Blog&#39;s">
+<meta property="article:published_time" content="2023-01-07T08:00:00+00:00">
+  <meta property="article:modified_time" content="2023-01-07T08:00:00+00:00">
+  
+  <meta property="og:image" content="https://kaban.my.id/doks.png"/>
+      <meta property="og:image:alt" content="Roberto Kaban Blog&#39;s">
+    
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:site" content="@robertokaban">
+<meta name="twitter:creator" content="@robertokaban">
+<meta name="twitter:title" content="Struktur Kontrol &amp; Perulangan">
+<meta name="twitter:description" content="Panduan lengkap struktur kontrol PHP: if, else, switch, match, for, while, do-while, foreach, break, dan continue.">
+<meta name="twitter:image" content="https://kaban.my.id/doks.png">
+    <meta name="twitter:image:alt" content="Struktur Kontrol &amp; Perulangan">
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "Person",
+        "@id": "https://kaban.my.id/#/schema/person/1",
+      "name": "BlogRobertoKaban",
+      "url": "https://kaban.my.id/",
+      "sameAs": [
+        "https://twitter.com/robertokaban"
+        , "https://github.com/robertokaban"
+        ],
+      "image": {
+          "@type": "ImageObject",
+          "@id": "https://kaban.my.id/#/schema/image/1",
+          "url": "https://kaban.my.id/doks.png",
+          "width":  1280 ,
+          "height":  640 ,
+          "caption": "BlogRobertoKaban"
+        }
+      },
+    {
+      "@type": "WebSite",
+      "@id": "https://kaban.my.id/#/schema/website/1",
+      "url": "https://kaban.my.id/",
+      "name": "Roberto Kaban Blog\u0027s",
+      "description": "Hanya sebuah catatan kecil untuk hal yang tidak ingin dilupakan.",
+      "publisher": {
+          "@id": "https://kaban.my.id/#/schema/person/1"
+        }
+      },
+    {
+      "@type": "WebPage",
+      "@id": "https://kaban.my.id/php/tutorial/05-struktur-kontrol/",
+      "url": "https://kaban.my.id/php/tutorial/05-struktur-kontrol/",
+      "name": "Struktur Kontrol \u0026 Perulangan",
+      "description": "Panduan lengkap struktur kontrol PHP: if, else, switch, match, for, while, do-while, foreach, break, dan continue.",
+      "isPartOf": {
+        "@id": "https://kaban.my.id/#/schema/website/1"
+      },
+      "about": {
+          "@id": "https://kaban.my.id/#/schema/person/1"
+        },
+      "datePublished": "2023-01-07T08:00:00CET",
+      "dateModified": "2023-01-07T08:00:00CET",
+      "breadcrumb": {
+        "@id": "https://kaban.my.id/php/tutorial/05-struktur-kontrol/#/schema/breadcrumb/1"
+      },
+      "primaryImageOfPage": {
+        "@id": "https://kaban.my.id/php/tutorial/05-struktur-kontrol/#/schema/image/2"
+      },
+      "inLanguage": "en-US",
+      "potentialAction": [{
+        "@type": "ReadAction", "target": ["https://kaban.my.id/php/tutorial/05-struktur-kontrol/"]
+      }]
+    },
+    {
+      "@type": "BreadcrumbList",
+      "@id": "https://kaban.my.id/php/tutorial/05-struktur-kontrol/#/schema/breadcrumb/1",
+      "name": "Breadcrumbs",
+      "itemListElement": [{
+        "@type": "ListItem",
+        "position":  1 ,
+        "item": {
+          "@type": "WebPage",
+          "@id": "https://kaban.my.id/",
+          "url": "https://kaban.my.id/",
+          "name": "Home"
+          }
+        },{
+        "@type": "ListItem",
+        "position":  2 ,
+        "item": {
+          "@type": "WebPage",
+          "@id": "https://kaban.my.id/php/",
+          "url": "https://kaban.my.id/php/",
+          "name": "Php"
+          }
+        },{
+        "@type": "ListItem",
+        "position":  3 ,
+        "item": {
+          "@type": "WebPage",
+          "@id": "https://kaban.my.id/php/tutorial/",
+          "url": "https://kaban.my.id/php/tutorial/",
+          "name": "Tutorial"
+          }
+        },{
+        "@type": "ListItem",
+        "position":  4 ,
+        "item": {
+          "@id": "https://kaban.my.id/php/tutorial/05-struktur-kontrol/"
+          }
+        }]
+    },
+
+    {
+      "@context": "https://schema.org",
+      "@graph": [
+        {
+          "@type": "ImageObject",
+          "@id": "https://kaban.my.id/php/tutorial/05-struktur-kontrol/#/schema/image/2",
+          "url": "https://kaban.my.id/doks.png",
+          "contentUrl": "https://kaban.my.id/doks.png",
+          "caption": "Struktur Kontrol \u0026 Perulangan"
+        }
+      ]
+    }
+
+  ]
+}
+</script>
+
+  <meta name="theme-color" content="#fff">
+<link rel="icon" href="https://kaban.my.id/favicon.ico" sizes="any">
+<link rel="icon" type="image/svg+xml" href="https://kaban.my.id/favicon.svg">
+<link rel="apple-touch-icon" sizes="180x180" href="https://kaban.my.id/apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="32x32" href="https://kaban.my.id/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="https://kaban.my.id/favicon-16x16.png">
+<link rel="manifest" crossorigin="use-credentials" href="https://kaban.my.id/site.webmanifest">
+
+  
+
+
+  
+  
+  
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-60VSDZFQR5"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-60VSDZFQR5');
+</script>
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6664512614760985"
+     crossorigin="anonymous"></script>
+</head>
+
+  <body class="php single">
+    <div class="sticky-top">
+<div class="header-bar"></div>
+
+<header class="navbar navbar-expand-lg navbar-light doks-navbar">
+  <nav class="container-xxl flex-wrap flex-lg-nowrap" aria-label="Main navigation">
+
+    <a class="navbar-brand order-0" href="/" aria-label="Roberto Kaban Blog&#39;s">
+      Roberto Kaban Blog&#39;s
+    </a>
+
+    <button class="btn btn-menu order-2 d-block d-lg-none" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasDoks" aria-controls="offcanvasDoks" aria-label="Open main menu">
+      <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-menu"><line x1="3" y1="12" x2="21" y2="12"></line><line x1="3" y1="6" x2="21" y2="6"></line><line x1="3" y1="18" x2="21" y2="18"></line></svg>
+    </button>
+    <div class="offcanvas offcanvas-end border-0 py-lg-1" tabindex="-1" id="offcanvasDoks" data-bs-backdrop="true" aria-labelledby="offcanvasDoksLabel">
+      <div class="header-bar d-lg-none"></div>
+      <div class="offcanvas-header d-lg-none">
+        <h2 class="h5 offcanvas-title ps-2" id="offcanvasDoksLabel"><a class="text-dark" href="/">Roberto Kaban Blog&#39;s</a></h2>
+        <button type="button" class="btn-close text-reset me-2" data-bs-dismiss="offcanvas" aria-label="Close main menu"></button>
+      </div>
+      <div class="offcanvas-body p-4 p-lg-0">
+        <ul class="nav flex-column flex-lg-row align-items-lg-center mt-2 mt-lg-0 ms-lg-2 me-lg-auto">
+              <li class="nav-item">
+                <a class="nav-link ps-0 py-1" href="/about/">About Me</a>
+              </li>
+            
+          
+              <li class="nav-item">
+                <a class="nav-link ps-0 py-1" href="/contact/">Contact</a>
+              </li>
+            
+          
+              <li class="nav-item">
+                <a class="nav-link ps-0 py-1" href="/artikel/">Artikel</a>
+              </li>
+            
+          
+              <li class="nav-item">
+                <a class="nav-link ps-0 py-1" href="/coretanku/">Coretanku</a>
+              </li>
+            
+          </ul>
+
+        <hr class="text-black-50 my-4 d-lg-none">
+        <form class="doks-search position-relative flex-grow-1 ms-lg-auto me-lg-2">
+          <input id="search" class="form-control is-search" type="search" placeholder="Cari di blog ini..." aria-label="Cari di blog ini..." autocomplete="off">
+          <div id="suggestions" class="shadow bg-white rounded d-none"></div>
+        </form>
+        <hr class="text-black-50 my-4 d-lg-none">
+        <ul class="nav flex-column flex-lg-row">
+          <li class="nav-item">
+              <a class="nav-link social-link" href="https://github.com/robertokaban"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-github"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path></svg><small class="ms-2 d-lg-none">GitHub</small></a>
+            </li>
+          <li class="nav-item">
+              <a class="nav-link social-link" href="https://facebook.com/roberto.kaban"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-facebook"><path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"></path></svg><small class="ms-2 d-lg-none">Facebook</small></a>
+            </li>
+          <li class="nav-item">
+              <a class="nav-link social-link" href="https://twitter.com/robertokaban"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-twitter"><path d="M23 3a10.9 10.9 0 0 1-3.14 1.53 4.48 4.48 0 0 0-7.86 3v1A10.66 10.66 0 0 1 3 4s-4 9 5 13a11.64 11.64 0 0 1-7 2c9 5 20 0 20-11.5a4.5 4.5 0 0 0-.08-.83A7.72 7.72 0 0 0 23 3z"></path></svg><small class="ms-2 d-lg-none">Twitter</small></a>
+            </li>
+          <li class="nav-item">
+              <a class="nav-link social-link" href="https://youtube.com/@robertokaban"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-youtube"><path d="M10,15L15.19,12L10,9V15M21.56,7.17C21.69,7.64 21.78,8.27 21.84,9.07C21.91,9.87 21.94,10.56 21.94,11.16L22,12C22,14.19 21.84,15.8 21.56,16.83C21.31,17.73 20.73,18.31 19.83,18.56C19.36,18.69 18.5,18.78 17.18,18.84C15.88,18.91 14.69,18.94 13.59,18.94L12,19C7.81,19 5.2,18.84 4.17,18.56C3.27,18.31 2.69,17.73 2.44,16.83C2.31,16.36 2.22,15.73 2.16,14.93C2.09,14.13 2.06,13.44 2.06,12.84L2,12C2,9.81 2.16,8.2 2.44,7.17C2.69,6.27 3.27,5.69 4.17,5.44C4.64,5.31 5.5,5.22 6.82,5.16C8.12,5.09 9.31,5.06 10.41,5.06L12,5C16.19,5 18.8,5.16 19.83,5.44C20.73,5.69 21.31,6.27 21.56,7.17Z"></path></svg><small class="ms-2 d-lg-none">Youtube</small></a>
+            </li>
+          </ul>
+
+        
+        <hr class="text-black-50 my-4 d-lg-none">
+        <button id="mode" class="btn btn-link" type="button" aria-label="Toggle user interface mode">
+          <span class="toggle-dark"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-moon"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path></svg></span>
+          <span class="toggle-light"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-sun"><circle cx="12" cy="12" r="5"></circle><line x1="12" y1="1" x2="12" y2="3"></line><line x1="12" y1="21" x2="12" y2="23"></line><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line><line x1="1" y1="12" x2="3" y2="12"></line><line x1="21" y1="12" x2="23" y2="12"></line><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line></svg></span>
+        </button>
+        
+
+        </div>
+    </div>
+  </nav>
+</header>
+
+
+</div>
+
+
+<div class="container-xxl">
+  <aside class="doks-sidebar">
+    <nav id="doks-docs-nav" class="collapse d-lg-none" aria-label="Tertiary navigation">
+      
+<ul class="list-unstyled collapsible-sidebar">
+  
+    
+      
+      <li class="mb-1">
+        <button class="btn btn-toggle align-items-center rounded collapsed" data-bs-toggle="collapse" data-bs-target="#section-de2591224751442a3b2101e94880333c" aria-expanded="true">
+          Tutorial PHP
+        </button>
+        <div class="collapse show" id="section-de2591224751442a3b2101e94880333c">
+          <ul class="btn-toggle-nav list-unstyled fw-normal pb-1 small">
+            
+              
+                
+                <li><a class="docs-link rounded" href="https://kaban.my.id/php/tutorial/pengenalan/">Pengenalan PHP</a></li>
+              
+            
+              
+                
+                <li><a class="docs-link rounded" href="https://kaban.my.id/php/tutorial/02-instalasi-persiapan/">Instalasi &amp; Persiapan Lingkungan PHP</a></li>
+              
+            
+              
+                
+                <li><a class="docs-link rounded" href="https://kaban.my.id/php/tutorial/03-sintaks-variabel/">Sintaks Dasar &amp; Variabel PHP</a></li>
+              
+            
+              
+                
+                <li><a class="docs-link rounded" href="https://kaban.my.id/php/tutorial/04-tipe-data-konversi/">Tipe Data &amp; Konversi</a></li>
+              
+            
+              
+                
+                <li><a class="docs-link rounded active" href="https://kaban.my.id/php/tutorial/05-struktur-kontrol/">Struktur Kontrol &amp; Perulangan</a></li>
+              
+            
+          </ul>
+        </div>
+      </li>
+    
+  
+</ul>
+
+    </nav>
+  </aside>
+</div>
+
+    <div class="wrap container-xxl" role="document">
+      <div class="content">
+        
+	<div class="row flex-xl-nowrap">
+		<div class="col-lg-5 col-xl-4 docs-sidebar d-none d-lg-block">
+			<nav class="docs-links" aria-label="Main navigation">
+				
+<ul class="list-unstyled collapsible-sidebar">
+  
+    
+      
+      <li class="mb-1">
+        <button class="btn btn-toggle align-items-center rounded collapsed" data-bs-toggle="collapse" data-bs-target="#section-de2591224751442a3b2101e94880333c" aria-expanded="true">
+          Tutorial PHP
+        </button>
+        <div class="collapse show" id="section-de2591224751442a3b2101e94880333c">
+          <ul class="btn-toggle-nav list-unstyled fw-normal pb-1 small">
+            
+              
+                
+                <li><a class="docs-link rounded" href="https://kaban.my.id/php/tutorial/pengenalan/">Pengenalan PHP</a></li>
+              
+            
+              
+                
+                <li><a class="docs-link rounded" href="https://kaban.my.id/php/tutorial/02-instalasi-persiapan/">Instalasi &amp; Persiapan Lingkungan PHP</a></li>
+              
+            
+              
+                
+                <li><a class="docs-link rounded" href="https://kaban.my.id/php/tutorial/03-sintaks-variabel/">Sintaks Dasar &amp; Variabel PHP</a></li>
+              
+            
+              
+                
+                <li><a class="docs-link rounded" href="https://kaban.my.id/php/tutorial/04-tipe-data-konversi/">Tipe Data &amp; Konversi</a></li>
+              
+            
+              
+                
+                <li><a class="docs-link rounded active" href="https://kaban.my.id/php/tutorial/05-struktur-kontrol/">Struktur Kontrol &amp; Perulangan</a></li>
+              
+            
+          </ul>
+        </div>
+      </li>
+    
+  
+</ul>
+
+			</nav>
+		</div>
+		<nav class="docs-toc d-none d-xl-block col-xl-3" aria-label="Secondary navigation">
+			<div class="d-xl-none">
+  <button class="btn btn-outline-primary btn-sm doks-toc-toggle collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#onThisPage" aria-controls="doks-docs-nav" aria-expanded="false" aria-label="Toggle On this page navigation">
+    <span>Daftar isi</span>
+    <span>
+      <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" class="doks doks-expand" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><title>Expand</title><polyline points="7 13 12 18 17 13"></polyline><polyline points="7 6 12 11 17 6"></polyline></svg>
+      <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" class="doks doks-collapse" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><title>Collapse</title><polyline points="17 11 12 6 7 11"></polyline><polyline points="17 18 12 13 7 18"></polyline></svg>
+    </span>
+  </button>
+  <div class="collapse" id="onThisPage">
+    <div class="card card-body mt-3 py-1">
+      <div class="page-links">
+        <nav id="TableOfContents">
+  <ul>
+    <li><a href="#pendahuluan">Pendahuluan</a></li>
+    <li><a href="#struktur-kondisional">Struktur Kondisional</a>
+      <ul>
+        <li><a href="#if--satu-kondisi"><code>if</code> — Satu Kondisi</a></li>
+        <li><a href="#ifelse--dua-cabang"><code>if...else</code> — Dua Cabang</a></li>
+        <li><a href="#ifelseifelse--banyak-cabang"><code>if...elseif...else</code> — Banyak Cabang</a></li>
+        <li><a href="#alternative-syntax-untuk-template">Alternative Syntax (untuk Template)</a></li>
+        <li><a href="#kondisi-truthyfalsy">Kondisi Truthy/Falsy</a></li>
+        <li><a href="#operator-logika-dalam-kondisi">Operator Logika dalam Kondisi</a></li>
+        <li><a href="#nested-if">Nested <code>if</code></a></li>
+        <li><a href="#ternary-operator">Ternary Operator</a></li>
+        <li><a href="#null-coalescing-">Null Coalescing (<code>??</code>)</a></li>
+        <li><a href="#nullsafe-operator----php-8">Nullsafe Operator (<code>?-&gt;</code>) — PHP 8+</a></li>
+      </ul>
+    </li>
+    <li><a href="#switch--banyak-cabang-berdasarkan-nilai"><code>switch</code> — Banyak Cabang Berdasarkan Nilai</a>
+      <ul>
+        <li><a href="#sintaks">Sintaks</a></li>
+        <li><a href="#contoh">Contoh</a></li>
+        <li><a href="#alternative-syntax">Alternative Syntax</a></li>
+        <li><a href="#fall-through">Fall-through</a></li>
+        <li><a href="#switch-dengan-continue"><code>switch</code> dengan <code>continue</code></a></li>
+        <li><a href="#switch-vs-ifelseif"><code>switch</code> vs <code>if...elseif</code></a></li>
+      </ul>
+    </li>
+    <li><a href="#match-expression--php-8"><code>match</code> Expression — PHP 8+</a>
+      <ul>
+        <li><a href="#sintaks-1">Sintaks</a></li>
+        <li><a href="#contoh-dasar">Contoh Dasar</a></li>
+        <li><a href="#match-dengan-kondisi-kompleks"><code>match</code> dengan Kondisi Kompleks</a></li>
+        <li><a href="#match-tanpa-default"><code>match</code> Tanpa <code>default</code></a></li>
+        <li><a href="#match-vs-switch"><code>match</code> vs <code>switch</code></a></li>
+      </ul>
+    </li>
+    <li><a href="#perulangan-loop">Perulangan (Loop)</a>
+      <ul>
+        <li><a href="#for--perulangan-dengan-counter"><code>for</code> — Perulangan dengan Counter</a></li>
+        <li><a href="#while--perulangan-berdasarkan-kondisi"><code>while</code> — Perulangan Berdasarkan Kondisi</a></li>
+        <li><a href="#dowhile--minimal-satu-iterasi"><code>do...while</code> — Minimal Satu Iterasi</a></li>
+        <li><a href="#foreach--iterasi-array"><code>foreach</code> — Iterasi Array</a></li>
+        <li><a href="#alternative-syntax-1">Alternative Syntax</a></li>
+        <li><a href="#perbandingan-jenis-loop">Perbandingan Jenis Loop</a></li>
+      </ul>
+    </li>
+    <li><a href="#break-dan-continue"><code>break</code> dan <code>continue</code></a>
+      <ul>
+        <li><a href="#break--keluar-dari-loop"><code>break</code> — Keluar dari Loop</a></li>
+        <li><a href="#continue--lewati-iterasi-saat-ini"><code>continue</code> — Lewati Iterasi Saat Ini</a></li>
+        <li><a href="#break-dan-continue-dengan-level"><code>break</code> dan <code>continue</code> dengan Level</a></li>
+      </ul>
+    </li>
+    <li><a href="#contoh-praktis">Contoh Praktis</a>
+      <ul>
+        <li><a href="#1-fizzbuzz">1. FizzBuzz</a></li>
+        <li><a href="#2-mencari-bilangan-prima">2. Mencari Bilangan Prima</a></li>
+        <li><a href="#3-menu-interaktif-dengan-switch-dan-while">3. Menu Interaktif dengan <code>switch</code> dan <code>while</code></a></li>
+        <li><a href="#4-pola-bintang-dengan-nested-loop">4. Pola Bintang dengan Nested Loop</a></li>
+        <li><a href="#5-iterasi-array-dengan-foreach">5. Iterasi Array dengan <code>foreach</code></a></li>
+        <li><a href="#6-menggunakan-match-untuk-http-status">6. Menggunakan <code>match</code> untuk HTTP Status</a></li>
+      </ul>
+    </li>
+    <li><a href="#tips--best-practice">Tips &amp; Best Practice</a></li>
+    <li><a href="#ringkasan">Ringkasan</a></li>
+  </ul>
+</nav>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="page-links d-none d-xl-block">
+  <h3>Daftar isi</h3>
+  <nav id="TableOfContents">
+  <ul>
+    <li><a href="#pendahuluan">Pendahuluan</a></li>
+    <li><a href="#struktur-kondisional">Struktur Kondisional</a>
+      <ul>
+        <li><a href="#if--satu-kondisi"><code>if</code> — Satu Kondisi</a></li>
+        <li><a href="#ifelse--dua-cabang"><code>if...else</code> — Dua Cabang</a></li>
+        <li><a href="#ifelseifelse--banyak-cabang"><code>if...elseif...else</code> — Banyak Cabang</a></li>
+        <li><a href="#alternative-syntax-untuk-template">Alternative Syntax (untuk Template)</a></li>
+        <li><a href="#kondisi-truthyfalsy">Kondisi Truthy/Falsy</a></li>
+        <li><a href="#operator-logika-dalam-kondisi">Operator Logika dalam Kondisi</a></li>
+        <li><a href="#nested-if">Nested <code>if</code></a></li>
+        <li><a href="#ternary-operator">Ternary Operator</a></li>
+        <li><a href="#null-coalescing-">Null Coalescing (<code>??</code>)</a></li>
+        <li><a href="#nullsafe-operator----php-8">Nullsafe Operator (<code>?-&gt;</code>) — PHP 8+</a></li>
+      </ul>
+    </li>
+    <li><a href="#switch--banyak-cabang-berdasarkan-nilai"><code>switch</code> — Banyak Cabang Berdasarkan Nilai</a>
+      <ul>
+        <li><a href="#sintaks">Sintaks</a></li>
+        <li><a href="#contoh">Contoh</a></li>
+        <li><a href="#alternative-syntax">Alternative Syntax</a></li>
+        <li><a href="#fall-through">Fall-through</a></li>
+        <li><a href="#switch-dengan-continue"><code>switch</code> dengan <code>continue</code></a></li>
+        <li><a href="#switch-vs-ifelseif"><code>switch</code> vs <code>if...elseif</code></a></li>
+      </ul>
+    </li>
+    <li><a href="#match-expression--php-8"><code>match</code> Expression — PHP 8+</a>
+      <ul>
+        <li><a href="#sintaks-1">Sintaks</a></li>
+        <li><a href="#contoh-dasar">Contoh Dasar</a></li>
+        <li><a href="#match-dengan-kondisi-kompleks"><code>match</code> dengan Kondisi Kompleks</a></li>
+        <li><a href="#match-tanpa-default"><code>match</code> Tanpa <code>default</code></a></li>
+        <li><a href="#match-vs-switch"><code>match</code> vs <code>switch</code></a></li>
+      </ul>
+    </li>
+    <li><a href="#perulangan-loop">Perulangan (Loop)</a>
+      <ul>
+        <li><a href="#for--perulangan-dengan-counter"><code>for</code> — Perulangan dengan Counter</a></li>
+        <li><a href="#while--perulangan-berdasarkan-kondisi"><code>while</code> — Perulangan Berdasarkan Kondisi</a></li>
+        <li><a href="#dowhile--minimal-satu-iterasi"><code>do...while</code> — Minimal Satu Iterasi</a></li>
+        <li><a href="#foreach--iterasi-array"><code>foreach</code> — Iterasi Array</a></li>
+        <li><a href="#alternative-syntax-1">Alternative Syntax</a></li>
+        <li><a href="#perbandingan-jenis-loop">Perbandingan Jenis Loop</a></li>
+      </ul>
+    </li>
+    <li><a href="#break-dan-continue"><code>break</code> dan <code>continue</code></a>
+      <ul>
+        <li><a href="#break--keluar-dari-loop"><code>break</code> — Keluar dari Loop</a></li>
+        <li><a href="#continue--lewati-iterasi-saat-ini"><code>continue</code> — Lewati Iterasi Saat Ini</a></li>
+        <li><a href="#break-dan-continue-dengan-level"><code>break</code> dan <code>continue</code> dengan Level</a></li>
+      </ul>
+    </li>
+    <li><a href="#contoh-praktis">Contoh Praktis</a>
+      <ul>
+        <li><a href="#1-fizzbuzz">1. FizzBuzz</a></li>
+        <li><a href="#2-mencari-bilangan-prima">2. Mencari Bilangan Prima</a></li>
+        <li><a href="#3-menu-interaktif-dengan-switch-dan-while">3. Menu Interaktif dengan <code>switch</code> dan <code>while</code></a></li>
+        <li><a href="#4-pola-bintang-dengan-nested-loop">4. Pola Bintang dengan Nested Loop</a></li>
+        <li><a href="#5-iterasi-array-dengan-foreach">5. Iterasi Array dengan <code>foreach</code></a></li>
+        <li><a href="#6-menggunakan-match-untuk-http-status">6. Menggunakan <code>match</code> untuk HTTP Status</a></li>
+      </ul>
+    </li>
+    <li><a href="#tips--best-practice">Tips &amp; Best Practice</a></li>
+    <li><a href="#ringkasan">Ringkasan</a></li>
+  </ul>
+</nav>
+  </div>
+
+		</nav>
+		<main class="docs-content col-lg-11 col-xl-9">
+		
+				<nav aria-label="breadcrumb">
+					<ol class="breadcrumb">
+						<li class="breadcrumb-item"><a href="/">Home</a></li>
+<li class="breadcrumb-item"><a href="/php/">Php</a></li>
+<li class="breadcrumb-item"><a href="/php/tutorial/">Tutorial PHP</a></li>
+<li class="breadcrumb-item active" aria-current="page">Struktur Kontrol &amp; Perulangan</li>
+					</ol>
+				</nav>
+			
+			<h1>Struktur Kontrol &amp; Perulangan</h1>
+			<p class="lead">Struktur kontrol memungkinkan program mengambil keputusan dan mengulang pekerjaan. Artikel ini membahas if/else, switch, match expression, semua jenis perulangan, serta break dan continue dengan contoh praktis.</p>
+			<nav class="d-xl-none" aria-label="Quaternary navigation">
+				<div class="d-xl-none">
+  <button class="btn btn-outline-primary btn-sm doks-toc-toggle collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#onThisPage" aria-controls="doks-docs-nav" aria-expanded="false" aria-label="Toggle On this page navigation">
+    <span>Daftar isi</span>
+    <span>
+      <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" class="doks doks-expand" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><title>Expand</title><polyline points="7 13 12 18 17 13"></polyline><polyline points="7 6 12 11 17 6"></polyline></svg>
+      <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" class="doks doks-collapse" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><title>Collapse</title><polyline points="17 11 12 6 7 11"></polyline><polyline points="17 18 12 13 7 18"></polyline></svg>
+    </span>
+  </button>
+  <div class="collapse" id="onThisPage">
+    <div class="card card-body mt-3 py-1">
+      <div class="page-links">
+        <nav id="TableOfContents">
+  <ul>
+    <li><a href="#pendahuluan">Pendahuluan</a></li>
+    <li><a href="#struktur-kondisional">Struktur Kondisional</a>
+      <ul>
+        <li><a href="#if--satu-kondisi"><code>if</code> — Satu Kondisi</a></li>
+        <li><a href="#ifelse--dua-cabang"><code>if...else</code> — Dua Cabang</a></li>
+        <li><a href="#ifelseifelse--banyak-cabang"><code>if...elseif...else</code> — Banyak Cabang</a></li>
+        <li><a href="#alternative-syntax-untuk-template">Alternative Syntax (untuk Template)</a></li>
+        <li><a href="#kondisi-truthyfalsy">Kondisi Truthy/Falsy</a></li>
+        <li><a href="#operator-logika-dalam-kondisi">Operator Logika dalam Kondisi</a></li>
+        <li><a href="#nested-if">Nested <code>if</code></a></li>
+        <li><a href="#ternary-operator">Ternary Operator</a></li>
+        <li><a href="#null-coalescing-">Null Coalescing (<code>??</code>)</a></li>
+        <li><a href="#nullsafe-operator----php-8">Nullsafe Operator (<code>?-&gt;</code>) — PHP 8+</a></li>
+      </ul>
+    </li>
+    <li><a href="#switch--banyak-cabang-berdasarkan-nilai"><code>switch</code> — Banyak Cabang Berdasarkan Nilai</a>
+      <ul>
+        <li><a href="#sintaks">Sintaks</a></li>
+        <li><a href="#contoh">Contoh</a></li>
+        <li><a href="#alternative-syntax">Alternative Syntax</a></li>
+        <li><a href="#fall-through">Fall-through</a></li>
+        <li><a href="#switch-dengan-continue"><code>switch</code> dengan <code>continue</code></a></li>
+        <li><a href="#switch-vs-ifelseif"><code>switch</code> vs <code>if...elseif</code></a></li>
+      </ul>
+    </li>
+    <li><a href="#match-expression--php-8"><code>match</code> Expression — PHP 8+</a>
+      <ul>
+        <li><a href="#sintaks-1">Sintaks</a></li>
+        <li><a href="#contoh-dasar">Contoh Dasar</a></li>
+        <li><a href="#match-dengan-kondisi-kompleks"><code>match</code> dengan Kondisi Kompleks</a></li>
+        <li><a href="#match-tanpa-default"><code>match</code> Tanpa <code>default</code></a></li>
+        <li><a href="#match-vs-switch"><code>match</code> vs <code>switch</code></a></li>
+      </ul>
+    </li>
+    <li><a href="#perulangan-loop">Perulangan (Loop)</a>
+      <ul>
+        <li><a href="#for--perulangan-dengan-counter"><code>for</code> — Perulangan dengan Counter</a></li>
+        <li><a href="#while--perulangan-berdasarkan-kondisi"><code>while</code> — Perulangan Berdasarkan Kondisi</a></li>
+        <li><a href="#dowhile--minimal-satu-iterasi"><code>do...while</code> — Minimal Satu Iterasi</a></li>
+        <li><a href="#foreach--iterasi-array"><code>foreach</code> — Iterasi Array</a></li>
+        <li><a href="#alternative-syntax-1">Alternative Syntax</a></li>
+        <li><a href="#perbandingan-jenis-loop">Perbandingan Jenis Loop</a></li>
+      </ul>
+    </li>
+    <li><a href="#break-dan-continue"><code>break</code> dan <code>continue</code></a>
+      <ul>
+        <li><a href="#break--keluar-dari-loop"><code>break</code> — Keluar dari Loop</a></li>
+        <li><a href="#continue--lewati-iterasi-saat-ini"><code>continue</code> — Lewati Iterasi Saat Ini</a></li>
+        <li><a href="#break-dan-continue-dengan-level"><code>break</code> dan <code>continue</code> dengan Level</a></li>
+      </ul>
+    </li>
+    <li><a href="#contoh-praktis">Contoh Praktis</a>
+      <ul>
+        <li><a href="#1-fizzbuzz">1. FizzBuzz</a></li>
+        <li><a href="#2-mencari-bilangan-prima">2. Mencari Bilangan Prima</a></li>
+        <li><a href="#3-menu-interaktif-dengan-switch-dan-while">3. Menu Interaktif dengan <code>switch</code> dan <code>while</code></a></li>
+        <li><a href="#4-pola-bintang-dengan-nested-loop">4. Pola Bintang dengan Nested Loop</a></li>
+        <li><a href="#5-iterasi-array-dengan-foreach">5. Iterasi Array dengan <code>foreach</code></a></li>
+        <li><a href="#6-menggunakan-match-untuk-http-status">6. Menggunakan <code>match</code> untuk HTTP Status</a></li>
+      </ul>
+    </li>
+    <li><a href="#tips--best-practice">Tips &amp; Best Practice</a></li>
+    <li><a href="#ringkasan">Ringkasan</a></li>
+  </ul>
+</nav>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="page-links d-none d-xl-block">
+  <h3>Daftar isi</h3>
+  <nav id="TableOfContents">
+  <ul>
+    <li><a href="#pendahuluan">Pendahuluan</a></li>
+    <li><a href="#struktur-kondisional">Struktur Kondisional</a>
+      <ul>
+        <li><a href="#if--satu-kondisi"><code>if</code> — Satu Kondisi</a></li>
+        <li><a href="#ifelse--dua-cabang"><code>if...else</code> — Dua Cabang</a></li>
+        <li><a href="#ifelseifelse--banyak-cabang"><code>if...elseif...else</code> — Banyak Cabang</a></li>
+        <li><a href="#alternative-syntax-untuk-template">Alternative Syntax (untuk Template)</a></li>
+        <li><a href="#kondisi-truthyfalsy">Kondisi Truthy/Falsy</a></li>
+        <li><a href="#operator-logika-dalam-kondisi">Operator Logika dalam Kondisi</a></li>
+        <li><a href="#nested-if">Nested <code>if</code></a></li>
+        <li><a href="#ternary-operator">Ternary Operator</a></li>
+        <li><a href="#null-coalescing-">Null Coalescing (<code>??</code>)</a></li>
+        <li><a href="#nullsafe-operator----php-8">Nullsafe Operator (<code>?-&gt;</code>) — PHP 8+</a></li>
+      </ul>
+    </li>
+    <li><a href="#switch--banyak-cabang-berdasarkan-nilai"><code>switch</code> — Banyak Cabang Berdasarkan Nilai</a>
+      <ul>
+        <li><a href="#sintaks">Sintaks</a></li>
+        <li><a href="#contoh">Contoh</a></li>
+        <li><a href="#alternative-syntax">Alternative Syntax</a></li>
+        <li><a href="#fall-through">Fall-through</a></li>
+        <li><a href="#switch-dengan-continue"><code>switch</code> dengan <code>continue</code></a></li>
+        <li><a href="#switch-vs-ifelseif"><code>switch</code> vs <code>if...elseif</code></a></li>
+      </ul>
+    </li>
+    <li><a href="#match-expression--php-8"><code>match</code> Expression — PHP 8+</a>
+      <ul>
+        <li><a href="#sintaks-1">Sintaks</a></li>
+        <li><a href="#contoh-dasar">Contoh Dasar</a></li>
+        <li><a href="#match-dengan-kondisi-kompleks"><code>match</code> dengan Kondisi Kompleks</a></li>
+        <li><a href="#match-tanpa-default"><code>match</code> Tanpa <code>default</code></a></li>
+        <li><a href="#match-vs-switch"><code>match</code> vs <code>switch</code></a></li>
+      </ul>
+    </li>
+    <li><a href="#perulangan-loop">Perulangan (Loop)</a>
+      <ul>
+        <li><a href="#for--perulangan-dengan-counter"><code>for</code> — Perulangan dengan Counter</a></li>
+        <li><a href="#while--perulangan-berdasarkan-kondisi"><code>while</code> — Perulangan Berdasarkan Kondisi</a></li>
+        <li><a href="#dowhile--minimal-satu-iterasi"><code>do...while</code> — Minimal Satu Iterasi</a></li>
+        <li><a href="#foreach--iterasi-array"><code>foreach</code> — Iterasi Array</a></li>
+        <li><a href="#alternative-syntax-1">Alternative Syntax</a></li>
+        <li><a href="#perbandingan-jenis-loop">Perbandingan Jenis Loop</a></li>
+      </ul>
+    </li>
+    <li><a href="#break-dan-continue"><code>break</code> dan <code>continue</code></a>
+      <ul>
+        <li><a href="#break--keluar-dari-loop"><code>break</code> — Keluar dari Loop</a></li>
+        <li><a href="#continue--lewati-iterasi-saat-ini"><code>continue</code> — Lewati Iterasi Saat Ini</a></li>
+        <li><a href="#break-dan-continue-dengan-level"><code>break</code> dan <code>continue</code> dengan Level</a></li>
+      </ul>
+    </li>
+    <li><a href="#contoh-praktis">Contoh Praktis</a>
+      <ul>
+        <li><a href="#1-fizzbuzz">1. FizzBuzz</a></li>
+        <li><a href="#2-mencari-bilangan-prima">2. Mencari Bilangan Prima</a></li>
+        <li><a href="#3-menu-interaktif-dengan-switch-dan-while">3. Menu Interaktif dengan <code>switch</code> dan <code>while</code></a></li>
+        <li><a href="#4-pola-bintang-dengan-nested-loop">4. Pola Bintang dengan Nested Loop</a></li>
+        <li><a href="#5-iterasi-array-dengan-foreach">5. Iterasi Array dengan <code>foreach</code></a></li>
+        <li><a href="#6-menggunakan-match-untuk-http-status">6. Menggunakan <code>match</code> untuk HTTP Status</a></li>
+      </ul>
+    </li>
+    <li><a href="#tips--best-practice">Tips &amp; Best Practice</a></li>
+    <li><a href="#ringkasan">Ringkasan</a></li>
+  </ul>
+</nav>
+  </div>
+
+			</nav>
+			<h2 id="pendahuluan">Pendahuluan <a href="#pendahuluan" class="anchor" aria-hidden="true">#</a></h2>
+<p>Tanpa struktur kontrol, program hanya berjalan lurus dari atas ke bawah. <strong>Struktur kontrol</strong> memungkinkan program untuk:</p>
+<ul>
+<li><strong>Mengambil keputusan</strong> — menjalankan blok kode berdasarkan kondisi (<code>if</code>, <code>switch</code>, <code>match</code>).</li>
+<li><strong>Mengulang pekerjaan</strong> — menjalankan blok kode berkali-kali (<code>for</code>, <code>while</code>, <code>foreach</code>).</li>
+<li><strong>Mengontrol alur</strong> — keluar dari perulangan atau melompati iterasi (<code>break</code>, <code>continue</code>).</li>
+</ul>
+<p>Artikel ini membahas semua struktur kontrol di PHP dengan contoh praktis.</p>
+<blockquote>
+<p><strong>Asumsi:</strong> Anda sudah memahami variabel, tipe data, dan operator dari artikel sebelumnya.</p>
+</blockquote>
+<hr>
+<h2 id="struktur-kondisional">Struktur Kondisional <a href="#struktur-kondisional" class="anchor" aria-hidden="true">#</a></h2>
+<h3 id="if--satu-kondisi"><code>if</code> — Satu Kondisi <a href="#if--satu-kondisi" class="anchor" aria-hidden="true">#</a></h3>
+<p>Menjalankan blok kode <strong>jika</strong> kondisi bernilai truthy.</p>
+<pre><code class="language-php">&lt;?php
+$umur = 20;
+
+if ($umur &gt;= 18) {
+    echo &quot;Anda sudah dewasa&quot;;
+}
+</code></pre>
+<h3 id="ifelse--dua-cabang"><code>if...else</code> — Dua Cabang <a href="#ifelse--dua-cabang" class="anchor" aria-hidden="true">#</a></h3>
+<pre><code class="language-php">&lt;?php
+$umur = 16;
+
+if ($umur &gt;= 18) {
+    echo &quot;Dewasa&quot;;
+} else {
+    echo &quot;Belum dewasa&quot;;
+}
+</code></pre>
+<h3 id="ifelseifelse--banyak-cabang"><code>if...elseif...else</code> — Banyak Cabang <a href="#ifelseifelse--banyak-cabang" class="anchor" aria-hidden="true">#</a></h3>
+<pre><code class="language-php">&lt;?php
+$nilai = 85;
+
+if ($nilai &gt;= 90) {
+    echo &quot;Grade A&quot;;
+} elseif ($nilai &gt;= 80) {
+    echo &quot;Grade B&quot;;
+} elseif ($nilai &gt;= 70) {
+    echo &quot;Grade C&quot;;
+} elseif ($nilai &gt;= 60) {
+    echo &quot;Grade D&quot;;
+} else {
+    echo &quot;Grade E&quot;;
+}
+// Output: &quot;Grade B&quot;
+</code></pre>
+<blockquote>
+<p><strong>Catatan:</strong> PHP menggunakan <code>elseif</code> (satu kata) atau <code>else if</code> (dua kata) — keduanya valid. PSR-12 merekomendasikan <code>elseif</code>.</p>
+</blockquote>
+<p><strong>Urutan evaluasi penting</strong> — kondisi diperiksa dari atas ke bawah, dan blok pertama yang <code>true</code> akan dieksekusi. Sisanya dilewati.</p>
+<h3 id="alternative-syntax-untuk-template">Alternative Syntax (untuk Template) <a href="#alternative-syntax-untuk-template" class="anchor" aria-hidden="true">#</a></h3>
+<p>PHP menyediakan sintaks alternatif yang lebih rapi saat mencampur PHP dengan HTML:</p>
+<pre><code class="language-php">&lt;?php if ($umur &gt;= 18): ?&gt;
+    &lt;p&gt;Anda sudah dewasa&lt;/p&gt;
+&lt;?php else: ?&gt;
+    &lt;p&gt;Belum dewasa&lt;/p&gt;
+&lt;?php endif; ?&gt;
+</code></pre>
+<p>Sintaks ini sangat berguna di file template:</p>
+<pre><code class="language-html">&lt;?php if ($user): ?&gt;
+    &lt;h1&gt;Selamat datang, &lt;?= htmlspecialchars($user['nama']) ?&gt;&lt;/h1&gt;
+    &lt;a href=&quot;/logout&quot;&gt;Logout&lt;/a&gt;
+&lt;?php else: ?&gt;
+    &lt;h1&gt;Silakan login&lt;/h1&gt;
+    &lt;a href=&quot;/login&quot;&gt;Login&lt;/a&gt;
+&lt;?php endif; ?&gt;
+</code></pre>
+<h3 id="kondisi-truthyfalsy">Kondisi Truthy/Falsy <a href="#kondisi-truthyfalsy" class="anchor" aria-hidden="true">#</a></h3>
+<p>Kondisi <code>if</code> tidak harus boolean — nilai apa pun akan dikonversi ke boolean:</p>
+<pre><code class="language-php">&lt;?php
+$nama = &quot;Budi&quot;;
+
+if ($nama) {
+    echo &quot;Nama ada&quot;; // jalan karena &quot;Budi&quot; truthy
+}
+
+$daftar = [];
+if ($daftar) {
+    echo &quot;Array truthy&quot;; // TIDAK jalan — [] falsy di PHP
+}
+
+if (!empty($daftar)) {
+    echo &quot;Array tidak kosong&quot;; // TIDAK jalan
+}
+</code></pre>
+<blockquote>
+<p>⚠️ <strong>Peringatan:</strong> String <code>&quot;0&quot;</code> adalah <strong>falsy</strong> di PHP. Gunakan <code>!== &quot;&quot;</code> jika perlu membedakan string kosong dari <code>&quot;0&quot;</code>.</p>
+</blockquote>
+<pre><code class="language-php">&lt;?php
+$input = &quot;0&quot;;
+
+if ($input) {
+    echo &quot;Truthy&quot;;  // TIDAK jalan
+}
+
+if ($input !== &quot;&quot;) {
+    echo &quot;Bukan string kosong&quot;;  // Jalan
+}
+</code></pre>
+<h3 id="operator-logika-dalam-kondisi">Operator Logika dalam Kondisi <a href="#operator-logika-dalam-kondisi" class="anchor" aria-hidden="true">#</a></h3>
+<pre><code class="language-php">&lt;?php
+$umur = 25;
+$punyaKTP = true;
+
+if ($umur &gt;= 18 &amp;&amp; $punyaKTP) {
+    echo &quot;Boleh membuat SIM&quot;;
+}
+
+if ($umur &lt; 17 || $umur &gt; 60) {
+    echo &quot;Dapat diskon khusus&quot;;
+}
+
+if (!$punyaKTP) {
+    echo &quot;Harus buat KTP dulu&quot;;
+}
+</code></pre>
+<h3 id="nested-if">Nested <code>if</code> <a href="#nested-if" class="anchor" aria-hidden="true">#</a></h3>
+<pre><code class="language-php">&lt;?php
+$username = &quot;admin&quot;;
+$password = &quot;rahasia&quot;;
+
+if ($username === &quot;admin&quot;) {
+    if ($password === &quot;rahasia&quot;) {
+        echo &quot;Login berhasil&quot;;
+    } else {
+        echo &quot;Password salah&quot;;
+    }
+} else {
+    echo &quot;Username tidak dikenal&quot;;
+}
+</code></pre>
+<p><strong>Alternatif lebih flat dengan <code>&amp;&amp;</code>:</strong></p>
+<pre><code class="language-php">&lt;?php
+if ($username === &quot;admin&quot; &amp;&amp; $password === &quot;rahasia&quot;) {
+    echo &quot;Login berhasil&quot;;
+} elseif ($username === &quot;admin&quot;) {
+    echo &quot;Password salah&quot;;
+} else {
+    echo &quot;Username tidak dikenal&quot;;
+}
+</code></pre>
+<h3 id="ternary-operator">Ternary Operator <a href="#ternary-operator" class="anchor" aria-hidden="true">#</a></h3>
+<p>Untuk kondisi sederhana dengan dua cabang:</p>
+<pre><code class="language-php">&lt;?php
+$umur = 20;
+$status = $umur &gt;= 18 ? &quot;Dewasa&quot; : &quot;Anak-anak&quot;;
+echo $status; // &quot;Dewasa&quot;
+</code></pre>
+<p><strong>Nested ternary (gunakan dengan hati-hati):</strong></p>
+<pre><code class="language-php">&lt;?php
+$nilai = 85;
+$grade = $nilai &gt;= 90 ? &quot;A&quot;
+       : ($nilai &gt;= 80 ? &quot;B&quot;
+       : ($nilai &gt;= 70 ? &quot;C&quot; : &quot;D&quot;));
+</code></pre>
+<blockquote>
+<p><strong>Tips:</strong> Untuk banyak cabang, <code>if...elseif</code> atau <code>match</code> lebih mudah dibaca daripada nested ternary.</p>
+</blockquote>
+<h3 id="null-coalescing-">Null Coalescing (<code>??</code>) <a href="#null-coalescing-" class="anchor" aria-hidden="true">#</a></h3>
+<p>Mengembalikan nilai default jika variabel <code>null</code> atau tidak ada:</p>
+<pre><code class="language-php">&lt;?php
+$nama = $_GET['nama'] ?? &quot;Anonim&quot;;
+$halaman = $_GET['page'] ?? 1;
+</code></pre>
+<p><strong>Chaining:</strong></p>
+<pre><code class="language-php">&lt;?php
+$nilai = $a ?? $b ?? $c ?? &quot;default&quot;;
+</code></pre>
+<h3 id="nullsafe-operator----php-8">Nullsafe Operator (<code>?-&gt;</code>) — PHP 8+ <a href="#nullsafe-operator----php-8" class="anchor" aria-hidden="true">#</a></h3>
+<p>Mengakses properti/method dengan aman:</p>
+<pre><code class="language-php">&lt;?php
+$user = getUser(); // mungkin null
+echo $user?-&gt;nama ?? &quot;Anonim&quot;;
+</code></pre>
+<hr>
+<h2 id="switch--banyak-cabang-berdasarkan-nilai"><code>switch</code> — Banyak Cabang Berdasarkan Nilai <a href="#switch--banyak-cabang-berdasarkan-nilai" class="anchor" aria-hidden="true">#</a></h2>
+<p><code>switch</code> membandingkan satu nilai dengan banyak kemungkinan menggunakan <strong>perbandingan longgar</strong> (<code>==</code>).</p>
+<blockquote>
+<p>⚠️ <strong>Peringatan:</strong> <code>switch</code> di PHP menggunakan <code>==</code> (longgar), <strong>bukan</strong> <code>===</code>. Ini bisa menyebabkan bug jika tipe data berbeda.</p>
+</blockquote>
+<h3 id="sintaks">Sintaks <a href="#sintaks" class="anchor" aria-hidden="true">#</a></h3>
+<pre><code class="language-php">&lt;?php
+switch ($ekspresi) {
+    case $nilai1:
+        // kode
+        break;
+    case $nilai2:
+        // kode
+        break;
+    default:
+        // kode jika tidak ada case yang cocok
+}
+</code></pre>
+<h3 id="contoh">Contoh <a href="#contoh" class="anchor" aria-hidden="true">#</a></h3>
+<pre><code class="language-php">&lt;?php
+$hari = &quot;Senin&quot;;
+
+switch ($hari) {
+    case &quot;Senin&quot;:
+    case &quot;Selasa&quot;:
+    case &quot;Rabu&quot;:
+    case &quot;Kamis&quot;:
+    case &quot;Jumat&quot;:
+        echo &quot;Hari kerja&quot;;
+        break;
+    case &quot;Sabtu&quot;:
+    case &quot;Minggu&quot;:
+        echo &quot;Akhir pekan&quot;;
+        break;
+    default:
+        echo &quot;Hari tidak valid&quot;;
+}
+// Output: &quot;Hari kerja&quot;
+</code></pre>
+<h3 id="alternative-syntax">Alternative Syntax <a href="#alternative-syntax" class="anchor" aria-hidden="true">#</a></h3>
+<pre><code class="language-php">&lt;?php
+switch ($hari):
+    case &quot;Senin&quot;:
+        echo &quot;Hari kerja&quot;;
+        break;
+    default:
+        echo &quot;Hari lain&quot;;
+endswitch;
+</code></pre>
+<h3 id="fall-through">Fall-through <a href="#fall-through" class="anchor" aria-hidden="true">#</a></h3>
+<p>Case tanpa <code>break</code> akan &ldquo;jatuh&rdquo; ke case berikutnya:</p>
+<pre><code class="language-php">&lt;?php
+$nilai = 2;
+
+switch ($nilai) {
+    case 1:
+        echo &quot;Satu&quot;;
+    case 2:
+        echo &quot;Dua&quot;;
+    case 3:
+        echo &quot;Tiga&quot;;
+    default:
+        echo &quot;Default&quot;;
+}
+// Output: &quot;DuaTigaDefault&quot; (!!)
+</code></pre>
+<blockquote>
+<p><strong>Peringatan:</strong> Selalu tambahkan <code>break</code> kecuali Anda sengaja ingin fall-through.</p>
+</blockquote>
+<h3 id="switch-dengan-continue"><code>switch</code> dengan <code>continue</code> <a href="#switch-dengan-continue" class="anchor" aria-hidden="true">#</a></h3>
+<p>Di dalam <code>switch</code>, <code>continue</code> berperilaku seperti <code>break</code> (keluar dari switch). Untuk melanjutkan loop luar, gunakan <code>continue 2</code>.</p>
+<pre><code class="language-php">&lt;?php
+for ($i = 0; $i &lt; 3; $i++) {
+    switch ($i) {
+        case 1:
+            continue 2; // lanjut ke iterasi for berikutnya
+        default:
+            echo $i;
+    }
+}
+// Output: &quot;02&quot;
+</code></pre>
+<h3 id="switch-vs-ifelseif"><code>switch</code> vs <code>if...elseif</code> <a href="#switch-vs-ifelseif" class="anchor" aria-hidden="true">#</a></h3>
+<table>
+<thead>
+<tr>
+<th>Aspek</th>
+<th><code>switch</code></th>
+<th><code>if...elseif</code></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Perbandingan</td>
+<td>Longgar (<code>==</code>)</td>
+<td>Ekspresi apa pun</td>
+</tr>
+<tr>
+<td>Keterbacaan</td>
+<td>Baik untuk banyak nilai diskret</td>
+<td>Baik untuk rentang/kondisi kompleks</td>
+</tr>
+<tr>
+<td>Fall-through</td>
+<td>Bisa (tanpa <code>break</code>)</td>
+<td>Tidak ada</td>
+</tr>
+<tr>
+<td>Kapan dipakai</td>
+<td>Banyak kemungkinan nilai spesifik</td>
+<td>Kondisi rentang, logika kompleks</td>
+</tr>
+</tbody>
+</table>
+<hr>
+<h2 id="match-expression--php-8"><code>match</code> Expression — PHP 8+ <a href="#match-expression--php-8" class="anchor" aria-hidden="true">#</a></h2>
+<p><strong><code>match</code></strong> adalah versi modern dari <code>switch</code> yang:</p>
+<ul>
+<li>Menggunakan <strong>perbandingan ketat</strong> (<code>===</code>).</li>
+<li><strong>Mengembalikan nilai</strong> (expression, bukan statement).</li>
+<li>Tidak memiliki fall-through.</li>
+<li>Melempar <code>UnhandledMatchError</code> jika tidak ada yang cocok (kecuali ada <code>default</code>).</li>
+</ul>
+<h3 id="sintaks-1">Sintaks <a href="#sintaks-1" class="anchor" aria-hidden="true">#</a></h3>
+<pre><code class="language-php">&lt;?php
+$hasil = match ($ekspresi) {
+    $nilai1 =&gt; $return1,
+    $nilai2, $nilai3 =&gt; $return2,
+    default =&gt; $returnDefault,
+};
+</code></pre>
+<h3 id="contoh-dasar">Contoh Dasar <a href="#contoh-dasar" class="anchor" aria-hidden="true">#</a></h3>
+<pre><code class="language-php">&lt;?php
+$status = 200;
+
+$pesan = match ($status) {
+    200, 201 =&gt; &quot;OK&quot;,
+    301, 302 =&gt; &quot;Redirect&quot;,
+    400 =&gt; &quot;Bad Request&quot;,
+    401 =&gt; &quot;Unauthorized&quot;,
+    404 =&gt; &quot;Not Found&quot;,
+    500 =&gt; &quot;Server Error&quot;,
+    default =&gt; &quot;Status tidak dikenal&quot;,
+};
+
+echo $pesan; // &quot;OK&quot;
+</code></pre>
+<h3 id="match-dengan-kondisi-kompleks"><code>match</code> dengan Kondisi Kompleks <a href="#match-dengan-kondisi-kompleks" class="anchor" aria-hidden="true">#</a></h3>
+<p><code>match</code> bisa menggunakan <code>true</code> sebagai ekspresi untuk kondisi arbitrer:</p>
+<pre><code class="language-php">&lt;?php
+$nilai = 85;
+
+$grade = match (true) {
+    $nilai &gt;= 90 =&gt; &quot;A&quot;,
+    $nilai &gt;= 80 =&gt; &quot;B&quot;,
+    $nilai &gt;= 70 =&gt; &quot;C&quot;,
+    $nilai &gt;= 60 =&gt; &quot;D&quot;,
+    default =&gt; &quot;E&quot;,
+};
+
+echo $grade; // &quot;B&quot;
+</code></pre>
+<h3 id="match-tanpa-default"><code>match</code> Tanpa <code>default</code> <a href="#match-tanpa-default" class="anchor" aria-hidden="true">#</a></h3>
+<p>Jika tidak ada case yang cocok dan tidak ada <code>default</code>, <code>match</code> melempar <strong><code>UnhandledMatchError</code></strong>:</p>
+<pre><code class="language-php">&lt;?php
+try {
+    $hasil = match (5) {
+        1 =&gt; &quot;Satu&quot;,
+        2 =&gt; &quot;Dua&quot;,
+    };
+} catch (\UnhandledMatchError $e) {
+    echo &quot;Tidak ada yang cocok!&quot;;
+}
+</code></pre>
+<blockquote>
+<p><strong>Tips:</strong> Selalu sertakan <code>default</code> kecuali Anda yakin semua kemungkinan sudah ditangani.</p>
+</blockquote>
+<h3 id="match-vs-switch"><code>match</code> vs <code>switch</code> <a href="#match-vs-switch" class="anchor" aria-hidden="true">#</a></h3>
+<table>
+<thead>
+<tr>
+<th>Aspek</th>
+<th><code>switch</code></th>
+<th><code>match</code></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Perbandingan</td>
+<td>Longgar (<code>==</code>)</td>
+<td>Ketat (<code>===</code>)</td>
+</tr>
+<tr>
+<td>Mengembalikan nilai</td>
+<td>❌</td>
+<td>✅</td>
+</tr>
+<tr>
+<td>Fall-through</td>
+<td>✅</td>
+<td>❌</td>
+</tr>
+<tr>
+<td><code>break</code> diperlukan</td>
+<td>✅</td>
+<td>❌</td>
+</tr>
+<tr>
+<td>Tanpa case cocok</td>
+<td>Lanjut ke <code>default</code> (atau tidak ada)</td>
+<td><code>UnhandledMatchError</code></td>
+</tr>
+<tr>
+<td>Versi PHP</td>
+<td>Semua</td>
+<td>PHP 8+</td>
+</tr>
+<tr>
+<td>Kapan dipakai</td>
+<td>Kode lama</td>
+<td>Kode baru</td>
+</tr>
+</tbody>
+</table>
+<hr>
+<h2 id="perulangan-loop">Perulangan (Loop) <a href="#perulangan-loop" class="anchor" aria-hidden="true">#</a></h2>
+<h3 id="for--perulangan-dengan-counter"><code>for</code> — Perulangan dengan Counter <a href="#for--perulangan-dengan-counter" class="anchor" aria-hidden="true">#</a></h3>
+<p>Sintaks: <code>for (inisialisasi; kondisi; increment)</code></p>
+<pre><code class="language-php">&lt;?php
+for ($i = 0; $i &lt; 5; $i++) {
+    echo &quot;Iterasi ke-$i\n&quot;;
+}
+// Output: Iterasi ke-0, 1, 2, 3, 4
+</code></pre>
+<p><strong>Variasi:</strong></p>
+<pre><code class="language-php">&lt;?php
+// Hitung mundur
+for ($i = 10; $i &gt;= 0; $i--) {
+    echo $i . &quot; &quot;;
+}
+
+// Increment 2
+for ($i = 0; $i &lt;= 10; $i += 2) {
+    echo $i . &quot; &quot;; // 0 2 4 6 8 10
+}
+
+// Loop dengan beberapa variabel
+for ($i = 0, $j = 10; $i &lt; $j; $i++, $j--) {
+    echo &quot;i=$i, j=$j\n&quot;;
+}
+
+// Loop tak terbatas (hindari!)
+// for (;;) { ... }
+</code></pre>
+<h3 id="while--perulangan-berdasarkan-kondisi"><code>while</code> — Perulangan Berdasarkan Kondisi <a href="#while--perulangan-berdasarkan-kondisi" class="anchor" aria-hidden="true">#</a></h3>
+<p>Menjalankan blok <strong>selama</strong> kondisi truthy. Kondisi diperiksa <strong>sebelum</strong> setiap iterasi.</p>
+<pre><code class="language-php">&lt;?php
+$i = 0;
+while ($i &lt; 5) {
+    echo $i . &quot; &quot;;
+    $i++;
+}
+// Output: 0 1 2 3 4
+</code></pre>
+<p><strong>Kapan menggunakan <code>while</code>?</strong> Ketika jumlah iterasi <strong>tidak diketahui</strong> sebelumnya.</p>
+<pre><code class="language-php">&lt;?php
+$baris = 1;
+while (($data = fgetcsv($handle)) !== false) {
+    echo &quot;Baris $baris: &quot; . implode(&quot;, &quot;, $data) . &quot;\n&quot;;
+    $baris++;
+}
+</code></pre>
+<blockquote>
+<p><strong>Peringatan:</strong> Jika kondisi selalu <code>true</code> dan tidak ada yang mengubahnya, loop akan berjalan selamanya (infinite loop).</p>
+</blockquote>
+<h3 id="dowhile--minimal-satu-iterasi"><code>do...while</code> — Minimal Satu Iterasi <a href="#dowhile--minimal-satu-iterasi" class="anchor" aria-hidden="true">#</a></h3>
+<p>Mirip <code>while</code>, tetapi kondisi diperiksa <strong>setelah</strong> iterasi — sehingga blok dijalankan <strong>minimal sekali</strong>.</p>
+<pre><code class="language-php">&lt;?php
+$i = 0;
+do {
+    echo $i . &quot; &quot;;
+    $i++;
+} while ($i &lt; 5);
+// Output: 0 1 2 3 4
+</code></pre>
+<p><strong>Perbedaan dengan <code>while</code>:</strong></p>
+<pre><code class="language-php">&lt;?php
+$x = 10;
+
+while ($x &lt; 5) {
+    echo &quot;while jalan&quot;; // tidak jalan
+}
+
+do {
+    echo &quot;do-while jalan&quot;; // jalan sekali!
+} while ($x &lt; 5);
+</code></pre>
+<h3 id="foreach--iterasi-array"><code>foreach</code> — Iterasi Array <a href="#foreach--iterasi-array" class="anchor" aria-hidden="true">#</a></h3>
+<p>Cara paling umum untuk mengiterasi array di PHP.</p>
+<pre><code class="language-php">&lt;?php
+$buah = [&quot;apel&quot;, &quot;jeruk&quot;, &quot;mangga&quot;];
+
+foreach ($buah as $item) {
+    echo $item . &quot;\n&quot;;
+}
+// apel, jeruk, mangga
+</code></pre>
+<p><strong>Dengan index/key:</strong></p>
+<pre><code class="language-php">&lt;?php
+// Indexed array
+foreach ($buah as $index =&gt; $item) {
+    echo &quot;$index: $item\n&quot;;
+}
+// 0: apel, 1: jeruk, 2: mangga
+
+// Associative array
+$user = [&quot;nama&quot; =&gt; &quot;Budi&quot;, &quot;umur&quot; =&gt; 25, &quot;kota&quot; =&gt; &quot;Jakarta&quot;];
+
+foreach ($user as $key =&gt; $value) {
+    echo &quot;$key: $value\n&quot;;
+}
+// nama: Budi, umur: 25, kota: Jakarta
+</code></pre>
+<p><strong>Dengan referensi (mengubah array):</strong></p>
+<pre><code class="language-php">&lt;?php
+$angka = [1, 2, 3, 4, 5];
+
+// Tanpa referensi — nilai disalin
+foreach ($angka as $n) {
+    $n *= 2; // tidak mengubah array asli
+}
+var_dump($angka); // [1, 2, 3, 4, 5]
+
+// Dengan referensi — mengubah array asli
+foreach ($angka as &amp;$n) {
+    $n *= 2;
+}
+unset($n); // penting! putuskan referensi setelah loop
+var_dump($angka); // [2, 4, 6, 8, 10]
+</code></pre>
+<blockquote>
+<p>⚠️ <strong>Peringatan:</strong> Setelah <code>foreach</code> dengan referensi, <strong>selalu</strong> panggil <code>unset($n)</code> untuk memutus referensi. Jika tidak, iterasi berikutnya bisa menghasilkan bug yang sulit dilacak.</p>
+</blockquote>
+<p><strong>Iterasi nested array:</strong></p>
+<pre><code class="language-php">&lt;?php
+$matrix = [
+    [1, 2, 3],
+    [4, 5, 6],
+    [7, 8, 9]
+];
+
+foreach ($matrix as $baris) {
+    foreach ($baris as $nilai) {
+        echo $nilai . &quot; &quot;;
+    }
+    echo &quot;\n&quot;;
+}
+</code></pre>
+<p><strong>Iterasi object:</strong></p>
+<pre><code class="language-php">&lt;?php
+class User {
+    public $nama = &quot;Budi&quot;;
+    public $umur = 25;
+    public $kota = &quot;Jakarta&quot;;
+}
+
+$user = new User();
+foreach ($user as $key =&gt; $value) {
+    echo &quot;$key: $value\n&quot;;
+}
+// nama: Budi, umur: 25, kota: Jakarta
+</code></pre>
+<p><strong><code>foreach</code> dengan list/destructuring:</strong></p>
+<pre><code class="language-php">&lt;?php
+$koordinat = [
+    [1, 2],
+    [3, 4],
+    [5, 6]
+];
+
+foreach ($koordinat as [$x, $y]) {
+    echo &quot;X: $x, Y: $y\n&quot;;
+}
+
+// Associative
+$users = [
+    [&quot;nama&quot; =&gt; &quot;Budi&quot;, &quot;umur&quot; =&gt; 25],
+    [&quot;nama&quot; =&gt; &quot;Siti&quot;, &quot;umur&quot; =&gt; 30]
+];
+
+foreach ($users as [&quot;nama&quot; =&gt; $nama, &quot;umur&quot; =&gt; $umur]) {
+    echo &quot;$nama ($umur tahun)\n&quot;;
+}
+</code></pre>
+<h3 id="alternative-syntax-1">Alternative Syntax <a href="#alternative-syntax-1" class="anchor" aria-hidden="true">#</a></h3>
+<pre><code class="language-php">&lt;?php foreach ($buah as $item): ?&gt;
+    &lt;li&gt;&lt;?= htmlspecialchars($item) ?&gt;&lt;/li&gt;
+&lt;?php endforeach; ?&gt;
+</code></pre>
+<h3 id="perbandingan-jenis-loop">Perbandingan Jenis Loop <a href="#perbandingan-jenis-loop" class="anchor" aria-hidden="true">#</a></h3>
+<table>
+<thead>
+<tr>
+<th>Loop</th>
+<th>Iterasi</th>
+<th>Kapan Dipakai</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>for</code></td>
+<td>Counter</td>
+<td>Jumlah iterasi diketahui</td>
+</tr>
+<tr>
+<td><code>while</code></td>
+<td>Kondisi</td>
+<td>Jumlah iterasi tidak diketahui</td>
+</tr>
+<tr>
+<td><code>do...while</code></td>
+<td>Kondisi (setelah)</td>
+<td>Minimal satu iterasi</td>
+</tr>
+<tr>
+<td><code>foreach</code></td>
+<td>Array/object</td>
+<td>Iterasi array atau object</td>
+</tr>
+</tbody>
+</table>
+<hr>
+<h2 id="break-dan-continue"><code>break</code> dan <code>continue</code> <a href="#break-dan-continue" class="anchor" aria-hidden="true">#</a></h2>
+<h3 id="break--keluar-dari-loop"><code>break</code> — Keluar dari Loop <a href="#break--keluar-dari-loop" class="anchor" aria-hidden="true">#</a></h3>
+<p>Menghentikan loop sepenuhnya.</p>
+<pre><code class="language-php">&lt;?php
+for ($i = 0; $i &lt; 10; $i++) {
+    if ($i === 5) {
+        break; // keluar dari loop
+    }
+    echo $i . &quot; &quot;;
+}
+// Output: 0 1 2 3 4
+</code></pre>
+<p><strong><code>break</code> dalam <code>switch</code>:</strong></p>
+<pre><code class="language-php">&lt;?php
+switch ($nilai) {
+    case 1:
+        echo &quot;Satu&quot;;
+        break; // keluar dari switch
+    case 2:
+        echo &quot;Dua&quot;;
+        break;
+}
+</code></pre>
+<h3 id="continue--lewati-iterasi-saat-ini"><code>continue</code> — Lewati Iterasi Saat Ini <a href="#continue--lewati-iterasi-saat-ini" class="anchor" aria-hidden="true">#</a></h3>
+<p>Melompati sisa body loop dan lanjut ke iterasi berikutnya.</p>
+<pre><code class="language-php">&lt;?php
+for ($i = 0; $i &lt; 10; $i++) {
+    if ($i % 2 === 0) {
+        continue; // lewati angka genap
+    }
+    echo $i . &quot; &quot;; // hanya angka ganjil
+}
+// Output: 1 3 5 7 9
+</code></pre>
+<h3 id="break-dan-continue-dengan-level"><code>break</code> dan <code>continue</code> dengan Level <a href="#break-dan-continue-dengan-level" class="anchor" aria-hidden="true">#</a></h3>
+<p>Untuk keluar dari <strong>loop luar</strong> dari dalam loop dalam, berikan argumen angka:</p>
+<pre><code class="language-php">&lt;?php
+for ($i = 0; $i &lt; 3; $i++) {
+    for ($j = 0; $j &lt; 3; $j++) {
+        if ($i === 1 &amp;&amp; $j === 1) {
+            break 2; // keluar dari kedua loop
+        }
+        echo &quot;i=$i, j=$j\n&quot;;
+    }
+}
+// Output: i=0,j=0 | i=0,j=1 | i=0,j=2 | i=1,j=0
+</code></pre>
+<p><strong><code>continue</code> dengan level:</strong></p>
+<pre><code class="language-php">&lt;?php
+for ($i = 0; $i &lt; 3; $i++) {
+    for ($j = 0; $j &lt; 3; $j++) {
+        if ($j === 1) {
+            continue 2; // lanjut ke iterasi $i berikutnya
+        }
+        echo &quot;i=$i, j=$j\n&quot;;
+    }
+}
+// Output: i=0,j=0 | i=1,j=0 | i=2,j=0
+</code></pre>
+<blockquote>
+<p><strong>Tips:</strong> Penggunaan <code>break 2</code> / <code>continue 2</code> jarang diperlukan. Jika logika menjadi kompleks, pertimbangkan refactor ke fungsi.</p>
+</blockquote>
+<hr>
+<h2 id="contoh-praktis">Contoh Praktis <a href="#contoh-praktis" class="anchor" aria-hidden="true">#</a></h2>
+<h3 id="1-fizzbuzz">1. FizzBuzz <a href="#1-fizzbuzz" class="anchor" aria-hidden="true">#</a></h3>
+<p>Program klasik: cetak angka 1–100, tetapi:</p>
+<ul>
+<li>Kelipatan 3 → &ldquo;Fizz&rdquo;</li>
+<li>Kelipatan 5 → &ldquo;Buzz&rdquo;</li>
+<li>Kelipatan 3 dan 5 → &ldquo;FizzBuzz&rdquo;</li>
+</ul>
+<pre><code class="language-php">&lt;?php
+for ($i = 1; $i &lt;= 100; $i++) {
+    if ($i % 15 === 0) {
+        echo &quot;FizzBuzz\n&quot;;
+    } elseif ($i % 3 === 0) {
+        echo &quot;Fizz\n&quot;;
+    } elseif ($i % 5 === 0) {
+        echo &quot;Buzz\n&quot;;
+    } else {
+        echo &quot;$i\n&quot;;
+    }
+}
+</code></pre>
+<h3 id="2-mencari-bilangan-prima">2. Mencari Bilangan Prima <a href="#2-mencari-bilangan-prima" class="anchor" aria-hidden="true">#</a></h3>
+<pre><code class="language-php">&lt;?php
+function isPrima(int $n): bool {
+    if ($n &lt; 2) return false;
+    for ($i = 2; $i &lt;= sqrt($n); $i++) {
+        if ($n % $i === 0) return false;
+    }
+    return true;
+}
+
+$prima = [];
+for ($i = 2; $i &lt;= 50; $i++) {
+    if (isPrima($i)) {
+        $prima[] = $i;
+    }
+}
+echo implode(&quot;, &quot;, $prima);
+// 2, 3, 5, 7, 11, 13, 17, 19, 23, 29, 31, 37, 41, 43, 47
+</code></pre>
+<h3 id="3-menu-interaktif-dengan-switch-dan-while">3. Menu Interaktif dengan <code>switch</code> dan <code>while</code> <a href="#3-menu-interaktif-dengan-switch-dan-while" class="anchor" aria-hidden="true">#</a></h3>
+<pre><code class="language-php">&lt;?php
+$pilihan = null;
+
+while ($pilihan !== &quot;0&quot;) {
+    echo &quot;\n=== Menu ===\n&quot;;
+    echo &quot;1. Lihat Produk\n&quot;;
+    echo &quot;2. Tambah ke Keranjang\n&quot;;
+    echo &quot;3. Checkout\n&quot;;
+    echo &quot;0. Keluar\n&quot;;
+
+    $pilihan = readline(&quot;Pilih menu: &quot;);
+
+    switch ($pilihan) {
+        case &quot;1&quot;:
+            echo &quot;Menampilkan daftar produk...\n&quot;;
+            break;
+        case &quot;2&quot;:
+            echo &quot;Produk ditambahkan ke keranjang\n&quot;;
+            break;
+        case &quot;3&quot;:
+            echo &quot;Checkout berhasil\n&quot;;
+            break;
+        case &quot;0&quot;:
+            echo &quot;Terima kasih!\n&quot;;
+            break;
+        default:
+            echo &quot;Pilihan tidak valid\n&quot;;
+    }
+}
+</code></pre>
+<h3 id="4-pola-bintang-dengan-nested-loop">4. Pola Bintang dengan Nested Loop <a href="#4-pola-bintang-dengan-nested-loop" class="anchor" aria-hidden="true">#</a></h3>
+<pre><code class="language-php">&lt;?php
+$tinggi = 5;
+
+for ($i = 1; $i &lt;= $tinggi; $i++) {
+    for ($j = 1; $j &lt;= $i; $j++) {
+        echo &quot;*&quot;;
+    }
+    echo &quot;\n&quot;;
+}
+// *
+// **
+// ***
+// ****
+// *****
+</code></pre>
+<h3 id="5-iterasi-array-dengan-foreach">5. Iterasi Array dengan <code>foreach</code> <a href="#5-iterasi-array-dengan-foreach" class="anchor" aria-hidden="true">#</a></h3>
+<pre><code class="language-php">&lt;?php
+$pesanan = [
+    [&quot;produk&quot; =&gt; &quot;Keyboard&quot;, &quot;jumlah&quot; =&gt; 2, &quot;harga&quot; =&gt; 450000],
+    [&quot;produk&quot; =&gt; &quot;Mouse&quot;, &quot;jumlah&quot; =&gt; 1, &quot;harga&quot; =&gt; 150000],
+    [&quot;produk&quot; =&gt; &quot;Monitor&quot;, &quot;jumlah&quot; =&gt; 1, &quot;harga&quot; =&gt; 1500000]
+];
+
+$total = 0;
+foreach ($pesanan as $item) {
+    $subtotal = $item[&quot;jumlah&quot;] * $item[&quot;harga&quot;];
+    $total += $subtotal;
+    printf(
+        &quot;%s: %d x Rp%s = Rp%s\n&quot;,
+        $item[&quot;produk&quot;],
+        $item[&quot;jumlah&quot;],
+        number_format($item[&quot;harga&quot;], 0, &quot;,&quot;, &quot;.&quot;),
+        number_format($subtotal, 0, &quot;,&quot;, &quot;.&quot;)
+    );
+}
+echo &quot;Total: Rp&quot; . number_format($total, 0, &quot;,&quot;, &quot;.&quot;);
+</code></pre>
+<p>Output:</p>
+<pre><code>Keyboard: 2 x Rp450.000 = Rp900.000
+Mouse: 1 x Rp150.000 = Rp150.000
+Monitor: 1 x Rp1.500.000 = Rp1.500.000
+Total: Rp2.550.000
+</code></pre>
+<h3 id="6-menggunakan-match-untuk-http-status">6. Menggunakan <code>match</code> untuk HTTP Status <a href="#6-menggunakan-match-untuk-http-status" class="anchor" aria-hidden="true">#</a></h3>
+<pre><code class="language-php">&lt;?php
+function pesanStatus(int $status): string {
+    return match (true) {
+        $status &gt;= 200 &amp;&amp; $status &lt; 300 =&gt; &quot;Sukses&quot;,
+        $status &gt;= 300 &amp;&amp; $status &lt; 400 =&gt; &quot;Redirect&quot;,
+        $status &gt;= 400 &amp;&amp; $status &lt; 500 =&gt; &quot;Client Error&quot;,
+        $status &gt;= 500 &amp;&amp; $status &lt; 600 =&gt; &quot;Server Error&quot;,
+        default =&gt; &quot;Status tidak dikenal&quot;,
+    };
+}
+
+echo pesanStatus(200); // &quot;Sukses&quot;
+echo pesanStatus(404); // &quot;Client Error&quot;
+echo pesanStatus(500); // &quot;Server Error&quot;
+</code></pre>
+<hr>
+<h2 id="tips--best-practice">Tips &amp; Best Practice <a href="#tips--best-practice" class="anchor" aria-hidden="true">#</a></h2>
+<ol>
+<li>
+<p><strong>Gunakan <code>===</code></strong> dalam kondisi — hindari <code>==</code> yang bisa mengejutkan.</p>
+</li>
+<li>
+<p><strong>Gunakan <code>match</code></strong> (PHP 8+) daripada <code>switch</code> untuk kode baru — perbandingan ketat dan mengembalikan nilai.</p>
+</li>
+<li>
+<p><strong>Selalu <code>break</code></strong> di <code>switch</code> kecuali sengaja fall-through.</p>
+</li>
+<li>
+<p><strong>Gunakan alternative syntax</strong> (<code>if: ... endif;</code>) saat mencampur PHP dengan HTML.</p>
+</li>
+<li>
+<p><strong>Hati-hati dengan <code>&quot;0&quot;</code></strong> — falsy di PHP. Gunakan <code>!== &quot;&quot;</code> jika perlu membedakan.</p>
+</li>
+<li>
+<p><strong>Selalu <code>unset($n)</code></strong> setelah <code>foreach</code> dengan referensi.</p>
+</li>
+<li>
+<p><strong>Hindari nested loop yang dalam</strong> — pertimbangkan refactor ke fungsi.</p>
+</li>
+<li>
+<p><strong>Gunakan <code>continue</code></strong> untuk melewati iterasi, bukan nested <code>if</code>.</p>
+</li>
+<li>
+<p><strong>Perhatikan performa</strong> — <code>count()</code> di kondisi loop <code>for</code> dievaluasi setiap iterasi. Simpan ke variabel jika array besar:</p>
+</li>
+</ol>
+<pre><code class="language-php">&lt;?php
+// ❌ Lambat — count() dipanggil setiap iterasi
+for ($i = 0; $i &lt; count($arr); $i++) { }
+
+// ✅ Lebih cepat
+$n = count($arr);
+for ($i = 0; $i &lt; $n; $i++) { }
+</code></pre>
+<ol start="10">
+<li><strong>Untuk iterasi array, gunakan <code>foreach</code></strong> — lebih mudah dibaca dan biasanya lebih cepat daripada <code>for</code> dengan index.</li>
+</ol>
+<hr>
+<h2 id="ringkasan">Ringkasan <a href="#ringkasan" class="anchor" aria-hidden="true">#</a></h2>
+<table>
+<thead>
+<tr>
+<th>Struktur</th>
+<th>Kegunaan</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>if</code></td>
+<td>Menjalankan blok jika kondisi truthy</td>
+</tr>
+<tr>
+<td><code>if...else</code></td>
+<td>Dua cabang</td>
+</tr>
+<tr>
+<td><code>if...elseif...else</code></td>
+<td>Banyak cabang</td>
+</tr>
+<tr>
+<td>Ternary <code>? :</code></td>
+<td><code>if...else</code> ringkas</td>
+</tr>
+<tr>
+<td><code>??</code></td>
+<td>Null coalescing</td>
+</tr>
+<tr>
+<td><code>?-&gt;</code></td>
+<td>Nullsafe (PHP 8+)</td>
+</tr>
+<tr>
+<td><code>switch</code></td>
+<td>Banyak cabang (longgar <code>==</code>)</td>
+</tr>
+<tr>
+<td><code>match</code></td>
+<td>Banyak cabang (ketat <code>===</code>, mengembalikan nilai, PHP 8+)</td>
+</tr>
+<tr>
+<td><code>for</code></td>
+<td>Loop dengan counter</td>
+</tr>
+<tr>
+<td><code>while</code></td>
+<td>Loop berdasarkan kondisi (diperiksa di awal)</td>
+</tr>
+<tr>
+<td><code>do...while</code></td>
+<td>Loop berdasarkan kondisi (diperiksa di akhir, minimal sekali)</td>
+</tr>
+<tr>
+<td><code>foreach</code></td>
+<td>Iterasi array/object</td>
+</tr>
+<tr>
+<td><code>break</code></td>
+<td>Keluar dari loop/switch</td>
+</tr>
+<tr>
+<td><code>continue</code></td>
+<td>Lewati iterasi saat ini</td>
+</tr>
+</tbody>
+</table>
+<p>Poin penting:</p>
+<ul>
+<li>Gunakan <strong><code>===</code></strong> dalam kondisi — hindari <code>==</code>.</li>
+<li><strong><code>match</code></strong> (PHP 8+) lebih aman dan ekspresif daripada <code>switch</code>.</li>
+<li><strong>Alternative syntax</strong> (<code>if: ... endif;</code>) memudahkan template HTML.</li>
+<li><strong><code>&quot;0&quot;</code> adalah falsy</strong> di PHP — beda dengan JavaScript.</li>
+<li><strong><code>foreach</code> dengan referensi</strong> — selalu <code>unset($n)</code> setelahnya.</li>
+<li><strong><code>break 2</code> / <code>continue 2</code></strong> untuk keluar dari nested loop.</li>
+<li>Simpan <code>count($arr)</code> ke variabel di loop <code>for</code> untuk performa.</li>
+<li>Gunakan <strong><code>foreach</code></strong> untuk iterasi array — lebih mudah dibaca.</li>
+</ul>
+<p>Pada artikel berikutnya, kita akan membahas <strong>Fungsi</strong> — cara membuat, parameter, return value, scope, dan closure.</p>
+
+			<div class="page-footer-meta d-flex flex-column flex-md-row justify-content-between">
+				</div>
+			<div class="docs-navigation d-flex justify-content-between">
+	
+	<a href="/php/tutorial/04-tipe-data-konversi/">
+			<div class="card my-1">
+				<div class="card-body py-2">
+					&larr; Tipe Data &amp; Konversi
+				</div>
+			</div>
+		</a>
+	</div>
+
+			
+		</main>
+	</div>
+
+      </div>
+    </div>
+    
+    
+    <footer class="footer text-muted">
+  <div class="container-xxl">
+    <div class="row">
+      <div class="col-lg-8 order-last order-lg-first">
+        <ul class="list-inline">
+          <li class="list-inline-item">Powered by <a class="text-muted" href="https://gohugo.io/">Hugo</a> and <a class="text-muted" href="https://github.com/">Github</a></li>
+        </ul>
+      </div>
+      <div class="col-lg-8 order-first order-lg-last text-lg-end">
+        <ul class="list-inline">
+          </ul>
+      </div>
+    </div>
+  </div>
+</footer>
+    
+
+<script src="/js/bootstrap.min.650aeec64c81d69d4c0850fc73c93da3f0330cec0a27772feed7f90f60baa5f47f1c45687d71914bdafd1c4e860d40f6dc08ede27a2f08431ff929c9a2d24621.js" integrity="sha512-ZQruxkyB1p1MCFD8c8k9o/AzDOwKJ3cv7tf5D2C6pfR/HEVofXGRS9r9HE6GDUD23Ajt4novCEMf&#43;SnJotJGIQ==" crossorigin="anonymous" defer></script>
+  <script src="/js/highlight.min.ec234bd8a5f487aaffe50a89f17b14501b1bb65633cf177cffd4cb84702dd7030edc08712dceb8dc27ac7e54b53240a08bf0b8d951572ee582bcdbbd06a48a7b.js" integrity="sha512-7CNL2KX0h6r/5QqJ8XsUUBsbtlYzzxd8/9TLhHAt1wMO3AhxLc643CesflS1MkCgi/C42VFXLuWCvNu9BqSKew==" crossorigin="anonymous" defer></script>
+  <script src="/main.min.cd1e5e6b40065b3f7f7fd8548a528fac67019754eda0f37b9918d02d154fc9ef6a22742f6513b0572ad9163152e151ec36221fbeafbecd7759c3dab1f19b64b9.js" integrity="sha512-zR5ea0AGWz9/f9hUilKPrGcBl1TtoPN7mRjQLRVPye9qInQvZROwVyrZFjFS4VHsNiIfvq&#43;&#43;zXdZw9qx8ZtkuQ==" crossorigin="anonymous" defer></script>
+  <script src="https://kaban.my.id/index.min.46a4c59d74237f1f9d9ebd686fe4545183e6a6c20893b8229aebc3844e6219b64f2f9675871fb41ea7cf595279ed0e6cdb4b62fe45c1690693acf75d76c798c1.js" integrity="sha512-RqTFnXQjfx&#43;dnr1ob&#43;RUUYPmpsIIk7gimuvDhE5iGbZPL5Z1hx&#43;0HqfPWVJ57Q5s20ti/kXBaQaTrPdddseYwQ==" crossorigin="anonymous" defer></script>
+  
+    <div class="d-flex fixed-bottom pb-4 pb-lg-5 pe-4 pe-lg-5">
+      <a id="toTop" href="#" class="btn btn-outline-primary rounded-circle ms-auto p-2"><span class="visually-hidden">Top</span><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-chevron-up"><polyline points="18 15 12 9 6 15"></polyline></svg></a>
+    </div>
+    
+  </body>
+</html>
