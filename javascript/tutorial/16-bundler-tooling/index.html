@@ -1,0 +1,1705 @@
+<!doctype html>
+<html lang="en-US">
+  <head>
+  <meta charset="utf-8">
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <link rel="preload" as="font" href="https://kaban.my.id/fonts/vendor/jost/jost-v4-latin-regular.woff2" type="font/woff2" crossorigin>
+<link rel="preload" as="font" href="https://kaban.my.id/fonts/vendor/jost/jost-v4-latin-500.woff2" type="font/woff2" crossorigin>
+<link rel="preload" as="font" href="https://kaban.my.id/fonts/vendor/jost/jost-v4-latin-700.woff2" type="font/woff2" crossorigin>
+
+  <script>(()=>{var t=window.matchMedia&&window.matchMedia("(prefers-color-scheme: dark)").matches,e=localStorage.getItem("theme");t&&e===null&&(localStorage.setItem("theme","dark"),document.documentElement.setAttribute("data-dark-mode","")),t&&e==="dark"&&document.documentElement.setAttribute("data-dark-mode",""),e==="dark"&&document.documentElement.setAttribute("data-dark-mode","")})()</script>
+
+  <link rel="stylesheet" href="https://kaban.my.id/main.4296e689affcd00e933b8954c10fc43cd1a5f16d5552e78183d12ea50d3e0bf5a596df23a379a4936743f01a7cd8ba048a628b2b9b60b34aa49fad468287100a.css" integrity="sha512-Qpbmia/80A6TO4lUwQ/EPNGl8W1VUueBg9EupQ0&#43;C/Wllt8jo3mkk2dD8Bp82LoEimKLK5tgs0qkn61GgocQCg==" crossorigin="anonymous">
+<noscript><style>img.lazyload { display: none; }</style></noscript>
+  <meta name="robots" content="index, follow">
+    <meta name="googlebot" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1">
+    <meta name="bingbot" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1">
+  <title>Module Bundler &amp; Build Tool - Roberto Kaban Blog&#39;s</title>
+<meta name="description" content="Panduan lengkap build tool JavaScript: Vite, Webpack, Babel, ESLint, dan Prettier untuk workflow modern.">
+<link rel="canonical" href="https://kaban.my.id/javascript/tutorial/16-bundler-tooling/">
+<meta property="og:locale" content="en_US">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Module Bundler &amp; Build Tool">
+<meta property="og:description" content="Panduan lengkap build tool JavaScript: Vite, Webpack, Babel, ESLint, dan Prettier untuk workflow modern.">
+<meta property="og:url" content="https://kaban.my.id/javascript/tutorial/16-bundler-tooling/">
+<meta property="og:site_name" content="Roberto Kaban Blog&#39;s">
+<meta property="article:published_time" content="2023-01-03T08:00:00+00:00">
+  <meta property="article:modified_time" content="2023-01-03T08:00:00+00:00">
+  
+  <meta property="og:image" content="https://kaban.my.id/doks.png"/>
+      <meta property="og:image:alt" content="Roberto Kaban Blog&#39;s">
+    
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:site" content="@robertokaban">
+<meta name="twitter:creator" content="@robertokaban">
+<meta name="twitter:title" content="Module Bundler &amp; Build Tool">
+<meta name="twitter:description" content="Panduan lengkap build tool JavaScript: Vite, Webpack, Babel, ESLint, dan Prettier untuk workflow modern.">
+<meta name="twitter:image" content="https://kaban.my.id/doks.png">
+    <meta name="twitter:image:alt" content="Module Bundler &amp; Build Tool">
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "Person",
+        "@id": "https://kaban.my.id/#/schema/person/1",
+      "name": "BlogRobertoKaban",
+      "url": "https://kaban.my.id/",
+      "sameAs": [
+        "https://twitter.com/robertokaban"
+        , "https://github.com/robertokaban"
+        ],
+      "image": {
+          "@type": "ImageObject",
+          "@id": "https://kaban.my.id/#/schema/image/1",
+          "url": "https://kaban.my.id/doks.png",
+          "width":  1280 ,
+          "height":  640 ,
+          "caption": "BlogRobertoKaban"
+        }
+      },
+    {
+      "@type": "WebSite",
+      "@id": "https://kaban.my.id/#/schema/website/1",
+      "url": "https://kaban.my.id/",
+      "name": "Roberto Kaban Blog\u0027s",
+      "description": "Hanya sebuah catatan kecil untuk hal yang tidak ingin dilupakan.",
+      "publisher": {
+          "@id": "https://kaban.my.id/#/schema/person/1"
+        }
+      },
+    {
+      "@type": "WebPage",
+      "@id": "https://kaban.my.id/javascript/tutorial/16-bundler-tooling/",
+      "url": "https://kaban.my.id/javascript/tutorial/16-bundler-tooling/",
+      "name": "Module Bundler \u0026 Build Tool",
+      "description": "Panduan lengkap build tool JavaScript: Vite, Webpack, Babel, ESLint, dan Prettier untuk workflow modern.",
+      "isPartOf": {
+        "@id": "https://kaban.my.id/#/schema/website/1"
+      },
+      "about": {
+          "@id": "https://kaban.my.id/#/schema/person/1"
+        },
+      "datePublished": "2023-01-03T08:00:00CET",
+      "dateModified": "2023-01-03T08:00:00CET",
+      "breadcrumb": {
+        "@id": "https://kaban.my.id/javascript/tutorial/16-bundler-tooling/#/schema/breadcrumb/1"
+      },
+      "primaryImageOfPage": {
+        "@id": "https://kaban.my.id/javascript/tutorial/16-bundler-tooling/#/schema/image/2"
+      },
+      "inLanguage": "en-US",
+      "potentialAction": [{
+        "@type": "ReadAction", "target": ["https://kaban.my.id/javascript/tutorial/16-bundler-tooling/"]
+      }]
+    },
+    {
+      "@type": "BreadcrumbList",
+      "@id": "https://kaban.my.id/javascript/tutorial/16-bundler-tooling/#/schema/breadcrumb/1",
+      "name": "Breadcrumbs",
+      "itemListElement": [{
+        "@type": "ListItem",
+        "position":  1 ,
+        "item": {
+          "@type": "WebPage",
+          "@id": "https://kaban.my.id/",
+          "url": "https://kaban.my.id/",
+          "name": "Home"
+          }
+        },{
+        "@type": "ListItem",
+        "position":  2 ,
+        "item": {
+          "@type": "WebPage",
+          "@id": "https://kaban.my.id/javascript/",
+          "url": "https://kaban.my.id/javascript/",
+          "name": "Javascript"
+          }
+        },{
+        "@type": "ListItem",
+        "position":  3 ,
+        "item": {
+          "@type": "WebPage",
+          "@id": "https://kaban.my.id/javascript/tutorial/",
+          "url": "https://kaban.my.id/javascript/tutorial/",
+          "name": "Tutorial"
+          }
+        },{
+        "@type": "ListItem",
+        "position":  4 ,
+        "item": {
+          "@id": "https://kaban.my.id/javascript/tutorial/16-bundler-tooling/"
+          }
+        }]
+    },
+
+    {
+      "@context": "https://schema.org",
+      "@graph": [
+        {
+          "@type": "ImageObject",
+          "@id": "https://kaban.my.id/javascript/tutorial/16-bundler-tooling/#/schema/image/2",
+          "url": "https://kaban.my.id/doks.png",
+          "contentUrl": "https://kaban.my.id/doks.png",
+          "caption": "Module Bundler \u0026 Build Tool"
+        }
+      ]
+    }
+
+  ]
+}
+</script>
+
+  <meta name="theme-color" content="#fff">
+<link rel="icon" href="https://kaban.my.id/favicon.ico" sizes="any">
+<link rel="icon" type="image/svg+xml" href="https://kaban.my.id/favicon.svg">
+<link rel="apple-touch-icon" sizes="180x180" href="https://kaban.my.id/apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="32x32" href="https://kaban.my.id/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="https://kaban.my.id/favicon-16x16.png">
+<link rel="manifest" crossorigin="use-credentials" href="https://kaban.my.id/site.webmanifest">
+
+  
+
+
+  
+  
+  
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-60VSDZFQR5"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-60VSDZFQR5');
+</script>
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6664512614760985"
+     crossorigin="anonymous"></script>
+</head>
+
+  <body class="javascript single">
+    <div class="sticky-top">
+<div class="header-bar"></div>
+
+<header class="navbar navbar-expand-lg navbar-light doks-navbar">
+  <nav class="container-xxl flex-wrap flex-lg-nowrap" aria-label="Main navigation">
+
+    <a class="navbar-brand order-0" href="/" aria-label="Roberto Kaban Blog&#39;s">
+      Roberto Kaban Blog&#39;s
+    </a>
+
+    <button class="btn btn-menu order-2 d-block d-lg-none" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasDoks" aria-controls="offcanvasDoks" aria-label="Open main menu">
+      <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-menu"><line x1="3" y1="12" x2="21" y2="12"></line><line x1="3" y1="6" x2="21" y2="6"></line><line x1="3" y1="18" x2="21" y2="18"></line></svg>
+    </button>
+    <div class="offcanvas offcanvas-end border-0 py-lg-1" tabindex="-1" id="offcanvasDoks" data-bs-backdrop="true" aria-labelledby="offcanvasDoksLabel">
+      <div class="header-bar d-lg-none"></div>
+      <div class="offcanvas-header d-lg-none">
+        <h2 class="h5 offcanvas-title ps-2" id="offcanvasDoksLabel"><a class="text-dark" href="/">Roberto Kaban Blog&#39;s</a></h2>
+        <button type="button" class="btn-close text-reset me-2" data-bs-dismiss="offcanvas" aria-label="Close main menu"></button>
+      </div>
+      <div class="offcanvas-body p-4 p-lg-0">
+        <ul class="nav flex-column flex-lg-row align-items-lg-center mt-2 mt-lg-0 ms-lg-2 me-lg-auto">
+              <li class="nav-item">
+                <a class="nav-link ps-0 py-1" href="/about/">About Me</a>
+              </li>
+            
+          
+              <li class="nav-item">
+                <a class="nav-link ps-0 py-1" href="/contact/">Contact</a>
+              </li>
+            
+          
+              <li class="nav-item">
+                <a class="nav-link ps-0 py-1" href="/artikel/">Artikel</a>
+              </li>
+            
+          
+              <li class="nav-item">
+                <a class="nav-link ps-0 py-1" href="/coretanku/">Coretanku</a>
+              </li>
+            
+          </ul>
+
+        <hr class="text-black-50 my-4 d-lg-none">
+        <form class="doks-search position-relative flex-grow-1 ms-lg-auto me-lg-2">
+          <input id="search" class="form-control is-search" type="search" placeholder="Cari di blog ini..." aria-label="Cari di blog ini..." autocomplete="off">
+          <div id="suggestions" class="shadow bg-white rounded d-none"></div>
+        </form>
+        <hr class="text-black-50 my-4 d-lg-none">
+        <ul class="nav flex-column flex-lg-row">
+          <li class="nav-item">
+              <a class="nav-link social-link" href="https://github.com/robertokaban"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-github"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path></svg><small class="ms-2 d-lg-none">GitHub</small></a>
+            </li>
+          <li class="nav-item">
+              <a class="nav-link social-link" href="https://facebook.com/roberto.kaban"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-facebook"><path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"></path></svg><small class="ms-2 d-lg-none">Facebook</small></a>
+            </li>
+          <li class="nav-item">
+              <a class="nav-link social-link" href="https://twitter.com/robertokaban"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-twitter"><path d="M23 3a10.9 10.9 0 0 1-3.14 1.53 4.48 4.48 0 0 0-7.86 3v1A10.66 10.66 0 0 1 3 4s-4 9 5 13a11.64 11.64 0 0 1-7 2c9 5 20 0 20-11.5a4.5 4.5 0 0 0-.08-.83A7.72 7.72 0 0 0 23 3z"></path></svg><small class="ms-2 d-lg-none">Twitter</small></a>
+            </li>
+          <li class="nav-item">
+              <a class="nav-link social-link" href="https://youtube.com/@robertokaban"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-youtube"><path d="M10,15L15.19,12L10,9V15M21.56,7.17C21.69,7.64 21.78,8.27 21.84,9.07C21.91,9.87 21.94,10.56 21.94,11.16L22,12C22,14.19 21.84,15.8 21.56,16.83C21.31,17.73 20.73,18.31 19.83,18.56C19.36,18.69 18.5,18.78 17.18,18.84C15.88,18.91 14.69,18.94 13.59,18.94L12,19C7.81,19 5.2,18.84 4.17,18.56C3.27,18.31 2.69,17.73 2.44,16.83C2.31,16.36 2.22,15.73 2.16,14.93C2.09,14.13 2.06,13.44 2.06,12.84L2,12C2,9.81 2.16,8.2 2.44,7.17C2.69,6.27 3.27,5.69 4.17,5.44C4.64,5.31 5.5,5.22 6.82,5.16C8.12,5.09 9.31,5.06 10.41,5.06L12,5C16.19,5 18.8,5.16 19.83,5.44C20.73,5.69 21.31,6.27 21.56,7.17Z"></path></svg><small class="ms-2 d-lg-none">Youtube</small></a>
+            </li>
+          </ul>
+
+        
+        <hr class="text-black-50 my-4 d-lg-none">
+        <button id="mode" class="btn btn-link" type="button" aria-label="Toggle user interface mode">
+          <span class="toggle-dark"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-moon"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path></svg></span>
+          <span class="toggle-light"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-sun"><circle cx="12" cy="12" r="5"></circle><line x1="12" y1="1" x2="12" y2="3"></line><line x1="12" y1="21" x2="12" y2="23"></line><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line><line x1="1" y1="12" x2="3" y2="12"></line><line x1="21" y1="12" x2="23" y2="12"></line><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line></svg></span>
+        </button>
+        
+
+        </div>
+    </div>
+  </nav>
+</header>
+
+
+</div>
+
+
+<div class="container-xxl">
+  <aside class="doks-sidebar">
+    <nav id="doks-docs-nav" class="collapse d-lg-none" aria-label="Tertiary navigation">
+      
+<ul class="list-unstyled collapsible-sidebar">
+  
+    
+      
+      <li class="mb-1">
+        <button class="btn btn-toggle align-items-center rounded collapsed" data-bs-toggle="collapse" data-bs-target="#section-0967e753cd827c7c2576cf6f7292922e" aria-expanded="true">
+          Tutorial Javascript
+        </button>
+        <div class="collapse show" id="section-0967e753cd827c7c2576cf6f7292922e">
+          <ul class="btn-toggle-nav list-unstyled fw-normal pb-1 small">
+            
+              
+                
+                <li><a class="docs-link rounded" href="https://kaban.my.id/javascript/tutorial/pengenalan/">Pengenalan Javascript</a></li>
+              
+            
+              
+                
+                <li><a class="docs-link rounded" href="https://kaban.my.id/javascript/tutorial/02-instalasi-persiapan/">Instalasi &amp; Persiapan Lingkungan JavaScript</a></li>
+              
+            
+              
+                
+                <li><a class="docs-link rounded" href="https://kaban.my.id/javascript/tutorial/03-sintaks-variabel/">Sintaks Dasar &amp; Variabel</a></li>
+              
+            
+              
+                
+                <li><a class="docs-link rounded" href="https://kaban.my.id/javascript/tutorial/04-tipe-data-konversi/">Tipe Data &amp; Konversi</a></li>
+              
+            
+              
+                
+                <li><a class="docs-link rounded" href="https://kaban.my.id/javascript/tutorial/05-struktur-kontrol/">Struktur Kontrol &amp; Perulangan</a></li>
+              
+            
+              
+                
+                <li><a class="docs-link rounded" href="https://kaban.my.id/javascript/tutorial/06-fungsi/">Fungsi</a></li>
+              
+            
+              
+                
+                <li><a class="docs-link rounded" href="https://kaban.my.id/javascript/tutorial/07-array/">Array &amp; Method-nya</a></li>
+              
+            
+              
+                
+                <li><a class="docs-link rounded" href="https://kaban.my.id/javascript/tutorial/08-object/">Object &amp; Method-nya</a></li>
+              
+            
+              
+                
+                <li><a class="docs-link rounded" href="https://kaban.my.id/javascript/tutorial/09-dom-manipulation/">DOM Manipulation</a></li>
+              
+            
+              
+                
+                <li><a class="docs-link rounded" href="https://kaban.my.id/javascript/tutorial/10-event-handling/">Event &amp; Event Handling</a></li>
+              
+            
+              
+                
+                <li><a class="docs-link rounded" href="https://kaban.my.id/javascript/tutorial/11-web-storage/">Web Storage &amp; Cookie</a></li>
+              
+            
+              
+                
+                <li><a class="docs-link rounded" href="https://kaban.my.id/javascript/tutorial/12-es6-modern/">ES6&#43; Fitur Modern</a></li>
+              
+            
+              
+                
+                <li><a class="docs-link rounded" href="https://kaban.my.id/javascript/tutorial/13-async-javascript/">Asynchronous JavaScript</a></li>
+              
+            
+              
+                
+                <li><a class="docs-link rounded" href="https://kaban.my.id/javascript/tutorial/14-fetch-api/">Fetch API &amp; AJAX</a></li>
+              
+            
+              
+                
+                <li><a class="docs-link rounded" href="https://kaban.my.id/javascript/tutorial/15-nodejs-npm/">Node.js &amp; npm Dasar</a></li>
+              
+            
+              
+                
+                <li><a class="docs-link rounded active" href="https://kaban.my.id/javascript/tutorial/16-bundler-tooling/">Module Bundler &amp; Build Tool</a></li>
+              
+            
+          </ul>
+        </div>
+      </li>
+    
+  
+</ul>
+
+    </nav>
+  </aside>
+</div>
+
+    <div class="wrap container-xxl" role="document">
+      <div class="content">
+        
+	<div class="row flex-xl-nowrap">
+		<div class="col-lg-5 col-xl-4 docs-sidebar d-none d-lg-block">
+			<nav class="docs-links" aria-label="Main navigation">
+				
+<ul class="list-unstyled collapsible-sidebar">
+  
+    
+      
+      <li class="mb-1">
+        <button class="btn btn-toggle align-items-center rounded collapsed" data-bs-toggle="collapse" data-bs-target="#section-0967e753cd827c7c2576cf6f7292922e" aria-expanded="true">
+          Tutorial Javascript
+        </button>
+        <div class="collapse show" id="section-0967e753cd827c7c2576cf6f7292922e">
+          <ul class="btn-toggle-nav list-unstyled fw-normal pb-1 small">
+            
+              
+                
+                <li><a class="docs-link rounded" href="https://kaban.my.id/javascript/tutorial/pengenalan/">Pengenalan Javascript</a></li>
+              
+            
+              
+                
+                <li><a class="docs-link rounded" href="https://kaban.my.id/javascript/tutorial/02-instalasi-persiapan/">Instalasi &amp; Persiapan Lingkungan JavaScript</a></li>
+              
+            
+              
+                
+                <li><a class="docs-link rounded" href="https://kaban.my.id/javascript/tutorial/03-sintaks-variabel/">Sintaks Dasar &amp; Variabel</a></li>
+              
+            
+              
+                
+                <li><a class="docs-link rounded" href="https://kaban.my.id/javascript/tutorial/04-tipe-data-konversi/">Tipe Data &amp; Konversi</a></li>
+              
+            
+              
+                
+                <li><a class="docs-link rounded" href="https://kaban.my.id/javascript/tutorial/05-struktur-kontrol/">Struktur Kontrol &amp; Perulangan</a></li>
+              
+            
+              
+                
+                <li><a class="docs-link rounded" href="https://kaban.my.id/javascript/tutorial/06-fungsi/">Fungsi</a></li>
+              
+            
+              
+                
+                <li><a class="docs-link rounded" href="https://kaban.my.id/javascript/tutorial/07-array/">Array &amp; Method-nya</a></li>
+              
+            
+              
+                
+                <li><a class="docs-link rounded" href="https://kaban.my.id/javascript/tutorial/08-object/">Object &amp; Method-nya</a></li>
+              
+            
+              
+                
+                <li><a class="docs-link rounded" href="https://kaban.my.id/javascript/tutorial/09-dom-manipulation/">DOM Manipulation</a></li>
+              
+            
+              
+                
+                <li><a class="docs-link rounded" href="https://kaban.my.id/javascript/tutorial/10-event-handling/">Event &amp; Event Handling</a></li>
+              
+            
+              
+                
+                <li><a class="docs-link rounded" href="https://kaban.my.id/javascript/tutorial/11-web-storage/">Web Storage &amp; Cookie</a></li>
+              
+            
+              
+                
+                <li><a class="docs-link rounded" href="https://kaban.my.id/javascript/tutorial/12-es6-modern/">ES6&#43; Fitur Modern</a></li>
+              
+            
+              
+                
+                <li><a class="docs-link rounded" href="https://kaban.my.id/javascript/tutorial/13-async-javascript/">Asynchronous JavaScript</a></li>
+              
+            
+              
+                
+                <li><a class="docs-link rounded" href="https://kaban.my.id/javascript/tutorial/14-fetch-api/">Fetch API &amp; AJAX</a></li>
+              
+            
+              
+                
+                <li><a class="docs-link rounded" href="https://kaban.my.id/javascript/tutorial/15-nodejs-npm/">Node.js &amp; npm Dasar</a></li>
+              
+            
+              
+                
+                <li><a class="docs-link rounded active" href="https://kaban.my.id/javascript/tutorial/16-bundler-tooling/">Module Bundler &amp; Build Tool</a></li>
+              
+            
+          </ul>
+        </div>
+      </li>
+    
+  
+</ul>
+
+			</nav>
+		</div>
+		<nav class="docs-toc d-none d-xl-block col-xl-3" aria-label="Secondary navigation">
+			<div class="d-xl-none">
+  <button class="btn btn-outline-primary btn-sm doks-toc-toggle collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#onThisPage" aria-controls="doks-docs-nav" aria-expanded="false" aria-label="Toggle On this page navigation">
+    <span>Daftar isi</span>
+    <span>
+      <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" class="doks doks-expand" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><title>Expand</title><polyline points="7 13 12 18 17 13"></polyline><polyline points="7 6 12 11 17 6"></polyline></svg>
+      <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" class="doks doks-collapse" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><title>Collapse</title><polyline points="17 11 12 6 7 11"></polyline><polyline points="17 18 12 13 7 18"></polyline></svg>
+    </span>
+  </button>
+  <div class="collapse" id="onThisPage">
+    <div class="card card-body mt-3 py-1">
+      <div class="page-links">
+        <nav id="TableOfContents">
+  <ul>
+    <li><a href="#pendahuluan">Pendahuluan</a></li>
+    <li><a href="#mengapa-perlu-build-tool">Mengapa Perlu Build Tool?</a>
+      <ul>
+        <li><a href="#masalah-tanpa-build-tool">Masalah Tanpa Build Tool</a></li>
+        <li><a href="#solusi-build-tool">Solusi Build Tool</a></li>
+      </ul>
+    </li>
+    <li><a href="#vite--bundler-modern-rekomendasi">Vite — Bundler Modern (Rekomendasi)</a>
+      <ul>
+        <li><a href="#mengapa-vite">Mengapa Vite?</a></li>
+        <li><a href="#membuat-proyek-vite">Membuat Proyek Vite</a></li>
+        <li><a href="#struktur-proyek-vite">Struktur Proyek Vite</a></li>
+        <li><a href="#perintah-vite">Perintah Vite</a></li>
+        <li><a href="#konfigurasi-vite-viteconfigjs">Konfigurasi Vite (<code>vite.config.js</code>)</a></li>
+        <li><a href="#environment-variables-di-vite">Environment Variables di Vite</a></li>
+        <li><a href="#import-aset-di-vite">Import Aset di Vite</a></li>
+        <li><a href="#vite-untuk-reactvue">Vite untuk React/Vue</a></li>
+      </ul>
+    </li>
+    <li><a href="#webpack--bundler-klasik">Webpack — Bundler Klasik</a>
+      <ul>
+        <li><a href="#kelebihan-dan-kekurangan">Kelebihan dan Kekurangan</a></li>
+        <li><a href="#instalasi">Instalasi</a></li>
+        <li><a href="#konfigurasi-dasar-webpackconfigjs">Konfigurasi Dasar (<code>webpack.config.js</code>)</a></li>
+        <li><a href="#script-packagejson">Script <code>package.json</code></a></li>
+        <li><a href="#konsep-webpack">Konsep Webpack</a></li>
+      </ul>
+    </li>
+    <li><a href="#babel--transpiler">Babel — Transpiler</a>
+      <ul>
+        <li><a href="#mengapa-babel">Mengapa Babel?</a></li>
+        <li><a href="#instalasi-1">Instalasi</a></li>
+        <li><a href="#konfigurasi-babelconfigjson">Konfigurasi (<code>babel.config.json</code>)</a></li>
+        <li><a href="#menggunakan-babel">Menggunakan Babel</a></li>
+        <li><a href="#babel-dengan-bundler">Babel dengan Bundler</a></li>
+        <li><a href="#preset-umum">Preset Umum</a></li>
+        <li><a href="#polyfill">Polyfill</a></li>
+      </ul>
+    </li>
+    <li><a href="#eslint--linter">ESLint — Linter</a>
+      <ul>
+        <li><a href="#mengapa-eslint">Mengapa ESLint?</a></li>
+        <li><a href="#instalasi-2">Instalasi</a></li>
+        <li><a href="#konfigurasi-flat-eslintconfigjs">Konfigurasi Flat (<code>eslint.config.js</code>)</a></li>
+        <li><a href="#menjalankan-eslint">Menjalankan ESLint</a></li>
+        <li><a href="#tingkat-rule">Tingkat Rule</a></li>
+        <li><a href="#script-packagejson-1">Script <code>package.json</code></a></li>
+        <li><a href="#integrasi-editor">Integrasi Editor</a></li>
+      </ul>
+    </li>
+    <li><a href="#prettier--formatter">Prettier — Formatter</a>
+      <ul>
+        <li><a href="#mengapa-prettier">Mengapa Prettier?</a></li>
+        <li><a href="#instalasi-3">Instalasi</a></li>
+        <li><a href="#konfigurasi-prettierrc">Konfigurasi (<code>.prettierrc</code>)</a></li>
+        <li><a href="#menjalankan-prettier">Menjalankan Prettier</a></li>
+        <li><a href="#prettierignore"><code>.prettierignore</code></a></li>
+        <li><a href="#script-packagejson-2">Script <code>package.json</code></a></li>
+        <li><a href="#integrasi-dengan-eslint">Integrasi dengan ESLint</a></li>
+        <li><a href="#integrasi-editor-1">Integrasi Editor</a></li>
+      </ul>
+    </li>
+    <li><a href="#contoh-setup-proyek-lengkap">Contoh Setup Proyek Lengkap</a>
+      <ul>
+        <li><a href="#1-buat-proyek-vite">1. Buat Proyek Vite</a></li>
+        <li><a href="#2-instal-eslint--prettier">2. Instal ESLint &amp; Prettier</a></li>
+        <li><a href="#3-konfigurasi-eslint-eslintconfigjs">3. Konfigurasi ESLint (<code>eslint.config.js</code>)</a></li>
+        <li><a href="#4-konfigurasi-prettier-prettierrc">4. Konfigurasi Prettier (<code>.prettierrc</code>)</a></li>
+        <li><a href="#5-tambahkan-script">5. Tambahkan Script</a></li>
+        <li><a href="#6-jalankan">6. Jalankan</a></li>
+        <li><a href="#7-gitignore">7. <code>.gitignore</code></a></li>
+      </ul>
+    </li>
+    <li><a href="#ringkasan-alat-build">Ringkasan Alat Build</a></li>
+    <li><a href="#tips--best-practice">Tips &amp; Best Practice</a></li>
+    <li><a href="#ringkasan">Ringkasan</a></li>
+  </ul>
+</nav>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="page-links d-none d-xl-block">
+  <h3>Daftar isi</h3>
+  <nav id="TableOfContents">
+  <ul>
+    <li><a href="#pendahuluan">Pendahuluan</a></li>
+    <li><a href="#mengapa-perlu-build-tool">Mengapa Perlu Build Tool?</a>
+      <ul>
+        <li><a href="#masalah-tanpa-build-tool">Masalah Tanpa Build Tool</a></li>
+        <li><a href="#solusi-build-tool">Solusi Build Tool</a></li>
+      </ul>
+    </li>
+    <li><a href="#vite--bundler-modern-rekomendasi">Vite — Bundler Modern (Rekomendasi)</a>
+      <ul>
+        <li><a href="#mengapa-vite">Mengapa Vite?</a></li>
+        <li><a href="#membuat-proyek-vite">Membuat Proyek Vite</a></li>
+        <li><a href="#struktur-proyek-vite">Struktur Proyek Vite</a></li>
+        <li><a href="#perintah-vite">Perintah Vite</a></li>
+        <li><a href="#konfigurasi-vite-viteconfigjs">Konfigurasi Vite (<code>vite.config.js</code>)</a></li>
+        <li><a href="#environment-variables-di-vite">Environment Variables di Vite</a></li>
+        <li><a href="#import-aset-di-vite">Import Aset di Vite</a></li>
+        <li><a href="#vite-untuk-reactvue">Vite untuk React/Vue</a></li>
+      </ul>
+    </li>
+    <li><a href="#webpack--bundler-klasik">Webpack — Bundler Klasik</a>
+      <ul>
+        <li><a href="#kelebihan-dan-kekurangan">Kelebihan dan Kekurangan</a></li>
+        <li><a href="#instalasi">Instalasi</a></li>
+        <li><a href="#konfigurasi-dasar-webpackconfigjs">Konfigurasi Dasar (<code>webpack.config.js</code>)</a></li>
+        <li><a href="#script-packagejson">Script <code>package.json</code></a></li>
+        <li><a href="#konsep-webpack">Konsep Webpack</a></li>
+      </ul>
+    </li>
+    <li><a href="#babel--transpiler">Babel — Transpiler</a>
+      <ul>
+        <li><a href="#mengapa-babel">Mengapa Babel?</a></li>
+        <li><a href="#instalasi-1">Instalasi</a></li>
+        <li><a href="#konfigurasi-babelconfigjson">Konfigurasi (<code>babel.config.json</code>)</a></li>
+        <li><a href="#menggunakan-babel">Menggunakan Babel</a></li>
+        <li><a href="#babel-dengan-bundler">Babel dengan Bundler</a></li>
+        <li><a href="#preset-umum">Preset Umum</a></li>
+        <li><a href="#polyfill">Polyfill</a></li>
+      </ul>
+    </li>
+    <li><a href="#eslint--linter">ESLint — Linter</a>
+      <ul>
+        <li><a href="#mengapa-eslint">Mengapa ESLint?</a></li>
+        <li><a href="#instalasi-2">Instalasi</a></li>
+        <li><a href="#konfigurasi-flat-eslintconfigjs">Konfigurasi Flat (<code>eslint.config.js</code>)</a></li>
+        <li><a href="#menjalankan-eslint">Menjalankan ESLint</a></li>
+        <li><a href="#tingkat-rule">Tingkat Rule</a></li>
+        <li><a href="#script-packagejson-1">Script <code>package.json</code></a></li>
+        <li><a href="#integrasi-editor">Integrasi Editor</a></li>
+      </ul>
+    </li>
+    <li><a href="#prettier--formatter">Prettier — Formatter</a>
+      <ul>
+        <li><a href="#mengapa-prettier">Mengapa Prettier?</a></li>
+        <li><a href="#instalasi-3">Instalasi</a></li>
+        <li><a href="#konfigurasi-prettierrc">Konfigurasi (<code>.prettierrc</code>)</a></li>
+        <li><a href="#menjalankan-prettier">Menjalankan Prettier</a></li>
+        <li><a href="#prettierignore"><code>.prettierignore</code></a></li>
+        <li><a href="#script-packagejson-2">Script <code>package.json</code></a></li>
+        <li><a href="#integrasi-dengan-eslint">Integrasi dengan ESLint</a></li>
+        <li><a href="#integrasi-editor-1">Integrasi Editor</a></li>
+      </ul>
+    </li>
+    <li><a href="#contoh-setup-proyek-lengkap">Contoh Setup Proyek Lengkap</a>
+      <ul>
+        <li><a href="#1-buat-proyek-vite">1. Buat Proyek Vite</a></li>
+        <li><a href="#2-instal-eslint--prettier">2. Instal ESLint &amp; Prettier</a></li>
+        <li><a href="#3-konfigurasi-eslint-eslintconfigjs">3. Konfigurasi ESLint (<code>eslint.config.js</code>)</a></li>
+        <li><a href="#4-konfigurasi-prettier-prettierrc">4. Konfigurasi Prettier (<code>.prettierrc</code>)</a></li>
+        <li><a href="#5-tambahkan-script">5. Tambahkan Script</a></li>
+        <li><a href="#6-jalankan">6. Jalankan</a></li>
+        <li><a href="#7-gitignore">7. <code>.gitignore</code></a></li>
+      </ul>
+    </li>
+    <li><a href="#ringkasan-alat-build">Ringkasan Alat Build</a></li>
+    <li><a href="#tips--best-practice">Tips &amp; Best Practice</a></li>
+    <li><a href="#ringkasan">Ringkasan</a></li>
+  </ul>
+</nav>
+  </div>
+
+		</nav>
+		<main class="docs-content col-lg-11 col-xl-9">
+		
+				<nav aria-label="breadcrumb">
+					<ol class="breadcrumb">
+						<li class="breadcrumb-item"><a href="/">Home</a></li>
+<li class="breadcrumb-item"><a href="/javascript/">Javascript</a></li>
+<li class="breadcrumb-item"><a href="/javascript/tutorial/">Tutorial Javascript</a></li>
+<li class="breadcrumb-item active" aria-current="page">Module Bundler &amp; Build Tool</li>
+					</ol>
+				</nav>
+			
+			<h1>Module Bundler &amp; Build Tool</h1>
+			<p class="lead">Proyek JavaScript modern membutuhkan build tool: bundler untuk menggabungkan module, transpiler untuk kompatibilitas, linter untuk kualitas kode, dan formatter untuk konsistensi. Artikel ini membahas Vite, Webpack, Babel, ESLint, dan Prettier.</p>
+			<nav class="d-xl-none" aria-label="Quaternary navigation">
+				<div class="d-xl-none">
+  <button class="btn btn-outline-primary btn-sm doks-toc-toggle collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#onThisPage" aria-controls="doks-docs-nav" aria-expanded="false" aria-label="Toggle On this page navigation">
+    <span>Daftar isi</span>
+    <span>
+      <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" class="doks doks-expand" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><title>Expand</title><polyline points="7 13 12 18 17 13"></polyline><polyline points="7 6 12 11 17 6"></polyline></svg>
+      <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" class="doks doks-collapse" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><title>Collapse</title><polyline points="17 11 12 6 7 11"></polyline><polyline points="17 18 12 13 7 18"></polyline></svg>
+    </span>
+  </button>
+  <div class="collapse" id="onThisPage">
+    <div class="card card-body mt-3 py-1">
+      <div class="page-links">
+        <nav id="TableOfContents">
+  <ul>
+    <li><a href="#pendahuluan">Pendahuluan</a></li>
+    <li><a href="#mengapa-perlu-build-tool">Mengapa Perlu Build Tool?</a>
+      <ul>
+        <li><a href="#masalah-tanpa-build-tool">Masalah Tanpa Build Tool</a></li>
+        <li><a href="#solusi-build-tool">Solusi Build Tool</a></li>
+      </ul>
+    </li>
+    <li><a href="#vite--bundler-modern-rekomendasi">Vite — Bundler Modern (Rekomendasi)</a>
+      <ul>
+        <li><a href="#mengapa-vite">Mengapa Vite?</a></li>
+        <li><a href="#membuat-proyek-vite">Membuat Proyek Vite</a></li>
+        <li><a href="#struktur-proyek-vite">Struktur Proyek Vite</a></li>
+        <li><a href="#perintah-vite">Perintah Vite</a></li>
+        <li><a href="#konfigurasi-vite-viteconfigjs">Konfigurasi Vite (<code>vite.config.js</code>)</a></li>
+        <li><a href="#environment-variables-di-vite">Environment Variables di Vite</a></li>
+        <li><a href="#import-aset-di-vite">Import Aset di Vite</a></li>
+        <li><a href="#vite-untuk-reactvue">Vite untuk React/Vue</a></li>
+      </ul>
+    </li>
+    <li><a href="#webpack--bundler-klasik">Webpack — Bundler Klasik</a>
+      <ul>
+        <li><a href="#kelebihan-dan-kekurangan">Kelebihan dan Kekurangan</a></li>
+        <li><a href="#instalasi">Instalasi</a></li>
+        <li><a href="#konfigurasi-dasar-webpackconfigjs">Konfigurasi Dasar (<code>webpack.config.js</code>)</a></li>
+        <li><a href="#script-packagejson">Script <code>package.json</code></a></li>
+        <li><a href="#konsep-webpack">Konsep Webpack</a></li>
+      </ul>
+    </li>
+    <li><a href="#babel--transpiler">Babel — Transpiler</a>
+      <ul>
+        <li><a href="#mengapa-babel">Mengapa Babel?</a></li>
+        <li><a href="#instalasi-1">Instalasi</a></li>
+        <li><a href="#konfigurasi-babelconfigjson">Konfigurasi (<code>babel.config.json</code>)</a></li>
+        <li><a href="#menggunakan-babel">Menggunakan Babel</a></li>
+        <li><a href="#babel-dengan-bundler">Babel dengan Bundler</a></li>
+        <li><a href="#preset-umum">Preset Umum</a></li>
+        <li><a href="#polyfill">Polyfill</a></li>
+      </ul>
+    </li>
+    <li><a href="#eslint--linter">ESLint — Linter</a>
+      <ul>
+        <li><a href="#mengapa-eslint">Mengapa ESLint?</a></li>
+        <li><a href="#instalasi-2">Instalasi</a></li>
+        <li><a href="#konfigurasi-flat-eslintconfigjs">Konfigurasi Flat (<code>eslint.config.js</code>)</a></li>
+        <li><a href="#menjalankan-eslint">Menjalankan ESLint</a></li>
+        <li><a href="#tingkat-rule">Tingkat Rule</a></li>
+        <li><a href="#script-packagejson-1">Script <code>package.json</code></a></li>
+        <li><a href="#integrasi-editor">Integrasi Editor</a></li>
+      </ul>
+    </li>
+    <li><a href="#prettier--formatter">Prettier — Formatter</a>
+      <ul>
+        <li><a href="#mengapa-prettier">Mengapa Prettier?</a></li>
+        <li><a href="#instalasi-3">Instalasi</a></li>
+        <li><a href="#konfigurasi-prettierrc">Konfigurasi (<code>.prettierrc</code>)</a></li>
+        <li><a href="#menjalankan-prettier">Menjalankan Prettier</a></li>
+        <li><a href="#prettierignore"><code>.prettierignore</code></a></li>
+        <li><a href="#script-packagejson-2">Script <code>package.json</code></a></li>
+        <li><a href="#integrasi-dengan-eslint">Integrasi dengan ESLint</a></li>
+        <li><a href="#integrasi-editor-1">Integrasi Editor</a></li>
+      </ul>
+    </li>
+    <li><a href="#contoh-setup-proyek-lengkap">Contoh Setup Proyek Lengkap</a>
+      <ul>
+        <li><a href="#1-buat-proyek-vite">1. Buat Proyek Vite</a></li>
+        <li><a href="#2-instal-eslint--prettier">2. Instal ESLint &amp; Prettier</a></li>
+        <li><a href="#3-konfigurasi-eslint-eslintconfigjs">3. Konfigurasi ESLint (<code>eslint.config.js</code>)</a></li>
+        <li><a href="#4-konfigurasi-prettier-prettierrc">4. Konfigurasi Prettier (<code>.prettierrc</code>)</a></li>
+        <li><a href="#5-tambahkan-script">5. Tambahkan Script</a></li>
+        <li><a href="#6-jalankan">6. Jalankan</a></li>
+        <li><a href="#7-gitignore">7. <code>.gitignore</code></a></li>
+      </ul>
+    </li>
+    <li><a href="#ringkasan-alat-build">Ringkasan Alat Build</a></li>
+    <li><a href="#tips--best-practice">Tips &amp; Best Practice</a></li>
+    <li><a href="#ringkasan">Ringkasan</a></li>
+  </ul>
+</nav>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="page-links d-none d-xl-block">
+  <h3>Daftar isi</h3>
+  <nav id="TableOfContents">
+  <ul>
+    <li><a href="#pendahuluan">Pendahuluan</a></li>
+    <li><a href="#mengapa-perlu-build-tool">Mengapa Perlu Build Tool?</a>
+      <ul>
+        <li><a href="#masalah-tanpa-build-tool">Masalah Tanpa Build Tool</a></li>
+        <li><a href="#solusi-build-tool">Solusi Build Tool</a></li>
+      </ul>
+    </li>
+    <li><a href="#vite--bundler-modern-rekomendasi">Vite — Bundler Modern (Rekomendasi)</a>
+      <ul>
+        <li><a href="#mengapa-vite">Mengapa Vite?</a></li>
+        <li><a href="#membuat-proyek-vite">Membuat Proyek Vite</a></li>
+        <li><a href="#struktur-proyek-vite">Struktur Proyek Vite</a></li>
+        <li><a href="#perintah-vite">Perintah Vite</a></li>
+        <li><a href="#konfigurasi-vite-viteconfigjs">Konfigurasi Vite (<code>vite.config.js</code>)</a></li>
+        <li><a href="#environment-variables-di-vite">Environment Variables di Vite</a></li>
+        <li><a href="#import-aset-di-vite">Import Aset di Vite</a></li>
+        <li><a href="#vite-untuk-reactvue">Vite untuk React/Vue</a></li>
+      </ul>
+    </li>
+    <li><a href="#webpack--bundler-klasik">Webpack — Bundler Klasik</a>
+      <ul>
+        <li><a href="#kelebihan-dan-kekurangan">Kelebihan dan Kekurangan</a></li>
+        <li><a href="#instalasi">Instalasi</a></li>
+        <li><a href="#konfigurasi-dasar-webpackconfigjs">Konfigurasi Dasar (<code>webpack.config.js</code>)</a></li>
+        <li><a href="#script-packagejson">Script <code>package.json</code></a></li>
+        <li><a href="#konsep-webpack">Konsep Webpack</a></li>
+      </ul>
+    </li>
+    <li><a href="#babel--transpiler">Babel — Transpiler</a>
+      <ul>
+        <li><a href="#mengapa-babel">Mengapa Babel?</a></li>
+        <li><a href="#instalasi-1">Instalasi</a></li>
+        <li><a href="#konfigurasi-babelconfigjson">Konfigurasi (<code>babel.config.json</code>)</a></li>
+        <li><a href="#menggunakan-babel">Menggunakan Babel</a></li>
+        <li><a href="#babel-dengan-bundler">Babel dengan Bundler</a></li>
+        <li><a href="#preset-umum">Preset Umum</a></li>
+        <li><a href="#polyfill">Polyfill</a></li>
+      </ul>
+    </li>
+    <li><a href="#eslint--linter">ESLint — Linter</a>
+      <ul>
+        <li><a href="#mengapa-eslint">Mengapa ESLint?</a></li>
+        <li><a href="#instalasi-2">Instalasi</a></li>
+        <li><a href="#konfigurasi-flat-eslintconfigjs">Konfigurasi Flat (<code>eslint.config.js</code>)</a></li>
+        <li><a href="#menjalankan-eslint">Menjalankan ESLint</a></li>
+        <li><a href="#tingkat-rule">Tingkat Rule</a></li>
+        <li><a href="#script-packagejson-1">Script <code>package.json</code></a></li>
+        <li><a href="#integrasi-editor">Integrasi Editor</a></li>
+      </ul>
+    </li>
+    <li><a href="#prettier--formatter">Prettier — Formatter</a>
+      <ul>
+        <li><a href="#mengapa-prettier">Mengapa Prettier?</a></li>
+        <li><a href="#instalasi-3">Instalasi</a></li>
+        <li><a href="#konfigurasi-prettierrc">Konfigurasi (<code>.prettierrc</code>)</a></li>
+        <li><a href="#menjalankan-prettier">Menjalankan Prettier</a></li>
+        <li><a href="#prettierignore"><code>.prettierignore</code></a></li>
+        <li><a href="#script-packagejson-2">Script <code>package.json</code></a></li>
+        <li><a href="#integrasi-dengan-eslint">Integrasi dengan ESLint</a></li>
+        <li><a href="#integrasi-editor-1">Integrasi Editor</a></li>
+      </ul>
+    </li>
+    <li><a href="#contoh-setup-proyek-lengkap">Contoh Setup Proyek Lengkap</a>
+      <ul>
+        <li><a href="#1-buat-proyek-vite">1. Buat Proyek Vite</a></li>
+        <li><a href="#2-instal-eslint--prettier">2. Instal ESLint &amp; Prettier</a></li>
+        <li><a href="#3-konfigurasi-eslint-eslintconfigjs">3. Konfigurasi ESLint (<code>eslint.config.js</code>)</a></li>
+        <li><a href="#4-konfigurasi-prettier-prettierrc">4. Konfigurasi Prettier (<code>.prettierrc</code>)</a></li>
+        <li><a href="#5-tambahkan-script">5. Tambahkan Script</a></li>
+        <li><a href="#6-jalankan">6. Jalankan</a></li>
+        <li><a href="#7-gitignore">7. <code>.gitignore</code></a></li>
+      </ul>
+    </li>
+    <li><a href="#ringkasan-alat-build">Ringkasan Alat Build</a></li>
+    <li><a href="#tips--best-practice">Tips &amp; Best Practice</a></li>
+    <li><a href="#ringkasan">Ringkasan</a></li>
+  </ul>
+</nav>
+  </div>
+
+			</nav>
+			<h2 id="pendahuluan">Pendahuluan <a href="#pendahuluan" class="anchor" aria-hidden="true">#</a></h2>
+<p>Saat proyek JavaScript tumbuh, kita menghadapi masalah baru:</p>
+<ul>
+<li><strong>Banyak file module</strong> — browser perlu banyak request HTTP (lambat).</li>
+<li><strong>Fitur modern</strong> — sebagian browser belum mendukung (<code>?.</code>, <code>??</code>, class field).</li>
+<li><strong>Kualitas kode</strong> — tanpa aturan, kode menjadi tidak konsisten.</li>
+<li><strong>Aset non-JS</strong> — CSS, gambar, font perlu diproses.</li>
+<li><strong>Optimasi produksi</strong> — minifikasi, tree shaking, code splitting.</li>
+</ul>
+<p><strong>Build tool</strong> menyelesaikan masalah ini. Artikel ini membahas:</p>
+<ul>
+<li><strong>Bundler</strong> — Vite (rekomendasi modern) dan Webpack.</li>
+<li><strong>Transpiler</strong> — Babel (dan esbuild/SWC).</li>
+<li><strong>Linter</strong> — ESLint.</li>
+<li><strong>Formatter</strong> — Prettier.</li>
+</ul>
+<blockquote>
+<p><strong>Asumsi:</strong> Anda sudah memahami Node.js dan npm dari artikel sebelumnya. Semua contoh menggunakan npm.</p>
+</blockquote>
+<hr>
+<h2 id="mengapa-perlu-build-tool">Mengapa Perlu Build Tool? <a href="#mengapa-perlu-build-tool" class="anchor" aria-hidden="true">#</a></h2>
+<h3 id="masalah-tanpa-build-tool">Masalah Tanpa Build Tool <a href="#masalah-tanpa-build-tool" class="anchor" aria-hidden="true">#</a></h3>
+<pre><code class="language-html">&lt;!-- Banyak tag script — banyak request HTTP --&gt;
+&lt;script src=&quot;utils.js&quot;&gt;&lt;/script&gt;
+&lt;script src=&quot;api.js&quot;&gt;&lt;/script&gt;
+&lt;script src=&quot;components/button.js&quot;&gt;&lt;/script&gt;
+&lt;script src=&quot;components/modal.js&quot;&gt;&lt;/script&gt;
+&lt;script src=&quot;app.js&quot;&gt;&lt;/script&gt;
+&lt;!-- ... 50 file lagi --&gt;
+</code></pre>
+<ul>
+<li><strong>Banyak request</strong> — setiap file = satu request HTTP.</li>
+<li><strong>Urutan manual</strong> — dependency harus dimuat dalam urutan yang benar.</li>
+<li><strong>Tidak ada optimasi</strong> — kode tidak diminifikasi.</li>
+<li><strong>Kompatibilitas</strong> — fitur modern mungkin gagal di browser lama.</li>
+</ul>
+<h3 id="solusi-build-tool">Solusi Build Tool <a href="#solusi-build-tool" class="anchor" aria-hidden="true">#</a></h3>
+<pre><code>Source code (banyak file, fitur modern)
+         ↓  Build tool
+Bundle (satu/beberapa file, dioptimasi, kompatibel)
+         ↓
+Browser
+</code></pre>
+<p>Build tool menangani:</p>
+<ul>
+<li><strong>Bundling</strong> — menggabungkan module menjadi satu/beberapa file.</li>
+<li><strong>Transpiling</strong> — mengubah fitur modern ke kode yang kompatibel.</li>
+<li><strong>Minifikasi</strong> — menghapus spasi, komentar, memperpendek nama.</li>
+<li><strong>Tree shaking</strong> — menghapus kode yang tidak dipakai.</li>
+<li><strong>Code splitting</strong> — memecah bundle agar dimuat sesuai kebutuhan.</li>
+<li><strong>Asset handling</strong> — memproses CSS, gambar, font.</li>
+<li><strong>Dev server</strong> — live reload / hot reload.</li>
+</ul>
+<hr>
+<h2 id="vite--bundler-modern-rekomendasi">Vite — Bundler Modern (Rekomendasi) <a href="#vite--bundler-modern-rekomendasi" class="anchor" aria-hidden="true">#</a></h2>
+<p><strong>Vite</strong> (dibaca &ldquo;vit&rdquo;, bahasa Prancis untuk &ldquo;cepat&rdquo;) adalah build tool modern yang dikembangkan oleh Evan You (pembuat Vue). Vite menggunakan <strong>esbuild</strong> (sangat cepat) untuk development dan <strong>Rollup</strong> untuk produksi.</p>
+<h3 id="mengapa-vite">Mengapa Vite? <a href="#mengapa-vite" class="anchor" aria-hidden="true">#</a></h3>
+<ul>
+<li><strong>Sangat cepat</strong> — dev server启动 dalam milidetik (bukan detik).</li>
+<li><strong>Hot Module Replacement (HMR)</strong> instan.</li>
+<li><strong>Konfigurasi minimal</strong> — bekerja out-of-the-box.</li>
+<li><strong>Native ES Module</strong> di development — tidak perlu bundling saat dev.</li>
+<li><strong>Optimasi produksi</strong> — Rollup + minifikasi.</li>
+</ul>
+<h3 id="membuat-proyek-vite">Membuat Proyek Vite <a href="#membuat-proyek-vite" class="anchor" aria-hidden="true">#</a></h3>
+<pre><code class="language-bash">npm create vite@latest my-app
+</code></pre>
+<p>Ikuti prompt:</p>
+<pre><code>? Select a framework: › Vanilla
+? Select a variant: › JavaScript
+</code></pre>
+<p>Atau langsung:</p>
+<pre><code class="language-bash">npm create vite@latest my-app -- --template vanilla
+</code></pre>
+<p>Masuk dan jalankan:</p>
+<pre><code class="language-bash">cd my-app
+npm install
+npm run dev
+</code></pre>
+<p>Output:</p>
+<pre><code>  VITE v5.0.0  ready in 312 ms
+
+  ➜  Local:   http://localhost:5173/
+  ➜  Network: use --host to expose
+</code></pre>
+<h3 id="struktur-proyek-vite">Struktur Proyek Vite <a href="#struktur-proyek-vite" class="anchor" aria-hidden="true">#</a></h3>
+<pre><code>my-app/
+├── index.html          # Entry point HTML
+├── package.json
+├── vite.config.js      # Konfigurasi (opsional)
+├── public/             # Aset statis (tidak diproses)
+│   └── favicon.ico
+└── src/
+    ├── main.js         # Entry point JS
+    ├── style.css
+    └── counter.js
+</code></pre>
+<p><strong><code>index.html</code></strong> — entry point (bukan <code>src/index.html</code>):</p>
+<pre><code class="language-html">&lt;!DOCTYPE html&gt;
+&lt;html lang=&quot;id&quot;&gt;
+&lt;head&gt;
+  &lt;meta charset=&quot;UTF-8&quot;&gt;
+  &lt;title&gt;Vite App&lt;/title&gt;
+&lt;/head&gt;
+&lt;body&gt;
+  &lt;div id=&quot;app&quot;&gt;&lt;/div&gt;
+  &lt;script type=&quot;module&quot; src=&quot;/src/main.js&quot;&gt;&lt;/script&gt;
+&lt;/body&gt;
+&lt;/html&gt;
+</code></pre>
+<p><strong><code>src/main.js</code>:</strong></p>
+<pre><code class="language-javascript">import &quot;./style.css&quot;;
+import { setupCounter } from &quot;./counter.js&quot;;
+
+document.querySelector(&quot;#app&quot;).innerHTML = `
+  &lt;h1&gt;Hello Vite!&lt;/h1&gt;
+  &lt;button id=&quot;counter&quot;&gt;count is 0&lt;/button&gt;
+`;
+
+setupCounter(document.querySelector(&quot;#counter&quot;));
+</code></pre>
+<p><strong><code>src/counter.js</code>:</strong></p>
+<pre><code class="language-javascript">export function setupCounter(element) {
+  let counter = 0;
+
+  const setCounter = (count) =&gt; {
+    counter = count;
+    element.textContent = `count is ${counter}`;
+  };
+
+  element.addEventListener(&quot;click&quot;, () =&gt; setCounter(counter + 1));
+  setCounter(0);
+}
+</code></pre>
+<h3 id="perintah-vite">Perintah Vite <a href="#perintah-vite" class="anchor" aria-hidden="true">#</a></h3>
+<pre><code class="language-bash">npm run dev      # Dev server (HMR)
+npm run build    # Build untuk produksi → dist/
+npm run preview  # Preview hasil build
+</code></pre>
+<h3 id="konfigurasi-vite-viteconfigjs">Konfigurasi Vite (<code>vite.config.js</code>) <a href="#konfigurasi-vite-viteconfigjs" class="anchor" aria-hidden="true">#</a></h3>
+<pre><code class="language-javascript">import { defineConfig } from &quot;vite&quot;;
+
+export default defineConfig({
+  server: {
+    port: 3000,
+    open: true,          // buka browser otomatis
+    proxy: {
+      &quot;/api&quot;: {
+        target: &quot;http://localhost:5000&quot;,
+        changeOrigin: true
+      }
+    }
+  },
+  build: {
+    outDir: &quot;dist&quot;,
+    sourcemap: true,
+    minify: &quot;esbuild&quot;
+  }
+});
+</code></pre>
+<h3 id="environment-variables-di-vite">Environment Variables di Vite <a href="#environment-variables-di-vite" class="anchor" aria-hidden="true">#</a></h3>
+<p>Vite hanya mengekspos variable dengan prefix <strong><code>VITE_</code></strong>:</p>
+<pre><code># .env
+VITE_API_URL=https://api.example.com
+VITE_APP_TITLE=Toko Online
+</code></pre>
+<pre><code class="language-javascript">console.log(import.meta.env.VITE_API_URL);
+console.log(import.meta.env.VITE_APP_TITLE);
+console.log(import.meta.env.MODE);  // &quot;development&quot; / &quot;production&quot;
+console.log(import.meta.env.DEV);   // true di development
+console.log(import.meta.env.PROD);  // true di production
+</code></pre>
+<blockquote>
+<p>⚠️ <strong>Peringatan:</strong> Semua <code>VITE_*</code> variable <strong>terekspos</strong> di bundle client. Jangan simpan rahasia (API key server, password) di sini.</p>
+</blockquote>
+<h3 id="import-aset-di-vite">Import Aset di Vite <a href="#import-aset-di-vite" class="anchor" aria-hidden="true">#</a></h3>
+<pre><code class="language-javascript">// CSS
+import &quot;./style.css&quot;;
+
+// Gambar — menghasilkan URL
+import logo from &quot;./assets/logo.png&quot;;
+document.querySelector(&quot;img&quot;).src = logo;
+
+// JSON
+import data from &quot;./data.json&quot;;
+console.log(data);
+
+// Dynamic import (code splitting)
+const module = await import(&quot;./heavy-module.js&quot;);
+</code></pre>
+<h3 id="vite-untuk-reactvue">Vite untuk React/Vue <a href="#vite-untuk-reactvue" class="anchor" aria-hidden="true">#</a></h3>
+<pre><code class="language-bash"># React
+npm create vite@latest my-app -- --template react
+
+# Vue
+npm create vite@latest my-app -- --template vue
+
+# TypeScript
+npm create vite@latest my-app -- --template vanilla-ts
+</code></pre>
+<hr>
+<h2 id="webpack--bundler-klasik">Webpack — Bundler Klasik <a href="#webpack--bundler-klasik" class="anchor" aria-hidden="true">#</a></h2>
+<p><strong>Webpack</strong> adalah bundler paling populer sebelum Vite. Masih sangat banyak digunakan, terutama di proyek lama dan enterprise.</p>
+<h3 id="kelebihan-dan-kekurangan">Kelebihan dan Kekurangan <a href="#kelebihan-dan-kekurangan" class="anchor" aria-hidden="true">#</a></h3>
+<table>
+<thead>
+<tr>
+<th>Kelebihan</th>
+<th>Kekurangan</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Ekosistem plugin &amp; loader sangat besar</td>
+<td>Konfigurasi kompleks</td>
+</tr>
+<tr>
+<td>Fleksibel — bisa handle apa saja</td>
+<td>Dev server lebih lambat dari Vite</td>
+</tr>
+<tr>
+<td>Banyak digunakan di enterprise</td>
+<td>Kurva belajar curam</td>
+</tr>
+<tr>
+<td>Dukungan jangka panjang</td>
+<td>Setup awal memakan waktu</td>
+</tr>
+</tbody>
+</table>
+<h3 id="instalasi">Instalasi <a href="#instalasi" class="anchor" aria-hidden="true">#</a></h3>
+<pre><code class="language-bash">npm install --save-dev webpack webpack-cli webpack-dev-server
+</code></pre>
+<h3 id="konfigurasi-dasar-webpackconfigjs">Konfigurasi Dasar (<code>webpack.config.js</code>) <a href="#konfigurasi-dasar-webpackconfigjs" class="anchor" aria-hidden="true">#</a></h3>
+<pre><code class="language-javascript">const path = require(&quot;path&quot;);
+const HtmlWebpackPlugin = require(&quot;html-webpack-plugin&quot;);
+
+module.exports = {
+  mode: &quot;development&quot;,
+  entry: &quot;./src/index.js&quot;,
+  output: {
+    path: path.resolve(__dirname, &quot;dist&quot;),
+    filename: &quot;[name].[contenthash].js&quot;,
+    clean: true
+  },
+  module: {
+    rules: [
+      {
+        test: /\.css$/i,
+        use: [&quot;style-loader&quot;, &quot;css-loader&quot;]
+      },
+      {
+        test: /\.(png|svg|jpg|jpeg|gif)$/i,
+        type: &quot;asset/resource&quot;
+      },
+      {
+        test: /\.js$/,
+        exclude: /node_modules/,
+        use: {
+          loader: &quot;babel-loader&quot;,
+          options: {
+            presets: [&quot;@babel/preset-env&quot;]
+          }
+        }
+      }
+    ]
+  },
+  plugins: [
+    new HtmlWebpackPlugin({
+      template: &quot;./src/index.html&quot;
+    })
+  ],
+  devServer: {
+    static: &quot;./dist&quot;,
+    port: 3000,
+    hot: true,
+    open: true
+  },
+  devtool: &quot;source-map&quot;
+};
+</code></pre>
+<h3 id="script-packagejson">Script <code>package.json</code> <a href="#script-packagejson" class="anchor" aria-hidden="true">#</a></h3>
+<pre><code class="language-json">{
+  &quot;scripts&quot;: {
+    &quot;start&quot;: &quot;webpack serve --mode development&quot;,
+    &quot;build&quot;: &quot;webpack --mode production&quot;
+  }
+}
+</code></pre>
+<h3 id="konsep-webpack">Konsep Webpack <a href="#konsep-webpack" class="anchor" aria-hidden="true">#</a></h3>
+<ul>
+<li><strong>Entry</strong> — file awal yang menjadi titik masuk.</li>
+<li><strong>Output</strong> — tempat hasil bundle.</li>
+<li><strong>Loaders</strong> — memproses file non-JS (CSS, gambar, dll.) sebelum di-bundle.</li>
+<li><strong>Plugins</strong> — melakukan tugas tambahan (generate HTML, minify, dll.).</li>
+<li><strong>Mode</strong> — <code>development</code> (cepat, debug) atau <code>production</code> (optimasi).</li>
+</ul>
+<blockquote>
+<p><strong>Rekomendasi:</strong> Untuk proyek baru, gunakan <strong>Vite</strong>. Untuk proyek lama atau yang butuh konfigurasi sangat spesifik, Webpack masih relevan.</p>
+</blockquote>
+<hr>
+<h2 id="babel--transpiler">Babel — Transpiler <a href="#babel--transpiler" class="anchor" aria-hidden="true">#</a></h2>
+<p><strong>Babel</strong> mengubah kode JavaScript modern menjadi kode yang kompatibel dengan browser lama.</p>
+<h3 id="mengapa-babel">Mengapa Babel? <a href="#mengapa-babel" class="anchor" aria-hidden="true">#</a></h3>
+<pre><code class="language-javascript">// Kode modern
+const sapa = (nama) =&gt; `Halo, ${nama}!`;
+const user = data?.user ?? &quot;Anonim&quot;;
+
+// Setelah Babel (target browser lama)
+var sapa = function sapa(nama) {
+  return &quot;Halo, &quot;.concat(nama, &quot;!&quot;);
+};
+var user = (_data$user = data === null || data === void 0 ? void 0 : data.user) !== null &amp;&amp; _data$user !== void 0 ? _data$user : &quot;Anonim&quot;;
+</code></pre>
+<h3 id="instalasi-1">Instalasi <a href="#instalasi-1" class="anchor" aria-hidden="true">#</a></h3>
+<pre><code class="language-bash">npm install --save-dev @babel/core @babel/cli @babel/preset-env
+</code></pre>
+<h3 id="konfigurasi-babelconfigjson">Konfigurasi (<code>babel.config.json</code>) <a href="#konfigurasi-babelconfigjson" class="anchor" aria-hidden="true">#</a></h3>
+<pre><code class="language-json">{
+  &quot;presets&quot;: [
+    [&quot;@babel/preset-env&quot;, {
+      &quot;targets&quot;: &quot;&gt; 0.5%, last 2 versions, not dead&quot;,
+      &quot;useBuiltIns&quot;: &quot;usage&quot;,
+      &quot;corejs&quot;: 3
+    }]
+  ]
+}
+</code></pre>
+<p><strong><code>targets</code></strong> menentukan browser yang didukung:</p>
+<ul>
+<li><code>&quot;&gt; 0.5%, last 2 versions, not dead&quot;</code> — browser dengan market share &gt; 0.5%, 2 versi terakhir, yang masih di-maintain.</li>
+<li><code>&quot;last 2 chrome versions&quot;</code> — hanya Chrome 2 versi terakhir.</li>
+<li><code>&quot;ie 11&quot;</code> — termasuk IE11 (butuh banyak polyfill).</li>
+</ul>
+<h3 id="menggunakan-babel">Menggunakan Babel <a href="#menggunakan-babel" class="anchor" aria-hidden="true">#</a></h3>
+<pre><code class="language-bash"># Transpile satu file
+npx babel src/index.js --out-file dist/index.js
+
+# Transpile folder
+npx babel src --out-dir dist
+</code></pre>
+<h3 id="babel-dengan-bundler">Babel dengan Bundler <a href="#babel-dengan-bundler" class="anchor" aria-hidden="true">#</a></h3>
+<p>Babel biasanya digunakan bersama Webpack (via <code>babel-loader</code>) atau Vite (via plugin). Untuk Vite, transpilasi dilakukan oleh esbuild secara otomatis — Babel hanya diperlukan untuk fitur yang belum didukung esbuild.</p>
+<h3 id="preset-umum">Preset Umum <a href="#preset-umum" class="anchor" aria-hidden="true">#</a></h3>
+<table>
+<thead>
+<tr>
+<th>Preset</th>
+<th>Kegunaan</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>@babel/preset-env</code></td>
+<td>Transpile ES6+ ke target browser</td>
+</tr>
+<tr>
+<td><code>@babel/preset-react</code></td>
+<td>JSX untuk React</td>
+</tr>
+<tr>
+<td><code>@babel/preset-typescript</code></td>
+<td>TypeScript</td>
+</tr>
+</tbody>
+</table>
+<h3 id="polyfill">Polyfill <a href="#polyfill" class="anchor" aria-hidden="true">#</a></h3>
+<p>Babel <strong>tidak</strong> menambahkan fitur baru (seperti <code>Promise</code>, <code>Array.includes</code>) — itu tugas <strong>polyfill</strong>. Gunakan <code>core-js</code>:</p>
+<pre><code class="language-bash">npm install core-js
+</code></pre>
+<p>Dengan <code>useBuiltIns: &quot;usage&quot;</code>, Babel otomatis mengimpor polyfill yang dibutuhkan.</p>
+<blockquote>
+<p><strong>Catatan:</strong> Vite (esbuild) dan browser modern sudah mendukung sebagian besar fitur. Polyfill hanya diperlukan untuk browser lama.</p>
+</blockquote>
+<hr>
+<h2 id="eslint--linter">ESLint — Linter <a href="#eslint--linter" class="anchor" aria-hidden="true">#</a></h2>
+<p><strong>ESLint</strong> menganalisis kode untuk menemukan <strong>error</strong> dan <strong>masalah style</strong> sebelum dijalankan.</p>
+<h3 id="mengapa-eslint">Mengapa ESLint? <a href="#mengapa-eslint" class="anchor" aria-hidden="true">#</a></h3>
+<pre><code class="language-javascript">// ESLint akan menandai:
+if (x == 5) { }           // gunakan ===
+const unused = 10;        // variabel tidak dipakai
+function f() { return; }
+console.log(y);           // y tidak dideklarasikan
+</code></pre>
+<h3 id="instalasi-2">Instalasi <a href="#instalasi-2" class="anchor" aria-hidden="true">#</a></h3>
+<pre><code class="language-bash">npm install --save-dev eslint
+npx eslint --init
+</code></pre>
+<p>Ikuti prompt:</p>
+<pre><code>? How would you like to use ESLint? › To check syntax, find problems, and enforce code style
+? What type of modules does your project use? › JavaScript modules (import/export)
+? Which framework does your project use? › None of these
+? Does your project use TypeScript? › No
+? Where does your code run? › Browser, Node
+? How would you like to define a style for your project? › Use a popular style guide
+? Which style guide do you want to follow? › Airbnb
+? What format do you want your config file to be in? › JSON
+</code></pre>
+<p>Menghasilkan <code>eslint.config.js</code> (flat config, ESLint 9+) atau <code>.eslintrc.json</code> (lama).</p>
+<h3 id="konfigurasi-flat-eslintconfigjs">Konfigurasi Flat (<code>eslint.config.js</code>) <a href="#konfigurasi-flat-eslintconfigjs" class="anchor" aria-hidden="true">#</a></h3>
+<pre><code class="language-javascript">import js from &quot;@eslint/js&quot;;
+
+export default [
+  js.configs.recommended,
+  {
+    languageOptions: {
+      ecmaVersion: 2022,
+      sourceType: &quot;module&quot;,
+      globals: {
+        window: &quot;readonly&quot;,
+        document: &quot;readonly&quot;,
+        console: &quot;readonly&quot;
+      }
+    },
+    rules: {
+      &quot;no-unused-vars&quot;: &quot;warn&quot;,
+      &quot;no-console&quot;: &quot;off&quot;,
+      &quot;eqeqeq&quot;: &quot;error&quot;,
+      &quot;prefer-const&quot;: &quot;error&quot;,
+      &quot;no-var&quot;: &quot;error&quot;
+    }
+  }
+];
+</code></pre>
+<h3 id="menjalankan-eslint">Menjalankan ESLint <a href="#menjalankan-eslint" class="anchor" aria-hidden="true">#</a></h3>
+<pre><code class="language-bash"># Cek semua file
+npx eslint .
+
+# Cek satu file
+npx eslint src/index.js
+
+# Auto-fix
+npx eslint . --fix
+
+# Format output
+npx eslint . --format stylish
+</code></pre>
+<h3 id="tingkat-rule">Tingkat Rule <a href="#tingkat-rule" class="anchor" aria-hidden="true">#</a></h3>
+<table>
+<thead>
+<tr>
+<th>Level</th>
+<th>Arti</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>&quot;off&quot;</code> / <code>0</code></td>
+<td>Nonaktif</td>
+</tr>
+<tr>
+<td><code>&quot;warn&quot;</code> / <code>1</code></td>
+<td>Peringatan (tidak gagal)</td>
+</tr>
+<tr>
+<td><code>&quot;error&quot;</code> / <code>2</code></td>
+<td>Error (gagal)</td>
+</tr>
+</tbody>
+</table>
+<h3 id="script-packagejson-1">Script <code>package.json</code> <a href="#script-packagejson-1" class="anchor" aria-hidden="true">#</a></h3>
+<pre><code class="language-json">{
+  &quot;scripts&quot;: {
+    &quot;lint&quot;: &quot;eslint .&quot;,
+    &quot;lint:fix&quot;: &quot;eslint . --fix&quot;
+  }
+}
+</code></pre>
+<h3 id="integrasi-editor">Integrasi Editor <a href="#integrasi-editor" class="anchor" aria-hidden="true">#</a></h3>
+<p>Install extension <strong>ESLint</strong> di VS Code — error dan warning muncul langsung di editor.</p>
+<hr>
+<h2 id="prettier--formatter">Prettier — Formatter <a href="#prettier--formatter" class="anchor" aria-hidden="true">#</a></h2>
+<p><strong>Prettier</strong> memformat kode secara otomatis agar konsisten — spasi, indentasi, tanda kutip, titik koma, dll.</p>
+<h3 id="mengapa-prettier">Mengapa Prettier? <a href="#mengapa-prettier" class="anchor" aria-hidden="true">#</a></h3>
+<pre><code class="language-javascript">// Sebelum Prettier
+const   user={nama:&quot;Budi&quot;,umur:25,alamat:{kota:&quot;Jakarta&quot;}}
+function sapa(nama){return `Halo, ${nama}!`}
+
+// Setelah Prettier
+const user = { nama: &quot;Budi&quot;, umur: 25, alamat: { kota: &quot;Jakarta&quot; } };
+function sapa(nama) {
+  return `Halo, ${nama}!`;
+}
+</code></pre>
+<h3 id="instalasi-3">Instalasi <a href="#instalasi-3" class="anchor" aria-hidden="true">#</a></h3>
+<pre><code class="language-bash">npm install --save-dev prettier
+</code></pre>
+<h3 id="konfigurasi-prettierrc">Konfigurasi (<code>.prettierrc</code>) <a href="#konfigurasi-prettierrc" class="anchor" aria-hidden="true">#</a></h3>
+<pre><code class="language-json">{
+  &quot;semi&quot;: true,
+  &quot;singleQuote&quot;: false,
+  &quot;tabWidth&quot;: 2,
+  &quot;trailingComma&quot;: &quot;es5&quot;,
+  &quot;printWidth&quot;: 80,
+  &quot;arrowParens&quot;: &quot;always&quot;
+}
+</code></pre>
+<table>
+<thead>
+<tr>
+<th>Opsi</th>
+<th>Arti</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>semi</code></td>
+<td>Titik koma di akhir statement</td>
+</tr>
+<tr>
+<td><code>singleQuote</code></td>
+<td>Gunakan <code>'</code> bukan <code>&quot;</code></td>
+</tr>
+<tr>
+<td><code>tabWidth</code></td>
+<td>Lebar indentasi</td>
+</tr>
+<tr>
+<td><code>trailingComma</code></td>
+<td>Koma di akhir (<code>es5</code>, <code>all</code>, <code>none</code>)</td>
+</tr>
+<tr>
+<td><code>printWidth</code></td>
+<td>Panjang baris maksimum</td>
+</tr>
+<tr>
+<td><code>arrowParens</code></td>
+<td>Kurung pada arrow function satu parameter</td>
+</tr>
+</tbody>
+</table>
+<h3 id="menjalankan-prettier">Menjalankan Prettier <a href="#menjalankan-prettier" class="anchor" aria-hidden="true">#</a></h3>
+<pre><code class="language-bash"># Format semua file
+npx prettier . --write
+
+# Cek tanpa mengubah
+npx prettier . --check
+
+# Format file tertentu
+npx prettier src/index.js --write
+</code></pre>
+<h3 id="prettierignore"><code>.prettierignore</code> <a href="#prettierignore" class="anchor" aria-hidden="true">#</a></h3>
+<pre><code>node_modules/
+dist/
+package-lock.json
+*.min.js
+</code></pre>
+<h3 id="script-packagejson-2">Script <code>package.json</code> <a href="#script-packagejson-2" class="anchor" aria-hidden="true">#</a></h3>
+<pre><code class="language-json">{
+  &quot;scripts&quot;: {
+    &quot;format&quot;: &quot;prettier . --write&quot;,
+    &quot;format:check&quot;: &quot;prettier . --check&quot;
+  }
+}
+</code></pre>
+<h3 id="integrasi-dengan-eslint">Integrasi dengan ESLint <a href="#integrasi-dengan-eslint" class="anchor" aria-hidden="true">#</a></h3>
+<p>ESLint dan Prettier bisa bertugas secara terpisah:</p>
+<ul>
+<li><strong>ESLint</strong> — kualitas kode (bug, best practice).</li>
+<li><strong>Prettier</strong> — format (spasi, indentasi).</li>
+</ul>
+<p>Untuk menghindari konflik rule, gunakan <code>eslint-config-prettier</code>:</p>
+<pre><code class="language-bash">npm install --save-dev eslint-config-prettier
+</code></pre>
+<pre><code class="language-javascript">// eslint.config.js
+import js from &quot;@eslint/js&quot;;
+import prettier from &quot;eslint-config-prettier&quot;;
+
+export default [
+  js.configs.recommended,
+  prettier, // nonaktifkan rule ESLint yang konflik dengan Prettier
+  // ...
+];
+</code></pre>
+<h3 id="integrasi-editor-1">Integrasi Editor <a href="#integrasi-editor-1" class="anchor" aria-hidden="true">#</a></h3>
+<p>Install extension <strong>Prettier</strong> di VS Code, lalu aktifkan format on save di <code>.vscode/settings.json</code>:</p>
+<pre><code class="language-json">{
+  &quot;editor.formatOnSave&quot;: true,
+  &quot;editor.defaultFormatter&quot;: &quot;esbenp.prettier-vscode&quot;
+}
+</code></pre>
+<hr>
+<h2 id="contoh-setup-proyek-lengkap">Contoh Setup Proyek Lengkap <a href="#contoh-setup-proyek-lengkap" class="anchor" aria-hidden="true">#</a></h2>
+<p>Mari gabungkan semua: Vite + ESLint + Prettier.</p>
+<h3 id="1-buat-proyek-vite">1. Buat Proyek Vite <a href="#1-buat-proyek-vite" class="anchor" aria-hidden="true">#</a></h3>
+<pre><code class="language-bash">npm create vite@latest toko-app -- --template vanilla
+cd toko-app
+npm install
+</code></pre>
+<h3 id="2-instal-eslint--prettier">2. Instal ESLint &amp; Prettier <a href="#2-instal-eslint--prettier" class="anchor" aria-hidden="true">#</a></h3>
+<pre><code class="language-bash">npm install --save-dev eslint @eslint/js prettier eslint-config-prettier
+</code></pre>
+<h3 id="3-konfigurasi-eslint-eslintconfigjs">3. Konfigurasi ESLint (<code>eslint.config.js</code>) <a href="#3-konfigurasi-eslint-eslintconfigjs" class="anchor" aria-hidden="true">#</a></h3>
+<pre><code class="language-javascript">import js from &quot;@eslint/js&quot;;
+import prettier from &quot;eslint-config-prettier&quot;;
+
+export default [
+  js.configs.recommended,
+  prettier,
+  {
+    languageOptions: {
+      ecmaVersion: 2022,
+      sourceType: &quot;module&quot;,
+      globals: {
+        window: &quot;readonly&quot;,
+        document: &quot;readonly&quot;,
+        console: &quot;readonly&quot;
+      }
+    },
+    rules: {
+      &quot;no-unused-vars&quot;: &quot;warn&quot;,
+      &quot;eqeqeq&quot;: &quot;error&quot;,
+      &quot;prefer-const&quot;: &quot;error&quot;,
+      &quot;no-var&quot;: &quot;error&quot;
+    }
+  }
+];
+</code></pre>
+<h3 id="4-konfigurasi-prettier-prettierrc">4. Konfigurasi Prettier (<code>.prettierrc</code>) <a href="#4-konfigurasi-prettier-prettierrc" class="anchor" aria-hidden="true">#</a></h3>
+<pre><code class="language-json">{
+  &quot;semi&quot;: true,
+  &quot;singleQuote&quot;: false,
+  &quot;tabWidth&quot;: 2,
+  &quot;printWidth&quot;: 80,
+  &quot;trailingComma&quot;: &quot;es5&quot;
+}
+</code></pre>
+<h3 id="5-tambahkan-script">5. Tambahkan Script <a href="#5-tambahkan-script" class="anchor" aria-hidden="true">#</a></h3>
+<pre><code class="language-json">{
+  &quot;scripts&quot;: {
+    &quot;dev&quot;: &quot;vite&quot;,
+    &quot;build&quot;: &quot;vite build&quot;,
+    &quot;preview&quot;: &quot;vite preview&quot;,
+    &quot;lint&quot;: &quot;eslint .&quot;,
+    &quot;lint:fix&quot;: &quot;eslint . --fix&quot;,
+    &quot;format&quot;: &quot;prettier . --write&quot;,
+    &quot;format:check&quot;: &quot;prettier . --check&quot;
+  }
+}
+</code></pre>
+<h3 id="6-jalankan">6. Jalankan <a href="#6-jalankan" class="anchor" aria-hidden="true">#</a></h3>
+<pre><code class="language-bash">npm run dev          # development
+npm run lint         # cek kualitas kode
+npm run format       # format kode
+npm run build        # build produksi
+</code></pre>
+<h3 id="7-gitignore">7. <code>.gitignore</code> <a href="#7-gitignore" class="anchor" aria-hidden="true">#</a></h3>
+<pre><code>node_modules/
+dist/
+.env
+*.log
+.DS_Store
+</code></pre>
+<hr>
+<h2 id="ringkasan-alat-build">Ringkasan Alat Build <a href="#ringkasan-alat-build" class="anchor" aria-hidden="true">#</a></h2>
+<table>
+<thead>
+<tr>
+<th>Alat</th>
+<th>Kategori</th>
+<th>Kegunaan</th>
+<th>Rekomendasi</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Vite</strong></td>
+<td>Bundler + Dev Server</td>
+<td>Bundling, HMR, optimasi</td>
+<td>✅ Proyek baru</td>
+</tr>
+<tr>
+<td><strong>Webpack</strong></td>
+<td>Bundler</td>
+<td>Bundling dengan plugin/loader</td>
+<td>Proyek lama/enterprise</td>
+</tr>
+<tr>
+<td><strong>Rollup</strong></td>
+<td>Bundler</td>
+<td>Bundling library</td>
+<td>Library npm</td>
+</tr>
+<tr>
+<td><strong>esbuild</strong></td>
+<td>Bundler/Transpiler</td>
+<td>Sangat cepat</td>
+<td>Digunakan Vite</td>
+</tr>
+<tr>
+<td><strong>Babel</strong></td>
+<td>Transpiler</td>
+<td>Kompatibilitas browser lama, JSX</td>
+<td>Dengan Webpack</td>
+</tr>
+<tr>
+<td><strong>ESLint</strong></td>
+<td>Linter</td>
+<td>Kualitas kode &amp; bug</td>
+<td>✅ Semua proyek</td>
+</tr>
+<tr>
+<td><strong>Prettier</strong></td>
+<td>Formatter</td>
+<td>Konsistensi format</td>
+<td>✅ Semua proyek</td>
+</tr>
+</tbody>
+</table>
+<hr>
+<h2 id="tips--best-practice">Tips &amp; Best Practice <a href="#tips--best-practice" class="anchor" aria-hidden="true">#</a></h2>
+<ol>
+<li>
+<p><strong>Gunakan Vite</strong> untuk proyek baru — lebih cepat dan konfigurasi minimal.</p>
+</li>
+<li>
+<p><strong>Gunakan ESLint + Prettier</strong> di semua proyek — kualitas &amp; konsistensi.</p>
+</li>
+<li>
+<p><strong>Aktifkan format on save</strong> di editor — kode selalu rapi tanpa manual.</p>
+</li>
+<li>
+<p><strong>Jalankan lint &amp; format di pre-commit hook</strong> (via Husky + lint-staged) — mencegah kode jelek masuk repo.</p>
+</li>
+<li>
+<p><strong>Jangan commit <code>dist/</code> atau <code>node_modules/</code></strong> — tambahkan ke <code>.gitignore</code>.</p>
+</li>
+<li>
+<p><strong>Gunakan environment variables</strong> untuk konfigurasi — jangan hardcode.</p>
+</li>
+<li>
+<p><strong>Untuk library</strong>, gunakan Rollup atau Vite library mode — bukan Webpack.</p>
+</li>
+<li>
+<p><strong>Tree shaking</strong> — gunakan ES Module (<code>import</code>/<code>export</code>), bukan CommonJS, agar kode yang tidak dipakai bisa dihapus.</p>
+</li>
+<li>
+<p><strong>Code splitting</strong> — manfaatkan dynamic <code>import()</code> untuk memuat kode sesuai kebutuhan.</p>
+</li>
+<li>
+<p><strong>Source map</strong> — aktifkan di development untuk debugging, pertimbangkan mematikannya di produksi (keamanan).</p>
+</li>
+</ol>
+<hr>
+<h2 id="ringkasan">Ringkasan <a href="#ringkasan" class="anchor" aria-hidden="true">#</a></h2>
+<table>
+<thead>
+<tr>
+<th>Konsep</th>
+<th>Poin Penting</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Bundler</strong></td>
+<td>Menggabungkan module menjadi file siap pakai</td>
+</tr>
+<tr>
+<td><strong>Vite</strong></td>
+<td>Bundler modern, cepat, konfigurasi minimal</td>
+</tr>
+<tr>
+<td><strong>Webpack</strong></td>
+<td>Bundler klasik, fleksibel, ekosistem besar</td>
+</tr>
+<tr>
+<td><strong>Babel</strong></td>
+<td>Transpiler untuk kompatibilitas browser</td>
+</tr>
+<tr>
+<td><strong>esbuild</strong></td>
+<td>Transpiler/bundler sangat cepat (Vite)</td>
+</tr>
+<tr>
+<td><strong>ESLint</strong></td>
+<td>Linter — kualitas &amp; bug</td>
+</tr>
+<tr>
+<td><strong>Prettier</strong></td>
+<td>Formatter — konsistensi</td>
+</tr>
+<tr>
+<td><strong>Tree shaking</strong></td>
+<td>Menghapus kode tidak dipakai</td>
+</tr>
+<tr>
+<td><strong>Code splitting</strong></td>
+<td>Memecah bundle agar dimuat sesuai kebutuhan</td>
+</tr>
+<tr>
+<td><strong>HMR</strong></td>
+<td>Hot Module Replacement — update tanpa reload</td>
+</tr>
+</tbody>
+</table>
+<p>Poin penting:</p>
+<ul>
+<li><strong>Vite</strong> adalah pilihan default untuk proyek baru — cepat dan minimal konfigurasi.</li>
+<li><strong>Webpack</strong> masih relevan untuk proyek lama dan kebutuhan spesifik.</li>
+<li><strong>Babel</strong> hanya diperlukan untuk target browser lama; Vite/esbuild sudah cukup untuk modern.</li>
+<li><strong>ESLint + Prettier</strong> adalah kombinasi wajib untuk kualitas &amp; konsistensi kode.</li>
+<li><strong>Environment variables</strong> di Vite hanya yang berprefix <code>VITE_</code> — jangan simpan rahasia.</li>
+<li><strong>Tree shaking</strong> bekerja optimal dengan ES Module.</li>
+<li><strong>Jangan commit <code>dist/</code> dan <code>node_modules/</code></strong> — gunakan <code>.gitignore</code>.</li>
+</ul>
+<p>Pada artikel berikutnya, kita akan membahas <strong>Testing JavaScript</strong> — unit test dengan Jest/Vitest.</p>
+
+			<div class="page-footer-meta d-flex flex-column flex-md-row justify-content-between">
+				</div>
+			<div class="docs-navigation d-flex justify-content-between">
+	
+	<a href="/javascript/tutorial/15-nodejs-npm/">
+			<div class="card my-1">
+				<div class="card-body py-2">
+					&larr; Node.js &amp; npm Dasar
+				</div>
+			</div>
+		</a>
+	</div>
+
+			
+		</main>
+	</div>
+
+      </div>
+    </div>
+    
+    
+    <footer class="footer text-muted">
+  <div class="container-xxl">
+    <div class="row">
+      <div class="col-lg-8 order-last order-lg-first">
+        <ul class="list-inline">
+          <li class="list-inline-item">Powered by <a class="text-muted" href="https://gohugo.io/">Hugo</a> and <a class="text-muted" href="https://github.com/">Github</a></li>
+        </ul>
+      </div>
+      <div class="col-lg-8 order-first order-lg-last text-lg-end">
+        <ul class="list-inline">
+          </ul>
+      </div>
+    </div>
+  </div>
+</footer>
+    
+
+<script src="/js/bootstrap.min.650aeec64c81d69d4c0850fc73c93da3f0330cec0a27772feed7f90f60baa5f47f1c45687d71914bdafd1c4e860d40f6dc08ede27a2f08431ff929c9a2d24621.js" integrity="sha512-ZQruxkyB1p1MCFD8c8k9o/AzDOwKJ3cv7tf5D2C6pfR/HEVofXGRS9r9HE6GDUD23Ajt4novCEMf&#43;SnJotJGIQ==" crossorigin="anonymous" defer></script>
+  <script src="/js/highlight.min.ec234bd8a5f487aaffe50a89f17b14501b1bb65633cf177cffd4cb84702dd7030edc08712dceb8dc27ac7e54b53240a08bf0b8d951572ee582bcdbbd06a48a7b.js" integrity="sha512-7CNL2KX0h6r/5QqJ8XsUUBsbtlYzzxd8/9TLhHAt1wMO3AhxLc643CesflS1MkCgi/C42VFXLuWCvNu9BqSKew==" crossorigin="anonymous" defer></script>
+  <script src="/main.min.cd1e5e6b40065b3f7f7fd8548a528fac67019754eda0f37b9918d02d154fc9ef6a22742f6513b0572ad9163152e151ec36221fbeafbecd7759c3dab1f19b64b9.js" integrity="sha512-zR5ea0AGWz9/f9hUilKPrGcBl1TtoPN7mRjQLRVPye9qInQvZROwVyrZFjFS4VHsNiIfvq&#43;&#43;zXdZw9qx8ZtkuQ==" crossorigin="anonymous" defer></script>
+  <script src="https://kaban.my.id/index.min.3b38957cbdd3fcd9f9b6e3e14d11e41821e75e9e633e2e7fc92b39e052142003d54a01433bc318b5180cbdf345e1654d731e00e168a3ab02cdad8965a4e5d852.js" integrity="sha512-OziVfL3T/Nn5tuPhTRHkGCHnXp5jPi5/ySs54FIUIAPVSgFDO8MYtRgMvfNF4WVNcx4A4WijqwLNrYllpOXYUg==" crossorigin="anonymous" defer></script>
+  
+    <div class="d-flex fixed-bottom pb-4 pb-lg-5 pe-4 pe-lg-5">
+      <a id="toTop" href="#" class="btn btn-outline-primary rounded-circle ms-auto p-2"><span class="visually-hidden">Top</span><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-chevron-up"><polyline points="18 15 12 9 6 15"></polyline></svg></a>
+    </div>
+    
+  </body>
+</html>

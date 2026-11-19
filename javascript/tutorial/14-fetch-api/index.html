@@ -1,0 +1,1818 @@
+<!doctype html>
+<html lang="en-US">
+  <head>
+  <meta charset="utf-8">
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <link rel="preload" as="font" href="https://kaban.my.id/fonts/vendor/jost/jost-v4-latin-regular.woff2" type="font/woff2" crossorigin>
+<link rel="preload" as="font" href="https://kaban.my.id/fonts/vendor/jost/jost-v4-latin-500.woff2" type="font/woff2" crossorigin>
+<link rel="preload" as="font" href="https://kaban.my.id/fonts/vendor/jost/jost-v4-latin-700.woff2" type="font/woff2" crossorigin>
+
+  <script>(()=>{var t=window.matchMedia&&window.matchMedia("(prefers-color-scheme: dark)").matches,e=localStorage.getItem("theme");t&&e===null&&(localStorage.setItem("theme","dark"),document.documentElement.setAttribute("data-dark-mode","")),t&&e==="dark"&&document.documentElement.setAttribute("data-dark-mode",""),e==="dark"&&document.documentElement.setAttribute("data-dark-mode","")})()</script>
+
+  <link rel="stylesheet" href="https://kaban.my.id/main.4296e689affcd00e933b8954c10fc43cd1a5f16d5552e78183d12ea50d3e0bf5a596df23a379a4936743f01a7cd8ba048a628b2b9b60b34aa49fad468287100a.css" integrity="sha512-Qpbmia/80A6TO4lUwQ/EPNGl8W1VUueBg9EupQ0&#43;C/Wllt8jo3mkk2dD8Bp82LoEimKLK5tgs0qkn61GgocQCg==" crossorigin="anonymous">
+<noscript><style>img.lazyload { display: none; }</style></noscript>
+  <meta name="robots" content="index, follow">
+    <meta name="googlebot" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1">
+    <meta name="bingbot" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1">
+  <title>Fetch API &amp; AJAX - Roberto Kaban Blog&#39;s</title>
+<meta name="description" content="Panduan lengkap Fetch API: GET, POST, PUT, DELETE, header, JSON, error handling, AbortController, dan CORS.">
+<link rel="canonical" href="https://kaban.my.id/javascript/tutorial/14-fetch-api/">
+<meta property="og:locale" content="en_US">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Fetch API &amp; AJAX">
+<meta property="og:description" content="Panduan lengkap Fetch API: GET, POST, PUT, DELETE, header, JSON, error handling, AbortController, dan CORS.">
+<meta property="og:url" content="https://kaban.my.id/javascript/tutorial/14-fetch-api/">
+<meta property="og:site_name" content="Roberto Kaban Blog&#39;s">
+<meta property="article:published_time" content="2023-01-01T08:00:00+00:00">
+  <meta property="article:modified_time" content="2023-01-01T08:00:00+00:00">
+  
+  <meta property="og:image" content="https://kaban.my.id/doks.png"/>
+      <meta property="og:image:alt" content="Roberto Kaban Blog&#39;s">
+    
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:site" content="@robertokaban">
+<meta name="twitter:creator" content="@robertokaban">
+<meta name="twitter:title" content="Fetch API &amp; AJAX">
+<meta name="twitter:description" content="Panduan lengkap Fetch API: GET, POST, PUT, DELETE, header, JSON, error handling, AbortController, dan CORS.">
+<meta name="twitter:image" content="https://kaban.my.id/doks.png">
+    <meta name="twitter:image:alt" content="Fetch API &amp; AJAX">
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "Person",
+        "@id": "https://kaban.my.id/#/schema/person/1",
+      "name": "BlogRobertoKaban",
+      "url": "https://kaban.my.id/",
+      "sameAs": [
+        "https://twitter.com/robertokaban"
+        , "https://github.com/robertokaban"
+        ],
+      "image": {
+          "@type": "ImageObject",
+          "@id": "https://kaban.my.id/#/schema/image/1",
+          "url": "https://kaban.my.id/doks.png",
+          "width":  1280 ,
+          "height":  640 ,
+          "caption": "BlogRobertoKaban"
+        }
+      },
+    {
+      "@type": "WebSite",
+      "@id": "https://kaban.my.id/#/schema/website/1",
+      "url": "https://kaban.my.id/",
+      "name": "Roberto Kaban Blog\u0027s",
+      "description": "Hanya sebuah catatan kecil untuk hal yang tidak ingin dilupakan.",
+      "publisher": {
+          "@id": "https://kaban.my.id/#/schema/person/1"
+        }
+      },
+    {
+      "@type": "WebPage",
+      "@id": "https://kaban.my.id/javascript/tutorial/14-fetch-api/",
+      "url": "https://kaban.my.id/javascript/tutorial/14-fetch-api/",
+      "name": "Fetch API \u0026 AJAX",
+      "description": "Panduan lengkap Fetch API: GET, POST, PUT, DELETE, header, JSON, error handling, AbortController, dan CORS.",
+      "isPartOf": {
+        "@id": "https://kaban.my.id/#/schema/website/1"
+      },
+      "about": {
+          "@id": "https://kaban.my.id/#/schema/person/1"
+        },
+      "datePublished": "2023-01-01T08:00:00CET",
+      "dateModified": "2023-01-01T08:00:00CET",
+      "breadcrumb": {
+        "@id": "https://kaban.my.id/javascript/tutorial/14-fetch-api/#/schema/breadcrumb/1"
+      },
+      "primaryImageOfPage": {
+        "@id": "https://kaban.my.id/javascript/tutorial/14-fetch-api/#/schema/image/2"
+      },
+      "inLanguage": "en-US",
+      "potentialAction": [{
+        "@type": "ReadAction", "target": ["https://kaban.my.id/javascript/tutorial/14-fetch-api/"]
+      }]
+    },
+    {
+      "@type": "BreadcrumbList",
+      "@id": "https://kaban.my.id/javascript/tutorial/14-fetch-api/#/schema/breadcrumb/1",
+      "name": "Breadcrumbs",
+      "itemListElement": [{
+        "@type": "ListItem",
+        "position":  1 ,
+        "item": {
+          "@type": "WebPage",
+          "@id": "https://kaban.my.id/",
+          "url": "https://kaban.my.id/",
+          "name": "Home"
+          }
+        },{
+        "@type": "ListItem",
+        "position":  2 ,
+        "item": {
+          "@type": "WebPage",
+          "@id": "https://kaban.my.id/javascript/",
+          "url": "https://kaban.my.id/javascript/",
+          "name": "Javascript"
+          }
+        },{
+        "@type": "ListItem",
+        "position":  3 ,
+        "item": {
+          "@type": "WebPage",
+          "@id": "https://kaban.my.id/javascript/tutorial/",
+          "url": "https://kaban.my.id/javascript/tutorial/",
+          "name": "Tutorial"
+          }
+        },{
+        "@type": "ListItem",
+        "position":  4 ,
+        "item": {
+          "@id": "https://kaban.my.id/javascript/tutorial/14-fetch-api/"
+          }
+        }]
+    },
+
+    {
+      "@context": "https://schema.org",
+      "@graph": [
+        {
+          "@type": "ImageObject",
+          "@id": "https://kaban.my.id/javascript/tutorial/14-fetch-api/#/schema/image/2",
+          "url": "https://kaban.my.id/doks.png",
+          "contentUrl": "https://kaban.my.id/doks.png",
+          "caption": "Fetch API \u0026 AJAX"
+        }
+      ]
+    }
+
+  ]
+}
+</script>
+
+  <meta name="theme-color" content="#fff">
+<link rel="icon" href="https://kaban.my.id/favicon.ico" sizes="any">
+<link rel="icon" type="image/svg+xml" href="https://kaban.my.id/favicon.svg">
+<link rel="apple-touch-icon" sizes="180x180" href="https://kaban.my.id/apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="32x32" href="https://kaban.my.id/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="https://kaban.my.id/favicon-16x16.png">
+<link rel="manifest" crossorigin="use-credentials" href="https://kaban.my.id/site.webmanifest">
+
+  
+
+
+  
+  
+  
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-60VSDZFQR5"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-60VSDZFQR5');
+</script>
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6664512614760985"
+     crossorigin="anonymous"></script>
+</head>
+
+  <body class="javascript single">
+    <div class="sticky-top">
+<div class="header-bar"></div>
+
+<header class="navbar navbar-expand-lg navbar-light doks-navbar">
+  <nav class="container-xxl flex-wrap flex-lg-nowrap" aria-label="Main navigation">
+
+    <a class="navbar-brand order-0" href="/" aria-label="Roberto Kaban Blog&#39;s">
+      Roberto Kaban Blog&#39;s
+    </a>
+
+    <button class="btn btn-menu order-2 d-block d-lg-none" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasDoks" aria-controls="offcanvasDoks" aria-label="Open main menu">
+      <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-menu"><line x1="3" y1="12" x2="21" y2="12"></line><line x1="3" y1="6" x2="21" y2="6"></line><line x1="3" y1="18" x2="21" y2="18"></line></svg>
+    </button>
+    <div class="offcanvas offcanvas-end border-0 py-lg-1" tabindex="-1" id="offcanvasDoks" data-bs-backdrop="true" aria-labelledby="offcanvasDoksLabel">
+      <div class="header-bar d-lg-none"></div>
+      <div class="offcanvas-header d-lg-none">
+        <h2 class="h5 offcanvas-title ps-2" id="offcanvasDoksLabel"><a class="text-dark" href="/">Roberto Kaban Blog&#39;s</a></h2>
+        <button type="button" class="btn-close text-reset me-2" data-bs-dismiss="offcanvas" aria-label="Close main menu"></button>
+      </div>
+      <div class="offcanvas-body p-4 p-lg-0">
+        <ul class="nav flex-column flex-lg-row align-items-lg-center mt-2 mt-lg-0 ms-lg-2 me-lg-auto">
+              <li class="nav-item">
+                <a class="nav-link ps-0 py-1" href="/about/">About Me</a>
+              </li>
+            
+          
+              <li class="nav-item">
+                <a class="nav-link ps-0 py-1" href="/contact/">Contact</a>
+              </li>
+            
+          
+              <li class="nav-item">
+                <a class="nav-link ps-0 py-1" href="/artikel/">Artikel</a>
+              </li>
+            
+          
+              <li class="nav-item">
+                <a class="nav-link ps-0 py-1" href="/coretanku/">Coretanku</a>
+              </li>
+            
+          </ul>
+
+        <hr class="text-black-50 my-4 d-lg-none">
+        <form class="doks-search position-relative flex-grow-1 ms-lg-auto me-lg-2">
+          <input id="search" class="form-control is-search" type="search" placeholder="Cari di blog ini..." aria-label="Cari di blog ini..." autocomplete="off">
+          <div id="suggestions" class="shadow bg-white rounded d-none"></div>
+        </form>
+        <hr class="text-black-50 my-4 d-lg-none">
+        <ul class="nav flex-column flex-lg-row">
+          <li class="nav-item">
+              <a class="nav-link social-link" href="https://github.com/robertokaban"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-github"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path></svg><small class="ms-2 d-lg-none">GitHub</small></a>
+            </li>
+          <li class="nav-item">
+              <a class="nav-link social-link" href="https://facebook.com/roberto.kaban"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-facebook"><path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"></path></svg><small class="ms-2 d-lg-none">Facebook</small></a>
+            </li>
+          <li class="nav-item">
+              <a class="nav-link social-link" href="https://twitter.com/robertokaban"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-twitter"><path d="M23 3a10.9 10.9 0 0 1-3.14 1.53 4.48 4.48 0 0 0-7.86 3v1A10.66 10.66 0 0 1 3 4s-4 9 5 13a11.64 11.64 0 0 1-7 2c9 5 20 0 20-11.5a4.5 4.5 0 0 0-.08-.83A7.72 7.72 0 0 0 23 3z"></path></svg><small class="ms-2 d-lg-none">Twitter</small></a>
+            </li>
+          <li class="nav-item">
+              <a class="nav-link social-link" href="https://youtube.com/@robertokaban"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-youtube"><path d="M10,15L15.19,12L10,9V15M21.56,7.17C21.69,7.64 21.78,8.27 21.84,9.07C21.91,9.87 21.94,10.56 21.94,11.16L22,12C22,14.19 21.84,15.8 21.56,16.83C21.31,17.73 20.73,18.31 19.83,18.56C19.36,18.69 18.5,18.78 17.18,18.84C15.88,18.91 14.69,18.94 13.59,18.94L12,19C7.81,19 5.2,18.84 4.17,18.56C3.27,18.31 2.69,17.73 2.44,16.83C2.31,16.36 2.22,15.73 2.16,14.93C2.09,14.13 2.06,13.44 2.06,12.84L2,12C2,9.81 2.16,8.2 2.44,7.17C2.69,6.27 3.27,5.69 4.17,5.44C4.64,5.31 5.5,5.22 6.82,5.16C8.12,5.09 9.31,5.06 10.41,5.06L12,5C16.19,5 18.8,5.16 19.83,5.44C20.73,5.69 21.31,6.27 21.56,7.17Z"></path></svg><small class="ms-2 d-lg-none">Youtube</small></a>
+            </li>
+          </ul>
+
+        
+        <hr class="text-black-50 my-4 d-lg-none">
+        <button id="mode" class="btn btn-link" type="button" aria-label="Toggle user interface mode">
+          <span class="toggle-dark"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-moon"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path></svg></span>
+          <span class="toggle-light"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-sun"><circle cx="12" cy="12" r="5"></circle><line x1="12" y1="1" x2="12" y2="3"></line><line x1="12" y1="21" x2="12" y2="23"></line><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line><line x1="1" y1="12" x2="3" y2="12"></line><line x1="21" y1="12" x2="23" y2="12"></line><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line></svg></span>
+        </button>
+        
+
+        </div>
+    </div>
+  </nav>
+</header>
+
+
+</div>
+
+
+<div class="container-xxl">
+  <aside class="doks-sidebar">
+    <nav id="doks-docs-nav" class="collapse d-lg-none" aria-label="Tertiary navigation">
+      
+<ul class="list-unstyled collapsible-sidebar">
+  
+    
+      
+      <li class="mb-1">
+        <button class="btn btn-toggle align-items-center rounded collapsed" data-bs-toggle="collapse" data-bs-target="#section-0967e753cd827c7c2576cf6f7292922e" aria-expanded="true">
+          Tutorial Javascript
+        </button>
+        <div class="collapse show" id="section-0967e753cd827c7c2576cf6f7292922e">
+          <ul class="btn-toggle-nav list-unstyled fw-normal pb-1 small">
+            
+              
+                
+                <li><a class="docs-link rounded" href="https://kaban.my.id/javascript/tutorial/pengenalan/">Pengenalan Javascript</a></li>
+              
+            
+              
+                
+                <li><a class="docs-link rounded" href="https://kaban.my.id/javascript/tutorial/02-instalasi-persiapan/">Instalasi &amp; Persiapan Lingkungan JavaScript</a></li>
+              
+            
+              
+                
+                <li><a class="docs-link rounded" href="https://kaban.my.id/javascript/tutorial/03-sintaks-variabel/">Sintaks Dasar &amp; Variabel</a></li>
+              
+            
+              
+                
+                <li><a class="docs-link rounded" href="https://kaban.my.id/javascript/tutorial/04-tipe-data-konversi/">Tipe Data &amp; Konversi</a></li>
+              
+            
+              
+                
+                <li><a class="docs-link rounded" href="https://kaban.my.id/javascript/tutorial/05-struktur-kontrol/">Struktur Kontrol &amp; Perulangan</a></li>
+              
+            
+              
+                
+                <li><a class="docs-link rounded" href="https://kaban.my.id/javascript/tutorial/06-fungsi/">Fungsi</a></li>
+              
+            
+              
+                
+                <li><a class="docs-link rounded" href="https://kaban.my.id/javascript/tutorial/07-array/">Array &amp; Method-nya</a></li>
+              
+            
+              
+                
+                <li><a class="docs-link rounded" href="https://kaban.my.id/javascript/tutorial/08-object/">Object &amp; Method-nya</a></li>
+              
+            
+              
+                
+                <li><a class="docs-link rounded" href="https://kaban.my.id/javascript/tutorial/09-dom-manipulation/">DOM Manipulation</a></li>
+              
+            
+              
+                
+                <li><a class="docs-link rounded" href="https://kaban.my.id/javascript/tutorial/10-event-handling/">Event &amp; Event Handling</a></li>
+              
+            
+              
+                
+                <li><a class="docs-link rounded" href="https://kaban.my.id/javascript/tutorial/11-web-storage/">Web Storage &amp; Cookie</a></li>
+              
+            
+              
+                
+                <li><a class="docs-link rounded" href="https://kaban.my.id/javascript/tutorial/12-es6-modern/">ES6&#43; Fitur Modern</a></li>
+              
+            
+              
+                
+                <li><a class="docs-link rounded" href="https://kaban.my.id/javascript/tutorial/13-async-javascript/">Asynchronous JavaScript</a></li>
+              
+            
+              
+                
+                <li><a class="docs-link rounded active" href="https://kaban.my.id/javascript/tutorial/14-fetch-api/">Fetch API &amp; AJAX</a></li>
+              
+            
+              
+                
+                <li><a class="docs-link rounded" href="https://kaban.my.id/javascript/tutorial/15-nodejs-npm/">Node.js &amp; npm Dasar</a></li>
+              
+            
+              
+                
+                <li><a class="docs-link rounded" href="https://kaban.my.id/javascript/tutorial/16-bundler-tooling/">Module Bundler &amp; Build Tool</a></li>
+              
+            
+          </ul>
+        </div>
+      </li>
+    
+  
+</ul>
+
+    </nav>
+  </aside>
+</div>
+
+    <div class="wrap container-xxl" role="document">
+      <div class="content">
+        
+	<div class="row flex-xl-nowrap">
+		<div class="col-lg-5 col-xl-4 docs-sidebar d-none d-lg-block">
+			<nav class="docs-links" aria-label="Main navigation">
+				
+<ul class="list-unstyled collapsible-sidebar">
+  
+    
+      
+      <li class="mb-1">
+        <button class="btn btn-toggle align-items-center rounded collapsed" data-bs-toggle="collapse" data-bs-target="#section-0967e753cd827c7c2576cf6f7292922e" aria-expanded="true">
+          Tutorial Javascript
+        </button>
+        <div class="collapse show" id="section-0967e753cd827c7c2576cf6f7292922e">
+          <ul class="btn-toggle-nav list-unstyled fw-normal pb-1 small">
+            
+              
+                
+                <li><a class="docs-link rounded" href="https://kaban.my.id/javascript/tutorial/pengenalan/">Pengenalan Javascript</a></li>
+              
+            
+              
+                
+                <li><a class="docs-link rounded" href="https://kaban.my.id/javascript/tutorial/02-instalasi-persiapan/">Instalasi &amp; Persiapan Lingkungan JavaScript</a></li>
+              
+            
+              
+                
+                <li><a class="docs-link rounded" href="https://kaban.my.id/javascript/tutorial/03-sintaks-variabel/">Sintaks Dasar &amp; Variabel</a></li>
+              
+            
+              
+                
+                <li><a class="docs-link rounded" href="https://kaban.my.id/javascript/tutorial/04-tipe-data-konversi/">Tipe Data &amp; Konversi</a></li>
+              
+            
+              
+                
+                <li><a class="docs-link rounded" href="https://kaban.my.id/javascript/tutorial/05-struktur-kontrol/">Struktur Kontrol &amp; Perulangan</a></li>
+              
+            
+              
+                
+                <li><a class="docs-link rounded" href="https://kaban.my.id/javascript/tutorial/06-fungsi/">Fungsi</a></li>
+              
+            
+              
+                
+                <li><a class="docs-link rounded" href="https://kaban.my.id/javascript/tutorial/07-array/">Array &amp; Method-nya</a></li>
+              
+            
+              
+                
+                <li><a class="docs-link rounded" href="https://kaban.my.id/javascript/tutorial/08-object/">Object &amp; Method-nya</a></li>
+              
+            
+              
+                
+                <li><a class="docs-link rounded" href="https://kaban.my.id/javascript/tutorial/09-dom-manipulation/">DOM Manipulation</a></li>
+              
+            
+              
+                
+                <li><a class="docs-link rounded" href="https://kaban.my.id/javascript/tutorial/10-event-handling/">Event &amp; Event Handling</a></li>
+              
+            
+              
+                
+                <li><a class="docs-link rounded" href="https://kaban.my.id/javascript/tutorial/11-web-storage/">Web Storage &amp; Cookie</a></li>
+              
+            
+              
+                
+                <li><a class="docs-link rounded" href="https://kaban.my.id/javascript/tutorial/12-es6-modern/">ES6&#43; Fitur Modern</a></li>
+              
+            
+              
+                
+                <li><a class="docs-link rounded" href="https://kaban.my.id/javascript/tutorial/13-async-javascript/">Asynchronous JavaScript</a></li>
+              
+            
+              
+                
+                <li><a class="docs-link rounded active" href="https://kaban.my.id/javascript/tutorial/14-fetch-api/">Fetch API &amp; AJAX</a></li>
+              
+            
+              
+                
+                <li><a class="docs-link rounded" href="https://kaban.my.id/javascript/tutorial/15-nodejs-npm/">Node.js &amp; npm Dasar</a></li>
+              
+            
+              
+                
+                <li><a class="docs-link rounded" href="https://kaban.my.id/javascript/tutorial/16-bundler-tooling/">Module Bundler &amp; Build Tool</a></li>
+              
+            
+          </ul>
+        </div>
+      </li>
+    
+  
+</ul>
+
+			</nav>
+		</div>
+		<nav class="docs-toc d-none d-xl-block col-xl-3" aria-label="Secondary navigation">
+			<div class="d-xl-none">
+  <button class="btn btn-outline-primary btn-sm doks-toc-toggle collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#onThisPage" aria-controls="doks-docs-nav" aria-expanded="false" aria-label="Toggle On this page navigation">
+    <span>Daftar isi</span>
+    <span>
+      <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" class="doks doks-expand" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><title>Expand</title><polyline points="7 13 12 18 17 13"></polyline><polyline points="7 6 12 11 17 6"></polyline></svg>
+      <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" class="doks doks-collapse" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><title>Collapse</title><polyline points="17 11 12 6 7 11"></polyline><polyline points="17 18 12 13 7 18"></polyline></svg>
+    </span>
+  </button>
+  <div class="collapse" id="onThisPage">
+    <div class="card card-body mt-3 py-1">
+      <div class="page-links">
+        <nav id="TableOfContents">
+  <ul>
+    <li><a href="#pendahuluan">Pendahuluan</a></li>
+    <li><a href="#fetch-dasar">Fetch Dasar</a>
+      <ul>
+        <li><a href="#sintaks">Sintaks</a></li>
+        <li><a href="#contoh-get-sederhana">Contoh GET Sederhana</a></li>
+        <li><a href="#response-object">Response Object</a></li>
+      </ul>
+    </li>
+    <li><a href="#method-http">Method HTTP</a>
+      <ul>
+        <li><a href="#get--mengambil-data">GET — Mengambil Data</a></li>
+        <li><a href="#post--mengirim-data-baru">POST — Mengirim Data Baru</a></li>
+        <li><a href="#put--mengganti-data-full-update">PUT — Mengganti Data (Full Update)</a></li>
+        <li><a href="#patch--mengubah-sebagian-data">PATCH — Mengubah Sebagian Data</a></li>
+        <li><a href="#delete--menghapus-data">DELETE — Menghapus Data</a></li>
+        <li><a href="#perbandingan-method-http">Perbandingan Method HTTP</a></li>
+      </ul>
+    </li>
+    <li><a href="#header">Header</a>
+      <ul>
+        <li><a href="#mengirim-header">Mengirim Header</a></li>
+        <li><a href="#header-umum">Header Umum</a></li>
+        <li><a href="#membaca-header-response">Membaca Header Response</a></li>
+      </ul>
+    </li>
+    <li><a href="#mengirim-json">Mengirim JSON</a></li>
+    <li><a href="#error-handling">Error Handling</a>
+      <ul>
+        <li><a href="#fetch-tidak-reject-pada-http-error">Fetch Tidak Reject pada HTTP Error</a></li>
+        <li><a href="#error-handling-lengkap">Error Handling Lengkap</a></li>
+        <li><a href="#jenis-error-pada-fetch">Jenis Error pada Fetch</a></li>
+      </ul>
+    </li>
+    <li><a href="#abortcontroller--membatalkan-request"><code>AbortController</code> — Membatalkan Request</a>
+      <ul>
+        <li><a href="#sintaks-1">Sintaks</a></li>
+        <li><a href="#timeout">Timeout</a></li>
+        <li><a href="#membatalkan-request-sebelumnya-real-time-search">Membatalkan Request Sebelumnya (Real-time Search)</a></li>
+      </ul>
+    </li>
+    <li><a href="#upload-file">Upload File</a>
+      <ul>
+        <li><a href="#formdata--upload-file--data"><code>FormData</code> — Upload File &amp; Data</a></li>
+        <li><a href="#upload-dengan-progress">Upload dengan Progress</a></li>
+      </ul>
+    </li>
+    <li><a href="#cors--cross-origin-resource-sharing">CORS — Cross-Origin Resource Sharing</a>
+      <ul>
+        <li><a href="#apa-itu-origin">Apa Itu Origin?</a></li>
+        <li><a href="#cors-error">CORS Error</a></li>
+        <li><a href="#cara-mengatasi-cors">Cara Mengatasi CORS</a></li>
+        <li><a href="#preflight-request">Preflight Request</a></li>
+        <li><a href="#mode-no-cors"><code>mode: &quot;no-cors&quot;</code></a></li>
+      </ul>
+    </li>
+    <li><a href="#alternatif-axios">Alternatif: Axios</a>
+      <ul>
+        <li><a href="#instalasi">Instalasi</a></li>
+        <li><a href="#perbandingan-fetch-vs-axios">Perbandingan Fetch vs Axios</a></li>
+        <li><a href="#contoh-axios">Contoh Axios</a></li>
+      </ul>
+    </li>
+    <li><a href="#contoh-praktis">Contoh Praktis</a>
+      <ul>
+        <li><a href="#1-crud-lengkap-dengan-fetch">1. CRUD Lengkap dengan Fetch</a></li>
+        <li><a href="#2-menampilkan-data-dengan-loading--error-state">2. Menampilkan Data dengan Loading &amp; Error State</a></li>
+        <li><a href="#3-search-dengan-debounce-dan-abortcontroller">3. Search dengan Debounce dan AbortController</a></li>
+        <li><a href="#4-upload-file-dengan-preview">4. Upload File dengan Preview</a></li>
+      </ul>
+    </li>
+    <li><a href="#tips--best-practice">Tips &amp; Best Practice</a></li>
+    <li><a href="#ringkasan">Ringkasan</a></li>
+  </ul>
+</nav>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="page-links d-none d-xl-block">
+  <h3>Daftar isi</h3>
+  <nav id="TableOfContents">
+  <ul>
+    <li><a href="#pendahuluan">Pendahuluan</a></li>
+    <li><a href="#fetch-dasar">Fetch Dasar</a>
+      <ul>
+        <li><a href="#sintaks">Sintaks</a></li>
+        <li><a href="#contoh-get-sederhana">Contoh GET Sederhana</a></li>
+        <li><a href="#response-object">Response Object</a></li>
+      </ul>
+    </li>
+    <li><a href="#method-http">Method HTTP</a>
+      <ul>
+        <li><a href="#get--mengambil-data">GET — Mengambil Data</a></li>
+        <li><a href="#post--mengirim-data-baru">POST — Mengirim Data Baru</a></li>
+        <li><a href="#put--mengganti-data-full-update">PUT — Mengganti Data (Full Update)</a></li>
+        <li><a href="#patch--mengubah-sebagian-data">PATCH — Mengubah Sebagian Data</a></li>
+        <li><a href="#delete--menghapus-data">DELETE — Menghapus Data</a></li>
+        <li><a href="#perbandingan-method-http">Perbandingan Method HTTP</a></li>
+      </ul>
+    </li>
+    <li><a href="#header">Header</a>
+      <ul>
+        <li><a href="#mengirim-header">Mengirim Header</a></li>
+        <li><a href="#header-umum">Header Umum</a></li>
+        <li><a href="#membaca-header-response">Membaca Header Response</a></li>
+      </ul>
+    </li>
+    <li><a href="#mengirim-json">Mengirim JSON</a></li>
+    <li><a href="#error-handling">Error Handling</a>
+      <ul>
+        <li><a href="#fetch-tidak-reject-pada-http-error">Fetch Tidak Reject pada HTTP Error</a></li>
+        <li><a href="#error-handling-lengkap">Error Handling Lengkap</a></li>
+        <li><a href="#jenis-error-pada-fetch">Jenis Error pada Fetch</a></li>
+      </ul>
+    </li>
+    <li><a href="#abortcontroller--membatalkan-request"><code>AbortController</code> — Membatalkan Request</a>
+      <ul>
+        <li><a href="#sintaks-1">Sintaks</a></li>
+        <li><a href="#timeout">Timeout</a></li>
+        <li><a href="#membatalkan-request-sebelumnya-real-time-search">Membatalkan Request Sebelumnya (Real-time Search)</a></li>
+      </ul>
+    </li>
+    <li><a href="#upload-file">Upload File</a>
+      <ul>
+        <li><a href="#formdata--upload-file--data"><code>FormData</code> — Upload File &amp; Data</a></li>
+        <li><a href="#upload-dengan-progress">Upload dengan Progress</a></li>
+      </ul>
+    </li>
+    <li><a href="#cors--cross-origin-resource-sharing">CORS — Cross-Origin Resource Sharing</a>
+      <ul>
+        <li><a href="#apa-itu-origin">Apa Itu Origin?</a></li>
+        <li><a href="#cors-error">CORS Error</a></li>
+        <li><a href="#cara-mengatasi-cors">Cara Mengatasi CORS</a></li>
+        <li><a href="#preflight-request">Preflight Request</a></li>
+        <li><a href="#mode-no-cors"><code>mode: &quot;no-cors&quot;</code></a></li>
+      </ul>
+    </li>
+    <li><a href="#alternatif-axios">Alternatif: Axios</a>
+      <ul>
+        <li><a href="#instalasi">Instalasi</a></li>
+        <li><a href="#perbandingan-fetch-vs-axios">Perbandingan Fetch vs Axios</a></li>
+        <li><a href="#contoh-axios">Contoh Axios</a></li>
+      </ul>
+    </li>
+    <li><a href="#contoh-praktis">Contoh Praktis</a>
+      <ul>
+        <li><a href="#1-crud-lengkap-dengan-fetch">1. CRUD Lengkap dengan Fetch</a></li>
+        <li><a href="#2-menampilkan-data-dengan-loading--error-state">2. Menampilkan Data dengan Loading &amp; Error State</a></li>
+        <li><a href="#3-search-dengan-debounce-dan-abortcontroller">3. Search dengan Debounce dan AbortController</a></li>
+        <li><a href="#4-upload-file-dengan-preview">4. Upload File dengan Preview</a></li>
+      </ul>
+    </li>
+    <li><a href="#tips--best-practice">Tips &amp; Best Practice</a></li>
+    <li><a href="#ringkasan">Ringkasan</a></li>
+  </ul>
+</nav>
+  </div>
+
+		</nav>
+		<main class="docs-content col-lg-11 col-xl-9">
+		
+				<nav aria-label="breadcrumb">
+					<ol class="breadcrumb">
+						<li class="breadcrumb-item"><a href="/">Home</a></li>
+<li class="breadcrumb-item"><a href="/javascript/">Javascript</a></li>
+<li class="breadcrumb-item"><a href="/javascript/tutorial/">Tutorial Javascript</a></li>
+<li class="breadcrumb-item active" aria-current="page">Fetch API &amp; AJAX</li>
+					</ol>
+				</nav>
+			
+			<h1>Fetch API &amp; AJAX</h1>
+			<p class="lead">Fetch API adalah cara modern mengambil data dari server tanpa reload halaman. Artikel ini membahas request GET/POST/PUT/DELETE, mengirim JSON, error handling, AbortController, CORS, dan alternatif Axios.</p>
+			<nav class="d-xl-none" aria-label="Quaternary navigation">
+				<div class="d-xl-none">
+  <button class="btn btn-outline-primary btn-sm doks-toc-toggle collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#onThisPage" aria-controls="doks-docs-nav" aria-expanded="false" aria-label="Toggle On this page navigation">
+    <span>Daftar isi</span>
+    <span>
+      <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" class="doks doks-expand" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><title>Expand</title><polyline points="7 13 12 18 17 13"></polyline><polyline points="7 6 12 11 17 6"></polyline></svg>
+      <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" class="doks doks-collapse" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><title>Collapse</title><polyline points="17 11 12 6 7 11"></polyline><polyline points="17 18 12 13 7 18"></polyline></svg>
+    </span>
+  </button>
+  <div class="collapse" id="onThisPage">
+    <div class="card card-body mt-3 py-1">
+      <div class="page-links">
+        <nav id="TableOfContents">
+  <ul>
+    <li><a href="#pendahuluan">Pendahuluan</a></li>
+    <li><a href="#fetch-dasar">Fetch Dasar</a>
+      <ul>
+        <li><a href="#sintaks">Sintaks</a></li>
+        <li><a href="#contoh-get-sederhana">Contoh GET Sederhana</a></li>
+        <li><a href="#response-object">Response Object</a></li>
+      </ul>
+    </li>
+    <li><a href="#method-http">Method HTTP</a>
+      <ul>
+        <li><a href="#get--mengambil-data">GET — Mengambil Data</a></li>
+        <li><a href="#post--mengirim-data-baru">POST — Mengirim Data Baru</a></li>
+        <li><a href="#put--mengganti-data-full-update">PUT — Mengganti Data (Full Update)</a></li>
+        <li><a href="#patch--mengubah-sebagian-data">PATCH — Mengubah Sebagian Data</a></li>
+        <li><a href="#delete--menghapus-data">DELETE — Menghapus Data</a></li>
+        <li><a href="#perbandingan-method-http">Perbandingan Method HTTP</a></li>
+      </ul>
+    </li>
+    <li><a href="#header">Header</a>
+      <ul>
+        <li><a href="#mengirim-header">Mengirim Header</a></li>
+        <li><a href="#header-umum">Header Umum</a></li>
+        <li><a href="#membaca-header-response">Membaca Header Response</a></li>
+      </ul>
+    </li>
+    <li><a href="#mengirim-json">Mengirim JSON</a></li>
+    <li><a href="#error-handling">Error Handling</a>
+      <ul>
+        <li><a href="#fetch-tidak-reject-pada-http-error">Fetch Tidak Reject pada HTTP Error</a></li>
+        <li><a href="#error-handling-lengkap">Error Handling Lengkap</a></li>
+        <li><a href="#jenis-error-pada-fetch">Jenis Error pada Fetch</a></li>
+      </ul>
+    </li>
+    <li><a href="#abortcontroller--membatalkan-request"><code>AbortController</code> — Membatalkan Request</a>
+      <ul>
+        <li><a href="#sintaks-1">Sintaks</a></li>
+        <li><a href="#timeout">Timeout</a></li>
+        <li><a href="#membatalkan-request-sebelumnya-real-time-search">Membatalkan Request Sebelumnya (Real-time Search)</a></li>
+      </ul>
+    </li>
+    <li><a href="#upload-file">Upload File</a>
+      <ul>
+        <li><a href="#formdata--upload-file--data"><code>FormData</code> — Upload File &amp; Data</a></li>
+        <li><a href="#upload-dengan-progress">Upload dengan Progress</a></li>
+      </ul>
+    </li>
+    <li><a href="#cors--cross-origin-resource-sharing">CORS — Cross-Origin Resource Sharing</a>
+      <ul>
+        <li><a href="#apa-itu-origin">Apa Itu Origin?</a></li>
+        <li><a href="#cors-error">CORS Error</a></li>
+        <li><a href="#cara-mengatasi-cors">Cara Mengatasi CORS</a></li>
+        <li><a href="#preflight-request">Preflight Request</a></li>
+        <li><a href="#mode-no-cors"><code>mode: &quot;no-cors&quot;</code></a></li>
+      </ul>
+    </li>
+    <li><a href="#alternatif-axios">Alternatif: Axios</a>
+      <ul>
+        <li><a href="#instalasi">Instalasi</a></li>
+        <li><a href="#perbandingan-fetch-vs-axios">Perbandingan Fetch vs Axios</a></li>
+        <li><a href="#contoh-axios">Contoh Axios</a></li>
+      </ul>
+    </li>
+    <li><a href="#contoh-praktis">Contoh Praktis</a>
+      <ul>
+        <li><a href="#1-crud-lengkap-dengan-fetch">1. CRUD Lengkap dengan Fetch</a></li>
+        <li><a href="#2-menampilkan-data-dengan-loading--error-state">2. Menampilkan Data dengan Loading &amp; Error State</a></li>
+        <li><a href="#3-search-dengan-debounce-dan-abortcontroller">3. Search dengan Debounce dan AbortController</a></li>
+        <li><a href="#4-upload-file-dengan-preview">4. Upload File dengan Preview</a></li>
+      </ul>
+    </li>
+    <li><a href="#tips--best-practice">Tips &amp; Best Practice</a></li>
+    <li><a href="#ringkasan">Ringkasan</a></li>
+  </ul>
+</nav>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="page-links d-none d-xl-block">
+  <h3>Daftar isi</h3>
+  <nav id="TableOfContents">
+  <ul>
+    <li><a href="#pendahuluan">Pendahuluan</a></li>
+    <li><a href="#fetch-dasar">Fetch Dasar</a>
+      <ul>
+        <li><a href="#sintaks">Sintaks</a></li>
+        <li><a href="#contoh-get-sederhana">Contoh GET Sederhana</a></li>
+        <li><a href="#response-object">Response Object</a></li>
+      </ul>
+    </li>
+    <li><a href="#method-http">Method HTTP</a>
+      <ul>
+        <li><a href="#get--mengambil-data">GET — Mengambil Data</a></li>
+        <li><a href="#post--mengirim-data-baru">POST — Mengirim Data Baru</a></li>
+        <li><a href="#put--mengganti-data-full-update">PUT — Mengganti Data (Full Update)</a></li>
+        <li><a href="#patch--mengubah-sebagian-data">PATCH — Mengubah Sebagian Data</a></li>
+        <li><a href="#delete--menghapus-data">DELETE — Menghapus Data</a></li>
+        <li><a href="#perbandingan-method-http">Perbandingan Method HTTP</a></li>
+      </ul>
+    </li>
+    <li><a href="#header">Header</a>
+      <ul>
+        <li><a href="#mengirim-header">Mengirim Header</a></li>
+        <li><a href="#header-umum">Header Umum</a></li>
+        <li><a href="#membaca-header-response">Membaca Header Response</a></li>
+      </ul>
+    </li>
+    <li><a href="#mengirim-json">Mengirim JSON</a></li>
+    <li><a href="#error-handling">Error Handling</a>
+      <ul>
+        <li><a href="#fetch-tidak-reject-pada-http-error">Fetch Tidak Reject pada HTTP Error</a></li>
+        <li><a href="#error-handling-lengkap">Error Handling Lengkap</a></li>
+        <li><a href="#jenis-error-pada-fetch">Jenis Error pada Fetch</a></li>
+      </ul>
+    </li>
+    <li><a href="#abortcontroller--membatalkan-request"><code>AbortController</code> — Membatalkan Request</a>
+      <ul>
+        <li><a href="#sintaks-1">Sintaks</a></li>
+        <li><a href="#timeout">Timeout</a></li>
+        <li><a href="#membatalkan-request-sebelumnya-real-time-search">Membatalkan Request Sebelumnya (Real-time Search)</a></li>
+      </ul>
+    </li>
+    <li><a href="#upload-file">Upload File</a>
+      <ul>
+        <li><a href="#formdata--upload-file--data"><code>FormData</code> — Upload File &amp; Data</a></li>
+        <li><a href="#upload-dengan-progress">Upload dengan Progress</a></li>
+      </ul>
+    </li>
+    <li><a href="#cors--cross-origin-resource-sharing">CORS — Cross-Origin Resource Sharing</a>
+      <ul>
+        <li><a href="#apa-itu-origin">Apa Itu Origin?</a></li>
+        <li><a href="#cors-error">CORS Error</a></li>
+        <li><a href="#cara-mengatasi-cors">Cara Mengatasi CORS</a></li>
+        <li><a href="#preflight-request">Preflight Request</a></li>
+        <li><a href="#mode-no-cors"><code>mode: &quot;no-cors&quot;</code></a></li>
+      </ul>
+    </li>
+    <li><a href="#alternatif-axios">Alternatif: Axios</a>
+      <ul>
+        <li><a href="#instalasi">Instalasi</a></li>
+        <li><a href="#perbandingan-fetch-vs-axios">Perbandingan Fetch vs Axios</a></li>
+        <li><a href="#contoh-axios">Contoh Axios</a></li>
+      </ul>
+    </li>
+    <li><a href="#contoh-praktis">Contoh Praktis</a>
+      <ul>
+        <li><a href="#1-crud-lengkap-dengan-fetch">1. CRUD Lengkap dengan Fetch</a></li>
+        <li><a href="#2-menampilkan-data-dengan-loading--error-state">2. Menampilkan Data dengan Loading &amp; Error State</a></li>
+        <li><a href="#3-search-dengan-debounce-dan-abortcontroller">3. Search dengan Debounce dan AbortController</a></li>
+        <li><a href="#4-upload-file-dengan-preview">4. Upload File dengan Preview</a></li>
+      </ul>
+    </li>
+    <li><a href="#tips--best-practice">Tips &amp; Best Practice</a></li>
+    <li><a href="#ringkasan">Ringkasan</a></li>
+  </ul>
+</nav>
+  </div>
+
+			</nav>
+			<h2 id="pendahuluan">Pendahuluan <a href="#pendahuluan" class="anchor" aria-hidden="true">#</a></h2>
+<p><strong>AJAX</strong> (Asynchronous JavaScript and XML) adalah teknik mengambil data dari server <strong>tanpa reload halaman</strong>. Meskipun namanya mengandung &ldquo;XML&rdquo;, saat ini format yang dominan adalah <strong>JSON</strong>.</p>
+<p><strong>Fetch API</strong> adalah cara modern (built-in browser) untuk melakukan HTTP request. Fetch menggantikan <code>XMLHttpRequest</code> (XHR) yang lebih tua dan verbose.</p>
+<p>Dengan Fetch, kita bisa:</p>
+<ul>
+<li>Mengambil data dari REST API.</li>
+<li>Mengirim form/data ke server.</li>
+<li>Upload file.</li>
+<li>Berkomunikasi dengan backend (Node.js, PHP, Python, dll.).</li>
+</ul>
+<p>Artikel ini membahas Fetch API secara lengkap: request dasar, method HTTP, header, error handling, <code>AbortController</code>, CORS, dan alternatif seperti Axios.</p>
+<blockquote>
+<p><strong>Asumsi:</strong> Anda sudah memahami Promise dan <code>async</code>/<code>await</code> dari artikel sebelumnya.</p>
+</blockquote>
+<hr>
+<h2 id="fetch-dasar">Fetch Dasar <a href="#fetch-dasar" class="anchor" aria-hidden="true">#</a></h2>
+<h3 id="sintaks">Sintaks <a href="#sintaks" class="anchor" aria-hidden="true">#</a></h3>
+<pre><code class="language-javascript">fetch(url, options)
+  .then(response =&gt; response.json())
+  .then(data =&gt; console.log(data))
+  .catch(error =&gt; console.error(error));
+</code></pre>
+<p>Atau dengan <code>async</code>/<code>await</code>:</p>
+<pre><code class="language-javascript">async function ambilData() {
+  const response = await fetch(url);
+  const data = await response.json();
+  return data;
+}
+</code></pre>
+<h3 id="contoh-get-sederhana">Contoh GET Sederhana <a href="#contoh-get-sederhana" class="anchor" aria-hidden="true">#</a></h3>
+<pre><code class="language-javascript">async function ambilProduk() {
+  const response = await fetch(&quot;https://api.example.com/produk&quot;);
+  const data = await response.json();
+  console.log(data);
+}
+
+ambilProduk();
+</code></pre>
+<h3 id="response-object">Response Object <a href="#response-object" class="anchor" aria-hidden="true">#</a></h3>
+<p><code>fetch()</code> mengembalikan <strong>Promise</strong> yang resolve ke <strong>Response object</strong>. Response berisi:</p>
+<table>
+<thead>
+<tr>
+<th>Properti/Method</th>
+<th>Arti</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>response.ok</code></td>
+<td><code>true</code> jika status 200–299</td>
+</tr>
+<tr>
+<td><code>response.status</code></td>
+<td>Status code (200, 404, 500, dll.)</td>
+</tr>
+<tr>
+<td><code>response.statusText</code></td>
+<td>Teks status (&ldquo;OK&rdquo;, &ldquo;Not Found&rdquo;)</td>
+</tr>
+<tr>
+<td><code>response.headers</code></td>
+<td>Header response (Headers object)</td>
+</tr>
+<tr>
+<td><code>response.url</code></td>
+<td>URL final (setelah redirect)</td>
+</tr>
+<tr>
+<td><code>response.redirected</code></td>
+<td>Apakah terjadi redirect</td>
+</tr>
+<tr>
+<td><code>response.json()</code></td>
+<td>Parse body sebagai JSON (Promise)</td>
+</tr>
+<tr>
+<td><code>response.text()</code></td>
+<td>Parse body sebagai teks (Promise)</td>
+</tr>
+<tr>
+<td><code>response.blob()</code></td>
+<td>Parse body sebagai Blob (file)</td>
+</tr>
+<tr>
+<td><code>response.arrayBuffer()</code></td>
+<td>Parse body sebagai ArrayBuffer</td>
+</tr>
+<tr>
+<td><code>response.formData()</code></td>
+<td>Parse body sebagai FormData</td>
+</tr>
+<tr>
+<td><code>response.clone()</code></td>
+<td>Clone response (untuk dibaca dua kali)</td>
+</tr>
+</tbody>
+</table>
+<blockquote>
+<p><strong>Penting:</strong> Body response hanya bisa dibaca <strong>sekali</strong>. Jika perlu membaca dua kali, gunakan <code>response.clone()</code>.</p>
+</blockquote>
+<pre><code class="language-javascript">const response = await fetch(&quot;/api/data&quot;);
+const clone = response.clone();
+
+const json = await response.json();
+const text = await clone.text();
+</code></pre>
+<hr>
+<h2 id="method-http">Method HTTP <a href="#method-http" class="anchor" aria-hidden="true">#</a></h2>
+<h3 id="get--mengambil-data">GET — Mengambil Data <a href="#get--mengambil-data" class="anchor" aria-hidden="true">#</a></h3>
+<pre><code class="language-javascript">// Default method adalah GET
+const response = await fetch(&quot;/api/produk&quot;);
+const produk = await response.json();
+</code></pre>
+<p><strong>Dengan query string:</strong></p>
+<pre><code class="language-javascript">const params = new URLSearchParams({
+  kategori: &quot;elektronik&quot;,
+  page: 2,
+  limit: 10
+});
+
+const response = await fetch(`/api/produk?${params}`);
+</code></pre>
+<p>Atau manual:</p>
+<pre><code class="language-javascript">const response = await fetch(&quot;/api/produk?kategori=elektronik&amp;page=2&quot;);
+</code></pre>
+<blockquote>
+<p><strong>Tips:</strong> Gunakan <code>URLSearchParams</code> untuk encoding otomatis (spasi, karakter khusus).</p>
+</blockquote>
+<h3 id="post--mengirim-data-baru">POST — Mengirim Data Baru <a href="#post--mengirim-data-baru" class="anchor" aria-hidden="true">#</a></h3>
+<pre><code class="language-javascript">const response = await fetch(&quot;/api/produk&quot;, {
+  method: &quot;POST&quot;,
+  headers: {
+    &quot;Content-Type&quot;: &quot;application/json&quot;
+  },
+  body: JSON.stringify({
+    nama: &quot;Keyboard Mechanical&quot;,
+    harga: 450000,
+    stok: 25
+  })
+});
+
+const hasil = await response.json();
+console.log(hasil);
+</code></pre>
+<h3 id="put--mengganti-data-full-update">PUT — Mengganti Data (Full Update) <a href="#put--mengganti-data-full-update" class="anchor" aria-hidden="true">#</a></h3>
+<pre><code class="language-javascript">const response = await fetch(&quot;/api/produk/1&quot;, {
+  method: &quot;PUT&quot;,
+  headers: { &quot;Content-Type&quot;: &quot;application/json&quot; },
+  body: JSON.stringify({
+    nama: &quot;Keyboard Mechanical RGB&quot;,
+    harga: 550000,
+    stok: 20
+  })
+});
+</code></pre>
+<h3 id="patch--mengubah-sebagian-data">PATCH — Mengubah Sebagian Data <a href="#patch--mengubah-sebagian-data" class="anchor" aria-hidden="true">#</a></h3>
+<pre><code class="language-javascript">const response = await fetch(&quot;/api/produk/1&quot;, {
+  method: &quot;PATCH&quot;,
+  headers: { &quot;Content-Type&quot;: &quot;application/json&quot; },
+  body: JSON.stringify({
+    harga: 500000
+  })
+});
+</code></pre>
+<h3 id="delete--menghapus-data">DELETE — Menghapus Data <a href="#delete--menghapus-data" class="anchor" aria-hidden="true">#</a></h3>
+<pre><code class="language-javascript">const response = await fetch(&quot;/api/produk/1&quot;, {
+  method: &quot;DELETE&quot;
+});
+
+if (response.ok) {
+  console.log(&quot;Produk dihapus&quot;);
+}
+</code></pre>
+<h3 id="perbandingan-method-http">Perbandingan Method HTTP <a href="#perbandingan-method-http" class="anchor" aria-hidden="true">#</a></h3>
+<table>
+<thead>
+<tr>
+<th>Method</th>
+<th>Kegunaan</th>
+<th>Body</th>
+<th>Idempotent</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>GET</code></td>
+<td>Mengambil data</td>
+<td>❌</td>
+<td>✅</td>
+</tr>
+<tr>
+<td><code>POST</code></td>
+<td>Membuat data baru</td>
+<td>✅</td>
+<td>❌</td>
+</tr>
+<tr>
+<td><code>PUT</code></td>
+<td>Mengganti seluruh data</td>
+<td>✅</td>
+<td>✅</td>
+</tr>
+<tr>
+<td><code>PATCH</code></td>
+<td>Mengubah sebagian data</td>
+<td>✅</td>
+<td>❌</td>
+</tr>
+<tr>
+<td><code>DELETE</code></td>
+<td>Menghapus data</td>
+<td>❌</td>
+<td>✅</td>
+</tr>
+</tbody>
+</table>
+<blockquote>
+<p><strong>Idempotent</strong> berarti request yang sama bisa diulang tanpa efek samping berbeda. <code>GET</code>, <code>PUT</code>, <code>DELETE</code> idempotent; <code>POST</code> tidak.</p>
+</blockquote>
+<hr>
+<h2 id="header">Header <a href="#header" class="anchor" aria-hidden="true">#</a></h2>
+<h3 id="mengirim-header">Mengirim Header <a href="#mengirim-header" class="anchor" aria-hidden="true">#</a></h3>
+<pre><code class="language-javascript">const response = await fetch(&quot;/api/data&quot;, {
+  headers: {
+    &quot;Content-Type&quot;: &quot;application/json&quot;,
+    &quot;Authorization&quot;: &quot;Bearer token123&quot;,
+    &quot;Accept&quot;: &quot;application/json&quot;,
+    &quot;X-Custom-Header&quot;: &quot;nilai&quot;
+  }
+});
+</code></pre>
+<h3 id="header-umum">Header Umum <a href="#header-umum" class="anchor" aria-hidden="true">#</a></h3>
+<table>
+<thead>
+<tr>
+<th>Header</th>
+<th>Kegunaan</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>Content-Type</code></td>
+<td>Tipe body request (<code>application/json</code>, <code>text/plain</code>, <code>multipart/form-data</code>)</td>
+</tr>
+<tr>
+<td><code>Accept</code></td>
+<td>Tipe response yang diharapkan</td>
+</tr>
+<tr>
+<td><code>Authorization</code></td>
+<td>Kredensial (<code>Bearer token</code>, <code>Basic base64</code>)</td>
+</tr>
+<tr>
+<td><code>X-Requested-With</code></td>
+<td>Menandai AJAX (<code>XMLHttpRequest</code>)</td>
+</tr>
+<tr>
+<td><code>Cache-Control</code></td>
+<td>Kontrol caching</td>
+</tr>
+</tbody>
+</table>
+<h3 id="membaca-header-response">Membaca Header Response <a href="#membaca-header-response" class="anchor" aria-hidden="true">#</a></h3>
+<pre><code class="language-javascript">const response = await fetch(&quot;/api/data&quot;);
+
+console.log(response.headers.get(&quot;Content-Type&quot;));
+console.log(response.headers.get(&quot;X-RateLimit-Remaining&quot;));
+
+// Iterasi semua header
+response.headers.forEach((value, key) =&gt; {
+  console.log(`${key}: ${value}`);
+});
+</code></pre>
+<blockquote>
+<p><strong>Catatan:</strong> Beberapa header tidak bisa dibaca dari JavaScript karena alasan keamanan (misalnya <code>Set-Cookie</code>).</p>
+</blockquote>
+<hr>
+<h2 id="mengirim-json">Mengirim JSON <a href="#mengirim-json" class="anchor" aria-hidden="true">#</a></h2>
+<p>Pola paling umum — mengirim dan menerima JSON:</p>
+<pre><code class="language-javascript">async function kirimData(url, data) {
+  const response = await fetch(url, {
+    method: &quot;POST&quot;,
+    headers: {
+      &quot;Content-Type&quot;: &quot;application/json&quot;
+    },
+    body: JSON.stringify(data)
+  });
+
+  if (!response.ok) {
+    throw new Error(`HTTP ${response.status}`);
+  }
+
+  return response.json();
+}
+
+// Penggunaan
+const hasil = await kirimData(&quot;/api/produk&quot;, {
+  nama: &quot;Mouse&quot;,
+  harga: 150000
+});
+</code></pre>
+<hr>
+<h2 id="error-handling">Error Handling <a href="#error-handling" class="anchor" aria-hidden="true">#</a></h2>
+<h3 id="fetch-tidak-reject-pada-http-error">Fetch Tidak Reject pada HTTP Error <a href="#fetch-tidak-reject-pada-http-error" class="anchor" aria-hidden="true">#</a></h3>
+<p><strong>Penting:</strong> <code>fetch()</code> hanya <strong>reject</strong> jika terjadi <strong>network error</strong> (server tidak bisa dihubungi, DNS gagal, CORS). Untuk HTTP error (404, 500), Promise tetap <strong>resolve</strong> — Anda harus cek <code>response.ok</code> secara manual.</p>
+<pre><code class="language-javascript">// ❌ Tidak menangkap 404/500
+try {
+  const response = await fetch(&quot;/api/tidak-ada&quot;);
+  const data = await response.json(); // error jika body bukan JSON
+} catch (error) {
+  // Hanya menangkap network error
+}
+
+// ✅ Cek response.ok
+async function fetchData(url) {
+  const response = await fetch(url);
+
+  if (!response.ok) {
+    throw new Error(`HTTP ${response.status}: ${response.statusText}`);
+  }
+
+  return response.json();
+}
+
+try {
+  const data = await fetchData(&quot;/api/tidak-ada&quot;);
+} catch (error) {
+  console.error(&quot;Gagal:&quot;, error.message);
+  // &quot;HTTP 404: Not Found&quot;
+}
+</code></pre>
+<h3 id="error-handling-lengkap">Error Handling Lengkap <a href="#error-handling-lengkap" class="anchor" aria-hidden="true">#</a></h3>
+<pre><code class="language-javascript">async function ambilData(url) {
+  try {
+    const response = await fetch(url);
+
+    if (!response.ok) {
+      // Coba baca pesan error dari body
+      let pesan = `HTTP ${response.status}`;
+      try {
+        const errorBody = await response.json();
+        pesan = errorBody.message || pesan;
+      } catch {
+        // Body bukan JSON — abaikan
+      }
+      throw new Error(pesan);
+    }
+
+    return await response.json();
+  } catch (error) {
+    if (error.name === &quot;AbortError&quot;) {
+      console.log(&quot;Request dibatalkan&quot;);
+    } else if (error instanceof TypeError) {
+      console.error(&quot;Network error:&quot;, error.message);
+    } else {
+      console.error(&quot;Error:&quot;, error.message);
+    }
+    throw error;
+  }
+}
+</code></pre>
+<h3 id="jenis-error-pada-fetch">Jenis Error pada Fetch <a href="#jenis-error-pada-fetch" class="anchor" aria-hidden="true">#</a></h3>
+<table>
+<thead>
+<tr>
+<th>Error</th>
+<th>Penyebab</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>TypeError: Failed to fetch</code></td>
+<td>Network error, CORS, server tidak bisa dihubungi</td>
+</tr>
+<tr>
+<td><code>AbortError</code></td>
+<td>Request dibatalkan via <code>AbortController</code></td>
+</tr>
+<tr>
+<td><code>SyntaxError</code></td>
+<td><code>response.json()</code> gagal karena body bukan JSON</td>
+</tr>
+<tr>
+<td>HTTP error (404, 500)</td>
+<td><strong>Tidak</strong> throw — harus cek <code>response.ok</code></td>
+</tr>
+</tbody>
+</table>
+<hr>
+<h2 id="abortcontroller--membatalkan-request"><code>AbortController</code> — Membatalkan Request <a href="#abortcontroller--membatalkan-request" class="anchor" aria-hidden="true">#</a></h2>
+<p><strong><code>AbortController</code></strong> memungkinkan membatalkan request yang sedang berjalan — berguna untuk timeout, navigasi, atau pencarian real-time.</p>
+<h3 id="sintaks-1">Sintaks <a href="#sintaks-1" class="anchor" aria-hidden="true">#</a></h3>
+<pre><code class="language-javascript">const controller = new AbortController();
+const signal = controller.signal;
+
+fetch(url, { signal })
+  .then(response =&gt; response.json())
+  .catch(error =&gt; {
+    if (error.name === &quot;AbortError&quot;) {
+      console.log(&quot;Request dibatalkan&quot;);
+    }
+  });
+
+// Batalkan
+controller.abort();
+</code></pre>
+<h3 id="timeout">Timeout <a href="#timeout" class="anchor" aria-hidden="true">#</a></h3>
+<pre><code class="language-javascript">async function fetchWithTimeout(url, timeoutMs = 5000) {
+  const controller = new AbortController();
+  const timeoutId = setTimeout(() =&gt; controller.abort(), timeoutMs);
+
+  try {
+    const response = await fetch(url, { signal: controller.signal });
+    return await response.json();
+  } finally {
+    clearTimeout(timeoutId);
+  }
+}
+
+try {
+  const data = await fetchWithTimeout(&quot;/api/lambat&quot;, 3000);
+} catch (error) {
+  if (error.name === &quot;AbortError&quot;) {
+    console.log(&quot;Timeout setelah 3 detik&quot;);
+  }
+}
+</code></pre>
+<blockquote>
+<p><strong>Tips:</strong> <code>AbortSignal.timeout(ms)</code> (modern) menyederhanakan timeout:</p>
+<pre><code class="language-javascript">const response = await fetch(url, { signal: AbortSignal.timeout(5000) });
+</code></pre>
+</blockquote>
+<h3 id="membatalkan-request-sebelumnya-real-time-search">Membatalkan Request Sebelumnya (Real-time Search) <a href="#membatalkan-request-sebelumnya-real-time-search" class="anchor" aria-hidden="true">#</a></h3>
+<pre><code class="language-javascript">let controller = null;
+
+async function cariProduk(keyword) {
+  // Batalkan request sebelumnya
+  if (controller) controller.abort();
+  controller = new AbortController();
+
+  try {
+    const response = await fetch(`/api/produk?q=${keyword}`, {
+      signal: controller.signal
+    });
+    const data = await response.json();
+    renderHasil(data);
+  } catch (error) {
+    if (error.name !== &quot;AbortError&quot;) {
+      console.error(error);
+    }
+  }
+}
+
+// Setiap ketikan membatalkan request sebelumnya
+searchInput.addEventListener(&quot;input&quot;, (e) =&gt; {
+  cariProduk(e.target.value);
+});
+</code></pre>
+<hr>
+<h2 id="upload-file">Upload File <a href="#upload-file" class="anchor" aria-hidden="true">#</a></h2>
+<h3 id="formdata--upload-file--data"><code>FormData</code> — Upload File &amp; Data <a href="#formdata--upload-file--data" class="anchor" aria-hidden="true">#</a></h3>
+<pre><code class="language-html">&lt;input type=&quot;file&quot; id=&quot;file-input&quot;&gt;
+&lt;button id=&quot;btn-upload&quot;&gt;Upload&lt;/button&gt;
+</code></pre>
+<pre><code class="language-javascript">document.querySelector(&quot;#btn-upload&quot;).addEventListener(&quot;click&quot;, async () =&gt; {
+  const file = document.querySelector(&quot;#file-input&quot;).files[0];
+  if (!file) return;
+
+  const formData = new FormData();
+  formData.append(&quot;file&quot;, file);
+  formData.append(&quot;nama&quot;, &quot;Foto Profil&quot;);
+
+  try {
+    const response = await fetch(&quot;/api/upload&quot;, {
+      method: &quot;POST&quot;,
+      body: formData
+      // Jangan set Content-Type — browser otomatis set dengan boundary
+    });
+
+    const hasil = await response.json();
+    console.log(&quot;Upload berhasil:&quot;, hasil);
+  } catch (error) {
+    console.error(&quot;Upload gagal:&quot;, error);
+  }
+});
+</code></pre>
+<blockquote>
+<p>⚠️ <strong>Peringatan:</strong> Jangan set <code>Content-Type: multipart/form-data</code> secara manual — browser perlu menambahkan <strong>boundary</strong>. Biarkan browser mengaturnya.</p>
+</blockquote>
+<h3 id="upload-dengan-progress">Upload dengan Progress <a href="#upload-dengan-progress" class="anchor" aria-hidden="true">#</a></h3>
+<p><code>fetch()</code> <strong>tidak</strong> mendukung progress upload secara langsung. Gunakan <code>XMLHttpRequest</code> atau library seperti Axios:</p>
+<pre><code class="language-javascript">// Dengan XMLHttpRequest
+const xhr = new XMLHttpRequest();
+xhr.upload.addEventListener(&quot;progress&quot;, (e) =&gt; {
+  if (e.lengthComputable) {
+    const persen = (e.loaded / e.total) * 100;
+    console.log(`Upload: ${persen.toFixed(1)}%`);
+  }
+});
+
+xhr.open(&quot;POST&quot;, &quot;/api/upload&quot;);
+xhr.send(formData);
+</code></pre>
+<pre><code class="language-javascript">// Dengan Axios
+await axios.post(&quot;/api/upload&quot;, formData, {
+  onUploadProgress: (e) =&gt; {
+    const persen = (e.loaded / e.total) * 100;
+    console.log(`Upload: ${persen.toFixed(1)}%`);
+  }
+});
+</code></pre>
+<hr>
+<h2 id="cors--cross-origin-resource-sharing">CORS — Cross-Origin Resource Sharing <a href="#cors--cross-origin-resource-sharing" class="anchor" aria-hidden="true">#</a></h2>
+<p><strong>CORS</strong> adalah mekanisme keamanan browser yang membatasi request lintas origin (domain, port, atau protocol berbeda).</p>
+<h3 id="apa-itu-origin">Apa Itu Origin? <a href="#apa-itu-origin" class="anchor" aria-hidden="true">#</a></h3>
+<p>Dua URL memiliki origin yang sama jika <strong>protocol + domain + port</strong> sama:</p>
+<table>
+<thead>
+<tr>
+<th>URL A</th>
+<th>URL B</th>
+<th>Same Origin?</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>https://example.com/a</code></td>
+<td><code>https://example.com/b</code></td>
+<td>✅</td>
+</tr>
+<tr>
+<td><code>https://example.com</code></td>
+<td><code>http://example.com</code></td>
+<td>❌ (protocol)</td>
+</tr>
+<tr>
+<td><code>https://example.com</code></td>
+<td><code>https://api.example.com</code></td>
+<td>❌ (subdomain)</td>
+</tr>
+<tr>
+<td><code>https://example.com</code></td>
+<td><code>https://example.com:8080</code></td>
+<td>❌ (port)</td>
+</tr>
+</tbody>
+</table>
+<h3 id="cors-error">CORS Error <a href="#cors-error" class="anchor" aria-hidden="true">#</a></h3>
+<p>Jika frontend (<code>http://localhost:3000</code>) memanggil API (<code>http://localhost:5000</code>), browser akan memblokir kecuali server mengizinkan:</p>
+<pre><code>Access to fetch at 'http://localhost:5000/api' from origin 'http://localhost:3000'
+has been blocked by CORS policy: No 'Access-Control-Allow-Origin' header is present
+on the requested resource.
+</code></pre>
+<h3 id="cara-mengatasi-cors">Cara Mengatasi CORS <a href="#cara-mengatasi-cors" class="anchor" aria-hidden="true">#</a></h3>
+<p><strong>Dari sisi server</strong> (bukan client) — tambahkan header:</p>
+<pre><code>Access-Control-Allow-Origin: http://localhost:3000
+Access-Control-Allow-Methods: GET, POST, PUT, DELETE
+Access-Control-Allow-Headers: Content-Type, Authorization
+Access-Control-Allow-Credentials: true
+</code></pre>
+<p><strong>Contoh di Express.js (Node.js):</strong></p>
+<pre><code class="language-javascript">const cors = require(&quot;cors&quot;);
+app.use(cors({
+  origin: &quot;http://localhost:3000&quot;,
+  credentials: true
+}));
+</code></pre>
+<p><strong>Contoh di PHP:</strong></p>
+<pre><code class="language-php">header(&quot;Access-Control-Allow-Origin: http://localhost:3000&quot;);
+header(&quot;Access-Control-Allow-Methods: GET, POST, PUT, DELETE&quot;);
+header(&quot;Access-Control-Allow-Headers: Content-Type, Authorization&quot;);
+</code></pre>
+<h3 id="preflight-request">Preflight Request <a href="#preflight-request" class="anchor" aria-hidden="true">#</a></h3>
+<p>Untuk request &ldquo;kompleks&rdquo; (method selain GET/POST sederhana, atau header kustom), browser mengirim <strong>preflight</strong> <code>OPTIONS</code> request terlebih dahulu:</p>
+<pre><code>OPTIONS /api/data
+Origin: http://localhost:3000
+Access-Control-Request-Method: PUT
+Access-Control-Request-Headers: Content-Type
+</code></pre>
+<p>Server harus merespons dengan header CORS yang sesuai, baru request sebenarnya dikirim.</p>
+<h3 id="mode-no-cors"><code>mode: &quot;no-cors&quot;</code> <a href="#mode-no-cors" class="anchor" aria-hidden="true">#</a></h3>
+<pre><code class="language-javascript">fetch(url, { mode: &quot;no-cors&quot; });
+</code></pre>
+<blockquote>
+<p>⚠️ <strong>Peringatan:</strong> <code>no-cors</code> <strong>bukan</strong> solusi untuk CORS. Mode ini mengembalikan <strong>opaque response</strong> — Anda <strong>tidak bisa</strong> membaca body atau status. Gunakan hanya untuk request &ldquo;fire-and-forget&rdquo; (misalnya analytics). Solusi sebenarnya adalah <strong>konfigurasi server</strong>.</p>
+</blockquote>
+<hr>
+<h2 id="alternatif-axios">Alternatif: Axios <a href="#alternatif-axios" class="anchor" aria-hidden="true">#</a></h2>
+<p><strong>Axios</strong> adalah library HTTP populer — sering digunakan karena API lebih nyaman daripada Fetch.</p>
+<h3 id="instalasi">Instalasi <a href="#instalasi" class="anchor" aria-hidden="true">#</a></h3>
+<pre><code class="language-bash">npm install axios
+</code></pre>
+<h3 id="perbandingan-fetch-vs-axios">Perbandingan Fetch vs Axios <a href="#perbandingan-fetch-vs-axios" class="anchor" aria-hidden="true">#</a></h3>
+<table>
+<thead>
+<tr>
+<th>Aspek</th>
+<th>Fetch</th>
+<th>Axios</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Bawaan browser</td>
+<td>✅</td>
+<td>❌ (perlu install)</td>
+</tr>
+<tr>
+<td>JSON otomatis</td>
+<td>❌ (perlu <code>JSON.stringify</code>/<code>.json()</code>)</td>
+<td>✅</td>
+</tr>
+<tr>
+<td>Reject pada HTTP error</td>
+<td>❌</td>
+<td>✅</td>
+</tr>
+<tr>
+<td>Timeout</td>
+<td>Manual (<code>AbortController</code>)</td>
+<td>Built-in</td>
+</tr>
+<tr>
+<td>Progress upload</td>
+<td>❌</td>
+<td>✅</td>
+</tr>
+<tr>
+<td>Interceptor</td>
+<td>❌</td>
+<td>✅</td>
+</tr>
+<tr>
+<td>Browser + Node.js</td>
+<td>✅ (Node 18+)</td>
+<td>✅</td>
+</tr>
+</tbody>
+</table>
+<h3 id="contoh-axios">Contoh Axios <a href="#contoh-axios" class="anchor" aria-hidden="true">#</a></h3>
+<pre><code class="language-javascript">import axios from &quot;axios&quot;;
+
+// GET
+const { data } = await axios.get(&quot;/api/produk&quot;);
+
+// POST
+const { data } = await axios.post(&quot;/api/produk&quot;, {
+  nama: &quot;Keyboard&quot;,
+  harga: 450000
+});
+
+// Error handling — axios reject pada 4xx/5xx
+try {
+  const { data } = await axios.get(&quot;/api/tidak-ada&quot;);
+} catch (error) {
+  if (error.response) {
+    console.log(&quot;Status:&quot;, error.response.status);
+    console.log(&quot;Data:&quot;, error.response.data);
+  } else if (error.request) {
+    console.log(&quot;Tidak ada response&quot;);
+  } else {
+    console.log(&quot;Error:&quot;, error.message);
+  }
+}
+
+// Timeout
+await axios.get(&quot;/api/lambat&quot;, { timeout: 5000 });
+
+// Interceptor
+axios.interceptors.request.use(config =&gt; {
+  config.headers.Authorization = `Bearer ${getToken()}`;
+  return config;
+});
+</code></pre>
+<blockquote>
+<p><strong>Rekomendasi:</strong> Untuk proyek kecil, Fetch sudah cukup. Untuk proyek besar dengan banyak request, Axios menawarkan fitur yang menghemat waktu (interceptor, timeout built-in, progress).</p>
+</blockquote>
+<hr>
+<h2 id="contoh-praktis">Contoh Praktis <a href="#contoh-praktis" class="anchor" aria-hidden="true">#</a></h2>
+<h3 id="1-crud-lengkap-dengan-fetch">1. CRUD Lengkap dengan Fetch <a href="#1-crud-lengkap-dengan-fetch" class="anchor" aria-hidden="true">#</a></h3>
+<pre><code class="language-javascript">const API = &quot;https://api.example.com/produk&quot;;
+
+const produkAPI = {
+  async getAll() {
+    const res = await fetch(API);
+    if (!res.ok) throw new Error(`HTTP ${res.status}`);
+    return res.json();
+  },
+
+  async getById(id) {
+    const res = await fetch(`${API}/${id}`);
+    if (!res.ok) throw new Error(`HTTP ${res.status}`);
+    return res.json();
+  },
+
+  async create(data) {
+    const res = await fetch(API, {
+      method: &quot;POST&quot;,
+      headers: { &quot;Content-Type&quot;: &quot;application/json&quot; },
+      body: JSON.stringify(data)
+    });
+    if (!res.ok) throw new Error(`HTTP ${res.status}`);
+    return res.json();
+  },
+
+  async update(id, data) {
+    const res = await fetch(`${API}/${id}`, {
+      method: &quot;PUT&quot;,
+      headers: { &quot;Content-Type&quot;: &quot;application/json&quot; },
+      body: JSON.stringify(data)
+    });
+    if (!res.ok) throw new Error(`HTTP ${res.status}`);
+    return res.json();
+  },
+
+  async remove(id) {
+    const res = await fetch(`${API}/${id}`, { method: &quot;DELETE&quot; });
+    if (!res.ok) throw new Error(`HTTP ${res.status}`);
+    return true;
+  }
+};
+
+// Penggunaan
+const produk = await produkAPI.getAll();
+const baru = await produkAPI.create({ nama: &quot;Mouse&quot;, harga: 150000 });
+await produkAPI.update(baru.id, { harga: 175000 });
+await produkAPI.remove(baru.id);
+</code></pre>
+<h3 id="2-menampilkan-data-dengan-loading--error-state">2. Menampilkan Data dengan Loading &amp; Error State <a href="#2-menampilkan-data-dengan-loading--error-state" class="anchor" aria-hidden="true">#</a></h3>
+<pre><code class="language-javascript">async function muatProduk() {
+  const container = document.querySelector(&quot;#container&quot;);
+  const loading = document.querySelector(&quot;#loading&quot;);
+  const errorEl = document.querySelector(&quot;#error&quot;);
+
+  loading.style.display = &quot;block&quot;;
+  errorEl.textContent = &quot;&quot;;
+  container.innerHTML = &quot;&quot;;
+
+  try {
+    const res = await fetch(&quot;/api/produk&quot;);
+    if (!res.ok) throw new Error(`HTTP ${res.status}`);
+
+    const data = await res.json();
+
+    if (data.length === 0) {
+      container.textContent = &quot;Belum ada produk&quot;;
+      return;
+    }
+
+    data.forEach(item =&gt; {
+      const card = document.createElement(&quot;div&quot;);
+      card.className = &quot;card&quot;;
+      card.innerHTML = `
+        &lt;h3&gt;${item.nama}&lt;/h3&gt;
+        &lt;p&gt;Rp${item.harga.toLocaleString(&quot;id-ID&quot;)}&lt;/p&gt;
+      `;
+      container.appendChild(card);
+    });
+  } catch (error) {
+    errorEl.textContent = `Gagal memuat: ${error.message}`;
+  } finally {
+    loading.style.display = &quot;none&quot;;
+  }
+}
+</code></pre>
+<h3 id="3-search-dengan-debounce-dan-abortcontroller">3. Search dengan Debounce dan AbortController <a href="#3-search-dengan-debounce-dan-abortcontroller" class="anchor" aria-hidden="true">#</a></h3>
+<pre><code class="language-javascript">function debounce(fn, delay) {
+  let timeout;
+  return (...args) =&gt; {
+    clearTimeout(timeout);
+    timeout = setTimeout(() =&gt; fn(...args), delay);
+  };
+}
+
+let controller;
+
+const searchProduk = debounce(async (keyword) =&gt; {
+  if (controller) controller.abort();
+  controller = new AbortController();
+
+  try {
+    const res = await fetch(`/api/produk?q=${encodeURIComponent(keyword)}`, {
+      signal: controller.signal
+    });
+    const data = await res.json();
+    renderHasil(data);
+  } catch (error) {
+    if (error.name !== &quot;AbortError&quot;) {
+      console.error(error);
+    }
+  }
+}, 300);
+
+document.querySelector(&quot;#search&quot;).addEventListener(&quot;input&quot;, (e) =&gt; {
+  searchProduk(e.target.value);
+});
+</code></pre>
+<h3 id="4-upload-file-dengan-preview">4. Upload File dengan Preview <a href="#4-upload-file-dengan-preview" class="anchor" aria-hidden="true">#</a></h3>
+<pre><code class="language-html">&lt;input type=&quot;file&quot; id=&quot;file&quot; accept=&quot;image/*&quot;&gt;
+&lt;img id=&quot;preview&quot; style=&quot;max-width: 200px&quot;&gt;
+&lt;button id=&quot;upload&quot;&gt;Upload&lt;/button&gt;
+
+&lt;script&gt;
+  const fileInput = document.querySelector(&quot;#file&quot;);
+  const preview = document.querySelector(&quot;#preview&quot;);
+
+  fileInput.addEventListener(&quot;change&quot;, () =&gt; {
+    const file = fileInput.files[0];
+    if (file) {
+      preview.src = URL.createObjectURL(file);
+    }
+  });
+
+  document.querySelector(&quot;#upload&quot;).addEventListener(&quot;click&quot;, async () =&gt; {
+    const file = fileInput.files[0];
+    if (!file) return alert(&quot;Pilih file dulu&quot;);
+
+    const formData = new FormData();
+    formData.append(&quot;foto&quot;, file);
+
+    try {
+      const res = await fetch(&quot;/api/upload&quot;, {
+        method: &quot;POST&quot;,
+        body: formData
+      });
+      if (!res.ok) throw new Error(`HTTP ${res.status}`);
+      const hasil = await res.json();
+      alert(`Upload berhasil: ${hasil.url}`);
+    } catch (err) {
+      alert(`Upload gagal: ${err.message}`);
+    }
+  });
+&lt;/script&gt;
+</code></pre>
+<hr>
+<h2 id="tips--best-practice">Tips &amp; Best Practice <a href="#tips--best-practice" class="anchor" aria-hidden="true">#</a></h2>
+<ol>
+<li>
+<p><strong>Selalu cek <code>response.ok</code></strong> — <code>fetch</code> tidak reject pada HTTP error.</p>
+</li>
+<li>
+<p><strong>Gunakan <code>async</code>/<code>await</code></strong> — lebih mudah dibaca daripada chaining <code>.then()</code>.</p>
+</li>
+<li>
+<p><strong>Gunakan <code>URLSearchParams</code></strong> untuk query string — encoding otomatis.</p>
+</li>
+<li>
+<p><strong>Jangan set <code>Content-Type</code> manual</strong> untuk <code>FormData</code> — browser mengatur boundary.</p>
+</li>
+<li>
+<p><strong>Gunakan <code>AbortController</code></strong> untuk timeout dan membatalkan request (search, navigasi).</p>
+</li>
+<li>
+<p><strong>Debounce</strong> input search — hindari request berlebihan.</p>
+</li>
+<li>
+<p><strong>Gunakan <code>Promise.all()</code></strong> untuk request paralel.</p>
+</li>
+<li>
+<p><strong>Simpan token di cookie <code>HttpOnly</code></strong>, bukan <code>localStorage</code> — keamanan.</p>
+</li>
+<li>
+<p><strong>CORS adalah tanggung jawab server</strong> — <code>mode: &quot;no-cors&quot;</code> bukan solusi.</p>
+</li>
+<li>
+<p><strong>Untuk progress upload</strong>, gunakan XHR atau Axios — Fetch belum mendukungnya secara native.</p>
+</li>
+</ol>
+<hr>
+<h2 id="ringkasan">Ringkasan <a href="#ringkasan" class="anchor" aria-hidden="true">#</a></h2>
+<table>
+<thead>
+<tr>
+<th>Konsep</th>
+<th>Poin Penting</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>fetch(url, options)</code></td>
+<td>Mengambil data — Promise</td>
+</tr>
+<tr>
+<td>Method</td>
+<td><code>GET</code>, <code>POST</code>, <code>PUT</code>, <code>PATCH</code>, <code>DELETE</code></td>
+</tr>
+<tr>
+<td><code>response.ok</code></td>
+<td><code>true</code> jika status 200–299</td>
+</tr>
+<tr>
+<td><code>response.json()</code></td>
+<td>Parse body sebagai JSON</td>
+</tr>
+<tr>
+<td><code>Content-Type</code></td>
+<td>Tipe body request</td>
+</tr>
+<tr>
+<td><code>AbortController</code></td>
+<td>Membatalkan request &amp; timeout</td>
+</tr>
+<tr>
+<td><code>FormData</code></td>
+<td>Upload file &amp; data</td>
+</tr>
+<tr>
+<td>CORS</td>
+<td>Batasan request lintas origin (diatur server)</td>
+</tr>
+<tr>
+<td>Axios</td>
+<td>Library alternatif dengan fitur lebih</td>
+</tr>
+</tbody>
+</table>
+<p>Poin penting:</p>
+<ul>
+<li><strong><code>fetch</code> tidak reject pada HTTP error</strong> — selalu cek <code>response.ok</code>.</li>
+<li><strong>Body response hanya bisa dibaca sekali</strong> — gunakan <code>clone()</code> jika perlu dua kali.</li>
+<li>Gunakan <strong><code>URLSearchParams</code></strong> untuk query string.</li>
+<li><strong><code>AbortController</code></strong> untuk timeout dan membatalkan request (search real-time).</li>
+<li><strong>CORS</strong> diatasi di server — bukan dengan <code>mode: &quot;no-cors&quot;</code>.</li>
+<li><strong><code>FormData</code></strong> untuk upload file — jangan set <code>Content-Type</code> manual.</li>
+<li><strong>Axios</strong> menawarkan timeout, progress, dan interceptor — alternatif untuk proyek besar.</li>
+</ul>
+<p>Pada artikel berikutnya, kita akan membahas <strong>Node.js &amp; npm Dasar</strong> — menjalankan JavaScript di sisi server.</p>
+
+			<div class="page-footer-meta d-flex flex-column flex-md-row justify-content-between">
+				</div>
+			<div class="docs-navigation d-flex justify-content-between">
+	
+	<a href="/javascript/tutorial/13-async-javascript/">
+			<div class="card my-1">
+				<div class="card-body py-2">
+					&larr; Asynchronous JavaScript
+				</div>
+			</div>
+		</a>
+	<a class="ms-auto" href="/javascript/tutorial/15-nodejs-npm/">
+			<div class="card my-1">
+				<div class="card-body py-2">
+					Node.js &amp; npm Dasar &rarr;
+				</div>
+			</div>
+		</a>
+	</div>
+
+			
+		</main>
+	</div>
+
+      </div>
+    </div>
+    
+    
+    <footer class="footer text-muted">
+  <div class="container-xxl">
+    <div class="row">
+      <div class="col-lg-8 order-last order-lg-first">
+        <ul class="list-inline">
+          <li class="list-inline-item">Powered by <a class="text-muted" href="https://gohugo.io/">Hugo</a> and <a class="text-muted" href="https://github.com/">Github</a></li>
+        </ul>
+      </div>
+      <div class="col-lg-8 order-first order-lg-last text-lg-end">
+        <ul class="list-inline">
+          </ul>
+      </div>
+    </div>
+  </div>
+</footer>
+    
+
+<script src="/js/bootstrap.min.650aeec64c81d69d4c0850fc73c93da3f0330cec0a27772feed7f90f60baa5f47f1c45687d71914bdafd1c4e860d40f6dc08ede27a2f08431ff929c9a2d24621.js" integrity="sha512-ZQruxkyB1p1MCFD8c8k9o/AzDOwKJ3cv7tf5D2C6pfR/HEVofXGRS9r9HE6GDUD23Ajt4novCEMf&#43;SnJotJGIQ==" crossorigin="anonymous" defer></script>
+  <script src="/js/highlight.min.ec234bd8a5f487aaffe50a89f17b14501b1bb65633cf177cffd4cb84702dd7030edc08712dceb8dc27ac7e54b53240a08bf0b8d951572ee582bcdbbd06a48a7b.js" integrity="sha512-7CNL2KX0h6r/5QqJ8XsUUBsbtlYzzxd8/9TLhHAt1wMO3AhxLc643CesflS1MkCgi/C42VFXLuWCvNu9BqSKew==" crossorigin="anonymous" defer></script>
+  <script src="/main.min.cd1e5e6b40065b3f7f7fd8548a528fac67019754eda0f37b9918d02d154fc9ef6a22742f6513b0572ad9163152e151ec36221fbeafbecd7759c3dab1f19b64b9.js" integrity="sha512-zR5ea0AGWz9/f9hUilKPrGcBl1TtoPN7mRjQLRVPye9qInQvZROwVyrZFjFS4VHsNiIfvq&#43;&#43;zXdZw9qx8ZtkuQ==" crossorigin="anonymous" defer></script>
+  <script src="https://kaban.my.id/index.min.3b38957cbdd3fcd9f9b6e3e14d11e41821e75e9e633e2e7fc92b39e052142003d54a01433bc318b5180cbdf345e1654d731e00e168a3ab02cdad8965a4e5d852.js" integrity="sha512-OziVfL3T/Nn5tuPhTRHkGCHnXp5jPi5/ySs54FIUIAPVSgFDO8MYtRgMvfNF4WVNcx4A4WijqwLNrYllpOXYUg==" crossorigin="anonymous" defer></script>
+  
+    <div class="d-flex fixed-bottom pb-4 pb-lg-5 pe-4 pe-lg-5">
+      <a id="toTop" href="#" class="btn btn-outline-primary rounded-circle ms-auto p-2"><span class="visually-hidden">Top</span><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-chevron-up"><polyline points="18 15 12 9 6 15"></polyline></svg></a>
+    </div>
+    
+  </body>
+</html>

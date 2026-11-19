@@ -1,0 +1,1648 @@
+<!doctype html>
+<html lang="en-US">
+  <head>
+  <meta charset="utf-8">
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <link rel="preload" as="font" href="https://kaban.my.id/fonts/vendor/jost/jost-v4-latin-regular.woff2" type="font/woff2" crossorigin>
+<link rel="preload" as="font" href="https://kaban.my.id/fonts/vendor/jost/jost-v4-latin-500.woff2" type="font/woff2" crossorigin>
+<link rel="preload" as="font" href="https://kaban.my.id/fonts/vendor/jost/jost-v4-latin-700.woff2" type="font/woff2" crossorigin>
+
+  <script>(()=>{var t=window.matchMedia&&window.matchMedia("(prefers-color-scheme: dark)").matches,e=localStorage.getItem("theme");t&&e===null&&(localStorage.setItem("theme","dark"),document.documentElement.setAttribute("data-dark-mode","")),t&&e==="dark"&&document.documentElement.setAttribute("data-dark-mode",""),e==="dark"&&document.documentElement.setAttribute("data-dark-mode","")})()</script>
+
+  <link rel="stylesheet" href="https://kaban.my.id/main.4296e689affcd00e933b8954c10fc43cd1a5f16d5552e78183d12ea50d3e0bf5a596df23a379a4936743f01a7cd8ba048a628b2b9b60b34aa49fad468287100a.css" integrity="sha512-Qpbmia/80A6TO4lUwQ/EPNGl8W1VUueBg9EupQ0&#43;C/Wllt8jo3mkk2dD8Bp82LoEimKLK5tgs0qkn61GgocQCg==" crossorigin="anonymous">
+<noscript><style>img.lazyload { display: none; }</style></noscript>
+  <meta name="robots" content="index, follow">
+    <meta name="googlebot" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1">
+    <meta name="bingbot" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1">
+  <title>ES6&#43; Fitur Modern - Roberto Kaban Blog&#39;s</title>
+<meta name="description" content="Panduan lengkap fitur modern JavaScript: let/const, template literal, destructuring, spread, module, class, Map, Set, generator, dan lainnya.">
+<link rel="canonical" href="https://kaban.my.id/javascript/tutorial/12-es6-modern/">
+<meta property="og:locale" content="en_US">
+<meta property="og:type" content="article">
+<meta property="og:title" content="ES6&#43; Fitur Modern">
+<meta property="og:description" content="Panduan lengkap fitur modern JavaScript: let/const, template literal, destructuring, spread, module, class, Map, Set, generator, dan lainnya.">
+<meta property="og:url" content="https://kaban.my.id/javascript/tutorial/12-es6-modern/">
+<meta property="og:site_name" content="Roberto Kaban Blog&#39;s">
+<meta property="article:published_time" content="2022-12-30T08:00:00+00:00">
+  <meta property="article:modified_time" content="2022-12-30T08:00:00+00:00">
+  
+  <meta property="og:image" content="https://kaban.my.id/doks.png"/>
+      <meta property="og:image:alt" content="Roberto Kaban Blog&#39;s">
+    
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:site" content="@robertokaban">
+<meta name="twitter:creator" content="@robertokaban">
+<meta name="twitter:title" content="ES6&#43; Fitur Modern">
+<meta name="twitter:description" content="Panduan lengkap fitur modern JavaScript: let/const, template literal, destructuring, spread, module, class, Map, Set, generator, dan lainnya.">
+<meta name="twitter:image" content="https://kaban.my.id/doks.png">
+    <meta name="twitter:image:alt" content="ES6&#43; Fitur Modern">
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "Person",
+        "@id": "https://kaban.my.id/#/schema/person/1",
+      "name": "BlogRobertoKaban",
+      "url": "https://kaban.my.id/",
+      "sameAs": [
+        "https://twitter.com/robertokaban"
+        , "https://github.com/robertokaban"
+        ],
+      "image": {
+          "@type": "ImageObject",
+          "@id": "https://kaban.my.id/#/schema/image/1",
+          "url": "https://kaban.my.id/doks.png",
+          "width":  1280 ,
+          "height":  640 ,
+          "caption": "BlogRobertoKaban"
+        }
+      },
+    {
+      "@type": "WebSite",
+      "@id": "https://kaban.my.id/#/schema/website/1",
+      "url": "https://kaban.my.id/",
+      "name": "Roberto Kaban Blog\u0027s",
+      "description": "Hanya sebuah catatan kecil untuk hal yang tidak ingin dilupakan.",
+      "publisher": {
+          "@id": "https://kaban.my.id/#/schema/person/1"
+        }
+      },
+    {
+      "@type": "WebPage",
+      "@id": "https://kaban.my.id/javascript/tutorial/12-es6-modern/",
+      "url": "https://kaban.my.id/javascript/tutorial/12-es6-modern/",
+      "name": "ES6\u002b Fitur Modern",
+      "description": "Panduan lengkap fitur modern JavaScript: let\/const, template literal, destructuring, spread, module, class, Map, Set, generator, dan lainnya.",
+      "isPartOf": {
+        "@id": "https://kaban.my.id/#/schema/website/1"
+      },
+      "about": {
+          "@id": "https://kaban.my.id/#/schema/person/1"
+        },
+      "datePublished": "2022-12-30T08:00:00CET",
+      "dateModified": "2022-12-30T08:00:00CET",
+      "breadcrumb": {
+        "@id": "https://kaban.my.id/javascript/tutorial/12-es6-modern/#/schema/breadcrumb/1"
+      },
+      "primaryImageOfPage": {
+        "@id": "https://kaban.my.id/javascript/tutorial/12-es6-modern/#/schema/image/2"
+      },
+      "inLanguage": "en-US",
+      "potentialAction": [{
+        "@type": "ReadAction", "target": ["https://kaban.my.id/javascript/tutorial/12-es6-modern/"]
+      }]
+    },
+    {
+      "@type": "BreadcrumbList",
+      "@id": "https://kaban.my.id/javascript/tutorial/12-es6-modern/#/schema/breadcrumb/1",
+      "name": "Breadcrumbs",
+      "itemListElement": [{
+        "@type": "ListItem",
+        "position":  1 ,
+        "item": {
+          "@type": "WebPage",
+          "@id": "https://kaban.my.id/",
+          "url": "https://kaban.my.id/",
+          "name": "Home"
+          }
+        },{
+        "@type": "ListItem",
+        "position":  2 ,
+        "item": {
+          "@type": "WebPage",
+          "@id": "https://kaban.my.id/javascript/",
+          "url": "https://kaban.my.id/javascript/",
+          "name": "Javascript"
+          }
+        },{
+        "@type": "ListItem",
+        "position":  3 ,
+        "item": {
+          "@type": "WebPage",
+          "@id": "https://kaban.my.id/javascript/tutorial/",
+          "url": "https://kaban.my.id/javascript/tutorial/",
+          "name": "Tutorial"
+          }
+        },{
+        "@type": "ListItem",
+        "position":  4 ,
+        "item": {
+          "@id": "https://kaban.my.id/javascript/tutorial/12-es6-modern/"
+          }
+        }]
+    },
+
+    {
+      "@context": "https://schema.org",
+      "@graph": [
+        {
+          "@type": "ImageObject",
+          "@id": "https://kaban.my.id/javascript/tutorial/12-es6-modern/#/schema/image/2",
+          "url": "https://kaban.my.id/doks.png",
+          "contentUrl": "https://kaban.my.id/doks.png",
+          "caption": "ES6\u002b Fitur Modern"
+        }
+      ]
+    }
+
+  ]
+}
+</script>
+
+  <meta name="theme-color" content="#fff">
+<link rel="icon" href="https://kaban.my.id/favicon.ico" sizes="any">
+<link rel="icon" type="image/svg+xml" href="https://kaban.my.id/favicon.svg">
+<link rel="apple-touch-icon" sizes="180x180" href="https://kaban.my.id/apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="32x32" href="https://kaban.my.id/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="https://kaban.my.id/favicon-16x16.png">
+<link rel="manifest" crossorigin="use-credentials" href="https://kaban.my.id/site.webmanifest">
+
+  
+
+
+  
+  
+  
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-60VSDZFQR5"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-60VSDZFQR5');
+</script>
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6664512614760985"
+     crossorigin="anonymous"></script>
+</head>
+
+  <body class="javascript single">
+    <div class="sticky-top">
+<div class="header-bar"></div>
+
+<header class="navbar navbar-expand-lg navbar-light doks-navbar">
+  <nav class="container-xxl flex-wrap flex-lg-nowrap" aria-label="Main navigation">
+
+    <a class="navbar-brand order-0" href="/" aria-label="Roberto Kaban Blog&#39;s">
+      Roberto Kaban Blog&#39;s
+    </a>
+
+    <button class="btn btn-menu order-2 d-block d-lg-none" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasDoks" aria-controls="offcanvasDoks" aria-label="Open main menu">
+      <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-menu"><line x1="3" y1="12" x2="21" y2="12"></line><line x1="3" y1="6" x2="21" y2="6"></line><line x1="3" y1="18" x2="21" y2="18"></line></svg>
+    </button>
+    <div class="offcanvas offcanvas-end border-0 py-lg-1" tabindex="-1" id="offcanvasDoks" data-bs-backdrop="true" aria-labelledby="offcanvasDoksLabel">
+      <div class="header-bar d-lg-none"></div>
+      <div class="offcanvas-header d-lg-none">
+        <h2 class="h5 offcanvas-title ps-2" id="offcanvasDoksLabel"><a class="text-dark" href="/">Roberto Kaban Blog&#39;s</a></h2>
+        <button type="button" class="btn-close text-reset me-2" data-bs-dismiss="offcanvas" aria-label="Close main menu"></button>
+      </div>
+      <div class="offcanvas-body p-4 p-lg-0">
+        <ul class="nav flex-column flex-lg-row align-items-lg-center mt-2 mt-lg-0 ms-lg-2 me-lg-auto">
+              <li class="nav-item">
+                <a class="nav-link ps-0 py-1" href="/about/">About Me</a>
+              </li>
+            
+          
+              <li class="nav-item">
+                <a class="nav-link ps-0 py-1" href="/contact/">Contact</a>
+              </li>
+            
+          
+              <li class="nav-item">
+                <a class="nav-link ps-0 py-1" href="/artikel/">Artikel</a>
+              </li>
+            
+          
+              <li class="nav-item">
+                <a class="nav-link ps-0 py-1" href="/coretanku/">Coretanku</a>
+              </li>
+            
+          </ul>
+
+        <hr class="text-black-50 my-4 d-lg-none">
+        <form class="doks-search position-relative flex-grow-1 ms-lg-auto me-lg-2">
+          <input id="search" class="form-control is-search" type="search" placeholder="Cari di blog ini..." aria-label="Cari di blog ini..." autocomplete="off">
+          <div id="suggestions" class="shadow bg-white rounded d-none"></div>
+        </form>
+        <hr class="text-black-50 my-4 d-lg-none">
+        <ul class="nav flex-column flex-lg-row">
+          <li class="nav-item">
+              <a class="nav-link social-link" href="https://github.com/robertokaban"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-github"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path></svg><small class="ms-2 d-lg-none">GitHub</small></a>
+            </li>
+          <li class="nav-item">
+              <a class="nav-link social-link" href="https://facebook.com/roberto.kaban"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-facebook"><path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"></path></svg><small class="ms-2 d-lg-none">Facebook</small></a>
+            </li>
+          <li class="nav-item">
+              <a class="nav-link social-link" href="https://twitter.com/robertokaban"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-twitter"><path d="M23 3a10.9 10.9 0 0 1-3.14 1.53 4.48 4.48 0 0 0-7.86 3v1A10.66 10.66 0 0 1 3 4s-4 9 5 13a11.64 11.64 0 0 1-7 2c9 5 20 0 20-11.5a4.5 4.5 0 0 0-.08-.83A7.72 7.72 0 0 0 23 3z"></path></svg><small class="ms-2 d-lg-none">Twitter</small></a>
+            </li>
+          <li class="nav-item">
+              <a class="nav-link social-link" href="https://youtube.com/@robertokaban"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-youtube"><path d="M10,15L15.19,12L10,9V15M21.56,7.17C21.69,7.64 21.78,8.27 21.84,9.07C21.91,9.87 21.94,10.56 21.94,11.16L22,12C22,14.19 21.84,15.8 21.56,16.83C21.31,17.73 20.73,18.31 19.83,18.56C19.36,18.69 18.5,18.78 17.18,18.84C15.88,18.91 14.69,18.94 13.59,18.94L12,19C7.81,19 5.2,18.84 4.17,18.56C3.27,18.31 2.69,17.73 2.44,16.83C2.31,16.36 2.22,15.73 2.16,14.93C2.09,14.13 2.06,13.44 2.06,12.84L2,12C2,9.81 2.16,8.2 2.44,7.17C2.69,6.27 3.27,5.69 4.17,5.44C4.64,5.31 5.5,5.22 6.82,5.16C8.12,5.09 9.31,5.06 10.41,5.06L12,5C16.19,5 18.8,5.16 19.83,5.44C20.73,5.69 21.31,6.27 21.56,7.17Z"></path></svg><small class="ms-2 d-lg-none">Youtube</small></a>
+            </li>
+          </ul>
+
+        
+        <hr class="text-black-50 my-4 d-lg-none">
+        <button id="mode" class="btn btn-link" type="button" aria-label="Toggle user interface mode">
+          <span class="toggle-dark"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-moon"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path></svg></span>
+          <span class="toggle-light"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-sun"><circle cx="12" cy="12" r="5"></circle><line x1="12" y1="1" x2="12" y2="3"></line><line x1="12" y1="21" x2="12" y2="23"></line><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line><line x1="1" y1="12" x2="3" y2="12"></line><line x1="21" y1="12" x2="23" y2="12"></line><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line></svg></span>
+        </button>
+        
+
+        </div>
+    </div>
+  </nav>
+</header>
+
+
+</div>
+
+
+<div class="container-xxl">
+  <aside class="doks-sidebar">
+    <nav id="doks-docs-nav" class="collapse d-lg-none" aria-label="Tertiary navigation">
+      
+<ul class="list-unstyled collapsible-sidebar">
+  
+    
+      
+      <li class="mb-1">
+        <button class="btn btn-toggle align-items-center rounded collapsed" data-bs-toggle="collapse" data-bs-target="#section-0967e753cd827c7c2576cf6f7292922e" aria-expanded="true">
+          Tutorial Javascript
+        </button>
+        <div class="collapse show" id="section-0967e753cd827c7c2576cf6f7292922e">
+          <ul class="btn-toggle-nav list-unstyled fw-normal pb-1 small">
+            
+              
+                
+                <li><a class="docs-link rounded" href="https://kaban.my.id/javascript/tutorial/pengenalan/">Pengenalan Javascript</a></li>
+              
+            
+              
+                
+                <li><a class="docs-link rounded" href="https://kaban.my.id/javascript/tutorial/02-instalasi-persiapan/">Instalasi &amp; Persiapan Lingkungan JavaScript</a></li>
+              
+            
+              
+                
+                <li><a class="docs-link rounded" href="https://kaban.my.id/javascript/tutorial/03-sintaks-variabel/">Sintaks Dasar &amp; Variabel</a></li>
+              
+            
+              
+                
+                <li><a class="docs-link rounded" href="https://kaban.my.id/javascript/tutorial/04-tipe-data-konversi/">Tipe Data &amp; Konversi</a></li>
+              
+            
+              
+                
+                <li><a class="docs-link rounded" href="https://kaban.my.id/javascript/tutorial/05-struktur-kontrol/">Struktur Kontrol &amp; Perulangan</a></li>
+              
+            
+              
+                
+                <li><a class="docs-link rounded" href="https://kaban.my.id/javascript/tutorial/06-fungsi/">Fungsi</a></li>
+              
+            
+              
+                
+                <li><a class="docs-link rounded" href="https://kaban.my.id/javascript/tutorial/07-array/">Array &amp; Method-nya</a></li>
+              
+            
+              
+                
+                <li><a class="docs-link rounded" href="https://kaban.my.id/javascript/tutorial/08-object/">Object &amp; Method-nya</a></li>
+              
+            
+              
+                
+                <li><a class="docs-link rounded" href="https://kaban.my.id/javascript/tutorial/09-dom-manipulation/">DOM Manipulation</a></li>
+              
+            
+              
+                
+                <li><a class="docs-link rounded" href="https://kaban.my.id/javascript/tutorial/10-event-handling/">Event &amp; Event Handling</a></li>
+              
+            
+              
+                
+                <li><a class="docs-link rounded" href="https://kaban.my.id/javascript/tutorial/11-web-storage/">Web Storage &amp; Cookie</a></li>
+              
+            
+              
+                
+                <li><a class="docs-link rounded active" href="https://kaban.my.id/javascript/tutorial/12-es6-modern/">ES6&#43; Fitur Modern</a></li>
+              
+            
+              
+                
+                <li><a class="docs-link rounded" href="https://kaban.my.id/javascript/tutorial/13-async-javascript/">Asynchronous JavaScript</a></li>
+              
+            
+              
+                
+                <li><a class="docs-link rounded" href="https://kaban.my.id/javascript/tutorial/14-fetch-api/">Fetch API &amp; AJAX</a></li>
+              
+            
+              
+                
+                <li><a class="docs-link rounded" href="https://kaban.my.id/javascript/tutorial/15-nodejs-npm/">Node.js &amp; npm Dasar</a></li>
+              
+            
+              
+                
+                <li><a class="docs-link rounded" href="https://kaban.my.id/javascript/tutorial/16-bundler-tooling/">Module Bundler &amp; Build Tool</a></li>
+              
+            
+          </ul>
+        </div>
+      </li>
+    
+  
+</ul>
+
+    </nav>
+  </aside>
+</div>
+
+    <div class="wrap container-xxl" role="document">
+      <div class="content">
+        
+	<div class="row flex-xl-nowrap">
+		<div class="col-lg-5 col-xl-4 docs-sidebar d-none d-lg-block">
+			<nav class="docs-links" aria-label="Main navigation">
+				
+<ul class="list-unstyled collapsible-sidebar">
+  
+    
+      
+      <li class="mb-1">
+        <button class="btn btn-toggle align-items-center rounded collapsed" data-bs-toggle="collapse" data-bs-target="#section-0967e753cd827c7c2576cf6f7292922e" aria-expanded="true">
+          Tutorial Javascript
+        </button>
+        <div class="collapse show" id="section-0967e753cd827c7c2576cf6f7292922e">
+          <ul class="btn-toggle-nav list-unstyled fw-normal pb-1 small">
+            
+              
+                
+                <li><a class="docs-link rounded" href="https://kaban.my.id/javascript/tutorial/pengenalan/">Pengenalan Javascript</a></li>
+              
+            
+              
+                
+                <li><a class="docs-link rounded" href="https://kaban.my.id/javascript/tutorial/02-instalasi-persiapan/">Instalasi &amp; Persiapan Lingkungan JavaScript</a></li>
+              
+            
+              
+                
+                <li><a class="docs-link rounded" href="https://kaban.my.id/javascript/tutorial/03-sintaks-variabel/">Sintaks Dasar &amp; Variabel</a></li>
+              
+            
+              
+                
+                <li><a class="docs-link rounded" href="https://kaban.my.id/javascript/tutorial/04-tipe-data-konversi/">Tipe Data &amp; Konversi</a></li>
+              
+            
+              
+                
+                <li><a class="docs-link rounded" href="https://kaban.my.id/javascript/tutorial/05-struktur-kontrol/">Struktur Kontrol &amp; Perulangan</a></li>
+              
+            
+              
+                
+                <li><a class="docs-link rounded" href="https://kaban.my.id/javascript/tutorial/06-fungsi/">Fungsi</a></li>
+              
+            
+              
+                
+                <li><a class="docs-link rounded" href="https://kaban.my.id/javascript/tutorial/07-array/">Array &amp; Method-nya</a></li>
+              
+            
+              
+                
+                <li><a class="docs-link rounded" href="https://kaban.my.id/javascript/tutorial/08-object/">Object &amp; Method-nya</a></li>
+              
+            
+              
+                
+                <li><a class="docs-link rounded" href="https://kaban.my.id/javascript/tutorial/09-dom-manipulation/">DOM Manipulation</a></li>
+              
+            
+              
+                
+                <li><a class="docs-link rounded" href="https://kaban.my.id/javascript/tutorial/10-event-handling/">Event &amp; Event Handling</a></li>
+              
+            
+              
+                
+                <li><a class="docs-link rounded" href="https://kaban.my.id/javascript/tutorial/11-web-storage/">Web Storage &amp; Cookie</a></li>
+              
+            
+              
+                
+                <li><a class="docs-link rounded active" href="https://kaban.my.id/javascript/tutorial/12-es6-modern/">ES6&#43; Fitur Modern</a></li>
+              
+            
+              
+                
+                <li><a class="docs-link rounded" href="https://kaban.my.id/javascript/tutorial/13-async-javascript/">Asynchronous JavaScript</a></li>
+              
+            
+              
+                
+                <li><a class="docs-link rounded" href="https://kaban.my.id/javascript/tutorial/14-fetch-api/">Fetch API &amp; AJAX</a></li>
+              
+            
+              
+                
+                <li><a class="docs-link rounded" href="https://kaban.my.id/javascript/tutorial/15-nodejs-npm/">Node.js &amp; npm Dasar</a></li>
+              
+            
+              
+                
+                <li><a class="docs-link rounded" href="https://kaban.my.id/javascript/tutorial/16-bundler-tooling/">Module Bundler &amp; Build Tool</a></li>
+              
+            
+          </ul>
+        </div>
+      </li>
+    
+  
+</ul>
+
+			</nav>
+		</div>
+		<nav class="docs-toc d-none d-xl-block col-xl-3" aria-label="Secondary navigation">
+			<div class="d-xl-none">
+  <button class="btn btn-outline-primary btn-sm doks-toc-toggle collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#onThisPage" aria-controls="doks-docs-nav" aria-expanded="false" aria-label="Toggle On this page navigation">
+    <span>Daftar isi</span>
+    <span>
+      <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" class="doks doks-expand" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><title>Expand</title><polyline points="7 13 12 18 17 13"></polyline><polyline points="7 6 12 11 17 6"></polyline></svg>
+      <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" class="doks doks-collapse" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><title>Collapse</title><polyline points="17 11 12 6 7 11"></polyline><polyline points="17 18 12 13 7 18"></polyline></svg>
+    </span>
+  </button>
+  <div class="collapse" id="onThisPage">
+    <div class="card card-body mt-3 py-1">
+      <div class="page-links">
+        <nav id="TableOfContents">
+  <ul>
+    <li><a href="#pendahuluan">Pendahuluan</a></li>
+    <li><a href="#ringkasan-fitur-es6-per-versi">Ringkasan Fitur ES6+ per Versi</a></li>
+    <li><a href="#template-literal">Template Literal</a></li>
+    <li><a href="#destructuring">Destructuring</a>
+      <ul>
+        <li><a href="#array-destructuring">Array Destructuring</a></li>
+        <li><a href="#object-destructuring">Object Destructuring</a></li>
+        <li><a href="#destructuring-parameter">Destructuring Parameter</a></li>
+      </ul>
+    </li>
+    <li><a href="#spread-dan-rest">Spread dan Rest</a>
+      <ul>
+        <li><a href="#spread---menyebarkan">Spread (<code>...</code>) — Menyebarkan</a></li>
+        <li><a href="#rest---mengumpulkan">Rest (<code>...</code>) — Mengumpulkan</a></li>
+      </ul>
+    </li>
+    <li><a href="#default-parameter">Default Parameter</a></li>
+    <li><a href="#enhanced-object-literal">Enhanced Object Literal</a>
+      <ul>
+        <li><a href="#shorthand-property">Shorthand Property</a></li>
+        <li><a href="#shorthand-method">Shorthand Method</a></li>
+        <li><a href="#computed-property">Computed Property</a></li>
+      </ul>
+    </li>
+    <li><a href="#module-import-dan-export">Module: <code>import</code> dan <code>export</code></a>
+      <ul>
+        <li><a href="#named-exportimport">Named Export/Import</a></li>
+        <li><a href="#default-exportimport">Default Export/Import</a></li>
+        <li><a href="#kombinasi-default--named">Kombinasi Default + Named</a></li>
+        <li><a href="#dynamic-import">Dynamic Import</a></li>
+        <li><a href="#module-di-browser">Module di Browser</a></li>
+      </ul>
+    </li>
+    <li><a href="#class">Class</a>
+      <ul>
+        <li><a href="#class-dasar">Class Dasar</a></li>
+        <li><a href="#inheritance-pewarisan">Inheritance (Pewarisan)</a></li>
+        <li><a href="#class-field-es2022">Class Field (ES2022)</a></li>
+        <li><a href="#getter-dan-setter">Getter dan Setter</a></li>
+      </ul>
+    </li>
+    <li><a href="#map-dan-set">Map dan Set</a>
+      <ul>
+        <li><a href="#map--key-value-dengan-key-apa-pun"><code>Map</code> — Key-Value dengan Key Apa Pun</a></li>
+        <li><a href="#set--koleksi-nilai-unik"><code>Set</code> — Koleksi Nilai Unik</a></li>
+        <li><a href="#weakmap-dan-weakset"><code>WeakMap</code> dan <code>WeakSet</code></a></li>
+      </ul>
+    </li>
+    <li><a href="#symbol">Symbol</a></li>
+    <li><a href="#generator-dan-iterator">Generator dan Iterator</a>
+      <ul>
+        <li><a href="#iterator">Iterator</a></li>
+        <li><a href="#generator--function">Generator — <code>function*</code></a></li>
+      </ul>
+    </li>
+    <li><a href="#fitur-modern-lainnya">Fitur Modern Lainnya</a>
+      <ul>
+        <li><a href="#logical-assignment-es2021">Logical Assignment (ES2021)</a></li>
+        <li><a href="#stringreplaceall-es2021"><code>String.replaceAll()</code> (ES2021)</a></li>
+        <li><a href="#arrayat-es2022"><code>Array.at()</code> (ES2022)</a></li>
+        <li><a href="#objecthasown-es2022"><code>Object.hasOwn()</code> (ES2022)</a></li>
+        <li><a href="#top-level-await-es2022-module">Top-Level <code>await</code> (ES2022, module)</a></li>
+        <li><a href="#arrayfindlast--findlastindex-es2023"><code>Array.findLast()</code> / <code>findLastIndex()</code> (ES2023)</a></li>
+        <li><a href="#toreversed-tosorted-tospliced-es2023"><code>toReversed()</code>, <code>toSorted()</code>, <code>toSpliced()</code> (ES2023)</a></li>
+      </ul>
+    </li>
+    <li><a href="#ringkasan">Ringkasan</a></li>
+  </ul>
+</nav>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="page-links d-none d-xl-block">
+  <h3>Daftar isi</h3>
+  <nav id="TableOfContents">
+  <ul>
+    <li><a href="#pendahuluan">Pendahuluan</a></li>
+    <li><a href="#ringkasan-fitur-es6-per-versi">Ringkasan Fitur ES6+ per Versi</a></li>
+    <li><a href="#template-literal">Template Literal</a></li>
+    <li><a href="#destructuring">Destructuring</a>
+      <ul>
+        <li><a href="#array-destructuring">Array Destructuring</a></li>
+        <li><a href="#object-destructuring">Object Destructuring</a></li>
+        <li><a href="#destructuring-parameter">Destructuring Parameter</a></li>
+      </ul>
+    </li>
+    <li><a href="#spread-dan-rest">Spread dan Rest</a>
+      <ul>
+        <li><a href="#spread---menyebarkan">Spread (<code>...</code>) — Menyebarkan</a></li>
+        <li><a href="#rest---mengumpulkan">Rest (<code>...</code>) — Mengumpulkan</a></li>
+      </ul>
+    </li>
+    <li><a href="#default-parameter">Default Parameter</a></li>
+    <li><a href="#enhanced-object-literal">Enhanced Object Literal</a>
+      <ul>
+        <li><a href="#shorthand-property">Shorthand Property</a></li>
+        <li><a href="#shorthand-method">Shorthand Method</a></li>
+        <li><a href="#computed-property">Computed Property</a></li>
+      </ul>
+    </li>
+    <li><a href="#module-import-dan-export">Module: <code>import</code> dan <code>export</code></a>
+      <ul>
+        <li><a href="#named-exportimport">Named Export/Import</a></li>
+        <li><a href="#default-exportimport">Default Export/Import</a></li>
+        <li><a href="#kombinasi-default--named">Kombinasi Default + Named</a></li>
+        <li><a href="#dynamic-import">Dynamic Import</a></li>
+        <li><a href="#module-di-browser">Module di Browser</a></li>
+      </ul>
+    </li>
+    <li><a href="#class">Class</a>
+      <ul>
+        <li><a href="#class-dasar">Class Dasar</a></li>
+        <li><a href="#inheritance-pewarisan">Inheritance (Pewarisan)</a></li>
+        <li><a href="#class-field-es2022">Class Field (ES2022)</a></li>
+        <li><a href="#getter-dan-setter">Getter dan Setter</a></li>
+      </ul>
+    </li>
+    <li><a href="#map-dan-set">Map dan Set</a>
+      <ul>
+        <li><a href="#map--key-value-dengan-key-apa-pun"><code>Map</code> — Key-Value dengan Key Apa Pun</a></li>
+        <li><a href="#set--koleksi-nilai-unik"><code>Set</code> — Koleksi Nilai Unik</a></li>
+        <li><a href="#weakmap-dan-weakset"><code>WeakMap</code> dan <code>WeakSet</code></a></li>
+      </ul>
+    </li>
+    <li><a href="#symbol">Symbol</a></li>
+    <li><a href="#generator-dan-iterator">Generator dan Iterator</a>
+      <ul>
+        <li><a href="#iterator">Iterator</a></li>
+        <li><a href="#generator--function">Generator — <code>function*</code></a></li>
+      </ul>
+    </li>
+    <li><a href="#fitur-modern-lainnya">Fitur Modern Lainnya</a>
+      <ul>
+        <li><a href="#logical-assignment-es2021">Logical Assignment (ES2021)</a></li>
+        <li><a href="#stringreplaceall-es2021"><code>String.replaceAll()</code> (ES2021)</a></li>
+        <li><a href="#arrayat-es2022"><code>Array.at()</code> (ES2022)</a></li>
+        <li><a href="#objecthasown-es2022"><code>Object.hasOwn()</code> (ES2022)</a></li>
+        <li><a href="#top-level-await-es2022-module">Top-Level <code>await</code> (ES2022, module)</a></li>
+        <li><a href="#arrayfindlast--findlastindex-es2023"><code>Array.findLast()</code> / <code>findLastIndex()</code> (ES2023)</a></li>
+        <li><a href="#toreversed-tosorted-tospliced-es2023"><code>toReversed()</code>, <code>toSorted()</code>, <code>toSpliced()</code> (ES2023)</a></li>
+      </ul>
+    </li>
+    <li><a href="#ringkasan">Ringkasan</a></li>
+  </ul>
+</nav>
+  </div>
+
+		</nav>
+		<main class="docs-content col-lg-11 col-xl-9">
+		
+				<nav aria-label="breadcrumb">
+					<ol class="breadcrumb">
+						<li class="breadcrumb-item"><a href="/">Home</a></li>
+<li class="breadcrumb-item"><a href="/javascript/">Javascript</a></li>
+<li class="breadcrumb-item"><a href="/javascript/tutorial/">Tutorial Javascript</a></li>
+<li class="breadcrumb-item active" aria-current="page">ES6&#43; Fitur Modern</li>
+					</ol>
+				</nav>
+			
+			<h1>ES6&#43; Fitur Modern</h1>
+			<p class="lead">ES6 (ES2015) membawa perubahan besar pada JavaScript. Artikel ini membahas fitur-fitur modern yang wajib dikuasai: let/const, template literal, destructuring, spread/rest, module, class, Map/Set, dan generator.</p>
+			<nav class="d-xl-none" aria-label="Quaternary navigation">
+				<div class="d-xl-none">
+  <button class="btn btn-outline-primary btn-sm doks-toc-toggle collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#onThisPage" aria-controls="doks-docs-nav" aria-expanded="false" aria-label="Toggle On this page navigation">
+    <span>Daftar isi</span>
+    <span>
+      <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" class="doks doks-expand" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><title>Expand</title><polyline points="7 13 12 18 17 13"></polyline><polyline points="7 6 12 11 17 6"></polyline></svg>
+      <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" class="doks doks-collapse" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><title>Collapse</title><polyline points="17 11 12 6 7 11"></polyline><polyline points="17 18 12 13 7 18"></polyline></svg>
+    </span>
+  </button>
+  <div class="collapse" id="onThisPage">
+    <div class="card card-body mt-3 py-1">
+      <div class="page-links">
+        <nav id="TableOfContents">
+  <ul>
+    <li><a href="#pendahuluan">Pendahuluan</a></li>
+    <li><a href="#ringkasan-fitur-es6-per-versi">Ringkasan Fitur ES6+ per Versi</a></li>
+    <li><a href="#template-literal">Template Literal</a></li>
+    <li><a href="#destructuring">Destructuring</a>
+      <ul>
+        <li><a href="#array-destructuring">Array Destructuring</a></li>
+        <li><a href="#object-destructuring">Object Destructuring</a></li>
+        <li><a href="#destructuring-parameter">Destructuring Parameter</a></li>
+      </ul>
+    </li>
+    <li><a href="#spread-dan-rest">Spread dan Rest</a>
+      <ul>
+        <li><a href="#spread---menyebarkan">Spread (<code>...</code>) — Menyebarkan</a></li>
+        <li><a href="#rest---mengumpulkan">Rest (<code>...</code>) — Mengumpulkan</a></li>
+      </ul>
+    </li>
+    <li><a href="#default-parameter">Default Parameter</a></li>
+    <li><a href="#enhanced-object-literal">Enhanced Object Literal</a>
+      <ul>
+        <li><a href="#shorthand-property">Shorthand Property</a></li>
+        <li><a href="#shorthand-method">Shorthand Method</a></li>
+        <li><a href="#computed-property">Computed Property</a></li>
+      </ul>
+    </li>
+    <li><a href="#module-import-dan-export">Module: <code>import</code> dan <code>export</code></a>
+      <ul>
+        <li><a href="#named-exportimport">Named Export/Import</a></li>
+        <li><a href="#default-exportimport">Default Export/Import</a></li>
+        <li><a href="#kombinasi-default--named">Kombinasi Default + Named</a></li>
+        <li><a href="#dynamic-import">Dynamic Import</a></li>
+        <li><a href="#module-di-browser">Module di Browser</a></li>
+      </ul>
+    </li>
+    <li><a href="#class">Class</a>
+      <ul>
+        <li><a href="#class-dasar">Class Dasar</a></li>
+        <li><a href="#inheritance-pewarisan">Inheritance (Pewarisan)</a></li>
+        <li><a href="#class-field-es2022">Class Field (ES2022)</a></li>
+        <li><a href="#getter-dan-setter">Getter dan Setter</a></li>
+      </ul>
+    </li>
+    <li><a href="#map-dan-set">Map dan Set</a>
+      <ul>
+        <li><a href="#map--key-value-dengan-key-apa-pun"><code>Map</code> — Key-Value dengan Key Apa Pun</a></li>
+        <li><a href="#set--koleksi-nilai-unik"><code>Set</code> — Koleksi Nilai Unik</a></li>
+        <li><a href="#weakmap-dan-weakset"><code>WeakMap</code> dan <code>WeakSet</code></a></li>
+      </ul>
+    </li>
+    <li><a href="#symbol">Symbol</a></li>
+    <li><a href="#generator-dan-iterator">Generator dan Iterator</a>
+      <ul>
+        <li><a href="#iterator">Iterator</a></li>
+        <li><a href="#generator--function">Generator — <code>function*</code></a></li>
+      </ul>
+    </li>
+    <li><a href="#fitur-modern-lainnya">Fitur Modern Lainnya</a>
+      <ul>
+        <li><a href="#logical-assignment-es2021">Logical Assignment (ES2021)</a></li>
+        <li><a href="#stringreplaceall-es2021"><code>String.replaceAll()</code> (ES2021)</a></li>
+        <li><a href="#arrayat-es2022"><code>Array.at()</code> (ES2022)</a></li>
+        <li><a href="#objecthasown-es2022"><code>Object.hasOwn()</code> (ES2022)</a></li>
+        <li><a href="#top-level-await-es2022-module">Top-Level <code>await</code> (ES2022, module)</a></li>
+        <li><a href="#arrayfindlast--findlastindex-es2023"><code>Array.findLast()</code> / <code>findLastIndex()</code> (ES2023)</a></li>
+        <li><a href="#toreversed-tosorted-tospliced-es2023"><code>toReversed()</code>, <code>toSorted()</code>, <code>toSpliced()</code> (ES2023)</a></li>
+      </ul>
+    </li>
+    <li><a href="#ringkasan">Ringkasan</a></li>
+  </ul>
+</nav>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="page-links d-none d-xl-block">
+  <h3>Daftar isi</h3>
+  <nav id="TableOfContents">
+  <ul>
+    <li><a href="#pendahuluan">Pendahuluan</a></li>
+    <li><a href="#ringkasan-fitur-es6-per-versi">Ringkasan Fitur ES6+ per Versi</a></li>
+    <li><a href="#template-literal">Template Literal</a></li>
+    <li><a href="#destructuring">Destructuring</a>
+      <ul>
+        <li><a href="#array-destructuring">Array Destructuring</a></li>
+        <li><a href="#object-destructuring">Object Destructuring</a></li>
+        <li><a href="#destructuring-parameter">Destructuring Parameter</a></li>
+      </ul>
+    </li>
+    <li><a href="#spread-dan-rest">Spread dan Rest</a>
+      <ul>
+        <li><a href="#spread---menyebarkan">Spread (<code>...</code>) — Menyebarkan</a></li>
+        <li><a href="#rest---mengumpulkan">Rest (<code>...</code>) — Mengumpulkan</a></li>
+      </ul>
+    </li>
+    <li><a href="#default-parameter">Default Parameter</a></li>
+    <li><a href="#enhanced-object-literal">Enhanced Object Literal</a>
+      <ul>
+        <li><a href="#shorthand-property">Shorthand Property</a></li>
+        <li><a href="#shorthand-method">Shorthand Method</a></li>
+        <li><a href="#computed-property">Computed Property</a></li>
+      </ul>
+    </li>
+    <li><a href="#module-import-dan-export">Module: <code>import</code> dan <code>export</code></a>
+      <ul>
+        <li><a href="#named-exportimport">Named Export/Import</a></li>
+        <li><a href="#default-exportimport">Default Export/Import</a></li>
+        <li><a href="#kombinasi-default--named">Kombinasi Default + Named</a></li>
+        <li><a href="#dynamic-import">Dynamic Import</a></li>
+        <li><a href="#module-di-browser">Module di Browser</a></li>
+      </ul>
+    </li>
+    <li><a href="#class">Class</a>
+      <ul>
+        <li><a href="#class-dasar">Class Dasar</a></li>
+        <li><a href="#inheritance-pewarisan">Inheritance (Pewarisan)</a></li>
+        <li><a href="#class-field-es2022">Class Field (ES2022)</a></li>
+        <li><a href="#getter-dan-setter">Getter dan Setter</a></li>
+      </ul>
+    </li>
+    <li><a href="#map-dan-set">Map dan Set</a>
+      <ul>
+        <li><a href="#map--key-value-dengan-key-apa-pun"><code>Map</code> — Key-Value dengan Key Apa Pun</a></li>
+        <li><a href="#set--koleksi-nilai-unik"><code>Set</code> — Koleksi Nilai Unik</a></li>
+        <li><a href="#weakmap-dan-weakset"><code>WeakMap</code> dan <code>WeakSet</code></a></li>
+      </ul>
+    </li>
+    <li><a href="#symbol">Symbol</a></li>
+    <li><a href="#generator-dan-iterator">Generator dan Iterator</a>
+      <ul>
+        <li><a href="#iterator">Iterator</a></li>
+        <li><a href="#generator--function">Generator — <code>function*</code></a></li>
+      </ul>
+    </li>
+    <li><a href="#fitur-modern-lainnya">Fitur Modern Lainnya</a>
+      <ul>
+        <li><a href="#logical-assignment-es2021">Logical Assignment (ES2021)</a></li>
+        <li><a href="#stringreplaceall-es2021"><code>String.replaceAll()</code> (ES2021)</a></li>
+        <li><a href="#arrayat-es2022"><code>Array.at()</code> (ES2022)</a></li>
+        <li><a href="#objecthasown-es2022"><code>Object.hasOwn()</code> (ES2022)</a></li>
+        <li><a href="#top-level-await-es2022-module">Top-Level <code>await</code> (ES2022, module)</a></li>
+        <li><a href="#arrayfindlast--findlastindex-es2023"><code>Array.findLast()</code> / <code>findLastIndex()</code> (ES2023)</a></li>
+        <li><a href="#toreversed-tosorted-tospliced-es2023"><code>toReversed()</code>, <code>toSorted()</code>, <code>toSpliced()</code> (ES2023)</a></li>
+      </ul>
+    </li>
+    <li><a href="#ringkasan">Ringkasan</a></li>
+  </ul>
+</nav>
+  </div>
+
+			</nav>
+			<h2 id="pendahuluan">Pendahuluan <a href="#pendahuluan" class="anchor" aria-hidden="true">#</a></h2>
+<p><strong>ES6</strong> (ECMAScript 2015) adalah pembaruan terbesar JavaScript sejak bahasa ini lahir. Sejak ES6, JavaScript terus berevolusi setiap tahun — fitur-fitur baru ditambahkan (ES2016, ES2017, &hellip;, ES2023).</p>
+<p>Banyak fitur ES6+ yang sudah kita pakai di artikel sebelumnya:</p>
+<ul>
+<li><code>let</code>/<code>const</code> (Sintaks Dasar).</li>
+<li>Arrow function (Fungsi).</li>
+<li>Spread &amp; destructuring (Array &amp; Object).</li>
+<li>Optional chaining &amp; nullish coalescing (Object).</li>
+</ul>
+<p>Artikel ini merangkum fitur-fitur modern tersebut dalam satu tempat, plus fitur yang belum dibahas: <strong>template literal</strong>, <strong>module</strong>, <strong>class</strong>, <strong>Map/Set</strong>, <strong>generator</strong>, dan <strong>iterator</strong>.</p>
+<blockquote>
+<p><strong>Asumsi:</strong> Anda sudah memahami dasar-dasar JavaScript dari artikel sebelumnya. Semua fitur di artikel ini didukung browser modern (Chrome, Firefox, Safari, Edge) dan Node.js 18+.</p>
+</blockquote>
+<hr>
+<h2 id="ringkasan-fitur-es6-per-versi">Ringkasan Fitur ES6+ per Versi <a href="#ringkasan-fitur-es6-per-versi" class="anchor" aria-hidden="true">#</a></h2>
+<table>
+<thead>
+<tr>
+<th>Versi</th>
+<th>Fitur Utama</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>ES2015 (ES6)</td>
+<td><code>let</code>/<code>const</code>, arrow function, template literal, destructuring, spread/rest, default parameter, class, module, Map/Set, Promise, Symbol, generator</td>
+</tr>
+<tr>
+<td>ES2016</td>
+<td><code>Array.prototype.includes</code>, operator <code>**</code></td>
+</tr>
+<tr>
+<td>ES2017</td>
+<td><code>async</code>/<code>await</code>, <code>Object.entries</code>/<code>values</code>, string padding</td>
+</tr>
+<tr>
+<td>ES2018</td>
+<td>Rest/spread object, async iteration, <code>Promise.finally</code></td>
+</tr>
+<tr>
+<td>ES2019</td>
+<td><code>Array.flat</code>, <code>Object.fromEntries</code>, <code>catch</code> tanpa binding</td>
+</tr>
+<tr>
+<td>ES2020</td>
+<td>Optional chaining <code>?.</code>, nullish coalescing <code>??</code>, <code>BigInt</code>, <code>Promise.allSettled</code>, dynamic import</td>
+</tr>
+<tr>
+<td>ES2021</td>
+<td><code>Promise.any</code>, <code>String.replaceAll</code>, logical assignment <code>??=</code></td>
+</tr>
+<tr>
+<td>ES2022</td>
+<td>Class field, top-level await, <code>Object.hasOwn</code>, <code>Array.at</code></td>
+</tr>
+<tr>
+<td>ES2023</td>
+<td><code>Array.findLast</code>, <code>toReversed</code>/<code>toSorted</code>/<code>toSpliced</code></td>
+</tr>
+</tbody>
+</table>
+<hr>
+<h2 id="template-literal">Template Literal <a href="#template-literal" class="anchor" aria-hidden="true">#</a></h2>
+<p>String dengan <strong>backtick</strong> (<code>`</code>) yang mendukung interpolasi dan multi-baris.</p>
+<pre><code class="language-javascript">const nama = &quot;Budi&quot;;
+const umur = 25;
+
+// Interpolasi
+const sapaan = `Halo, ${nama}! Umur Anda ${umur} tahun.`;
+console.log(sapaan); // &quot;Halo, Budi! Umur Anda 25 tahun.&quot;
+
+// Ekspresi di dalam ${}
+const total = `Total: Rp${(150000 * 3).toLocaleString(&quot;id-ID&quot;)}`;
+console.log(total); // &quot;Total: Rp450.000&quot;
+
+// Multi-baris
+const html = `
+  &lt;div class=&quot;card&quot;&gt;
+    &lt;h3&gt;${nama}&lt;/h3&gt;
+    &lt;p&gt;Umur: ${umur}&lt;/p&gt;
+  &lt;/div&gt;
+`;
+
+// Ternary
+const status = `Status: ${umur &gt;= 18 ? &quot;Dewasa&quot; : &quot;Anak-anak&quot;}`;
+</code></pre>
+<p><strong>Tagged template</strong> — fungsi yang memproses template literal:</p>
+<pre><code class="language-javascript">function highlight(strings, ...values) {
+  return strings.reduce((result, str, i) =&gt; {
+    return result + str + (values[i] ? `&lt;mark&gt;${values[i]}&lt;/mark&gt;` : &quot;&quot;);
+  }, &quot;&quot;);
+}
+
+const nama = &quot;Budi&quot;;
+const umur = 25;
+const html = highlight`Nama: ${nama}, Umur: ${umur}`;
+console.log(html);
+// &quot;Nama: &lt;mark&gt;Budi&lt;/mark&gt;, Umur: &lt;mark&gt;25&lt;/mark&gt;&quot;
+</code></pre>
+<hr>
+<h2 id="destructuring">Destructuring <a href="#destructuring" class="anchor" aria-hidden="true">#</a></h2>
+<h3 id="array-destructuring">Array Destructuring <a href="#array-destructuring" class="anchor" aria-hidden="true">#</a></h3>
+<pre><code class="language-javascript">const [a, b, c] = [1, 2, 3];
+console.log(a, b, c); // 1 2 3
+
+// Skip
+const [x, , z] = [1, 2, 3];
+console.log(x, z); // 1 3
+
+// Default
+const [p = 10, q = 20] = [5];
+console.log(p, q); // 5 20
+
+// Rest
+const [kepala, ...ekor] = [1, 2, 3, 4];
+console.log(kepala); // 1
+console.log(ekor);   // [2, 3, 4]
+
+// Swap
+let m = 1, n = 2;
+[m, n] = [n, m];
+console.log(m, n); // 2 1
+</code></pre>
+<h3 id="object-destructuring">Object Destructuring <a href="#object-destructuring" class="anchor" aria-hidden="true">#</a></h3>
+<pre><code class="language-javascript">const user = { nama: &quot;Budi&quot;, umur: 25, email: &quot;budi@example.com&quot; };
+
+const { nama, umur, email } = user;
+
+// Rename
+const { nama: namaUser } = user;
+
+// Default
+const { kota = &quot;Jakarta&quot; } = user;
+
+// Nested
+const { alamat: { jalan, kota: kotaAlamat } = {} } = user;
+
+// Rest
+const { nama, ...sisanya } = user;
+console.log(sisanya); // { umur: 25, email: &quot;...&quot; }
+</code></pre>
+<h3 id="destructuring-parameter">Destructuring Parameter <a href="#destructuring-parameter" class="anchor" aria-hidden="true">#</a></h3>
+<pre><code class="language-javascript">function buatUser({ nama, umur = 18, role = &quot;user&quot; }) {
+  return { nama, umur, role };
+}
+
+buatUser({ nama: &quot;Budi&quot;, umur: 25 });
+// { nama: &quot;Budi&quot;, umur: 25, role: &quot;user&quot; }
+</code></pre>
+<hr>
+<h2 id="spread-dan-rest">Spread dan Rest <a href="#spread-dan-rest" class="anchor" aria-hidden="true">#</a></h2>
+<h3 id="spread---menyebarkan">Spread (<code>...</code>) — Menyebarkan <a href="#spread---menyebarkan" class="anchor" aria-hidden="true">#</a></h3>
+<pre><code class="language-javascript">// Array
+const arr1 = [1, 2, 3];
+const arr2 = [...arr1, 4, 5]; // [1, 2, 3, 4, 5]
+
+// Object
+const user = { nama: &quot;Budi&quot;, umur: 25 };
+const userBaru = { ...user, email: &quot;budi@example.com&quot; };
+
+// Fungsi
+Math.max(...[3, 1, 4, 1, 5]); // 5
+
+// String → array
+[...“Hello”]; // [&quot;H&quot;, &quot;e&quot;, &quot;l&quot;, &quot;l&quot;, &quot;o&quot;]
+
+// Set → array
+[...new Set([1, 2, 2, 3])]; // [1, 2, 3]
+</code></pre>
+<h3 id="rest---mengumpulkan">Rest (<code>...</code>) — Mengumpulkan <a href="#rest---mengumpulkan" class="anchor" aria-hidden="true">#</a></h3>
+<pre><code class="language-javascript">// Parameter fungsi
+function jumlahkan(...angka) {
+  return angka.reduce((sum, n) =&gt; sum + n, 0);
+}
+jumlahkan(1, 2, 3, 4); // 10
+
+// Destructuring array
+const [kepala, ...ekor] = [1, 2, 3, 4];
+
+// Destructuring object
+const { nama, ...sisanya } = { nama: &quot;Budi&quot;, umur: 25, email: &quot;...&quot; };
+</code></pre>
+<hr>
+<h2 id="default-parameter">Default Parameter <a href="#default-parameter" class="anchor" aria-hidden="true">#</a></h2>
+<pre><code class="language-javascript">function sapa(nama = &quot;Anonim&quot;, sapaan = &quot;Halo&quot;) {
+  return `${sapaan}, ${nama}!`;
+}
+
+sapa();                  // &quot;Halo, Anonim!&quot;
+sapa(&quot;Budi&quot;);            // &quot;Halo, Budi!&quot;
+sapa(&quot;Budi&quot;, &quot;Selamat pagi&quot;); // &quot;Selamat pagi, Budi!&quot;
+</code></pre>
+<p>Default parameter juga bisa berupa ekspresi:</p>
+<pre><code class="language-javascript">function buatId(prefix = &quot;user&quot;, timestamp = Date.now()) {
+  return `${prefix}_${timestamp}`;
+}
+</code></pre>
+<hr>
+<h2 id="enhanced-object-literal">Enhanced Object Literal <a href="#enhanced-object-literal" class="anchor" aria-hidden="true">#</a></h2>
+<h3 id="shorthand-property">Shorthand Property <a href="#shorthand-property" class="anchor" aria-hidden="true">#</a></h3>
+<pre><code class="language-javascript">const nama = &quot;Budi&quot;;
+const umur = 25;
+
+// ❌ Verbose
+const user1 = { nama: nama, umur: umur };
+
+// ✅ Shorthand
+const user2 = { nama, umur };
+</code></pre>
+<h3 id="shorthand-method">Shorthand Method <a href="#shorthand-method" class="anchor" aria-hidden="true">#</a></h3>
+<pre><code class="language-javascript">const user = {
+  nama: &quot;Budi&quot;,
+
+  // ❌ Verbose
+  sapa1: function() { return `Halo, ${this.nama}`; },
+
+  // ✅ Shorthand
+  sapa2() { return `Halo, ${this.nama}`; }
+};
+</code></pre>
+<h3 id="computed-property">Computed Property <a href="#computed-property" class="anchor" aria-hidden="true">#</a></h3>
+<pre><code class="language-javascript">const key = &quot;nama&quot;;
+const nilai = &quot;Budi&quot;;
+
+const user = {
+  [key]: nilai,
+  [`${key}_panjang`]: nilai.length
+};
+console.log(user); // { nama: &quot;Budi&quot;, nama_panjang: 4 }
+</code></pre>
+<hr>
+<h2 id="module-import-dan-export">Module: <code>import</code> dan <code>export</code> <a href="#module-import-dan-export" class="anchor" aria-hidden="true">#</a></h2>
+<p><strong>Module</strong> memungkinkan memecah kode menjadi file-file terpisah yang saling mengimpor.</p>
+<h3 id="named-exportimport">Named Export/Import <a href="#named-exportimport" class="anchor" aria-hidden="true">#</a></h3>
+<p><strong><code>math.js</code>:</strong></p>
+<pre><code class="language-javascript">export const PI = 3.14159;
+
+export function tambah(a, b) {
+  return a + b;
+}
+
+export function kali(a, b) {
+  return a * b;
+}
+</code></pre>
+<p><strong><code>app.js</code>:</strong></p>
+<pre><code class="language-javascript">import { PI, tambah, kali } from &quot;./math.js&quot;;
+
+console.log(PI);          // 3.14159
+console.log(tambah(2, 3)); // 5
+
+// Rename
+import { tambah as add } from &quot;./math.js&quot;;
+
+// Import semua
+import * as math from &quot;./math.js&quot;;
+console.log(math.PI);
+</code></pre>
+<h3 id="default-exportimport">Default Export/Import <a href="#default-exportimport" class="anchor" aria-hidden="true">#</a></h3>
+<p><strong><code>user.js</code>:</strong></p>
+<pre><code class="language-javascript">export default class User {
+  constructor(nama) {
+    this.nama = nama;
+  }
+}
+</code></pre>
+<p><strong><code>app.js</code>:</strong></p>
+<pre><code class="language-javascript">import User from &quot;./user.js&quot;;
+
+const budi = new User(&quot;Budi&quot;);
+</code></pre>
+<p><strong>Bisa juga fungsi/nilai:</strong></p>
+<pre><code class="language-javascript">// logger.js
+export default function log(pesan) {
+  console.log(`[LOG] ${pesan}`);
+}
+
+// app.js
+import log from &quot;./logger.js&quot;;
+log(&quot;Hello&quot;);
+</code></pre>
+<h3 id="kombinasi-default--named">Kombinasi Default + Named <a href="#kombinasi-default--named" class="anchor" aria-hidden="true">#</a></h3>
+<pre><code class="language-javascript">// api.js
+export default function fetchData() { ... }
+export const BASE_URL = &quot;https://api.example.com&quot;;
+export const TIMEOUT = 5000;
+
+// app.js
+import fetchData, { BASE_URL, TIMEOUT } from &quot;./api.js&quot;;
+</code></pre>
+<h3 id="dynamic-import">Dynamic Import <a href="#dynamic-import" class="anchor" aria-hidden="true">#</a></h3>
+<p>Memuat module <strong>secara lazy</strong> (saat dibutuhkan):</p>
+<pre><code class="language-javascript">button.addEventListener(&quot;click&quot;, async () =&gt; {
+  const { default: Chart } = await import(&quot;./chart.js&quot;);
+  new Chart();
+});
+</code></pre>
+<p>Berguna untuk <strong>code splitting</strong> — mengurangi ukuran bundle awal.</p>
+<h3 id="module-di-browser">Module di Browser <a href="#module-di-browser" class="anchor" aria-hidden="true">#</a></h3>
+<p>Tambahkan <code>type=&quot;module&quot;</code> pada tag <code>&lt;script&gt;</code>:</p>
+<pre><code class="language-html">&lt;script type=&quot;module&quot; src=&quot;app.js&quot;&gt;&lt;/script&gt;
+</code></pre>
+<p><strong>Ciri module:</strong></p>
+<ul>
+<li>Scope sendiri (tidak bocor ke global).</li>
+<li>Strict mode otomatis.</li>
+<li><code>this</code> di top-level adalah <code>undefined</code>.</li>
+<li>Di-load secara <strong>deferred</strong> (setelah HTML di-parse).</li>
+<li>Harus di-serve via HTTP (bukan <code>file://</code>) karena CORS.</li>
+</ul>
+<hr>
+<h2 id="class">Class <a href="#class" class="anchor" aria-hidden="true">#</a></h2>
+<p><strong>Class</strong> adalah sintaks modern untuk membuat object dengan constructor dan method (syntactic sugar di atas prototype).</p>
+<h3 id="class-dasar">Class Dasar <a href="#class-dasar" class="anchor" aria-hidden="true">#</a></h3>
+<pre><code class="language-javascript">class User {
+  constructor(nama, umur) {
+    this.nama = nama;
+    this.umur = umur;
+  }
+
+  sapa() {
+    return `Halo, ${this.nama}!`;
+  }
+
+  get info() {
+    return `${this.nama} (${this.umur} tahun)`;
+  }
+
+  set umurBaru(nilai) {
+    if (nilai &lt; 0) throw new Error(&quot;Umur tidak valid&quot;);
+    this.umur = nilai;
+  }
+
+  static buatAnonim() {
+    return new User(&quot;Anonim&quot;, 0);
+  }
+}
+
+const budi = new User(&quot;Budi&quot;, 25);
+console.log(budi.sapa());       // &quot;Halo, Budi!&quot;
+console.log(budi.info);         // &quot;Budi (25 tahun)&quot;
+console.log(User.buatAnonim()); // User { nama: &quot;Anonim&quot;, umur: 0 }
+</code></pre>
+<h3 id="inheritance-pewarisan">Inheritance (Pewarisan) <a href="#inheritance-pewarisan" class="anchor" aria-hidden="true">#</a></h3>
+<pre><code class="language-javascript">class Admin extends User {
+  constructor(nama, umur, level) {
+    super(nama, umur); // panggil constructor parent
+    this.level = level;
+  }
+
+  sapa() {
+    return `${super.sapa()} Anda admin level ${this.level}.`;
+  }
+
+  hapusUser(user) {
+    console.log(`${this.nama} menghapus ${user.nama}`);
+  }
+}
+
+const admin = new Admin(&quot;Siti&quot;, 30, &quot;super&quot;);
+console.log(admin.sapa()); // &quot;Halo, Siti! Anda admin level super.&quot;
+admin.hapusUser(budi);     // &quot;Siti menghapus Budi&quot;
+</code></pre>
+<h3 id="class-field-es2022">Class Field (ES2022) <a href="#class-field-es2022" class="anchor" aria-hidden="true">#</a></h3>
+<pre><code class="language-javascript">class Counter {
+  count = 0;              // instance field
+  static total = 0;       // static field
+  #rahasia = &quot;private&quot;;   // private field
+
+  increment() {
+    this.count++;
+    Counter.total++;
+  }
+
+  getRahasia() {
+    return this.#rahasia;
+  }
+}
+
+const c = new Counter();
+c.increment();
+console.log(c.count);        // 1
+console.log(Counter.total);  // 1
+console.log(c.getRahasia()); // &quot;private&quot;
+console.log(c.#rahasia);     // SyntaxError (tidak bisa diakses dari luar)
+</code></pre>
+<h3 id="getter-dan-setter">Getter dan Setter <a href="#getter-dan-setter" class="anchor" aria-hidden="true">#</a></h3>
+<pre><code class="language-javascript">class Produk {
+  constructor(nama, harga) {
+    this.nama = nama;
+    this._harga = harga;
+  }
+
+  get harga() {
+    return this._harga;
+  }
+
+  set harga(nilai) {
+    if (nilai &lt; 0) throw new Error(&quot;Harga tidak boleh negatif&quot;);
+    this._harga = nilai;
+  }
+
+  get hargaFormatted() {
+    return `Rp${this._harga.toLocaleString(&quot;id-ID&quot;)}`;
+  }
+}
+
+const p = new Produk(&quot;Keyboard&quot;, 450000);
+console.log(p.hargaFormatted); // &quot;Rp450.000&quot;
+p.harga = 500000;
+console.log(p.harga);          // 500000
+</code></pre>
+<hr>
+<h2 id="map-dan-set">Map dan Set <a href="#map-dan-set" class="anchor" aria-hidden="true">#</a></h2>
+<h3 id="map--key-value-dengan-key-apa-pun"><code>Map</code> — Key-Value dengan Key Apa Pun <a href="#map--key-value-dengan-key-apa-pun" class="anchor" aria-hidden="true">#</a></h3>
+<p>Berbeda dari object, <code>Map</code> mengizinkan key <strong>tipe apa pun</strong> (object, function, number) dan menjaga <strong>urutan</strong> insertion.</p>
+<pre><code class="language-javascript">const map = new Map();
+
+map.set(&quot;nama&quot;, &quot;Budi&quot;);
+map.set(1, &quot;satu&quot;);
+map.set(true, &quot;benar&quot;);
+
+const objKey = { id: 1 };
+map.set(objKey, &quot;object key&quot;);
+
+console.log(map.get(&quot;nama&quot;));   // &quot;Budi&quot;
+console.log(map.get(objKey));   // &quot;object key&quot;
+console.log(map.size);          // 4
+console.log(map.has(&quot;nama&quot;));   // true
+
+map.delete(&quot;nama&quot;);
+map.clear();
+</code></pre>
+<p><strong>Iterasi <code>Map</code>:</strong></p>
+<pre><code class="language-javascript">const map = new Map([
+  [&quot;nama&quot;, &quot;Budi&quot;],
+  [&quot;umur&quot;, 25]
+]);
+
+for (const [key, value] of map) {
+  console.log(`${key}: ${value}`);
+}
+
+// Method
+map.keys();    // MapIterator
+map.values();  // MapIterator
+map.entries(); // MapIterator
+</code></pre>
+<p><strong><code>Map</code> vs Object:</strong></p>
+<table>
+<thead>
+<tr>
+<th>Aspek</th>
+<th><code>Map</code></th>
+<th>Object</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Key tipe</td>
+<td>Apa pun</td>
+<td>String/Symbol</td>
+</tr>
+<tr>
+<td>Urutan</td>
+<td>Dijaga</td>
+<td>Tidak dijamin (kecuali string)</td>
+</tr>
+<tr>
+<td>Size</td>
+<td><code>.size</code></td>
+<td><code>Object.keys().length</code></td>
+</tr>
+<tr>
+<td>Iterasi</td>
+<td>Langsung</td>
+<td><code>Object.entries()</code></td>
+</tr>
+<tr>
+<td>Prototype</td>
+<td>Tidak ada</td>
+<td>Ada (<code>toString</code>, dll.)</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Kapan menggunakan <code>Map</code>?</strong> Saat key bukan string, atau butuh urutan yang terjamin, atau sering menambah/hapus key.</p>
+<h3 id="set--koleksi-nilai-unik"><code>Set</code> — Koleksi Nilai Unik <a href="#set--koleksi-nilai-unik" class="anchor" aria-hidden="true">#</a></h3>
+<pre><code class="language-javascript">const set = new Set([1, 2, 2, 3, 3, 3]);
+console.log(set); // Set(3) { 1, 2, 3 }
+
+set.add(4);
+set.add(1); // sudah ada, diabaikan
+console.log(set.size); // 4
+console.log(set.has(2)); // true
+
+set.delete(3);
+set.clear();
+</code></pre>
+<p><strong>Iterasi <code>Set</code>:</strong></p>
+<pre><code class="language-javascript">for (const nilai of set) {
+  console.log(nilai);
+}
+</code></pre>
+<p><strong>Kegunaan <code>Set</code>:</strong></p>
+<ul>
+<li>Menghapus duplikat: <code>[...new Set(arr)]</code>.</li>
+<li>Cek keberadaan cepat: <code>set.has(x)</code> — O(1).</li>
+<li>Menyimpan nilai unik.</li>
+</ul>
+<h3 id="weakmap-dan-weakset"><code>WeakMap</code> dan <code>WeakSet</code> <a href="#weakmap-dan-weakset" class="anchor" aria-hidden="true">#</a></h3>
+<p>Mirip <code>Map</code>/<code>Set</code>, tetapi:</p>
+<ul>
+<li>Key harus <strong>object</strong>.</li>
+<li>Tidak mencegah garbage collection (weak reference).</li>
+<li>Tidak bisa diiterasi.</li>
+</ul>
+<p>Berguna untuk menyimpan metadata pada object tanpa mencegahnya di-GC.</p>
+<pre><code class="language-javascript">const weakMap = new WeakMap();
+let user = { nama: &quot;Budi&quot; };
+
+weakMap.set(user, { lastLogin: Date.now() });
+console.log(weakMap.get(user));
+
+user = null; // object bisa di-GC, entry di WeakMap otomatis hilang
+</code></pre>
+<hr>
+<h2 id="symbol">Symbol <a href="#symbol" class="anchor" aria-hidden="true">#</a></h2>
+<p><strong>Symbol</strong> adalah tipe primitif yang <strong>selalu unik</strong>. Berguna sebagai key properti yang &ldquo;tersembunyi&rdquo;.</p>
+<pre><code class="language-javascript">const id = Symbol(&quot;id&quot;);
+const id2 = Symbol(&quot;id&quot;);
+
+console.log(id === id2); // false
+
+const user = {
+  nama: &quot;Budi&quot;,
+  [id]: 12345
+};
+
+console.log(user[id]);       // 12345
+console.log(Object.keys(user)); // [&quot;nama&quot;] — Symbol tidak muncul
+</code></pre>
+<p><strong>Well-known Symbols:</strong></p>
+<pre><code class="language-javascript">// Symbol.iterator — membuat object iterable
+const obj = {
+  data: [1, 2, 3],
+  [Symbol.iterator]() {
+    let i = 0;
+    return {
+      next: () =&gt; ({
+        value: this.data[i],
+        done: i++ &gt;= this.data.length
+      })
+    };
+  }
+};
+
+console.log([...obj]); // [1, 2, 3]
+</code></pre>
+<hr>
+<h2 id="generator-dan-iterator">Generator dan Iterator <a href="#generator-dan-iterator" class="anchor" aria-hidden="true">#</a></h2>
+<h3 id="iterator">Iterator <a href="#iterator" class="anchor" aria-hidden="true">#</a></h3>
+<p><strong>Iterator</strong> adalah object dengan method <code>next()</code> yang mengembalikan <code>{ value, done }</code>.</p>
+<pre><code class="language-javascript">function buatIterator(arr) {
+  let i = 0;
+  return {
+    next() {
+      if (i &lt; arr.length) {
+        return { value: arr[i++], done: false };
+      }
+      return { value: undefined, done: true };
+    }
+  };
+}
+
+const it = buatIterator([1, 2, 3]);
+console.log(it.next()); // { value: 1, done: false }
+console.log(it.next()); // { value: 2, done: false }
+console.log(it.next()); // { value: 3, done: false }
+console.log(it.next()); // { value: undefined, done: true }
+</code></pre>
+<h3 id="generator--function">Generator — <code>function*</code> <a href="#generator--function" class="anchor" aria-hidden="true">#</a></h3>
+<p><strong>Generator</strong> adalah fungsi yang bisa <strong>dijeda</strong> dan <strong>dilanjutkan</strong>, menghasilkan nilai satu per satu dengan <code>yield</code>.</p>
+<pre><code class="language-javascript">function* angka() {
+  yield 1;
+  yield 2;
+  yield 3;
+}
+
+const gen = angka();
+console.log(gen.next()); // { value: 1, done: false }
+console.log(gen.next()); // { value: 2, done: false }
+console.log(gen.next()); // { value: 3, done: false }
+console.log(gen.next()); // { value: undefined, done: true }
+</code></pre>
+<p><strong>Generator bisa diiterasi:</strong></p>
+<pre><code class="language-javascript">for (const n of angka()) {
+  console.log(n); // 1, 2, 3
+}
+
+// Atau spread
+console.log([...angka()]); // [1, 2, 3]
+</code></pre>
+<p><strong>Generator dengan loop:</strong></p>
+<pre><code class="language-javascript">function* range(start, end, step = 1) {
+  for (let i = start; i &lt;= end; i += step) {
+    yield i;
+  }
+}
+
+console.log([...range(1, 10, 2)]); // [1, 3, 5, 7, 9]
+</code></pre>
+<p><strong>Generator tak terbatas (lazy):</strong></p>
+<pre><code class="language-javascript">function* fibonacci() {
+  let [a, b] = [0, 1];
+  while (true) {
+    yield a;
+    [a, b] = [b, a + b];
+  }
+}
+
+const fib = fibonacci();
+console.log(fib.next().value); // 0
+console.log(fib.next().value); // 1
+console.log(fib.next().value); // 1
+console.log(fib.next().value); // 2
+// ... tak terbatas, tetapi hanya dihitung saat diminta
+</code></pre>
+<p><strong>Kegunaan generator:</strong></p>
+<ul>
+<li>Lazy evaluation (data besar/tak terbatas).</li>
+<li>Membuat iterable kustom.</li>
+<li>State machine.</li>
+<li><code>async</code>/<code>await</code> diimplementasikan di atas generator (di balik layar).</li>
+</ul>
+<hr>
+<h2 id="fitur-modern-lainnya">Fitur Modern Lainnya <a href="#fitur-modern-lainnya" class="anchor" aria-hidden="true">#</a></h2>
+<h3 id="logical-assignment-es2021">Logical Assignment (ES2021) <a href="#logical-assignment-es2021" class="anchor" aria-hidden="true">#</a></h3>
+<pre><code class="language-javascript">let a = null;
+a ??= &quot;default&quot;; // a = &quot;default&quot; (jika null/undefined)
+
+let b = 0;
+b ||= 10; // b = 10 (jika falsy)
+
+let c = 1;
+c &amp;&amp;= 2; // c = 2 (jika truthy)
+</code></pre>
+<h3 id="stringreplaceall-es2021"><code>String.replaceAll()</code> (ES2021) <a href="#stringreplaceall-es2021" class="anchor" aria-hidden="true">#</a></h3>
+<pre><code class="language-javascript">&quot;Hello World World&quot;.replaceAll(&quot;World&quot;, &quot;JS&quot;);
+// &quot;Hello JS JS&quot;
+</code></pre>
+<h3 id="arrayat-es2022"><code>Array.at()</code> (ES2022) <a href="#arrayat-es2022" class="anchor" aria-hidden="true">#</a></h3>
+<pre><code class="language-javascript">const arr = [10, 20, 30];
+console.log(arr.at(-1)); // 30
+console.log(arr.at(-2)); // 20
+</code></pre>
+<h3 id="objecthasown-es2022"><code>Object.hasOwn()</code> (ES2022) <a href="#objecthasown-es2022" class="anchor" aria-hidden="true">#</a></h3>
+<pre><code class="language-javascript">const user = { nama: &quot;Budi&quot; };
+console.log(Object.hasOwn(user, &quot;nama&quot;)); // true
+console.log(Object.hasOwn(user, &quot;toString&quot;)); // false (dari prototype)
+</code></pre>
+<h3 id="top-level-await-es2022-module">Top-Level <code>await</code> (ES2022, module) <a href="#top-level-await-es2022-module" class="anchor" aria-hidden="true">#</a></h3>
+<pre><code class="language-javascript">// Di module (bukan di fungsi)
+const data = await fetch(&quot;/api/data&quot;).then(r =&gt; r.json());
+console.log(data);
+</code></pre>
+<h3 id="arrayfindlast--findlastindex-es2023"><code>Array.findLast()</code> / <code>findLastIndex()</code> (ES2023) <a href="#arrayfindlast--findlastindex-es2023" class="anchor" aria-hidden="true">#</a></h3>
+<pre><code class="language-javascript">const angka = [1, 2, 3, 4, 5];
+console.log(angka.findLast(n =&gt; n &lt; 4)); // 3
+</code></pre>
+<h3 id="toreversed-tosorted-tospliced-es2023"><code>toReversed()</code>, <code>toSorted()</code>, <code>toSpliced()</code> (ES2023) <a href="#toreversed-tosorted-tospliced-es2023" class="anchor" aria-hidden="true">#</a></h3>
+<p>Versi <strong>non-mutasi</strong> dari <code>reverse()</code>, <code>sort()</code>, <code>splice()</code>.</p>
+<pre><code class="language-javascript">const arr = [3, 1, 2];
+console.log(arr.toSorted()); // [1, 2, 3]
+console.log(arr);            // [3, 1, 2] (tidak berubah)
+</code></pre>
+<hr>
+<h2 id="ringkasan">Ringkasan <a href="#ringkasan" class="anchor" aria-hidden="true">#</a></h2>
+<table>
+<thead>
+<tr>
+<th>Fitur</th>
+<th>Versi</th>
+<th>Kegunaan</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>let</code>/<code>const</code></td>
+<td>ES6</td>
+<td>Block scope</td>
+</tr>
+<tr>
+<td>Arrow function</td>
+<td>ES6</td>
+<td>Sintaks ringkas, lexical <code>this</code></td>
+</tr>
+<tr>
+<td>Template literal</td>
+<td>ES6</td>
+<td>Interpolasi &amp; multi-baris</td>
+</tr>
+<tr>
+<td>Destructuring</td>
+<td>ES6</td>
+<td>Ekstrak nilai dari array/object</td>
+</tr>
+<tr>
+<td>Spread/Rest</td>
+<td>ES6</td>
+<td>Sebarkan/kumpulkan</td>
+</tr>
+<tr>
+<td>Default parameter</td>
+<td>ES6</td>
+<td>Nilai default</td>
+</tr>
+<tr>
+<td>Class</td>
+<td>ES6</td>
+<td>OOP modern</td>
+</tr>
+<tr>
+<td>Module</td>
+<td>ES6</td>
+<td><code>import</code>/<code>export</code></td>
+</tr>
+<tr>
+<td><code>Map</code>/<code>Set</code></td>
+<td>ES6</td>
+<td>Koleksi key-value &amp; unik</td>
+</tr>
+<tr>
+<td><code>Symbol</code></td>
+<td>ES6</td>
+<td>Identifier unik</td>
+</tr>
+<tr>
+<td>Generator</td>
+<td>ES6</td>
+<td>Lazy evaluation</td>
+</tr>
+<tr>
+<td><code>async</code>/<code>await</code></td>
+<td>ES2017</td>
+<td>Async code</td>
+</tr>
+<tr>
+<td><code>?.</code> / <code>??</code></td>
+<td>ES2020</td>
+<td>Optional chaining, nullish</td>
+</tr>
+<tr>
+<td><code>Object.hasOwn</code></td>
+<td>ES2022</td>
+<td>Cek properti sendiri</td>
+</tr>
+<tr>
+<td><code>Array.at</code></td>
+<td>ES2022</td>
+<td>Akses index negatif</td>
+</tr>
+<tr>
+<td><code>toSorted</code> dll.</td>
+<td>ES2023</td>
+<td>Non-mutasi array</td>
+</tr>
+</tbody>
+</table>
+<p>Poin penting:</p>
+<ul>
+<li><strong>Module</strong> memecah kode menjadi file terpisah — gunakan <code>type=&quot;module&quot;</code> di browser.</li>
+<li><strong>Class</strong> adalah syntactic sugar di atas prototype — gunakan <code>extends</code> dan <code>super</code> untuk inheritance.</li>
+<li><strong><code>Map</code></strong> mengizinkan key tipe apa pun dan menjaga urutan; <strong><code>Set</code></strong> menyimpan nilai unik.</li>
+<li><strong>Generator</strong> (<code>function*</code> dengan <code>yield</code>) memungkinkan lazy evaluation.</li>
+<li><strong>Private field</strong> (<code>#nama</code>) di class benar-benar tidak bisa diakses dari luar.</li>
+<li><strong><code>toSorted()</code></strong> dan sejenisnya adalah versi non-mutasi — lebih aman untuk data yang tidak boleh berubah.</li>
+</ul>
+<p>Pada artikel berikutnya, kita akan membahas <strong>Asynchronous JavaScript</strong> — callback, Promise, <code>async</code>/<code>await</code>, dan event loop.</p>
+
+			<div class="page-footer-meta d-flex flex-column flex-md-row justify-content-between">
+				</div>
+			<div class="docs-navigation d-flex justify-content-between">
+	
+	<a href="/javascript/tutorial/11-web-storage/">
+			<div class="card my-1">
+				<div class="card-body py-2">
+					&larr; Web Storage &amp; Cookie
+				</div>
+			</div>
+		</a>
+	<a class="ms-auto" href="/javascript/tutorial/13-async-javascript/">
+			<div class="card my-1">
+				<div class="card-body py-2">
+					Asynchronous JavaScript &rarr;
+				</div>
+			</div>
+		</a>
+	</div>
+
+			
+		</main>
+	</div>
+
+      </div>
+    </div>
+    
+    
+    <footer class="footer text-muted">
+  <div class="container-xxl">
+    <div class="row">
+      <div class="col-lg-8 order-last order-lg-first">
+        <ul class="list-inline">
+          <li class="list-inline-item">Powered by <a class="text-muted" href="https://gohugo.io/">Hugo</a> and <a class="text-muted" href="https://github.com/">Github</a></li>
+        </ul>
+      </div>
+      <div class="col-lg-8 order-first order-lg-last text-lg-end">
+        <ul class="list-inline">
+          </ul>
+      </div>
+    </div>
+  </div>
+</footer>
+    
+
+<script src="/js/bootstrap.min.650aeec64c81d69d4c0850fc73c93da3f0330cec0a27772feed7f90f60baa5f47f1c45687d71914bdafd1c4e860d40f6dc08ede27a2f08431ff929c9a2d24621.js" integrity="sha512-ZQruxkyB1p1MCFD8c8k9o/AzDOwKJ3cv7tf5D2C6pfR/HEVofXGRS9r9HE6GDUD23Ajt4novCEMf&#43;SnJotJGIQ==" crossorigin="anonymous" defer></script>
+  <script src="/js/highlight.min.ec234bd8a5f487aaffe50a89f17b14501b1bb65633cf177cffd4cb84702dd7030edc08712dceb8dc27ac7e54b53240a08bf0b8d951572ee582bcdbbd06a48a7b.js" integrity="sha512-7CNL2KX0h6r/5QqJ8XsUUBsbtlYzzxd8/9TLhHAt1wMO3AhxLc643CesflS1MkCgi/C42VFXLuWCvNu9BqSKew==" crossorigin="anonymous" defer></script>
+  <script src="/main.min.cd1e5e6b40065b3f7f7fd8548a528fac67019754eda0f37b9918d02d154fc9ef6a22742f6513b0572ad9163152e151ec36221fbeafbecd7759c3dab1f19b64b9.js" integrity="sha512-zR5ea0AGWz9/f9hUilKPrGcBl1TtoPN7mRjQLRVPye9qInQvZROwVyrZFjFS4VHsNiIfvq&#43;&#43;zXdZw9qx8ZtkuQ==" crossorigin="anonymous" defer></script>
+  <script src="https://kaban.my.id/index.min.3b38957cbdd3fcd9f9b6e3e14d11e41821e75e9e633e2e7fc92b39e052142003d54a01433bc318b5180cbdf345e1654d731e00e168a3ab02cdad8965a4e5d852.js" integrity="sha512-OziVfL3T/Nn5tuPhTRHkGCHnXp5jPi5/ySs54FIUIAPVSgFDO8MYtRgMvfNF4WVNcx4A4WijqwLNrYllpOXYUg==" crossorigin="anonymous" defer></script>
+  
+    <div class="d-flex fixed-bottom pb-4 pb-lg-5 pe-4 pe-lg-5">
+      <a id="toTop" href="#" class="btn btn-outline-primary rounded-circle ms-auto p-2"><span class="visually-hidden">Top</span><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-chevron-up"><polyline points="18 15 12 9 6 15"></polyline></svg></a>
+    </div>
+    
+  </body>
+</html>

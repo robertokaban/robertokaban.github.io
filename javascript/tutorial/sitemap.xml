@@ -42,4 +42,74 @@
       <changefreq>weekly</changefreq>
       <priority>0.5</priority>
     </url>
+    
+    <url>
+      <loc>https://kaban.my.id/javascript/tutorial/07-array/</loc>
+      <lastmod>2022-12-25T08:00:00+00:00</lastmod>
+      <changefreq>weekly</changefreq>
+      <priority>0.5</priority>
+    </url>
+    
+    <url>
+      <loc>https://kaban.my.id/javascript/tutorial/08-object/</loc>
+      <lastmod>2022-12-26T08:00:00+00:00</lastmod>
+      <changefreq>weekly</changefreq>
+      <priority>0.5</priority>
+    </url>
+    
+    <url>
+      <loc>https://kaban.my.id/javascript/tutorial/09-dom-manipulation/</loc>
+      <lastmod>2022-12-27T08:00:00+00:00</lastmod>
+      <changefreq>weekly</changefreq>
+      <priority>0.5</priority>
+    </url>
+    
+    <url>
+      <loc>https://kaban.my.id/javascript/tutorial/10-event-handling/</loc>
+      <lastmod>2022-12-28T08:00:00+00:00</lastmod>
+      <changefreq>weekly</changefreq>
+      <priority>0.5</priority>
+    </url>
+    
+    <url>
+      <loc>https://kaban.my.id/javascript/tutorial/11-web-storage/</loc>
+      <lastmod>2022-12-29T08:00:00+00:00</lastmod>
+      <changefreq>weekly</changefreq>
+      <priority>0.5</priority>
+    </url>
+    
+    <url>
+      <loc>https://kaban.my.id/javascript/tutorial/12-es6-modern/</loc>
+      <lastmod>2022-12-30T08:00:00+00:00</lastmod>
+      <changefreq>weekly</changefreq>
+      <priority>0.5</priority>
+    </url>
+    
+    <url>
+      <loc>https://kaban.my.id/javascript/tutorial/13-async-javascript/</loc>
+      <lastmod>2022-12-31T08:00:00+00:00</lastmod>
+      <changefreq>weekly</changefreq>
+      <priority>0.5</priority>
+    </url>
+    
+    <url>
+      <loc>https://kaban.my.id/javascript/tutorial/14-fetch-api/</loc>
+      <lastmod>2023-01-01T08:00:00+00:00</lastmod>
+      <changefreq>weekly</changefreq>
+      <priority>0.5</priority>
+    </url>
+    
+    <url>
+      <loc>https://kaban.my.id/javascript/tutorial/15-nodejs-npm/</loc>
+      <lastmod>2023-01-02T08:00:00+00:00</lastmod>
+      <changefreq>weekly</changefreq>
+      <priority>0.5</priority>
+    </url>
+    
+    <url>
+      <loc>https://kaban.my.id/javascript/tutorial/16-bundler-tooling/</loc>
+      <lastmod>2023-01-03T08:00:00+00:00</lastmod>
+      <changefreq>weekly</changefreq>
+      <priority>0.5</priority>
+    </url>
     </urlset>

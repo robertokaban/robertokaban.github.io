@@ -1,0 +1,1594 @@
+<!doctype html>
+<html lang="en-US">
+  <head>
+  <meta charset="utf-8">
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <link rel="preload" as="font" href="https://kaban.my.id/fonts/vendor/jost/jost-v4-latin-regular.woff2" type="font/woff2" crossorigin>
+<link rel="preload" as="font" href="https://kaban.my.id/fonts/vendor/jost/jost-v4-latin-500.woff2" type="font/woff2" crossorigin>
+<link rel="preload" as="font" href="https://kaban.my.id/fonts/vendor/jost/jost-v4-latin-700.woff2" type="font/woff2" crossorigin>
+
+  <script>(()=>{var t=window.matchMedia&&window.matchMedia("(prefers-color-scheme: dark)").matches,e=localStorage.getItem("theme");t&&e===null&&(localStorage.setItem("theme","dark"),document.documentElement.setAttribute("data-dark-mode","")),t&&e==="dark"&&document.documentElement.setAttribute("data-dark-mode",""),e==="dark"&&document.documentElement.setAttribute("data-dark-mode","")})()</script>
+
+  <link rel="stylesheet" href="https://kaban.my.id/main.4296e689affcd00e933b8954c10fc43cd1a5f16d5552e78183d12ea50d3e0bf5a596df23a379a4936743f01a7cd8ba048a628b2b9b60b34aa49fad468287100a.css" integrity="sha512-Qpbmia/80A6TO4lUwQ/EPNGl8W1VUueBg9EupQ0&#43;C/Wllt8jo3mkk2dD8Bp82LoEimKLK5tgs0qkn61GgocQCg==" crossorigin="anonymous">
+<noscript><style>img.lazyload { display: none; }</style></noscript>
+  <meta name="robots" content="index, follow">
+    <meta name="googlebot" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1">
+    <meta name="bingbot" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1">
+  <title>Array &amp; Method-nya - Roberto Kaban Blog&#39;s</title>
+<meta name="description" content="Panduan lengkap array JavaScript: membuat array, mengakses, method mutasi dan non-mutasi, map, filter, reduce, serta spread dan destructuring.">
+<link rel="canonical" href="https://kaban.my.id/javascript/tutorial/07-array/">
+<meta property="og:locale" content="en_US">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Array &amp; Method-nya">
+<meta property="og:description" content="Panduan lengkap array JavaScript: membuat array, mengakses, method mutasi dan non-mutasi, map, filter, reduce, serta spread dan destructuring.">
+<meta property="og:url" content="https://kaban.my.id/javascript/tutorial/07-array/">
+<meta property="og:site_name" content="Roberto Kaban Blog&#39;s">
+<meta property="article:published_time" content="2022-12-25T08:00:00+00:00">
+  <meta property="article:modified_time" content="2022-12-25T08:00:00+00:00">
+  
+  <meta property="og:image" content="https://kaban.my.id/doks.png"/>
+      <meta property="og:image:alt" content="Roberto Kaban Blog&#39;s">
+    
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:site" content="@robertokaban">
+<meta name="twitter:creator" content="@robertokaban">
+<meta name="twitter:title" content="Array &amp; Method-nya">
+<meta name="twitter:description" content="Panduan lengkap array JavaScript: membuat array, mengakses, method mutasi dan non-mutasi, map, filter, reduce, serta spread dan destructuring.">
+<meta name="twitter:image" content="https://kaban.my.id/doks.png">
+    <meta name="twitter:image:alt" content="Array &amp; Method-nya">
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "Person",
+        "@id": "https://kaban.my.id/#/schema/person/1",
+      "name": "BlogRobertoKaban",
+      "url": "https://kaban.my.id/",
+      "sameAs": [
+        "https://twitter.com/robertokaban"
+        , "https://github.com/robertokaban"
+        ],
+      "image": {
+          "@type": "ImageObject",
+          "@id": "https://kaban.my.id/#/schema/image/1",
+          "url": "https://kaban.my.id/doks.png",
+          "width":  1280 ,
+          "height":  640 ,
+          "caption": "BlogRobertoKaban"
+        }
+      },
+    {
+      "@type": "WebSite",
+      "@id": "https://kaban.my.id/#/schema/website/1",
+      "url": "https://kaban.my.id/",
+      "name": "Roberto Kaban Blog\u0027s",
+      "description": "Hanya sebuah catatan kecil untuk hal yang tidak ingin dilupakan.",
+      "publisher": {
+          "@id": "https://kaban.my.id/#/schema/person/1"
+        }
+      },
+    {
+      "@type": "WebPage",
+      "@id": "https://kaban.my.id/javascript/tutorial/07-array/",
+      "url": "https://kaban.my.id/javascript/tutorial/07-array/",
+      "name": "Array \u0026 Method-nya",
+      "description": "Panduan lengkap array JavaScript: membuat array, mengakses, method mutasi dan non-mutasi, map, filter, reduce, serta spread dan destructuring.",
+      "isPartOf": {
+        "@id": "https://kaban.my.id/#/schema/website/1"
+      },
+      "about": {
+          "@id": "https://kaban.my.id/#/schema/person/1"
+        },
+      "datePublished": "2022-12-25T08:00:00CET",
+      "dateModified": "2022-12-25T08:00:00CET",
+      "breadcrumb": {
+        "@id": "https://kaban.my.id/javascript/tutorial/07-array/#/schema/breadcrumb/1"
+      },
+      "primaryImageOfPage": {
+        "@id": "https://kaban.my.id/javascript/tutorial/07-array/#/schema/image/2"
+      },
+      "inLanguage": "en-US",
+      "potentialAction": [{
+        "@type": "ReadAction", "target": ["https://kaban.my.id/javascript/tutorial/07-array/"]
+      }]
+    },
+    {
+      "@type": "BreadcrumbList",
+      "@id": "https://kaban.my.id/javascript/tutorial/07-array/#/schema/breadcrumb/1",
+      "name": "Breadcrumbs",
+      "itemListElement": [{
+        "@type": "ListItem",
+        "position":  1 ,
+        "item": {
+          "@type": "WebPage",
+          "@id": "https://kaban.my.id/",
+          "url": "https://kaban.my.id/",
+          "name": "Home"
+          }
+        },{
+        "@type": "ListItem",
+        "position":  2 ,
+        "item": {
+          "@type": "WebPage",
+          "@id": "https://kaban.my.id/javascript/",
+          "url": "https://kaban.my.id/javascript/",
+          "name": "Javascript"
+          }
+        },{
+        "@type": "ListItem",
+        "position":  3 ,
+        "item": {
+          "@type": "WebPage",
+          "@id": "https://kaban.my.id/javascript/tutorial/",
+          "url": "https://kaban.my.id/javascript/tutorial/",
+          "name": "Tutorial"
+          }
+        },{
+        "@type": "ListItem",
+        "position":  4 ,
+        "item": {
+          "@id": "https://kaban.my.id/javascript/tutorial/07-array/"
+          }
+        }]
+    },
+
+    {
+      "@context": "https://schema.org",
+      "@graph": [
+        {
+          "@type": "ImageObject",
+          "@id": "https://kaban.my.id/javascript/tutorial/07-array/#/schema/image/2",
+          "url": "https://kaban.my.id/doks.png",
+          "contentUrl": "https://kaban.my.id/doks.png",
+          "caption": "Array \u0026 Method-nya"
+        }
+      ]
+    }
+
+  ]
+}
+</script>
+
+  <meta name="theme-color" content="#fff">
+<link rel="icon" href="https://kaban.my.id/favicon.ico" sizes="any">
+<link rel="icon" type="image/svg+xml" href="https://kaban.my.id/favicon.svg">
+<link rel="apple-touch-icon" sizes="180x180" href="https://kaban.my.id/apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="32x32" href="https://kaban.my.id/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="https://kaban.my.id/favicon-16x16.png">
+<link rel="manifest" crossorigin="use-credentials" href="https://kaban.my.id/site.webmanifest">
+
+  
+
+
+  
+  
+  
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-60VSDZFQR5"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-60VSDZFQR5');
+</script>
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6664512614760985"
+     crossorigin="anonymous"></script>
+</head>
+
+  <body class="javascript single">
+    <div class="sticky-top">
+<div class="header-bar"></div>
+
+<header class="navbar navbar-expand-lg navbar-light doks-navbar">
+  <nav class="container-xxl flex-wrap flex-lg-nowrap" aria-label="Main navigation">
+
+    <a class="navbar-brand order-0" href="/" aria-label="Roberto Kaban Blog&#39;s">
+      Roberto Kaban Blog&#39;s
+    </a>
+
+    <button class="btn btn-menu order-2 d-block d-lg-none" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasDoks" aria-controls="offcanvasDoks" aria-label="Open main menu">
+      <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-menu"><line x1="3" y1="12" x2="21" y2="12"></line><line x1="3" y1="6" x2="21" y2="6"></line><line x1="3" y1="18" x2="21" y2="18"></line></svg>
+    </button>
+    <div class="offcanvas offcanvas-end border-0 py-lg-1" tabindex="-1" id="offcanvasDoks" data-bs-backdrop="true" aria-labelledby="offcanvasDoksLabel">
+      <div class="header-bar d-lg-none"></div>
+      <div class="offcanvas-header d-lg-none">
+        <h2 class="h5 offcanvas-title ps-2" id="offcanvasDoksLabel"><a class="text-dark" href="/">Roberto Kaban Blog&#39;s</a></h2>
+        <button type="button" class="btn-close text-reset me-2" data-bs-dismiss="offcanvas" aria-label="Close main menu"></button>
+      </div>
+      <div class="offcanvas-body p-4 p-lg-0">
+        <ul class="nav flex-column flex-lg-row align-items-lg-center mt-2 mt-lg-0 ms-lg-2 me-lg-auto">
+              <li class="nav-item">
+                <a class="nav-link ps-0 py-1" href="/about/">About Me</a>
+              </li>
+            
+          
+              <li class="nav-item">
+                <a class="nav-link ps-0 py-1" href="/contact/">Contact</a>
+              </li>
+            
+          
+              <li class="nav-item">
+                <a class="nav-link ps-0 py-1" href="/artikel/">Artikel</a>
+              </li>
+            
+          
+              <li class="nav-item">
+                <a class="nav-link ps-0 py-1" href="/coretanku/">Coretanku</a>
+              </li>
+            
+          </ul>
+
+        <hr class="text-black-50 my-4 d-lg-none">
+        <form class="doks-search position-relative flex-grow-1 ms-lg-auto me-lg-2">
+          <input id="search" class="form-control is-search" type="search" placeholder="Cari di blog ini..." aria-label="Cari di blog ini..." autocomplete="off">
+          <div id="suggestions" class="shadow bg-white rounded d-none"></div>
+        </form>
+        <hr class="text-black-50 my-4 d-lg-none">
+        <ul class="nav flex-column flex-lg-row">
+          <li class="nav-item">
+              <a class="nav-link social-link" href="https://github.com/robertokaban"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-github"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path></svg><small class="ms-2 d-lg-none">GitHub</small></a>
+            </li>
+          <li class="nav-item">
+              <a class="nav-link social-link" href="https://facebook.com/roberto.kaban"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-facebook"><path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"></path></svg><small class="ms-2 d-lg-none">Facebook</small></a>
+            </li>
+          <li class="nav-item">
+              <a class="nav-link social-link" href="https://twitter.com/robertokaban"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-twitter"><path d="M23 3a10.9 10.9 0 0 1-3.14 1.53 4.48 4.48 0 0 0-7.86 3v1A10.66 10.66 0 0 1 3 4s-4 9 5 13a11.64 11.64 0 0 1-7 2c9 5 20 0 20-11.5a4.5 4.5 0 0 0-.08-.83A7.72 7.72 0 0 0 23 3z"></path></svg><small class="ms-2 d-lg-none">Twitter</small></a>
+            </li>
+          <li class="nav-item">
+              <a class="nav-link social-link" href="https://youtube.com/@robertokaban"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-youtube"><path d="M10,15L15.19,12L10,9V15M21.56,7.17C21.69,7.64 21.78,8.27 21.84,9.07C21.91,9.87 21.94,10.56 21.94,11.16L22,12C22,14.19 21.84,15.8 21.56,16.83C21.31,17.73 20.73,18.31 19.83,18.56C19.36,18.69 18.5,18.78 17.18,18.84C15.88,18.91 14.69,18.94 13.59,18.94L12,19C7.81,19 5.2,18.84 4.17,18.56C3.27,18.31 2.69,17.73 2.44,16.83C2.31,16.36 2.22,15.73 2.16,14.93C2.09,14.13 2.06,13.44 2.06,12.84L2,12C2,9.81 2.16,8.2 2.44,7.17C2.69,6.27 3.27,5.69 4.17,5.44C4.64,5.31 5.5,5.22 6.82,5.16C8.12,5.09 9.31,5.06 10.41,5.06L12,5C16.19,5 18.8,5.16 19.83,5.44C20.73,5.69 21.31,6.27 21.56,7.17Z"></path></svg><small class="ms-2 d-lg-none">Youtube</small></a>
+            </li>
+          </ul>
+
+        
+        <hr class="text-black-50 my-4 d-lg-none">
+        <button id="mode" class="btn btn-link" type="button" aria-label="Toggle user interface mode">
+          <span class="toggle-dark"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-moon"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path></svg></span>
+          <span class="toggle-light"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-sun"><circle cx="12" cy="12" r="5"></circle><line x1="12" y1="1" x2="12" y2="3"></line><line x1="12" y1="21" x2="12" y2="23"></line><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line><line x1="1" y1="12" x2="3" y2="12"></line><line x1="21" y1="12" x2="23" y2="12"></line><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line></svg></span>
+        </button>
+        
+
+        </div>
+    </div>
+  </nav>
+</header>
+
+
+</div>
+
+
+<div class="container-xxl">
+  <aside class="doks-sidebar">
+    <nav id="doks-docs-nav" class="collapse d-lg-none" aria-label="Tertiary navigation">
+      
+<ul class="list-unstyled collapsible-sidebar">
+  
+    
+      
+      <li class="mb-1">
+        <button class="btn btn-toggle align-items-center rounded collapsed" data-bs-toggle="collapse" data-bs-target="#section-0967e753cd827c7c2576cf6f7292922e" aria-expanded="true">
+          Tutorial Javascript
+        </button>
+        <div class="collapse show" id="section-0967e753cd827c7c2576cf6f7292922e">
+          <ul class="btn-toggle-nav list-unstyled fw-normal pb-1 small">
+            
+              
+                
+                <li><a class="docs-link rounded" href="https://kaban.my.id/javascript/tutorial/pengenalan/">Pengenalan Javascript</a></li>
+              
+            
+              
+                
+                <li><a class="docs-link rounded" href="https://kaban.my.id/javascript/tutorial/02-instalasi-persiapan/">Instalasi &amp; Persiapan Lingkungan JavaScript</a></li>
+              
+            
+              
+                
+                <li><a class="docs-link rounded" href="https://kaban.my.id/javascript/tutorial/03-sintaks-variabel/">Sintaks Dasar &amp; Variabel</a></li>
+              
+            
+              
+                
+                <li><a class="docs-link rounded" href="https://kaban.my.id/javascript/tutorial/04-tipe-data-konversi/">Tipe Data &amp; Konversi</a></li>
+              
+            
+              
+                
+                <li><a class="docs-link rounded" href="https://kaban.my.id/javascript/tutorial/05-struktur-kontrol/">Struktur Kontrol &amp; Perulangan</a></li>
+              
+            
+              
+                
+                <li><a class="docs-link rounded" href="https://kaban.my.id/javascript/tutorial/06-fungsi/">Fungsi</a></li>
+              
+            
+              
+                
+                <li><a class="docs-link rounded active" href="https://kaban.my.id/javascript/tutorial/07-array/">Array &amp; Method-nya</a></li>
+              
+            
+              
+                
+                <li><a class="docs-link rounded" href="https://kaban.my.id/javascript/tutorial/08-object/">Object &amp; Method-nya</a></li>
+              
+            
+              
+                
+                <li><a class="docs-link rounded" href="https://kaban.my.id/javascript/tutorial/09-dom-manipulation/">DOM Manipulation</a></li>
+              
+            
+              
+                
+                <li><a class="docs-link rounded" href="https://kaban.my.id/javascript/tutorial/10-event-handling/">Event &amp; Event Handling</a></li>
+              
+            
+              
+                
+                <li><a class="docs-link rounded" href="https://kaban.my.id/javascript/tutorial/11-web-storage/">Web Storage &amp; Cookie</a></li>
+              
+            
+              
+                
+                <li><a class="docs-link rounded" href="https://kaban.my.id/javascript/tutorial/12-es6-modern/">ES6&#43; Fitur Modern</a></li>
+              
+            
+              
+                
+                <li><a class="docs-link rounded" href="https://kaban.my.id/javascript/tutorial/13-async-javascript/">Asynchronous JavaScript</a></li>
+              
+            
+              
+                
+                <li><a class="docs-link rounded" href="https://kaban.my.id/javascript/tutorial/14-fetch-api/">Fetch API &amp; AJAX</a></li>
+              
+            
+              
+                
+                <li><a class="docs-link rounded" href="https://kaban.my.id/javascript/tutorial/15-nodejs-npm/">Node.js &amp; npm Dasar</a></li>
+              
+            
+              
+                
+                <li><a class="docs-link rounded" href="https://kaban.my.id/javascript/tutorial/16-bundler-tooling/">Module Bundler &amp; Build Tool</a></li>
+              
+            
+          </ul>
+        </div>
+      </li>
+    
+  
+</ul>
+
+    </nav>
+  </aside>
+</div>
+
+    <div class="wrap container-xxl" role="document">
+      <div class="content">
+        
+	<div class="row flex-xl-nowrap">
+		<div class="col-lg-5 col-xl-4 docs-sidebar d-none d-lg-block">
+			<nav class="docs-links" aria-label="Main navigation">
+				
+<ul class="list-unstyled collapsible-sidebar">
+  
+    
+      
+      <li class="mb-1">
+        <button class="btn btn-toggle align-items-center rounded collapsed" data-bs-toggle="collapse" data-bs-target="#section-0967e753cd827c7c2576cf6f7292922e" aria-expanded="true">
+          Tutorial Javascript
+        </button>
+        <div class="collapse show" id="section-0967e753cd827c7c2576cf6f7292922e">
+          <ul class="btn-toggle-nav list-unstyled fw-normal pb-1 small">
+            
+              
+                
+                <li><a class="docs-link rounded" href="https://kaban.my.id/javascript/tutorial/pengenalan/">Pengenalan Javascript</a></li>
+              
+            
+              
+                
+                <li><a class="docs-link rounded" href="https://kaban.my.id/javascript/tutorial/02-instalasi-persiapan/">Instalasi &amp; Persiapan Lingkungan JavaScript</a></li>
+              
+            
+              
+                
+                <li><a class="docs-link rounded" href="https://kaban.my.id/javascript/tutorial/03-sintaks-variabel/">Sintaks Dasar &amp; Variabel</a></li>
+              
+            
+              
+                
+                <li><a class="docs-link rounded" href="https://kaban.my.id/javascript/tutorial/04-tipe-data-konversi/">Tipe Data &amp; Konversi</a></li>
+              
+            
+              
+                
+                <li><a class="docs-link rounded" href="https://kaban.my.id/javascript/tutorial/05-struktur-kontrol/">Struktur Kontrol &amp; Perulangan</a></li>
+              
+            
+              
+                
+                <li><a class="docs-link rounded" href="https://kaban.my.id/javascript/tutorial/06-fungsi/">Fungsi</a></li>
+              
+            
+              
+                
+                <li><a class="docs-link rounded active" href="https://kaban.my.id/javascript/tutorial/07-array/">Array &amp; Method-nya</a></li>
+              
+            
+              
+                
+                <li><a class="docs-link rounded" href="https://kaban.my.id/javascript/tutorial/08-object/">Object &amp; Method-nya</a></li>
+              
+            
+              
+                
+                <li><a class="docs-link rounded" href="https://kaban.my.id/javascript/tutorial/09-dom-manipulation/">DOM Manipulation</a></li>
+              
+            
+              
+                
+                <li><a class="docs-link rounded" href="https://kaban.my.id/javascript/tutorial/10-event-handling/">Event &amp; Event Handling</a></li>
+              
+            
+              
+                
+                <li><a class="docs-link rounded" href="https://kaban.my.id/javascript/tutorial/11-web-storage/">Web Storage &amp; Cookie</a></li>
+              
+            
+              
+                
+                <li><a class="docs-link rounded" href="https://kaban.my.id/javascript/tutorial/12-es6-modern/">ES6&#43; Fitur Modern</a></li>
+              
+            
+              
+                
+                <li><a class="docs-link rounded" href="https://kaban.my.id/javascript/tutorial/13-async-javascript/">Asynchronous JavaScript</a></li>
+              
+            
+              
+                
+                <li><a class="docs-link rounded" href="https://kaban.my.id/javascript/tutorial/14-fetch-api/">Fetch API &amp; AJAX</a></li>
+              
+            
+              
+                
+                <li><a class="docs-link rounded" href="https://kaban.my.id/javascript/tutorial/15-nodejs-npm/">Node.js &amp; npm Dasar</a></li>
+              
+            
+              
+                
+                <li><a class="docs-link rounded" href="https://kaban.my.id/javascript/tutorial/16-bundler-tooling/">Module Bundler &amp; Build Tool</a></li>
+              
+            
+          </ul>
+        </div>
+      </li>
+    
+  
+</ul>
+
+			</nav>
+		</div>
+		<nav class="docs-toc d-none d-xl-block col-xl-3" aria-label="Secondary navigation">
+			<div class="d-xl-none">
+  <button class="btn btn-outline-primary btn-sm doks-toc-toggle collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#onThisPage" aria-controls="doks-docs-nav" aria-expanded="false" aria-label="Toggle On this page navigation">
+    <span>Daftar isi</span>
+    <span>
+      <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" class="doks doks-expand" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><title>Expand</title><polyline points="7 13 12 18 17 13"></polyline><polyline points="7 6 12 11 17 6"></polyline></svg>
+      <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" class="doks doks-collapse" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><title>Collapse</title><polyline points="17 11 12 6 7 11"></polyline><polyline points="17 18 12 13 7 18"></polyline></svg>
+    </span>
+  </button>
+  <div class="collapse" id="onThisPage">
+    <div class="card card-body mt-3 py-1">
+      <div class="page-links">
+        <nav id="TableOfContents">
+  <ul>
+    <li><a href="#pendahuluan">Pendahuluan</a></li>
+    <li><a href="#membuat-array">Membuat Array</a>
+      <ul>
+        <li><a href="#1-array-literal-direkomendasikan">1. Array Literal (Direkomendasikan)</a></li>
+        <li><a href="#2-constructor-array">2. Constructor <code>Array</code></a></li>
+        <li><a href="#3-arrayfrom--dari-iterable-atau-array-like">3. <code>Array.from()</code> — Dari Iterable atau Array-like</a></li>
+        <li><a href="#4-arrayof--membuat-array-dari-argumen">4. <code>Array.of()</code> — Membuat Array dari Argumen</a></li>
+        <li><a href="#5-arrayfill--array-dengan-nilai-yang-sama">5. <code>Array.fill()</code> — Array dengan Nilai yang Sama</a></li>
+      </ul>
+    </li>
+    <li><a href="#mengakses-elemen">Mengakses Elemen</a>
+      <ul>
+        <li><a href="#index-mulai-dari-0">Index (Mulai dari 0)</a></li>
+        <li><a href="#length--jumlah-elemen"><code>length</code> — Jumlah Elemen</a></li>
+        <li><a href="#at--akses-dengan-index-termasuk-negatif"><code>at()</code> — Akses dengan Index (Termasuk Negatif)</a></li>
+        <li><a href="#mengubah-elemen">Mengubah Elemen</a></li>
+      </ul>
+    </li>
+    <li><a href="#method-mutasi-vs-non-mutasi">Method Mutasi vs Non-Mutasi</a></li>
+    <li><a href="#method-mutasi-mengubah-array-asli">Method Mutasi (Mengubah Array Asli)</a>
+      <ul>
+        <li><a href="#push--tambah-di-akhir"><code>push()</code> — Tambah di Akhir</a></li>
+        <li><a href="#pop--hapus-dari-akhir"><code>pop()</code> — Hapus dari Akhir</a></li>
+        <li><a href="#unshift--tambah-di-awal"><code>unshift()</code> — Tambah di Awal</a></li>
+        <li><a href="#shift--hapus-dari-awal"><code>shift()</code> — Hapus dari Awal</a></li>
+        <li><a href="#splice--tambahhapus-di-posisi-tertentu"><code>splice()</code> — Tambah/Hapus di Posisi Tertentu</a></li>
+        <li><a href="#sort--mengurutkan-mutasi"><code>sort()</code> — Mengurutkan (Mutasi!)</a></li>
+        <li><a href="#reverse--membalik-urutan-mutasi"><code>reverse()</code> — Membalik Urutan (Mutasi!)</a></li>
+        <li><a href="#fill--mengisi-dengan-nilai"><code>fill()</code> — Mengisi dengan Nilai</a></li>
+      </ul>
+    </li>
+    <li><a href="#method-non-mutasi-mengembalikan-nilai-baru">Method Non-Mutasi (Mengembalikan Nilai Baru)</a>
+      <ul>
+        <li><a href="#slice--mengambil-bagian-array"><code>slice()</code> — Mengambil Bagian Array</a></li>
+        <li><a href="#concat--menggabungkan-array"><code>concat()</code> — Menggabungkan Array</a></li>
+        <li><a href="#join--menggabungkan-menjadi-string"><code>join()</code> — Menggabungkan menjadi String</a></li>
+        <li><a href="#indexof-dan-lastindexof"><code>indexOf()</code> dan <code>lastIndexOf()</code></a></li>
+        <li><a href="#includes--cek-keberadaan"><code>includes()</code> — Cek Keberadaan</a></li>
+        <li><a href="#find-dan-findindex"><code>find()</code> dan <code>findIndex()</code></a></li>
+        <li><a href="#findlast-dan-findlastindex-es2023"><code>findLast()</code> dan <code>findLastIndex()</code> (ES2023)</a></li>
+        <li><a href="#some-dan-every"><code>some()</code> dan <code>every()</code></a></li>
+        <li><a href="#flat-dan-flatmap"><code>flat()</code> dan <code>flatMap()</code></a></li>
+        <li><a href="#toreversed-tosorted-tospliced-es2023"><code>toReversed()</code>, <code>toSorted()</code>, <code>toSpliced()</code> (ES2023)</a></li>
+      </ul>
+    </li>
+    <li><a href="#method-iterasi-foreach-map-filter-reduce">Method Iterasi: <code>forEach</code>, <code>map</code>, <code>filter</code>, <code>reduce</code></a>
+      <ul>
+        <li><a href="#foreach--jalankan-fungsi-untuk-setiap-elemen"><code>forEach()</code> — Jalankan Fungsi untuk Setiap Elemen</a></li>
+        <li><a href="#map--transformasi-setiap-elemen"><code>map()</code> — Transformasi Setiap Elemen</a></li>
+        <li><a href="#filter--menyaring-elemen"><code>filter()</code> — Menyaring Elemen</a></li>
+        <li><a href="#reduce--meringkas-array-menjadi-satu-nilai"><code>reduce()</code> — Meringkas Array menjadi Satu Nilai</a></li>
+        <li><a href="#perbandingan-foreach-map-filter-reduce">Perbandingan <code>forEach</code>, <code>map</code>, <code>filter</code>, <code>reduce</code></a></li>
+        <li><a href="#chaining-method">Chaining Method</a></li>
+      </ul>
+    </li>
+    <li><a href="#spread-operator-dan-destructuring">Spread Operator dan Destructuring</a>
+      <ul>
+        <li><a href="#spread-operator--pada-array">Spread Operator (<code>...</code>) pada Array</a></li>
+        <li><a href="#destructuring-array">Destructuring Array</a></li>
+      </ul>
+    </li>
+    <li><a href="#array-multidimensi">Array Multidimensi</a></li>
+    <li><a href="#contoh-praktis">Contoh Praktis</a>
+      <ul>
+        <li><a href="#1-keranjang-belanja">1. Keranjang Belanja</a></li>
+        <li><a href="#2-menghapus-duplikat">2. Menghapus Duplikat</a></li>
+        <li><a href="#3-mengelompokkan-data">3. Mengelompokkan Data</a></li>
+        <li><a href="#4-pencarian-dan-filter">4. Pencarian dan Filter</a></li>
+        <li><a href="#5-sorting-data-kompleks">5. Sorting Data Kompleks</a></li>
+      </ul>
+    </li>
+    <li><a href="#ringkasan">Ringkasan</a></li>
+  </ul>
+</nav>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="page-links d-none d-xl-block">
+  <h3>Daftar isi</h3>
+  <nav id="TableOfContents">
+  <ul>
+    <li><a href="#pendahuluan">Pendahuluan</a></li>
+    <li><a href="#membuat-array">Membuat Array</a>
+      <ul>
+        <li><a href="#1-array-literal-direkomendasikan">1. Array Literal (Direkomendasikan)</a></li>
+        <li><a href="#2-constructor-array">2. Constructor <code>Array</code></a></li>
+        <li><a href="#3-arrayfrom--dari-iterable-atau-array-like">3. <code>Array.from()</code> — Dari Iterable atau Array-like</a></li>
+        <li><a href="#4-arrayof--membuat-array-dari-argumen">4. <code>Array.of()</code> — Membuat Array dari Argumen</a></li>
+        <li><a href="#5-arrayfill--array-dengan-nilai-yang-sama">5. <code>Array.fill()</code> — Array dengan Nilai yang Sama</a></li>
+      </ul>
+    </li>
+    <li><a href="#mengakses-elemen">Mengakses Elemen</a>
+      <ul>
+        <li><a href="#index-mulai-dari-0">Index (Mulai dari 0)</a></li>
+        <li><a href="#length--jumlah-elemen"><code>length</code> — Jumlah Elemen</a></li>
+        <li><a href="#at--akses-dengan-index-termasuk-negatif"><code>at()</code> — Akses dengan Index (Termasuk Negatif)</a></li>
+        <li><a href="#mengubah-elemen">Mengubah Elemen</a></li>
+      </ul>
+    </li>
+    <li><a href="#method-mutasi-vs-non-mutasi">Method Mutasi vs Non-Mutasi</a></li>
+    <li><a href="#method-mutasi-mengubah-array-asli">Method Mutasi (Mengubah Array Asli)</a>
+      <ul>
+        <li><a href="#push--tambah-di-akhir"><code>push()</code> — Tambah di Akhir</a></li>
+        <li><a href="#pop--hapus-dari-akhir"><code>pop()</code> — Hapus dari Akhir</a></li>
+        <li><a href="#unshift--tambah-di-awal"><code>unshift()</code> — Tambah di Awal</a></li>
+        <li><a href="#shift--hapus-dari-awal"><code>shift()</code> — Hapus dari Awal</a></li>
+        <li><a href="#splice--tambahhapus-di-posisi-tertentu"><code>splice()</code> — Tambah/Hapus di Posisi Tertentu</a></li>
+        <li><a href="#sort--mengurutkan-mutasi"><code>sort()</code> — Mengurutkan (Mutasi!)</a></li>
+        <li><a href="#reverse--membalik-urutan-mutasi"><code>reverse()</code> — Membalik Urutan (Mutasi!)</a></li>
+        <li><a href="#fill--mengisi-dengan-nilai"><code>fill()</code> — Mengisi dengan Nilai</a></li>
+      </ul>
+    </li>
+    <li><a href="#method-non-mutasi-mengembalikan-nilai-baru">Method Non-Mutasi (Mengembalikan Nilai Baru)</a>
+      <ul>
+        <li><a href="#slice--mengambil-bagian-array"><code>slice()</code> — Mengambil Bagian Array</a></li>
+        <li><a href="#concat--menggabungkan-array"><code>concat()</code> — Menggabungkan Array</a></li>
+        <li><a href="#join--menggabungkan-menjadi-string"><code>join()</code> — Menggabungkan menjadi String</a></li>
+        <li><a href="#indexof-dan-lastindexof"><code>indexOf()</code> dan <code>lastIndexOf()</code></a></li>
+        <li><a href="#includes--cek-keberadaan"><code>includes()</code> — Cek Keberadaan</a></li>
+        <li><a href="#find-dan-findindex"><code>find()</code> dan <code>findIndex()</code></a></li>
+        <li><a href="#findlast-dan-findlastindex-es2023"><code>findLast()</code> dan <code>findLastIndex()</code> (ES2023)</a></li>
+        <li><a href="#some-dan-every"><code>some()</code> dan <code>every()</code></a></li>
+        <li><a href="#flat-dan-flatmap"><code>flat()</code> dan <code>flatMap()</code></a></li>
+        <li><a href="#toreversed-tosorted-tospliced-es2023"><code>toReversed()</code>, <code>toSorted()</code>, <code>toSpliced()</code> (ES2023)</a></li>
+      </ul>
+    </li>
+    <li><a href="#method-iterasi-foreach-map-filter-reduce">Method Iterasi: <code>forEach</code>, <code>map</code>, <code>filter</code>, <code>reduce</code></a>
+      <ul>
+        <li><a href="#foreach--jalankan-fungsi-untuk-setiap-elemen"><code>forEach()</code> — Jalankan Fungsi untuk Setiap Elemen</a></li>
+        <li><a href="#map--transformasi-setiap-elemen"><code>map()</code> — Transformasi Setiap Elemen</a></li>
+        <li><a href="#filter--menyaring-elemen"><code>filter()</code> — Menyaring Elemen</a></li>
+        <li><a href="#reduce--meringkas-array-menjadi-satu-nilai"><code>reduce()</code> — Meringkas Array menjadi Satu Nilai</a></li>
+        <li><a href="#perbandingan-foreach-map-filter-reduce">Perbandingan <code>forEach</code>, <code>map</code>, <code>filter</code>, <code>reduce</code></a></li>
+        <li><a href="#chaining-method">Chaining Method</a></li>
+      </ul>
+    </li>
+    <li><a href="#spread-operator-dan-destructuring">Spread Operator dan Destructuring</a>
+      <ul>
+        <li><a href="#spread-operator--pada-array">Spread Operator (<code>...</code>) pada Array</a></li>
+        <li><a href="#destructuring-array">Destructuring Array</a></li>
+      </ul>
+    </li>
+    <li><a href="#array-multidimensi">Array Multidimensi</a></li>
+    <li><a href="#contoh-praktis">Contoh Praktis</a>
+      <ul>
+        <li><a href="#1-keranjang-belanja">1. Keranjang Belanja</a></li>
+        <li><a href="#2-menghapus-duplikat">2. Menghapus Duplikat</a></li>
+        <li><a href="#3-mengelompokkan-data">3. Mengelompokkan Data</a></li>
+        <li><a href="#4-pencarian-dan-filter">4. Pencarian dan Filter</a></li>
+        <li><a href="#5-sorting-data-kompleks">5. Sorting Data Kompleks</a></li>
+      </ul>
+    </li>
+    <li><a href="#ringkasan">Ringkasan</a></li>
+  </ul>
+</nav>
+  </div>
+
+		</nav>
+		<main class="docs-content col-lg-11 col-xl-9">
+		
+				<nav aria-label="breadcrumb">
+					<ol class="breadcrumb">
+						<li class="breadcrumb-item"><a href="/">Home</a></li>
+<li class="breadcrumb-item"><a href="/javascript/">Javascript</a></li>
+<li class="breadcrumb-item"><a href="/javascript/tutorial/">Tutorial Javascript</a></li>
+<li class="breadcrumb-item active" aria-current="page">Array &amp; Method-nya</li>
+					</ol>
+				</nav>
+			
+			<h1>Array &amp; Method-nya</h1>
+			<p class="lead">Array adalah struktur data paling sering digunakan di JavaScript. Artikel ini membahas cara membuat dan mengakses array, method mutasi dan non-mutasi, map/filter/reduce, sort, spread operator, dan destructuring dengan contoh praktis.</p>
+			<nav class="d-xl-none" aria-label="Quaternary navigation">
+				<div class="d-xl-none">
+  <button class="btn btn-outline-primary btn-sm doks-toc-toggle collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#onThisPage" aria-controls="doks-docs-nav" aria-expanded="false" aria-label="Toggle On this page navigation">
+    <span>Daftar isi</span>
+    <span>
+      <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" class="doks doks-expand" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><title>Expand</title><polyline points="7 13 12 18 17 13"></polyline><polyline points="7 6 12 11 17 6"></polyline></svg>
+      <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" class="doks doks-collapse" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><title>Collapse</title><polyline points="17 11 12 6 7 11"></polyline><polyline points="17 18 12 13 7 18"></polyline></svg>
+    </span>
+  </button>
+  <div class="collapse" id="onThisPage">
+    <div class="card card-body mt-3 py-1">
+      <div class="page-links">
+        <nav id="TableOfContents">
+  <ul>
+    <li><a href="#pendahuluan">Pendahuluan</a></li>
+    <li><a href="#membuat-array">Membuat Array</a>
+      <ul>
+        <li><a href="#1-array-literal-direkomendasikan">1. Array Literal (Direkomendasikan)</a></li>
+        <li><a href="#2-constructor-array">2. Constructor <code>Array</code></a></li>
+        <li><a href="#3-arrayfrom--dari-iterable-atau-array-like">3. <code>Array.from()</code> — Dari Iterable atau Array-like</a></li>
+        <li><a href="#4-arrayof--membuat-array-dari-argumen">4. <code>Array.of()</code> — Membuat Array dari Argumen</a></li>
+        <li><a href="#5-arrayfill--array-dengan-nilai-yang-sama">5. <code>Array.fill()</code> — Array dengan Nilai yang Sama</a></li>
+      </ul>
+    </li>
+    <li><a href="#mengakses-elemen">Mengakses Elemen</a>
+      <ul>
+        <li><a href="#index-mulai-dari-0">Index (Mulai dari 0)</a></li>
+        <li><a href="#length--jumlah-elemen"><code>length</code> — Jumlah Elemen</a></li>
+        <li><a href="#at--akses-dengan-index-termasuk-negatif"><code>at()</code> — Akses dengan Index (Termasuk Negatif)</a></li>
+        <li><a href="#mengubah-elemen">Mengubah Elemen</a></li>
+      </ul>
+    </li>
+    <li><a href="#method-mutasi-vs-non-mutasi">Method Mutasi vs Non-Mutasi</a></li>
+    <li><a href="#method-mutasi-mengubah-array-asli">Method Mutasi (Mengubah Array Asli)</a>
+      <ul>
+        <li><a href="#push--tambah-di-akhir"><code>push()</code> — Tambah di Akhir</a></li>
+        <li><a href="#pop--hapus-dari-akhir"><code>pop()</code> — Hapus dari Akhir</a></li>
+        <li><a href="#unshift--tambah-di-awal"><code>unshift()</code> — Tambah di Awal</a></li>
+        <li><a href="#shift--hapus-dari-awal"><code>shift()</code> — Hapus dari Awal</a></li>
+        <li><a href="#splice--tambahhapus-di-posisi-tertentu"><code>splice()</code> — Tambah/Hapus di Posisi Tertentu</a></li>
+        <li><a href="#sort--mengurutkan-mutasi"><code>sort()</code> — Mengurutkan (Mutasi!)</a></li>
+        <li><a href="#reverse--membalik-urutan-mutasi"><code>reverse()</code> — Membalik Urutan (Mutasi!)</a></li>
+        <li><a href="#fill--mengisi-dengan-nilai"><code>fill()</code> — Mengisi dengan Nilai</a></li>
+      </ul>
+    </li>
+    <li><a href="#method-non-mutasi-mengembalikan-nilai-baru">Method Non-Mutasi (Mengembalikan Nilai Baru)</a>
+      <ul>
+        <li><a href="#slice--mengambil-bagian-array"><code>slice()</code> — Mengambil Bagian Array</a></li>
+        <li><a href="#concat--menggabungkan-array"><code>concat()</code> — Menggabungkan Array</a></li>
+        <li><a href="#join--menggabungkan-menjadi-string"><code>join()</code> — Menggabungkan menjadi String</a></li>
+        <li><a href="#indexof-dan-lastindexof"><code>indexOf()</code> dan <code>lastIndexOf()</code></a></li>
+        <li><a href="#includes--cek-keberadaan"><code>includes()</code> — Cek Keberadaan</a></li>
+        <li><a href="#find-dan-findindex"><code>find()</code> dan <code>findIndex()</code></a></li>
+        <li><a href="#findlast-dan-findlastindex-es2023"><code>findLast()</code> dan <code>findLastIndex()</code> (ES2023)</a></li>
+        <li><a href="#some-dan-every"><code>some()</code> dan <code>every()</code></a></li>
+        <li><a href="#flat-dan-flatmap"><code>flat()</code> dan <code>flatMap()</code></a></li>
+        <li><a href="#toreversed-tosorted-tospliced-es2023"><code>toReversed()</code>, <code>toSorted()</code>, <code>toSpliced()</code> (ES2023)</a></li>
+      </ul>
+    </li>
+    <li><a href="#method-iterasi-foreach-map-filter-reduce">Method Iterasi: <code>forEach</code>, <code>map</code>, <code>filter</code>, <code>reduce</code></a>
+      <ul>
+        <li><a href="#foreach--jalankan-fungsi-untuk-setiap-elemen"><code>forEach()</code> — Jalankan Fungsi untuk Setiap Elemen</a></li>
+        <li><a href="#map--transformasi-setiap-elemen"><code>map()</code> — Transformasi Setiap Elemen</a></li>
+        <li><a href="#filter--menyaring-elemen"><code>filter()</code> — Menyaring Elemen</a></li>
+        <li><a href="#reduce--meringkas-array-menjadi-satu-nilai"><code>reduce()</code> — Meringkas Array menjadi Satu Nilai</a></li>
+        <li><a href="#perbandingan-foreach-map-filter-reduce">Perbandingan <code>forEach</code>, <code>map</code>, <code>filter</code>, <code>reduce</code></a></li>
+        <li><a href="#chaining-method">Chaining Method</a></li>
+      </ul>
+    </li>
+    <li><a href="#spread-operator-dan-destructuring">Spread Operator dan Destructuring</a>
+      <ul>
+        <li><a href="#spread-operator--pada-array">Spread Operator (<code>...</code>) pada Array</a></li>
+        <li><a href="#destructuring-array">Destructuring Array</a></li>
+      </ul>
+    </li>
+    <li><a href="#array-multidimensi">Array Multidimensi</a></li>
+    <li><a href="#contoh-praktis">Contoh Praktis</a>
+      <ul>
+        <li><a href="#1-keranjang-belanja">1. Keranjang Belanja</a></li>
+        <li><a href="#2-menghapus-duplikat">2. Menghapus Duplikat</a></li>
+        <li><a href="#3-mengelompokkan-data">3. Mengelompokkan Data</a></li>
+        <li><a href="#4-pencarian-dan-filter">4. Pencarian dan Filter</a></li>
+        <li><a href="#5-sorting-data-kompleks">5. Sorting Data Kompleks</a></li>
+      </ul>
+    </li>
+    <li><a href="#ringkasan">Ringkasan</a></li>
+  </ul>
+</nav>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="page-links d-none d-xl-block">
+  <h3>Daftar isi</h3>
+  <nav id="TableOfContents">
+  <ul>
+    <li><a href="#pendahuluan">Pendahuluan</a></li>
+    <li><a href="#membuat-array">Membuat Array</a>
+      <ul>
+        <li><a href="#1-array-literal-direkomendasikan">1. Array Literal (Direkomendasikan)</a></li>
+        <li><a href="#2-constructor-array">2. Constructor <code>Array</code></a></li>
+        <li><a href="#3-arrayfrom--dari-iterable-atau-array-like">3. <code>Array.from()</code> — Dari Iterable atau Array-like</a></li>
+        <li><a href="#4-arrayof--membuat-array-dari-argumen">4. <code>Array.of()</code> — Membuat Array dari Argumen</a></li>
+        <li><a href="#5-arrayfill--array-dengan-nilai-yang-sama">5. <code>Array.fill()</code> — Array dengan Nilai yang Sama</a></li>
+      </ul>
+    </li>
+    <li><a href="#mengakses-elemen">Mengakses Elemen</a>
+      <ul>
+        <li><a href="#index-mulai-dari-0">Index (Mulai dari 0)</a></li>
+        <li><a href="#length--jumlah-elemen"><code>length</code> — Jumlah Elemen</a></li>
+        <li><a href="#at--akses-dengan-index-termasuk-negatif"><code>at()</code> — Akses dengan Index (Termasuk Negatif)</a></li>
+        <li><a href="#mengubah-elemen">Mengubah Elemen</a></li>
+      </ul>
+    </li>
+    <li><a href="#method-mutasi-vs-non-mutasi">Method Mutasi vs Non-Mutasi</a></li>
+    <li><a href="#method-mutasi-mengubah-array-asli">Method Mutasi (Mengubah Array Asli)</a>
+      <ul>
+        <li><a href="#push--tambah-di-akhir"><code>push()</code> — Tambah di Akhir</a></li>
+        <li><a href="#pop--hapus-dari-akhir"><code>pop()</code> — Hapus dari Akhir</a></li>
+        <li><a href="#unshift--tambah-di-awal"><code>unshift()</code> — Tambah di Awal</a></li>
+        <li><a href="#shift--hapus-dari-awal"><code>shift()</code> — Hapus dari Awal</a></li>
+        <li><a href="#splice--tambahhapus-di-posisi-tertentu"><code>splice()</code> — Tambah/Hapus di Posisi Tertentu</a></li>
+        <li><a href="#sort--mengurutkan-mutasi"><code>sort()</code> — Mengurutkan (Mutasi!)</a></li>
+        <li><a href="#reverse--membalik-urutan-mutasi"><code>reverse()</code> — Membalik Urutan (Mutasi!)</a></li>
+        <li><a href="#fill--mengisi-dengan-nilai"><code>fill()</code> — Mengisi dengan Nilai</a></li>
+      </ul>
+    </li>
+    <li><a href="#method-non-mutasi-mengembalikan-nilai-baru">Method Non-Mutasi (Mengembalikan Nilai Baru)</a>
+      <ul>
+        <li><a href="#slice--mengambil-bagian-array"><code>slice()</code> — Mengambil Bagian Array</a></li>
+        <li><a href="#concat--menggabungkan-array"><code>concat()</code> — Menggabungkan Array</a></li>
+        <li><a href="#join--menggabungkan-menjadi-string"><code>join()</code> — Menggabungkan menjadi String</a></li>
+        <li><a href="#indexof-dan-lastindexof"><code>indexOf()</code> dan <code>lastIndexOf()</code></a></li>
+        <li><a href="#includes--cek-keberadaan"><code>includes()</code> — Cek Keberadaan</a></li>
+        <li><a href="#find-dan-findindex"><code>find()</code> dan <code>findIndex()</code></a></li>
+        <li><a href="#findlast-dan-findlastindex-es2023"><code>findLast()</code> dan <code>findLastIndex()</code> (ES2023)</a></li>
+        <li><a href="#some-dan-every"><code>some()</code> dan <code>every()</code></a></li>
+        <li><a href="#flat-dan-flatmap"><code>flat()</code> dan <code>flatMap()</code></a></li>
+        <li><a href="#toreversed-tosorted-tospliced-es2023"><code>toReversed()</code>, <code>toSorted()</code>, <code>toSpliced()</code> (ES2023)</a></li>
+      </ul>
+    </li>
+    <li><a href="#method-iterasi-foreach-map-filter-reduce">Method Iterasi: <code>forEach</code>, <code>map</code>, <code>filter</code>, <code>reduce</code></a>
+      <ul>
+        <li><a href="#foreach--jalankan-fungsi-untuk-setiap-elemen"><code>forEach()</code> — Jalankan Fungsi untuk Setiap Elemen</a></li>
+        <li><a href="#map--transformasi-setiap-elemen"><code>map()</code> — Transformasi Setiap Elemen</a></li>
+        <li><a href="#filter--menyaring-elemen"><code>filter()</code> — Menyaring Elemen</a></li>
+        <li><a href="#reduce--meringkas-array-menjadi-satu-nilai"><code>reduce()</code> — Meringkas Array menjadi Satu Nilai</a></li>
+        <li><a href="#perbandingan-foreach-map-filter-reduce">Perbandingan <code>forEach</code>, <code>map</code>, <code>filter</code>, <code>reduce</code></a></li>
+        <li><a href="#chaining-method">Chaining Method</a></li>
+      </ul>
+    </li>
+    <li><a href="#spread-operator-dan-destructuring">Spread Operator dan Destructuring</a>
+      <ul>
+        <li><a href="#spread-operator--pada-array">Spread Operator (<code>...</code>) pada Array</a></li>
+        <li><a href="#destructuring-array">Destructuring Array</a></li>
+      </ul>
+    </li>
+    <li><a href="#array-multidimensi">Array Multidimensi</a></li>
+    <li><a href="#contoh-praktis">Contoh Praktis</a>
+      <ul>
+        <li><a href="#1-keranjang-belanja">1. Keranjang Belanja</a></li>
+        <li><a href="#2-menghapus-duplikat">2. Menghapus Duplikat</a></li>
+        <li><a href="#3-mengelompokkan-data">3. Mengelompokkan Data</a></li>
+        <li><a href="#4-pencarian-dan-filter">4. Pencarian dan Filter</a></li>
+        <li><a href="#5-sorting-data-kompleks">5. Sorting Data Kompleks</a></li>
+      </ul>
+    </li>
+    <li><a href="#ringkasan">Ringkasan</a></li>
+  </ul>
+</nav>
+  </div>
+
+			</nav>
+			<h2 id="pendahuluan">Pendahuluan <a href="#pendahuluan" class="anchor" aria-hidden="true">#</a></h2>
+<p><strong>Array</strong> adalah struktur data yang menyimpan <strong>urutan nilai</strong> dalam satu variabel. Array bisa berisi tipe apa pun — string, number, boolean, object, bahkan array lain (nested array).</p>
+<p>Array adalah struktur data yang paling sering digunakan di JavaScript. Hampir setiap aplikasi menggunakan array: daftar produk, daftar user, hasil query API, dan sebagainya.</p>
+<p>Artikel ini membahas cara membuat array, mengakses elemen, method-method penting (mutasi dan non-mutasi), serta teknik modern seperti spread operator dan destructuring.</p>
+<blockquote>
+<p><strong>Asumsi:</strong> Anda sudah memahami variabel, tipe data, fungsi, dan arrow function dari artikel sebelumnya.</p>
+</blockquote>
+<hr>
+<h2 id="membuat-array">Membuat Array <a href="#membuat-array" class="anchor" aria-hidden="true">#</a></h2>
+<h3 id="1-array-literal-direkomendasikan">1. Array Literal (Direkomendasikan) <a href="#1-array-literal-direkomendasikan" class="anchor" aria-hidden="true">#</a></h3>
+<pre><code class="language-javascript">const buah = [&quot;apel&quot;, &quot;jeruk&quot;, &quot;mangga&quot;];
+const angka = [1, 2, 3, 4, 5];
+const campuran = [&quot;Budi&quot;, 25, true, null, { kota: &quot;Jakarta&quot; }];
+const kosong = [];
+const nested = [[1, 2], [3, 4], [5, 6]];
+</code></pre>
+<h3 id="2-constructor-array">2. Constructor <code>Array</code> <a href="#2-constructor-array" class="anchor" aria-hidden="true">#</a></h3>
+<pre><code class="language-javascript">const arr1 = new Array();          // []
+const arr2 = new Array(5);         // [ &lt;5 empty items&gt; ] (length 5, bukan [5]!)
+const arr3 = new Array(1, 2, 3);   // [1, 2, 3]
+</code></pre>
+<blockquote>
+<p>⚠️ <strong>Peringatan:</strong> <code>new Array(5)</code> membuat array dengan <strong>length 5</strong> (kosong), bukan <code>[5]</code>. Gunakan literal <code>[5]</code> untuk array berisi satu angka 5.</p>
+</blockquote>
+<h3 id="3-arrayfrom--dari-iterable-atau-array-like">3. <code>Array.from()</code> — Dari Iterable atau Array-like <a href="#3-arrayfrom--dari-iterable-atau-array-like" class="anchor" aria-hidden="true">#</a></h3>
+<pre><code class="language-javascript">// Dari string
+Array.from(&quot;Hello&quot;); // [&quot;H&quot;, &quot;e&quot;, &quot;l&quot;, &quot;l&quot;, &quot;o&quot;]
+
+// Dari Set
+Array.from(new Set([1, 2, 2, 3, 3])); // [1, 2, 3]
+
+// Dengan mapping function
+Array.from([1, 2, 3], x =&gt; x * 2); // [2, 4, 6]
+
+// Dari array-like (misalnya arguments)
+function contoh() {
+  return Array.from(arguments);
+}
+contoh(1, 2, 3); // [1, 2, 3]
+</code></pre>
+<h3 id="4-arrayof--membuat-array-dari-argumen">4. <code>Array.of()</code> — Membuat Array dari Argumen <a href="#4-arrayof--membuat-array-dari-argumen" class="anchor" aria-hidden="true">#</a></h3>
+<pre><code class="language-javascript">Array.of(5);       // [5]  (bukan array kosong seperti new Array(5))
+Array.of(1, 2, 3); // [1, 2, 3]
+</code></pre>
+<h3 id="5-arrayfill--array-dengan-nilai-yang-sama">5. <code>Array.fill()</code> — Array dengan Nilai yang Sama <a href="#5-arrayfill--array-dengan-nilai-yang-sama" class="anchor" aria-hidden="true">#</a></h3>
+<pre><code class="language-javascript">const nol = new Array(5).fill(0);       // [0, 0, 0, 0, 0]
+const nama = new Array(3).fill(&quot;Anonim&quot;); // [&quot;Anonim&quot;, &quot;Anonim&quot;, &quot;Anonim&quot;]
+</code></pre>
+<hr>
+<h2 id="mengakses-elemen">Mengakses Elemen <a href="#mengakses-elemen" class="anchor" aria-hidden="true">#</a></h2>
+<h3 id="index-mulai-dari-0">Index (Mulai dari 0) <a href="#index-mulai-dari-0" class="anchor" aria-hidden="true">#</a></h3>
+<pre><code class="language-javascript">const buah = [&quot;apel&quot;, &quot;jeruk&quot;, &quot;mangga&quot;];
+
+console.log(buah[0]); // &quot;apel&quot;
+console.log(buah[1]); // &quot;jeruk&quot;
+console.log(buah[2]); // &quot;mangga&quot;
+console.log(buah[3]); // undefined (di luar batas)
+</code></pre>
+<h3 id="length--jumlah-elemen"><code>length</code> — Jumlah Elemen <a href="#length--jumlah-elemen" class="anchor" aria-hidden="true">#</a></h3>
+<pre><code class="language-javascript">const buah = [&quot;apel&quot;, &quot;jeruk&quot;, &quot;mangga&quot;];
+console.log(buah.length); // 3
+
+// Elemen terakhir
+console.log(buah[buah.length - 1]); // &quot;mangga&quot;
+</code></pre>
+<h3 id="at--akses-dengan-index-termasuk-negatif"><code>at()</code> — Akses dengan Index (Termasuk Negatif) <a href="#at--akses-dengan-index-termasuk-negatif" class="anchor" aria-hidden="true">#</a></h3>
+<p>Diperkenalkan di ES2022. Mendukung index negatif (dari akhir).</p>
+<pre><code class="language-javascript">const buah = [&quot;apel&quot;, &quot;jeruk&quot;, &quot;mangga&quot;];
+
+console.log(buah.at(0));   // &quot;apel&quot;
+console.log(buah.at(-1));  // &quot;mangga&quot; (terakhir)
+console.log(buah.at(-2));  // &quot;jeruk&quot;
+</code></pre>
+<h3 id="mengubah-elemen">Mengubah Elemen <a href="#mengubah-elemen" class="anchor" aria-hidden="true">#</a></h3>
+<pre><code class="language-javascript">const buah = [&quot;apel&quot;, &quot;jeruk&quot;, &quot;mangga&quot;];
+buah[1] = &quot;pisang&quot;;
+console.log(buah); // [&quot;apel&quot;, &quot;pisang&quot;, &quot;mangga&quot;]
+</code></pre>
+<blockquote>
+<p><strong>Catatan:</strong> Array yang dideklarasikan dengan <code>const</code> <strong>bisa</strong> diubah isinya — <code>const</code> hanya mencegah reassign binding, bukan mutasi isi.</p>
+</blockquote>
+<hr>
+<h2 id="method-mutasi-vs-non-mutasi">Method Mutasi vs Non-Mutasi <a href="#method-mutasi-vs-non-mutasi" class="anchor" aria-hidden="true">#</a></h2>
+<p>Method array terbagi menjadi dua kategori penting:</p>
+<ul>
+<li><strong>Mutasi</strong> — mengubah array asli.</li>
+<li><strong>Non-mutasi</strong> — mengembalikan array/nilai baru, array asli tidak berubah.</li>
+</ul>
+<blockquote>
+<p><strong>Best practice:</strong> Utamakan method <strong>non-mutasi</strong> agar kode lebih mudah diprediksi dan tidak menimbulkan side effect.</p>
+</blockquote>
+<hr>
+<h2 id="method-mutasi-mengubah-array-asli">Method Mutasi (Mengubah Array Asli) <a href="#method-mutasi-mengubah-array-asli" class="anchor" aria-hidden="true">#</a></h2>
+<h3 id="push--tambah-di-akhir"><code>push()</code> — Tambah di Akhir <a href="#push--tambah-di-akhir" class="anchor" aria-hidden="true">#</a></h3>
+<pre><code class="language-javascript">const buah = [&quot;apel&quot;, &quot;jeruk&quot;];
+buah.push(&quot;mangga&quot;);
+console.log(buah); // [&quot;apel&quot;, &quot;jeruk&quot;, &quot;mangga&quot;]
+
+// Bisa menambah beberapa sekaligus
+buah.push(&quot;pisang&quot;, &quot;anggur&quot;);
+console.log(buah); // [&quot;apel&quot;, &quot;jeruk&quot;, &quot;mangga&quot;, &quot;pisang&quot;, &quot;anggur&quot;]
+
+// Mengembalikan length baru
+const len = buah.push(&quot;kiwi&quot;);
+console.log(len); // 6
+</code></pre>
+<h3 id="pop--hapus-dari-akhir"><code>pop()</code> — Hapus dari Akhir <a href="#pop--hapus-dari-akhir" class="anchor" aria-hidden="true">#</a></h3>
+<pre><code class="language-javascript">const buah = [&quot;apel&quot;, &quot;jeruk&quot;, &quot;mangga&quot;];
+const terakhir = buah.pop();
+console.log(terakhir); // &quot;mangga&quot;
+console.log(buah);     // [&quot;apel&quot;, &quot;jeruk&quot;]
+</code></pre>
+<h3 id="unshift--tambah-di-awal"><code>unshift()</code> — Tambah di Awal <a href="#unshift--tambah-di-awal" class="anchor" aria-hidden="true">#</a></h3>
+<pre><code class="language-javascript">const buah = [&quot;jeruk&quot;, &quot;mangga&quot;];
+buah.unshift(&quot;apel&quot;);
+console.log(buah); // [&quot;apel&quot;, &quot;jeruk&quot;, &quot;mangga&quot;]
+</code></pre>
+<blockquote>
+<p><strong>Catatan:</strong> <code>unshift()</code> lebih lambat dari <code>push()</code> karena harus menggeser semua elemen.</p>
+</blockquote>
+<h3 id="shift--hapus-dari-awal"><code>shift()</code> — Hapus dari Awal <a href="#shift--hapus-dari-awal" class="anchor" aria-hidden="true">#</a></h3>
+<pre><code class="language-javascript">const buah = [&quot;apel&quot;, &quot;jeruk&quot;, &quot;mangga&quot;];
+const pertama = buah.shift();
+console.log(pertama); // &quot;apel&quot;
+console.log(buah);    // [&quot;jeruk&quot;, &quot;mangga&quot;]
+</code></pre>
+<h3 id="splice--tambahhapus-di-posisi-tertentu"><code>splice()</code> — Tambah/Hapus di Posisi Tertentu <a href="#splice--tambahhapus-di-posisi-tertentu" class="anchor" aria-hidden="true">#</a></h3>
+<p>Sintaks: <code>splice(start, deleteCount, item1, item2, ...)</code></p>
+<pre><code class="language-javascript">const buah = [&quot;apel&quot;, &quot;jeruk&quot;, &quot;mangga&quot;, &quot;pisang&quot;];
+
+// Hapus 1 elemen di index 1
+buah.splice(1, 1);
+console.log(buah); // [&quot;apel&quot;, &quot;mangga&quot;, &quot;pisang&quot;]
+
+// Hapus 2 elemen mulai index 1, lalu tambah 2 elemen baru
+buah.splice(1, 2, &quot;anggur&quot;, &quot;kiwi&quot;);
+console.log(buah); // [&quot;apel&quot;, &quot;anggur&quot;, &quot;kiwi&quot;]
+
+// Sisipkan tanpa menghapus
+buah.splice(1, 0, &quot;jeruk&quot;);
+console.log(buah); // [&quot;apel&quot;, &quot;jeruk&quot;, &quot;anggur&quot;, &quot;kiwi&quot;]
+
+// Mengembalikan elemen yang dihapus
+const dihapus = buah.splice(0, 1);
+console.log(dihapus); // [&quot;apel&quot;]
+console.log(buah);    // [&quot;jeruk&quot;, &quot;anggur&quot;, &quot;kiwi&quot;]
+</code></pre>
+<h3 id="sort--mengurutkan-mutasi"><code>sort()</code> — Mengurutkan (Mutasi!) <a href="#sort--mengurutkan-mutasi" class="anchor" aria-hidden="true">#</a></h3>
+<pre><code class="language-javascript">const buah = [&quot;mangga&quot;, &quot;apel&quot;, &quot;jeruk&quot;];
+buah.sort();
+console.log(buah); // [&quot;apel&quot;, &quot;jeruk&quot;, &quot;mangga&quot;]
+
+const angka = [10, 2, 30, 4];
+angka.sort();
+console.log(angka); // [10, 2, 30, 4] (!!) — diurutkan sebagai string
+
+// Untuk angka, gunakan comparator
+angka.sort((a, b) =&gt; a - b);
+console.log(angka); // [2, 4, 10, 30]
+
+// Descending
+angka.sort((a, b) =&gt; b - a);
+console.log(angka); // [30, 10, 4, 2]
+</code></pre>
+<blockquote>
+<p>⚠️ <strong>Peringatan:</strong> <code>sort()</code> tanpa comparator mengubah angka menjadi string dan mengurutkannya secara leksikografis. Selalu berikan comparator untuk angka!</p>
+</blockquote>
+<h3 id="reverse--membalik-urutan-mutasi"><code>reverse()</code> — Membalik Urutan (Mutasi!) <a href="#reverse--membalik-urutan-mutasi" class="anchor" aria-hidden="true">#</a></h3>
+<pre><code class="language-javascript">const buah = [&quot;apel&quot;, &quot;jeruk&quot;, &quot;mangga&quot;];
+buah.reverse();
+console.log(buah); // [&quot;mangga&quot;, &quot;jeruk&quot;, &quot;apel&quot;]
+</code></pre>
+<blockquote>
+<p><strong>Tips:</strong> <code>reverse()</code> memutasi array asli. Untuk versi non-mutasi, gunakan <code>[...arr].reverse()</code> atau <code>arr.toReversed()</code> (ES2023).</p>
+</blockquote>
+<h3 id="fill--mengisi-dengan-nilai"><code>fill()</code> — Mengisi dengan Nilai <a href="#fill--mengisi-dengan-nilai" class="anchor" aria-hidden="true">#</a></h3>
+<pre><code class="language-javascript">const arr = [1, 2, 3, 4, 5];
+arr.fill(0, 2, 4); // isi 0 dari index 2 sampai 4 (eksklusif)
+console.log(arr); // [1, 2, 0, 0, 5]
+</code></pre>
+<hr>
+<h2 id="method-non-mutasi-mengembalikan-nilai-baru">Method Non-Mutasi (Mengembalikan Nilai Baru) <a href="#method-non-mutasi-mengembalikan-nilai-baru" class="anchor" aria-hidden="true">#</a></h2>
+<h3 id="slice--mengambil-bagian-array"><code>slice()</code> — Mengambil Bagian Array <a href="#slice--mengambil-bagian-array" class="anchor" aria-hidden="true">#</a></h3>
+<p>Sintaks: <code>slice(start, end)</code> — <code>end</code> eksklusif.</p>
+<pre><code class="language-javascript">const buah = [&quot;apel&quot;, &quot;jeruk&quot;, &quot;mangga&quot;, &quot;pisang&quot;, &quot;anggur&quot;];
+
+console.log(buah.slice(1, 3));  // [&quot;jeruk&quot;, &quot;mangga&quot;]
+console.log(buah.slice(2));     // [&quot;mangga&quot;, &quot;pisang&quot;, &quot;anggur&quot;]
+console.log(buah.slice(-2));    // [&quot;pisang&quot;, &quot;anggur&quot;]
+console.log(buah.slice());      // salinan seluruh array
+</code></pre>
+<p>Array asli <strong>tidak berubah</strong>.</p>
+<h3 id="concat--menggabungkan-array"><code>concat()</code> — Menggabungkan Array <a href="#concat--menggabungkan-array" class="anchor" aria-hidden="true">#</a></h3>
+<pre><code class="language-javascript">const arr1 = [1, 2];
+const arr2 = [3, 4];
+const arr3 = [5, 6];
+
+const gabungan = arr1.concat(arr2, arr3);
+console.log(gabungan); // [1, 2, 3, 4, 5, 6]
+console.log(arr1);     // [1, 2] (tidak berubah)
+</code></pre>
+<h3 id="join--menggabungkan-menjadi-string"><code>join()</code> — Menggabungkan menjadi String <a href="#join--menggabungkan-menjadi-string" class="anchor" aria-hidden="true">#</a></h3>
+<pre><code class="language-javascript">const buah = [&quot;apel&quot;, &quot;jeruk&quot;, &quot;mangga&quot;];
+
+console.log(buah.join());      // &quot;apel,jeruk,mangga&quot;
+console.log(buah.join(&quot;, &quot;));  // &quot;apel, jeruk, mangga&quot;
+console.log(buah.join(&quot; - &quot;)); // &quot;apel - jeruk - mangga&quot;
+console.log(buah.join(&quot;&quot;));    // &quot;apeljerukmangga&quot;
+</code></pre>
+<h3 id="indexof-dan-lastindexof"><code>indexOf()</code> dan <code>lastIndexOf()</code> <a href="#indexof-dan-lastindexof" class="anchor" aria-hidden="true">#</a></h3>
+<pre><code class="language-javascript">const buah = [&quot;apel&quot;, &quot;jeruk&quot;, &quot;mangga&quot;, &quot;jeruk&quot;];
+
+console.log(buah.indexOf(&quot;jeruk&quot;));     // 1 (pertama)
+console.log(buah.lastIndexOf(&quot;jeruk&quot;)); // 3 (terakhir)
+console.log(buah.indexOf(&quot;pisang&quot;));    // -1 (tidak ditemukan)
+</code></pre>
+<h3 id="includes--cek-keberadaan"><code>includes()</code> — Cek Keberadaan <a href="#includes--cek-keberadaan" class="anchor" aria-hidden="true">#</a></h3>
+<pre><code class="language-javascript">const buah = [&quot;apel&quot;, &quot;jeruk&quot;, &quot;mangga&quot;];
+
+console.log(buah.includes(&quot;jeruk&quot;));  // true
+console.log(buah.includes(&quot;pisang&quot;)); // false
+</code></pre>
+<blockquote>
+<p><strong>Tips:</strong> <code>includes()</code> lebih mudah dibaca daripada <code>indexOf() !== -1</code>.</p>
+</blockquote>
+<h3 id="find-dan-findindex"><code>find()</code> dan <code>findIndex()</code> <a href="#find-dan-findindex" class="anchor" aria-hidden="true">#</a></h3>
+<pre><code class="language-javascript">const users = [
+  { id: 1, nama: &quot;Budi&quot; },
+  { id: 2, nama: &quot;Siti&quot; },
+  { id: 3, nama: &quot;Andi&quot; }
+];
+
+const user = users.find(u =&gt; u.id === 2);
+console.log(user); // { id: 2, nama: &quot;Siti&quot; }
+
+const index = users.findIndex(u =&gt; u.id === 3);
+console.log(index); // 2
+
+// Jika tidak ditemukan
+console.log(users.find(u =&gt; u.id === 99));      // undefined
+console.log(users.findIndex(u =&gt; u.id === 99)); // -1
+</code></pre>
+<h3 id="findlast-dan-findlastindex-es2023"><code>findLast()</code> dan <code>findLastIndex()</code> (ES2023) <a href="#findlast-dan-findlastindex-es2023" class="anchor" aria-hidden="true">#</a></h3>
+<p>Mencari dari akhir array.</p>
+<pre><code class="language-javascript">const angka = [1, 2, 3, 4, 5, 4, 3, 2, 1];
+console.log(angka.findLast(n =&gt; n &lt; 4)); // 3 (dari akhir)
+</code></pre>
+<h3 id="some-dan-every"><code>some()</code> dan <code>every()</code> <a href="#some-dan-every" class="anchor" aria-hidden="true">#</a></h3>
+<pre><code class="language-javascript">const angka = [1, 2, 3, 4, 5];
+
+// some: apakah ADA yang memenuhi?
+console.log(angka.some(n =&gt; n &gt; 4));  // true
+console.log(angka.some(n =&gt; n &gt; 10)); // false
+
+// every: apakah SEMUA memenuhi?
+console.log(angka.every(n =&gt; n &gt; 0));  // true
+console.log(angka.every(n =&gt; n &gt; 2));  // false
+</code></pre>
+<h3 id="flat-dan-flatmap"><code>flat()</code> dan <code>flatMap()</code> <a href="#flat-dan-flatmap" class="anchor" aria-hidden="true">#</a></h3>
+<pre><code class="language-javascript">// flat: meratakan nested array
+const nested = [1, [2, 3], [4, [5, 6]]];
+console.log(nested.flat());    // [1, 2, 3, 4, [5, 6]]
+console.log(nested.flat(2));   // [1, 2, 3, 4, 5, 6]
+console.log(nested.flat(Infinity)); // [1, 2, 3, 4, 5, 6]
+
+// flatMap: map lalu flat (satu level)
+const kalimat = [&quot;Hello World&quot;, &quot;Foo Bar&quot;];
+console.log(kalimat.flatMap(s =&gt; s.split(&quot; &quot;)));
+// [&quot;Hello&quot;, &quot;World&quot;, &quot;Foo&quot;, &quot;Bar&quot;]
+</code></pre>
+<h3 id="toreversed-tosorted-tospliced-es2023"><code>toReversed()</code>, <code>toSorted()</code>, <code>toSpliced()</code> (ES2023) <a href="#toreversed-tosorted-tospliced-es2023" class="anchor" aria-hidden="true">#</a></h3>
+<p>Versi <strong>non-mutasi</strong> dari <code>reverse()</code>, <code>sort()</code>, dan <code>splice()</code>.</p>
+<pre><code class="language-javascript">const buah = [&quot;mangga&quot;, &quot;apel&quot;, &quot;jeruk&quot;];
+
+const terbalik = buah.toReversed();
+console.log(terbalik); // [&quot;jeruk&quot;, &quot;apel&quot;, &quot;mangga&quot;]
+console.log(buah);     // [&quot;mangga&quot;, &quot;apel&quot;, &quot;jeruk&quot;] (tidak berubah)
+
+const terurut = buah.toSorted();
+console.log(terurut);  // [&quot;apel&quot;, &quot;jeruk&quot;, &quot;mangga&quot;]
+console.log(buah);     // [&quot;mangga&quot;, &quot;apel&quot;, &quot;jeruk&quot;] (tidak berubah)
+</code></pre>
+<hr>
+<h2 id="method-iterasi-foreach-map-filter-reduce">Method Iterasi: <code>forEach</code>, <code>map</code>, <code>filter</code>, <code>reduce</code> <a href="#method-iterasi-foreach-map-filter-reduce" class="anchor" aria-hidden="true">#</a></h2>
+<p>Empat method ini adalah yang paling sering digunakan untuk memproses array.</p>
+<h3 id="foreach--jalankan-fungsi-untuk-setiap-elemen"><code>forEach()</code> — Jalankan Fungsi untuk Setiap Elemen <a href="#foreach--jalankan-fungsi-untuk-setiap-elemen" class="anchor" aria-hidden="true">#</a></h3>
+<pre><code class="language-javascript">const buah = [&quot;apel&quot;, &quot;jeruk&quot;, &quot;mangga&quot;];
+
+buah.forEach((item, index) =&gt; {
+  console.log(`${index}: ${item}`);
+});
+// 0: apel
+// 1: jeruk
+// 2: mangga
+</code></pre>
+<p><code>forEach</code> <strong>tidak mengembalikan nilai</strong> (return <code>undefined</code>). Gunakan untuk side effect (misalnya <code>console.log</code>, update DOM).</p>
+<h3 id="map--transformasi-setiap-elemen"><code>map()</code> — Transformasi Setiap Elemen <a href="#map--transformasi-setiap-elemen" class="anchor" aria-hidden="true">#</a></h3>
+<p>Mengembalikan <strong>array baru</strong> dengan hasil transformasi.</p>
+<pre><code class="language-javascript">const angka = [1, 2, 3, 4, 5];
+
+const kuadrat = angka.map(n =&gt; n * n);
+console.log(kuadrat); // [1, 4, 9, 16, 25]
+console.log(angka);   // [1, 2, 3, 4, 5] (tidak berubah)
+
+// Map object
+const users = [
+  { nama: &quot;Budi&quot;, umur: 25 },
+  { nama: &quot;Siti&quot;, umur: 30 }
+];
+
+const nama = users.map(u =&gt; u.nama);
+console.log(nama); // [&quot;Budi&quot;, &quot;Siti&quot;]
+
+const denganSapaan = users.map(u =&gt; ({
+  ...u,
+  sapaan: `Halo, ${u.nama}`
+}));
+console.log(denganSapaan);
+// [
+//   { nama: &quot;Budi&quot;, umur: 25, sapaan: &quot;Halo, Budi&quot; },
+//   { nama: &quot;Siti&quot;, umur: 30, sapaan: &quot;Halo, Siti&quot; }
+// ]
+</code></pre>
+<h3 id="filter--menyaring-elemen"><code>filter()</code> — Menyaring Elemen <a href="#filter--menyaring-elemen" class="anchor" aria-hidden="true">#</a></h3>
+<p>Mengembalikan <strong>array baru</strong> berisi elemen yang lolos kondisi.</p>
+<pre><code class="language-javascript">const angka = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
+
+const genap = angka.filter(n =&gt; n % 2 === 0);
+console.log(genap); // [2, 4, 6, 8, 10]
+
+const users = [
+  { nama: &quot;Budi&quot;, aktif: true },
+  { nama: &quot;Siti&quot;, aktif: false },
+  { nama: &quot;Andi&quot;, aktif: true }
+];
+
+const aktif = users.filter(u =&gt; u.aktif);
+console.log(aktif);
+// [{ nama: &quot;Budi&quot;, aktif: true }, { nama: &quot;Andi&quot;, aktif: true }]
+</code></pre>
+<h3 id="reduce--meringkas-array-menjadi-satu-nilai"><code>reduce()</code> — Meringkas Array menjadi Satu Nilai <a href="#reduce--meringkas-array-menjadi-satu-nilai" class="anchor" aria-hidden="true">#</a></h3>
+<p>Sintaks: <code>reduce(callback, initialValue)</code></p>
+<p><code>callback(accumulator, currentValue, index, array)</code></p>
+<pre><code class="language-javascript">const angka = [1, 2, 3, 4, 5];
+
+// Menjumlahkan
+const total = angka.reduce((sum, n) =&gt; sum + n, 0);
+console.log(total); // 15
+
+// Mencari nilai maksimum
+const maks = angka.reduce((max, n) =&gt; n &gt; max ? n : max, angka[0]);
+console.log(maks); // 5
+
+// Menghitung frekuensi
+const buah = [&quot;apel&quot;, &quot;jeruk&quot;, &quot;apel&quot;, &quot;mangga&quot;, &quot;jeruk&quot;, &quot;apel&quot;];
+const frekuensi = buah.reduce((acc, item) =&gt; {
+  acc[item] = (acc[item] || 0) + 1;
+  return acc;
+}, {});
+console.log(frekuensi);
+// { apel: 3, jeruk: 2, mangga: 1 }
+
+// Mengelompokkan berdasarkan properti
+const users = [
+  { nama: &quot;Budi&quot;, role: &quot;admin&quot; },
+  { nama: &quot;Siti&quot;, role: &quot;user&quot; },
+  { nama: &quot;Andi&quot;, role: &quot;admin&quot; }
+];
+
+const byRole = users.reduce((acc, user) =&gt; {
+  if (!acc[user.role]) acc[user.role] = [];
+  acc[user.role].push(user.nama);
+  return acc;
+}, {});
+console.log(byRole);
+// { admin: [&quot;Budi&quot;, &quot;Andi&quot;], user: [&quot;Siti&quot;] }
+</code></pre>
+<blockquote>
+<p>⚠️ <strong>Peringatan:</strong> Selalu berikan <strong>initial value</strong> pada <code>reduce()</code>. Tanpa initial value, <code>reduce()</code> menggunakan elemen pertama sebagai accumulator — dan akan error jika array kosong.</p>
+</blockquote>
+<h3 id="perbandingan-foreach-map-filter-reduce">Perbandingan <code>forEach</code>, <code>map</code>, <code>filter</code>, <code>reduce</code> <a href="#perbandingan-foreach-map-filter-reduce" class="anchor" aria-hidden="true">#</a></h3>
+<table>
+<thead>
+<tr>
+<th>Method</th>
+<th>Mengembalikan</th>
+<th>Kegunaan</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>forEach</code></td>
+<td><code>undefined</code></td>
+<td>Side effect (log, DOM)</td>
+</tr>
+<tr>
+<td><code>map</code></td>
+<td>Array baru (sama panjang)</td>
+<td>Transformasi</td>
+</tr>
+<tr>
+<td><code>filter</code></td>
+<td>Array baru (lebih pendek/sama)</td>
+<td>Penyaringan</td>
+</tr>
+<tr>
+<td><code>reduce</code></td>
+<td>Nilai apa pun</td>
+<td>Ringkasan/agregasi</td>
+</tr>
+</tbody>
+</table>
+<h3 id="chaining-method">Chaining Method <a href="#chaining-method" class="anchor" aria-hidden="true">#</a></h3>
+<p>Method non-mutasi bisa dirangkai (chaining):</p>
+<pre><code class="language-javascript">const angka = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
+
+const hasil = angka
+  .filter(n =&gt; n % 2 === 0)   // [2, 4, 6, 8, 10]
+  .map(n =&gt; n * n)            // [4, 16, 36, 64, 100]
+  .reduce((sum, n) =&gt; sum + n, 0); // 220
+
+console.log(hasil); // 220
+</code></pre>
+<p><strong>Contoh dengan data object:</strong></p>
+<pre><code class="language-javascript">const produk = [
+  { nama: &quot;Keyboard&quot;, harga: 450000, stok: 25 },
+  { nama: &quot;Mouse&quot;, harga: 150000, stok: 0 },
+  { nama: &quot;Monitor&quot;, harga: 1500000, stok: 10 },
+  { nama: &quot;Headset&quot;, harga: 350000, stok: 20 }
+];
+
+const totalNilaiStok = produk
+  .filter(p =&gt; p.stok &gt; 0)
+  .map(p =&gt; p.harga * p.stok)
+  .reduce((sum, val) =&gt; sum + val, 0);
+
+console.log(totalNilaiStok);
+// 450000*25 + 1500000*10 + 350000*20 = 11250000 + 15000000 + 7000000 = 33250000
+</code></pre>
+<blockquote>
+<p><strong>Tips:</strong> Chaining yang terlalu panjang bisa sulit dibaca. Pecah menjadi beberapa variabel antara jika perlu.</p>
+</blockquote>
+<hr>
+<h2 id="spread-operator-dan-destructuring">Spread Operator dan Destructuring <a href="#spread-operator-dan-destructuring" class="anchor" aria-hidden="true">#</a></h2>
+<h3 id="spread-operator--pada-array">Spread Operator (<code>...</code>) pada Array <a href="#spread-operator--pada-array" class="anchor" aria-hidden="true">#</a></h3>
+<p>Menyebarkan elemen array menjadi elemen individual.</p>
+<p><strong>1. Menggabungkan array:</strong></p>
+<pre><code class="language-javascript">const arr1 = [1, 2, 3];
+const arr2 = [4, 5, 6];
+
+const gabungan = [...arr1, ...arr2];
+console.log(gabungan); // [1, 2, 3, 4, 5, 6]
+</code></pre>
+<p><strong>2. Menyalin array (shallow copy):</strong></p>
+<pre><code class="language-javascript">const asli = [1, 2, 3];
+const salinan = [...asli];
+
+salinan.push(4);
+console.log(asli);    // [1, 2, 3] (tidak berubah)
+console.log(salinan); // [1, 2, 3, 4]
+</code></pre>
+<p><strong>3. Menyisipkan elemen:</strong></p>
+<pre><code class="language-javascript">const angka = [1, 2, 5];
+const baru = [0, ...angka, 6];
+console.log(baru); // [0, 1, 2, 5, 6]
+</code></pre>
+<p><strong>4. Mengirim array sebagai argumen:</strong></p>
+<pre><code class="language-javascript">const angka = [3, 1, 4, 1, 5];
+console.log(Math.max(...angka)); // 5
+console.log(Math.min(...angka)); // 1
+</code></pre>
+<p><strong>5. Mengubah iterable menjadi array:</strong></p>
+<pre><code class="language-javascript">const set = new Set([1, 2, 2, 3]);
+const arr = [...set];
+console.log(arr); // [1, 2, 3]
+
+const str = &quot;Hello&quot;;
+console.log([...str]); // [&quot;H&quot;, &quot;e&quot;, &quot;l&quot;, &quot;l&quot;, &quot;o&quot;]
+</code></pre>
+<h3 id="destructuring-array">Destructuring Array <a href="#destructuring-array" class="anchor" aria-hidden="true">#</a></h3>
+<p>Mengekstrak nilai dari array ke variabel.</p>
+<pre><code class="language-javascript">const buah = [&quot;apel&quot;, &quot;jeruk&quot;, &quot;mangga&quot;];
+
+const [pertama, kedua, ketiga] = buah;
+console.log(pertama); // &quot;apel&quot;
+console.log(kedua);   // &quot;jeruk&quot;
+console.log(ketiga);  // &quot;mangga&quot;
+</code></pre>
+<p><strong>Melewati elemen:</strong></p>
+<pre><code class="language-javascript">const [a, , c] = [1, 2, 3];
+console.log(a); // 1
+console.log(c); // 3
+</code></pre>
+<p><strong>Default value:</strong></p>
+<pre><code class="language-javascript">const [x = 10, y = 20] = [5];
+console.log(x); // 5
+console.log(y); // 20 (default)
+</code></pre>
+<p><strong>Rest element:</strong></p>
+<pre><code class="language-javascript">const [kepala, ...ekor] = [1, 2, 3, 4, 5];
+console.log(kepala); // 1
+console.log(ekor);   // [2, 3, 4, 5]
+</code></pre>
+<p><strong>Swap variabel:</strong></p>
+<pre><code class="language-javascript">let a = 1, b = 2;
+[a, b] = [b, a];
+console.log(a, b); // 2 1
+</code></pre>
+<p><strong>Destructuring dalam parameter fungsi:</strong></p>
+<pre><code class="language-javascript">function hitung([panjang, lebar]) {
+  return panjang * lebar;
+}
+
+console.log(hitung([5, 3])); // 15
+</code></pre>
+<p><strong>Destructuring nested array:</strong></p>
+<pre><code class="language-javascript">const [[a, b], [c, d]] = [[1, 2], [3, 4]];
+console.log(a, b, c, d); // 1 2 3 4
+</code></pre>
+<hr>
+<h2 id="array-multidimensi">Array Multidimensi <a href="#array-multidimensi" class="anchor" aria-hidden="true">#</a></h2>
+<p>Array bisa berisi array lain.</p>
+<pre><code class="language-javascript">const matrix = [
+  [1, 2, 3],
+  [4, 5, 6],
+  [7, 8, 9]
+];
+
+console.log(matrix[0][0]); // 1
+console.log(matrix[1][2]); // 6
+
+// Iterasi nested
+for (const baris of matrix) {
+  for (const nilai of baris) {
+    process.stdout.write(nilai + &quot; &quot;);
+  }
+  console.log();
+}
+// 1 2 3
+// 4 5 6
+// 7 8 9
+</code></pre>
+<p><strong>Meratakan nested array:</strong></p>
+<pre><code class="language-javascript">const nested = [[1, 2], [3, 4], [5, 6]];
+const flat = nested.flat();
+console.log(flat); // [1, 2, 3, 4, 5, 6]
+</code></pre>
+<hr>
+<h2 id="contoh-praktis">Contoh Praktis <a href="#contoh-praktis" class="anchor" aria-hidden="true">#</a></h2>
+<h3 id="1-keranjang-belanja">1. Keranjang Belanja <a href="#1-keranjang-belanja" class="anchor" aria-hidden="true">#</a></h3>
+<pre><code class="language-javascript">const keranjang = [
+  { produk: &quot;Keyboard&quot;, harga: 450000, jumlah: 2 },
+  { produk: &quot;Mouse&quot;, harga: 150000, jumlah: 1 },
+  { produk: &quot;Monitor&quot;, harga: 1500000, jumlah: 1 }
+];
+
+// Hitung total
+const total = keranjang.reduce(
+  (sum, item) =&gt; sum + item.harga * item.jumlah,
+  0
+);
+console.log(`Total: Rp${total.toLocaleString(&quot;id-ID&quot;)}`);
+// &quot;Total: Rp2.550.000&quot;
+
+// Daftar nama produk
+const namaProduk = keranjang.map(item =&gt; item.produk);
+console.log(namaProduk); // [&quot;Keyboard&quot;, &quot;Mouse&quot;, &quot;Monitor&quot;]
+
+// Produk di atas 200rb
+const mahal = keranjang.filter(item =&gt; item.harga &gt; 200000);
+console.log(mahal);
+// [{ produk: &quot;Keyboard&quot;, ... }, { produk: &quot;Monitor&quot;, ... }]
+</code></pre>
+<h3 id="2-menghapus-duplikat">2. Menghapus Duplikat <a href="#2-menghapus-duplikat" class="anchor" aria-hidden="true">#</a></h3>
+<pre><code class="language-javascript">const angka = [1, 2, 2, 3, 3, 4, 5, 5, 5];
+
+// Dengan Set
+const unik = [...new Set(angka)];
+console.log(unik); // [1, 2, 3, 4, 5]
+
+// Dengan filter + indexOf
+const unik2 = angka.filter((n, i) =&gt; angka.indexOf(n) === i);
+console.log(unik2); // [1, 2, 3, 4, 5]
+</code></pre>
+<h3 id="3-mengelompokkan-data">3. Mengelompokkan Data <a href="#3-mengelompokkan-data" class="anchor" aria-hidden="true">#</a></h3>
+<pre><code class="language-javascript">const transaksi = [
+  { tanggal: &quot;2022-12-01&quot;, total: 100000 },
+  { tanggal: &quot;2022-12-01&quot;, total: 250000 },
+  { tanggal: &quot;2022-12-02&quot;, total: 300000 },
+  { tanggal: &quot;2022-12-02&quot;, total: 150000 }
+];
+
+const perHari = transaksi.reduce((acc, t) =&gt; {
+  if (!acc[t.tanggal]) acc[t.tanggal] = 0;
+  acc[t.tanggal] += t.total;
+  return acc;
+}, {});
+
+console.log(perHari);
+// { &quot;2022-12-01&quot;: 350000, &quot;2022-12-02&quot;: 450000 }
+</code></pre>
+<h3 id="4-pencarian-dan-filter">4. Pencarian dan Filter <a href="#4-pencarian-dan-filter" class="anchor" aria-hidden="true">#</a></h3>
+<pre><code class="language-javascript">const produk = [
+  { nama: &quot;Keyboard Mechanical&quot;, harga: 450000, kategori: &quot;aksesoris&quot; },
+  { nama: &quot;Mouse Wireless&quot;, harga: 150000, kategori: &quot;aksesoris&quot; },
+  { nama: &quot;Monitor 24 inch&quot;, harga: 1500000, kategori: &quot;display&quot; },
+  { nama: &quot;Headset Gaming&quot;, harga: 350000, kategori: &quot;audio&quot; }
+];
+
+// Cari berdasarkan kata kunci
+function cariProduk(keyword) {
+  const lower = keyword.toLowerCase();
+  return produk.filter(p =&gt;
+    p.nama.toLowerCase().includes(lower)
+  );
+}
+
+console.log(cariProduk(&quot;gaming&quot;));
+// [{ nama: &quot;Headset Gaming&quot;, ... }]
+
+// Filter berdasarkan kategori dan harga
+function filterProduk({ kategori, hargaMax }) {
+  return produk.filter(p =&gt; {
+    if (kategori &amp;&amp; p.kategori !== kategori) return false;
+    if (hargaMax &amp;&amp; p.harga &gt; hargaMax) return false;
+    return true;
+  });
+}
+
+console.log(filterProduk({ kategori: &quot;aksesoris&quot;, hargaMax: 200000 }));
+// [{ nama: &quot;Mouse Wireless&quot;, ... }]
+</code></pre>
+<h3 id="5-sorting-data-kompleks">5. Sorting Data Kompleks <a href="#5-sorting-data-kompleks" class="anchor" aria-hidden="true">#</a></h3>
+<pre><code class="language-javascript">const users = [
+  { nama: &quot;Budi&quot;, umur: 30 },
+  { nama: &quot;Andi&quot;, umur: 25 },
+  { nama: &quot;Siti&quot;, umur: 35 }
+];
+
+// Urutkan berdasarkan umur (ascending)
+const byUmur = [...users].sort((a, b) =&gt; a.umur - b.umur);
+console.log(byUmur);
+// [{ nama: &quot;Andi&quot;, umur: 25 }, { nama: &quot;Budi&quot;, umur: 30 }, { nama: &quot;Siti&quot;, umur: 35 }]
+
+// Urutkan berdasarkan nama (ascending)
+const byNama = [...users].sort((a, b) =&gt; a.nama.localeCompare(b.nama));
+console.log(byNama);
+// [{ nama: &quot;Andi&quot;, ... }, { nama: &quot;Budi&quot;, ... }, { nama: &quot;Siti&quot;, ... }]
+</code></pre>
+<blockquote>
+<p><strong>Tips:</strong> Gunakan <code>[...users].sort(...)</code> atau <code>users.toSorted(...)</code> agar array asli tidak termutasi.</p>
+</blockquote>
+<hr>
+<h2 id="ringkasan">Ringkasan <a href="#ringkasan" class="anchor" aria-hidden="true">#</a></h2>
+<table>
+<thead>
+<tr>
+<th>Kategori</th>
+<th>Method</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Mutasi</strong></td>
+<td><code>push</code>, <code>pop</code>, <code>shift</code>, <code>unshift</code>, <code>splice</code>, <code>sort</code>, <code>reverse</code>, <code>fill</code></td>
+</tr>
+<tr>
+<td><strong>Non-mutasi</strong></td>
+<td><code>slice</code>, <code>concat</code>, <code>join</code>, <code>indexOf</code>, <code>includes</code>, <code>find</code>, <code>findIndex</code>, <code>some</code>, <code>every</code>, <code>flat</code>, <code>flatMap</code></td>
+</tr>
+<tr>
+<td><strong>Iterasi</strong></td>
+<td><code>forEach</code>, <code>map</code>, <code>filter</code>, <code>reduce</code></td>
+</tr>
+<tr>
+<td><strong>ES2023 non-mutasi</strong></td>
+<td><code>toReversed</code>, <code>toSorted</code>, <code>toSpliced</code></td>
+</tr>
+<tr>
+<td><strong>Akses</strong></td>
+<td><code>arr[i]</code>, <code>arr.at(i)</code>, <code>arr.length</code></td>
+</tr>
+<tr>
+<td><strong>Spread</strong></td>
+<td><code>[...arr]</code> — salin, gabung, sebarkan</td>
+</tr>
+<tr>
+<td><strong>Destructuring</strong></td>
+<td><code>const [a, b] = arr</code></td>
+</tr>
+</tbody>
+</table>
+<p>Poin penting:</p>
+<ul>
+<li>Gunakan <strong>method non-mutasi</strong> sebagai default agar kode mudah diprediksi.</li>
+<li><code>map</code> mengembalikan array baru (sama panjang); <code>filter</code> menyaring; <code>reduce</code> meringkas.</li>
+<li><code>forEach</code> tidak mengembalikan nilai — gunakan untuk side effect.</li>
+<li><strong>Selalu</strong> berikan comparator pada <code>sort()</code> untuk angka.</li>
+<li><strong>Selalu</strong> berikan initial value pada <code>reduce()</code>.</li>
+<li>Gunakan <code>includes()</code> daripada <code>indexOf() !== -1</code>.</li>
+<li><code>[...new Set(arr)]</code> adalah cara ringkas menghapus duplikat.</li>
+<li>Gunakan <code>arr.toSorted()</code> / <code>[...arr].sort()</code> agar array asli tidak termutasi.</li>
+</ul>
+<p>Pada artikel berikutnya, kita akan membahas <strong>Object &amp; Method-nya</strong> — membuat object, properti, method, destructuring, spread, optional chaining, dan lainnya.</p>
+
+			<div class="page-footer-meta d-flex flex-column flex-md-row justify-content-between">
+				</div>
+			<div class="docs-navigation d-flex justify-content-between">
+	
+	<a href="/javascript/tutorial/06-fungsi/">
+			<div class="card my-1">
+				<div class="card-body py-2">
+					&larr; Fungsi
+				</div>
+			</div>
+		</a>
+	<a class="ms-auto" href="/javascript/tutorial/08-object/">
+			<div class="card my-1">
+				<div class="card-body py-2">
+					Object &amp; Method-nya &rarr;
+				</div>
+			</div>
+		</a>
+	</div>
+
+			
+		</main>
+	</div>
+
+      </div>
+    </div>
+    
+    
+    <footer class="footer text-muted">
+  <div class="container-xxl">
+    <div class="row">
+      <div class="col-lg-8 order-last order-lg-first">
+        <ul class="list-inline">
+          <li class="list-inline-item">Powered by <a class="text-muted" href="https://gohugo.io/">Hugo</a> and <a class="text-muted" href="https://github.com/">Github</a></li>
+        </ul>
+      </div>
+      <div class="col-lg-8 order-first order-lg-last text-lg-end">
+        <ul class="list-inline">
+          </ul>
+      </div>
+    </div>
+  </div>
+</footer>
+    
+
+<script src="/js/bootstrap.min.650aeec64c81d69d4c0850fc73c93da3f0330cec0a27772feed7f90f60baa5f47f1c45687d71914bdafd1c4e860d40f6dc08ede27a2f08431ff929c9a2d24621.js" integrity="sha512-ZQruxkyB1p1MCFD8c8k9o/AzDOwKJ3cv7tf5D2C6pfR/HEVofXGRS9r9HE6GDUD23Ajt4novCEMf&#43;SnJotJGIQ==" crossorigin="anonymous" defer></script>
+  <script src="/js/highlight.min.ec234bd8a5f487aaffe50a89f17b14501b1bb65633cf177cffd4cb84702dd7030edc08712dceb8dc27ac7e54b53240a08bf0b8d951572ee582bcdbbd06a48a7b.js" integrity="sha512-7CNL2KX0h6r/5QqJ8XsUUBsbtlYzzxd8/9TLhHAt1wMO3AhxLc643CesflS1MkCgi/C42VFXLuWCvNu9BqSKew==" crossorigin="anonymous" defer></script>
+  <script src="/main.min.cd1e5e6b40065b3f7f7fd8548a528fac67019754eda0f37b9918d02d154fc9ef6a22742f6513b0572ad9163152e151ec36221fbeafbecd7759c3dab1f19b64b9.js" integrity="sha512-zR5ea0AGWz9/f9hUilKPrGcBl1TtoPN7mRjQLRVPye9qInQvZROwVyrZFjFS4VHsNiIfvq&#43;&#43;zXdZw9qx8ZtkuQ==" crossorigin="anonymous" defer></script>
+  <script src="https://kaban.my.id/index.min.3b38957cbdd3fcd9f9b6e3e14d11e41821e75e9e633e2e7fc92b39e052142003d54a01433bc318b5180cbdf345e1654d731e00e168a3ab02cdad8965a4e5d852.js" integrity="sha512-OziVfL3T/Nn5tuPhTRHkGCHnXp5jPi5/ySs54FIUIAPVSgFDO8MYtRgMvfNF4WVNcx4A4WijqwLNrYllpOXYUg==" crossorigin="anonymous" defer></script>
+  
+    <div class="d-flex fixed-bottom pb-4 pb-lg-5 pe-4 pe-lg-5">
+      <a id="toTop" href="#" class="btn btn-outline-primary rounded-circle ms-auto p-2"><span class="visually-hidden">Top</span><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-chevron-up"><polyline points="18 15 12 9 6 15"></polyline></svg></a>
+    </div>
+    
+  </body>
+</html>

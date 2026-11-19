@@ -1,0 +1,1625 @@
+<!doctype html>
+<html lang="en-US">
+  <head>
+  <meta charset="utf-8">
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <link rel="preload" as="font" href="https://kaban.my.id/fonts/vendor/jost/jost-v4-latin-regular.woff2" type="font/woff2" crossorigin>
+<link rel="preload" as="font" href="https://kaban.my.id/fonts/vendor/jost/jost-v4-latin-500.woff2" type="font/woff2" crossorigin>
+<link rel="preload" as="font" href="https://kaban.my.id/fonts/vendor/jost/jost-v4-latin-700.woff2" type="font/woff2" crossorigin>
+
+  <script>(()=>{var t=window.matchMedia&&window.matchMedia("(prefers-color-scheme: dark)").matches,e=localStorage.getItem("theme");t&&e===null&&(localStorage.setItem("theme","dark"),document.documentElement.setAttribute("data-dark-mode","")),t&&e==="dark"&&document.documentElement.setAttribute("data-dark-mode",""),e==="dark"&&document.documentElement.setAttribute("data-dark-mode","")})()</script>
+
+  <link rel="stylesheet" href="https://kaban.my.id/main.4296e689affcd00e933b8954c10fc43cd1a5f16d5552e78183d12ea50d3e0bf5a596df23a379a4936743f01a7cd8ba048a628b2b9b60b34aa49fad468287100a.css" integrity="sha512-Qpbmia/80A6TO4lUwQ/EPNGl8W1VUueBg9EupQ0&#43;C/Wllt8jo3mkk2dD8Bp82LoEimKLK5tgs0qkn61GgocQCg==" crossorigin="anonymous">
+<noscript><style>img.lazyload { display: none; }</style></noscript>
+  <meta name="robots" content="index, follow">
+    <meta name="googlebot" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1">
+    <meta name="bingbot" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1">
+  <title>Event &amp; Event Handling - Roberto Kaban Blog&#39;s</title>
+<meta name="description" content="Panduan lengkap event handling JavaScript: addEventListener, event object, bubbling, capturing, event delegation, dan event umum.">
+<link rel="canonical" href="https://kaban.my.id/javascript/tutorial/10-event-handling/">
+<meta property="og:locale" content="en_US">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Event &amp; Event Handling">
+<meta property="og:description" content="Panduan lengkap event handling JavaScript: addEventListener, event object, bubbling, capturing, event delegation, dan event umum.">
+<meta property="og:url" content="https://kaban.my.id/javascript/tutorial/10-event-handling/">
+<meta property="og:site_name" content="Roberto Kaban Blog&#39;s">
+<meta property="article:published_time" content="2022-12-28T08:00:00+00:00">
+  <meta property="article:modified_time" content="2022-12-28T08:00:00+00:00">
+  
+  <meta property="og:image" content="https://kaban.my.id/doks.png"/>
+      <meta property="og:image:alt" content="Roberto Kaban Blog&#39;s">
+    
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:site" content="@robertokaban">
+<meta name="twitter:creator" content="@robertokaban">
+<meta name="twitter:title" content="Event &amp; Event Handling">
+<meta name="twitter:description" content="Panduan lengkap event handling JavaScript: addEventListener, event object, bubbling, capturing, event delegation, dan event umum.">
+<meta name="twitter:image" content="https://kaban.my.id/doks.png">
+    <meta name="twitter:image:alt" content="Event &amp; Event Handling">
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "Person",
+        "@id": "https://kaban.my.id/#/schema/person/1",
+      "name": "BlogRobertoKaban",
+      "url": "https://kaban.my.id/",
+      "sameAs": [
+        "https://twitter.com/robertokaban"
+        , "https://github.com/robertokaban"
+        ],
+      "image": {
+          "@type": "ImageObject",
+          "@id": "https://kaban.my.id/#/schema/image/1",
+          "url": "https://kaban.my.id/doks.png",
+          "width":  1280 ,
+          "height":  640 ,
+          "caption": "BlogRobertoKaban"
+        }
+      },
+    {
+      "@type": "WebSite",
+      "@id": "https://kaban.my.id/#/schema/website/1",
+      "url": "https://kaban.my.id/",
+      "name": "Roberto Kaban Blog\u0027s",
+      "description": "Hanya sebuah catatan kecil untuk hal yang tidak ingin dilupakan.",
+      "publisher": {
+          "@id": "https://kaban.my.id/#/schema/person/1"
+        }
+      },
+    {
+      "@type": "WebPage",
+      "@id": "https://kaban.my.id/javascript/tutorial/10-event-handling/",
+      "url": "https://kaban.my.id/javascript/tutorial/10-event-handling/",
+      "name": "Event \u0026 Event Handling",
+      "description": "Panduan lengkap event handling JavaScript: addEventListener, event object, bubbling, capturing, event delegation, dan event umum.",
+      "isPartOf": {
+        "@id": "https://kaban.my.id/#/schema/website/1"
+      },
+      "about": {
+          "@id": "https://kaban.my.id/#/schema/person/1"
+        },
+      "datePublished": "2022-12-28T08:00:00CET",
+      "dateModified": "2022-12-28T08:00:00CET",
+      "breadcrumb": {
+        "@id": "https://kaban.my.id/javascript/tutorial/10-event-handling/#/schema/breadcrumb/1"
+      },
+      "primaryImageOfPage": {
+        "@id": "https://kaban.my.id/javascript/tutorial/10-event-handling/#/schema/image/2"
+      },
+      "inLanguage": "en-US",
+      "potentialAction": [{
+        "@type": "ReadAction", "target": ["https://kaban.my.id/javascript/tutorial/10-event-handling/"]
+      }]
+    },
+    {
+      "@type": "BreadcrumbList",
+      "@id": "https://kaban.my.id/javascript/tutorial/10-event-handling/#/schema/breadcrumb/1",
+      "name": "Breadcrumbs",
+      "itemListElement": [{
+        "@type": "ListItem",
+        "position":  1 ,
+        "item": {
+          "@type": "WebPage",
+          "@id": "https://kaban.my.id/",
+          "url": "https://kaban.my.id/",
+          "name": "Home"
+          }
+        },{
+        "@type": "ListItem",
+        "position":  2 ,
+        "item": {
+          "@type": "WebPage",
+          "@id": "https://kaban.my.id/javascript/",
+          "url": "https://kaban.my.id/javascript/",
+          "name": "Javascript"
+          }
+        },{
+        "@type": "ListItem",
+        "position":  3 ,
+        "item": {
+          "@type": "WebPage",
+          "@id": "https://kaban.my.id/javascript/tutorial/",
+          "url": "https://kaban.my.id/javascript/tutorial/",
+          "name": "Tutorial"
+          }
+        },{
+        "@type": "ListItem",
+        "position":  4 ,
+        "item": {
+          "@id": "https://kaban.my.id/javascript/tutorial/10-event-handling/"
+          }
+        }]
+    },
+
+    {
+      "@context": "https://schema.org",
+      "@graph": [
+        {
+          "@type": "ImageObject",
+          "@id": "https://kaban.my.id/javascript/tutorial/10-event-handling/#/schema/image/2",
+          "url": "https://kaban.my.id/doks.png",
+          "contentUrl": "https://kaban.my.id/doks.png",
+          "caption": "Event \u0026 Event Handling"
+        }
+      ]
+    }
+
+  ]
+}
+</script>
+
+  <meta name="theme-color" content="#fff">
+<link rel="icon" href="https://kaban.my.id/favicon.ico" sizes="any">
+<link rel="icon" type="image/svg+xml" href="https://kaban.my.id/favicon.svg">
+<link rel="apple-touch-icon" sizes="180x180" href="https://kaban.my.id/apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="32x32" href="https://kaban.my.id/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="https://kaban.my.id/favicon-16x16.png">
+<link rel="manifest" crossorigin="use-credentials" href="https://kaban.my.id/site.webmanifest">
+
+  
+
+
+  
+  
+  
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-60VSDZFQR5"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-60VSDZFQR5');
+</script>
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6664512614760985"
+     crossorigin="anonymous"></script>
+</head>
+
+  <body class="javascript single">
+    <div class="sticky-top">
+<div class="header-bar"></div>
+
+<header class="navbar navbar-expand-lg navbar-light doks-navbar">
+  <nav class="container-xxl flex-wrap flex-lg-nowrap" aria-label="Main navigation">
+
+    <a class="navbar-brand order-0" href="/" aria-label="Roberto Kaban Blog&#39;s">
+      Roberto Kaban Blog&#39;s
+    </a>
+
+    <button class="btn btn-menu order-2 d-block d-lg-none" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasDoks" aria-controls="offcanvasDoks" aria-label="Open main menu">
+      <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-menu"><line x1="3" y1="12" x2="21" y2="12"></line><line x1="3" y1="6" x2="21" y2="6"></line><line x1="3" y1="18" x2="21" y2="18"></line></svg>
+    </button>
+    <div class="offcanvas offcanvas-end border-0 py-lg-1" tabindex="-1" id="offcanvasDoks" data-bs-backdrop="true" aria-labelledby="offcanvasDoksLabel">
+      <div class="header-bar d-lg-none"></div>
+      <div class="offcanvas-header d-lg-none">
+        <h2 class="h5 offcanvas-title ps-2" id="offcanvasDoksLabel"><a class="text-dark" href="/">Roberto Kaban Blog&#39;s</a></h2>
+        <button type="button" class="btn-close text-reset me-2" data-bs-dismiss="offcanvas" aria-label="Close main menu"></button>
+      </div>
+      <div class="offcanvas-body p-4 p-lg-0">
+        <ul class="nav flex-column flex-lg-row align-items-lg-center mt-2 mt-lg-0 ms-lg-2 me-lg-auto">
+              <li class="nav-item">
+                <a class="nav-link ps-0 py-1" href="/about/">About Me</a>
+              </li>
+            
+          
+              <li class="nav-item">
+                <a class="nav-link ps-0 py-1" href="/contact/">Contact</a>
+              </li>
+            
+          
+              <li class="nav-item">
+                <a class="nav-link ps-0 py-1" href="/artikel/">Artikel</a>
+              </li>
+            
+          
+              <li class="nav-item">
+                <a class="nav-link ps-0 py-1" href="/coretanku/">Coretanku</a>
+              </li>
+            
+          </ul>
+
+        <hr class="text-black-50 my-4 d-lg-none">
+        <form class="doks-search position-relative flex-grow-1 ms-lg-auto me-lg-2">
+          <input id="search" class="form-control is-search" type="search" placeholder="Cari di blog ini..." aria-label="Cari di blog ini..." autocomplete="off">
+          <div id="suggestions" class="shadow bg-white rounded d-none"></div>
+        </form>
+        <hr class="text-black-50 my-4 d-lg-none">
+        <ul class="nav flex-column flex-lg-row">
+          <li class="nav-item">
+              <a class="nav-link social-link" href="https://github.com/robertokaban"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-github"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path></svg><small class="ms-2 d-lg-none">GitHub</small></a>
+            </li>
+          <li class="nav-item">
+              <a class="nav-link social-link" href="https://facebook.com/roberto.kaban"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-facebook"><path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"></path></svg><small class="ms-2 d-lg-none">Facebook</small></a>
+            </li>
+          <li class="nav-item">
+              <a class="nav-link social-link" href="https://twitter.com/robertokaban"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-twitter"><path d="M23 3a10.9 10.9 0 0 1-3.14 1.53 4.48 4.48 0 0 0-7.86 3v1A10.66 10.66 0 0 1 3 4s-4 9 5 13a11.64 11.64 0 0 1-7 2c9 5 20 0 20-11.5a4.5 4.5 0 0 0-.08-.83A7.72 7.72 0 0 0 23 3z"></path></svg><small class="ms-2 d-lg-none">Twitter</small></a>
+            </li>
+          <li class="nav-item">
+              <a class="nav-link social-link" href="https://youtube.com/@robertokaban"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-youtube"><path d="M10,15L15.19,12L10,9V15M21.56,7.17C21.69,7.64 21.78,8.27 21.84,9.07C21.91,9.87 21.94,10.56 21.94,11.16L22,12C22,14.19 21.84,15.8 21.56,16.83C21.31,17.73 20.73,18.31 19.83,18.56C19.36,18.69 18.5,18.78 17.18,18.84C15.88,18.91 14.69,18.94 13.59,18.94L12,19C7.81,19 5.2,18.84 4.17,18.56C3.27,18.31 2.69,17.73 2.44,16.83C2.31,16.36 2.22,15.73 2.16,14.93C2.09,14.13 2.06,13.44 2.06,12.84L2,12C2,9.81 2.16,8.2 2.44,7.17C2.69,6.27 3.27,5.69 4.17,5.44C4.64,5.31 5.5,5.22 6.82,5.16C8.12,5.09 9.31,5.06 10.41,5.06L12,5C16.19,5 18.8,5.16 19.83,5.44C20.73,5.69 21.31,6.27 21.56,7.17Z"></path></svg><small class="ms-2 d-lg-none">Youtube</small></a>
+            </li>
+          </ul>
+
+        
+        <hr class="text-black-50 my-4 d-lg-none">
+        <button id="mode" class="btn btn-link" type="button" aria-label="Toggle user interface mode">
+          <span class="toggle-dark"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-moon"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path></svg></span>
+          <span class="toggle-light"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-sun"><circle cx="12" cy="12" r="5"></circle><line x1="12" y1="1" x2="12" y2="3"></line><line x1="12" y1="21" x2="12" y2="23"></line><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line><line x1="1" y1="12" x2="3" y2="12"></line><line x1="21" y1="12" x2="23" y2="12"></line><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line></svg></span>
+        </button>
+        
+
+        </div>
+    </div>
+  </nav>
+</header>
+
+
+</div>
+
+
+<div class="container-xxl">
+  <aside class="doks-sidebar">
+    <nav id="doks-docs-nav" class="collapse d-lg-none" aria-label="Tertiary navigation">
+      
+<ul class="list-unstyled collapsible-sidebar">
+  
+    
+      
+      <li class="mb-1">
+        <button class="btn btn-toggle align-items-center rounded collapsed" data-bs-toggle="collapse" data-bs-target="#section-0967e753cd827c7c2576cf6f7292922e" aria-expanded="true">
+          Tutorial Javascript
+        </button>
+        <div class="collapse show" id="section-0967e753cd827c7c2576cf6f7292922e">
+          <ul class="btn-toggle-nav list-unstyled fw-normal pb-1 small">
+            
+              
+                
+                <li><a class="docs-link rounded" href="https://kaban.my.id/javascript/tutorial/pengenalan/">Pengenalan Javascript</a></li>
+              
+            
+              
+                
+                <li><a class="docs-link rounded" href="https://kaban.my.id/javascript/tutorial/02-instalasi-persiapan/">Instalasi &amp; Persiapan Lingkungan JavaScript</a></li>
+              
+            
+              
+                
+                <li><a class="docs-link rounded" href="https://kaban.my.id/javascript/tutorial/03-sintaks-variabel/">Sintaks Dasar &amp; Variabel</a></li>
+              
+            
+              
+                
+                <li><a class="docs-link rounded" href="https://kaban.my.id/javascript/tutorial/04-tipe-data-konversi/">Tipe Data &amp; Konversi</a></li>
+              
+            
+              
+                
+                <li><a class="docs-link rounded" href="https://kaban.my.id/javascript/tutorial/05-struktur-kontrol/">Struktur Kontrol &amp; Perulangan</a></li>
+              
+            
+              
+                
+                <li><a class="docs-link rounded" href="https://kaban.my.id/javascript/tutorial/06-fungsi/">Fungsi</a></li>
+              
+            
+              
+                
+                <li><a class="docs-link rounded" href="https://kaban.my.id/javascript/tutorial/07-array/">Array &amp; Method-nya</a></li>
+              
+            
+              
+                
+                <li><a class="docs-link rounded" href="https://kaban.my.id/javascript/tutorial/08-object/">Object &amp; Method-nya</a></li>
+              
+            
+              
+                
+                <li><a class="docs-link rounded" href="https://kaban.my.id/javascript/tutorial/09-dom-manipulation/">DOM Manipulation</a></li>
+              
+            
+              
+                
+                <li><a class="docs-link rounded active" href="https://kaban.my.id/javascript/tutorial/10-event-handling/">Event &amp; Event Handling</a></li>
+              
+            
+              
+                
+                <li><a class="docs-link rounded" href="https://kaban.my.id/javascript/tutorial/11-web-storage/">Web Storage &amp; Cookie</a></li>
+              
+            
+              
+                
+                <li><a class="docs-link rounded" href="https://kaban.my.id/javascript/tutorial/12-es6-modern/">ES6&#43; Fitur Modern</a></li>
+              
+            
+              
+                
+                <li><a class="docs-link rounded" href="https://kaban.my.id/javascript/tutorial/13-async-javascript/">Asynchronous JavaScript</a></li>
+              
+            
+              
+                
+                <li><a class="docs-link rounded" href="https://kaban.my.id/javascript/tutorial/14-fetch-api/">Fetch API &amp; AJAX</a></li>
+              
+            
+              
+                
+                <li><a class="docs-link rounded" href="https://kaban.my.id/javascript/tutorial/15-nodejs-npm/">Node.js &amp; npm Dasar</a></li>
+              
+            
+              
+                
+                <li><a class="docs-link rounded" href="https://kaban.my.id/javascript/tutorial/16-bundler-tooling/">Module Bundler &amp; Build Tool</a></li>
+              
+            
+          </ul>
+        </div>
+      </li>
+    
+  
+</ul>
+
+    </nav>
+  </aside>
+</div>
+
+    <div class="wrap container-xxl" role="document">
+      <div class="content">
+        
+	<div class="row flex-xl-nowrap">
+		<div class="col-lg-5 col-xl-4 docs-sidebar d-none d-lg-block">
+			<nav class="docs-links" aria-label="Main navigation">
+				
+<ul class="list-unstyled collapsible-sidebar">
+  
+    
+      
+      <li class="mb-1">
+        <button class="btn btn-toggle align-items-center rounded collapsed" data-bs-toggle="collapse" data-bs-target="#section-0967e753cd827c7c2576cf6f7292922e" aria-expanded="true">
+          Tutorial Javascript
+        </button>
+        <div class="collapse show" id="section-0967e753cd827c7c2576cf6f7292922e">
+          <ul class="btn-toggle-nav list-unstyled fw-normal pb-1 small">
+            
+              
+                
+                <li><a class="docs-link rounded" href="https://kaban.my.id/javascript/tutorial/pengenalan/">Pengenalan Javascript</a></li>
+              
+            
+              
+                
+                <li><a class="docs-link rounded" href="https://kaban.my.id/javascript/tutorial/02-instalasi-persiapan/">Instalasi &amp; Persiapan Lingkungan JavaScript</a></li>
+              
+            
+              
+                
+                <li><a class="docs-link rounded" href="https://kaban.my.id/javascript/tutorial/03-sintaks-variabel/">Sintaks Dasar &amp; Variabel</a></li>
+              
+            
+              
+                
+                <li><a class="docs-link rounded" href="https://kaban.my.id/javascript/tutorial/04-tipe-data-konversi/">Tipe Data &amp; Konversi</a></li>
+              
+            
+              
+                
+                <li><a class="docs-link rounded" href="https://kaban.my.id/javascript/tutorial/05-struktur-kontrol/">Struktur Kontrol &amp; Perulangan</a></li>
+              
+            
+              
+                
+                <li><a class="docs-link rounded" href="https://kaban.my.id/javascript/tutorial/06-fungsi/">Fungsi</a></li>
+              
+            
+              
+                
+                <li><a class="docs-link rounded" href="https://kaban.my.id/javascript/tutorial/07-array/">Array &amp; Method-nya</a></li>
+              
+            
+              
+                
+                <li><a class="docs-link rounded" href="https://kaban.my.id/javascript/tutorial/08-object/">Object &amp; Method-nya</a></li>
+              
+            
+              
+                
+                <li><a class="docs-link rounded" href="https://kaban.my.id/javascript/tutorial/09-dom-manipulation/">DOM Manipulation</a></li>
+              
+            
+              
+                
+                <li><a class="docs-link rounded active" href="https://kaban.my.id/javascript/tutorial/10-event-handling/">Event &amp; Event Handling</a></li>
+              
+            
+              
+                
+                <li><a class="docs-link rounded" href="https://kaban.my.id/javascript/tutorial/11-web-storage/">Web Storage &amp; Cookie</a></li>
+              
+            
+              
+                
+                <li><a class="docs-link rounded" href="https://kaban.my.id/javascript/tutorial/12-es6-modern/">ES6&#43; Fitur Modern</a></li>
+              
+            
+              
+                
+                <li><a class="docs-link rounded" href="https://kaban.my.id/javascript/tutorial/13-async-javascript/">Asynchronous JavaScript</a></li>
+              
+            
+              
+                
+                <li><a class="docs-link rounded" href="https://kaban.my.id/javascript/tutorial/14-fetch-api/">Fetch API &amp; AJAX</a></li>
+              
+            
+              
+                
+                <li><a class="docs-link rounded" href="https://kaban.my.id/javascript/tutorial/15-nodejs-npm/">Node.js &amp; npm Dasar</a></li>
+              
+            
+              
+                
+                <li><a class="docs-link rounded" href="https://kaban.my.id/javascript/tutorial/16-bundler-tooling/">Module Bundler &amp; Build Tool</a></li>
+              
+            
+          </ul>
+        </div>
+      </li>
+    
+  
+</ul>
+
+			</nav>
+		</div>
+		<nav class="docs-toc d-none d-xl-block col-xl-3" aria-label="Secondary navigation">
+			<div class="d-xl-none">
+  <button class="btn btn-outline-primary btn-sm doks-toc-toggle collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#onThisPage" aria-controls="doks-docs-nav" aria-expanded="false" aria-label="Toggle On this page navigation">
+    <span>Daftar isi</span>
+    <span>
+      <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" class="doks doks-expand" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><title>Expand</title><polyline points="7 13 12 18 17 13"></polyline><polyline points="7 6 12 11 17 6"></polyline></svg>
+      <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" class="doks doks-collapse" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><title>Collapse</title><polyline points="17 11 12 6 7 11"></polyline><polyline points="17 18 12 13 7 18"></polyline></svg>
+    </span>
+  </button>
+  <div class="collapse" id="onThisPage">
+    <div class="card card-body mt-3 py-1">
+      <div class="page-links">
+        <nav id="TableOfContents">
+  <ul>
+    <li><a href="#pendahuluan">Pendahuluan</a></li>
+    <li><a href="#dasar-event-handling">Dasar Event Handling</a>
+      <ul>
+        <li><a href="#addeventlistener--cara-modern-rekomendasikan"><code>addEventListener()</code> — Cara Modern (Rekomendasikan)</a></li>
+        <li><a href="#onclick--cara-lama-hindari"><code>onclick</code> — Cara Lama (Hindari)</a></li>
+        <li><a href="#removeeventlistener--menghapus-listener"><code>removeEventListener()</code> — Menghapus Listener</a></li>
+        <li><a href="#opsi-pada-addeventlistener">Opsi pada <code>addEventListener()</code></a></li>
+      </ul>
+    </li>
+    <li><a href="#event-object">Event Object</a>
+      <ul>
+        <li><a href="#properti-penting-event-object">Properti Penting Event Object</a></li>
+        <li><a href="#preventdefault--mencegah-perilaku-default"><code>preventDefault()</code> — Mencegah Perilaku Default</a></li>
+        <li><a href="#stoppropagation--menghentikan-bubbling"><code>stopPropagation()</code> — Menghentikan Bubbling</a></li>
+        <li><a href="#stopimmediatepropagation--menghentikan-semua-listener-lain"><code>stopImmediatePropagation()</code> — Menghentikan Semua Listener Lain</a></li>
+      </ul>
+    </li>
+    <li><a href="#bubbling-dan-capturing">Bubbling dan Capturing</a>
+      <ul>
+        <li><a href="#ilustrasi">Ilustrasi</a></li>
+        <li><a href="#capturing">Capturing</a></li>
+        <li><a href="#menghentikan-bubbling">Menghentikan Bubbling</a></li>
+      </ul>
+    </li>
+    <li><a href="#event-delegation">Event Delegation</a>
+      <ul>
+        <li><a href="#masalah-listener-per-elemen">Masalah: Listener per Elemen</a></li>
+        <li><a href="#solusi-event-delegation">Solusi: Event Delegation</a></li>
+        <li><a href="#closest--mencari-parent-terdekat-yang-cocok"><code>closest()</code> — Mencari Parent Terdekat yang Cocok</a></li>
+        <li><a href="#contoh-to-do-list-dengan-delegation">Contoh: To-Do List dengan Delegation</a></li>
+      </ul>
+    </li>
+    <li><a href="#event-umum">Event Umum</a>
+      <ul>
+        <li><a href="#mouse-events">Mouse Events</a></li>
+        <li><a href="#keyboard-events">Keyboard Events</a></li>
+        <li><a href="#form-events">Form Events</a></li>
+        <li><a href="#window-events">Window Events</a></li>
+        <li><a href="#touch-events-mobile">Touch Events (Mobile)</a></li>
+      </ul>
+    </li>
+    <li><a href="#contoh-praktis">Contoh Praktis</a>
+      <ul>
+        <li><a href="#1-form-validation-real-time">1. Form Validation Real-time</a></li>
+        <li><a href="#2-modal-dengan-escape-dan-klik-di-luar">2. Modal dengan Escape dan Klik di Luar</a></li>
+        <li><a href="#3-infinite-scroll-sederhana">3. Infinite Scroll Sederhana</a></li>
+        <li><a href="#4-drag-and-drop-sederhana">4. Drag and Drop Sederhana</a></li>
+      </ul>
+    </li>
+    <li><a href="#tips--best-practice">Tips &amp; Best Practice</a></li>
+    <li><a href="#ringkasan">Ringkasan</a></li>
+  </ul>
+</nav>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="page-links d-none d-xl-block">
+  <h3>Daftar isi</h3>
+  <nav id="TableOfContents">
+  <ul>
+    <li><a href="#pendahuluan">Pendahuluan</a></li>
+    <li><a href="#dasar-event-handling">Dasar Event Handling</a>
+      <ul>
+        <li><a href="#addeventlistener--cara-modern-rekomendasikan"><code>addEventListener()</code> — Cara Modern (Rekomendasikan)</a></li>
+        <li><a href="#onclick--cara-lama-hindari"><code>onclick</code> — Cara Lama (Hindari)</a></li>
+        <li><a href="#removeeventlistener--menghapus-listener"><code>removeEventListener()</code> — Menghapus Listener</a></li>
+        <li><a href="#opsi-pada-addeventlistener">Opsi pada <code>addEventListener()</code></a></li>
+      </ul>
+    </li>
+    <li><a href="#event-object">Event Object</a>
+      <ul>
+        <li><a href="#properti-penting-event-object">Properti Penting Event Object</a></li>
+        <li><a href="#preventdefault--mencegah-perilaku-default"><code>preventDefault()</code> — Mencegah Perilaku Default</a></li>
+        <li><a href="#stoppropagation--menghentikan-bubbling"><code>stopPropagation()</code> — Menghentikan Bubbling</a></li>
+        <li><a href="#stopimmediatepropagation--menghentikan-semua-listener-lain"><code>stopImmediatePropagation()</code> — Menghentikan Semua Listener Lain</a></li>
+      </ul>
+    </li>
+    <li><a href="#bubbling-dan-capturing">Bubbling dan Capturing</a>
+      <ul>
+        <li><a href="#ilustrasi">Ilustrasi</a></li>
+        <li><a href="#capturing">Capturing</a></li>
+        <li><a href="#menghentikan-bubbling">Menghentikan Bubbling</a></li>
+      </ul>
+    </li>
+    <li><a href="#event-delegation">Event Delegation</a>
+      <ul>
+        <li><a href="#masalah-listener-per-elemen">Masalah: Listener per Elemen</a></li>
+        <li><a href="#solusi-event-delegation">Solusi: Event Delegation</a></li>
+        <li><a href="#closest--mencari-parent-terdekat-yang-cocok"><code>closest()</code> — Mencari Parent Terdekat yang Cocok</a></li>
+        <li><a href="#contoh-to-do-list-dengan-delegation">Contoh: To-Do List dengan Delegation</a></li>
+      </ul>
+    </li>
+    <li><a href="#event-umum">Event Umum</a>
+      <ul>
+        <li><a href="#mouse-events">Mouse Events</a></li>
+        <li><a href="#keyboard-events">Keyboard Events</a></li>
+        <li><a href="#form-events">Form Events</a></li>
+        <li><a href="#window-events">Window Events</a></li>
+        <li><a href="#touch-events-mobile">Touch Events (Mobile)</a></li>
+      </ul>
+    </li>
+    <li><a href="#contoh-praktis">Contoh Praktis</a>
+      <ul>
+        <li><a href="#1-form-validation-real-time">1. Form Validation Real-time</a></li>
+        <li><a href="#2-modal-dengan-escape-dan-klik-di-luar">2. Modal dengan Escape dan Klik di Luar</a></li>
+        <li><a href="#3-infinite-scroll-sederhana">3. Infinite Scroll Sederhana</a></li>
+        <li><a href="#4-drag-and-drop-sederhana">4. Drag and Drop Sederhana</a></li>
+      </ul>
+    </li>
+    <li><a href="#tips--best-practice">Tips &amp; Best Practice</a></li>
+    <li><a href="#ringkasan">Ringkasan</a></li>
+  </ul>
+</nav>
+  </div>
+
+		</nav>
+		<main class="docs-content col-lg-11 col-xl-9">
+		
+				<nav aria-label="breadcrumb">
+					<ol class="breadcrumb">
+						<li class="breadcrumb-item"><a href="/">Home</a></li>
+<li class="breadcrumb-item"><a href="/javascript/">Javascript</a></li>
+<li class="breadcrumb-item"><a href="/javascript/tutorial/">Tutorial Javascript</a></li>
+<li class="breadcrumb-item active" aria-current="page">Event &amp; Event Handling</li>
+					</ol>
+				</nav>
+			
+			<h1>Event &amp; Event Handling</h1>
+			<p class="lead">Event membuat halaman web interaktif — merespons klik, ketikan, scroll, dan interaksi user lainnya. Artikel ini membahas addEventListener, event object, bubbling/capturing, event delegation, serta event umum seperti click, submit, input, dan keyboard.</p>
+			<nav class="d-xl-none" aria-label="Quaternary navigation">
+				<div class="d-xl-none">
+  <button class="btn btn-outline-primary btn-sm doks-toc-toggle collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#onThisPage" aria-controls="doks-docs-nav" aria-expanded="false" aria-label="Toggle On this page navigation">
+    <span>Daftar isi</span>
+    <span>
+      <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" class="doks doks-expand" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><title>Expand</title><polyline points="7 13 12 18 17 13"></polyline><polyline points="7 6 12 11 17 6"></polyline></svg>
+      <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" class="doks doks-collapse" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><title>Collapse</title><polyline points="17 11 12 6 7 11"></polyline><polyline points="17 18 12 13 7 18"></polyline></svg>
+    </span>
+  </button>
+  <div class="collapse" id="onThisPage">
+    <div class="card card-body mt-3 py-1">
+      <div class="page-links">
+        <nav id="TableOfContents">
+  <ul>
+    <li><a href="#pendahuluan">Pendahuluan</a></li>
+    <li><a href="#dasar-event-handling">Dasar Event Handling</a>
+      <ul>
+        <li><a href="#addeventlistener--cara-modern-rekomendasikan"><code>addEventListener()</code> — Cara Modern (Rekomendasikan)</a></li>
+        <li><a href="#onclick--cara-lama-hindari"><code>onclick</code> — Cara Lama (Hindari)</a></li>
+        <li><a href="#removeeventlistener--menghapus-listener"><code>removeEventListener()</code> — Menghapus Listener</a></li>
+        <li><a href="#opsi-pada-addeventlistener">Opsi pada <code>addEventListener()</code></a></li>
+      </ul>
+    </li>
+    <li><a href="#event-object">Event Object</a>
+      <ul>
+        <li><a href="#properti-penting-event-object">Properti Penting Event Object</a></li>
+        <li><a href="#preventdefault--mencegah-perilaku-default"><code>preventDefault()</code> — Mencegah Perilaku Default</a></li>
+        <li><a href="#stoppropagation--menghentikan-bubbling"><code>stopPropagation()</code> — Menghentikan Bubbling</a></li>
+        <li><a href="#stopimmediatepropagation--menghentikan-semua-listener-lain"><code>stopImmediatePropagation()</code> — Menghentikan Semua Listener Lain</a></li>
+      </ul>
+    </li>
+    <li><a href="#bubbling-dan-capturing">Bubbling dan Capturing</a>
+      <ul>
+        <li><a href="#ilustrasi">Ilustrasi</a></li>
+        <li><a href="#capturing">Capturing</a></li>
+        <li><a href="#menghentikan-bubbling">Menghentikan Bubbling</a></li>
+      </ul>
+    </li>
+    <li><a href="#event-delegation">Event Delegation</a>
+      <ul>
+        <li><a href="#masalah-listener-per-elemen">Masalah: Listener per Elemen</a></li>
+        <li><a href="#solusi-event-delegation">Solusi: Event Delegation</a></li>
+        <li><a href="#closest--mencari-parent-terdekat-yang-cocok"><code>closest()</code> — Mencari Parent Terdekat yang Cocok</a></li>
+        <li><a href="#contoh-to-do-list-dengan-delegation">Contoh: To-Do List dengan Delegation</a></li>
+      </ul>
+    </li>
+    <li><a href="#event-umum">Event Umum</a>
+      <ul>
+        <li><a href="#mouse-events">Mouse Events</a></li>
+        <li><a href="#keyboard-events">Keyboard Events</a></li>
+        <li><a href="#form-events">Form Events</a></li>
+        <li><a href="#window-events">Window Events</a></li>
+        <li><a href="#touch-events-mobile">Touch Events (Mobile)</a></li>
+      </ul>
+    </li>
+    <li><a href="#contoh-praktis">Contoh Praktis</a>
+      <ul>
+        <li><a href="#1-form-validation-real-time">1. Form Validation Real-time</a></li>
+        <li><a href="#2-modal-dengan-escape-dan-klik-di-luar">2. Modal dengan Escape dan Klik di Luar</a></li>
+        <li><a href="#3-infinite-scroll-sederhana">3. Infinite Scroll Sederhana</a></li>
+        <li><a href="#4-drag-and-drop-sederhana">4. Drag and Drop Sederhana</a></li>
+      </ul>
+    </li>
+    <li><a href="#tips--best-practice">Tips &amp; Best Practice</a></li>
+    <li><a href="#ringkasan">Ringkasan</a></li>
+  </ul>
+</nav>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="page-links d-none d-xl-block">
+  <h3>Daftar isi</h3>
+  <nav id="TableOfContents">
+  <ul>
+    <li><a href="#pendahuluan">Pendahuluan</a></li>
+    <li><a href="#dasar-event-handling">Dasar Event Handling</a>
+      <ul>
+        <li><a href="#addeventlistener--cara-modern-rekomendasikan"><code>addEventListener()</code> — Cara Modern (Rekomendasikan)</a></li>
+        <li><a href="#onclick--cara-lama-hindari"><code>onclick</code> — Cara Lama (Hindari)</a></li>
+        <li><a href="#removeeventlistener--menghapus-listener"><code>removeEventListener()</code> — Menghapus Listener</a></li>
+        <li><a href="#opsi-pada-addeventlistener">Opsi pada <code>addEventListener()</code></a></li>
+      </ul>
+    </li>
+    <li><a href="#event-object">Event Object</a>
+      <ul>
+        <li><a href="#properti-penting-event-object">Properti Penting Event Object</a></li>
+        <li><a href="#preventdefault--mencegah-perilaku-default"><code>preventDefault()</code> — Mencegah Perilaku Default</a></li>
+        <li><a href="#stoppropagation--menghentikan-bubbling"><code>stopPropagation()</code> — Menghentikan Bubbling</a></li>
+        <li><a href="#stopimmediatepropagation--menghentikan-semua-listener-lain"><code>stopImmediatePropagation()</code> — Menghentikan Semua Listener Lain</a></li>
+      </ul>
+    </li>
+    <li><a href="#bubbling-dan-capturing">Bubbling dan Capturing</a>
+      <ul>
+        <li><a href="#ilustrasi">Ilustrasi</a></li>
+        <li><a href="#capturing">Capturing</a></li>
+        <li><a href="#menghentikan-bubbling">Menghentikan Bubbling</a></li>
+      </ul>
+    </li>
+    <li><a href="#event-delegation">Event Delegation</a>
+      <ul>
+        <li><a href="#masalah-listener-per-elemen">Masalah: Listener per Elemen</a></li>
+        <li><a href="#solusi-event-delegation">Solusi: Event Delegation</a></li>
+        <li><a href="#closest--mencari-parent-terdekat-yang-cocok"><code>closest()</code> — Mencari Parent Terdekat yang Cocok</a></li>
+        <li><a href="#contoh-to-do-list-dengan-delegation">Contoh: To-Do List dengan Delegation</a></li>
+      </ul>
+    </li>
+    <li><a href="#event-umum">Event Umum</a>
+      <ul>
+        <li><a href="#mouse-events">Mouse Events</a></li>
+        <li><a href="#keyboard-events">Keyboard Events</a></li>
+        <li><a href="#form-events">Form Events</a></li>
+        <li><a href="#window-events">Window Events</a></li>
+        <li><a href="#touch-events-mobile">Touch Events (Mobile)</a></li>
+      </ul>
+    </li>
+    <li><a href="#contoh-praktis">Contoh Praktis</a>
+      <ul>
+        <li><a href="#1-form-validation-real-time">1. Form Validation Real-time</a></li>
+        <li><a href="#2-modal-dengan-escape-dan-klik-di-luar">2. Modal dengan Escape dan Klik di Luar</a></li>
+        <li><a href="#3-infinite-scroll-sederhana">3. Infinite Scroll Sederhana</a></li>
+        <li><a href="#4-drag-and-drop-sederhana">4. Drag and Drop Sederhana</a></li>
+      </ul>
+    </li>
+    <li><a href="#tips--best-practice">Tips &amp; Best Practice</a></li>
+    <li><a href="#ringkasan">Ringkasan</a></li>
+  </ul>
+</nav>
+  </div>
+
+			</nav>
+			<h2 id="pendahuluan">Pendahuluan <a href="#pendahuluan" class="anchor" aria-hidden="true">#</a></h2>
+<p><strong>Event</strong> adalah sinyal bahwa sesuatu telah terjadi — user mengklik tombol, mengetik di input, menggulir halaman, atau browser selesai memuat dokumen. <strong>Event handling</strong> adalah cara JavaScript merespons event tersebut.</p>
+<p>Tanpa event, halaman web hanya statis. Dengan event, kita bisa membuat:</p>
+<ul>
+<li>Tombol yang bereaksi saat diklik.</li>
+<li>Form yang divalidasi saat di-submit.</li>
+<li>Pencarian real-time saat user mengetik.</li>
+<li>Modal yang muncul dan hilang.</li>
+<li>Dan sebagainya.</li>
+</ul>
+<p>Artikel ini membahas cara mendaftarkan event listener, memahami event object, konsep bubbling dan capturing, event delegation, serta event-event yang paling umum digunakan.</p>
+<blockquote>
+<p><strong>Asumsi:</strong> Anda sudah memahami DOM manipulation dari artikel sebelumnya.</p>
+</blockquote>
+<hr>
+<h2 id="dasar-event-handling">Dasar Event Handling <a href="#dasar-event-handling" class="anchor" aria-hidden="true">#</a></h2>
+<h3 id="addeventlistener--cara-modern-rekomendasikan"><code>addEventListener()</code> — Cara Modern (Rekomendasikan) <a href="#addeventlistener--cara-modern-rekomendasikan" class="anchor" aria-hidden="true">#</a></h3>
+<pre><code class="language-javascript">const tombol = document.querySelector(&quot;#tombol&quot;);
+
+tombol.addEventListener(&quot;click&quot;, () =&gt; {
+  console.log(&quot;Tombol diklik!&quot;);
+});
+</code></pre>
+<p><strong>Sintaks:</strong> <code>element.addEventListener(eventType, listener, options)</code></p>
+<ul>
+<li><code>eventType</code> — nama event (string), misalnya <code>&quot;click&quot;</code>, <code>&quot;submit&quot;</code>, <code>&quot;input&quot;</code>.</li>
+<li><code>listener</code> — fungsi yang dipanggil saat event terjadi.</li>
+<li><code>options</code> — object opsional (dibahas nanti).</li>
+</ul>
+<h3 id="onclick--cara-lama-hindari"><code>onclick</code> — Cara Lama (Hindari) <a href="#onclick--cara-lama-hindari" class="anchor" aria-hidden="true">#</a></h3>
+<pre><code class="language-javascript">// ❌ Menimpa listener sebelumnya
+tombol.onclick = () =&gt; console.log(&quot;Pertama&quot;);
+tombol.onclick = () =&gt; console.log(&quot;Kedua&quot;); // &quot;Pertama&quot; hilang!
+
+// ✅ addEventListener — bisa banyak listener
+tombol.addEventListener(&quot;click&quot;, () =&gt; console.log(&quot;Pertama&quot;));
+tombol.addEventListener(&quot;click&quot;, () =&gt; console.log(&quot;Kedua&quot;));
+// Keduanya jalan!
+</code></pre>
+<blockquote>
+<p><strong>Rekomendasi:</strong> Selalu gunakan <code>addEventListener()</code>. Lebih fleksibel, mendukung banyak listener, dan bisa dihapus dengan <code>removeEventListener()</code>.</p>
+</blockquote>
+<h3 id="removeeventlistener--menghapus-listener"><code>removeEventListener()</code> — Menghapus Listener <a href="#removeeventlistener--menghapus-listener" class="anchor" aria-hidden="true">#</a></h3>
+<pre><code class="language-javascript">function handleClick() {
+  console.log(&quot;Diklik!&quot;);
+}
+
+tombol.addEventListener(&quot;click&quot;, handleClick);
+
+// Hapus — HARUS merujuk ke fungsi yang sama
+tombol.removeEventListener(&quot;click&quot;, handleClick);
+</code></pre>
+<blockquote>
+<p>⚠️ <strong>Peringatan:</strong> <code>removeEventListener()</code> memerlukan <strong>referensi fungsi yang sama</strong> dengan yang didaftarkan. Arrow function inline tidak bisa dihapus!</p>
+</blockquote>
+<pre><code class="language-javascript">// ❌ Tidak bisa dihapus
+tombol.addEventListener(&quot;click&quot;, () =&gt; console.log(&quot;x&quot;));
+tombol.removeEventListener(&quot;click&quot;, () =&gt; console.log(&quot;x&quot;)); // tidak berhasil
+
+// ✅ Bisa dihapus
+const handler = () =&gt; console.log(&quot;x&quot;);
+tombol.addEventListener(&quot;click&quot;, handler);
+tombol.removeEventListener(&quot;click&quot;, handler); // berhasil
+</code></pre>
+<h3 id="opsi-pada-addeventlistener">Opsi pada <code>addEventListener()</code> <a href="#opsi-pada-addeventlistener" class="anchor" aria-hidden="true">#</a></h3>
+<pre><code class="language-javascript">element.addEventListener(&quot;click&quot;, handler, {
+  once: true,      // listener otomatis dihapus setelah dipanggil sekali
+  capture: true,   // listener dipanggil di fase capturing
+  passive: true    // listener tidak akan memanggil preventDefault()
+});
+</code></pre>
+<ul>
+<li><strong><code>once: true</code></strong> — listener dihapus otomatis setelah dipanggil sekali.</li>
+<li><strong><code>capture: true</code></strong> — listener dipanggil di fase capturing (dibahas di bagian <em>Bubbling &amp; Capturing</em>).</li>
+<li><strong><code>passive: true</code></strong> — menandakan listener tidak akan memanggil <code>preventDefault()</code>. Berguna untuk event <code>scroll</code>/<code>touchmove</code> agar browser tidak menunggu listener selesai sebelum menggulir — meningkatkan performa.</li>
+</ul>
+<pre><code class="language-javascript">// Contoh: tombol yang hanya bisa diklik sekali
+tombol.addEventListener(&quot;click&quot;, () =&gt; {
+  console.log(&quot;Diklik sekali!&quot;);
+}, { once: true });
+</code></pre>
+<hr>
+<h2 id="event-object">Event Object <a href="#event-object" class="anchor" aria-hidden="true">#</a></h2>
+<p>Setiap event handler menerima <strong>event object</strong> sebagai argumen pertama. Object ini berisi informasi tentang event.</p>
+<pre><code class="language-javascript">tombol.addEventListener(&quot;click&quot;, (event) =&gt; {
+  console.log(event.type);      // &quot;click&quot;
+  console.log(event.target);    // elemen yang memicu event
+  console.log(event.currentTarget); // elemen tempat listener terpasang
+  console.log(event.timeStamp); // waktu event terjadi
+});
+</code></pre>
+<h3 id="properti-penting-event-object">Properti Penting Event Object <a href="#properti-penting-event-object" class="anchor" aria-hidden="true">#</a></h3>
+<table>
+<thead>
+<tr>
+<th>Properti</th>
+<th>Arti</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>type</code></td>
+<td>Jenis event (<code>&quot;click&quot;</code>, <code>&quot;keydown&quot;</code>, dll.)</td>
+</tr>
+<tr>
+<td><code>target</code></td>
+<td>Elemen <strong>asal</strong> yang memicu event</td>
+</tr>
+<tr>
+<td><code>currentTarget</code></td>
+<td>Elemen tempat listener <strong>terpasang</strong></td>
+</tr>
+<tr>
+<td><code>timeStamp</code></td>
+<td>Waktu event (milidetik)</td>
+</tr>
+<tr>
+<td><code>defaultPrevented</code></td>
+<td>Apakah <code>preventDefault()</code> sudah dipanggil</td>
+</tr>
+<tr>
+<td><code>bubbles</code></td>
+<td>Apakah event bubbling</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Perbedaan <code>target</code> vs <code>currentTarget</code>:</strong></p>
+<pre><code class="language-html">&lt;div id=&quot;parent&quot;&gt;
+  &lt;button id=&quot;child&quot;&gt;Klik&lt;/button&gt;
+&lt;/div&gt;
+</code></pre>
+<pre><code class="language-javascript">const parent = document.querySelector(&quot;#parent&quot;);
+
+parent.addEventListener(&quot;click&quot;, (e) =&gt; {
+  console.log(e.target.id);        // &quot;child&quot; (elemen yang diklik)
+  console.log(e.currentTarget.id); // &quot;parent&quot; (tempat listener)
+});
+</code></pre>
+<h3 id="preventdefault--mencegah-perilaku-default"><code>preventDefault()</code> — Mencegah Perilaku Default <a href="#preventdefault--mencegah-perilaku-default" class="anchor" aria-hidden="true">#</a></h3>
+<p>Banyak elemen memiliki perilaku default:</p>
+<ul>
+<li>Link <code>&lt;a&gt;</code> → navigasi ke URL.</li>
+<li>Form <code>&lt;form&gt;</code> → submit dan reload halaman.</li>
+<li>Checkbox → toggle checked.</li>
+</ul>
+<p><code>preventDefault()</code> mencegah perilaku tersebut.</p>
+<pre><code class="language-javascript">// Mencegah link navigasi
+const link = document.querySelector(&quot;a&quot;);
+link.addEventListener(&quot;click&quot;, (e) =&gt; {
+  e.preventDefault();
+  console.log(&quot;Navigasi dibatalkan&quot;);
+});
+
+// Mencegah form submit reload
+const form = document.querySelector(&quot;form&quot;);
+form.addEventListener(&quot;submit&quot;, (e) =&gt; {
+  e.preventDefault();
+  console.log(&quot;Form di-submit tanpa reload&quot;);
+  // proses data via fetch...
+});
+</code></pre>
+<h3 id="stoppropagation--menghentikan-bubbling"><code>stopPropagation()</code> — Menghentikan Bubbling <a href="#stoppropagation--menghentikan-bubbling" class="anchor" aria-hidden="true">#</a></h3>
+<p>Mencegah event &ldquo;naik&rdquo; ke parent (dibahas di bagian <em>Bubbling</em>).</p>
+<pre><code class="language-javascript">child.addEventListener(&quot;click&quot;, (e) =&gt; {
+  e.stopPropagation();
+  console.log(&quot;Hanya child yang handle&quot;);
+});
+</code></pre>
+<h3 id="stopimmediatepropagation--menghentikan-semua-listener-lain"><code>stopImmediatePropagation()</code> — Menghentikan Semua Listener Lain <a href="#stopimmediatepropagation--menghentikan-semua-listener-lain" class="anchor" aria-hidden="true">#</a></h3>
+<p>Mencegah listener lain pada elemen yang sama (dan parent) dijalankan.</p>
+<pre><code class="language-javascript">tombol.addEventListener(&quot;click&quot;, (e) =&gt; {
+  e.stopImmediatePropagation();
+  console.log(&quot;Listener 1&quot;);
+});
+
+tombol.addEventListener(&quot;click&quot;, () =&gt; {
+  console.log(&quot;Listener 2&quot;); // TIDAK dijalankan
+});
+</code></pre>
+<hr>
+<h2 id="bubbling-dan-capturing">Bubbling dan Capturing <a href="#bubbling-dan-capturing" class="anchor" aria-hidden="true">#</a></h2>
+<p>Saat event terjadi pada elemen, event tersebut melewati <strong>tiga fase</strong>:</p>
+<ol>
+<li><strong>Capturing</strong> — event turun dari <code>document</code> ke target.</li>
+<li><strong>Target</strong> — event mencapai elemen target.</li>
+<li><strong>Bubbling</strong> — event naik dari target ke <code>document</code>.</li>
+</ol>
+<p>Secara default, listener dipasang di fase <strong>bubbling</strong>.</p>
+<h3 id="ilustrasi">Ilustrasi <a href="#ilustrasi" class="anchor" aria-hidden="true">#</a></h3>
+<pre><code class="language-html">&lt;div id=&quot;luar&quot;&gt;
+  &lt;div id=&quot;tengah&quot;&gt;
+    &lt;button id=&quot;dalam&quot;&gt;Klik&lt;/button&gt;
+  &lt;/div&gt;
+&lt;/div&gt;
+</code></pre>
+<pre><code class="language-javascript">document.querySelector(&quot;#luar&quot;).addEventListener(&quot;click&quot;, () =&gt; console.log(&quot;luar&quot;));
+document.querySelector(&quot;#tengah&quot;).addEventListener(&quot;click&quot;, () =&gt; console.log(&quot;tengah&quot;));
+document.querySelector(&quot;#dalam&quot;).addEventListener(&quot;click&quot;, () =&gt; console.log(&quot;dalam&quot;));
+</code></pre>
+<p>Saat tombol <code>#dalam</code> diklik, output:</p>
+<pre><code>dalam
+tengah
+luar
+</code></pre>
+<p>Event &ldquo;naik&rdquo; dari target ke parent — inilah <strong>bubbling</strong>.</p>
+<h3 id="capturing">Capturing <a href="#capturing" class="anchor" aria-hidden="true">#</a></h3>
+<p>Untuk memasang listener di fase <strong>capturing</strong>, gunakan <code>capture: true</code>:</p>
+<pre><code class="language-javascript">document.querySelector(&quot;#luar&quot;).addEventListener(&quot;click&quot;, () =&gt; console.log(&quot;luar (capture)&quot;), true);
+document.querySelector(&quot;#tengah&quot;).addEventListener(&quot;click&quot;, () =&gt; console.log(&quot;tengah (capture)&quot;), true);
+document.querySelector(&quot;#dalam&quot;).addEventListener(&quot;click&quot;, () =&gt; console.log(&quot;dalam (capture)&quot;), true);
+</code></pre>
+<p>Output saat tombol diklik:</p>
+<pre><code>luar (capture)
+tengah (capture)
+dalam (capture)
+</code></pre>
+<p>Event turun dari luar ke dalam.</p>
+<h3 id="menghentikan-bubbling">Menghentikan Bubbling <a href="#menghentikan-bubbling" class="anchor" aria-hidden="true">#</a></h3>
+<pre><code class="language-javascript">document.querySelector(&quot;#dalam&quot;).addEventListener(&quot;click&quot;, (e) =&gt; {
+  e.stopPropagation();
+  console.log(&quot;dalam — bubbling dihentikan&quot;);
+});
+
+document.querySelector(&quot;#tengah&quot;).addEventListener(&quot;click&quot;, () =&gt; {
+  console.log(&quot;tengah&quot;); // TIDAK dijalankan
+});
+
+document.querySelector(&quot;#luar&quot;).addEventListener(&quot;click&quot;, () =&gt; {
+  console.log(&quot;luar&quot;); // TIDAK dijalankan
+});
+</code></pre>
+<blockquote>
+<p><strong>Tips:</strong> Hindari <code>stopPropagation()</code> kecuali benar-benar perlu. Menghentikan bubbling bisa memutus event delegation dan menyebabkan bug yang sulit dilacak.</p>
+</blockquote>
+<hr>
+<h2 id="event-delegation">Event Delegation <a href="#event-delegation" class="anchor" aria-hidden="true">#</a></h2>
+<p><strong>Event delegation</strong> adalah teknik memasang <strong>satu listener pada parent</strong> untuk menangani event dari banyak anak. Ini memanfaatkan bubbling.</p>
+<h3 id="masalah-listener-per-elemen">Masalah: Listener per Elemen <a href="#masalah-listener-per-elemen" class="anchor" aria-hidden="true">#</a></h3>
+<pre><code class="language-javascript">// ❌ Tidak efisien — listener untuk setiap item
+document.querySelectorAll(&quot;.item&quot;).forEach(item =&gt; {
+  item.addEventListener(&quot;click&quot;, () =&gt; {
+    console.log(`Klik: ${item.textContent}`);
+  });
+});
+</code></pre>
+<p>Masalah:</p>
+<ul>
+<li>Banyak listener (boros memori).</li>
+<li>Item baru yang ditambahkan <strong>tidak</strong> memiliki listener.</li>
+</ul>
+<h3 id="solusi-event-delegation">Solusi: Event Delegation <a href="#solusi-event-delegation" class="anchor" aria-hidden="true">#</a></h3>
+<pre><code class="language-javascript">// ✅ Satu listener di parent
+const daftar = document.querySelector(&quot;#daftar&quot;);
+
+daftar.addEventListener(&quot;click&quot;, (e) =&gt; {
+  const item = e.target.closest(&quot;.item&quot;);
+  if (!item) return; // klik di luar item
+
+  console.log(`Klik: ${item.textContent}`);
+});
+</code></pre>
+<p><strong>Keuntungan:</strong></p>
+<ul>
+<li>Satu listener untuk banyak elemen — hemat memori.</li>
+<li>Item baru otomatis &ldquo;ter-handle&rdquo; tanpa perlu listener tambahan.</li>
+<li>Lebih mudah dikelola.</li>
+</ul>
+<h3 id="closest--mencari-parent-terdekat-yang-cocok"><code>closest()</code> — Mencari Parent Terdekat yang Cocok <a href="#closest--mencari-parent-terdekat-yang-cocok" class="anchor" aria-hidden="true">#</a></h3>
+<pre><code class="language-javascript">daftar.addEventListener(&quot;click&quot;, (e) =&gt; {
+  const tombol = e.target.closest(&quot;.btn-hapus&quot;);
+  if (tombol) {
+    const item = tombol.closest(&quot;.item&quot;);
+    item.remove();
+  }
+});
+</code></pre>
+<p><code>closest()</code> menelusuri dari <code>e.target</code> ke atas hingga menemukan elemen yang cocok dengan selector, atau <code>null</code>.</p>
+<h3 id="contoh-to-do-list-dengan-delegation">Contoh: To-Do List dengan Delegation <a href="#contoh-to-do-list-dengan-delegation" class="anchor" aria-hidden="true">#</a></h3>
+<pre><code class="language-javascript">const daftar = document.querySelector(&quot;#daftar-todo&quot;);
+
+// Satu listener untuk semua tombol hapus (termasuk yang ditambahkan nanti)
+daftar.addEventListener(&quot;click&quot;, (e) =&gt; {
+  if (e.target.matches(&quot;.btn-hapus&quot;)) {
+    e.target.closest(&quot;li&quot;).remove();
+  }
+});
+</code></pre>
+<blockquote>
+<p><strong>Tips:</strong> Gunakan <code>e.target.matches(selector)</code> untuk cek apakah target cocok dengan selector tertentu.</p>
+</blockquote>
+<hr>
+<h2 id="event-umum">Event Umum <a href="#event-umum" class="anchor" aria-hidden="true">#</a></h2>
+<h3 id="mouse-events">Mouse Events <a href="#mouse-events" class="anchor" aria-hidden="true">#</a></h3>
+<table>
+<thead>
+<tr>
+<th>Event</th>
+<th>Kapan Terjadi</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>click</code></td>
+<td>Klik kiri (setelah mousedown + mouseup)</td>
+</tr>
+<tr>
+<td><code>dblclick</code></td>
+<td>Double klik</td>
+</tr>
+<tr>
+<td><code>mousedown</code> / <code>mouseup</code></td>
+<td>Tombol mouse ditekan/dilepas</td>
+</tr>
+<tr>
+<td><code>mousemove</code></td>
+<td>Mouse bergerak</td>
+</tr>
+<tr>
+<td><code>mouseenter</code> / <code>mouseleave</code></td>
+<td>Mouse masuk/keluar elemen (tidak bubble)</td>
+</tr>
+<tr>
+<td><code>mouseover</code> / <code>mouseout</code></td>
+<td>Mouse masuk/keluar elemen (bubble)</td>
+</tr>
+<tr>
+<td><code>contextmenu</code></td>
+<td>Klik kanan</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Properti event mouse:</strong></p>
+<pre><code class="language-javascript">document.addEventListener(&quot;click&quot;, (e) =&gt; {
+  console.log(e.clientX, e.clientY); // koordinat relatif viewport
+  console.log(e.pageX, e.pageY);     // koordinat relatif dokumen
+  console.log(e.button);             // 0 = kiri, 1 = tengah, 2 = kanan
+  console.log(e.ctrlKey);            // apakah Ctrl ditekan
+  console.log(e.shiftKey);           // apakah Shift ditekan
+});
+</code></pre>
+<h3 id="keyboard-events">Keyboard Events <a href="#keyboard-events" class="anchor" aria-hidden="true">#</a></h3>
+<table>
+<thead>
+<tr>
+<th>Event</th>
+<th>Kapan Terjadi</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>keydown</code></td>
+<td>Tombol ditekan (berulang jika ditahan)</td>
+</tr>
+<tr>
+<td><code>keyup</code></td>
+<td>Tombol dilepas</td>
+</tr>
+<tr>
+<td><code>keypress</code></td>
+<td>(Deprecated) — gunakan <code>keydown</code></td>
+</tr>
+</tbody>
+</table>
+<pre><code class="language-javascript">document.addEventListener(&quot;keydown&quot;, (e) =&gt; {
+  console.log(e.key);      // &quot;a&quot;, &quot;Enter&quot;, &quot;Escape&quot;, &quot;ArrowUp&quot;, dll.
+  console.log(e.code);     // &quot;KeyA&quot;, &quot;Enter&quot;, &quot;Escape&quot;, &quot;ArrowUp&quot;
+  console.log(e.ctrlKey);  // apakah Ctrl ditekan
+  console.log(e.altKey);   // apakah Alt ditekan
+  console.log(e.shiftKey); // apakah Shift ditekan
+  console.log(e.metaKey);  // Cmd (macOS) / Windows key
+});
+</code></pre>
+<p><strong>Perbedaan <code>key</code> vs <code>code</code>:</strong></p>
+<ul>
+<li><code>key</code> — karakter yang dihasilkan (terpengaruh layout keyboard &amp; Shift).</li>
+<li><code>code</code> — kode fisik tombol (tidak terpengaruh layout).</li>
+</ul>
+<pre><code class="language-javascript">// Tekan &quot;a&quot;:
+// e.key = &quot;a&quot;, e.code = &quot;KeyA&quot;
+
+// Tekan Shift + &quot;a&quot;:
+// e.key = &quot;A&quot;, e.code = &quot;KeyA&quot;
+
+// Tekan &quot;1&quot; di keyboard US:
+// e.key = &quot;1&quot;, e.code = &quot;Digit1&quot;
+</code></pre>
+<p><strong>Contoh: Shortcut keyboard:</strong></p>
+<pre><code class="language-javascript">document.addEventListener(&quot;keydown&quot;, (e) =&gt; {
+  // Ctrl + S — simpan
+  if (e.ctrlKey &amp;&amp; e.key === &quot;s&quot;) {
+    e.preventDefault();
+    console.log(&quot;Simpan!&quot;);
+  }
+
+  // Escape — tutup modal
+  if (e.key === &quot;Escape&quot;) {
+    tutupModal();
+  }
+});
+</code></pre>
+<h3 id="form-events">Form Events <a href="#form-events" class="anchor" aria-hidden="true">#</a></h3>
+<table>
+<thead>
+<tr>
+<th>Event</th>
+<th>Kapan Terjadi</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>submit</code></td>
+<td>Form di-submit</td>
+</tr>
+<tr>
+<td><code>reset</code></td>
+<td>Form di-reset</td>
+</tr>
+<tr>
+<td><code>input</code></td>
+<td>Nilai input berubah (real-time)</td>
+</tr>
+<tr>
+<td><code>change</code></td>
+<td>Nilai berubah dan elemen kehilangan fokus</td>
+</tr>
+<tr>
+<td><code>focus</code> / <code>blur</code></td>
+<td>Elemen mendapat/kehilangan fokus</td>
+</tr>
+<tr>
+<td><code>focusin</code> / <code>focusout</code></td>
+<td>Seperti focus/blur, tetapi bubble</td>
+</tr>
+</tbody>
+</table>
+<pre><code class="language-javascript">const form = document.querySelector(&quot;form&quot;);
+const input = document.querySelector(&quot;#nama&quot;);
+
+// Submit — cegah reload
+form.addEventListener(&quot;submit&quot;, (e) =&gt; {
+  e.preventDefault();
+  console.log(&quot;Data:&quot;, input.value);
+});
+
+// Input — real-time saat mengetik
+input.addEventListener(&quot;input&quot;, (e) =&gt; {
+  console.log(&quot;Nilai saat ini:&quot;, e.target.value);
+});
+
+// Change — setelah kehilangan fokus
+input.addEventListener(&quot;change&quot;, (e) =&gt; {
+  console.log(&quot;Nilai final:&quot;, e.target.value);
+});
+
+// Focus/blur
+input.addEventListener(&quot;focus&quot;, () =&gt; console.log(&quot;Fokus&quot;));
+input.addEventListener(&quot;blur&quot;, () =&gt; console.log(&quot;Blur&quot;));
+</code></pre>
+<p><strong>Perbedaan <code>input</code> vs <code>change</code>:</strong></p>
+<ul>
+<li><code>input</code> — dipicu <strong>setiap</strong> perubahan (setiap ketikan).</li>
+<li><code>change</code> — dipicu saat nilai berubah <strong>dan</strong> elemen kehilangan fokus (atau Enter ditekan).</li>
+</ul>
+<pre><code class="language-javascript">// Real-time search — gunakan input
+searchInput.addEventListener(&quot;input&quot;, (e) =&gt; {
+  filterProduk(e.target.value);
+});
+
+// Validasi setelah user selesai mengetik — gunakan change
+emailInput.addEventListener(&quot;change&quot;, (e) =&gt; {
+  validasiEmail(e.target.value);
+});
+</code></pre>
+<h3 id="window-events">Window Events <a href="#window-events" class="anchor" aria-hidden="true">#</a></h3>
+<table>
+<thead>
+<tr>
+<th>Event</th>
+<th>Kapan Terjadi</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>load</code></td>
+<td>Halaman selesai dimuat (termasuk gambar)</td>
+</tr>
+<tr>
+<td><code>DOMContentLoaded</code></td>
+<td>HTML selesai di-parse (sebelum gambar)</td>
+</tr>
+<tr>
+<td><code>resize</code></td>
+<td>Window di-resize</td>
+</tr>
+<tr>
+<td><code>scroll</code></td>
+<td>Halaman di-scroll</td>
+</tr>
+<tr>
+<td><code>beforeunload</code></td>
+<td>Sebelum halaman ditutup (konfirmasi)</td>
+</tr>
+</tbody>
+</table>
+<pre><code class="language-javascript">// DOMContentLoaded — lebih cepat dari load
+document.addEventListener(&quot;DOMContentLoaded&quot;, () =&gt; {
+  console.log(&quot;DOM siap!&quot;);
+});
+
+// Resize — dengan debounce (lihat tips)
+window.addEventListener(&quot;resize&quot;, () =&gt; {
+  console.log(window.innerWidth, window.innerHeight);
+});
+
+// Scroll
+window.addEventListener(&quot;scroll&quot;, () =&gt; {
+  console.log(window.scrollY);
+});
+</code></pre>
+<p><strong>Perbedaan <code>DOMContentLoaded</code> vs <code>load</code>:</strong></p>
+<pre><code class="language-javascript">// DOMContentLoaded — HTML selesai di-parse, gambar mungkin belum
+document.addEventListener(&quot;DOMContentLoaded&quot;, () =&gt; {
+  // Aman untuk mengakses DOM
+});
+
+// load — semua resource (gambar, CSS) selesai dimuat
+window.addEventListener(&quot;load&quot;, () =&gt; {
+  // Semua siap, termasuk gambar
+});
+</code></pre>
+<blockquote>
+<p><strong>Tips:</strong> Untuk manipulasi DOM, gunakan <code>DOMContentLoaded</code> — lebih cepat. Gunakan <code>load</code> hanya jika butuh gambar sudah dimuat (misalnya untuk mengukur dimensi gambar).</p>
+</blockquote>
+<h3 id="touch-events-mobile">Touch Events (Mobile) <a href="#touch-events-mobile" class="anchor" aria-hidden="true">#</a></h3>
+<table>
+<thead>
+<tr>
+<th>Event</th>
+<th>Kapan Terjadi</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>touchstart</code></td>
+<td>Jari menyentuh layar</td>
+</tr>
+<tr>
+<td><code>touchmove</code></td>
+<td>Jari bergerak di layar</td>
+</tr>
+<tr>
+<td><code>touchend</code></td>
+<td>Jari diangkat</td>
+</tr>
+<tr>
+<td><code>touchcancel</code></td>
+<td>Touch dibatalkan (misalnya telepon masuk)</td>
+</tr>
+</tbody>
+</table>
+<pre><code class="language-javascript">element.addEventListener(&quot;touchstart&quot;, (e) =&gt; {
+  console.log(e.touches.length); // jumlah jari
+  console.log(e.touches[0].clientX, e.touches[0].clientY);
+});
+</code></pre>
+<blockquote>
+<p><strong>Catatan:</strong> Untuk sebagian besar kasus, <code>click</code> sudah cukup di mobile. Gunakan touch events hanya jika butuh gesture khusus (swipe, pinch).</p>
+</blockquote>
+<hr>
+<h2 id="contoh-praktis">Contoh Praktis <a href="#contoh-praktis" class="anchor" aria-hidden="true">#</a></h2>
+<h3 id="1-form-validation-real-time">1. Form Validation Real-time <a href="#1-form-validation-real-time" class="anchor" aria-hidden="true">#</a></h3>
+<pre><code class="language-html">&lt;form id=&quot;form-daftar&quot;&gt;
+  &lt;input type=&quot;text&quot; id=&quot;nama&quot; placeholder=&quot;Nama&quot;&gt;
+  &lt;span id=&quot;error-nama&quot; class=&quot;error&quot;&gt;&lt;/span&gt;
+
+  &lt;input type=&quot;email&quot; id=&quot;email&quot; placeholder=&quot;Email&quot;&gt;
+  &lt;span id=&quot;error-email&quot; class=&quot;error&quot;&gt;&lt;/span&gt;
+
+  &lt;button type=&quot;submit&quot;&gt;Daftar&lt;/button&gt;
+&lt;/form&gt;
+
+&lt;script&gt;
+  const form = document.querySelector(&quot;#form-daftar&quot;);
+  const nama = document.querySelector(&quot;#nama&quot;);
+  const email = document.querySelector(&quot;#email&quot;);
+  const errorNama = document.querySelector(&quot;#error-nama&quot;);
+  const errorEmail = document.querySelector(&quot;#error-email&quot;);
+
+  nama.addEventListener(&quot;input&quot;, () =&gt; {
+    if (nama.value.trim().length &lt; 3) {
+      errorNama.textContent = &quot;Nama minimal 3 karakter&quot;;
+      nama.classList.add(&quot;invalid&quot;);
+    } else {
+      errorNama.textContent = &quot;&quot;;
+      nama.classList.remove(&quot;invalid&quot;);
+    }
+  });
+
+  email.addEventListener(&quot;input&quot;, () =&gt; {
+    const valid = /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email.value);
+    if (!valid) {
+      errorEmail.textContent = &quot;Email tidak valid&quot;;
+      email.classList.add(&quot;invalid&quot;);
+    } else {
+      errorEmail.textContent = &quot;&quot;;
+      email.classList.remove(&quot;invalid&quot;);
+    }
+  });
+
+  form.addEventListener(&quot;submit&quot;, (e) =&gt; {
+    e.preventDefault();
+
+    if (nama.value.trim().length &lt; 3 || !email.value.includes(&quot;@&quot;)) {
+      alert(&quot;Perbaiki form terlebih dahulu&quot;);
+      return;
+    }
+
+    console.log(&quot;Form valid:&quot;, { nama: nama.value, email: email.value });
+  });
+&lt;/script&gt;
+</code></pre>
+<h3 id="2-modal-dengan-escape-dan-klik-di-luar">2. Modal dengan Escape dan Klik di Luar <a href="#2-modal-dengan-escape-dan-klik-di-luar" class="anchor" aria-hidden="true">#</a></h3>
+<pre><code class="language-html">&lt;button id=&quot;btn-buka&quot;&gt;Buka Modal&lt;/button&gt;
+&lt;div id=&quot;modal&quot; class=&quot;modal hidden&quot;&gt;
+  &lt;div class=&quot;modal-content&quot;&gt;
+    &lt;h2&gt;Judul Modal&lt;/h2&gt;
+    &lt;p&gt;Isi modal...&lt;/p&gt;
+    &lt;button id=&quot;btn-tutup&quot;&gt;Tutup&lt;/button&gt;
+  &lt;/div&gt;
+&lt;/div&gt;
+
+&lt;script&gt;
+  const modal = document.querySelector(&quot;#modal&quot;);
+  const btnBuka = document.querySelector(&quot;#btn-buka&quot;);
+  const btnTutup = document.querySelector(&quot;#btn-tutup&quot;);
+
+  function bukaModal() {
+    modal.classList.remove(&quot;hidden&quot;);
+  }
+
+  function tutupModal() {
+    modal.classList.add(&quot;hidden&quot;);
+  }
+
+  btnBuka.addEventListener(&quot;click&quot;, bukaModal);
+  btnTutup.addEventListener(&quot;click&quot;, tutupModal);
+
+  // Klik di luar modal (overlay) menutup
+  modal.addEventListener(&quot;click&quot;, (e) =&gt; {
+    if (e.target === modal) tutupModal();
+  });
+
+  // Escape menutup
+  document.addEventListener(&quot;keydown&quot;, (e) =&gt; {
+    if (e.key === &quot;Escape&quot; &amp;&amp; !modal.classList.contains(&quot;hidden&quot;)) {
+      tutupModal();
+    }
+  });
+&lt;/script&gt;
+</code></pre>
+<h3 id="3-infinite-scroll-sederhana">3. Infinite Scroll Sederhana <a href="#3-infinite-scroll-sederhana" class="anchor" aria-hidden="true">#</a></h3>
+<pre><code class="language-javascript">let halaman = 1;
+let loading = false;
+
+window.addEventListener(&quot;scroll&quot;, async () =&gt; {
+  if (loading) return;
+
+  const { scrollTop, scrollHeight, clientHeight } = document.documentElement;
+
+  // Jika sudah dekat bawah (100px)
+  if (scrollTop + clientHeight &gt;= scrollHeight - 100) {
+    loading = true;
+    halaman++;
+
+    try {
+      const data = await fetch(`/api/produk?page=${halaman}`).then(r =&gt; r.json());
+      renderProduk(data); // fungsi dari artikel DOM
+    } finally {
+      loading = false;
+    }
+  }
+});
+</code></pre>
+<h3 id="4-drag-and-drop-sederhana">4. Drag and Drop Sederhana <a href="#4-drag-and-drop-sederhana" class="anchor" aria-hidden="true">#</a></h3>
+<pre><code class="language-javascript">const item = document.querySelector(&quot;#item&quot;);
+let offsetX, offsetY;
+
+item.addEventListener(&quot;mousedown&quot;, (e) =&gt; {
+  offsetX = e.clientX - item.getBoundingClientRect().left;
+  offsetY = e.clientY - item.getBoundingClientRect().top;
+
+  function onMouseMove(e) {
+    item.style.left = (e.clientX - offsetX) + &quot;px&quot;;
+    item.style.top = (e.clientY - offsetY) + &quot;px&quot;;
+  }
+
+  function onMouseUp() {
+    document.removeEventListener(&quot;mousemove&quot;, onMouseMove);
+    document.removeEventListener(&quot;mouseup&quot;, onMouseUp);
+  }
+
+  document.addEventListener(&quot;mousemove&quot;, onMouseMove);
+  document.addEventListener(&quot;mouseup&quot;, onMouseUp);
+});
+</code></pre>
+<hr>
+<h2 id="tips--best-practice">Tips &amp; Best Practice <a href="#tips--best-practice" class="anchor" aria-hidden="true">#</a></h2>
+<ol>
+<li>
+<p><strong>Gunakan <code>addEventListener()</code></strong>, bukan <code>onclick</code> — mendukung banyak listener dan bisa dihapus.</p>
+</li>
+<li>
+<p><strong>Gunakan event delegation</strong> untuk elemen dinamis — satu listener di parent.</p>
+</li>
+<li>
+<p><strong><code>preventDefault()</code></strong> untuk mencegah perilaku default (form submit, link navigasi).</p>
+</li>
+<li>
+<p><strong>Hindari <code>stopPropagation()</code></strong> kecuali perlu — bisa memutus event delegation.</p>
+</li>
+<li>
+<p><strong>Gunakan <code>{ once: true }</code></strong> untuk listener yang hanya perlu jalan sekali.</p>
+</li>
+<li>
+<p><strong>Debounce/throttle</strong> event yang sering (scroll, resize, input) untuk performa:</p>
+</li>
+</ol>
+<pre><code class="language-javascript">function debounce(fn, delay) {
+  let timeout;
+  return (...args) =&gt; {
+    clearTimeout(timeout);
+    timeout = setTimeout(() =&gt; fn(...args), delay);
+  };
+}
+
+window.addEventListener(&quot;resize&quot;, debounce(() =&gt; {
+  console.log(&quot;Resized:&quot;, window.innerWidth);
+}, 200));
+</code></pre>
+<ol start="7">
+<li>
+<p><strong>Gunakan <code>passive: true</code></strong> untuk event <code>scroll</code>/<code>touchmove</code> jika tidak memanggil <code>preventDefault()</code> — meningkatkan performa.</p>
+</li>
+<li>
+<p><strong>Bersihkan listener</strong> saat elemen dihapus atau komponen di-unmount (terutama di SPA/framework) — mencegah memory leak.</p>
+</li>
+<li>
+<p><strong>Gunakan <code>DOMContentLoaded</code></strong> untuk manipulasi DOM — lebih cepat dari <code>load</code>.</p>
+</li>
+<li>
+<p><strong>Cache elemen</strong> — jangan <code>querySelector</code> berulang di dalam handler.</p>
+</li>
+</ol>
+<hr>
+<h2 id="ringkasan">Ringkasan <a href="#ringkasan" class="anchor" aria-hidden="true">#</a></h2>
+<table>
+<thead>
+<tr>
+<th>Konsep</th>
+<th>Poin Penting</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>addEventListener()</code></td>
+<td>Cara modern, banyak listener, bisa dihapus</td>
+</tr>
+<tr>
+<td><code>removeEventListener()</code></td>
+<td>Butuh referensi fungsi yang sama</td>
+</tr>
+<tr>
+<td><code>preventDefault()</code></td>
+<td>Mencegah perilaku default</td>
+</tr>
+<tr>
+<td><code>stopPropagation()</code></td>
+<td>Menghentikan bubbling</td>
+</tr>
+<tr>
+<td>Bubbling</td>
+<td>Event naik dari target ke parent</td>
+</tr>
+<tr>
+<td>Capturing</td>
+<td>Event turun dari parent ke target (<code>capture: true</code>)</td>
+</tr>
+<tr>
+<td>Event delegation</td>
+<td>Satu listener di parent untuk banyak anak</td>
+</tr>
+<tr>
+<td><code>e.target</code></td>
+<td>Elemen asal event</td>
+</tr>
+<tr>
+<td><code>e.currentTarget</code></td>
+<td>Elemen tempat listener terpasang</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Event umum:</strong></p>
+<ul>
+<li>Mouse: <code>click</code>, <code>dblclick</code>, <code>mousedown</code>, <code>mouseup</code>, <code>mouseover</code>.</li>
+<li>Keyboard: <code>keydown</code>, <code>keyup</code>.</li>
+<li>Form: <code>submit</code>, <code>input</code>, <code>change</code>, <code>focus</code>, <code>blur</code>.</li>
+<li>Window: <code>DOMContentLoaded</code>, <code>load</code>, <code>resize</code>, <code>scroll</code>.</li>
+</ul>
+<p>Poin penting:</p>
+<ul>
+<li>Gunakan <strong><code>addEventListener()</code></strong> — jangan <code>onclick</code>.</li>
+<li><strong>Event delegation</strong> untuk elemen dinamis — satu listener di parent.</li>
+<li><code>e.target</code> vs <code>e.currentTarget</code> — pahami perbedaannya.</li>
+<li>Gunakan <strong><code>{ once: true }</code></strong> untuk listener sekali pakai.</li>
+<li><strong>Debounce/throttle</strong> event yang sering (scroll, resize, input).</li>
+<li>Gunakan <strong><code>DOMContentLoaded</code></strong> untuk manipulasi DOM.</li>
+<li><strong>Bersihkan listener</strong> saat elemen dihapus untuk mencegah memory leak.</li>
+</ul>
+<p>Pada artikel berikutnya, kita akan membahas <strong>Web Storage &amp; Cookie</strong> — menyimpan data di sisi klien.</p>
+
+			<div class="page-footer-meta d-flex flex-column flex-md-row justify-content-between">
+				</div>
+			<div class="docs-navigation d-flex justify-content-between">
+	
+	<a href="/javascript/tutorial/09-dom-manipulation/">
+			<div class="card my-1">
+				<div class="card-body py-2">
+					&larr; DOM Manipulation
+				</div>
+			</div>
+		</a>
+	<a class="ms-auto" href="/javascript/tutorial/11-web-storage/">
+			<div class="card my-1">
+				<div class="card-body py-2">
+					Web Storage &amp; Cookie &rarr;
+				</div>
+			</div>
+		</a>
+	</div>
+
+			
+		</main>
+	</div>
+
+      </div>
+    </div>
+    
+    
+    <footer class="footer text-muted">
+  <div class="container-xxl">
+    <div class="row">
+      <div class="col-lg-8 order-last order-lg-first">
+        <ul class="list-inline">
+          <li class="list-inline-item">Powered by <a class="text-muted" href="https://gohugo.io/">Hugo</a> and <a class="text-muted" href="https://github.com/">Github</a></li>
+        </ul>
+      </div>
+      <div class="col-lg-8 order-first order-lg-last text-lg-end">
+        <ul class="list-inline">
+          </ul>
+      </div>
+    </div>
+  </div>
+</footer>
+    
+
+<script src="/js/bootstrap.min.650aeec64c81d69d4c0850fc73c93da3f0330cec0a27772feed7f90f60baa5f47f1c45687d71914bdafd1c4e860d40f6dc08ede27a2f08431ff929c9a2d24621.js" integrity="sha512-ZQruxkyB1p1MCFD8c8k9o/AzDOwKJ3cv7tf5D2C6pfR/HEVofXGRS9r9HE6GDUD23Ajt4novCEMf&#43;SnJotJGIQ==" crossorigin="anonymous" defer></script>
+  <script src="/js/highlight.min.ec234bd8a5f487aaffe50a89f17b14501b1bb65633cf177cffd4cb84702dd7030edc08712dceb8dc27ac7e54b53240a08bf0b8d951572ee582bcdbbd06a48a7b.js" integrity="sha512-7CNL2KX0h6r/5QqJ8XsUUBsbtlYzzxd8/9TLhHAt1wMO3AhxLc643CesflS1MkCgi/C42VFXLuWCvNu9BqSKew==" crossorigin="anonymous" defer></script>
+  <script src="/main.min.cd1e5e6b40065b3f7f7fd8548a528fac67019754eda0f37b9918d02d154fc9ef6a22742f6513b0572ad9163152e151ec36221fbeafbecd7759c3dab1f19b64b9.js" integrity="sha512-zR5ea0AGWz9/f9hUilKPrGcBl1TtoPN7mRjQLRVPye9qInQvZROwVyrZFjFS4VHsNiIfvq&#43;&#43;zXdZw9qx8ZtkuQ==" crossorigin="anonymous" defer></script>
+  <script src="https://kaban.my.id/index.min.3b38957cbdd3fcd9f9b6e3e14d11e41821e75e9e633e2e7fc92b39e052142003d54a01433bc318b5180cbdf345e1654d731e00e168a3ab02cdad8965a4e5d852.js" integrity="sha512-OziVfL3T/Nn5tuPhTRHkGCHnXp5jPi5/ySs54FIUIAPVSgFDO8MYtRgMvfNF4WVNcx4A4WijqwLNrYllpOXYUg==" crossorigin="anonymous" defer></script>
+  
+    <div class="d-flex fixed-bottom pb-4 pb-lg-5 pe-4 pe-lg-5">
+      <a id="toTop" href="#" class="btn btn-outline-primary rounded-circle ms-auto p-2"><span class="visually-hidden">Top</span><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-chevron-up"><polyline points="18 15 12 9 6 15"></polyline></svg></a>
+    </div>
+    
+  </body>
+</html>

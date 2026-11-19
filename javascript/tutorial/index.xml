@@ -73,5 +73,49 @@ Fungsi memungkinkan kita untuk:
 Menghindari duplikasi — tulis sekali, panggil berkali-kali. Memecah masalah kompleks menjadi bagian-bagian kecil. Mengabstraksi detail — pengguna fungsi tidak perlu tahu implementasinya. Menguji kode secara terpisah. Artikel ini membahas semua aspek fungsi di JavaScript: cara mendefinisikan, parameter, return value, arrow function, scope, closure, dan IIFE.</description>
     </item>
     
+    <item>
+      <title>Array &amp; Method-nya</title>
+      <link>https://kaban.my.id/javascript/tutorial/07-array/</link>
+      <pubDate>Sun, 25 Dec 2022 08:00:00 +0000</pubDate>
+      
+      <guid>https://kaban.my.id/javascript/tutorial/07-array/</guid>
+      <description>Pendahuluan # Array adalah struktur data yang menyimpan urutan nilai dalam satu variabel. Array bisa berisi tipe apa pun — string, number, boolean, object, bahkan array lain (nested array).
+Array adalah struktur data yang paling sering digunakan di JavaScript. Hampir setiap aplikasi menggunakan array: daftar produk, daftar user, hasil query API, dan sebagainya.
+Artikel ini membahas cara membuat array, mengakses elemen, method-method penting (mutasi dan non-mutasi), serta teknik modern seperti spread operator dan destructuring.</description>
+    </item>
+    
+    <item>
+      <title>Object &amp; Method-nya</title>
+      <link>https://kaban.my.id/javascript/tutorial/08-object/</link>
+      <pubDate>Mon, 26 Dec 2022 08:00:00 +0000</pubDate>
+      
+      <guid>https://kaban.my.id/javascript/tutorial/08-object/</guid>
+      <description>Pendahuluan # Object adalah struktur data yang menyimpan kumpulan pasangan key-value (properti). Jika array menggunakan index numerik, object menggunakan key (biasanya string) untuk mengakses nilai.
+Object adalah tipe data paling fleksibel di JavaScript. Hampir semua hal adalah object: array, fungsi, Date, bahkan DOM element. Object digunakan untuk merepresentasikan entitas dunia nyata — user, produk, pesanan, konfigurasi, dan sebagainya.
+Artikel ini membahas cara membuat object, mengakses dan memodifikasi properti, method, method bawaan Object, destructuring, spread, optional chaining, serta konversi ke/dari JSON.</description>
+    </item>
+    
+    <item>
+      <title>DOM Manipulation</title>
+      <link>https://kaban.my.id/javascript/tutorial/09-dom-manipulation/</link>
+      <pubDate>Tue, 27 Dec 2022 08:00:00 +0000</pubDate>
+      
+      <guid>https://kaban.my.id/javascript/tutorial/09-dom-manipulation/</guid>
+      <description>Pendahuluan # DOM (Document Object Model) adalah representasi struktur halaman HTML sebagai pohon object yang bisa dimanipulasi JavaScript. Setiap elemen HTML — &amp;lt;div&amp;gt;, &amp;lt;p&amp;gt;, &amp;lt;button&amp;gt; — menjadi object yang bisa diubah: teksnya, warnanya, atributnya, bahkan posisinya di halaman.
+DOM manipulation adalah inti dari JavaScript di browser. Dengan DOM, kita bisa:
+Mengubah teks dan HTML secara dinamis. Menambah, menghapus, dan memindahkan elemen. Mengubah style dan class. Membuat aplikasi web interaktif (to-do list, form validation, modal, dll.</description>
+    </item>
+    
+    <item>
+      <title>Event &amp; Event Handling</title>
+      <link>https://kaban.my.id/javascript/tutorial/10-event-handling/</link>
+      <pubDate>Wed, 28 Dec 2022 08:00:00 +0000</pubDate>
+      
+      <guid>https://kaban.my.id/javascript/tutorial/10-event-handling/</guid>
+      <description>Pendahuluan # Event adalah sinyal bahwa sesuatu telah terjadi — user mengklik tombol, mengetik di input, menggulir halaman, atau browser selesai memuat dokumen. Event handling adalah cara JavaScript merespons event tersebut.
+Tanpa event, halaman web hanya statis. Dengan event, kita bisa membuat:
+Tombol yang bereaksi saat diklik. Form yang divalidasi saat di-submit. Pencarian real-time saat user mengetik. Modal yang muncul dan hilang. Dan sebagainya. Artikel ini membahas cara mendaftarkan event listener, memahami event object, konsep bubbling dan capturing, event delegation, serta event-event yang paling umum digunakan.</description>
+    </item>
+    
   </channel>
 </rss>

@@ -1,0 +1,1753 @@
+<!doctype html>
+<html lang="en-US">
+  <head>
+  <meta charset="utf-8">
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <link rel="preload" as="font" href="https://kaban.my.id/fonts/vendor/jost/jost-v4-latin-regular.woff2" type="font/woff2" crossorigin>
+<link rel="preload" as="font" href="https://kaban.my.id/fonts/vendor/jost/jost-v4-latin-500.woff2" type="font/woff2" crossorigin>
+<link rel="preload" as="font" href="https://kaban.my.id/fonts/vendor/jost/jost-v4-latin-700.woff2" type="font/woff2" crossorigin>
+
+  <script>(()=>{var t=window.matchMedia&&window.matchMedia("(prefers-color-scheme: dark)").matches,e=localStorage.getItem("theme");t&&e===null&&(localStorage.setItem("theme","dark"),document.documentElement.setAttribute("data-dark-mode","")),t&&e==="dark"&&document.documentElement.setAttribute("data-dark-mode",""),e==="dark"&&document.documentElement.setAttribute("data-dark-mode","")})()</script>
+
+  <link rel="stylesheet" href="https://kaban.my.id/main.4296e689affcd00e933b8954c10fc43cd1a5f16d5552e78183d12ea50d3e0bf5a596df23a379a4936743f01a7cd8ba048a628b2b9b60b34aa49fad468287100a.css" integrity="sha512-Qpbmia/80A6TO4lUwQ/EPNGl8W1VUueBg9EupQ0&#43;C/Wllt8jo3mkk2dD8Bp82LoEimKLK5tgs0qkn61GgocQCg==" crossorigin="anonymous">
+<noscript><style>img.lazyload { display: none; }</style></noscript>
+  <meta name="robots" content="index, follow">
+    <meta name="googlebot" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1">
+    <meta name="bingbot" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1">
+  <title>Node.js &amp; npm Dasar - Roberto Kaban Blog&#39;s</title>
+<meta name="description" content="Panduan lengkap Node.js dan npm: instalasi, modul, package.json, dependencies, script, dan modul bawaan.">
+<link rel="canonical" href="https://kaban.my.id/javascript/tutorial/15-nodejs-npm/">
+<meta property="og:locale" content="en_US">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Node.js &amp; npm Dasar">
+<meta property="og:description" content="Panduan lengkap Node.js dan npm: instalasi, modul, package.json, dependencies, script, dan modul bawaan.">
+<meta property="og:url" content="https://kaban.my.id/javascript/tutorial/15-nodejs-npm/">
+<meta property="og:site_name" content="Roberto Kaban Blog&#39;s">
+<meta property="article:published_time" content="2023-01-02T08:00:00+00:00">
+  <meta property="article:modified_time" content="2023-01-02T08:00:00+00:00">
+  
+  <meta property="og:image" content="https://kaban.my.id/doks.png"/>
+      <meta property="og:image:alt" content="Roberto Kaban Blog&#39;s">
+    
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:site" content="@robertokaban">
+<meta name="twitter:creator" content="@robertokaban">
+<meta name="twitter:title" content="Node.js &amp; npm Dasar">
+<meta name="twitter:description" content="Panduan lengkap Node.js dan npm: instalasi, modul, package.json, dependencies, script, dan modul bawaan.">
+<meta name="twitter:image" content="https://kaban.my.id/doks.png">
+    <meta name="twitter:image:alt" content="Node.js &amp; npm Dasar">
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "Person",
+        "@id": "https://kaban.my.id/#/schema/person/1",
+      "name": "BlogRobertoKaban",
+      "url": "https://kaban.my.id/",
+      "sameAs": [
+        "https://twitter.com/robertokaban"
+        , "https://github.com/robertokaban"
+        ],
+      "image": {
+          "@type": "ImageObject",
+          "@id": "https://kaban.my.id/#/schema/image/1",
+          "url": "https://kaban.my.id/doks.png",
+          "width":  1280 ,
+          "height":  640 ,
+          "caption": "BlogRobertoKaban"
+        }
+      },
+    {
+      "@type": "WebSite",
+      "@id": "https://kaban.my.id/#/schema/website/1",
+      "url": "https://kaban.my.id/",
+      "name": "Roberto Kaban Blog\u0027s",
+      "description": "Hanya sebuah catatan kecil untuk hal yang tidak ingin dilupakan.",
+      "publisher": {
+          "@id": "https://kaban.my.id/#/schema/person/1"
+        }
+      },
+    {
+      "@type": "WebPage",
+      "@id": "https://kaban.my.id/javascript/tutorial/15-nodejs-npm/",
+      "url": "https://kaban.my.id/javascript/tutorial/15-nodejs-npm/",
+      "name": "Node.js \u0026 npm Dasar",
+      "description": "Panduan lengkap Node.js dan npm: instalasi, modul, package.json, dependencies, script, dan modul bawaan.",
+      "isPartOf": {
+        "@id": "https://kaban.my.id/#/schema/website/1"
+      },
+      "about": {
+          "@id": "https://kaban.my.id/#/schema/person/1"
+        },
+      "datePublished": "2023-01-02T08:00:00CET",
+      "dateModified": "2023-01-02T08:00:00CET",
+      "breadcrumb": {
+        "@id": "https://kaban.my.id/javascript/tutorial/15-nodejs-npm/#/schema/breadcrumb/1"
+      },
+      "primaryImageOfPage": {
+        "@id": "https://kaban.my.id/javascript/tutorial/15-nodejs-npm/#/schema/image/2"
+      },
+      "inLanguage": "en-US",
+      "potentialAction": [{
+        "@type": "ReadAction", "target": ["https://kaban.my.id/javascript/tutorial/15-nodejs-npm/"]
+      }]
+    },
+    {
+      "@type": "BreadcrumbList",
+      "@id": "https://kaban.my.id/javascript/tutorial/15-nodejs-npm/#/schema/breadcrumb/1",
+      "name": "Breadcrumbs",
+      "itemListElement": [{
+        "@type": "ListItem",
+        "position":  1 ,
+        "item": {
+          "@type": "WebPage",
+          "@id": "https://kaban.my.id/",
+          "url": "https://kaban.my.id/",
+          "name": "Home"
+          }
+        },{
+        "@type": "ListItem",
+        "position":  2 ,
+        "item": {
+          "@type": "WebPage",
+          "@id": "https://kaban.my.id/javascript/",
+          "url": "https://kaban.my.id/javascript/",
+          "name": "Javascript"
+          }
+        },{
+        "@type": "ListItem",
+        "position":  3 ,
+        "item": {
+          "@type": "WebPage",
+          "@id": "https://kaban.my.id/javascript/tutorial/",
+          "url": "https://kaban.my.id/javascript/tutorial/",
+          "name": "Tutorial"
+          }
+        },{
+        "@type": "ListItem",
+        "position":  4 ,
+        "item": {
+          "@id": "https://kaban.my.id/javascript/tutorial/15-nodejs-npm/"
+          }
+        }]
+    },
+
+    {
+      "@context": "https://schema.org",
+      "@graph": [
+        {
+          "@type": "ImageObject",
+          "@id": "https://kaban.my.id/javascript/tutorial/15-nodejs-npm/#/schema/image/2",
+          "url": "https://kaban.my.id/doks.png",
+          "contentUrl": "https://kaban.my.id/doks.png",
+          "caption": "Node.js \u0026 npm Dasar"
+        }
+      ]
+    }
+
+  ]
+}
+</script>
+
+  <meta name="theme-color" content="#fff">
+<link rel="icon" href="https://kaban.my.id/favicon.ico" sizes="any">
+<link rel="icon" type="image/svg+xml" href="https://kaban.my.id/favicon.svg">
+<link rel="apple-touch-icon" sizes="180x180" href="https://kaban.my.id/apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="32x32" href="https://kaban.my.id/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="https://kaban.my.id/favicon-16x16.png">
+<link rel="manifest" crossorigin="use-credentials" href="https://kaban.my.id/site.webmanifest">
+
+  
+
+
+  
+  
+  
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-60VSDZFQR5"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-60VSDZFQR5');
+</script>
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6664512614760985"
+     crossorigin="anonymous"></script>
+</head>
+
+  <body class="javascript single">
+    <div class="sticky-top">
+<div class="header-bar"></div>
+
+<header class="navbar navbar-expand-lg navbar-light doks-navbar">
+  <nav class="container-xxl flex-wrap flex-lg-nowrap" aria-label="Main navigation">
+
+    <a class="navbar-brand order-0" href="/" aria-label="Roberto Kaban Blog&#39;s">
+      Roberto Kaban Blog&#39;s
+    </a>
+
+    <button class="btn btn-menu order-2 d-block d-lg-none" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasDoks" aria-controls="offcanvasDoks" aria-label="Open main menu">
+      <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-menu"><line x1="3" y1="12" x2="21" y2="12"></line><line x1="3" y1="6" x2="21" y2="6"></line><line x1="3" y1="18" x2="21" y2="18"></line></svg>
+    </button>
+    <div class="offcanvas offcanvas-end border-0 py-lg-1" tabindex="-1" id="offcanvasDoks" data-bs-backdrop="true" aria-labelledby="offcanvasDoksLabel">
+      <div class="header-bar d-lg-none"></div>
+      <div class="offcanvas-header d-lg-none">
+        <h2 class="h5 offcanvas-title ps-2" id="offcanvasDoksLabel"><a class="text-dark" href="/">Roberto Kaban Blog&#39;s</a></h2>
+        <button type="button" class="btn-close text-reset me-2" data-bs-dismiss="offcanvas" aria-label="Close main menu"></button>
+      </div>
+      <div class="offcanvas-body p-4 p-lg-0">
+        <ul class="nav flex-column flex-lg-row align-items-lg-center mt-2 mt-lg-0 ms-lg-2 me-lg-auto">
+              <li class="nav-item">
+                <a class="nav-link ps-0 py-1" href="/about/">About Me</a>
+              </li>
+            
+          
+              <li class="nav-item">
+                <a class="nav-link ps-0 py-1" href="/contact/">Contact</a>
+              </li>
+            
+          
+              <li class="nav-item">
+                <a class="nav-link ps-0 py-1" href="/artikel/">Artikel</a>
+              </li>
+            
+          
+              <li class="nav-item">
+                <a class="nav-link ps-0 py-1" href="/coretanku/">Coretanku</a>
+              </li>
+            
+          </ul>
+
+        <hr class="text-black-50 my-4 d-lg-none">
+        <form class="doks-search position-relative flex-grow-1 ms-lg-auto me-lg-2">
+          <input id="search" class="form-control is-search" type="search" placeholder="Cari di blog ini..." aria-label="Cari di blog ini..." autocomplete="off">
+          <div id="suggestions" class="shadow bg-white rounded d-none"></div>
+        </form>
+        <hr class="text-black-50 my-4 d-lg-none">
+        <ul class="nav flex-column flex-lg-row">
+          <li class="nav-item">
+              <a class="nav-link social-link" href="https://github.com/robertokaban"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-github"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path></svg><small class="ms-2 d-lg-none">GitHub</small></a>
+            </li>
+          <li class="nav-item">
+              <a class="nav-link social-link" href="https://facebook.com/roberto.kaban"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-facebook"><path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"></path></svg><small class="ms-2 d-lg-none">Facebook</small></a>
+            </li>
+          <li class="nav-item">
+              <a class="nav-link social-link" href="https://twitter.com/robertokaban"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-twitter"><path d="M23 3a10.9 10.9 0 0 1-3.14 1.53 4.48 4.48 0 0 0-7.86 3v1A10.66 10.66 0 0 1 3 4s-4 9 5 13a11.64 11.64 0 0 1-7 2c9 5 20 0 20-11.5a4.5 4.5 0 0 0-.08-.83A7.72 7.72 0 0 0 23 3z"></path></svg><small class="ms-2 d-lg-none">Twitter</small></a>
+            </li>
+          <li class="nav-item">
+              <a class="nav-link social-link" href="https://youtube.com/@robertokaban"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-youtube"><path d="M10,15L15.19,12L10,9V15M21.56,7.17C21.69,7.64 21.78,8.27 21.84,9.07C21.91,9.87 21.94,10.56 21.94,11.16L22,12C22,14.19 21.84,15.8 21.56,16.83C21.31,17.73 20.73,18.31 19.83,18.56C19.36,18.69 18.5,18.78 17.18,18.84C15.88,18.91 14.69,18.94 13.59,18.94L12,19C7.81,19 5.2,18.84 4.17,18.56C3.27,18.31 2.69,17.73 2.44,16.83C2.31,16.36 2.22,15.73 2.16,14.93C2.09,14.13 2.06,13.44 2.06,12.84L2,12C2,9.81 2.16,8.2 2.44,7.17C2.69,6.27 3.27,5.69 4.17,5.44C4.64,5.31 5.5,5.22 6.82,5.16C8.12,5.09 9.31,5.06 10.41,5.06L12,5C16.19,5 18.8,5.16 19.83,5.44C20.73,5.69 21.31,6.27 21.56,7.17Z"></path></svg><small class="ms-2 d-lg-none">Youtube</small></a>
+            </li>
+          </ul>
+
+        
+        <hr class="text-black-50 my-4 d-lg-none">
+        <button id="mode" class="btn btn-link" type="button" aria-label="Toggle user interface mode">
+          <span class="toggle-dark"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-moon"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path></svg></span>
+          <span class="toggle-light"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-sun"><circle cx="12" cy="12" r="5"></circle><line x1="12" y1="1" x2="12" y2="3"></line><line x1="12" y1="21" x2="12" y2="23"></line><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line><line x1="1" y1="12" x2="3" y2="12"></line><line x1="21" y1="12" x2="23" y2="12"></line><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line></svg></span>
+        </button>
+        
+
+        </div>
+    </div>
+  </nav>
+</header>
+
+
+</div>
+
+
+<div class="container-xxl">
+  <aside class="doks-sidebar">
+    <nav id="doks-docs-nav" class="collapse d-lg-none" aria-label="Tertiary navigation">
+      
+<ul class="list-unstyled collapsible-sidebar">
+  
+    
+      
+      <li class="mb-1">
+        <button class="btn btn-toggle align-items-center rounded collapsed" data-bs-toggle="collapse" data-bs-target="#section-0967e753cd827c7c2576cf6f7292922e" aria-expanded="true">
+          Tutorial Javascript
+        </button>
+        <div class="collapse show" id="section-0967e753cd827c7c2576cf6f7292922e">
+          <ul class="btn-toggle-nav list-unstyled fw-normal pb-1 small">
+            
+              
+                
+                <li><a class="docs-link rounded" href="https://kaban.my.id/javascript/tutorial/pengenalan/">Pengenalan Javascript</a></li>
+              
+            
+              
+                
+                <li><a class="docs-link rounded" href="https://kaban.my.id/javascript/tutorial/02-instalasi-persiapan/">Instalasi &amp; Persiapan Lingkungan JavaScript</a></li>
+              
+            
+              
+                
+                <li><a class="docs-link rounded" href="https://kaban.my.id/javascript/tutorial/03-sintaks-variabel/">Sintaks Dasar &amp; Variabel</a></li>
+              
+            
+              
+                
+                <li><a class="docs-link rounded" href="https://kaban.my.id/javascript/tutorial/04-tipe-data-konversi/">Tipe Data &amp; Konversi</a></li>
+              
+            
+              
+                
+                <li><a class="docs-link rounded" href="https://kaban.my.id/javascript/tutorial/05-struktur-kontrol/">Struktur Kontrol &amp; Perulangan</a></li>
+              
+            
+              
+                
+                <li><a class="docs-link rounded" href="https://kaban.my.id/javascript/tutorial/06-fungsi/">Fungsi</a></li>
+              
+            
+              
+                
+                <li><a class="docs-link rounded" href="https://kaban.my.id/javascript/tutorial/07-array/">Array &amp; Method-nya</a></li>
+              
+            
+              
+                
+                <li><a class="docs-link rounded" href="https://kaban.my.id/javascript/tutorial/08-object/">Object &amp; Method-nya</a></li>
+              
+            
+              
+                
+                <li><a class="docs-link rounded" href="https://kaban.my.id/javascript/tutorial/09-dom-manipulation/">DOM Manipulation</a></li>
+              
+            
+              
+                
+                <li><a class="docs-link rounded" href="https://kaban.my.id/javascript/tutorial/10-event-handling/">Event &amp; Event Handling</a></li>
+              
+            
+              
+                
+                <li><a class="docs-link rounded" href="https://kaban.my.id/javascript/tutorial/11-web-storage/">Web Storage &amp; Cookie</a></li>
+              
+            
+              
+                
+                <li><a class="docs-link rounded" href="https://kaban.my.id/javascript/tutorial/12-es6-modern/">ES6&#43; Fitur Modern</a></li>
+              
+            
+              
+                
+                <li><a class="docs-link rounded" href="https://kaban.my.id/javascript/tutorial/13-async-javascript/">Asynchronous JavaScript</a></li>
+              
+            
+              
+                
+                <li><a class="docs-link rounded" href="https://kaban.my.id/javascript/tutorial/14-fetch-api/">Fetch API &amp; AJAX</a></li>
+              
+            
+              
+                
+                <li><a class="docs-link rounded active" href="https://kaban.my.id/javascript/tutorial/15-nodejs-npm/">Node.js &amp; npm Dasar</a></li>
+              
+            
+              
+                
+                <li><a class="docs-link rounded" href="https://kaban.my.id/javascript/tutorial/16-bundler-tooling/">Module Bundler &amp; Build Tool</a></li>
+              
+            
+          </ul>
+        </div>
+      </li>
+    
+  
+</ul>
+
+    </nav>
+  </aside>
+</div>
+
+    <div class="wrap container-xxl" role="document">
+      <div class="content">
+        
+	<div class="row flex-xl-nowrap">
+		<div class="col-lg-5 col-xl-4 docs-sidebar d-none d-lg-block">
+			<nav class="docs-links" aria-label="Main navigation">
+				
+<ul class="list-unstyled collapsible-sidebar">
+  
+    
+      
+      <li class="mb-1">
+        <button class="btn btn-toggle align-items-center rounded collapsed" data-bs-toggle="collapse" data-bs-target="#section-0967e753cd827c7c2576cf6f7292922e" aria-expanded="true">
+          Tutorial Javascript
+        </button>
+        <div class="collapse show" id="section-0967e753cd827c7c2576cf6f7292922e">
+          <ul class="btn-toggle-nav list-unstyled fw-normal pb-1 small">
+            
+              
+                
+                <li><a class="docs-link rounded" href="https://kaban.my.id/javascript/tutorial/pengenalan/">Pengenalan Javascript</a></li>
+              
+            
+              
+                
+                <li><a class="docs-link rounded" href="https://kaban.my.id/javascript/tutorial/02-instalasi-persiapan/">Instalasi &amp; Persiapan Lingkungan JavaScript</a></li>
+              
+            
+              
+                
+                <li><a class="docs-link rounded" href="https://kaban.my.id/javascript/tutorial/03-sintaks-variabel/">Sintaks Dasar &amp; Variabel</a></li>
+              
+            
+              
+                
+                <li><a class="docs-link rounded" href="https://kaban.my.id/javascript/tutorial/04-tipe-data-konversi/">Tipe Data &amp; Konversi</a></li>
+              
+            
+              
+                
+                <li><a class="docs-link rounded" href="https://kaban.my.id/javascript/tutorial/05-struktur-kontrol/">Struktur Kontrol &amp; Perulangan</a></li>
+              
+            
+              
+                
+                <li><a class="docs-link rounded" href="https://kaban.my.id/javascript/tutorial/06-fungsi/">Fungsi</a></li>
+              
+            
+              
+                
+                <li><a class="docs-link rounded" href="https://kaban.my.id/javascript/tutorial/07-array/">Array &amp; Method-nya</a></li>
+              
+            
+              
+                
+                <li><a class="docs-link rounded" href="https://kaban.my.id/javascript/tutorial/08-object/">Object &amp; Method-nya</a></li>
+              
+            
+              
+                
+                <li><a class="docs-link rounded" href="https://kaban.my.id/javascript/tutorial/09-dom-manipulation/">DOM Manipulation</a></li>
+              
+            
+              
+                
+                <li><a class="docs-link rounded" href="https://kaban.my.id/javascript/tutorial/10-event-handling/">Event &amp; Event Handling</a></li>
+              
+            
+              
+                
+                <li><a class="docs-link rounded" href="https://kaban.my.id/javascript/tutorial/11-web-storage/">Web Storage &amp; Cookie</a></li>
+              
+            
+              
+                
+                <li><a class="docs-link rounded" href="https://kaban.my.id/javascript/tutorial/12-es6-modern/">ES6&#43; Fitur Modern</a></li>
+              
+            
+              
+                
+                <li><a class="docs-link rounded" href="https://kaban.my.id/javascript/tutorial/13-async-javascript/">Asynchronous JavaScript</a></li>
+              
+            
+              
+                
+                <li><a class="docs-link rounded" href="https://kaban.my.id/javascript/tutorial/14-fetch-api/">Fetch API &amp; AJAX</a></li>
+              
+            
+              
+                
+                <li><a class="docs-link rounded active" href="https://kaban.my.id/javascript/tutorial/15-nodejs-npm/">Node.js &amp; npm Dasar</a></li>
+              
+            
+              
+                
+                <li><a class="docs-link rounded" href="https://kaban.my.id/javascript/tutorial/16-bundler-tooling/">Module Bundler &amp; Build Tool</a></li>
+              
+            
+          </ul>
+        </div>
+      </li>
+    
+  
+</ul>
+
+			</nav>
+		</div>
+		<nav class="docs-toc d-none d-xl-block col-xl-3" aria-label="Secondary navigation">
+			<div class="d-xl-none">
+  <button class="btn btn-outline-primary btn-sm doks-toc-toggle collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#onThisPage" aria-controls="doks-docs-nav" aria-expanded="false" aria-label="Toggle On this page navigation">
+    <span>Daftar isi</span>
+    <span>
+      <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" class="doks doks-expand" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><title>Expand</title><polyline points="7 13 12 18 17 13"></polyline><polyline points="7 6 12 11 17 6"></polyline></svg>
+      <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" class="doks doks-collapse" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><title>Collapse</title><polyline points="17 11 12 6 7 11"></polyline><polyline points="17 18 12 13 7 18"></polyline></svg>
+    </span>
+  </button>
+  <div class="collapse" id="onThisPage">
+    <div class="card card-body mt-3 py-1">
+      <div class="page-links">
+        <nav id="TableOfContents">
+  <ul>
+    <li><a href="#pendahuluan">Pendahuluan</a></li>
+    <li><a href="#apa-itu-nodejs">Apa itu Node.js?</a>
+      <ul>
+        <li><a href="#karakteristik-nodejs">Karakteristik Node.js</a></li>
+        <li><a href="#nodejs-vs-browser">Node.js vs Browser</a></li>
+      </ul>
+    </li>
+    <li><a href="#menjalankan-javascript-dengan-nodejs">Menjalankan JavaScript dengan Node.js</a>
+      <ul>
+        <li><a href="#file-js">File <code>.js</code></a></li>
+        <li><a href="#repl-read-eval-print-loop">REPL (Read-Eval-Print Loop)</a></li>
+        <li><a href="#argumen-command-line">Argumen Command Line</a></li>
+      </ul>
+    </li>
+    <li><a href="#modul-di-nodejs">Modul di Node.js</a>
+      <ul>
+        <li><a href="#1-commonjs-cjs--default-lama">1. CommonJS (CJS) — Default Lama</a></li>
+        <li><a href="#2-es-module-esm--modern">2. ES Module (ESM) — Modern</a></li>
+        <li><a href="#perbandingan-cjs-vs-esm">Perbandingan CJS vs ESM</a></li>
+      </ul>
+    </li>
+    <li><a href="#modul-bawaan-nodejs">Modul Bawaan Node.js</a>
+      <ul>
+        <li><a href="#fs--file-system"><code>fs</code> — File System</a></li>
+        <li><a href="#path--manipulasi-path"><code>path</code> — Manipulasi Path</a></li>
+        <li><a href="#http--http-server"><code>http</code> — HTTP Server</a></li>
+        <li><a href="#os--informasi-sistem"><code>os</code> — Informasi Sistem</a></li>
+        <li><a href="#crypto--kriptografi"><code>crypto</code> — Kriptografi</a></li>
+        <li><a href="#url--manipulasi-url"><code>url</code> — Manipulasi URL</a></li>
+        <li><a href="#events--eventemitter"><code>events</code> — EventEmitter</a></li>
+        <li><a href="#ringkasan-modul-bawaan">Ringkasan Modul Bawaan</a></li>
+      </ul>
+    </li>
+    <li><a href="#npm--node-package-manager">npm — Node Package Manager</a>
+      <ul>
+        <li><a href="#inisialisasi-proyek">Inisialisasi Proyek</a></li>
+        <li><a href="#packagejson--konfigurasi-proyek"><code>package.json</code> — Konfigurasi Proyek</a></li>
+        <li><a href="#menginstal-package">Menginstal Package</a></li>
+        <li><a href="#menggunakan-package">Menggunakan Package</a></li>
+        <li><a href="#versi-package-semver">Versi Package (Semver)</a></li>
+        <li><a href="#package-lockjson"><code>package-lock.json</code></a></li>
+        <li><a href="#node_modules"><code>node_modules/</code></a></li>
+        <li><a href="#menghapus-package">Menghapus Package</a></li>
+        <li><a href="#melihat-package-yang-terinstal">Melihat Package yang Terinstal</a></li>
+        <li><a href="#update-package">Update Package</a></li>
+      </ul>
+    </li>
+    <li><a href="#script-npm">Script npm</a>
+      <ul>
+        <li><a href="#script-dengan-argumen">Script dengan Argumen</a></li>
+        <li><a href="#script-prepost">Script Pre/Post</a></li>
+        <li><a href="#script-chaining">Script Chaining</a></li>
+      </ul>
+    </li>
+    <li><a href="#npx--menjalankan-package-tanpa-install-global"><code>npx</code> — Menjalankan Package Tanpa Install Global</a></li>
+    <li><a href="#membuat-project-nodejs-pertama">Membuat Project Node.js Pertama</a>
+      <ul>
+        <li><a href="#1-inisialisasi">1. Inisialisasi</a></li>
+        <li><a href="#2-buat-indexjs">2. Buat <code>index.js</code></a></li>
+        <li><a href="#3-jalankan">3. Jalankan</a></li>
+        <li><a href="#4-tambahkan-dependency">4. Tambahkan Dependency</a></li>
+      </ul>
+    </li>
+    <li><a href="#environment-variables">Environment Variables</a>
+      <ul>
+        <li><a href="#mengakses-di-nodejs">Mengakses di Node.js</a></li>
+        <li><a href="#file-env">File <code>.env</code></a></li>
+        <li><a href="#membaca-env-dengan-dotenv">Membaca <code>.env</code> dengan <code>dotenv</code></a></li>
+        <li><a href="#file-envexample">File <code>.env.example</code></a></li>
+      </ul>
+    </li>
+    <li><a href="#tips--best-practice">Tips &amp; Best Practice</a></li>
+    <li><a href="#ringkasan">Ringkasan</a></li>
+  </ul>
+</nav>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="page-links d-none d-xl-block">
+  <h3>Daftar isi</h3>
+  <nav id="TableOfContents">
+  <ul>
+    <li><a href="#pendahuluan">Pendahuluan</a></li>
+    <li><a href="#apa-itu-nodejs">Apa itu Node.js?</a>
+      <ul>
+        <li><a href="#karakteristik-nodejs">Karakteristik Node.js</a></li>
+        <li><a href="#nodejs-vs-browser">Node.js vs Browser</a></li>
+      </ul>
+    </li>
+    <li><a href="#menjalankan-javascript-dengan-nodejs">Menjalankan JavaScript dengan Node.js</a>
+      <ul>
+        <li><a href="#file-js">File <code>.js</code></a></li>
+        <li><a href="#repl-read-eval-print-loop">REPL (Read-Eval-Print Loop)</a></li>
+        <li><a href="#argumen-command-line">Argumen Command Line</a></li>
+      </ul>
+    </li>
+    <li><a href="#modul-di-nodejs">Modul di Node.js</a>
+      <ul>
+        <li><a href="#1-commonjs-cjs--default-lama">1. CommonJS (CJS) — Default Lama</a></li>
+        <li><a href="#2-es-module-esm--modern">2. ES Module (ESM) — Modern</a></li>
+        <li><a href="#perbandingan-cjs-vs-esm">Perbandingan CJS vs ESM</a></li>
+      </ul>
+    </li>
+    <li><a href="#modul-bawaan-nodejs">Modul Bawaan Node.js</a>
+      <ul>
+        <li><a href="#fs--file-system"><code>fs</code> — File System</a></li>
+        <li><a href="#path--manipulasi-path"><code>path</code> — Manipulasi Path</a></li>
+        <li><a href="#http--http-server"><code>http</code> — HTTP Server</a></li>
+        <li><a href="#os--informasi-sistem"><code>os</code> — Informasi Sistem</a></li>
+        <li><a href="#crypto--kriptografi"><code>crypto</code> — Kriptografi</a></li>
+        <li><a href="#url--manipulasi-url"><code>url</code> — Manipulasi URL</a></li>
+        <li><a href="#events--eventemitter"><code>events</code> — EventEmitter</a></li>
+        <li><a href="#ringkasan-modul-bawaan">Ringkasan Modul Bawaan</a></li>
+      </ul>
+    </li>
+    <li><a href="#npm--node-package-manager">npm — Node Package Manager</a>
+      <ul>
+        <li><a href="#inisialisasi-proyek">Inisialisasi Proyek</a></li>
+        <li><a href="#packagejson--konfigurasi-proyek"><code>package.json</code> — Konfigurasi Proyek</a></li>
+        <li><a href="#menginstal-package">Menginstal Package</a></li>
+        <li><a href="#menggunakan-package">Menggunakan Package</a></li>
+        <li><a href="#versi-package-semver">Versi Package (Semver)</a></li>
+        <li><a href="#package-lockjson"><code>package-lock.json</code></a></li>
+        <li><a href="#node_modules"><code>node_modules/</code></a></li>
+        <li><a href="#menghapus-package">Menghapus Package</a></li>
+        <li><a href="#melihat-package-yang-terinstal">Melihat Package yang Terinstal</a></li>
+        <li><a href="#update-package">Update Package</a></li>
+      </ul>
+    </li>
+    <li><a href="#script-npm">Script npm</a>
+      <ul>
+        <li><a href="#script-dengan-argumen">Script dengan Argumen</a></li>
+        <li><a href="#script-prepost">Script Pre/Post</a></li>
+        <li><a href="#script-chaining">Script Chaining</a></li>
+      </ul>
+    </li>
+    <li><a href="#npx--menjalankan-package-tanpa-install-global"><code>npx</code> — Menjalankan Package Tanpa Install Global</a></li>
+    <li><a href="#membuat-project-nodejs-pertama">Membuat Project Node.js Pertama</a>
+      <ul>
+        <li><a href="#1-inisialisasi">1. Inisialisasi</a></li>
+        <li><a href="#2-buat-indexjs">2. Buat <code>index.js</code></a></li>
+        <li><a href="#3-jalankan">3. Jalankan</a></li>
+        <li><a href="#4-tambahkan-dependency">4. Tambahkan Dependency</a></li>
+      </ul>
+    </li>
+    <li><a href="#environment-variables">Environment Variables</a>
+      <ul>
+        <li><a href="#mengakses-di-nodejs">Mengakses di Node.js</a></li>
+        <li><a href="#file-env">File <code>.env</code></a></li>
+        <li><a href="#membaca-env-dengan-dotenv">Membaca <code>.env</code> dengan <code>dotenv</code></a></li>
+        <li><a href="#file-envexample">File <code>.env.example</code></a></li>
+      </ul>
+    </li>
+    <li><a href="#tips--best-practice">Tips &amp; Best Practice</a></li>
+    <li><a href="#ringkasan">Ringkasan</a></li>
+  </ul>
+</nav>
+  </div>
+
+		</nav>
+		<main class="docs-content col-lg-11 col-xl-9">
+		
+				<nav aria-label="breadcrumb">
+					<ol class="breadcrumb">
+						<li class="breadcrumb-item"><a href="/">Home</a></li>
+<li class="breadcrumb-item"><a href="/javascript/">Javascript</a></li>
+<li class="breadcrumb-item"><a href="/javascript/tutorial/">Tutorial Javascript</a></li>
+<li class="breadcrumb-item active" aria-current="page">Node.js &amp; npm Dasar</li>
+					</ol>
+				</nav>
+			
+			<h1>Node.js &amp; npm Dasar</h1>
+			<p class="lead">Node.js memungkinkan JavaScript berjalan di sisi server. Artikel ini membahas dasar Node.js, npm untuk mengelola package, package.json, script, serta modul bawaan seperti fs, path, dan http.</p>
+			<nav class="d-xl-none" aria-label="Quaternary navigation">
+				<div class="d-xl-none">
+  <button class="btn btn-outline-primary btn-sm doks-toc-toggle collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#onThisPage" aria-controls="doks-docs-nav" aria-expanded="false" aria-label="Toggle On this page navigation">
+    <span>Daftar isi</span>
+    <span>
+      <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" class="doks doks-expand" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><title>Expand</title><polyline points="7 13 12 18 17 13"></polyline><polyline points="7 6 12 11 17 6"></polyline></svg>
+      <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" class="doks doks-collapse" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><title>Collapse</title><polyline points="17 11 12 6 7 11"></polyline><polyline points="17 18 12 13 7 18"></polyline></svg>
+    </span>
+  </button>
+  <div class="collapse" id="onThisPage">
+    <div class="card card-body mt-3 py-1">
+      <div class="page-links">
+        <nav id="TableOfContents">
+  <ul>
+    <li><a href="#pendahuluan">Pendahuluan</a></li>
+    <li><a href="#apa-itu-nodejs">Apa itu Node.js?</a>
+      <ul>
+        <li><a href="#karakteristik-nodejs">Karakteristik Node.js</a></li>
+        <li><a href="#nodejs-vs-browser">Node.js vs Browser</a></li>
+      </ul>
+    </li>
+    <li><a href="#menjalankan-javascript-dengan-nodejs">Menjalankan JavaScript dengan Node.js</a>
+      <ul>
+        <li><a href="#file-js">File <code>.js</code></a></li>
+        <li><a href="#repl-read-eval-print-loop">REPL (Read-Eval-Print Loop)</a></li>
+        <li><a href="#argumen-command-line">Argumen Command Line</a></li>
+      </ul>
+    </li>
+    <li><a href="#modul-di-nodejs">Modul di Node.js</a>
+      <ul>
+        <li><a href="#1-commonjs-cjs--default-lama">1. CommonJS (CJS) — Default Lama</a></li>
+        <li><a href="#2-es-module-esm--modern">2. ES Module (ESM) — Modern</a></li>
+        <li><a href="#perbandingan-cjs-vs-esm">Perbandingan CJS vs ESM</a></li>
+      </ul>
+    </li>
+    <li><a href="#modul-bawaan-nodejs">Modul Bawaan Node.js</a>
+      <ul>
+        <li><a href="#fs--file-system"><code>fs</code> — File System</a></li>
+        <li><a href="#path--manipulasi-path"><code>path</code> — Manipulasi Path</a></li>
+        <li><a href="#http--http-server"><code>http</code> — HTTP Server</a></li>
+        <li><a href="#os--informasi-sistem"><code>os</code> — Informasi Sistem</a></li>
+        <li><a href="#crypto--kriptografi"><code>crypto</code> — Kriptografi</a></li>
+        <li><a href="#url--manipulasi-url"><code>url</code> — Manipulasi URL</a></li>
+        <li><a href="#events--eventemitter"><code>events</code> — EventEmitter</a></li>
+        <li><a href="#ringkasan-modul-bawaan">Ringkasan Modul Bawaan</a></li>
+      </ul>
+    </li>
+    <li><a href="#npm--node-package-manager">npm — Node Package Manager</a>
+      <ul>
+        <li><a href="#inisialisasi-proyek">Inisialisasi Proyek</a></li>
+        <li><a href="#packagejson--konfigurasi-proyek"><code>package.json</code> — Konfigurasi Proyek</a></li>
+        <li><a href="#menginstal-package">Menginstal Package</a></li>
+        <li><a href="#menggunakan-package">Menggunakan Package</a></li>
+        <li><a href="#versi-package-semver">Versi Package (Semver)</a></li>
+        <li><a href="#package-lockjson"><code>package-lock.json</code></a></li>
+        <li><a href="#node_modules"><code>node_modules/</code></a></li>
+        <li><a href="#menghapus-package">Menghapus Package</a></li>
+        <li><a href="#melihat-package-yang-terinstal">Melihat Package yang Terinstal</a></li>
+        <li><a href="#update-package">Update Package</a></li>
+      </ul>
+    </li>
+    <li><a href="#script-npm">Script npm</a>
+      <ul>
+        <li><a href="#script-dengan-argumen">Script dengan Argumen</a></li>
+        <li><a href="#script-prepost">Script Pre/Post</a></li>
+        <li><a href="#script-chaining">Script Chaining</a></li>
+      </ul>
+    </li>
+    <li><a href="#npx--menjalankan-package-tanpa-install-global"><code>npx</code> — Menjalankan Package Tanpa Install Global</a></li>
+    <li><a href="#membuat-project-nodejs-pertama">Membuat Project Node.js Pertama</a>
+      <ul>
+        <li><a href="#1-inisialisasi">1. Inisialisasi</a></li>
+        <li><a href="#2-buat-indexjs">2. Buat <code>index.js</code></a></li>
+        <li><a href="#3-jalankan">3. Jalankan</a></li>
+        <li><a href="#4-tambahkan-dependency">4. Tambahkan Dependency</a></li>
+      </ul>
+    </li>
+    <li><a href="#environment-variables">Environment Variables</a>
+      <ul>
+        <li><a href="#mengakses-di-nodejs">Mengakses di Node.js</a></li>
+        <li><a href="#file-env">File <code>.env</code></a></li>
+        <li><a href="#membaca-env-dengan-dotenv">Membaca <code>.env</code> dengan <code>dotenv</code></a></li>
+        <li><a href="#file-envexample">File <code>.env.example</code></a></li>
+      </ul>
+    </li>
+    <li><a href="#tips--best-practice">Tips &amp; Best Practice</a></li>
+    <li><a href="#ringkasan">Ringkasan</a></li>
+  </ul>
+</nav>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="page-links d-none d-xl-block">
+  <h3>Daftar isi</h3>
+  <nav id="TableOfContents">
+  <ul>
+    <li><a href="#pendahuluan">Pendahuluan</a></li>
+    <li><a href="#apa-itu-nodejs">Apa itu Node.js?</a>
+      <ul>
+        <li><a href="#karakteristik-nodejs">Karakteristik Node.js</a></li>
+        <li><a href="#nodejs-vs-browser">Node.js vs Browser</a></li>
+      </ul>
+    </li>
+    <li><a href="#menjalankan-javascript-dengan-nodejs">Menjalankan JavaScript dengan Node.js</a>
+      <ul>
+        <li><a href="#file-js">File <code>.js</code></a></li>
+        <li><a href="#repl-read-eval-print-loop">REPL (Read-Eval-Print Loop)</a></li>
+        <li><a href="#argumen-command-line">Argumen Command Line</a></li>
+      </ul>
+    </li>
+    <li><a href="#modul-di-nodejs">Modul di Node.js</a>
+      <ul>
+        <li><a href="#1-commonjs-cjs--default-lama">1. CommonJS (CJS) — Default Lama</a></li>
+        <li><a href="#2-es-module-esm--modern">2. ES Module (ESM) — Modern</a></li>
+        <li><a href="#perbandingan-cjs-vs-esm">Perbandingan CJS vs ESM</a></li>
+      </ul>
+    </li>
+    <li><a href="#modul-bawaan-nodejs">Modul Bawaan Node.js</a>
+      <ul>
+        <li><a href="#fs--file-system"><code>fs</code> — File System</a></li>
+        <li><a href="#path--manipulasi-path"><code>path</code> — Manipulasi Path</a></li>
+        <li><a href="#http--http-server"><code>http</code> — HTTP Server</a></li>
+        <li><a href="#os--informasi-sistem"><code>os</code> — Informasi Sistem</a></li>
+        <li><a href="#crypto--kriptografi"><code>crypto</code> — Kriptografi</a></li>
+        <li><a href="#url--manipulasi-url"><code>url</code> — Manipulasi URL</a></li>
+        <li><a href="#events--eventemitter"><code>events</code> — EventEmitter</a></li>
+        <li><a href="#ringkasan-modul-bawaan">Ringkasan Modul Bawaan</a></li>
+      </ul>
+    </li>
+    <li><a href="#npm--node-package-manager">npm — Node Package Manager</a>
+      <ul>
+        <li><a href="#inisialisasi-proyek">Inisialisasi Proyek</a></li>
+        <li><a href="#packagejson--konfigurasi-proyek"><code>package.json</code> — Konfigurasi Proyek</a></li>
+        <li><a href="#menginstal-package">Menginstal Package</a></li>
+        <li><a href="#menggunakan-package">Menggunakan Package</a></li>
+        <li><a href="#versi-package-semver">Versi Package (Semver)</a></li>
+        <li><a href="#package-lockjson"><code>package-lock.json</code></a></li>
+        <li><a href="#node_modules"><code>node_modules/</code></a></li>
+        <li><a href="#menghapus-package">Menghapus Package</a></li>
+        <li><a href="#melihat-package-yang-terinstal">Melihat Package yang Terinstal</a></li>
+        <li><a href="#update-package">Update Package</a></li>
+      </ul>
+    </li>
+    <li><a href="#script-npm">Script npm</a>
+      <ul>
+        <li><a href="#script-dengan-argumen">Script dengan Argumen</a></li>
+        <li><a href="#script-prepost">Script Pre/Post</a></li>
+        <li><a href="#script-chaining">Script Chaining</a></li>
+      </ul>
+    </li>
+    <li><a href="#npx--menjalankan-package-tanpa-install-global"><code>npx</code> — Menjalankan Package Tanpa Install Global</a></li>
+    <li><a href="#membuat-project-nodejs-pertama">Membuat Project Node.js Pertama</a>
+      <ul>
+        <li><a href="#1-inisialisasi">1. Inisialisasi</a></li>
+        <li><a href="#2-buat-indexjs">2. Buat <code>index.js</code></a></li>
+        <li><a href="#3-jalankan">3. Jalankan</a></li>
+        <li><a href="#4-tambahkan-dependency">4. Tambahkan Dependency</a></li>
+      </ul>
+    </li>
+    <li><a href="#environment-variables">Environment Variables</a>
+      <ul>
+        <li><a href="#mengakses-di-nodejs">Mengakses di Node.js</a></li>
+        <li><a href="#file-env">File <code>.env</code></a></li>
+        <li><a href="#membaca-env-dengan-dotenv">Membaca <code>.env</code> dengan <code>dotenv</code></a></li>
+        <li><a href="#file-envexample">File <code>.env.example</code></a></li>
+      </ul>
+    </li>
+    <li><a href="#tips--best-practice">Tips &amp; Best Practice</a></li>
+    <li><a href="#ringkasan">Ringkasan</a></li>
+  </ul>
+</nav>
+  </div>
+
+			</nav>
+			<h2 id="pendahuluan">Pendahuluan <a href="#pendahuluan" class="anchor" aria-hidden="true">#</a></h2>
+<p>Selama ini kita menjalankan JavaScript di <strong>browser</strong>. <strong>Node.js</strong> membawa JavaScript ke <strong>sisi server</strong> — memungkinkan kita membuat API, CLI tool, web server, dan aplikasi backend lainnya dengan bahasa yang sama.</p>
+<p>Node.js juga menyertakan <strong>npm</strong> (Node Package Manager) — salah satu registry package terbesar di dunia dengan jutaan library siap pakai.</p>
+<p>Artikel ini membahas:</p>
+<ul>
+<li>Apa itu Node.js dan cara kerjanya.</li>
+<li>Modul bawaan Node.js (<code>fs</code>, <code>path</code>, <code>http</code>, dll.).</li>
+<li>npm: <code>package.json</code>, dependencies, script.</li>
+<li>Membuat project Node.js pertama.</li>
+<li>Perbedaan Node.js vs browser.</li>
+</ul>
+<blockquote>
+<p><strong>Asumsi:</strong> Anda sudah menginstal Node.js (dibahas di artikel <em>Instalasi &amp; Persiapan Lingkungan</em>). Verifikasi dengan <code>node --version</code> dan <code>npm --version</code>.</p>
+</blockquote>
+<hr>
+<h2 id="apa-itu-nodejs">Apa itu Node.js? <a href="#apa-itu-nodejs" class="anchor" aria-hidden="true">#</a></h2>
+<p><strong>Node.js</strong> adalah <strong>runtime environment</strong> yang menjalankan JavaScript di luar browser, dibangun di atas <strong>V8 engine</strong> (mesin JavaScript Chrome).</p>
+<h3 id="karakteristik-nodejs">Karakteristik Node.js <a href="#karakteristik-nodejs" class="anchor" aria-hidden="true">#</a></h3>
+<ul>
+<li><strong>Single-threaded</strong> — sama seperti JavaScript di browser.</li>
+<li><strong>Non-blocking I/O</strong> — operasi I/O (file, network) asynchronous, tidak memblokir thread.</li>
+<li><strong>Event-driven</strong> — menggunakan event loop (konsep yang sama dengan browser).</li>
+<li><strong>Cross-platform</strong> — Windows, Linux, macOS.</li>
+<li><strong>npm</strong> — package manager bawaan.</li>
+</ul>
+<h3 id="nodejs-vs-browser">Node.js vs Browser <a href="#nodejs-vs-browser" class="anchor" aria-hidden="true">#</a></h3>
+<table>
+<thead>
+<tr>
+<th>Aspek</th>
+<th>Browser</th>
+<th>Node.js</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Global object</td>
+<td><code>window</code></td>
+<td><code>global</code></td>
+</tr>
+<tr>
+<td>DOM API</td>
+<td>✅ (<code>document</code>, <code>window</code>)</td>
+<td>❌</td>
+</tr>
+<tr>
+<td><code>localStorage</code></td>
+<td>✅</td>
+<td>❌</td>
+</tr>
+<tr>
+<td>File system (<code>fs</code>)</td>
+<td>❌</td>
+<td>✅</td>
+</tr>
+<tr>
+<td>HTTP server</td>
+<td>❌</td>
+<td>✅ (<code>http</code>, Express)</td>
+</tr>
+<tr>
+<td><code>process</code></td>
+<td>❌</td>
+<td>✅</td>
+</tr>
+<tr>
+<td><code>fetch</code></td>
+<td>✅</td>
+<td>✅ (Node 18+)</td>
+</tr>
+<tr>
+<td><code>console.log</code></td>
+<td>✅</td>
+<td>✅</td>
+</tr>
+</tbody>
+</table>
+<blockquote>
+<p><strong>Penting:</strong> Kode yang menggunakan <code>document</code> tidak akan berjalan di Node.js, dan sebaliknya. Namun, kode logika murni (array, object, fungsi) berjalan di keduanya.</p>
+</blockquote>
+<hr>
+<h2 id="menjalankan-javascript-dengan-nodejs">Menjalankan JavaScript dengan Node.js <a href="#menjalankan-javascript-dengan-nodejs" class="anchor" aria-hidden="true">#</a></h2>
+<h3 id="file-js">File <code>.js</code> <a href="#file-js" class="anchor" aria-hidden="true">#</a></h3>
+<p>Buat <code>hello.js</code>:</p>
+<pre><code class="language-javascript">console.log(&quot;Hello dari Node.js!&quot;);
+console.log(&quot;Versi Node:&quot;, process.version);
+console.log(&quot;Platform:&quot;, process.platform);
+</code></pre>
+<p>Jalankan:</p>
+<pre><code class="language-bash">node hello.js
+</code></pre>
+<h3 id="repl-read-eval-print-loop">REPL (Read-Eval-Print Loop) <a href="#repl-read-eval-print-loop" class="anchor" aria-hidden="true">#</a></h3>
+<p>Mirip console browser — untuk eksperimen cepat:</p>
+<pre><code class="language-bash">node
+</code></pre>
+<pre><code class="language-javascript">&gt; 2 + 3
+5
+&gt; [1, 2, 3].map(x =&gt; x * 2)
+[ 2, 4, 6 ]
+&gt; .exit
+</code></pre>
+<h3 id="argumen-command-line">Argumen Command Line <a href="#argumen-command-line" class="anchor" aria-hidden="true">#</a></h3>
+<pre><code class="language-javascript">// args.js
+const args = process.argv.slice(2);
+console.log(&quot;Argumen:&quot;, args);
+</code></pre>
+<pre><code class="language-bash">node args.js halo dunia
+# Argumen: [ 'halo', 'dunia' ]
+</code></pre>
+<p><code>process.argv[0]</code> = path Node.js, <code>process.argv[1]</code> = path script.</p>
+<hr>
+<h2 id="modul-di-nodejs">Modul di Node.js <a href="#modul-di-nodejs" class="anchor" aria-hidden="true">#</a></h2>
+<p>Node.js menggunakan <strong>modul</strong> untuk memecah kode. Ada dua sistem modul:</p>
+<h3 id="1-commonjs-cjs--default-lama">1. CommonJS (CJS) — Default Lama <a href="#1-commonjs-cjs--default-lama" class="anchor" aria-hidden="true">#</a></h3>
+<p>Menggunakan <code>require()</code> dan <code>module.exports</code>.</p>
+<pre><code class="language-javascript">// math.js
+function tambah(a, b) {
+  return a + b;
+}
+
+function kali(a, b) {
+  return a * b;
+}
+
+module.exports = { tambah, kali };
+</code></pre>
+<pre><code class="language-javascript">// app.js
+const { tambah, kali } = require(&quot;./math.js&quot;);
+
+console.log(tambah(2, 3)); // 5
+console.log(kali(4, 5));   // 20
+</code></pre>
+<p><strong>Export satu nilai:</strong></p>
+<pre><code class="language-javascript">// logger.js
+module.exports = function log(pesan) {
+  console.log(`[LOG] ${pesan}`);
+};
+
+// app.js
+const log = require(&quot;./logger.js&quot;);
+log(&quot;Hello&quot;);
+</code></pre>
+<h3 id="2-es-module-esm--modern">2. ES Module (ESM) — Modern <a href="#2-es-module-esm--modern" class="anchor" aria-hidden="true">#</a></h3>
+<p>Menggunakan <code>import</code>/<code>export</code> — sama seperti di browser.</p>
+<p>Aktifkan dengan salah satu cara:</p>
+<ul>
+<li>Beri ekstensi <code>.mjs</code>.</li>
+<li>Atau tambahkan <code>&quot;type&quot;: &quot;module&quot;</code> di <code>package.json</code>.</li>
+</ul>
+<pre><code class="language-javascript">// math.mjs
+export function tambah(a, b) {
+  return a + b;
+}
+
+export default function kali(a, b) {
+  return a * b;
+}
+</code></pre>
+<pre><code class="language-javascript">// app.mjs
+import kali, { tambah } from &quot;./math.mjs&quot;;
+
+console.log(tambah(2, 3)); // 5
+console.log(kali(4, 5));   // 20
+</code></pre>
+<blockquote>
+<p><strong>Rekomendasi:</strong> Untuk proyek baru, gunakan <strong>ES Module</strong> (<code>&quot;type&quot;: &quot;module&quot;</code>). Untuk proyek lama atau library yang belum mendukung ESM, gunakan CommonJS.</p>
+</blockquote>
+<h3 id="perbandingan-cjs-vs-esm">Perbandingan CJS vs ESM <a href="#perbandingan-cjs-vs-esm" class="anchor" aria-hidden="true">#</a></h3>
+<table>
+<thead>
+<tr>
+<th>Aspek</th>
+<th>CommonJS</th>
+<th>ES Module</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Sintaks</td>
+<td><code>require</code> / <code>module.exports</code></td>
+<td><code>import</code> / <code>export</code></td>
+</tr>
+<tr>
+<td>Loading</td>
+<td>Synchronous</td>
+<td>Asynchronous</td>
+</tr>
+<tr>
+<td>Top-level await</td>
+<td>❌</td>
+<td>✅</td>
+</tr>
+<tr>
+<td><code>__dirname</code></td>
+<td>✅</td>
+<td>❌ (gunakan <code>import.meta.url</code>)</td>
+</tr>
+<tr>
+<td>Ekstensi</td>
+<td><code>.js</code> (default)</td>
+<td><code>.mjs</code> atau <code>&quot;type&quot;: &quot;module&quot;</code></td>
+</tr>
+</tbody>
+</table>
+<hr>
+<h2 id="modul-bawaan-nodejs">Modul Bawaan Node.js <a href="#modul-bawaan-nodejs" class="anchor" aria-hidden="true">#</a></h2>
+<p>Node.js menyertakan banyak modul tanpa perlu instal. Berikut yang paling sering digunakan.</p>
+<h3 id="fs--file-system"><code>fs</code> — File System <a href="#fs--file-system" class="anchor" aria-hidden="true">#</a></h3>
+<p>Membaca, menulis, dan memanipulasi file.</p>
+<pre><code class="language-javascript">import fs from &quot;node:fs/promises&quot;;
+
+// Baca file
+const isi = await fs.readFile(&quot;data.txt&quot;, &quot;utf-8&quot;);
+console.log(isi);
+
+// Tulis file
+await fs.writeFile(&quot;output.txt&quot;, &quot;Hello, World!&quot;, &quot;utf-8&quot;);
+
+// Cek keberadaan
+try {
+  await fs.access(&quot;data.txt&quot;);
+  console.log(&quot;File ada&quot;);
+} catch {
+  console.log(&quot;File tidak ada&quot;);
+}
+
+// Hapus file
+await fs.unlink(&quot;output.txt&quot;);
+
+// Buat folder
+await fs.mkdir(&quot;folder-baru&quot;, { recursive: true });
+
+// Baca isi folder
+const files = await fs.readdir(&quot;.&quot;);
+console.log(files);
+</code></pre>
+<p><strong>Versi synchronous</strong> (hindari di server — memblokir):</p>
+<pre><code class="language-javascript">import fs from &quot;node:fs&quot;;
+
+const isi = fs.readFileSync(&quot;data.txt&quot;, &quot;utf-8&quot;);
+fs.writeFileSync(&quot;output.txt&quot;, &quot;Hello&quot;);
+</code></pre>
+<blockquote>
+<p><strong>Rekomendasi:</strong> Gunakan versi <strong>promise</strong> (<code>node:fs/promises</code>) dengan <code>async</code>/<code>await</code> — non-blocking.</p>
+</blockquote>
+<h3 id="path--manipulasi-path"><code>path</code> — Manipulasi Path <a href="#path--manipulasi-path" class="anchor" aria-hidden="true">#</a></h3>
+<pre><code class="language-javascript">import path from &quot;node:path&quot;;
+
+console.log(path.join(&quot;folder&quot;, &quot;subfolder&quot;, &quot;file.txt&quot;));
+// &quot;folder/subfolder/file.txt&quot; (Linux) atau &quot;folder\\subfolder\\file.txt&quot; (Windows)
+
+console.log(path.resolve(&quot;data.txt&quot;));
+// &quot;/home/user/proyek/data.txt&quot; (absolute)
+
+console.log(path.basename(&quot;/home/user/file.txt&quot;)); // &quot;file.txt&quot;
+console.log(path.dirname(&quot;/home/user/file.txt&quot;));  // &quot;/home/user&quot;
+console.log(path.extname(&quot;file.txt&quot;));             // &quot;.txt&quot;
+console.log(path.parse(&quot;/home/user/file.txt&quot;));
+// { root: &quot;/&quot;, dir: &quot;/home/user&quot;, base: &quot;file.txt&quot;, ext: &quot;.txt&quot;, name: &quot;file&quot; }
+</code></pre>
+<blockquote>
+<p><strong>Tips:</strong> Selalu gunakan <code>path.join()</code> daripada menggabungkan string manual — menangani separator Windows/Linux dengan benar.</p>
+</blockquote>
+<h3 id="http--http-server"><code>http</code> — HTTP Server <a href="#http--http-server" class="anchor" aria-hidden="true">#</a></h3>
+<p>Membuat web server tanpa framework.</p>
+<pre><code class="language-javascript">import http from &quot;node:http&quot;;
+
+const server = http.createServer((req, res) =&gt; {
+  res.writeHead(200, { &quot;Content-Type&quot;: &quot;application/json&quot; });
+  res.end(JSON.stringify({ pesan: &quot;Hello, World!&quot; }));
+});
+
+server.listen(3000, () =&gt; {
+  console.log(&quot;Server berjalan di http://localhost:3000&quot;);
+});
+</code></pre>
+<p><strong>Routing sederhana:</strong></p>
+<pre><code class="language-javascript">const server = http.createServer((req, res) =&gt; {
+  if (req.url === &quot;/&quot; &amp;&amp; req.method === &quot;GET&quot;) {
+    res.writeHead(200, { &quot;Content-Type&quot;: &quot;text/html&quot; });
+    res.end(&quot;&lt;h1&gt;Halaman Utama&lt;/h1&gt;&quot;);
+  } else if (req.url === &quot;/api/produk&quot; &amp;&amp; req.method === &quot;GET&quot;) {
+    res.writeHead(200, { &quot;Content-Type&quot;: &quot;application/json&quot; });
+    res.end(JSON.stringify([{ id: 1, nama: &quot;Keyboard&quot; }]));
+  } else {
+    res.writeHead(404);
+    res.end(&quot;Not Found&quot;);
+  }
+});
+</code></pre>
+<blockquote>
+<p><strong>Catatan:</strong> Untuk aplikasi nyata, gunakan framework seperti <strong>Express</strong> — <code>http</code> mentah terlalu verbose.</p>
+</blockquote>
+<h3 id="os--informasi-sistem"><code>os</code> — Informasi Sistem <a href="#os--informasi-sistem" class="anchor" aria-hidden="true">#</a></h3>
+<pre><code class="language-javascript">import os from &quot;node:os&quot;;
+
+console.log(os.platform());   // &quot;linux&quot;, &quot;darwin&quot;, &quot;win32&quot;
+console.log(os.arch());       // &quot;x64&quot;, &quot;arm64&quot;
+console.log(os.cpus().length); // jumlah core CPU
+console.log(os.totalmem());   // total RAM (byte)
+console.log(os.freemem());    // RAM tersedia (byte)
+console.log(os.homedir());    // &quot;/home/user&quot;
+console.log(os.hostname());
+</code></pre>
+<h3 id="crypto--kriptografi"><code>crypto</code> — Kriptografi <a href="#crypto--kriptografi" class="anchor" aria-hidden="true">#</a></h3>
+<pre><code class="language-javascript">import crypto from &quot;node:crypto&quot;;
+
+// Hash
+const hash = crypto.createHash(&quot;sha256&quot;).update(&quot;password&quot;).digest(&quot;hex&quot;);
+console.log(hash);
+
+// Random bytes
+const token = crypto.randomBytes(32).toString(&quot;hex&quot;);
+console.log(token);
+
+// UUID
+console.log(crypto.randomUUID());
+// &quot;550e8400-e29b-41d4-a716-446655440000&quot;
+</code></pre>
+<h3 id="url--manipulasi-url"><code>url</code> — Manipulasi URL <a href="#url--manipulasi-url" class="anchor" aria-hidden="true">#</a></h3>
+<pre><code class="language-javascript">import { URL, URLSearchParams } from &quot;node:url&quot;;
+
+const url = new URL(&quot;https://api.example.com/produk?kategori=elektronik&amp;page=2&quot;);
+console.log(url.hostname); // &quot;api.example.com&quot;
+console.log(url.pathname); // &quot;/produk&quot;
+console.log(url.searchParams.get(&quot;kategori&quot;)); // &quot;elektronik&quot;
+
+url.searchParams.set(&quot;page&quot;, &quot;3&quot;);
+console.log(url.toString());
+</code></pre>
+<blockquote>
+<p><strong>Catatan:</strong> <code>URL</code> dan <code>URLSearchParams</code> juga tersedia di browser — API-nya sama.</p>
+</blockquote>
+<h3 id="events--eventemitter"><code>events</code> — EventEmitter <a href="#events--eventemitter" class="anchor" aria-hidden="true">#</a></h3>
+<p>Node.js menggunakan event-driven architecture — banyak object adalah <code>EventEmitter</code>.</p>
+<pre><code class="language-javascript">import { EventEmitter } from &quot;node:events&quot;;
+
+const emitter = new EventEmitter();
+
+emitter.on(&quot;pesanan:baru&quot;, (pesanan) =&gt; {
+  console.log(&quot;Pesanan baru:&quot;, pesanan);
+});
+
+emitter.emit(&quot;pesanan:baru&quot;, { id: 1, total: 500000 });
+// &quot;Pesanan baru: { id: 1, total: 500000 }&quot;
+</code></pre>
+<h3 id="ringkasan-modul-bawaan">Ringkasan Modul Bawaan <a href="#ringkasan-modul-bawaan" class="anchor" aria-hidden="true">#</a></h3>
+<table>
+<thead>
+<tr>
+<th>Modul</th>
+<th>Kegunaan</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>fs</code></td>
+<td>File system (baca/tulis file)</td>
+</tr>
+<tr>
+<td><code>path</code></td>
+<td>Manipulasi path file</td>
+</tr>
+<tr>
+<td><code>http</code> / <code>https</code></td>
+<td>HTTP server &amp; client</td>
+</tr>
+<tr>
+<td><code>os</code></td>
+<td>Informasi sistem operasi</td>
+</tr>
+<tr>
+<td><code>crypto</code></td>
+<td>Hash, random, enkripsi</td>
+</tr>
+<tr>
+<td><code>url</code></td>
+<td>Manipulasi URL</td>
+</tr>
+<tr>
+<td><code>events</code></td>
+<td>EventEmitter</td>
+</tr>
+<tr>
+<td><code>process</code></td>
+<td>Info &amp; kontrol proses</td>
+</tr>
+</tbody>
+</table>
+<blockquote>
+<p><strong>Tips:</strong> Gunakan prefix <code>node:</code> (misalnya <code>node:fs</code>) untuk membedakan modul bawaan dari package npm.</p>
+</blockquote>
+<hr>
+<h2 id="npm--node-package-manager">npm — Node Package Manager <a href="#npm--node-package-manager" class="anchor" aria-hidden="true">#</a></h2>
+<p><strong>npm</strong> mengelola package (library) dan dependensi proyek.</p>
+<h3 id="inisialisasi-proyek">Inisialisasi Proyek <a href="#inisialisasi-proyek" class="anchor" aria-hidden="true">#</a></h3>
+<pre><code class="language-bash">mkdir proyek-saya
+cd proyek-saya
+npm init -y
+</code></pre>
+<p>Menghasilkan <code>package.json</code>:</p>
+<pre><code class="language-json">{
+  &quot;name&quot;: &quot;proyek-saya&quot;,
+  &quot;version&quot;: &quot;1.0.0&quot;,
+  &quot;description&quot;: &quot;&quot;,
+  &quot;main&quot;: &quot;index.js&quot;,
+  &quot;scripts&quot;: {
+    &quot;test&quot;: &quot;echo \&quot;Error: no test specified\&quot; &amp;&amp; exit 1&quot;
+  },
+  &quot;keywords&quot;: [],
+  &quot;author&quot;: &quot;&quot;,
+  &quot;license&quot;: &quot;ISC&quot;
+}
+</code></pre>
+<h3 id="packagejson--konfigurasi-proyek"><code>package.json</code> — Konfigurasi Proyek <a href="#packagejson--konfigurasi-proyek" class="anchor" aria-hidden="true">#</a></h3>
+<p>Field penting:</p>
+<table>
+<thead>
+<tr>
+<th>Field</th>
+<th>Arti</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>name</code></td>
+<td>Nama package/proyek</td>
+</tr>
+<tr>
+<td><code>version</code></td>
+<td>Versi (semver: <code>major.minor.patch</code>)</td>
+</tr>
+<tr>
+<td><code>main</code></td>
+<td>Entry point (file utama)</td>
+</tr>
+<tr>
+<td><code>type</code></td>
+<td><code>&quot;module&quot;</code> untuk ESM, atau default CommonJS</td>
+</tr>
+<tr>
+<td><code>scripts</code></td>
+<td>Perintah npm yang bisa dijalankan</td>
+</tr>
+<tr>
+<td><code>dependencies</code></td>
+<td>Package yang dibutuhkan saat runtime</td>
+</tr>
+<tr>
+<td><code>devDependencies</code></td>
+<td>Package yang dibutuhkan saat development</td>
+</tr>
+</tbody>
+</table>
+<p>Contoh <code>package.json</code> yang lebih lengkap:</p>
+<pre><code class="language-json">{
+  &quot;name&quot;: &quot;toko-online-api&quot;,
+  &quot;version&quot;: &quot;1.0.0&quot;,
+  &quot;description&quot;: &quot;API toko online&quot;,
+  &quot;type&quot;: &quot;module&quot;,
+  &quot;main&quot;: &quot;src/index.js&quot;,
+  &quot;scripts&quot;: {
+    &quot;start&quot;: &quot;node src/index.js&quot;,
+    &quot;dev&quot;: &quot;nodemon src/index.js&quot;,
+    &quot;test&quot;: &quot;vitest&quot;
+  },
+  &quot;dependencies&quot;: {
+    &quot;express&quot;: &quot;^4.18.2&quot;
+  },
+  &quot;devDependencies&quot;: {
+    &quot;nodemon&quot;: &quot;^3.0.1&quot;,
+    &quot;vitest&quot;: &quot;^1.0.0&quot;
+  }
+}
+</code></pre>
+<h3 id="menginstal-package">Menginstal Package <a href="#menginstal-package" class="anchor" aria-hidden="true">#</a></h3>
+<p><strong>Dependencies (runtime):</strong></p>
+<pre><code class="language-bash">npm install express
+# atau singkat
+npm i express
+</code></pre>
+<p><strong>DevDependencies (development):</strong></p>
+<pre><code class="language-bash">npm install --save-dev nodemon
+# atau
+npm i -D nodemon
+</code></pre>
+<p><strong>Global (CLI tool):</strong></p>
+<pre><code class="language-bash">npm install -g typescript
+</code></pre>
+<h3 id="menggunakan-package">Menggunakan Package <a href="#menggunakan-package" class="anchor" aria-hidden="true">#</a></h3>
+<pre><code class="language-javascript">// ESM
+import express from &quot;express&quot;;
+
+// CommonJS
+const express = require(&quot;express&quot;);
+</code></pre>
+<h3 id="versi-package-semver">Versi Package (Semver) <a href="#versi-package-semver" class="anchor" aria-hidden="true">#</a></h3>
+<table>
+<thead>
+<tr>
+<th>Simbol</th>
+<th>Arti</th>
+<th>Contoh</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>^1.2.3</code></td>
+<td>Update minor &amp; patch (bukan major)</td>
+<td><code>1.2.3</code> → <code>1.9.0</code> ✅, <code>2.0.0</code> ❌</td>
+</tr>
+<tr>
+<td><code>~1.2.3</code></td>
+<td>Update patch saja</td>
+<td><code>1.2.3</code> → <code>1.2.9</code> ✅, <code>1.3.0</code> ❌</td>
+</tr>
+<tr>
+<td><code>1.2.3</code></td>
+<td>Versi exact</td>
+<td>Hanya <code>1.2.3</code></td>
+</tr>
+<tr>
+<td><code>*</code></td>
+<td>Versi apa pun</td>
+<td>—</td>
+</tr>
+<tr>
+<td><code>&gt;=1.2.3</code></td>
+<td>Minimal versi</td>
+<td>—</td>
+</tr>
+</tbody>
+</table>
+<blockquote>
+<p><strong>Tips:</strong> Gunakan <code>^</code> (default npm) untuk library — mendapat bug fix &amp; fitur minor. Gunakan versi exact untuk aplikasi produksi jika butuh stabilitas penuh.</p>
+</blockquote>
+<h3 id="package-lockjson"><code>package-lock.json</code> <a href="#package-lockjson" class="anchor" aria-hidden="true">#</a></h3>
+<p>File ini mengunci versi <strong>exact</strong> semua package (termasuk transitive dependencies). <strong>Commit ke Git</strong> agar semua developer &amp; server menggunakan versi yang sama.</p>
+<blockquote>
+<p><strong>Jangan</strong> edit manual. Dibuat otomatis oleh npm.</p>
+</blockquote>
+<h3 id="node_modules"><code>node_modules/</code> <a href="#node_modules" class="anchor" aria-hidden="true">#</a></h3>
+<p>Folder berisi semua package yang diinstal. Ukurannya bisa sangat besar.</p>
+<p><strong>Jangan commit ke Git</strong> — tambahkan ke <code>.gitignore</code>:</p>
+<pre><code>node_modules/
+.env
+*.log
+</code></pre>
+<p>Untuk menginstal ulang dari <code>package.json</code> (misalnya setelah clone):</p>
+<pre><code class="language-bash">npm install
+# atau untuk CI (lebih cepat, strict)
+npm ci
+</code></pre>
+<h3 id="menghapus-package">Menghapus Package <a href="#menghapus-package" class="anchor" aria-hidden="true">#</a></h3>
+<pre><code class="language-bash">npm uninstall express
+npm uninstall --save-dev nodemon
+</code></pre>
+<h3 id="melihat-package-yang-terinstal">Melihat Package yang Terinstal <a href="#melihat-package-yang-terinstal" class="anchor" aria-hidden="true">#</a></h3>
+<pre><code class="language-bash">npm list --depth=0
+</code></pre>
+<h3 id="update-package">Update Package <a href="#update-package" class="anchor" aria-hidden="true">#</a></h3>
+<pre><code class="language-bash">npm update              # update sesuai semver
+npm outdated            # lihat package yang ketinggalan
+npm install express@latest  # update ke versi terbaru
+</code></pre>
+<hr>
+<h2 id="script-npm">Script npm <a href="#script-npm" class="anchor" aria-hidden="true">#</a></h2>
+<p>Field <code>scripts</code> di <code>package.json</code> memungkinkan mendefinisikan perintah yang bisa dijalankan dengan <code>npm run</code>.</p>
+<pre><code class="language-json">{
+  &quot;scripts&quot;: {
+    &quot;start&quot;: &quot;node src/index.js&quot;,
+    &quot;dev&quot;: &quot;nodemon src/index.js&quot;,
+    &quot;test&quot;: &quot;vitest&quot;,
+    &quot;lint&quot;: &quot;eslint .&quot;,
+    &quot;build&quot;: &quot;tsc&quot;
+  }
+}
+</code></pre>
+<p>Menjalankan:</p>
+<pre><code class="language-bash">npm start          # khusus &quot;start&quot; — tanpa &quot;run&quot;
+npm run dev
+npm test           # khusus &quot;test&quot; — tanpa &quot;run&quot;
+npm run lint
+npm run build
+</code></pre>
+<h3 id="script-dengan-argumen">Script dengan Argumen <a href="#script-dengan-argumen" class="anchor" aria-hidden="true">#</a></h3>
+<pre><code class="language-bash">npm run dev -- --port 4000
+</code></pre>
+<p><code>--</code> memisahkan argumen npm dari argumen script.</p>
+<h3 id="script-prepost">Script Pre/Post <a href="#script-prepost" class="anchor" aria-hidden="true">#</a></h3>
+<p>npm otomatis menjalankan script <code>pre&lt;nama&gt;</code> dan <code>post&lt;nama&gt;</code>:</p>
+<pre><code class="language-json">{
+  &quot;scripts&quot;: {
+    &quot;prebuild&quot;: &quot;rm -rf dist&quot;,
+    &quot;build&quot;: &quot;tsc&quot;,
+    &quot;postbuild&quot;: &quot;echo 'Build selesai!'&quot;
+  }
+}
+</code></pre>
+<p><code>npm run build</code> akan menjalankan <code>prebuild</code> → <code>build</code> → <code>postbuild</code>.</p>
+<h3 id="script-chaining">Script Chaining <a href="#script-chaining" class="anchor" aria-hidden="true">#</a></h3>
+<pre><code class="language-json">{
+  &quot;scripts&quot;: {
+    &quot;lint&quot;: &quot;eslint .&quot;,
+    &quot;test&quot;: &quot;vitest&quot;,
+    &quot;check&quot;: &quot;npm run lint &amp;&amp; npm test&quot;
+  }
+}
+</code></pre>
+<p><code>&amp;&amp;</code> menjalankan script berikutnya hanya jika yang sebelumnya berhasil.</p>
+<hr>
+<h2 id="npx--menjalankan-package-tanpa-install-global"><code>npx</code> — Menjalankan Package Tanpa Install Global <a href="#npx--menjalankan-package-tanpa-install-global" class="anchor" aria-hidden="true">#</a></h2>
+<p><code>npx</code> mengunduh package sementara (jika belum ada) dan menjalankannya.</p>
+<pre><code class="language-bash">npx create-vite my-app
+npx eslint .
+npx prettier --write .
+npx tsx script.ts
+</code></pre>
+<p><strong>Keuntungan:</strong></p>
+<ul>
+<li>Tidak mengotori global package.</li>
+<li>Selalu menggunakan versi terbaru (atau versi yang ditentukan).</li>
+<li>Bisa menjalankan binary dari <code>node_modules/.bin</code> tanpa path lengkap.</li>
+</ul>
+<hr>
+<h2 id="membuat-project-nodejs-pertama">Membuat Project Node.js Pertama <a href="#membuat-project-nodejs-pertama" class="anchor" aria-hidden="true">#</a></h2>
+<p>Mari buat aplikasi CLI sederhana yang membaca file dan menghitung baris.</p>
+<h3 id="1-inisialisasi">1. Inisialisasi <a href="#1-inisialisasi" class="anchor" aria-hidden="true">#</a></h3>
+<pre><code class="language-bash">mkdir line-counter
+cd line-counter
+npm init -y
+</code></pre>
+<p>Edit <code>package.json</code> — tambahkan <code>&quot;type&quot;: &quot;module&quot;</code>:</p>
+<pre><code class="language-json">{
+  &quot;name&quot;: &quot;line-counter&quot;,
+  &quot;version&quot;: &quot;1.0.0&quot;,
+  &quot;type&quot;: &quot;module&quot;,
+  &quot;main&quot;: &quot;index.js&quot;,
+  &quot;scripts&quot;: {
+    &quot;start&quot;: &quot;node index.js&quot;
+  }
+}
+</code></pre>
+<h3 id="2-buat-indexjs">2. Buat <code>index.js</code> <a href="#2-buat-indexjs" class="anchor" aria-hidden="true">#</a></h3>
+<pre><code class="language-javascript">import fs from &quot;node:fs/promises&quot;;
+import path from &quot;node:path&quot;;
+
+async function hitungBaris(filePath) {
+  try {
+    const isi = await fs.readFile(filePath, &quot;utf-8&quot;);
+    const baris = isi.split(&quot;\n&quot;).length;
+    const karakter = isi.length;
+    const kata = isi.split(/\s+/).filter(Boolean).length;
+
+    console.log(`File: ${path.basename(filePath)}`);
+    console.log(`Baris: ${baris}`);
+    console.log(`Kata: ${kata}`);
+    console.log(`Karakter: ${karakter}`);
+  } catch (error) {
+    if (error.code === &quot;ENOENT&quot;) {
+      console.error(`File tidak ditemukan: ${filePath}`);
+    } else {
+      console.error(`Error: ${error.message}`);
+    }
+    process.exit(1);
+  }
+}
+
+const filePath = process.argv[2];
+
+if (!filePath) {
+  console.error(&quot;Penggunaan: node index.js &lt;file&gt;&quot;);
+  process.exit(1);
+}
+
+hitungBaris(filePath);
+</code></pre>
+<h3 id="3-jalankan">3. Jalankan <a href="#3-jalankan" class="anchor" aria-hidden="true">#</a></h3>
+<pre><code class="language-bash">echo &quot;Hello World
+Baris kedua
+Baris ketiga&quot; &gt; contoh.txt
+
+node index.js contoh.txt
+</code></pre>
+<p>Output:</p>
+<pre><code>File: contoh.txt
+Baris: 3
+Kata: 6
+Karakter: 35
+</code></pre>
+<h3 id="4-tambahkan-dependency">4. Tambahkan Dependency <a href="#4-tambahkan-dependency" class="anchor" aria-hidden="true">#</a></h3>
+<p>Mari tambahkan package <code>chalk</code> untuk warna output:</p>
+<pre><code class="language-bash">npm install chalk
+</code></pre>
+<p>Ubah <code>index.js</code>:</p>
+<pre><code class="language-javascript">import chalk from &quot;chalk&quot;;
+// ...
+console.log(chalk.blue(`File: ${path.basename(filePath)}`));
+console.log(chalk.green(`Baris: ${baris}`));
+console.log(chalk.yellow(`Kata: ${kata}`));
+console.log(chalk.cyan(`Karakter: ${karakter}`));
+</code></pre>
+<p>Jalankan lagi — output berwarna.</p>
+<hr>
+<h2 id="environment-variables">Environment Variables <a href="#environment-variables" class="anchor" aria-hidden="true">#</a></h2>
+<p><strong>Environment variables</strong> menyimpan konfigurasi sensitif (API key, database URL) di luar kode.</p>
+<h3 id="mengakses-di-nodejs">Mengakses di Node.js <a href="#mengakses-di-nodejs" class="anchor" aria-hidden="true">#</a></h3>
+<pre><code class="language-javascript">console.log(process.env.NODE_ENV);    // &quot;development&quot; / &quot;production&quot;
+console.log(process.env.DATABASE_URL);
+console.log(process.env.PORT || 3000);
+</code></pre>
+<h3 id="file-env">File <code>.env</code> <a href="#file-env" class="anchor" aria-hidden="true">#</a></h3>
+<p>Buat file <code>.env</code>:</p>
+<pre><code>NODE_ENV=development
+PORT=3000
+DATABASE_URL=mysql://root:password@localhost:3306/toko_online
+API_KEY=rahasia123
+</code></pre>
+<p><strong>Jangan commit <code>.env</code> ke Git!</strong> Tambahkan ke <code>.gitignore</code>.</p>
+<h3 id="membaca-env-dengan-dotenv">Membaca <code>.env</code> dengan <code>dotenv</code> <a href="#membaca-env-dengan-dotenv" class="anchor" aria-hidden="true">#</a></h3>
+<pre><code class="language-bash">npm install dotenv
+</code></pre>
+<pre><code class="language-javascript">import &quot;dotenv/config&quot;;
+
+console.log(process.env.PORT); // &quot;3000&quot;
+</code></pre>
+<p>Atau manual:</p>
+<pre><code class="language-javascript">import dotenv from &quot;dotenv&quot;;
+dotenv.config();
+</code></pre>
+<blockquote>
+<p><strong>Catatan:</strong> Node.js 20.6+ mendukung <code>--env-file</code> tanpa <code>dotenv</code>:</p>
+<pre><code class="language-bash">node --env-file=.env index.js
+</code></pre>
+</blockquote>
+<h3 id="file-envexample">File <code>.env.example</code> <a href="#file-envexample" class="anchor" aria-hidden="true">#</a></h3>
+<p>Commit file contoh <strong>tanpa nilai sensitif</strong> agar developer lain tahu variabel yang dibutuhkan:</p>
+<pre><code>NODE_ENV=development
+PORT=3000
+DATABASE_URL=
+API_KEY=
+</code></pre>
+<hr>
+<h2 id="tips--best-practice">Tips &amp; Best Practice <a href="#tips--best-practice" class="anchor" aria-hidden="true">#</a></h2>
+<ol>
+<li>
+<p><strong>Gunakan ES Module</strong> (<code>&quot;type&quot;: &quot;module&quot;</code>) untuk proyek baru.</p>
+</li>
+<li>
+<p><strong>Gunakan <code>node:</code> prefix</strong> untuk modul bawaan — membedakan dari package npm.</p>
+</li>
+<li>
+<p><strong>Gunakan <code>fs/promises</code></strong> (async) daripada <code>fs</code> synchronous di server.</p>
+</li>
+<li>
+<p><strong>Gunakan <code>path.join()</code></strong> untuk path — menangani separator Windows/Linux.</p>
+</li>
+<li>
+<p><strong>Commit <code>package.json</code> dan <code>package-lock.json</code></strong> — jangan commit <code>node_modules/</code>.</p>
+</li>
+<li>
+<p><strong>Gunakan <code>.gitignore</code></strong> — <code>node_modules/</code>, <code>.env</code>, <code>*.log</code>, <code>dist/</code>.</p>
+</li>
+<li>
+<p><strong>Pisahkan <code>dependencies</code> dan <code>devDependencies</code></strong> — package testing/linting cukup di dev.</p>
+</li>
+<li>
+<p><strong>Gunakan <code>npm ci</code></strong> di CI/CD — instalasi strict dan cepat.</p>
+</li>
+<li>
+<p><strong>Jangan hardcode konfigurasi sensitif</strong> — gunakan environment variables.</p>
+</li>
+<li>
+<p><strong>Selalu tangani error</strong> di fungsi async — <code>try/catch</code>.</p>
+</li>
+<li>
+<p><strong>Gunakan <code>nodemon</code></strong> saat development — auto-restart saat file berubah.</p>
+</li>
+<li>
+<p><strong>Gunakan <code>process.exit(1)</code></strong> untuk menandakan error di CLI.</p>
+</li>
+</ol>
+<hr>
+<h2 id="ringkasan">Ringkasan <a href="#ringkasan" class="anchor" aria-hidden="true">#</a></h2>
+<table>
+<thead>
+<tr>
+<th>Konsep</th>
+<th>Poin Penting</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Node.js</td>
+<td>Runtime JavaScript di luar browser (V8 engine)</td>
+</tr>
+<tr>
+<td>Modul CJS</td>
+<td><code>require()</code> / <code>module.exports</code></td>
+</tr>
+<tr>
+<td>Modul ESM</td>
+<td><code>import</code> / <code>export</code> (<code>&quot;type&quot;: &quot;module&quot;</code>)</td>
+</tr>
+<tr>
+<td><code>fs</code></td>
+<td>File system (baca/tulis file)</td>
+</tr>
+<tr>
+<td><code>path</code></td>
+<td>Manipulasi path</td>
+</tr>
+<tr>
+<td><code>http</code></td>
+<td>HTTP server</td>
+</tr>
+<tr>
+<td><code>process</code></td>
+<td>Info proses &amp; environment</td>
+</tr>
+<tr>
+<td><code>package.json</code></td>
+<td>Konfigurasi proyek &amp; dependencies</td>
+</tr>
+<tr>
+<td><code>npm install</code></td>
+<td>Menginstal package</td>
+</tr>
+<tr>
+<td><code>npm ci</code></td>
+<td>Instalasi strict dari lock file</td>
+</tr>
+<tr>
+<td><code>npx</code></td>
+<td>Menjalankan package tanpa install global</td>
+</tr>
+<tr>
+<td><code>scripts</code></td>
+<td>Perintah npm yang bisa dijalankan</td>
+</tr>
+<tr>
+<td><code>.env</code></td>
+<td>Environment variables (jangan commit!)</td>
+</tr>
+</tbody>
+</table>
+<p>Poin penting:</p>
+<ul>
+<li>Node.js menjalankan JavaScript di <strong>sisi server</strong> — tidak ada DOM.</li>
+<li>Gunakan <strong>ES Module</strong> untuk proyek baru.</li>
+<li><strong>Modul bawaan</strong> (<code>fs</code>, <code>path</code>, <code>http</code>, dll.) tidak perlu diinstal.</li>
+<li><strong><code>package.json</code></strong> adalah pusat konfigurasi proyek.</li>
+<li><strong><code>package-lock.json</code></strong> mengunci versi — commit ke Git.</li>
+<li><strong><code>node_modules/</code></strong> jangan di-commit — gunakan <code>.gitignore</code>.</li>
+<li><strong><code>npm ci</code></strong> untuk CI/CD — lebih cepat dan strict.</li>
+<li><strong><code>npx</code></strong> untuk menjalankan package tanpa install global.</li>
+<li><strong>Environment variables</strong> untuk konfigurasi sensitif — jangan hardcode.</li>
+</ul>
+<p>Pada artikel berikutnya, kita akan membahas <strong>Module Bundler &amp; Build Tool</strong> — Vite, Webpack, Babel, ESLint, dan Prettier.</p>
+
+			<div class="page-footer-meta d-flex flex-column flex-md-row justify-content-between">
+				</div>
+			<div class="docs-navigation d-flex justify-content-between">
+	
+	<a href="/javascript/tutorial/14-fetch-api/">
+			<div class="card my-1">
+				<div class="card-body py-2">
+					&larr; Fetch API &amp; AJAX
+				</div>
+			</div>
+		</a>
+	<a class="ms-auto" href="/javascript/tutorial/16-bundler-tooling/">
+			<div class="card my-1">
+				<div class="card-body py-2">
+					Module Bundler &amp; Build Tool &rarr;
+				</div>
+			</div>
+		</a>
+	</div>
+
+			
+		</main>
+	</div>
+
+      </div>
+    </div>
+    
+    
+    <footer class="footer text-muted">
+  <div class="container-xxl">
+    <div class="row">
+      <div class="col-lg-8 order-last order-lg-first">
+        <ul class="list-inline">
+          <li class="list-inline-item">Powered by <a class="text-muted" href="https://gohugo.io/">Hugo</a> and <a class="text-muted" href="https://github.com/">Github</a></li>
+        </ul>
+      </div>
+      <div class="col-lg-8 order-first order-lg-last text-lg-end">
+        <ul class="list-inline">
+          </ul>
+      </div>
+    </div>
+  </div>
+</footer>
+    
+
+<script src="/js/bootstrap.min.650aeec64c81d69d4c0850fc73c93da3f0330cec0a27772feed7f90f60baa5f47f1c45687d71914bdafd1c4e860d40f6dc08ede27a2f08431ff929c9a2d24621.js" integrity="sha512-ZQruxkyB1p1MCFD8c8k9o/AzDOwKJ3cv7tf5D2C6pfR/HEVofXGRS9r9HE6GDUD23Ajt4novCEMf&#43;SnJotJGIQ==" crossorigin="anonymous" defer></script>
+  <script src="/js/highlight.min.ec234bd8a5f487aaffe50a89f17b14501b1bb65633cf177cffd4cb84702dd7030edc08712dceb8dc27ac7e54b53240a08bf0b8d951572ee582bcdbbd06a48a7b.js" integrity="sha512-7CNL2KX0h6r/5QqJ8XsUUBsbtlYzzxd8/9TLhHAt1wMO3AhxLc643CesflS1MkCgi/C42VFXLuWCvNu9BqSKew==" crossorigin="anonymous" defer></script>
+  <script src="/main.min.cd1e5e6b40065b3f7f7fd8548a528fac67019754eda0f37b9918d02d154fc9ef6a22742f6513b0572ad9163152e151ec36221fbeafbecd7759c3dab1f19b64b9.js" integrity="sha512-zR5ea0AGWz9/f9hUilKPrGcBl1TtoPN7mRjQLRVPye9qInQvZROwVyrZFjFS4VHsNiIfvq&#43;&#43;zXdZw9qx8ZtkuQ==" crossorigin="anonymous" defer></script>
+  <script src="https://kaban.my.id/index.min.3b38957cbdd3fcd9f9b6e3e14d11e41821e75e9e633e2e7fc92b39e052142003d54a01433bc318b5180cbdf345e1654d731e00e168a3ab02cdad8965a4e5d852.js" integrity="sha512-OziVfL3T/Nn5tuPhTRHkGCHnXp5jPi5/ySs54FIUIAPVSgFDO8MYtRgMvfNF4WVNcx4A4WijqwLNrYllpOXYUg==" crossorigin="anonymous" defer></script>
+  
+    <div class="d-flex fixed-bottom pb-4 pb-lg-5 pe-4 pe-lg-5">
+      <a id="toTop" href="#" class="btn btn-outline-primary rounded-circle ms-auto p-2"><span class="visually-hidden">Top</span><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-chevron-up"><polyline points="18 15 12 9 6 15"></polyline></svg></a>
+    </div>
+    
+  </body>
+</html>

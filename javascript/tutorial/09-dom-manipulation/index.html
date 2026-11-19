@@ -1,0 +1,1733 @@
+<!doctype html>
+<html lang="en-US">
+  <head>
+  <meta charset="utf-8">
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <link rel="preload" as="font" href="https://kaban.my.id/fonts/vendor/jost/jost-v4-latin-regular.woff2" type="font/woff2" crossorigin>
+<link rel="preload" as="font" href="https://kaban.my.id/fonts/vendor/jost/jost-v4-latin-500.woff2" type="font/woff2" crossorigin>
+<link rel="preload" as="font" href="https://kaban.my.id/fonts/vendor/jost/jost-v4-latin-700.woff2" type="font/woff2" crossorigin>
+
+  <script>(()=>{var t=window.matchMedia&&window.matchMedia("(prefers-color-scheme: dark)").matches,e=localStorage.getItem("theme");t&&e===null&&(localStorage.setItem("theme","dark"),document.documentElement.setAttribute("data-dark-mode","")),t&&e==="dark"&&document.documentElement.setAttribute("data-dark-mode",""),e==="dark"&&document.documentElement.setAttribute("data-dark-mode","")})()</script>
+
+  <link rel="stylesheet" href="https://kaban.my.id/main.4296e689affcd00e933b8954c10fc43cd1a5f16d5552e78183d12ea50d3e0bf5a596df23a379a4936743f01a7cd8ba048a628b2b9b60b34aa49fad468287100a.css" integrity="sha512-Qpbmia/80A6TO4lUwQ/EPNGl8W1VUueBg9EupQ0&#43;C/Wllt8jo3mkk2dD8Bp82LoEimKLK5tgs0qkn61GgocQCg==" crossorigin="anonymous">
+<noscript><style>img.lazyload { display: none; }</style></noscript>
+  <meta name="robots" content="index, follow">
+    <meta name="googlebot" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1">
+    <meta name="bingbot" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1">
+  <title>DOM Manipulation - Roberto Kaban Blog&#39;s</title>
+<meta name="description" content="Panduan lengkap DOM manipulation JavaScript: seleksi elemen, mengubah teks/HTML/atribut/style, membuat dan menghapus elemen, serta classList dan dataset.">
+<link rel="canonical" href="https://kaban.my.id/javascript/tutorial/09-dom-manipulation/">
+<meta property="og:locale" content="en_US">
+<meta property="og:type" content="article">
+<meta property="og:title" content="DOM Manipulation">
+<meta property="og:description" content="Panduan lengkap DOM manipulation JavaScript: seleksi elemen, mengubah teks/HTML/atribut/style, membuat dan menghapus elemen, serta classList dan dataset.">
+<meta property="og:url" content="https://kaban.my.id/javascript/tutorial/09-dom-manipulation/">
+<meta property="og:site_name" content="Roberto Kaban Blog&#39;s">
+<meta property="article:published_time" content="2022-12-27T08:00:00+00:00">
+  <meta property="article:modified_time" content="2022-12-27T08:00:00+00:00">
+  
+  <meta property="og:image" content="https://kaban.my.id/doks.png"/>
+      <meta property="og:image:alt" content="Roberto Kaban Blog&#39;s">
+    
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:site" content="@robertokaban">
+<meta name="twitter:creator" content="@robertokaban">
+<meta name="twitter:title" content="DOM Manipulation">
+<meta name="twitter:description" content="Panduan lengkap DOM manipulation JavaScript: seleksi elemen, mengubah teks/HTML/atribut/style, membuat dan menghapus elemen, serta classList dan dataset.">
+<meta name="twitter:image" content="https://kaban.my.id/doks.png">
+    <meta name="twitter:image:alt" content="DOM Manipulation">
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "Person",
+        "@id": "https://kaban.my.id/#/schema/person/1",
+      "name": "BlogRobertoKaban",
+      "url": "https://kaban.my.id/",
+      "sameAs": [
+        "https://twitter.com/robertokaban"
+        , "https://github.com/robertokaban"
+        ],
+      "image": {
+          "@type": "ImageObject",
+          "@id": "https://kaban.my.id/#/schema/image/1",
+          "url": "https://kaban.my.id/doks.png",
+          "width":  1280 ,
+          "height":  640 ,
+          "caption": "BlogRobertoKaban"
+        }
+      },
+    {
+      "@type": "WebSite",
+      "@id": "https://kaban.my.id/#/schema/website/1",
+      "url": "https://kaban.my.id/",
+      "name": "Roberto Kaban Blog\u0027s",
+      "description": "Hanya sebuah catatan kecil untuk hal yang tidak ingin dilupakan.",
+      "publisher": {
+          "@id": "https://kaban.my.id/#/schema/person/1"
+        }
+      },
+    {
+      "@type": "WebPage",
+      "@id": "https://kaban.my.id/javascript/tutorial/09-dom-manipulation/",
+      "url": "https://kaban.my.id/javascript/tutorial/09-dom-manipulation/",
+      "name": "DOM Manipulation",
+      "description": "Panduan lengkap DOM manipulation JavaScript: seleksi elemen, mengubah teks\/HTML\/atribut\/style, membuat dan menghapus elemen, serta classList dan dataset.",
+      "isPartOf": {
+        "@id": "https://kaban.my.id/#/schema/website/1"
+      },
+      "about": {
+          "@id": "https://kaban.my.id/#/schema/person/1"
+        },
+      "datePublished": "2022-12-27T08:00:00CET",
+      "dateModified": "2022-12-27T08:00:00CET",
+      "breadcrumb": {
+        "@id": "https://kaban.my.id/javascript/tutorial/09-dom-manipulation/#/schema/breadcrumb/1"
+      },
+      "primaryImageOfPage": {
+        "@id": "https://kaban.my.id/javascript/tutorial/09-dom-manipulation/#/schema/image/2"
+      },
+      "inLanguage": "en-US",
+      "potentialAction": [{
+        "@type": "ReadAction", "target": ["https://kaban.my.id/javascript/tutorial/09-dom-manipulation/"]
+      }]
+    },
+    {
+      "@type": "BreadcrumbList",
+      "@id": "https://kaban.my.id/javascript/tutorial/09-dom-manipulation/#/schema/breadcrumb/1",
+      "name": "Breadcrumbs",
+      "itemListElement": [{
+        "@type": "ListItem",
+        "position":  1 ,
+        "item": {
+          "@type": "WebPage",
+          "@id": "https://kaban.my.id/",
+          "url": "https://kaban.my.id/",
+          "name": "Home"
+          }
+        },{
+        "@type": "ListItem",
+        "position":  2 ,
+        "item": {
+          "@type": "WebPage",
+          "@id": "https://kaban.my.id/javascript/",
+          "url": "https://kaban.my.id/javascript/",
+          "name": "Javascript"
+          }
+        },{
+        "@type": "ListItem",
+        "position":  3 ,
+        "item": {
+          "@type": "WebPage",
+          "@id": "https://kaban.my.id/javascript/tutorial/",
+          "url": "https://kaban.my.id/javascript/tutorial/",
+          "name": "Tutorial"
+          }
+        },{
+        "@type": "ListItem",
+        "position":  4 ,
+        "item": {
+          "@id": "https://kaban.my.id/javascript/tutorial/09-dom-manipulation/"
+          }
+        }]
+    },
+
+    {
+      "@context": "https://schema.org",
+      "@graph": [
+        {
+          "@type": "ImageObject",
+          "@id": "https://kaban.my.id/javascript/tutorial/09-dom-manipulation/#/schema/image/2",
+          "url": "https://kaban.my.id/doks.png",
+          "contentUrl": "https://kaban.my.id/doks.png",
+          "caption": "DOM Manipulation"
+        }
+      ]
+    }
+
+  ]
+}
+</script>
+
+  <meta name="theme-color" content="#fff">
+<link rel="icon" href="https://kaban.my.id/favicon.ico" sizes="any">
+<link rel="icon" type="image/svg+xml" href="https://kaban.my.id/favicon.svg">
+<link rel="apple-touch-icon" sizes="180x180" href="https://kaban.my.id/apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="32x32" href="https://kaban.my.id/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="https://kaban.my.id/favicon-16x16.png">
+<link rel="manifest" crossorigin="use-credentials" href="https://kaban.my.id/site.webmanifest">
+
+  
+
+
+  
+  
+  
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-60VSDZFQR5"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-60VSDZFQR5');
+</script>
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6664512614760985"
+     crossorigin="anonymous"></script>
+</head>
+
+  <body class="javascript single">
+    <div class="sticky-top">
+<div class="header-bar"></div>
+
+<header class="navbar navbar-expand-lg navbar-light doks-navbar">
+  <nav class="container-xxl flex-wrap flex-lg-nowrap" aria-label="Main navigation">
+
+    <a class="navbar-brand order-0" href="/" aria-label="Roberto Kaban Blog&#39;s">
+      Roberto Kaban Blog&#39;s
+    </a>
+
+    <button class="btn btn-menu order-2 d-block d-lg-none" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasDoks" aria-controls="offcanvasDoks" aria-label="Open main menu">
+      <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-menu"><line x1="3" y1="12" x2="21" y2="12"></line><line x1="3" y1="6" x2="21" y2="6"></line><line x1="3" y1="18" x2="21" y2="18"></line></svg>
+    </button>
+    <div class="offcanvas offcanvas-end border-0 py-lg-1" tabindex="-1" id="offcanvasDoks" data-bs-backdrop="true" aria-labelledby="offcanvasDoksLabel">
+      <div class="header-bar d-lg-none"></div>
+      <div class="offcanvas-header d-lg-none">
+        <h2 class="h5 offcanvas-title ps-2" id="offcanvasDoksLabel"><a class="text-dark" href="/">Roberto Kaban Blog&#39;s</a></h2>
+        <button type="button" class="btn-close text-reset me-2" data-bs-dismiss="offcanvas" aria-label="Close main menu"></button>
+      </div>
+      <div class="offcanvas-body p-4 p-lg-0">
+        <ul class="nav flex-column flex-lg-row align-items-lg-center mt-2 mt-lg-0 ms-lg-2 me-lg-auto">
+              <li class="nav-item">
+                <a class="nav-link ps-0 py-1" href="/about/">About Me</a>
+              </li>
+            
+          
+              <li class="nav-item">
+                <a class="nav-link ps-0 py-1" href="/contact/">Contact</a>
+              </li>
+            
+          
+              <li class="nav-item">
+                <a class="nav-link ps-0 py-1" href="/artikel/">Artikel</a>
+              </li>
+            
+          
+              <li class="nav-item">
+                <a class="nav-link ps-0 py-1" href="/coretanku/">Coretanku</a>
+              </li>
+            
+          </ul>
+
+        <hr class="text-black-50 my-4 d-lg-none">
+        <form class="doks-search position-relative flex-grow-1 ms-lg-auto me-lg-2">
+          <input id="search" class="form-control is-search" type="search" placeholder="Cari di blog ini..." aria-label="Cari di blog ini..." autocomplete="off">
+          <div id="suggestions" class="shadow bg-white rounded d-none"></div>
+        </form>
+        <hr class="text-black-50 my-4 d-lg-none">
+        <ul class="nav flex-column flex-lg-row">
+          <li class="nav-item">
+              <a class="nav-link social-link" href="https://github.com/robertokaban"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-github"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path></svg><small class="ms-2 d-lg-none">GitHub</small></a>
+            </li>
+          <li class="nav-item">
+              <a class="nav-link social-link" href="https://facebook.com/roberto.kaban"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-facebook"><path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"></path></svg><small class="ms-2 d-lg-none">Facebook</small></a>
+            </li>
+          <li class="nav-item">
+              <a class="nav-link social-link" href="https://twitter.com/robertokaban"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-twitter"><path d="M23 3a10.9 10.9 0 0 1-3.14 1.53 4.48 4.48 0 0 0-7.86 3v1A10.66 10.66 0 0 1 3 4s-4 9 5 13a11.64 11.64 0 0 1-7 2c9 5 20 0 20-11.5a4.5 4.5 0 0 0-.08-.83A7.72 7.72 0 0 0 23 3z"></path></svg><small class="ms-2 d-lg-none">Twitter</small></a>
+            </li>
+          <li class="nav-item">
+              <a class="nav-link social-link" href="https://youtube.com/@robertokaban"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-youtube"><path d="M10,15L15.19,12L10,9V15M21.56,7.17C21.69,7.64 21.78,8.27 21.84,9.07C21.91,9.87 21.94,10.56 21.94,11.16L22,12C22,14.19 21.84,15.8 21.56,16.83C21.31,17.73 20.73,18.31 19.83,18.56C19.36,18.69 18.5,18.78 17.18,18.84C15.88,18.91 14.69,18.94 13.59,18.94L12,19C7.81,19 5.2,18.84 4.17,18.56C3.27,18.31 2.69,17.73 2.44,16.83C2.31,16.36 2.22,15.73 2.16,14.93C2.09,14.13 2.06,13.44 2.06,12.84L2,12C2,9.81 2.16,8.2 2.44,7.17C2.69,6.27 3.27,5.69 4.17,5.44C4.64,5.31 5.5,5.22 6.82,5.16C8.12,5.09 9.31,5.06 10.41,5.06L12,5C16.19,5 18.8,5.16 19.83,5.44C20.73,5.69 21.31,6.27 21.56,7.17Z"></path></svg><small class="ms-2 d-lg-none">Youtube</small></a>
+            </li>
+          </ul>
+
+        
+        <hr class="text-black-50 my-4 d-lg-none">
+        <button id="mode" class="btn btn-link" type="button" aria-label="Toggle user interface mode">
+          <span class="toggle-dark"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-moon"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path></svg></span>
+          <span class="toggle-light"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-sun"><circle cx="12" cy="12" r="5"></circle><line x1="12" y1="1" x2="12" y2="3"></line><line x1="12" y1="21" x2="12" y2="23"></line><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line><line x1="1" y1="12" x2="3" y2="12"></line><line x1="21" y1="12" x2="23" y2="12"></line><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line></svg></span>
+        </button>
+        
+
+        </div>
+    </div>
+  </nav>
+</header>
+
+
+</div>
+
+
+<div class="container-xxl">
+  <aside class="doks-sidebar">
+    <nav id="doks-docs-nav" class="collapse d-lg-none" aria-label="Tertiary navigation">
+      
+<ul class="list-unstyled collapsible-sidebar">
+  
+    
+      
+      <li class="mb-1">
+        <button class="btn btn-toggle align-items-center rounded collapsed" data-bs-toggle="collapse" data-bs-target="#section-0967e753cd827c7c2576cf6f7292922e" aria-expanded="true">
+          Tutorial Javascript
+        </button>
+        <div class="collapse show" id="section-0967e753cd827c7c2576cf6f7292922e">
+          <ul class="btn-toggle-nav list-unstyled fw-normal pb-1 small">
+            
+              
+                
+                <li><a class="docs-link rounded" href="https://kaban.my.id/javascript/tutorial/pengenalan/">Pengenalan Javascript</a></li>
+              
+            
+              
+                
+                <li><a class="docs-link rounded" href="https://kaban.my.id/javascript/tutorial/02-instalasi-persiapan/">Instalasi &amp; Persiapan Lingkungan JavaScript</a></li>
+              
+            
+              
+                
+                <li><a class="docs-link rounded" href="https://kaban.my.id/javascript/tutorial/03-sintaks-variabel/">Sintaks Dasar &amp; Variabel</a></li>
+              
+            
+              
+                
+                <li><a class="docs-link rounded" href="https://kaban.my.id/javascript/tutorial/04-tipe-data-konversi/">Tipe Data &amp; Konversi</a></li>
+              
+            
+              
+                
+                <li><a class="docs-link rounded" href="https://kaban.my.id/javascript/tutorial/05-struktur-kontrol/">Struktur Kontrol &amp; Perulangan</a></li>
+              
+            
+              
+                
+                <li><a class="docs-link rounded" href="https://kaban.my.id/javascript/tutorial/06-fungsi/">Fungsi</a></li>
+              
+            
+              
+                
+                <li><a class="docs-link rounded" href="https://kaban.my.id/javascript/tutorial/07-array/">Array &amp; Method-nya</a></li>
+              
+            
+              
+                
+                <li><a class="docs-link rounded" href="https://kaban.my.id/javascript/tutorial/08-object/">Object &amp; Method-nya</a></li>
+              
+            
+              
+                
+                <li><a class="docs-link rounded active" href="https://kaban.my.id/javascript/tutorial/09-dom-manipulation/">DOM Manipulation</a></li>
+              
+            
+              
+                
+                <li><a class="docs-link rounded" href="https://kaban.my.id/javascript/tutorial/10-event-handling/">Event &amp; Event Handling</a></li>
+              
+            
+              
+                
+                <li><a class="docs-link rounded" href="https://kaban.my.id/javascript/tutorial/11-web-storage/">Web Storage &amp; Cookie</a></li>
+              
+            
+              
+                
+                <li><a class="docs-link rounded" href="https://kaban.my.id/javascript/tutorial/12-es6-modern/">ES6&#43; Fitur Modern</a></li>
+              
+            
+              
+                
+                <li><a class="docs-link rounded" href="https://kaban.my.id/javascript/tutorial/13-async-javascript/">Asynchronous JavaScript</a></li>
+              
+            
+              
+                
+                <li><a class="docs-link rounded" href="https://kaban.my.id/javascript/tutorial/14-fetch-api/">Fetch API &amp; AJAX</a></li>
+              
+            
+              
+                
+                <li><a class="docs-link rounded" href="https://kaban.my.id/javascript/tutorial/15-nodejs-npm/">Node.js &amp; npm Dasar</a></li>
+              
+            
+              
+                
+                <li><a class="docs-link rounded" href="https://kaban.my.id/javascript/tutorial/16-bundler-tooling/">Module Bundler &amp; Build Tool</a></li>
+              
+            
+          </ul>
+        </div>
+      </li>
+    
+  
+</ul>
+
+    </nav>
+  </aside>
+</div>
+
+    <div class="wrap container-xxl" role="document">
+      <div class="content">
+        
+	<div class="row flex-xl-nowrap">
+		<div class="col-lg-5 col-xl-4 docs-sidebar d-none d-lg-block">
+			<nav class="docs-links" aria-label="Main navigation">
+				
+<ul class="list-unstyled collapsible-sidebar">
+  
+    
+      
+      <li class="mb-1">
+        <button class="btn btn-toggle align-items-center rounded collapsed" data-bs-toggle="collapse" data-bs-target="#section-0967e753cd827c7c2576cf6f7292922e" aria-expanded="true">
+          Tutorial Javascript
+        </button>
+        <div class="collapse show" id="section-0967e753cd827c7c2576cf6f7292922e">
+          <ul class="btn-toggle-nav list-unstyled fw-normal pb-1 small">
+            
+              
+                
+                <li><a class="docs-link rounded" href="https://kaban.my.id/javascript/tutorial/pengenalan/">Pengenalan Javascript</a></li>
+              
+            
+              
+                
+                <li><a class="docs-link rounded" href="https://kaban.my.id/javascript/tutorial/02-instalasi-persiapan/">Instalasi &amp; Persiapan Lingkungan JavaScript</a></li>
+              
+            
+              
+                
+                <li><a class="docs-link rounded" href="https://kaban.my.id/javascript/tutorial/03-sintaks-variabel/">Sintaks Dasar &amp; Variabel</a></li>
+              
+            
+              
+                
+                <li><a class="docs-link rounded" href="https://kaban.my.id/javascript/tutorial/04-tipe-data-konversi/">Tipe Data &amp; Konversi</a></li>
+              
+            
+              
+                
+                <li><a class="docs-link rounded" href="https://kaban.my.id/javascript/tutorial/05-struktur-kontrol/">Struktur Kontrol &amp; Perulangan</a></li>
+              
+            
+              
+                
+                <li><a class="docs-link rounded" href="https://kaban.my.id/javascript/tutorial/06-fungsi/">Fungsi</a></li>
+              
+            
+              
+                
+                <li><a class="docs-link rounded" href="https://kaban.my.id/javascript/tutorial/07-array/">Array &amp; Method-nya</a></li>
+              
+            
+              
+                
+                <li><a class="docs-link rounded" href="https://kaban.my.id/javascript/tutorial/08-object/">Object &amp; Method-nya</a></li>
+              
+            
+              
+                
+                <li><a class="docs-link rounded active" href="https://kaban.my.id/javascript/tutorial/09-dom-manipulation/">DOM Manipulation</a></li>
+              
+            
+              
+                
+                <li><a class="docs-link rounded" href="https://kaban.my.id/javascript/tutorial/10-event-handling/">Event &amp; Event Handling</a></li>
+              
+            
+              
+                
+                <li><a class="docs-link rounded" href="https://kaban.my.id/javascript/tutorial/11-web-storage/">Web Storage &amp; Cookie</a></li>
+              
+            
+              
+                
+                <li><a class="docs-link rounded" href="https://kaban.my.id/javascript/tutorial/12-es6-modern/">ES6&#43; Fitur Modern</a></li>
+              
+            
+              
+                
+                <li><a class="docs-link rounded" href="https://kaban.my.id/javascript/tutorial/13-async-javascript/">Asynchronous JavaScript</a></li>
+              
+            
+              
+                
+                <li><a class="docs-link rounded" href="https://kaban.my.id/javascript/tutorial/14-fetch-api/">Fetch API &amp; AJAX</a></li>
+              
+            
+              
+                
+                <li><a class="docs-link rounded" href="https://kaban.my.id/javascript/tutorial/15-nodejs-npm/">Node.js &amp; npm Dasar</a></li>
+              
+            
+              
+                
+                <li><a class="docs-link rounded" href="https://kaban.my.id/javascript/tutorial/16-bundler-tooling/">Module Bundler &amp; Build Tool</a></li>
+              
+            
+          </ul>
+        </div>
+      </li>
+    
+  
+</ul>
+
+			</nav>
+		</div>
+		<nav class="docs-toc d-none d-xl-block col-xl-3" aria-label="Secondary navigation">
+			<div class="d-xl-none">
+  <button class="btn btn-outline-primary btn-sm doks-toc-toggle collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#onThisPage" aria-controls="doks-docs-nav" aria-expanded="false" aria-label="Toggle On this page navigation">
+    <span>Daftar isi</span>
+    <span>
+      <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" class="doks doks-expand" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><title>Expand</title><polyline points="7 13 12 18 17 13"></polyline><polyline points="7 6 12 11 17 6"></polyline></svg>
+      <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" class="doks doks-collapse" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><title>Collapse</title><polyline points="17 11 12 6 7 11"></polyline><polyline points="17 18 12 13 7 18"></polyline></svg>
+    </span>
+  </button>
+  <div class="collapse" id="onThisPage">
+    <div class="card card-body mt-3 py-1">
+      <div class="page-links">
+        <nav id="TableOfContents">
+  <ul>
+    <li><a href="#pendahuluan">Pendahuluan</a></li>
+    <li><a href="#memahami-dom">Memahami DOM</a></li>
+    <li><a href="#menyeleksi-elemen">Menyeleksi Elemen</a>
+      <ul>
+        <li><a href="#queryselector--satu-elemen-pertama-rekomendasikan"><code>querySelector()</code> — Satu Elemen Pertama (Rekomendasikan)</a></li>
+        <li><a href="#queryselectorall--semua-elemen"><code>querySelectorAll()</code> — Semua Elemen</a></li>
+        <li><a href="#getelementbyid--by-id-cepat"><code>getElementById()</code> — By ID (Cepat)</a></li>
+        <li><a href="#getelementsbyclassname--by-class-live-htmlcollection"><code>getElementsByClassName()</code> — By Class (Live HTMLCollection)</a></li>
+        <li><a href="#getelementsbytagname--by-tag-live-htmlcollection"><code>getElementsByTagName()</code> — By Tag (Live HTMLCollection)</a></li>
+        <li><a href="#perbandingan-method-seleksi">Perbandingan Method Seleksi</a></li>
+        <li><a href="#seleksi-relatif-navigasi-dom">Seleksi Relatif (Navigasi DOM)</a></li>
+      </ul>
+    </li>
+    <li><a href="#mengubah-konten">Mengubah Konten</a>
+      <ul>
+        <li><a href="#textcontent--teks-murni"><code>textContent</code> — Teks Murni</a></li>
+        <li><a href="#innerhtml--html-di-dalam-elemen"><code>innerHTML</code> — HTML di Dalam Elemen</a></li>
+        <li><a href="#innertext-vs-textcontent"><code>innerText</code> vs <code>textContent</code></a></li>
+        <li><a href="#outerhtml--html-elemen-itu-sendiri"><code>outerHTML</code> — HTML Elemen Itu Sendiri</a></li>
+      </ul>
+    </li>
+    <li><a href="#mengubah-atribut">Mengubah Atribut</a>
+      <ul>
+        <li><a href="#getattribute-dan-setattribute"><code>getAttribute()</code> dan <code>setAttribute()</code></a></li>
+        <li><a href="#removeattribute"><code>removeAttribute()</code></a></li>
+        <li><a href="#hasattribute"><code>hasAttribute()</code></a></li>
+        <li><a href="#properti-langsung">Properti Langsung</a></li>
+      </ul>
+    </li>
+    <li><a href="#mengubah-style">Mengubah Style</a>
+      <ul>
+        <li><a href="#style--inline-style"><code>style</code> — Inline Style</a></li>
+        <li><a href="#csstext--beberapa-style-sebagai-string"><code>cssText</code> — Beberapa Style sebagai String</a></li>
+      </ul>
+    </li>
+    <li><a href="#classlist--mengelola-class"><code>classList</code> — Mengelola Class</a>
+      <ul>
+        <li><a href="#method-classlist">Method <code>classList</code></a></li>
+        <li><a href="#iterasi-class">Iterasi Class</a></li>
+        <li><a href="#classname-vs-classlist"><code>className</code> vs <code>classList</code></a></li>
+      </ul>
+    </li>
+    <li><a href="#dataset--data-attributes"><code>dataset</code> — Data Attributes</a>
+      <ul>
+        <li><a href="#mengakses-via-dataset">Mengakses via <code>dataset</code></a></li>
+        <li><a href="#mengubah-dataset">Mengubah <code>dataset</code></a></li>
+        <li><a href="#menghapus">Menghapus</a></li>
+        <li><a href="#kapan-menggunakan-dataset">Kapan Menggunakan <code>dataset</code>?</a></li>
+      </ul>
+    </li>
+    <li><a href="#membuat-elemen-baru">Membuat Elemen Baru</a>
+      <ul>
+        <li><a href="#createelement"><code>createElement()</code></a></li>
+        <li><a href="#createtextnode"><code>createTextNode()</code></a></li>
+        <li><a href="#clonenode"><code>cloneNode()</code></a></li>
+      </ul>
+    </li>
+    <li><a href="#menambahkan-elemen-ke-dom">Menambahkan Elemen ke DOM</a>
+      <ul>
+        <li><a href="#appendchild--tambah-sebagai-anak-terakhir"><code>appendChild()</code> — Tambah sebagai Anak Terakhir</a></li>
+        <li><a href="#append--tambah-beberapa-nodestring"><code>append()</code> — Tambah Beberapa Node/String</a></li>
+        <li><a href="#prepend--tambah-di-awal"><code>prepend()</code> — Tambah di Awal</a></li>
+        <li><a href="#insertbefore--sisipkan-sebelum-elemen-tertentu"><code>insertBefore()</code> — Sisipkan Sebelum Elemen Tertentu</a></li>
+        <li><a href="#insertadjacentelement--insertadjacenthtml"><code>insertAdjacentElement()</code> / <code>insertAdjacentHTML()</code></a></li>
+        <li><a href="#perbandingan-method-penambahan">Perbandingan Method Penambahan</a></li>
+      </ul>
+    </li>
+    <li><a href="#menghapus-dan-mengganti-elemen">Menghapus dan Mengganti Elemen</a>
+      <ul>
+        <li><a href="#remove--hapus-elemen"><code>remove()</code> — Hapus Elemen</a></li>
+        <li><a href="#removechild--hapus-anak-cara-lama"><code>removeChild()</code> — Hapus Anak (Cara Lama)</a></li>
+        <li><a href="#replacewith--ganti-elemen"><code>replaceWith()</code> — Ganti Elemen</a></li>
+        <li><a href="#replacechild--ganti-anak-cara-lama"><code>replaceChild()</code> — Ganti Anak (Cara Lama)</a></li>
+        <li><a href="#mengosongkan-elemen">Mengosongkan Elemen</a></li>
+      </ul>
+    </li>
+    <li><a href="#contoh-praktis">Contoh Praktis</a>
+      <ul>
+        <li><a href="#1-to-do-list-sederhana">1. To-Do List Sederhana</a></li>
+        <li><a href="#2-menampilkan-daftar-produk-dari-data">2. Menampilkan Daftar Produk dari Data</a></li>
+        <li><a href="#3-mengubah-tema-darklight-mode">3. Mengubah Tema (Dark/Light Mode)</a></li>
+        <li><a href="#4-tabel-dinamis-dari-array">4. Tabel Dinamis dari Array</a></li>
+        <li><a href="#5-filter-real-time">5. Filter Real-time</a></li>
+      </ul>
+    </li>
+    <li><a href="#tips--best-practice">Tips &amp; Best Practice</a></li>
+    <li><a href="#ringkasan">Ringkasan</a></li>
+  </ul>
+</nav>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="page-links d-none d-xl-block">
+  <h3>Daftar isi</h3>
+  <nav id="TableOfContents">
+  <ul>
+    <li><a href="#pendahuluan">Pendahuluan</a></li>
+    <li><a href="#memahami-dom">Memahami DOM</a></li>
+    <li><a href="#menyeleksi-elemen">Menyeleksi Elemen</a>
+      <ul>
+        <li><a href="#queryselector--satu-elemen-pertama-rekomendasikan"><code>querySelector()</code> — Satu Elemen Pertama (Rekomendasikan)</a></li>
+        <li><a href="#queryselectorall--semua-elemen"><code>querySelectorAll()</code> — Semua Elemen</a></li>
+        <li><a href="#getelementbyid--by-id-cepat"><code>getElementById()</code> — By ID (Cepat)</a></li>
+        <li><a href="#getelementsbyclassname--by-class-live-htmlcollection"><code>getElementsByClassName()</code> — By Class (Live HTMLCollection)</a></li>
+        <li><a href="#getelementsbytagname--by-tag-live-htmlcollection"><code>getElementsByTagName()</code> — By Tag (Live HTMLCollection)</a></li>
+        <li><a href="#perbandingan-method-seleksi">Perbandingan Method Seleksi</a></li>
+        <li><a href="#seleksi-relatif-navigasi-dom">Seleksi Relatif (Navigasi DOM)</a></li>
+      </ul>
+    </li>
+    <li><a href="#mengubah-konten">Mengubah Konten</a>
+      <ul>
+        <li><a href="#textcontent--teks-murni"><code>textContent</code> — Teks Murni</a></li>
+        <li><a href="#innerhtml--html-di-dalam-elemen"><code>innerHTML</code> — HTML di Dalam Elemen</a></li>
+        <li><a href="#innertext-vs-textcontent"><code>innerText</code> vs <code>textContent</code></a></li>
+        <li><a href="#outerhtml--html-elemen-itu-sendiri"><code>outerHTML</code> — HTML Elemen Itu Sendiri</a></li>
+      </ul>
+    </li>
+    <li><a href="#mengubah-atribut">Mengubah Atribut</a>
+      <ul>
+        <li><a href="#getattribute-dan-setattribute"><code>getAttribute()</code> dan <code>setAttribute()</code></a></li>
+        <li><a href="#removeattribute"><code>removeAttribute()</code></a></li>
+        <li><a href="#hasattribute"><code>hasAttribute()</code></a></li>
+        <li><a href="#properti-langsung">Properti Langsung</a></li>
+      </ul>
+    </li>
+    <li><a href="#mengubah-style">Mengubah Style</a>
+      <ul>
+        <li><a href="#style--inline-style"><code>style</code> — Inline Style</a></li>
+        <li><a href="#csstext--beberapa-style-sebagai-string"><code>cssText</code> — Beberapa Style sebagai String</a></li>
+      </ul>
+    </li>
+    <li><a href="#classlist--mengelola-class"><code>classList</code> — Mengelola Class</a>
+      <ul>
+        <li><a href="#method-classlist">Method <code>classList</code></a></li>
+        <li><a href="#iterasi-class">Iterasi Class</a></li>
+        <li><a href="#classname-vs-classlist"><code>className</code> vs <code>classList</code></a></li>
+      </ul>
+    </li>
+    <li><a href="#dataset--data-attributes"><code>dataset</code> — Data Attributes</a>
+      <ul>
+        <li><a href="#mengakses-via-dataset">Mengakses via <code>dataset</code></a></li>
+        <li><a href="#mengubah-dataset">Mengubah <code>dataset</code></a></li>
+        <li><a href="#menghapus">Menghapus</a></li>
+        <li><a href="#kapan-menggunakan-dataset">Kapan Menggunakan <code>dataset</code>?</a></li>
+      </ul>
+    </li>
+    <li><a href="#membuat-elemen-baru">Membuat Elemen Baru</a>
+      <ul>
+        <li><a href="#createelement"><code>createElement()</code></a></li>
+        <li><a href="#createtextnode"><code>createTextNode()</code></a></li>
+        <li><a href="#clonenode"><code>cloneNode()</code></a></li>
+      </ul>
+    </li>
+    <li><a href="#menambahkan-elemen-ke-dom">Menambahkan Elemen ke DOM</a>
+      <ul>
+        <li><a href="#appendchild--tambah-sebagai-anak-terakhir"><code>appendChild()</code> — Tambah sebagai Anak Terakhir</a></li>
+        <li><a href="#append--tambah-beberapa-nodestring"><code>append()</code> — Tambah Beberapa Node/String</a></li>
+        <li><a href="#prepend--tambah-di-awal"><code>prepend()</code> — Tambah di Awal</a></li>
+        <li><a href="#insertbefore--sisipkan-sebelum-elemen-tertentu"><code>insertBefore()</code> — Sisipkan Sebelum Elemen Tertentu</a></li>
+        <li><a href="#insertadjacentelement--insertadjacenthtml"><code>insertAdjacentElement()</code> / <code>insertAdjacentHTML()</code></a></li>
+        <li><a href="#perbandingan-method-penambahan">Perbandingan Method Penambahan</a></li>
+      </ul>
+    </li>
+    <li><a href="#menghapus-dan-mengganti-elemen">Menghapus dan Mengganti Elemen</a>
+      <ul>
+        <li><a href="#remove--hapus-elemen"><code>remove()</code> — Hapus Elemen</a></li>
+        <li><a href="#removechild--hapus-anak-cara-lama"><code>removeChild()</code> — Hapus Anak (Cara Lama)</a></li>
+        <li><a href="#replacewith--ganti-elemen"><code>replaceWith()</code> — Ganti Elemen</a></li>
+        <li><a href="#replacechild--ganti-anak-cara-lama"><code>replaceChild()</code> — Ganti Anak (Cara Lama)</a></li>
+        <li><a href="#mengosongkan-elemen">Mengosongkan Elemen</a></li>
+      </ul>
+    </li>
+    <li><a href="#contoh-praktis">Contoh Praktis</a>
+      <ul>
+        <li><a href="#1-to-do-list-sederhana">1. To-Do List Sederhana</a></li>
+        <li><a href="#2-menampilkan-daftar-produk-dari-data">2. Menampilkan Daftar Produk dari Data</a></li>
+        <li><a href="#3-mengubah-tema-darklight-mode">3. Mengubah Tema (Dark/Light Mode)</a></li>
+        <li><a href="#4-tabel-dinamis-dari-array">4. Tabel Dinamis dari Array</a></li>
+        <li><a href="#5-filter-real-time">5. Filter Real-time</a></li>
+      </ul>
+    </li>
+    <li><a href="#tips--best-practice">Tips &amp; Best Practice</a></li>
+    <li><a href="#ringkasan">Ringkasan</a></li>
+  </ul>
+</nav>
+  </div>
+
+		</nav>
+		<main class="docs-content col-lg-11 col-xl-9">
+		
+				<nav aria-label="breadcrumb">
+					<ol class="breadcrumb">
+						<li class="breadcrumb-item"><a href="/">Home</a></li>
+<li class="breadcrumb-item"><a href="/javascript/">Javascript</a></li>
+<li class="breadcrumb-item"><a href="/javascript/tutorial/">Tutorial Javascript</a></li>
+<li class="breadcrumb-item active" aria-current="page">DOM Manipulation</li>
+					</ol>
+				</nav>
+			
+			<h1>DOM Manipulation</h1>
+			<p class="lead">DOM adalah representasi halaman web yang bisa dimanipulasi JavaScript. Artikel ini membahas cara memilih elemen, mengubah konten, mengelola atribut dan style, serta membuat dan menghapus elemen secara dinamis.</p>
+			<nav class="d-xl-none" aria-label="Quaternary navigation">
+				<div class="d-xl-none">
+  <button class="btn btn-outline-primary btn-sm doks-toc-toggle collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#onThisPage" aria-controls="doks-docs-nav" aria-expanded="false" aria-label="Toggle On this page navigation">
+    <span>Daftar isi</span>
+    <span>
+      <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" class="doks doks-expand" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><title>Expand</title><polyline points="7 13 12 18 17 13"></polyline><polyline points="7 6 12 11 17 6"></polyline></svg>
+      <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" class="doks doks-collapse" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><title>Collapse</title><polyline points="17 11 12 6 7 11"></polyline><polyline points="17 18 12 13 7 18"></polyline></svg>
+    </span>
+  </button>
+  <div class="collapse" id="onThisPage">
+    <div class="card card-body mt-3 py-1">
+      <div class="page-links">
+        <nav id="TableOfContents">
+  <ul>
+    <li><a href="#pendahuluan">Pendahuluan</a></li>
+    <li><a href="#memahami-dom">Memahami DOM</a></li>
+    <li><a href="#menyeleksi-elemen">Menyeleksi Elemen</a>
+      <ul>
+        <li><a href="#queryselector--satu-elemen-pertama-rekomendasikan"><code>querySelector()</code> — Satu Elemen Pertama (Rekomendasikan)</a></li>
+        <li><a href="#queryselectorall--semua-elemen"><code>querySelectorAll()</code> — Semua Elemen</a></li>
+        <li><a href="#getelementbyid--by-id-cepat"><code>getElementById()</code> — By ID (Cepat)</a></li>
+        <li><a href="#getelementsbyclassname--by-class-live-htmlcollection"><code>getElementsByClassName()</code> — By Class (Live HTMLCollection)</a></li>
+        <li><a href="#getelementsbytagname--by-tag-live-htmlcollection"><code>getElementsByTagName()</code> — By Tag (Live HTMLCollection)</a></li>
+        <li><a href="#perbandingan-method-seleksi">Perbandingan Method Seleksi</a></li>
+        <li><a href="#seleksi-relatif-navigasi-dom">Seleksi Relatif (Navigasi DOM)</a></li>
+      </ul>
+    </li>
+    <li><a href="#mengubah-konten">Mengubah Konten</a>
+      <ul>
+        <li><a href="#textcontent--teks-murni"><code>textContent</code> — Teks Murni</a></li>
+        <li><a href="#innerhtml--html-di-dalam-elemen"><code>innerHTML</code> — HTML di Dalam Elemen</a></li>
+        <li><a href="#innertext-vs-textcontent"><code>innerText</code> vs <code>textContent</code></a></li>
+        <li><a href="#outerhtml--html-elemen-itu-sendiri"><code>outerHTML</code> — HTML Elemen Itu Sendiri</a></li>
+      </ul>
+    </li>
+    <li><a href="#mengubah-atribut">Mengubah Atribut</a>
+      <ul>
+        <li><a href="#getattribute-dan-setattribute"><code>getAttribute()</code> dan <code>setAttribute()</code></a></li>
+        <li><a href="#removeattribute"><code>removeAttribute()</code></a></li>
+        <li><a href="#hasattribute"><code>hasAttribute()</code></a></li>
+        <li><a href="#properti-langsung">Properti Langsung</a></li>
+      </ul>
+    </li>
+    <li><a href="#mengubah-style">Mengubah Style</a>
+      <ul>
+        <li><a href="#style--inline-style"><code>style</code> — Inline Style</a></li>
+        <li><a href="#csstext--beberapa-style-sebagai-string"><code>cssText</code> — Beberapa Style sebagai String</a></li>
+      </ul>
+    </li>
+    <li><a href="#classlist--mengelola-class"><code>classList</code> — Mengelola Class</a>
+      <ul>
+        <li><a href="#method-classlist">Method <code>classList</code></a></li>
+        <li><a href="#iterasi-class">Iterasi Class</a></li>
+        <li><a href="#classname-vs-classlist"><code>className</code> vs <code>classList</code></a></li>
+      </ul>
+    </li>
+    <li><a href="#dataset--data-attributes"><code>dataset</code> — Data Attributes</a>
+      <ul>
+        <li><a href="#mengakses-via-dataset">Mengakses via <code>dataset</code></a></li>
+        <li><a href="#mengubah-dataset">Mengubah <code>dataset</code></a></li>
+        <li><a href="#menghapus">Menghapus</a></li>
+        <li><a href="#kapan-menggunakan-dataset">Kapan Menggunakan <code>dataset</code>?</a></li>
+      </ul>
+    </li>
+    <li><a href="#membuat-elemen-baru">Membuat Elemen Baru</a>
+      <ul>
+        <li><a href="#createelement"><code>createElement()</code></a></li>
+        <li><a href="#createtextnode"><code>createTextNode()</code></a></li>
+        <li><a href="#clonenode"><code>cloneNode()</code></a></li>
+      </ul>
+    </li>
+    <li><a href="#menambahkan-elemen-ke-dom">Menambahkan Elemen ke DOM</a>
+      <ul>
+        <li><a href="#appendchild--tambah-sebagai-anak-terakhir"><code>appendChild()</code> — Tambah sebagai Anak Terakhir</a></li>
+        <li><a href="#append--tambah-beberapa-nodestring"><code>append()</code> — Tambah Beberapa Node/String</a></li>
+        <li><a href="#prepend--tambah-di-awal"><code>prepend()</code> — Tambah di Awal</a></li>
+        <li><a href="#insertbefore--sisipkan-sebelum-elemen-tertentu"><code>insertBefore()</code> — Sisipkan Sebelum Elemen Tertentu</a></li>
+        <li><a href="#insertadjacentelement--insertadjacenthtml"><code>insertAdjacentElement()</code> / <code>insertAdjacentHTML()</code></a></li>
+        <li><a href="#perbandingan-method-penambahan">Perbandingan Method Penambahan</a></li>
+      </ul>
+    </li>
+    <li><a href="#menghapus-dan-mengganti-elemen">Menghapus dan Mengganti Elemen</a>
+      <ul>
+        <li><a href="#remove--hapus-elemen"><code>remove()</code> — Hapus Elemen</a></li>
+        <li><a href="#removechild--hapus-anak-cara-lama"><code>removeChild()</code> — Hapus Anak (Cara Lama)</a></li>
+        <li><a href="#replacewith--ganti-elemen"><code>replaceWith()</code> — Ganti Elemen</a></li>
+        <li><a href="#replacechild--ganti-anak-cara-lama"><code>replaceChild()</code> — Ganti Anak (Cara Lama)</a></li>
+        <li><a href="#mengosongkan-elemen">Mengosongkan Elemen</a></li>
+      </ul>
+    </li>
+    <li><a href="#contoh-praktis">Contoh Praktis</a>
+      <ul>
+        <li><a href="#1-to-do-list-sederhana">1. To-Do List Sederhana</a></li>
+        <li><a href="#2-menampilkan-daftar-produk-dari-data">2. Menampilkan Daftar Produk dari Data</a></li>
+        <li><a href="#3-mengubah-tema-darklight-mode">3. Mengubah Tema (Dark/Light Mode)</a></li>
+        <li><a href="#4-tabel-dinamis-dari-array">4. Tabel Dinamis dari Array</a></li>
+        <li><a href="#5-filter-real-time">5. Filter Real-time</a></li>
+      </ul>
+    </li>
+    <li><a href="#tips--best-practice">Tips &amp; Best Practice</a></li>
+    <li><a href="#ringkasan">Ringkasan</a></li>
+  </ul>
+</nav>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="page-links d-none d-xl-block">
+  <h3>Daftar isi</h3>
+  <nav id="TableOfContents">
+  <ul>
+    <li><a href="#pendahuluan">Pendahuluan</a></li>
+    <li><a href="#memahami-dom">Memahami DOM</a></li>
+    <li><a href="#menyeleksi-elemen">Menyeleksi Elemen</a>
+      <ul>
+        <li><a href="#queryselector--satu-elemen-pertama-rekomendasikan"><code>querySelector()</code> — Satu Elemen Pertama (Rekomendasikan)</a></li>
+        <li><a href="#queryselectorall--semua-elemen"><code>querySelectorAll()</code> — Semua Elemen</a></li>
+        <li><a href="#getelementbyid--by-id-cepat"><code>getElementById()</code> — By ID (Cepat)</a></li>
+        <li><a href="#getelementsbyclassname--by-class-live-htmlcollection"><code>getElementsByClassName()</code> — By Class (Live HTMLCollection)</a></li>
+        <li><a href="#getelementsbytagname--by-tag-live-htmlcollection"><code>getElementsByTagName()</code> — By Tag (Live HTMLCollection)</a></li>
+        <li><a href="#perbandingan-method-seleksi">Perbandingan Method Seleksi</a></li>
+        <li><a href="#seleksi-relatif-navigasi-dom">Seleksi Relatif (Navigasi DOM)</a></li>
+      </ul>
+    </li>
+    <li><a href="#mengubah-konten">Mengubah Konten</a>
+      <ul>
+        <li><a href="#textcontent--teks-murni"><code>textContent</code> — Teks Murni</a></li>
+        <li><a href="#innerhtml--html-di-dalam-elemen"><code>innerHTML</code> — HTML di Dalam Elemen</a></li>
+        <li><a href="#innertext-vs-textcontent"><code>innerText</code> vs <code>textContent</code></a></li>
+        <li><a href="#outerhtml--html-elemen-itu-sendiri"><code>outerHTML</code> — HTML Elemen Itu Sendiri</a></li>
+      </ul>
+    </li>
+    <li><a href="#mengubah-atribut">Mengubah Atribut</a>
+      <ul>
+        <li><a href="#getattribute-dan-setattribute"><code>getAttribute()</code> dan <code>setAttribute()</code></a></li>
+        <li><a href="#removeattribute"><code>removeAttribute()</code></a></li>
+        <li><a href="#hasattribute"><code>hasAttribute()</code></a></li>
+        <li><a href="#properti-langsung">Properti Langsung</a></li>
+      </ul>
+    </li>
+    <li><a href="#mengubah-style">Mengubah Style</a>
+      <ul>
+        <li><a href="#style--inline-style"><code>style</code> — Inline Style</a></li>
+        <li><a href="#csstext--beberapa-style-sebagai-string"><code>cssText</code> — Beberapa Style sebagai String</a></li>
+      </ul>
+    </li>
+    <li><a href="#classlist--mengelola-class"><code>classList</code> — Mengelola Class</a>
+      <ul>
+        <li><a href="#method-classlist">Method <code>classList</code></a></li>
+        <li><a href="#iterasi-class">Iterasi Class</a></li>
+        <li><a href="#classname-vs-classlist"><code>className</code> vs <code>classList</code></a></li>
+      </ul>
+    </li>
+    <li><a href="#dataset--data-attributes"><code>dataset</code> — Data Attributes</a>
+      <ul>
+        <li><a href="#mengakses-via-dataset">Mengakses via <code>dataset</code></a></li>
+        <li><a href="#mengubah-dataset">Mengubah <code>dataset</code></a></li>
+        <li><a href="#menghapus">Menghapus</a></li>
+        <li><a href="#kapan-menggunakan-dataset">Kapan Menggunakan <code>dataset</code>?</a></li>
+      </ul>
+    </li>
+    <li><a href="#membuat-elemen-baru">Membuat Elemen Baru</a>
+      <ul>
+        <li><a href="#createelement"><code>createElement()</code></a></li>
+        <li><a href="#createtextnode"><code>createTextNode()</code></a></li>
+        <li><a href="#clonenode"><code>cloneNode()</code></a></li>
+      </ul>
+    </li>
+    <li><a href="#menambahkan-elemen-ke-dom">Menambahkan Elemen ke DOM</a>
+      <ul>
+        <li><a href="#appendchild--tambah-sebagai-anak-terakhir"><code>appendChild()</code> — Tambah sebagai Anak Terakhir</a></li>
+        <li><a href="#append--tambah-beberapa-nodestring"><code>append()</code> — Tambah Beberapa Node/String</a></li>
+        <li><a href="#prepend--tambah-di-awal"><code>prepend()</code> — Tambah di Awal</a></li>
+        <li><a href="#insertbefore--sisipkan-sebelum-elemen-tertentu"><code>insertBefore()</code> — Sisipkan Sebelum Elemen Tertentu</a></li>
+        <li><a href="#insertadjacentelement--insertadjacenthtml"><code>insertAdjacentElement()</code> / <code>insertAdjacentHTML()</code></a></li>
+        <li><a href="#perbandingan-method-penambahan">Perbandingan Method Penambahan</a></li>
+      </ul>
+    </li>
+    <li><a href="#menghapus-dan-mengganti-elemen">Menghapus dan Mengganti Elemen</a>
+      <ul>
+        <li><a href="#remove--hapus-elemen"><code>remove()</code> — Hapus Elemen</a></li>
+        <li><a href="#removechild--hapus-anak-cara-lama"><code>removeChild()</code> — Hapus Anak (Cara Lama)</a></li>
+        <li><a href="#replacewith--ganti-elemen"><code>replaceWith()</code> — Ganti Elemen</a></li>
+        <li><a href="#replacechild--ganti-anak-cara-lama"><code>replaceChild()</code> — Ganti Anak (Cara Lama)</a></li>
+        <li><a href="#mengosongkan-elemen">Mengosongkan Elemen</a></li>
+      </ul>
+    </li>
+    <li><a href="#contoh-praktis">Contoh Praktis</a>
+      <ul>
+        <li><a href="#1-to-do-list-sederhana">1. To-Do List Sederhana</a></li>
+        <li><a href="#2-menampilkan-daftar-produk-dari-data">2. Menampilkan Daftar Produk dari Data</a></li>
+        <li><a href="#3-mengubah-tema-darklight-mode">3. Mengubah Tema (Dark/Light Mode)</a></li>
+        <li><a href="#4-tabel-dinamis-dari-array">4. Tabel Dinamis dari Array</a></li>
+        <li><a href="#5-filter-real-time">5. Filter Real-time</a></li>
+      </ul>
+    </li>
+    <li><a href="#tips--best-practice">Tips &amp; Best Practice</a></li>
+    <li><a href="#ringkasan">Ringkasan</a></li>
+  </ul>
+</nav>
+  </div>
+
+			</nav>
+			<h2 id="pendahuluan">Pendahuluan <a href="#pendahuluan" class="anchor" aria-hidden="true">#</a></h2>
+<p><strong>DOM</strong> (Document Object Model) adalah representasi struktur halaman HTML sebagai <strong>pohon object</strong> yang bisa dimanipulasi JavaScript. Setiap elemen HTML — <code>&lt;div&gt;</code>, <code>&lt;p&gt;</code>, <code>&lt;button&gt;</code> — menjadi object yang bisa diubah: teksnya, warnanya, atributnya, bahkan posisinya di halaman.</p>
+<p>DOM manipulation adalah inti dari JavaScript di browser. Dengan DOM, kita bisa:</p>
+<ul>
+<li>Mengubah teks dan HTML secara dinamis.</li>
+<li>Menambah, menghapus, dan memindahkan elemen.</li>
+<li>Mengubah style dan class.</li>
+<li>Membuat aplikasi web interaktif (to-do list, form validation, modal, dll.).</li>
+</ul>
+<p>Artikel ini membahas semua aspek DOM manipulation dengan contoh praktis.</p>
+<blockquote>
+<p><strong>Asumsi:</strong> Anda sudah memahami variabel, fungsi, array, dan object dari artikel sebelumnya. Gunakan browser dengan DevTools untuk mencoba contoh.</p>
+</blockquote>
+<hr>
+<h2 id="memahami-dom">Memahami DOM <a href="#memahami-dom" class="anchor" aria-hidden="true">#</a></h2>
+<p>Saat browser memuat HTML, ia membangun <strong>DOM tree</strong> — struktur pohon yang merepresentasikan halaman.</p>
+<pre><code class="language-html">&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+&lt;head&gt;
+  &lt;title&gt;Latihan DOM&lt;/title&gt;
+&lt;/head&gt;
+&lt;body&gt;
+  &lt;h1 id=&quot;judul&quot;&gt;Halo!&lt;/h1&gt;
+  &lt;ul class=&quot;daftar&quot;&gt;
+    &lt;li&gt;Item 1&lt;/li&gt;
+    &lt;li&gt;Item 2&lt;/li&gt;
+  &lt;/ul&gt;
+  &lt;button class=&quot;tombol&quot;&gt;Klik&lt;/button&gt;
+&lt;/body&gt;
+&lt;/html&gt;
+</code></pre>
+<p>DOM tree-nya:</p>
+<pre><code>document
+└── html
+    ├── head
+    │   └── title
+    │       └── &quot;Latihan DOM&quot;
+    └── body
+        ├── h1#judul
+        │   └── &quot;Halo!&quot;
+        ├── ul.daftar
+        │   ├── li
+        │   │   └── &quot;Item 1&quot;
+        │   └── li
+        │       └── &quot;Item 2&quot;
+        └── button.tombol
+            └── &quot;Klik&quot;
+</code></pre>
+<p>Semua manipulasi DOM dimulai dari object global <strong><code>document</code></strong>.</p>
+<hr>
+<h2 id="menyeleksi-elemen">Menyeleksi Elemen <a href="#menyeleksi-elemen" class="anchor" aria-hidden="true">#</a></h2>
+<p>Untuk memanipulasi elemen, kita harus <strong>memilih</strong>-nya terlebih dahulu. JavaScript menyediakan beberapa cara.</p>
+<h3 id="queryselector--satu-elemen-pertama-rekomendasikan"><code>querySelector()</code> — Satu Elemen Pertama (Rekomendasikan) <a href="#queryselector--satu-elemen-pertama-rekomendasikan" class="anchor" aria-hidden="true">#</a></h3>
+<p>Menerima <strong>selector CSS</strong> dan mengembalikan elemen <strong>pertama</strong> yang cocok.</p>
+<pre><code class="language-javascript">// By ID
+const judul = document.querySelector(&quot;#judul&quot;);
+
+// By class
+const tombol = document.querySelector(&quot;.tombol&quot;);
+
+// By tag
+const h1 = document.querySelector(&quot;h1&quot;);
+
+// Selector kompleks
+const itemPertama = document.querySelector(&quot;ul.daftar &gt; li:first-child&quot;);
+const inputEmail = document.querySelector('input[type=&quot;email&quot;]');
+</code></pre>
+<h3 id="queryselectorall--semua-elemen"><code>querySelectorAll()</code> — Semua Elemen <a href="#queryselectorall--semua-elemen" class="anchor" aria-hidden="true">#</a></h3>
+<p>Mengembalikan <strong>NodeList</strong> (array-like) berisi semua elemen yang cocok.</p>
+<pre><code class="language-javascript">const semuaLi = document.querySelectorAll(&quot;li&quot;);
+console.log(semuaLi.length); // 2
+
+// Iterasi dengan forEach
+semuaLi.forEach(li =&gt; console.log(li.textContent));
+
+// Atau dengan for...of
+for (const li of semuaLi) {
+  console.log(li.textContent);
+}
+</code></pre>
+<blockquote>
+<p><strong>Catatan:</strong> <code>querySelectorAll()</code> mengembalikan <strong>NodeList statis</strong> — tidak berubah jika DOM berubah setelah seleksi.</p>
+</blockquote>
+<h3 id="getelementbyid--by-id-cepat"><code>getElementById()</code> — By ID (Cepat) <a href="#getelementbyid--by-id-cepat" class="anchor" aria-hidden="true">#</a></h3>
+<pre><code class="language-javascript">const judul = document.getElementById(&quot;judul&quot;);
+</code></pre>
+<p>Lebih cepat dari <code>querySelector(&quot;#judul&quot;)</code> untuk ID, tetapi kurang fleksibel.</p>
+<h3 id="getelementsbyclassname--by-class-live-htmlcollection"><code>getElementsByClassName()</code> — By Class (Live HTMLCollection) <a href="#getelementsbyclassname--by-class-live-htmlcollection" class="anchor" aria-hidden="true">#</a></h3>
+<pre><code class="language-javascript">const tombol = document.getElementsByClassName(&quot;tombol&quot;);
+console.log(tombol.length); // 1
+</code></pre>
+<blockquote>
+<p>⚠️ <strong>Peringatan:</strong> <code>getElementsByClassName()</code> mengembalikan <strong>HTMLCollection live</strong> — otomatis diperbarui jika DOM berubah. Ini bisa membingungkan dalam loop.</p>
+</blockquote>
+<h3 id="getelementsbytagname--by-tag-live-htmlcollection"><code>getElementsByTagName()</code> — By Tag (Live HTMLCollection) <a href="#getelementsbytagname--by-tag-live-htmlcollection" class="anchor" aria-hidden="true">#</a></h3>
+<pre><code class="language-javascript">const semuaLi = document.getElementsByTagName(&quot;li&quot;);
+</code></pre>
+<h3 id="perbandingan-method-seleksi">Perbandingan Method Seleksi <a href="#perbandingan-method-seleksi" class="anchor" aria-hidden="true">#</a></h3>
+<table>
+<thead>
+<tr>
+<th>Method</th>
+<th>Mengembalikan</th>
+<th>Selector CSS</th>
+<th>Live?</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>querySelector()</code></td>
+<td>Element</td>
+<td>✅</td>
+<td>❌</td>
+</tr>
+<tr>
+<td><code>querySelectorAll()</code></td>
+<td>NodeList</td>
+<td>✅</td>
+<td>❌ (statis)</td>
+</tr>
+<tr>
+<td><code>getElementById()</code></td>
+<td>Element</td>
+<td>❌ (ID saja)</td>
+<td>❌</td>
+</tr>
+<tr>
+<td><code>getElementsByClassName()</code></td>
+<td>HTMLCollection</td>
+<td>❌</td>
+<td>✅</td>
+</tr>
+<tr>
+<td><code>getElementsByTagName()</code></td>
+<td>HTMLCollection</td>
+<td>❌</td>
+<td>✅</td>
+</tr>
+</tbody>
+</table>
+<blockquote>
+<p><strong>Rekomendasi:</strong> Gunakan <code>querySelector()</code> / <code>querySelectorAll()</code> sebagai default — selector CSS lebih fleksibel dan konsisten.</p>
+</blockquote>
+<h3 id="seleksi-relatif-navigasi-dom">Seleksi Relatif (Navigasi DOM) <a href="#seleksi-relatif-navigasi-dom" class="anchor" aria-hidden="true">#</a></h3>
+<p>Dari elemen yang sudah dipilih, kita bisa menavigasi ke elemen lain.</p>
+<pre><code class="language-javascript">const ul = document.querySelector(&quot;.daftar&quot;);
+
+// Anak
+console.log(ul.children);          // HTMLCollection anak langsung
+console.log(ul.firstElementChild); // li pertama
+console.log(ul.lastElementChild);  // li terakhir
+console.log(ul.children[1]);       // li kedua
+
+// Induk
+const li = ul.firstElementChild;
+console.log(li.parentElement);     // ul
+
+// Saudara
+console.log(li.nextElementSibling);     // li kedua
+console.log(li.previousElementSibling); // null (tidak ada)
+</code></pre>
+<blockquote>
+<p><strong>Catatan:</strong> <code>children</code>, <code>firstElementChild</code>, dll. hanya mengembalikan <strong>element</strong> (bukan text node). Sebaliknya, <code>childNodes</code>, <code>firstChild</code> mengembalikan semua node termasuk text/comment.</p>
+</blockquote>
+<hr>
+<h2 id="mengubah-konten">Mengubah Konten <a href="#mengubah-konten" class="anchor" aria-hidden="true">#</a></h2>
+<h3 id="textcontent--teks-murni"><code>textContent</code> — Teks Murni <a href="#textcontent--teks-murni" class="anchor" aria-hidden="true">#</a></h3>
+<p>Mengambil atau mengubah teks <strong>tanpa</strong> memproses HTML.</p>
+<pre><code class="language-javascript">const judul = document.querySelector(&quot;#judul&quot;);
+
+// Baca
+console.log(judul.textContent); // &quot;Halo!&quot;
+
+// Ubah
+judul.textContent = &quot;Halo, DOM!&quot;;
+</code></pre>
+<p><strong>Aman dari XSS</strong> karena HTML tidak diproses.</p>
+<h3 id="innerhtml--html-di-dalam-elemen"><code>innerHTML</code> — HTML di Dalam Elemen <a href="#innerhtml--html-di-dalam-elemen" class="anchor" aria-hidden="true">#</a></h3>
+<p>Mengambil atau mengubah <strong>HTML</strong> di dalam elemen.</p>
+<pre><code class="language-javascript">const container = document.querySelector(&quot;#container&quot;);
+
+// Baca
+console.log(container.innerHTML);
+
+// Ubah — HTML diproses
+container.innerHTML = &quot;&lt;p&gt;Paragraf &lt;strong&gt;baru&lt;/strong&gt;&lt;/p&gt;&quot;;
+</code></pre>
+<blockquote>
+<p>⚠️ <strong>Peringatan XSS:</strong> Jangan pernah memasukkan input user langsung ke <code>innerHTML</code> — bisa menyebabkan <strong>Cross-Site Scripting</strong> (XSS). Gunakan <code>textContent</code> untuk teks dari user.</p>
+</blockquote>
+<pre><code class="language-javascript">// ❌ BAHAYA — XSS
+container.innerHTML = `&lt;p&gt;${userInput}&lt;/p&gt;`;
+
+// ✅ AMAN
+container.textContent = userInput;
+
+// ✅ AMAN jika perlu HTML — gunakan DOM API
+const p = document.createElement(&quot;p&quot;);
+p.textContent = userInput;
+container.appendChild(p);
+</code></pre>
+<h3 id="innertext-vs-textcontent"><code>innerText</code> vs <code>textContent</code> <a href="#innertext-vs-textcontent" class="anchor" aria-hidden="true">#</a></h3>
+<table>
+<thead>
+<tr>
+<th>Aspek</th>
+<th><code>textContent</code></th>
+<th><code>innerText</code></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Memproses CSS</td>
+<td>❌</td>
+<td>✅ (menghormati <code>display: none</code>)</td>
+</tr>
+<tr>
+<td>Performa</td>
+<td>Lebih cepat</td>
+<td>Lebih lambat (reflow)</td>
+</tr>
+<tr>
+<td>Mengembalikan</td>
+<td>Semua teks (termasuk tersembunyi)</td>
+<td>Teks yang terlihat</td>
+</tr>
+<tr>
+<td>Rekomendasi</td>
+<td><strong>Default pilihan</strong></td>
+<td>Hanya jika butuh teks terlihat</td>
+</tr>
+</tbody>
+</table>
+<pre><code class="language-javascript">// &lt;div id=&quot;x&quot;&gt;Hello &lt;span style=&quot;display:none&quot;&gt;Hidden&lt;/span&gt; World&lt;/div&gt;
+
+console.log(x.textContent); // &quot;Hello Hidden World&quot;
+console.log(x.innerText);   // &quot;Hello World&quot; (span tersembunyi dilewati)
+</code></pre>
+<h3 id="outerhtml--html-elemen-itu-sendiri"><code>outerHTML</code> — HTML Elemen Itu Sendiri <a href="#outerhtml--html-elemen-itu-sendiri" class="anchor" aria-hidden="true">#</a></h3>
+<pre><code class="language-javascript">const judul = document.querySelector(&quot;#judul&quot;);
+console.log(judul.outerHTML); // '&lt;h1 id=&quot;judul&quot;&gt;Halo!&lt;/h1&gt;'
+
+// Mengganti elemen sepenuhnya
+judul.outerHTML = '&lt;h2 id=&quot;judul&quot;&gt;Halo Baru!&lt;/h2&gt;';
+</code></pre>
+<blockquote>
+<p><strong>Catatan:</strong> Setelah <code>outerHTML</code> diubah, referensi ke elemen lama menjadi <strong>stale</strong> (tidak terhubung ke DOM).</p>
+</blockquote>
+<hr>
+<h2 id="mengubah-atribut">Mengubah Atribut <a href="#mengubah-atribut" class="anchor" aria-hidden="true">#</a></h2>
+<h3 id="getattribute-dan-setattribute"><code>getAttribute()</code> dan <code>setAttribute()</code> <a href="#getattribute-dan-setattribute" class="anchor" aria-hidden="true">#</a></h3>
+<pre><code class="language-javascript">const link = document.querySelector(&quot;a&quot;);
+
+console.log(link.getAttribute(&quot;href&quot;)); // &quot;https://example.com&quot;
+link.setAttribute(&quot;href&quot;, &quot;https://example.org&quot;);
+link.setAttribute(&quot;target&quot;, &quot;_blank&quot;);
+</code></pre>
+<h3 id="removeattribute"><code>removeAttribute()</code> <a href="#removeattribute" class="anchor" aria-hidden="true">#</a></h3>
+<pre><code class="language-javascript">link.removeAttribute(&quot;target&quot;);
+</code></pre>
+<h3 id="hasattribute"><code>hasAttribute()</code> <a href="#hasattribute" class="anchor" aria-hidden="true">#</a></h3>
+<pre><code class="language-javascript">console.log(link.hasAttribute(&quot;href&quot;)); // true
+console.log(link.hasAttribute(&quot;target&quot;)); // false
+</code></pre>
+<h3 id="properti-langsung">Properti Langsung <a href="#properti-langsung" class="anchor" aria-hidden="true">#</a></h3>
+<p>Banyak atribut HTML punya properti JavaScript yang setara:</p>
+<pre><code class="language-javascript">const input = document.querySelector(&quot;input&quot;);
+
+input.value = &quot;Hello&quot;;          // atribut value
+input.disabled = true;          // atribut disabled
+input.placeholder = &quot;Ketik...&quot;; // atribut placeholder
+
+const img = document.querySelector(&quot;img&quot;);
+img.src = &quot;gambar.jpg&quot;;
+img.alt = &quot;Deskripsi gambar&quot;;
+
+const checkbox = document.querySelector('input[type=&quot;checkbox&quot;]');
+checkbox.checked = true;
+</code></pre>
+<p><strong>Perbedaan atribut vs properti:</strong></p>
+<pre><code class="language-html">&lt;input type=&quot;text&quot; value=&quot;awal&quot;&gt;
+</code></pre>
+<pre><code class="language-javascript">const input = document.querySelector(&quot;input&quot;);
+
+console.log(input.getAttribute(&quot;value&quot;)); // &quot;awal&quot; (nilai awal di HTML)
+input.value = &quot;baru&quot;;
+console.log(input.value);                  // &quot;baru&quot; (nilai saat ini)
+console.log(input.getAttribute(&quot;value&quot;)); // &quot;awal&quot; (atribut tidak berubah)
+</code></pre>
+<blockquote>
+<p><strong>Tips:</strong> Untuk form, gunakan <strong>properti</strong> (<code>input.value</code>) karena mencerminkan state saat ini. Gunakan <code>getAttribute()</code> untuk nilai awal di HTML.</p>
+</blockquote>
+<hr>
+<h2 id="mengubah-style">Mengubah Style <a href="#mengubah-style" class="anchor" aria-hidden="true">#</a></h2>
+<h3 id="style--inline-style"><code>style</code> — Inline Style <a href="#style--inline-style" class="anchor" aria-hidden="true">#</a></h3>
+<pre><code class="language-javascript">const kotak = document.querySelector(&quot;.kotak&quot;);
+
+kotak.style.backgroundColor = &quot;blue&quot;;
+kotak.style.color = &quot;white&quot;;
+kotak.style.padding = &quot;20px&quot;;
+kotak.style.borderRadius = &quot;8px&quot;;
+
+// CSS property dengan tanda hubung → camelCase
+kotak.style.fontSize = &quot;18px&quot;;      // font-size
+kotak.style.marginTop = &quot;10px&quot;;     // margin-top
+</code></pre>
+<p><strong>Menghapus style:</strong></p>
+<pre><code class="language-javascript">kotak.style.backgroundColor = &quot;&quot;; // reset ke default
+</code></pre>
+<p><strong>Mengatur beberapa style sekaligus:</strong></p>
+<pre><code class="language-javascript">Object.assign(kotak.style, {
+  backgroundColor: &quot;blue&quot;,
+  color: &quot;white&quot;,
+  padding: &quot;20px&quot;
+});
+</code></pre>
+<p><strong>Membaca computed style (style aktual setelah CSS diterapkan):</strong></p>
+<pre><code class="language-javascript">const style = getComputedStyle(kotak);
+console.log(style.backgroundColor); // &quot;rgb(0, 0, 255)&quot;
+console.log(style.fontSize);        // &quot;18px&quot;
+</code></pre>
+<h3 id="csstext--beberapa-style-sebagai-string"><code>cssText</code> — Beberapa Style sebagai String <a href="#csstext--beberapa-style-sebagai-string" class="anchor" aria-hidden="true">#</a></h3>
+<pre><code class="language-javascript">kotak.style.cssText = &quot;background: blue; color: white; padding: 20px;&quot;;
+</code></pre>
+<blockquote>
+<p><strong>Catatan:</strong> <code>cssText</code> menimpa <strong>semua</strong> inline style yang ada.</p>
+</blockquote>
+<blockquote>
+<p><strong>Best practice:</strong> Untuk style yang kompleks, gunakan <strong>class</strong> (via <code>classList</code>) daripada inline style. Inline style sulit dipelihara dan tidak bisa di-cache browser.</p>
+</blockquote>
+<hr>
+<h2 id="classlist--mengelola-class"><code>classList</code> — Mengelola Class <a href="#classlist--mengelola-class" class="anchor" aria-hidden="true">#</a></h2>
+<p><code>classList</code> adalah interface modern untuk mengelola class CSS pada elemen.</p>
+<h3 id="method-classlist">Method <code>classList</code> <a href="#method-classlist" class="anchor" aria-hidden="true">#</a></h3>
+<pre><code class="language-javascript">const el = document.querySelector(&quot;.kotak&quot;);
+
+// Tambah class
+el.classList.add(&quot;aktif&quot;);
+el.classList.add(&quot;besar&quot;, &quot;merah&quot;); // beberapa sekaligus
+
+// Hapus class
+el.classList.remove(&quot;aktif&quot;);
+
+// Toggle — tambah jika belum ada, hapus jika sudah ada
+el.classList.toggle(&quot;aktif&quot;);
+
+// Cek apakah punya class
+console.log(el.classList.contains(&quot;aktif&quot;)); // true/false
+
+// Ganti class
+el.classList.replace(&quot;lama&quot;, &quot;baru&quot;);
+
+// Jumlah class
+console.log(el.classList.length);
+</code></pre>
+<h3 id="iterasi-class">Iterasi Class <a href="#iterasi-class" class="anchor" aria-hidden="true">#</a></h3>
+<pre><code class="language-javascript">el.classList.forEach(cls =&gt; console.log(cls));
+</code></pre>
+<h3 id="classname-vs-classlist"><code>className</code> vs <code>classList</code> <a href="#classname-vs-classlist" class="anchor" aria-hidden="true">#</a></h3>
+<pre><code class="language-javascript">// className — string, menimpa semua class
+el.className = &quot;kotak besar merah&quot;;
+
+// classList — lebih aman, method untuk add/remove/toggle
+el.classList.add(&quot;baru&quot;);
+</code></pre>
+<blockquote>
+<p><strong>Rekomendasi:</strong> Gunakan <code>classList</code> — lebih aman dan ekspresif daripada memanipulasi string <code>className</code>.</p>
+</blockquote>
+<hr>
+<h2 id="dataset--data-attributes"><code>dataset</code> — Data Attributes <a href="#dataset--data-attributes" class="anchor" aria-hidden="true">#</a></h2>
+<p><strong>Data attributes</strong> (<code>data-*</code>) memungkinkan menyimpan data kustom pada elemen HTML.</p>
+<pre><code class="language-html">&lt;div id=&quot;user&quot; data-id=&quot;123&quot; data-role=&quot;admin&quot; data-nama-lengkap=&quot;Budi Santoso&quot;&gt;
+  Budi
+&lt;/div&gt;
+</code></pre>
+<h3 id="mengakses-via-dataset">Mengakses via <code>dataset</code> <a href="#mengakses-via-dataset" class="anchor" aria-hidden="true">#</a></h3>
+<pre><code class="language-javascript">const user = document.querySelector(&quot;#user&quot;);
+
+console.log(user.dataset.id);          // &quot;123&quot;
+console.log(user.dataset.role);        // &quot;admin&quot;
+console.log(user.dataset.namaLengkap); // &quot;Budi Santoso&quot; (camelCase!)
+</code></pre>
+<blockquote>
+<p><strong>Catatan:</strong> <code>data-nama-lengkap</code> (kebab-case di HTML) menjadi <code>dataset.namaLengkap</code> (camelCase di JavaScript).</p>
+</blockquote>
+<h3 id="mengubah-dataset">Mengubah <code>dataset</code> <a href="#mengubah-dataset" class="anchor" aria-hidden="true">#</a></h3>
+<pre><code class="language-javascript">user.dataset.role = &quot;user&quot;;
+user.dataset.status = &quot;aktif&quot;; // menambah data-status=&quot;aktif&quot;
+</code></pre>
+<h3 id="menghapus">Menghapus <a href="#menghapus" class="anchor" aria-hidden="true">#</a></h3>
+<pre><code class="language-javascript">delete user.dataset.role;
+</code></pre>
+<h3 id="kapan-menggunakan-dataset">Kapan Menggunakan <code>dataset</code>? <a href="#kapan-menggunakan-dataset" class="anchor" aria-hidden="true">#</a></h3>
+<ul>
+<li>Menyimpan metadata pada elemen (ID, state, konfigurasi).</li>
+<li>Menghubungkan elemen dengan data di JavaScript.</li>
+<li><strong>Bukan</strong> untuk data sensitif — semua <code>data-*</code> terlihat di HTML.</li>
+</ul>
+<pre><code class="language-html">&lt;button class=&quot;beli&quot; data-produk-id=&quot;42&quot; data-harga=&quot;150000&quot;&gt;Beli&lt;/button&gt;
+</code></pre>
+<pre><code class="language-javascript">document.querySelectorAll(&quot;.beli&quot;).forEach(btn =&gt; {
+  btn.addEventListener(&quot;click&quot;, () =&gt; {
+    const produkId = btn.dataset.produkId;
+    const harga = Number(btn.dataset.harga);
+    console.log(`Beli produk ${produkId} seharga Rp${harga}`);
+  });
+});
+</code></pre>
+<hr>
+<h2 id="membuat-elemen-baru">Membuat Elemen Baru <a href="#membuat-elemen-baru" class="anchor" aria-hidden="true">#</a></h2>
+<h3 id="createelement"><code>createElement()</code> <a href="#createelement" class="anchor" aria-hidden="true">#</a></h3>
+<pre><code class="language-javascript">const p = document.createElement(&quot;p&quot;);
+p.textContent = &quot;Paragraf baru&quot;;
+p.className = &quot;teks&quot;;
+</code></pre>
+<p>Elemen yang dibuat <strong>belum</strong> muncul di halaman — harus ditambahkan ke DOM.</p>
+<h3 id="createtextnode"><code>createTextNode()</code> <a href="#createtextnode" class="anchor" aria-hidden="true">#</a></h3>
+<pre><code class="language-javascript">const teks = document.createTextNode(&quot;Hello&quot;);
+p.appendChild(teks);
+</code></pre>
+<p>Biasanya lebih mudah menggunakan <code>textContent</code>.</p>
+<h3 id="clonenode"><code>cloneNode()</code> <a href="#clonenode" class="anchor" aria-hidden="true">#</a></h3>
+<pre><code class="language-javascript">const asli = document.querySelector(&quot;.kotak&quot;);
+const salinan = asli.cloneNode(true); // true = deep clone (termasuk anak)
+const salinanDangkal = asli.cloneNode(false); // shallow
+</code></pre>
+<hr>
+<h2 id="menambahkan-elemen-ke-dom">Menambahkan Elemen ke DOM <a href="#menambahkan-elemen-ke-dom" class="anchor" aria-hidden="true">#</a></h2>
+<h3 id="appendchild--tambah-sebagai-anak-terakhir"><code>appendChild()</code> — Tambah sebagai Anak Terakhir <a href="#appendchild--tambah-sebagai-anak-terakhir" class="anchor" aria-hidden="true">#</a></h3>
+<pre><code class="language-javascript">const ul = document.querySelector(&quot;.daftar&quot;);
+const li = document.createElement(&quot;li&quot;);
+li.textContent = &quot;Item baru&quot;;
+
+ul.appendChild(li);
+</code></pre>
+<h3 id="append--tambah-beberapa-nodestring"><code>append()</code> — Tambah Beberapa Node/String <a href="#append--tambah-beberapa-nodestring" class="anchor" aria-hidden="true">#</a></h3>
+<pre><code class="language-javascript">ul.append(li, &quot;Teks biasa&quot;, document.createElement(&quot;hr&quot;));
+</code></pre>
+<p><code>append()</code> menerima node <strong>dan</strong> string (string otomatis jadi text node).</p>
+<h3 id="prepend--tambah-di-awal"><code>prepend()</code> — Tambah di Awal <a href="#prepend--tambah-di-awal" class="anchor" aria-hidden="true">#</a></h3>
+<pre><code class="language-javascript">ul.prepend(li); // li menjadi anak pertama
+</code></pre>
+<h3 id="insertbefore--sisipkan-sebelum-elemen-tertentu"><code>insertBefore()</code> — Sisipkan Sebelum Elemen Tertentu <a href="#insertbefore--sisipkan-sebelum-elemen-tertentu" class="anchor" aria-hidden="true">#</a></h3>
+<pre><code class="language-javascript">const referensi = ul.children[1];
+ul.insertBefore(li, referensi); // sisipkan li sebelum referensi
+</code></pre>
+<h3 id="insertadjacentelement--insertadjacenthtml"><code>insertAdjacentElement()</code> / <code>insertAdjacentHTML()</code> <a href="#insertadjacentelement--insertadjacenthtml" class="anchor" aria-hidden="true">#</a></h3>
+<p>Menyisipkan relatif terhadap elemen:</p>
+<pre><code class="language-javascript">const el = document.querySelector(&quot;.kotak&quot;);
+
+el.insertAdjacentHTML(&quot;beforebegin&quot;, &quot;&lt;p&gt;Sebelum&lt;/p&gt;&quot;);
+el.insertAdjacentHTML(&quot;afterbegin&quot;, &quot;&lt;p&gt;Awal dalam&lt;/p&gt;&quot;);
+el.insertAdjacentHTML(&quot;beforeend&quot;, &quot;&lt;p&gt;Akhir dalam&lt;/p&gt;&quot;);
+el.insertAdjacentHTML(&quot;afterend&quot;, &quot;&lt;p&gt;Sesudah&lt;/p&gt;&quot;);
+</code></pre>
+<p>Posisi:</p>
+<pre><code>&lt;!-- beforebegin --&gt;
+&lt;div&gt;
+  &lt;!-- afterbegin --&gt;
+  ...konten...
+  &lt;!-- beforeend --&gt;
+&lt;/div&gt;
+&lt;!-- afterend --&gt;
+</code></pre>
+<blockquote>
+<p>⚠️ <strong>Peringatan XSS:</strong> <code>insertAdjacentHTML()</code> memproses HTML — jangan gunakan dengan input user tanpa sanitasi.</p>
+</blockquote>
+<h3 id="perbandingan-method-penambahan">Perbandingan Method Penambahan <a href="#perbandingan-method-penambahan" class="anchor" aria-hidden="true">#</a></h3>
+<table>
+<thead>
+<tr>
+<th>Method</th>
+<th>Menerima</th>
+<th>Posisi</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>appendChild()</code></td>
+<td>Node</td>
+<td>Akhir</td>
+</tr>
+<tr>
+<td><code>append()</code></td>
+<td>Node + string</td>
+<td>Akhir</td>
+</tr>
+<tr>
+<td><code>prepend()</code></td>
+<td>Node + string</td>
+<td>Awal</td>
+</tr>
+<tr>
+<td><code>insertBefore()</code></td>
+<td>Node</td>
+<td>Sebelum referensi</td>
+</tr>
+<tr>
+<td><code>insertAdjacentElement()</code></td>
+<td>Element</td>
+<td>Relatif</td>
+</tr>
+<tr>
+<td><code>insertAdjacentHTML()</code></td>
+<td>String HTML</td>
+<td>Relatif</td>
+</tr>
+</tbody>
+</table>
+<hr>
+<h2 id="menghapus-dan-mengganti-elemen">Menghapus dan Mengganti Elemen <a href="#menghapus-dan-mengganti-elemen" class="anchor" aria-hidden="true">#</a></h2>
+<h3 id="remove--hapus-elemen"><code>remove()</code> — Hapus Elemen <a href="#remove--hapus-elemen" class="anchor" aria-hidden="true">#</a></h3>
+<pre><code class="language-javascript">const el = document.querySelector(&quot;.kotak&quot;);
+el.remove();
+</code></pre>
+<h3 id="removechild--hapus-anak-cara-lama"><code>removeChild()</code> — Hapus Anak (Cara Lama) <a href="#removechild--hapus-anak-cara-lama" class="anchor" aria-hidden="true">#</a></h3>
+<pre><code class="language-javascript">const parent = document.querySelector(&quot;.daftar&quot;);
+const child = parent.firstElementChild;
+
+parent.removeChild(child);
+</code></pre>
+<h3 id="replacewith--ganti-elemen"><code>replaceWith()</code> — Ganti Elemen <a href="#replacewith--ganti-elemen" class="anchor" aria-hidden="true">#</a></h3>
+<pre><code class="language-javascript">const lama = document.querySelector(&quot;.lama&quot;);
+const baru = document.createElement(&quot;p&quot;);
+baru.textContent = &quot;Elemen baru&quot;;
+
+lama.replaceWith(baru);
+</code></pre>
+<h3 id="replacechild--ganti-anak-cara-lama"><code>replaceChild()</code> — Ganti Anak (Cara Lama) <a href="#replacechild--ganti-anak-cara-lama" class="anchor" aria-hidden="true">#</a></h3>
+<pre><code class="language-javascript">parent.replaceChild(baru, lama);
+</code></pre>
+<h3 id="mengosongkan-elemen">Mengosongkan Elemen <a href="#mengosongkan-elemen" class="anchor" aria-hidden="true">#</a></h3>
+<pre><code class="language-javascript">// Cara 1: innerHTML
+el.innerHTML = &quot;&quot;;
+
+// Cara 2: while + removeChild
+while (el.firstChild) {
+  el.removeChild(el.firstChild);
+}
+
+// Cara 3: replaceChildren (modern)
+el.replaceChildren();
+</code></pre>
+<blockquote>
+<p><strong>Tips:</strong> <code>replaceChildren()</code> adalah cara paling modern dan efisien untuk mengosongkan atau mengganti semua anak.</p>
+</blockquote>
+<hr>
+<h2 id="contoh-praktis">Contoh Praktis <a href="#contoh-praktis" class="anchor" aria-hidden="true">#</a></h2>
+<h3 id="1-to-do-list-sederhana">1. To-Do List Sederhana <a href="#1-to-do-list-sederhana" class="anchor" aria-hidden="true">#</a></h3>
+<pre><code class="language-html">&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+&lt;body&gt;
+  &lt;h1&gt;To-Do List&lt;/h1&gt;
+  &lt;input type=&quot;text&quot; id=&quot;input-todo&quot; placeholder=&quot;Tugas baru...&quot;&gt;
+  &lt;button id=&quot;btn-tambah&quot;&gt;Tambah&lt;/button&gt;
+  &lt;ul id=&quot;daftar-todo&quot;&gt;&lt;/ul&gt;
+
+  &lt;script&gt;
+    const input = document.querySelector(&quot;#input-todo&quot;);
+    const btnTambah = document.querySelector(&quot;#btn-tambah&quot;);
+    const daftar = document.querySelector(&quot;#daftar-todo&quot;);
+
+    btnTambah.addEventListener(&quot;click&quot;, () =&gt; {
+      const teks = input.value.trim();
+      if (teks === &quot;&quot;) return;
+
+      const li = document.createElement(&quot;li&quot;);
+      li.textContent = teks;
+
+      // Tombol hapus
+      const btnHapus = document.createElement(&quot;button&quot;);
+      btnHapus.textContent = &quot;Hapus&quot;;
+      btnHapus.className = &quot;hapus&quot;;
+      btnHapus.addEventListener(&quot;click&quot;, () =&gt; li.remove());
+
+      li.appendChild(btnHapus);
+      daftar.appendChild(li);
+
+      input.value = &quot;&quot;;
+      input.focus();
+    });
+  &lt;/script&gt;
+&lt;/body&gt;
+&lt;/html&gt;
+</code></pre>
+<h3 id="2-menampilkan-daftar-produk-dari-data">2. Menampilkan Daftar Produk dari Data <a href="#2-menampilkan-daftar-produk-dari-data" class="anchor" aria-hidden="true">#</a></h3>
+<pre><code class="language-javascript">const produk = [
+  { id: 1, nama: &quot;Keyboard&quot;, harga: 450000 },
+  { id: 2, nama: &quot;Mouse&quot;, harga: 150000 },
+  { id: 3, nama: &quot;Monitor&quot;, harga: 1500000 }
+];
+
+const container = document.querySelector(&quot;#produk-list&quot;);
+
+function renderProduk(produkList) {
+  container.innerHTML = &quot;&quot;; // kosongkan dulu
+
+  produkList.forEach(p =&gt; {
+    const card = document.createElement(&quot;div&quot;);
+    card.className = &quot;card&quot;;
+    card.dataset.id = p.id;
+
+    const judul = document.createElement(&quot;h3&quot;);
+    judul.textContent = p.nama;
+
+    const harga = document.createElement(&quot;p&quot;);
+    harga.textContent = `Rp${p.harga.toLocaleString(&quot;id-ID&quot;)}`;
+
+    card.append(judul, harga);
+    container.appendChild(card);
+  });
+}
+
+renderProduk(produk);
+</code></pre>
+<h3 id="3-mengubah-tema-darklight-mode">3. Mengubah Tema (Dark/Light Mode) <a href="#3-mengubah-tema-darklight-mode" class="anchor" aria-hidden="true">#</a></h3>
+<pre><code class="language-javascript">const btnTema = document.querySelector(&quot;#btn-tema&quot;);
+const body = document.body;
+
+btnTema.addEventListener(&quot;click&quot;, () =&gt; {
+  body.classList.toggle(&quot;dark-mode&quot;);
+  btnTema.textContent = body.classList.contains(&quot;dark-mode&quot;)
+    ? &quot;☀️ Light Mode&quot;
+    : &quot;🌙 Dark Mode&quot;;
+});
+</code></pre>
+<p>Dengan CSS:</p>
+<pre><code class="language-css">body {
+  background: white;
+  color: black;
+  transition: background 0.3s, color 0.3s;
+}
+body.dark-mode {
+  background: #1a1a1a;
+  color: white;
+}
+</code></pre>
+<h3 id="4-tabel-dinamis-dari-array">4. Tabel Dinamis dari Array <a href="#4-tabel-dinamis-dari-array" class="anchor" aria-hidden="true">#</a></h3>
+<pre><code class="language-javascript">const users = [
+  { id: 1, nama: &quot;Budi&quot;, email: &quot;budi@example.com&quot; },
+  { id: 2, nama: &quot;Siti&quot;, email: &quot;siti@example.com&quot; }
+];
+
+const tbody = document.querySelector(&quot;#users tbody&quot;);
+
+tbody.innerHTML = users.map(u =&gt; `
+  &lt;tr&gt;
+    &lt;td&gt;${u.id}&lt;/td&gt;
+    &lt;td&gt;${u.nama}&lt;/td&gt;
+    &lt;td&gt;${u.email}&lt;/td&gt;
+  &lt;/tr&gt;
+`).join(&quot;&quot;);
+</code></pre>
+<blockquote>
+<p>⚠️ <strong>Peringatan:</strong> Contoh di atas menggunakan <code>innerHTML</code> dengan template literal. <strong>Aman</strong> jika data berasal dari kode Anda sendiri, tetapi <strong>berbahaya</strong> jika data dari input user. Untuk data user, gunakan <code>textContent</code> dan <code>createElement</code>.</p>
+</blockquote>
+<h3 id="5-filter-real-time">5. Filter Real-time <a href="#5-filter-real-time" class="anchor" aria-hidden="true">#</a></h3>
+<pre><code class="language-html">&lt;input type=&quot;text&quot; id=&quot;search&quot; placeholder=&quot;Cari produk...&quot;&gt;
+&lt;ul id=&quot;hasil&quot;&gt;&lt;/ul&gt;
+
+&lt;script&gt;
+  const produk = [&quot;Keyboard&quot;, &quot;Mouse&quot;, &quot;Monitor&quot;, &quot;Headset&quot;, &quot;Webcam&quot;];
+  const search = document.querySelector(&quot;#search&quot;);
+  const hasil = document.querySelector(&quot;#hasil&quot;);
+
+  search.addEventListener(&quot;input&quot;, () =&gt; {
+    const keyword = search.value.toLowerCase();
+    const filter = produk.filter(p =&gt; p.toLowerCase().includes(keyword));
+
+    hasil.replaceChildren(
+      ...filter.map(p =&gt; {
+        const li = document.createElement(&quot;li&quot;);
+        li.textContent = p;
+        return li;
+      })
+    );
+  });
+&lt;/script&gt;
+</code></pre>
+<hr>
+<h2 id="tips--best-practice">Tips &amp; Best Practice <a href="#tips--best-practice" class="anchor" aria-hidden="true">#</a></h2>
+<ol>
+<li>
+<p><strong>Utamakan <code>textContent</code></strong> daripada <code>innerHTML</code> untuk teks dari user — mencegah XSS.</p>
+</li>
+<li>
+<p><strong>Gunakan <code>classList</code></strong> daripada memanipulasi <code>className</code> string.</p>
+</li>
+<li>
+<p><strong>Gunakan <code>dataset</code></strong> untuk metadata, bukan atribut non-standar.</p>
+</li>
+<li>
+<p><strong>Cache seleksi DOM</strong> — jangan panggil <code>querySelector</code> berulang kali di loop.</p>
+</li>
+</ol>
+<pre><code class="language-javascript">// ❌ Buruk
+for (let i = 0; i &lt; 100; i++) {
+  document.querySelector(&quot;.kotak&quot;).style.width = i + &quot;px&quot;;
+}
+
+// ✅ Baik
+const kotak = document.querySelector(&quot;.kotak&quot;);
+for (let i = 0; i &lt; 100; i++) {
+  kotak.style.width = i + &quot;px&quot;;
+}
+</code></pre>
+<ol start="5">
+<li><strong>Batch update DOM</strong> — ubah DOM di luar loop jika memungkinkan, atau gunakan <code>DocumentFragment</code>.</li>
+</ol>
+<pre><code class="language-javascript">const fragment = document.createDocumentFragment();
+for (let i = 0; i &lt; 100; i++) {
+  const li = document.createElement(&quot;li&quot;);
+  li.textContent = `Item ${i}`;
+  fragment.appendChild(li);
+}
+ul.appendChild(fragment); // satu kali update DOM
+</code></pre>
+<ol start="6">
+<li>
+<p><strong>Gunakan <code>replaceChildren()</code></strong> untuk mengosongkan/mengganti anak — lebih efisien.</p>
+</li>
+<li>
+<p><strong>Event handling</strong> dibahas di artikel berikutnya — jangan campur inline <code>onclick</code> di HTML.</p>
+</li>
+<li>
+<p><strong>Aksesibilitas</strong> — saat memanipulasi DOM, pertimbangkan <code>aria-*</code> dan fokus keyboard.</p>
+</li>
+</ol>
+<hr>
+<h2 id="ringkasan">Ringkasan <a href="#ringkasan" class="anchor" aria-hidden="true">#</a></h2>
+<table>
+<thead>
+<tr>
+<th>Kategori</th>
+<th>Method / Properti</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Seleksi</strong></td>
+<td><code>querySelector</code>, <code>querySelectorAll</code>, <code>getElementById</code></td>
+</tr>
+<tr>
+<td><strong>Navigasi</strong></td>
+<td><code>children</code>, <code>parentElement</code>, <code>nextElementSibling</code></td>
+</tr>
+<tr>
+<td><strong>Konten</strong></td>
+<td><code>textContent</code>, <code>innerHTML</code>, <code>innerText</code>, <code>outerHTML</code></td>
+</tr>
+<tr>
+<td><strong>Atribut</strong></td>
+<td><code>getAttribute</code>, <code>setAttribute</code>, <code>removeAttribute</code>, <code>dataset</code></td>
+</tr>
+<tr>
+<td><strong>Style</strong></td>
+<td><code>style</code>, <code>getComputedStyle</code>, <code>classList</code></td>
+</tr>
+<tr>
+<td><strong>Membuat</strong></td>
+<td><code>createElement</code>, <code>createTextNode</code>, <code>cloneNode</code></td>
+</tr>
+<tr>
+<td><strong>Menambah</strong></td>
+<td><code>appendChild</code>, <code>append</code>, <code>prepend</code>, <code>insertBefore</code>, <code>insertAdjacentHTML</code></td>
+</tr>
+<tr>
+<td><strong>Menghapus</strong></td>
+<td><code>remove</code>, <code>removeChild</code>, <code>replaceWith</code>, <code>replaceChildren</code></td>
+</tr>
+</tbody>
+</table>
+<p>Poin penting:</p>
+<ul>
+<li>Gunakan <code>querySelector</code>/<code>querySelectorAll</code> sebagai default.</li>
+<li><strong><code>textContent</code></strong> aman dari XSS; <strong><code>innerHTML</code></strong> memproses HTML (hati-hati!).</li>
+<li><code>classList</code> lebih aman dan ekspresif daripada <code>className</code>.</li>
+<li><code>dataset</code> mengakses <code>data-*</code> (kebab-case → camelCase).</li>
+<li>Gunakan <strong><code>DocumentFragment</code></strong> untuk batch update DOM.</li>
+<li><strong>Cache seleksi DOM</strong> — jangan query berulang di loop.</li>
+<li><code>replaceChildren()</code> cara modern mengosongkan/mengganti anak.</li>
+</ul>
+<p>Pada artikel berikutnya, kita akan membahas <strong>Event &amp; Event Handling</strong> — merespons interaksi user.</p>
+
+			<div class="page-footer-meta d-flex flex-column flex-md-row justify-content-between">
+				</div>
+			<div class="docs-navigation d-flex justify-content-between">
+	
+	<a href="/javascript/tutorial/08-object/">
+			<div class="card my-1">
+				<div class="card-body py-2">
+					&larr; Object &amp; Method-nya
+				</div>
+			</div>
+		</a>
+	<a class="ms-auto" href="/javascript/tutorial/10-event-handling/">
+			<div class="card my-1">
+				<div class="card-body py-2">
+					Event &amp; Event Handling &rarr;
+				</div>
+			</div>
+		</a>
+	</div>
+
+			
+		</main>
+	</div>
+
+      </div>
+    </div>
+    
+    
+    <footer class="footer text-muted">
+  <div class="container-xxl">
+    <div class="row">
+      <div class="col-lg-8 order-last order-lg-first">
+        <ul class="list-inline">
+          <li class="list-inline-item">Powered by <a class="text-muted" href="https://gohugo.io/">Hugo</a> and <a class="text-muted" href="https://github.com/">Github</a></li>
+        </ul>
+      </div>
+      <div class="col-lg-8 order-first order-lg-last text-lg-end">
+        <ul class="list-inline">
+          </ul>
+      </div>
+    </div>
+  </div>
+</footer>
+    
+
+<script src="/js/bootstrap.min.650aeec64c81d69d4c0850fc73c93da3f0330cec0a27772feed7f90f60baa5f47f1c45687d71914bdafd1c4e860d40f6dc08ede27a2f08431ff929c9a2d24621.js" integrity="sha512-ZQruxkyB1p1MCFD8c8k9o/AzDOwKJ3cv7tf5D2C6pfR/HEVofXGRS9r9HE6GDUD23Ajt4novCEMf&#43;SnJotJGIQ==" crossorigin="anonymous" defer></script>
+  <script src="/js/highlight.min.ec234bd8a5f487aaffe50a89f17b14501b1bb65633cf177cffd4cb84702dd7030edc08712dceb8dc27ac7e54b53240a08bf0b8d951572ee582bcdbbd06a48a7b.js" integrity="sha512-7CNL2KX0h6r/5QqJ8XsUUBsbtlYzzxd8/9TLhHAt1wMO3AhxLc643CesflS1MkCgi/C42VFXLuWCvNu9BqSKew==" crossorigin="anonymous" defer></script>
+  <script src="/main.min.cd1e5e6b40065b3f7f7fd8548a528fac67019754eda0f37b9918d02d154fc9ef6a22742f6513b0572ad9163152e151ec36221fbeafbecd7759c3dab1f19b64b9.js" integrity="sha512-zR5ea0AGWz9/f9hUilKPrGcBl1TtoPN7mRjQLRVPye9qInQvZROwVyrZFjFS4VHsNiIfvq&#43;&#43;zXdZw9qx8ZtkuQ==" crossorigin="anonymous" defer></script>
+  <script src="https://kaban.my.id/index.min.3b38957cbdd3fcd9f9b6e3e14d11e41821e75e9e633e2e7fc92b39e052142003d54a01433bc318b5180cbdf345e1654d731e00e168a3ab02cdad8965a4e5d852.js" integrity="sha512-OziVfL3T/Nn5tuPhTRHkGCHnXp5jPi5/ySs54FIUIAPVSgFDO8MYtRgMvfNF4WVNcx4A4WijqwLNrYllpOXYUg==" crossorigin="anonymous" defer></script>
+  
+    <div class="d-flex fixed-bottom pb-4 pb-lg-5 pe-4 pe-lg-5">
+      <a id="toTop" href="#" class="btn btn-outline-primary rounded-circle ms-auto p-2"><span class="visually-hidden">Top</span><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-chevron-up"><polyline points="18 15 12 9 6 15"></polyline></svg></a>
+    </div>
+    
+  </body>
+</html>
