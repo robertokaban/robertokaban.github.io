@@ -13,4 +13,34 @@
         <changefreq>weekly</changefreq>
         <priority>0.5</priority>
       </url>
+      <url>
+        <loc>https://kaban.my.id/javascript/tutorial/02-instalasi-persiapan/</loc>
+        <lastmod>2022-12-20T08:00:00+00:00</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.5</priority>
+      </url>
+      <url>
+        <loc>https://kaban.my.id/javascript/tutorial/03-sintaks-variabel/</loc>
+        <lastmod>2022-12-21T08:00:00+00:00</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.5</priority>
+      </url>
+      <url>
+        <loc>https://kaban.my.id/javascript/tutorial/04-tipe-data-konversi/</loc>
+        <lastmod>2022-12-22T08:00:00+00:00</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.5</priority>
+      </url>
+      <url>
+        <loc>https://kaban.my.id/javascript/tutorial/05-struktur-kontrol/</loc>
+        <lastmod>2022-12-23T08:00:00+00:00</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.5</priority>
+      </url>
+      <url>
+        <loc>https://kaban.my.id/javascript/tutorial/06-fungsi/</loc>
+        <lastmod>2022-12-24T08:00:00+00:00</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.5</priority>
+      </url>
       </urlset>

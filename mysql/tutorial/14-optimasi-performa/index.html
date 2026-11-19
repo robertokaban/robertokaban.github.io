@@ -1,0 +1,1447 @@
+<!doctype html>
+<html lang="en-US">
+  <head>
+  <meta charset="utf-8">
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <link rel="preload" as="font" href="https://kaban.my.id/fonts/vendor/jost/jost-v4-latin-regular.woff2" type="font/woff2" crossorigin>
+<link rel="preload" as="font" href="https://kaban.my.id/fonts/vendor/jost/jost-v4-latin-500.woff2" type="font/woff2" crossorigin>
+<link rel="preload" as="font" href="https://kaban.my.id/fonts/vendor/jost/jost-v4-latin-700.woff2" type="font/woff2" crossorigin>
+
+  <script>(()=>{var t=window.matchMedia&&window.matchMedia("(prefers-color-scheme: dark)").matches,e=localStorage.getItem("theme");t&&e===null&&(localStorage.setItem("theme","dark"),document.documentElement.setAttribute("data-dark-mode","")),t&&e==="dark"&&document.documentElement.setAttribute("data-dark-mode",""),e==="dark"&&document.documentElement.setAttribute("data-dark-mode","")})()</script>
+
+  <link rel="stylesheet" href="https://kaban.my.id/main.9f87974e4c1caf828d7f6300ecd98102083d1763683fe424f26c4c7b80fa72a094aa3c62fe333b5026c22ff50b82f74220d559e730c1f032fd8bcec957ac2bb4.css" integrity="sha512-n4eXTkwcr4KNf2MA7NmBAgg9F2NoP&#43;Qk8mxMe4D6cqCUqjxi/jM7UCbCL/ULgvdCINVZ5zDB8DL9i87JV6wrtA==" crossorigin="anonymous">
+<noscript><style>img.lazyload { display: none; }</style></noscript>
+  <meta name="robots" content="index, follow">
+    <meta name="googlebot" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1">
+    <meta name="bingbot" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1">
+  <title>Optimasi Performa MySQL - Roberto Kaban Blog&#39;s</title>
+<meta name="description" content="Panduan lengkap optimasi performa MySQL: EXPLAIN, indexing strategy, konfigurasi my.cnf, dan tips query tuning.">
+<link rel="canonical" href="https://kaban.my.id/mysql/tutorial/14-optimasi-performa/">
+<meta property="og:locale" content="en_US">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Optimasi Performa MySQL">
+<meta property="og:description" content="Panduan lengkap optimasi performa MySQL: EXPLAIN, indexing strategy, konfigurasi my.cnf, dan tips query tuning.">
+<meta property="og:url" content="https://kaban.my.id/mysql/tutorial/14-optimasi-performa/">
+<meta property="og:site_name" content="Roberto Kaban Blog&#39;s">
+<meta property="article:published_time" content="2022-12-19T08:00:00+00:00">
+  <meta property="article:modified_time" content="2022-12-19T08:00:00+00:00">
+  
+  <meta property="og:image" content="https://kaban.my.id/doks.png"/>
+      <meta property="og:image:alt" content="Roberto Kaban Blog&#39;s">
+    
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:site" content="@robertokaban">
+<meta name="twitter:creator" content="@robertokaban">
+<meta name="twitter:title" content="Optimasi Performa MySQL">
+<meta name="twitter:description" content="Panduan lengkap optimasi performa MySQL: EXPLAIN, indexing strategy, konfigurasi my.cnf, dan tips query tuning.">
+<meta name="twitter:image" content="https://kaban.my.id/doks.png">
+    <meta name="twitter:image:alt" content="Optimasi Performa MySQL">
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "Person",
+        "@id": "https://kaban.my.id/#/schema/person/1",
+      "name": "BlogRobertoKaban",
+      "url": "https://kaban.my.id/",
+      "sameAs": [
+        "https://twitter.com/robertokaban"
+        , "https://github.com/robertokaban"
+        ],
+      "image": {
+          "@type": "ImageObject",
+          "@id": "https://kaban.my.id/#/schema/image/1",
+          "url": "https://kaban.my.id/doks.png",
+          "width":  1280 ,
+          "height":  640 ,
+          "caption": "BlogRobertoKaban"
+        }
+      },
+    {
+      "@type": "WebSite",
+      "@id": "https://kaban.my.id/#/schema/website/1",
+      "url": "https://kaban.my.id/",
+      "name": "Roberto Kaban Blog\u0027s",
+      "description": "Hanya sebuah catatan kecil untuk hal yang tidak ingin dilupakan.",
+      "publisher": {
+          "@id": "https://kaban.my.id/#/schema/person/1"
+        }
+      },
+    {
+      "@type": "WebPage",
+      "@id": "https://kaban.my.id/mysql/tutorial/14-optimasi-performa/",
+      "url": "https://kaban.my.id/mysql/tutorial/14-optimasi-performa/",
+      "name": "Optimasi Performa MySQL",
+      "description": "Panduan lengkap optimasi performa MySQL: EXPLAIN, indexing strategy, konfigurasi my.cnf, dan tips query tuning.",
+      "isPartOf": {
+        "@id": "https://kaban.my.id/#/schema/website/1"
+      },
+      "about": {
+          "@id": "https://kaban.my.id/#/schema/person/1"
+        },
+      "datePublished": "2022-12-19T08:00:00CET",
+      "dateModified": "2022-12-19T08:00:00CET",
+      "breadcrumb": {
+        "@id": "https://kaban.my.id/mysql/tutorial/14-optimasi-performa/#/schema/breadcrumb/1"
+      },
+      "primaryImageOfPage": {
+        "@id": "https://kaban.my.id/mysql/tutorial/14-optimasi-performa/#/schema/image/2"
+      },
+      "inLanguage": "en-US",
+      "potentialAction": [{
+        "@type": "ReadAction", "target": ["https://kaban.my.id/mysql/tutorial/14-optimasi-performa/"]
+      }]
+    },
+    {
+      "@type": "BreadcrumbList",
+      "@id": "https://kaban.my.id/mysql/tutorial/14-optimasi-performa/#/schema/breadcrumb/1",
+      "name": "Breadcrumbs",
+      "itemListElement": [{
+        "@type": "ListItem",
+        "position":  1 ,
+        "item": {
+          "@type": "WebPage",
+          "@id": "https://kaban.my.id/",
+          "url": "https://kaban.my.id/",
+          "name": "Home"
+          }
+        },{
+        "@type": "ListItem",
+        "position":  2 ,
+        "item": {
+          "@type": "WebPage",
+          "@id": "https://kaban.my.id/mysql/",
+          "url": "https://kaban.my.id/mysql/",
+          "name": "Mysql"
+          }
+        },{
+        "@type": "ListItem",
+        "position":  3 ,
+        "item": {
+          "@type": "WebPage",
+          "@id": "https://kaban.my.id/mysql/tutorial/",
+          "url": "https://kaban.my.id/mysql/tutorial/",
+          "name": "Tutorial"
+          }
+        },{
+        "@type": "ListItem",
+        "position":  4 ,
+        "item": {
+          "@id": "https://kaban.my.id/mysql/tutorial/14-optimasi-performa/"
+          }
+        }]
+    },
+
+    {
+      "@context": "https://schema.org",
+      "@graph": [
+        {
+          "@type": "ImageObject",
+          "@id": "https://kaban.my.id/mysql/tutorial/14-optimasi-performa/#/schema/image/2",
+          "url": "https://kaban.my.id/doks.png",
+          "contentUrl": "https://kaban.my.id/doks.png",
+          "caption": "Optimasi Performa MySQL"
+        }
+      ]
+    }
+
+  ]
+}
+</script>
+
+  <meta name="theme-color" content="#fff">
+<link rel="icon" href="https://kaban.my.id/favicon.ico" sizes="any">
+<link rel="icon" type="image/svg+xml" href="https://kaban.my.id/favicon.svg">
+<link rel="apple-touch-icon" sizes="180x180" href="https://kaban.my.id/apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="32x32" href="https://kaban.my.id/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="https://kaban.my.id/favicon-16x16.png">
+<link rel="manifest" crossorigin="use-credentials" href="https://kaban.my.id/site.webmanifest">
+
+  
+
+
+  
+  
+  
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-60VSDZFQR5"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-60VSDZFQR5');
+</script>
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6664512614760985"
+     crossorigin="anonymous"></script>
+</head>
+
+  <body class="mysql single">
+    <div class="sticky-top">
+<div class="header-bar"></div>
+
+<header class="navbar navbar-expand-lg navbar-light doks-navbar">
+  <nav class="container-xxl flex-wrap flex-lg-nowrap" aria-label="Main navigation">
+
+    <a class="navbar-brand order-0" href="/" aria-label="Roberto Kaban Blog&#39;s">
+      Roberto Kaban Blog&#39;s
+    </a>
+
+    <button class="btn btn-menu order-2 d-block d-lg-none" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasDoks" aria-controls="offcanvasDoks" aria-label="Open main menu">
+      <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-menu"><line x1="3" y1="12" x2="21" y2="12"></line><line x1="3" y1="6" x2="21" y2="6"></line><line x1="3" y1="18" x2="21" y2="18"></line></svg>
+    </button>
+    <div class="offcanvas offcanvas-end border-0 py-lg-1" tabindex="-1" id="offcanvasDoks" data-bs-backdrop="true" aria-labelledby="offcanvasDoksLabel">
+      <div class="header-bar d-lg-none"></div>
+      <div class="offcanvas-header d-lg-none">
+        <h2 class="h5 offcanvas-title ps-2" id="offcanvasDoksLabel"><a class="text-dark" href="/">Roberto Kaban Blog&#39;s</a></h2>
+        <button type="button" class="btn-close text-reset me-2" data-bs-dismiss="offcanvas" aria-label="Close main menu"></button>
+      </div>
+      <div class="offcanvas-body p-4 p-lg-0">
+        <ul class="nav flex-column flex-lg-row align-items-lg-center mt-2 mt-lg-0 ms-lg-2 me-lg-auto">
+              <li class="nav-item">
+                <a class="nav-link ps-0 py-1" href="/about/">About Me</a>
+              </li>
+            
+          
+              <li class="nav-item">
+                <a class="nav-link ps-0 py-1" href="/contact/">Contact</a>
+              </li>
+            
+          
+              <li class="nav-item">
+                <a class="nav-link ps-0 py-1" href="/artikel/">Artikel</a>
+              </li>
+            
+          
+              <li class="nav-item">
+                <a class="nav-link ps-0 py-1" href="/coretanku/">Coretanku</a>
+              </li>
+            
+          </ul>
+
+        <hr class="text-black-50 my-4 d-lg-none">
+        <form class="doks-search position-relative flex-grow-1 ms-lg-auto me-lg-2">
+          <input id="search" class="form-control is-search" type="search" placeholder="Cari di blog ini..." aria-label="Cari di blog ini..." autocomplete="off">
+          <div id="suggestions" class="shadow bg-white rounded d-none"></div>
+        </form>
+        <hr class="text-black-50 my-4 d-lg-none">
+        <ul class="nav flex-column flex-lg-row">
+          <li class="nav-item">
+              <a class="nav-link social-link" href="https://github.com/robertokaban"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-github"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path></svg><small class="ms-2 d-lg-none">GitHub</small></a>
+            </li>
+          <li class="nav-item">
+              <a class="nav-link social-link" href="https://facebook.com/roberto.kaban"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-facebook"><path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"></path></svg><small class="ms-2 d-lg-none">Facebook</small></a>
+            </li>
+          <li class="nav-item">
+              <a class="nav-link social-link" href="https://twitter.com/robertokaban"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-twitter"><path d="M23 3a10.9 10.9 0 0 1-3.14 1.53 4.48 4.48 0 0 0-7.86 3v1A10.66 10.66 0 0 1 3 4s-4 9 5 13a11.64 11.64 0 0 1-7 2c9 5 20 0 20-11.5a4.5 4.5 0 0 0-.08-.83A7.72 7.72 0 0 0 23 3z"></path></svg><small class="ms-2 d-lg-none">Twitter</small></a>
+            </li>
+          <li class="nav-item">
+              <a class="nav-link social-link" href="https://youtube.com/@robertokaban"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-youtube"><path d="M10,15L15.19,12L10,9V15M21.56,7.17C21.69,7.64 21.78,8.27 21.84,9.07C21.91,9.87 21.94,10.56 21.94,11.16L22,12C22,14.19 21.84,15.8 21.56,16.83C21.31,17.73 20.73,18.31 19.83,18.56C19.36,18.69 18.5,18.78 17.18,18.84C15.88,18.91 14.69,18.94 13.59,18.94L12,19C7.81,19 5.2,18.84 4.17,18.56C3.27,18.31 2.69,17.73 2.44,16.83C2.31,16.36 2.22,15.73 2.16,14.93C2.09,14.13 2.06,13.44 2.06,12.84L2,12C2,9.81 2.16,8.2 2.44,7.17C2.69,6.27 3.27,5.69 4.17,5.44C4.64,5.31 5.5,5.22 6.82,5.16C8.12,5.09 9.31,5.06 10.41,5.06L12,5C16.19,5 18.8,5.16 19.83,5.44C20.73,5.69 21.31,6.27 21.56,7.17Z"></path></svg><small class="ms-2 d-lg-none">Youtube</small></a>
+            </li>
+          </ul>
+
+        
+        <hr class="text-black-50 my-4 d-lg-none">
+        <button id="mode" class="btn btn-link" type="button" aria-label="Toggle user interface mode">
+          <span class="toggle-dark"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-moon"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path></svg></span>
+          <span class="toggle-light"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-sun"><circle cx="12" cy="12" r="5"></circle><line x1="12" y1="1" x2="12" y2="3"></line><line x1="12" y1="21" x2="12" y2="23"></line><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line><line x1="1" y1="12" x2="3" y2="12"></line><line x1="21" y1="12" x2="23" y2="12"></line><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line></svg></span>
+        </button>
+        
+
+        </div>
+    </div>
+  </nav>
+</header>
+
+
+</div>
+
+
+<div class="container-xxl">
+  <aside class="doks-sidebar">
+    <nav id="doks-docs-nav" class="collapse d-lg-none" aria-label="Tertiary navigation">
+      
+<ul class="list-unstyled collapsible-sidebar">
+  
+    
+      
+      <li class="mb-1">
+        <button class="btn btn-toggle align-items-center rounded collapsed" data-bs-toggle="collapse" data-bs-target="#section-dd2f133c64f99bea60c3e743290ec287" aria-expanded="true">
+          Tutorial MySQL
+        </button>
+        <div class="collapse show" id="section-dd2f133c64f99bea60c3e743290ec287">
+          <ul class="btn-toggle-nav list-unstyled fw-normal pb-1 small">
+            
+              
+                
+                <li><a class="docs-link rounded" href="https://kaban.my.id/mysql/tutorial/pengenalan/">Pengenalan MySQL</a></li>
+              
+            
+              
+                
+                <li><a class="docs-link rounded" href="https://kaban.my.id/mysql/tutorial/02-instalasi/">Instalasi dan Konfigurasi MySQL</a></li>
+              
+            
+              
+                
+                <li><a class="docs-link rounded" href="https://kaban.my.id/mysql/tutorial/03-arsitektur/">Mengenal Arsitektur &amp; Komponen MySQL</a></li>
+              
+            
+              
+                
+                <li><a class="docs-link rounded" href="https://kaban.my.id/mysql/tutorial/04-database-table/">Perintah Dasar SQL: Database &amp; Table</a></li>
+              
+            
+              
+                
+                <li><a class="docs-link rounded" href="https://kaban.my.id/mysql/tutorial/05-crud/">Operasi CRUD (Create, Read, Update, Delete)</a></li>
+              
+            
+              
+                
+                <li><a class="docs-link rounded" href="https://kaban.my.id/mysql/tutorial/06-filtering-sorting/">Filtering &amp; Sorting Data</a></li>
+              
+            
+              
+                
+                <li><a class="docs-link rounded" href="https://kaban.my.id/mysql/tutorial/07-agregasi-grouping/">Fungsi Agregasi &amp; Grouping</a></li>
+              
+            
+              
+                
+                <li><a class="docs-link rounded" href="https://kaban.my.id/mysql/tutorial/08-join/">JOIN: Menggabungkan Tabel</a></li>
+              
+            
+              
+                
+                <li><a class="docs-link rounded" href="https://kaban.my.id/mysql/tutorial/09-subquery-union/">Subquery &amp; Union</a></li>
+              
+            
+              
+                
+                <li><a class="docs-link rounded" href="https://kaban.my.id/mysql/tutorial/10-view-index-procedure/">View, Index, dan Stored Procedure</a></li>
+              
+            
+              
+                
+                <li><a class="docs-link rounded" href="https://kaban.my.id/mysql/tutorial/11-user-privilege/">Manajemen User &amp; Hak Akses</a></li>
+              
+            
+              
+                
+                <li><a class="docs-link rounded" href="https://kaban.my.id/mysql/tutorial/12-backup-restore/">Backup &amp; Restore Database</a></li>
+              
+            
+              
+                
+                <li><a class="docs-link rounded" href="https://kaban.my.id/mysql/tutorial/13-transaksi-acid/">Transaksi &amp; ACID</a></li>
+              
+            
+              
+                
+                <li><a class="docs-link rounded active" href="https://kaban.my.id/mysql/tutorial/14-optimasi-performa/">Optimasi Performa MySQL</a></li>
+              
+            
+          </ul>
+        </div>
+      </li>
+    
+  
+</ul>
+
+    </nav>
+  </aside>
+</div>
+
+    <div class="wrap container-xxl" role="document">
+      <div class="content">
+        
+	<div class="row flex-xl-nowrap">
+		<div class="col-lg-5 col-xl-4 docs-sidebar d-none d-lg-block">
+			<nav class="docs-links" aria-label="Main navigation">
+				
+<ul class="list-unstyled collapsible-sidebar">
+  
+    
+      
+      <li class="mb-1">
+        <button class="btn btn-toggle align-items-center rounded collapsed" data-bs-toggle="collapse" data-bs-target="#section-dd2f133c64f99bea60c3e743290ec287" aria-expanded="true">
+          Tutorial MySQL
+        </button>
+        <div class="collapse show" id="section-dd2f133c64f99bea60c3e743290ec287">
+          <ul class="btn-toggle-nav list-unstyled fw-normal pb-1 small">
+            
+              
+                
+                <li><a class="docs-link rounded" href="https://kaban.my.id/mysql/tutorial/pengenalan/">Pengenalan MySQL</a></li>
+              
+            
+              
+                
+                <li><a class="docs-link rounded" href="https://kaban.my.id/mysql/tutorial/02-instalasi/">Instalasi dan Konfigurasi MySQL</a></li>
+              
+            
+              
+                
+                <li><a class="docs-link rounded" href="https://kaban.my.id/mysql/tutorial/03-arsitektur/">Mengenal Arsitektur &amp; Komponen MySQL</a></li>
+              
+            
+              
+                
+                <li><a class="docs-link rounded" href="https://kaban.my.id/mysql/tutorial/04-database-table/">Perintah Dasar SQL: Database &amp; Table</a></li>
+              
+            
+              
+                
+                <li><a class="docs-link rounded" href="https://kaban.my.id/mysql/tutorial/05-crud/">Operasi CRUD (Create, Read, Update, Delete)</a></li>
+              
+            
+              
+                
+                <li><a class="docs-link rounded" href="https://kaban.my.id/mysql/tutorial/06-filtering-sorting/">Filtering &amp; Sorting Data</a></li>
+              
+            
+              
+                
+                <li><a class="docs-link rounded" href="https://kaban.my.id/mysql/tutorial/07-agregasi-grouping/">Fungsi Agregasi &amp; Grouping</a></li>
+              
+            
+              
+                
+                <li><a class="docs-link rounded" href="https://kaban.my.id/mysql/tutorial/08-join/">JOIN: Menggabungkan Tabel</a></li>
+              
+            
+              
+                
+                <li><a class="docs-link rounded" href="https://kaban.my.id/mysql/tutorial/09-subquery-union/">Subquery &amp; Union</a></li>
+              
+            
+              
+                
+                <li><a class="docs-link rounded" href="https://kaban.my.id/mysql/tutorial/10-view-index-procedure/">View, Index, dan Stored Procedure</a></li>
+              
+            
+              
+                
+                <li><a class="docs-link rounded" href="https://kaban.my.id/mysql/tutorial/11-user-privilege/">Manajemen User &amp; Hak Akses</a></li>
+              
+            
+              
+                
+                <li><a class="docs-link rounded" href="https://kaban.my.id/mysql/tutorial/12-backup-restore/">Backup &amp; Restore Database</a></li>
+              
+            
+              
+                
+                <li><a class="docs-link rounded" href="https://kaban.my.id/mysql/tutorial/13-transaksi-acid/">Transaksi &amp; ACID</a></li>
+              
+            
+              
+                
+                <li><a class="docs-link rounded active" href="https://kaban.my.id/mysql/tutorial/14-optimasi-performa/">Optimasi Performa MySQL</a></li>
+              
+            
+          </ul>
+        </div>
+      </li>
+    
+  
+</ul>
+
+			</nav>
+		</div>
+		<nav class="docs-toc d-none d-xl-block col-xl-3" aria-label="Secondary navigation">
+			<div class="d-xl-none">
+  <button class="btn btn-outline-primary btn-sm doks-toc-toggle collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#onThisPage" aria-controls="doks-docs-nav" aria-expanded="false" aria-label="Toggle On this page navigation">
+    <span>Daftar isi</span>
+    <span>
+      <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" class="doks doks-expand" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><title>Expand</title><polyline points="7 13 12 18 17 13"></polyline><polyline points="7 6 12 11 17 6"></polyline></svg>
+      <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" class="doks doks-collapse" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><title>Collapse</title><polyline points="17 11 12 6 7 11"></polyline><polyline points="17 18 12 13 7 18"></polyline></svg>
+    </span>
+  </button>
+  <div class="collapse" id="onThisPage">
+    <div class="card card-body mt-3 py-1">
+      <div class="page-links">
+        <nav id="TableOfContents">
+  <ul>
+    <li><a href="#pendahuluan">Pendahuluan</a></li>
+    <li><a href="#menemukan-query-lambat">Menemukan Query Lambat</a>
+      <ul>
+        <li><a href="#1-slow-query-log">1. Slow Query Log</a></li>
+        <li><a href="#2-performance-schema">2. Performance Schema</a></li>
+        <li><a href="#3-show-processlist">3. <code>SHOW PROCESSLIST</code></a></li>
+      </ul>
+    </li>
+    <li><a href="#analisis-query-dengan-explain">Analisis Query dengan <code>EXPLAIN</code></a>
+      <ul>
+        <li><a href="#sintaks">Sintaks</a></li>
+        <li><a href="#contoh">Contoh</a></li>
+        <li><a href="#kolom-penting-di-explain">Kolom Penting di <code>EXPLAIN</code></a></li>
+        <li><a href="#nilai-type-dari-terbaik-ke-terburuk">Nilai <code>type</code> (dari terbaik ke terburuk)</a></li>
+        <li><a href="#nilai-extra-yang-perlu-diwaspadai">Nilai <code>Extra</code> yang Perlu Diwaspadai</a></li>
+        <li><a href="#contoh-query-tanpa-index">Contoh: Query Tanpa Index</a></li>
+        <li><a href="#explain-analyze-mysql-8018"><code>EXPLAIN ANALYZE</code> (MySQL 8.0.18+)</a></li>
+      </ul>
+    </li>
+    <li><a href="#strategi-indexing-yang-efektif">Strategi Indexing yang Efektif</a>
+      <ul>
+        <li><a href="#1-index-kolom-yang-sering-di-where-join-order-by">1. Index Kolom yang Sering di <code>WHERE</code>, <code>JOIN</code>, <code>ORDER BY</code></a></li>
+        <li><a href="#2-index-komposit-urutan-kolom-penting">2. Index Komposit: Urutan Kolom Penting</a></li>
+        <li><a href="#3-covering-index">3. Covering Index</a></li>
+        <li><a href="#4-index-untuk-order-by">4. Index untuk <code>ORDER BY</code></a></li>
+        <li><a href="#5-index-parsial-dengan-prefix">5. Index Parsial dengan Prefix</a></li>
+        <li><a href="#6-index-untuk-like">6. Index untuk <code>LIKE</code></a></li>
+        <li><a href="#7-hapus-index-yang-tidak-dipakai">7. Hapus Index yang Tidak Dipakai</a></li>
+        <li><a href="#8-index-dan-cardinality">8. Index dan Cardinality</a></li>
+      </ul>
+    </li>
+    <li><a href="#optimasi-query">Optimasi Query</a>
+      <ul>
+        <li><a href="#1-hindari-select-">1. Hindari <code>SELECT *</code></a></li>
+        <li><a href="#2-hindari-fungsi-pada-kolom-di-where">2. Hindari Fungsi pada Kolom di <code>WHERE</code></a></li>
+        <li><a href="#3-hindari-like-">3. Hindari <code>LIKE '%...'</code></a></li>
+        <li><a href="#4-gunakan-exists-daripada-in-untuk-subquery-besar">4. Gunakan <code>EXISTS</code> daripada <code>IN</code> untuk Subquery Besar</a></li>
+        <li><a href="#5-hindari-or-yang-menghalangi-index">5. Hindari <code>OR</code> yang Menghalangi Index</a></li>
+        <li><a href="#6-batasi-hasil-dengan-limit">6. Batasi Hasil dengan <code>LIMIT</code></a></li>
+        <li><a href="#7-optimasi-pagination">7. Optimasi Pagination</a></li>
+        <li><a href="#8-gunakan-union-all-jika-duplikat-tidak-masalah">8. Gunakan <code>UNION ALL</code> jika Duplikat Tidak Masalah</a></li>
+        <li><a href="#9-hindari-order-by-rand">9. Hindari <code>ORDER BY RAND()</code></a></li>
+        <li><a href="#10-analisis-dan-optimasi-tabel">10. Analisis dan Optimasi Tabel</a></li>
+      </ul>
+    </li>
+    <li><a href="#konfigurasi-mycnf">Konfigurasi <code>my.cnf</code></a>
+      <ul>
+        <li><a href="#innodb_buffer_pool_size"><code>innodb_buffer_pool_size</code></a></li>
+        <li><a href="#innodb_log_file_size"><code>innodb_log_file_size</code></a></li>
+        <li><a href="#innodb_flush_log_at_trx_commit"><code>innodb_flush_log_at_trx_commit</code></a></li>
+        <li><a href="#max_connections"><code>max_connections</code></a></li>
+        <li><a href="#query_cache_size-mysql-57"><code>query_cache_size</code> (MySQL 5.7)</a></li>
+        <li><a href="#tmp_table_size-dan-max_heap_table_size"><code>tmp_table_size</code> dan <code>max_heap_table_size</code></a></li>
+        <li><a href="#sort_buffer_size-dan-join_buffer_size"><code>sort_buffer_size</code> dan <code>join_buffer_size</code></a></li>
+        <li><a href="#table_open_cache"><code>table_open_cache</code></a></li>
+        <li><a href="#melihat-konfigurasi-aktif">Melihat Konfigurasi Aktif</a></li>
+        <li><a href="#konfigurasi-per-sesi">Konfigurasi per Sesi</a></li>
+      </ul>
+    </li>
+    <li><a href="#monitoring-performa">Monitoring Performa</a>
+      <ul>
+        <li><a href="#1-show-status">1. <code>SHOW STATUS</code></a></li>
+        <li><a href="#2-show-engine-innodb-status">2. <code>SHOW ENGINE INNODB STATUS</code></a></li>
+        <li><a href="#3-performance_schema">3. <code>performance_schema</code></a></li>
+        <li><a href="#4-sys-schema-mysql-57">4. <code>sys</code> Schema (MySQL 5.7+)</a></li>
+      </ul>
+    </li>
+    <li><a href="#checklist-optimasi">Checklist Optimasi</a></li>
+    <li><a href="#ringkasan">Ringkasan</a></li>
+  </ul>
+</nav>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="page-links d-none d-xl-block">
+  <h3>Daftar isi</h3>
+  <nav id="TableOfContents">
+  <ul>
+    <li><a href="#pendahuluan">Pendahuluan</a></li>
+    <li><a href="#menemukan-query-lambat">Menemukan Query Lambat</a>
+      <ul>
+        <li><a href="#1-slow-query-log">1. Slow Query Log</a></li>
+        <li><a href="#2-performance-schema">2. Performance Schema</a></li>
+        <li><a href="#3-show-processlist">3. <code>SHOW PROCESSLIST</code></a></li>
+      </ul>
+    </li>
+    <li><a href="#analisis-query-dengan-explain">Analisis Query dengan <code>EXPLAIN</code></a>
+      <ul>
+        <li><a href="#sintaks">Sintaks</a></li>
+        <li><a href="#contoh">Contoh</a></li>
+        <li><a href="#kolom-penting-di-explain">Kolom Penting di <code>EXPLAIN</code></a></li>
+        <li><a href="#nilai-type-dari-terbaik-ke-terburuk">Nilai <code>type</code> (dari terbaik ke terburuk)</a></li>
+        <li><a href="#nilai-extra-yang-perlu-diwaspadai">Nilai <code>Extra</code> yang Perlu Diwaspadai</a></li>
+        <li><a href="#contoh-query-tanpa-index">Contoh: Query Tanpa Index</a></li>
+        <li><a href="#explain-analyze-mysql-8018"><code>EXPLAIN ANALYZE</code> (MySQL 8.0.18+)</a></li>
+      </ul>
+    </li>
+    <li><a href="#strategi-indexing-yang-efektif">Strategi Indexing yang Efektif</a>
+      <ul>
+        <li><a href="#1-index-kolom-yang-sering-di-where-join-order-by">1. Index Kolom yang Sering di <code>WHERE</code>, <code>JOIN</code>, <code>ORDER BY</code></a></li>
+        <li><a href="#2-index-komposit-urutan-kolom-penting">2. Index Komposit: Urutan Kolom Penting</a></li>
+        <li><a href="#3-covering-index">3. Covering Index</a></li>
+        <li><a href="#4-index-untuk-order-by">4. Index untuk <code>ORDER BY</code></a></li>
+        <li><a href="#5-index-parsial-dengan-prefix">5. Index Parsial dengan Prefix</a></li>
+        <li><a href="#6-index-untuk-like">6. Index untuk <code>LIKE</code></a></li>
+        <li><a href="#7-hapus-index-yang-tidak-dipakai">7. Hapus Index yang Tidak Dipakai</a></li>
+        <li><a href="#8-index-dan-cardinality">8. Index dan Cardinality</a></li>
+      </ul>
+    </li>
+    <li><a href="#optimasi-query">Optimasi Query</a>
+      <ul>
+        <li><a href="#1-hindari-select-">1. Hindari <code>SELECT *</code></a></li>
+        <li><a href="#2-hindari-fungsi-pada-kolom-di-where">2. Hindari Fungsi pada Kolom di <code>WHERE</code></a></li>
+        <li><a href="#3-hindari-like-">3. Hindari <code>LIKE '%...'</code></a></li>
+        <li><a href="#4-gunakan-exists-daripada-in-untuk-subquery-besar">4. Gunakan <code>EXISTS</code> daripada <code>IN</code> untuk Subquery Besar</a></li>
+        <li><a href="#5-hindari-or-yang-menghalangi-index">5. Hindari <code>OR</code> yang Menghalangi Index</a></li>
+        <li><a href="#6-batasi-hasil-dengan-limit">6. Batasi Hasil dengan <code>LIMIT</code></a></li>
+        <li><a href="#7-optimasi-pagination">7. Optimasi Pagination</a></li>
+        <li><a href="#8-gunakan-union-all-jika-duplikat-tidak-masalah">8. Gunakan <code>UNION ALL</code> jika Duplikat Tidak Masalah</a></li>
+        <li><a href="#9-hindari-order-by-rand">9. Hindari <code>ORDER BY RAND()</code></a></li>
+        <li><a href="#10-analisis-dan-optimasi-tabel">10. Analisis dan Optimasi Tabel</a></li>
+      </ul>
+    </li>
+    <li><a href="#konfigurasi-mycnf">Konfigurasi <code>my.cnf</code></a>
+      <ul>
+        <li><a href="#innodb_buffer_pool_size"><code>innodb_buffer_pool_size</code></a></li>
+        <li><a href="#innodb_log_file_size"><code>innodb_log_file_size</code></a></li>
+        <li><a href="#innodb_flush_log_at_trx_commit"><code>innodb_flush_log_at_trx_commit</code></a></li>
+        <li><a href="#max_connections"><code>max_connections</code></a></li>
+        <li><a href="#query_cache_size-mysql-57"><code>query_cache_size</code> (MySQL 5.7)</a></li>
+        <li><a href="#tmp_table_size-dan-max_heap_table_size"><code>tmp_table_size</code> dan <code>max_heap_table_size</code></a></li>
+        <li><a href="#sort_buffer_size-dan-join_buffer_size"><code>sort_buffer_size</code> dan <code>join_buffer_size</code></a></li>
+        <li><a href="#table_open_cache"><code>table_open_cache</code></a></li>
+        <li><a href="#melihat-konfigurasi-aktif">Melihat Konfigurasi Aktif</a></li>
+        <li><a href="#konfigurasi-per-sesi">Konfigurasi per Sesi</a></li>
+      </ul>
+    </li>
+    <li><a href="#monitoring-performa">Monitoring Performa</a>
+      <ul>
+        <li><a href="#1-show-status">1. <code>SHOW STATUS</code></a></li>
+        <li><a href="#2-show-engine-innodb-status">2. <code>SHOW ENGINE INNODB STATUS</code></a></li>
+        <li><a href="#3-performance_schema">3. <code>performance_schema</code></a></li>
+        <li><a href="#4-sys-schema-mysql-57">4. <code>sys</code> Schema (MySQL 5.7+)</a></li>
+      </ul>
+    </li>
+    <li><a href="#checklist-optimasi">Checklist Optimasi</a></li>
+    <li><a href="#ringkasan">Ringkasan</a></li>
+  </ul>
+</nav>
+  </div>
+
+		</nav>
+		<main class="docs-content col-lg-11 col-xl-9">
+		
+				<nav aria-label="breadcrumb">
+					<ol class="breadcrumb">
+						<li class="breadcrumb-item"><a href="/">Home</a></li>
+<li class="breadcrumb-item"><a href="/mysql/">Mysql</a></li>
+<li class="breadcrumb-item"><a href="/mysql/tutorial/">Tutorial MySQL</a></li>
+<li class="breadcrumb-item active" aria-current="page">Optimasi Performa MySQL</li>
+					</ol>
+				</nav>
+			
+			<h1>Optimasi Performa MySQL</h1>
+			<p class="lead">Database yang lambat membuat aplikasi terasa berat. Artikel ini membahas cara menganalisis query dengan EXPLAIN, merancang index yang efektif, mengatur konfigurasi server, dan menerapkan best practice query tuning.</p>
+			<nav class="d-xl-none" aria-label="Quaternary navigation">
+				<div class="d-xl-none">
+  <button class="btn btn-outline-primary btn-sm doks-toc-toggle collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#onThisPage" aria-controls="doks-docs-nav" aria-expanded="false" aria-label="Toggle On this page navigation">
+    <span>Daftar isi</span>
+    <span>
+      <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" class="doks doks-expand" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><title>Expand</title><polyline points="7 13 12 18 17 13"></polyline><polyline points="7 6 12 11 17 6"></polyline></svg>
+      <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" class="doks doks-collapse" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><title>Collapse</title><polyline points="17 11 12 6 7 11"></polyline><polyline points="17 18 12 13 7 18"></polyline></svg>
+    </span>
+  </button>
+  <div class="collapse" id="onThisPage">
+    <div class="card card-body mt-3 py-1">
+      <div class="page-links">
+        <nav id="TableOfContents">
+  <ul>
+    <li><a href="#pendahuluan">Pendahuluan</a></li>
+    <li><a href="#menemukan-query-lambat">Menemukan Query Lambat</a>
+      <ul>
+        <li><a href="#1-slow-query-log">1. Slow Query Log</a></li>
+        <li><a href="#2-performance-schema">2. Performance Schema</a></li>
+        <li><a href="#3-show-processlist">3. <code>SHOW PROCESSLIST</code></a></li>
+      </ul>
+    </li>
+    <li><a href="#analisis-query-dengan-explain">Analisis Query dengan <code>EXPLAIN</code></a>
+      <ul>
+        <li><a href="#sintaks">Sintaks</a></li>
+        <li><a href="#contoh">Contoh</a></li>
+        <li><a href="#kolom-penting-di-explain">Kolom Penting di <code>EXPLAIN</code></a></li>
+        <li><a href="#nilai-type-dari-terbaik-ke-terburuk">Nilai <code>type</code> (dari terbaik ke terburuk)</a></li>
+        <li><a href="#nilai-extra-yang-perlu-diwaspadai">Nilai <code>Extra</code> yang Perlu Diwaspadai</a></li>
+        <li><a href="#contoh-query-tanpa-index">Contoh: Query Tanpa Index</a></li>
+        <li><a href="#explain-analyze-mysql-8018"><code>EXPLAIN ANALYZE</code> (MySQL 8.0.18+)</a></li>
+      </ul>
+    </li>
+    <li><a href="#strategi-indexing-yang-efektif">Strategi Indexing yang Efektif</a>
+      <ul>
+        <li><a href="#1-index-kolom-yang-sering-di-where-join-order-by">1. Index Kolom yang Sering di <code>WHERE</code>, <code>JOIN</code>, <code>ORDER BY</code></a></li>
+        <li><a href="#2-index-komposit-urutan-kolom-penting">2. Index Komposit: Urutan Kolom Penting</a></li>
+        <li><a href="#3-covering-index">3. Covering Index</a></li>
+        <li><a href="#4-index-untuk-order-by">4. Index untuk <code>ORDER BY</code></a></li>
+        <li><a href="#5-index-parsial-dengan-prefix">5. Index Parsial dengan Prefix</a></li>
+        <li><a href="#6-index-untuk-like">6. Index untuk <code>LIKE</code></a></li>
+        <li><a href="#7-hapus-index-yang-tidak-dipakai">7. Hapus Index yang Tidak Dipakai</a></li>
+        <li><a href="#8-index-dan-cardinality">8. Index dan Cardinality</a></li>
+      </ul>
+    </li>
+    <li><a href="#optimasi-query">Optimasi Query</a>
+      <ul>
+        <li><a href="#1-hindari-select-">1. Hindari <code>SELECT *</code></a></li>
+        <li><a href="#2-hindari-fungsi-pada-kolom-di-where">2. Hindari Fungsi pada Kolom di <code>WHERE</code></a></li>
+        <li><a href="#3-hindari-like-">3. Hindari <code>LIKE '%...'</code></a></li>
+        <li><a href="#4-gunakan-exists-daripada-in-untuk-subquery-besar">4. Gunakan <code>EXISTS</code> daripada <code>IN</code> untuk Subquery Besar</a></li>
+        <li><a href="#5-hindari-or-yang-menghalangi-index">5. Hindari <code>OR</code> yang Menghalangi Index</a></li>
+        <li><a href="#6-batasi-hasil-dengan-limit">6. Batasi Hasil dengan <code>LIMIT</code></a></li>
+        <li><a href="#7-optimasi-pagination">7. Optimasi Pagination</a></li>
+        <li><a href="#8-gunakan-union-all-jika-duplikat-tidak-masalah">8. Gunakan <code>UNION ALL</code> jika Duplikat Tidak Masalah</a></li>
+        <li><a href="#9-hindari-order-by-rand">9. Hindari <code>ORDER BY RAND()</code></a></li>
+        <li><a href="#10-analisis-dan-optimasi-tabel">10. Analisis dan Optimasi Tabel</a></li>
+      </ul>
+    </li>
+    <li><a href="#konfigurasi-mycnf">Konfigurasi <code>my.cnf</code></a>
+      <ul>
+        <li><a href="#innodb_buffer_pool_size"><code>innodb_buffer_pool_size</code></a></li>
+        <li><a href="#innodb_log_file_size"><code>innodb_log_file_size</code></a></li>
+        <li><a href="#innodb_flush_log_at_trx_commit"><code>innodb_flush_log_at_trx_commit</code></a></li>
+        <li><a href="#max_connections"><code>max_connections</code></a></li>
+        <li><a href="#query_cache_size-mysql-57"><code>query_cache_size</code> (MySQL 5.7)</a></li>
+        <li><a href="#tmp_table_size-dan-max_heap_table_size"><code>tmp_table_size</code> dan <code>max_heap_table_size</code></a></li>
+        <li><a href="#sort_buffer_size-dan-join_buffer_size"><code>sort_buffer_size</code> dan <code>join_buffer_size</code></a></li>
+        <li><a href="#table_open_cache"><code>table_open_cache</code></a></li>
+        <li><a href="#melihat-konfigurasi-aktif">Melihat Konfigurasi Aktif</a></li>
+        <li><a href="#konfigurasi-per-sesi">Konfigurasi per Sesi</a></li>
+      </ul>
+    </li>
+    <li><a href="#monitoring-performa">Monitoring Performa</a>
+      <ul>
+        <li><a href="#1-show-status">1. <code>SHOW STATUS</code></a></li>
+        <li><a href="#2-show-engine-innodb-status">2. <code>SHOW ENGINE INNODB STATUS</code></a></li>
+        <li><a href="#3-performance_schema">3. <code>performance_schema</code></a></li>
+        <li><a href="#4-sys-schema-mysql-57">4. <code>sys</code> Schema (MySQL 5.7+)</a></li>
+      </ul>
+    </li>
+    <li><a href="#checklist-optimasi">Checklist Optimasi</a></li>
+    <li><a href="#ringkasan">Ringkasan</a></li>
+  </ul>
+</nav>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="page-links d-none d-xl-block">
+  <h3>Daftar isi</h3>
+  <nav id="TableOfContents">
+  <ul>
+    <li><a href="#pendahuluan">Pendahuluan</a></li>
+    <li><a href="#menemukan-query-lambat">Menemukan Query Lambat</a>
+      <ul>
+        <li><a href="#1-slow-query-log">1. Slow Query Log</a></li>
+        <li><a href="#2-performance-schema">2. Performance Schema</a></li>
+        <li><a href="#3-show-processlist">3. <code>SHOW PROCESSLIST</code></a></li>
+      </ul>
+    </li>
+    <li><a href="#analisis-query-dengan-explain">Analisis Query dengan <code>EXPLAIN</code></a>
+      <ul>
+        <li><a href="#sintaks">Sintaks</a></li>
+        <li><a href="#contoh">Contoh</a></li>
+        <li><a href="#kolom-penting-di-explain">Kolom Penting di <code>EXPLAIN</code></a></li>
+        <li><a href="#nilai-type-dari-terbaik-ke-terburuk">Nilai <code>type</code> (dari terbaik ke terburuk)</a></li>
+        <li><a href="#nilai-extra-yang-perlu-diwaspadai">Nilai <code>Extra</code> yang Perlu Diwaspadai</a></li>
+        <li><a href="#contoh-query-tanpa-index">Contoh: Query Tanpa Index</a></li>
+        <li><a href="#explain-analyze-mysql-8018"><code>EXPLAIN ANALYZE</code> (MySQL 8.0.18+)</a></li>
+      </ul>
+    </li>
+    <li><a href="#strategi-indexing-yang-efektif">Strategi Indexing yang Efektif</a>
+      <ul>
+        <li><a href="#1-index-kolom-yang-sering-di-where-join-order-by">1. Index Kolom yang Sering di <code>WHERE</code>, <code>JOIN</code>, <code>ORDER BY</code></a></li>
+        <li><a href="#2-index-komposit-urutan-kolom-penting">2. Index Komposit: Urutan Kolom Penting</a></li>
+        <li><a href="#3-covering-index">3. Covering Index</a></li>
+        <li><a href="#4-index-untuk-order-by">4. Index untuk <code>ORDER BY</code></a></li>
+        <li><a href="#5-index-parsial-dengan-prefix">5. Index Parsial dengan Prefix</a></li>
+        <li><a href="#6-index-untuk-like">6. Index untuk <code>LIKE</code></a></li>
+        <li><a href="#7-hapus-index-yang-tidak-dipakai">7. Hapus Index yang Tidak Dipakai</a></li>
+        <li><a href="#8-index-dan-cardinality">8. Index dan Cardinality</a></li>
+      </ul>
+    </li>
+    <li><a href="#optimasi-query">Optimasi Query</a>
+      <ul>
+        <li><a href="#1-hindari-select-">1. Hindari <code>SELECT *</code></a></li>
+        <li><a href="#2-hindari-fungsi-pada-kolom-di-where">2. Hindari Fungsi pada Kolom di <code>WHERE</code></a></li>
+        <li><a href="#3-hindari-like-">3. Hindari <code>LIKE '%...'</code></a></li>
+        <li><a href="#4-gunakan-exists-daripada-in-untuk-subquery-besar">4. Gunakan <code>EXISTS</code> daripada <code>IN</code> untuk Subquery Besar</a></li>
+        <li><a href="#5-hindari-or-yang-menghalangi-index">5. Hindari <code>OR</code> yang Menghalangi Index</a></li>
+        <li><a href="#6-batasi-hasil-dengan-limit">6. Batasi Hasil dengan <code>LIMIT</code></a></li>
+        <li><a href="#7-optimasi-pagination">7. Optimasi Pagination</a></li>
+        <li><a href="#8-gunakan-union-all-jika-duplikat-tidak-masalah">8. Gunakan <code>UNION ALL</code> jika Duplikat Tidak Masalah</a></li>
+        <li><a href="#9-hindari-order-by-rand">9. Hindari <code>ORDER BY RAND()</code></a></li>
+        <li><a href="#10-analisis-dan-optimasi-tabel">10. Analisis dan Optimasi Tabel</a></li>
+      </ul>
+    </li>
+    <li><a href="#konfigurasi-mycnf">Konfigurasi <code>my.cnf</code></a>
+      <ul>
+        <li><a href="#innodb_buffer_pool_size"><code>innodb_buffer_pool_size</code></a></li>
+        <li><a href="#innodb_log_file_size"><code>innodb_log_file_size</code></a></li>
+        <li><a href="#innodb_flush_log_at_trx_commit"><code>innodb_flush_log_at_trx_commit</code></a></li>
+        <li><a href="#max_connections"><code>max_connections</code></a></li>
+        <li><a href="#query_cache_size-mysql-57"><code>query_cache_size</code> (MySQL 5.7)</a></li>
+        <li><a href="#tmp_table_size-dan-max_heap_table_size"><code>tmp_table_size</code> dan <code>max_heap_table_size</code></a></li>
+        <li><a href="#sort_buffer_size-dan-join_buffer_size"><code>sort_buffer_size</code> dan <code>join_buffer_size</code></a></li>
+        <li><a href="#table_open_cache"><code>table_open_cache</code></a></li>
+        <li><a href="#melihat-konfigurasi-aktif">Melihat Konfigurasi Aktif</a></li>
+        <li><a href="#konfigurasi-per-sesi">Konfigurasi per Sesi</a></li>
+      </ul>
+    </li>
+    <li><a href="#monitoring-performa">Monitoring Performa</a>
+      <ul>
+        <li><a href="#1-show-status">1. <code>SHOW STATUS</code></a></li>
+        <li><a href="#2-show-engine-innodb-status">2. <code>SHOW ENGINE INNODB STATUS</code></a></li>
+        <li><a href="#3-performance_schema">3. <code>performance_schema</code></a></li>
+        <li><a href="#4-sys-schema-mysql-57">4. <code>sys</code> Schema (MySQL 5.7+)</a></li>
+      </ul>
+    </li>
+    <li><a href="#checklist-optimasi">Checklist Optimasi</a></li>
+    <li><a href="#ringkasan">Ringkasan</a></li>
+  </ul>
+</nav>
+  </div>
+
+			</nav>
+			<h2 id="pendahuluan">Pendahuluan <a href="#pendahuluan" class="anchor" aria-hidden="true">#</a></h2>
+<p>Seiring bertambahnya data, query yang dulu cepat bisa menjadi lambat. Optimasi performa adalah proses berkelanjutan: mengidentifikasi query lambat, menganalisis penyebabnya, lalu memperbaikinya — baik melalui <strong>index</strong>, <strong>rewrite query</strong>, maupun <strong>konfigurasi server</strong>.</p>
+<p>Artikel ini membahas:</p>
+<ul>
+<li>Cara menemukan query lambat.</li>
+<li>Analisis query dengan <code>EXPLAIN</code>.</li>
+<li>Strategi indexing yang efektif.</li>
+<li>Konfigurasi <code>my.cnf</code> yang penting.</li>
+<li>Best practice penulisan query.</li>
+</ul>
+<blockquote>
+<p><strong>Asumsi:</strong> Anda berada di database <code>toko_online</code> dengan data yang cukup banyak (minimal ribuan baris) agar perbedaan performa terasa.</p>
+</blockquote>
+<hr>
+<h2 id="menemukan-query-lambat">Menemukan Query Lambat <a href="#menemukan-query-lambat" class="anchor" aria-hidden="true">#</a></h2>
+<p>Sebelum mengoptimasi, kita harus tahu <strong>query mana</strong> yang lambat.</p>
+<h3 id="1-slow-query-log">1. Slow Query Log <a href="#1-slow-query-log" class="anchor" aria-hidden="true">#</a></h3>
+<p>Aktifkan slow query log untuk mencatat query yang melebihi ambang waktu tertentu.</p>
+<p><strong>Via SQL:</strong></p>
+<pre><code class="language-sql">SET GLOBAL slow_query_log = 'ON';
+SET GLOBAL slow_query_log_file = '/var/log/mysql/slow.log';
+SET GLOBAL long_query_time = 1;  -- catat query &gt; 1 detik
+</code></pre>
+<p><strong>Via <code>my.cnf</code>:</strong></p>
+<pre><code class="language-ini">[mysqld]
+slow_query_log = 1
+slow_query_log_file = /var/log/mysql/slow.log
+long_query_time = 1
+log_queries_not_using_indexes = 1
+</code></pre>
+<p>Setelah beberapa saat, analisis log:</p>
+<pre><code class="language-bash">mysqldumpslow -s t -t 10 /var/log/mysql/slow.log
+</code></pre>
+<p>Perintah ini menampilkan 10 query yang paling lama total waktunya.</p>
+<p>Atau gunakan <strong>pt-query-digest</strong> (Percona Toolkit) untuk analisis lebih mendalam:</p>
+<pre><code class="language-bash">pt-query-digest /var/log/mysql/slow.log
+</code></pre>
+<h3 id="2-performance-schema">2. Performance Schema <a href="#2-performance-schema" class="anchor" aria-hidden="true">#</a></h3>
+<p>MySQL 8 memiliki <strong>Performance Schema</strong> yang menyimpan statistik query secara real-time:</p>
+<pre><code class="language-sql">SELECT
+  DIGEST_TEXT,
+  COUNT_STAR AS jumlah_eksekusi,
+  ROUND(SUM_TIMER_WAIT / 1000000000000, 2) AS total_detik,
+  ROUND(AVG_TIMER_WAIT / 1000000000000, 4) AS rata_rata_detik,
+  SUM_ROWS_EXAMINED AS baris_diperiksa
+FROM performance_schema.events_statements_summary_by_digest
+ORDER BY SUM_TIMER_WAIT DESC
+LIMIT 10;
+</code></pre>
+<p>Query ini menampilkan 10 query dengan total waktu eksekusi terbesar.</p>
+<h3 id="3-show-processlist">3. <code>SHOW PROCESSLIST</code> <a href="#3-show-processlist" class="anchor" aria-hidden="true">#</a></h3>
+<p>Melihat query yang <strong>sedang berjalan</strong>:</p>
+<pre><code class="language-sql">SHOW FULL PROCESSLIST;
+</code></pre>
+<p>Atau:</p>
+<pre><code class="language-sql">SELECT id, user, host, db, command, time, state, info
+FROM information_schema.processlist
+WHERE command &lt;&gt; 'Sleep'
+ORDER BY time DESC;
+</code></pre>
+<p>Query dengan <code>time</code> besar dan <code>state</code> seperti <code>Sending data</code> atau <code>Copying to tmp table</code> patut dicurigai.</p>
+<hr>
+<h2 id="analisis-query-dengan-explain">Analisis Query dengan <code>EXPLAIN</code> <a href="#analisis-query-dengan-explain" class="anchor" aria-hidden="true">#</a></h2>
+<p><code>EXPLAIN</code> menunjukkan <strong>execution plan</strong> — bagaimana MySQL akan mengeksekusi query.</p>
+<h3 id="sintaks">Sintaks <a href="#sintaks" class="anchor" aria-hidden="true">#</a></h3>
+<pre><code class="language-sql">EXPLAIN SELECT ...;
+</code></pre>
+<p>Untuk informasi lebih detail (MySQL 8.0.18+):</p>
+<pre><code class="language-sql">EXPLAIN ANALYZE SELECT ...;
+</code></pre>
+<p><code>EXPLAIN ANALYZE</code> benar-benar <strong>menjalankan</strong> query dan menampilkan waktu aktual per langkah.</p>
+<h3 id="contoh">Contoh <a href="#contoh" class="anchor" aria-hidden="true">#</a></h3>
+<pre><code class="language-sql">EXPLAIN SELECT * FROM pesanan WHERE pelanggan_id = 5;
+</code></pre>
+<p>Output contoh:</p>
+<pre><code>+----+-------------+---------+------------+------+---------------------+---------+---------+-------+------+----------+-------+
+| id | select_type | table   | partitions | type | possible_keys       | key     | key_len | ref   | rows | filtered | Extra |
++----+-------------+---------+------------+------+---------------------+---------+---------+-------+------+----------+-------+
+|  1 | SIMPLE      | pesanan | NULL       | ref  | fk_pesanan_pelanggan| fk_...  | 4       | const |    10|   100.00 | NULL  |
++----+-------------+---------+------------+------+---------------------+---------+---------+-------+------+----------+-------+
+</code></pre>
+<h3 id="kolom-penting-di-explain">Kolom Penting di <code>EXPLAIN</code> <a href="#kolom-penting-di-explain" class="anchor" aria-hidden="true">#</a></h3>
+<table>
+<thead>
+<tr>
+<th>Kolom</th>
+<th>Arti</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>type</code></td>
+<td>Cara akses tabel — <strong>paling penting</strong></td>
+</tr>
+<tr>
+<td><code>possible_keys</code></td>
+<td>Index yang mungkin dipakai</td>
+</tr>
+<tr>
+<td><code>key</code></td>
+<td>Index yang <strong>benar-benar</strong> dipakai</td>
+</tr>
+<tr>
+<td><code>key_len</code></td>
+<td>Panjang index yang dipakai</td>
+</tr>
+<tr>
+<td><code>rows</code></td>
+<td>Perkiraan jumlah baris yang diperiksa</td>
+</tr>
+<tr>
+<td><code>filtered</code></td>
+<td>Persentase baris yang lolos filter</td>
+</tr>
+<tr>
+<td><code>Extra</code></td>
+<td>Informasi tambahan (misalnya <code>Using filesort</code>, <code>Using temporary</code>)</td>
+</tr>
+</tbody>
+</table>
+<h3 id="nilai-type-dari-terbaik-ke-terburuk">Nilai <code>type</code> (dari terbaik ke terburuk) <a href="#nilai-type-dari-terbaik-ke-terburuk" class="anchor" aria-hidden="true">#</a></h3>
+<table>
+<thead>
+<tr>
+<th><code>type</code></th>
+<th>Keterangan</th>
+<th>Kualitas</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>system</code></td>
+<td>Tabel hanya 1 baris</td>
+<td>⭐⭐⭐⭐⭐</td>
+</tr>
+<tr>
+<td><code>const</code></td>
+<td>Pencarian via <code>PRIMARY KEY</code> / <code>UNIQUE</code></td>
+<td>⭐⭐⭐⭐⭐</td>
+</tr>
+<tr>
+<td><code>eq_ref</code></td>
+<td>Satu baris per baris tabel lain (JOIN via PK)</td>
+<td>⭐⭐⭐⭐⭐</td>
+</tr>
+<tr>
+<td><code>ref</code></td>
+<td>Pencarian via index non-unique</td>
+<td>⭐⭐⭐⭐</td>
+</tr>
+<tr>
+<td><code>range</code></td>
+<td>Pencarian rentang via index</td>
+<td>⭐⭐⭐</td>
+</tr>
+<tr>
+<td><code>index</code></td>
+<td>Full index scan</td>
+<td>⭐⭐</td>
+</tr>
+<tr>
+<td><code>ALL</code></td>
+<td><strong>Full table scan</strong></td>
+<td>⭐ (buruk untuk tabel besar)</td>
+</tr>
+</tbody>
+</table>
+<blockquote>
+<p><strong>Target:</strong> Usahakan <code>type</code> minimal <code>range</code>, idealnya <code>ref</code> atau lebih baik. Jika <code>type = ALL</code> pada tabel besar, itu kandidat utama untuk optimasi.</p>
+</blockquote>
+<h3 id="nilai-extra-yang-perlu-diwaspadai">Nilai <code>Extra</code> yang Perlu Diwaspadai <a href="#nilai-extra-yang-perlu-diwaspadai" class="anchor" aria-hidden="true">#</a></h3>
+<table>
+<thead>
+<tr>
+<th><code>Extra</code></th>
+<th>Arti</th>
+<th>Tindakan</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>Using filesort</code></td>
+<td>Sorting tanpa index</td>
+<td>Tambah index pada kolom <code>ORDER BY</code></td>
+</tr>
+<tr>
+<td><code>Using temporary</code></td>
+<td>Membuat tabel sementara</td>
+<td>Optimasi <code>GROUP BY</code> / <code>DISTINCT</code></td>
+</tr>
+<tr>
+<td><code>Using where</code></td>
+<td>Filter setelah baca</td>
+<td>Normal, tetapi cek apakah index bisa membantu</td>
+</tr>
+<tr>
+<td><code>Using index</code></td>
+<td><strong>Covering index</strong> — bagus!</td>
+<td>Tidak perlu tindakan</td>
+</tr>
+<tr>
+<td><code>Using join buffer</code></td>
+<td>JOIN tanpa index</td>
+<td>Tambah index pada kolom JOIN</td>
+</tr>
+</tbody>
+</table>
+<h3 id="contoh-query-tanpa-index">Contoh: Query Tanpa Index <a href="#contoh-query-tanpa-index" class="anchor" aria-hidden="true">#</a></h3>
+<pre><code class="language-sql">EXPLAIN SELECT * FROM pelanggan WHERE email = 'budi@example.com';
+</code></pre>
+<p>Jika <code>email</code> tidak memiliki index, output akan menunjukkan <code>type = ALL</code> dan <code>rows</code> = jumlah seluruh baris tabel.</p>
+<p>Setelah menambah index:</p>
+<pre><code class="language-sql">CREATE INDEX idx_email ON pelanggan (email);
+</code></pre>
+<p>Jalankan <code>EXPLAIN</code> lagi — <code>type</code> berubah menjadi <code>ref</code> dan <code>rows</code> turun drastis.</p>
+<h3 id="explain-analyze-mysql-8018"><code>EXPLAIN ANALYZE</code> (MySQL 8.0.18+) <a href="#explain-analyze-mysql-8018" class="anchor" aria-hidden="true">#</a></h3>
+<pre><code class="language-sql">EXPLAIN ANALYZE
+SELECT p.nama, COUNT(ps.id) AS jumlah_pesanan
+FROM pelanggan p
+LEFT JOIN pesanan ps ON ps.pelanggan_id = p.id
+GROUP BY p.id, p.nama;
+</code></pre>
+<p>Output menampilkan <strong>waktu aktual</strong> per langkah, misalnya:</p>
+<pre><code>-&gt; Table scan on p  (cost=... rows=1000) (actual time=0.05..2.10 rows=1000 loops=1)
+    -&gt; Index lookup on ps using fk_pesanan_pelanggan (pelanggan_id=p.id)  (actual time=0.01..0.02 rows=3 loops=1000)
+</code></pre>
+<p>Gunakan ini untuk menemukan langkah mana yang paling memakan waktu.</p>
+<hr>
+<h2 id="strategi-indexing-yang-efektif">Strategi Indexing yang Efektif <a href="#strategi-indexing-yang-efektif" class="anchor" aria-hidden="true">#</a></h2>
+<p>Index adalah alat optimasi paling powerful — tetapi harus digunakan dengan tepat.</p>
+<h3 id="1-index-kolom-yang-sering-di-where-join-order-by">1. Index Kolom yang Sering di <code>WHERE</code>, <code>JOIN</code>, <code>ORDER BY</code> <a href="#1-index-kolom-yang-sering-di-where-join-order-by" class="anchor" aria-hidden="true">#</a></h3>
+<pre><code class="language-sql">-- Sering: WHERE status = 'selesai'
+CREATE INDEX idx_status ON pesanan (status);
+
+-- Sering: JOIN ON pelanggan_id
+CREATE INDEX idx_pelanggan ON pesanan (pelanggan_id);
+
+-- Sering: ORDER BY dibuat_pada DESC
+CREATE INDEX idx_tanggal ON pesanan (dibuat_pada);
+</code></pre>
+<h3 id="2-index-komposit-urutan-kolom-penting">2. Index Komposit: Urutan Kolom Penting <a href="#2-index-komposit-urutan-kolom-penting" class="anchor" aria-hidden="true">#</a></h3>
+<p>Index komposit <code>(kolom_a, kolom_b)</code> bisa dipakai untuk:</p>
+<ul>
+<li>Query yang memfilter <code>kolom_a</code> saja. ✅</li>
+<li>Query yang memfilter <code>kolom_a</code> <strong>dan</strong> <code>kolom_b</code>. ✅</li>
+<li>Query yang memfilter <code>kolom_b</code> saja. ❌ (tidak dipakai)</li>
+</ul>
+<pre><code class="language-sql">CREATE INDEX idx_status_total ON pesanan (status, total);
+</code></pre>
+<p>Dipakai untuk:</p>
+<pre><code class="language-sql">SELECT * FROM pesanan WHERE status = 'selesai';           -- ✅
+SELECT * FROM pesanan WHERE status = 'selesai' AND total &gt; 100000;  -- ✅
+SELECT * FROM pesanan WHERE total &gt; 100000;               -- ❌
+</code></pre>
+<blockquote>
+<p><strong>Aturan:</strong> Kolom dengan <strong>cardinality tinggi</strong> (banyak nilai unik) sebaiknya di depan, kecuali ada alasan spesifik.</p>
+</blockquote>
+<h3 id="3-covering-index">3. Covering Index <a href="#3-covering-index" class="anchor" aria-hidden="true">#</a></h3>
+<p><strong>Covering index</strong> adalah index yang mencakup <strong>semua kolom</strong> yang dibutuhkan query, sehingga MySQL tidak perlu membaca tabel sama sekali.</p>
+<pre><code class="language-sql">-- Query
+SELECT status, total FROM pesanan WHERE status = 'selesai';
+
+-- Covering index
+CREATE INDEX idx_covering ON pesanan (status, total);
+</code></pre>
+<p><code>EXPLAIN</code> akan menunjukkan <code>Extra: Using index</code> — tanda covering index dipakai.</p>
+<h3 id="4-index-untuk-order-by">4. Index untuk <code>ORDER BY</code> <a href="#4-index-untuk-order-by" class="anchor" aria-hidden="true">#</a></h3>
+<p>Jika query sering menggunakan <code>ORDER BY</code> pada kolom tertentu, index bisa menghindari <code>filesort</code>:</p>
+<pre><code class="language-sql">-- Query
+SELECT * FROM produk ORDER BY harga DESC LIMIT 10;
+
+-- Index
+CREATE INDEX idx_harga ON produk (harga);
+</code></pre>
+<p><code>EXPLAIN</code> akan menghilangkan <code>Using filesort</code>.</p>
+<h3 id="5-index-parsial-dengan-prefix">5. Index Parsial dengan Prefix <a href="#5-index-parsial-dengan-prefix" class="anchor" aria-hidden="true">#</a></h3>
+<p>Untuk kolom <code>VARCHAR</code> panjang, index prefix menghemat ruang:</p>
+<pre><code class="language-sql">CREATE INDEX idx_nama_prefix ON pelanggan (nama(20));
+</code></pre>
+<p>Index hanya menyimpan 20 karakter pertama. Cocok untuk pencarian <code>LIKE 'Budi%'</code>, tetapi tidak untuk pencarian exact pada string panjang.</p>
+<h3 id="6-index-untuk-like">6. Index untuk <code>LIKE</code> <a href="#6-index-untuk-like" class="anchor" aria-hidden="true">#</a></h3>
+<p>Index <strong>hanya</strong> dipakai jika wildcard ada di akhir:</p>
+<pre><code class="language-sql">-- ✅ Index dipakai
+SELECT * FROM produk WHERE nama LIKE 'Key%';
+
+-- ❌ Index tidak dipakai (full scan)
+SELECT * FROM produk WHERE nama LIKE '%board';
+
+-- ❌ Index tidak dipakai
+SELECT * FROM produk WHERE nama LIKE '%ard%';
+</code></pre>
+<p>Untuk pencarian teks penuh, gunakan <strong>FULLTEXT index</strong>:</p>
+<pre><code class="language-sql">CREATE FULLTEXT INDEX idx_deskripsi ON produk (deskripsi);
+SELECT * FROM produk WHERE MATCH(deskripsi) AGAINST('gaming' IN NATURAL LANGUAGE MODE);
+</code></pre>
+<h3 id="7-hapus-index-yang-tidak-dipakai">7. Hapus Index yang Tidak Dipakai <a href="#7-hapus-index-yang-tidak-dipakai" class="anchor" aria-hidden="true">#</a></h3>
+<p>Index berlebih memperlambat <code>INSERT</code>/<code>UPDATE</code>/<code>DELETE</code>. Cek index yang jarang dipakai:</p>
+<pre><code class="language-sql">SELECT
+  object_schema,
+  object_name,
+  index_name
+FROM performance_schema.table_io_waits_summary_by_index_usage
+WHERE index_name IS NOT NULL
+  AND count_star = 0
+  AND object_schema = 'toko_online';
+</code></pre>
+<p>Index dengan <code>count_star = 0</code> tidak pernah dipakai — kandidat untuk dihapus.</p>
+<h3 id="8-index-dan-cardinality">8. Index dan Cardinality <a href="#8-index-dan-cardinality" class="anchor" aria-hidden="true">#</a></h3>
+<p>Cek cardinality (jumlah nilai unik) index:</p>
+<pre><code class="language-sql">SHOW INDEX FROM pesanan;
+</code></pre>
+<p>Kolom <code>Cardinality</code> menunjukkan perkiraan nilai unik. Index pada kolom dengan cardinality sangat rendah (misalnya <code>status</code> hanya 3 nilai) kurang efektif untuk query yang memilih sebagian besar baris — optimizer mungkin memilih full scan.</p>
+<hr>
+<h2 id="optimasi-query">Optimasi Query <a href="#optimasi-query" class="anchor" aria-hidden="true">#</a></h2>
+<p>Selain index, cara menulis query sangat memengaruhi performa.</p>
+<h3 id="1-hindari-select-">1. Hindari <code>SELECT *</code> <a href="#1-hindari-select-" class="anchor" aria-hidden="true">#</a></h3>
+<pre><code class="language-sql">-- ❌ Mengambil semua kolom, termasuk yang tidak perlu
+SELECT * FROM pelanggan;
+
+-- ✅ Ambil kolom yang dibutuhkan saja
+SELECT id, nama, email FROM pelanggan;
+</code></pre>
+<p><code>SELECT *</code> menghalangi covering index dan mengirim data berlebih.</p>
+<h3 id="2-hindari-fungsi-pada-kolom-di-where">2. Hindari Fungsi pada Kolom di <code>WHERE</code> <a href="#2-hindari-fungsi-pada-kolom-di-where" class="anchor" aria-hidden="true">#</a></h3>
+<pre><code class="language-sql">-- ❌ Index pada dibuat_pada tidak dipakai
+SELECT * FROM pesanan WHERE YEAR(dibuat_pada) = 2022;
+
+-- ✅ Index dipakai
+SELECT * FROM pesanan
+WHERE dibuat_pada &gt;= '2022-01-01' AND dibuat_pada &lt; '2023-01-01';
+</code></pre>
+<h3 id="3-hindari-like-">3. Hindari <code>LIKE '%...'</code> <a href="#3-hindari-like-" class="anchor" aria-hidden="true">#</a></h3>
+<p>Seperti dibahas, wildcard di awal menghalangi index. Gunakan FULLTEXT atau pertimbangkan strategi lain.</p>
+<h3 id="4-gunakan-exists-daripada-in-untuk-subquery-besar">4. Gunakan <code>EXISTS</code> daripada <code>IN</code> untuk Subquery Besar <a href="#4-gunakan-exists-daripada-in-untuk-subquery-besar" class="anchor" aria-hidden="true">#</a></h3>
+<pre><code class="language-sql">-- ❌ Bisa lambat jika subquery besar
+SELECT * FROM pelanggan
+WHERE id IN (SELECT pelanggan_id FROM pesanan WHERE total &gt; 1000000);
+
+-- ✅ Lebih cepat
+SELECT * FROM pelanggan p
+WHERE EXISTS (
+  SELECT 1 FROM pesanan ps
+  WHERE ps.pelanggan_id = p.id AND ps.total &gt; 1000000
+);
+</code></pre>
+<h3 id="5-hindari-or-yang-menghalangi-index">5. Hindari <code>OR</code> yang Menghalangi Index <a href="#5-hindari-or-yang-menghalangi-index" class="anchor" aria-hidden="true">#</a></h3>
+<pre><code class="language-sql">-- ❌ OR pada kolom berbeda bisa menghalangi index
+SELECT * FROM produk WHERE harga &gt; 1000000 OR stok = 0;
+
+-- ✅ Pisahkan dengan UNION
+SELECT * FROM produk WHERE harga &gt; 1000000
+UNION
+SELECT * FROM produk WHERE stok = 0;
+</code></pre>
+<h3 id="6-batasi-hasil-dengan-limit">6. Batasi Hasil dengan <code>LIMIT</code> <a href="#6-batasi-hasil-dengan-limit" class="anchor" aria-hidden="true">#</a></h3>
+<pre><code class="language-sql">SELECT * FROM pesanan ORDER BY dibuat_pada DESC LIMIT 20;
+</code></pre>
+<p>Jangan mengambil seluruh tabel jika hanya butuh sebagian.</p>
+<h3 id="7-optimasi-pagination">7. Optimasi Pagination <a href="#7-optimasi-pagination" class="anchor" aria-hidden="true">#</a></h3>
+<p><code>LIMIT</code> dengan <code>OFFSET</code> besar menjadi lambat karena MySQL tetap memindai baris yang dilewati:</p>
+<pre><code class="language-sql">-- ❌ Lambat untuk offset besar
+SELECT * FROM pesanan ORDER BY id LIMIT 10 OFFSET 100000;
+
+-- ✅ Keyset pagination (lebih cepat)
+SELECT * FROM pesanan WHERE id &gt; 100000 ORDER BY id LIMIT 10;
+</code></pre>
+<p>Keyset pagination menggunakan nilai terakhir dari halaman sebelumnya.</p>
+<h3 id="8-gunakan-union-all-jika-duplikat-tidak-masalah">8. Gunakan <code>UNION ALL</code> jika Duplikat Tidak Masalah <a href="#8-gunakan-union-all-jika-duplikat-tidak-masalah" class="anchor" aria-hidden="true">#</a></h3>
+<pre><code class="language-sql">-- UNION menghilangkan duplikat (perlu sorting)
+SELECT ... UNION SELECT ...
+
+-- UNION ALL lebih cepat
+SELECT ... UNION ALL SELECT ...
+</code></pre>
+<h3 id="9-hindari-order-by-rand">9. Hindari <code>ORDER BY RAND()</code> <a href="#9-hindari-order-by-rand" class="anchor" aria-hidden="true">#</a></h3>
+<pre><code class="language-sql">-- ❌ Sangat lambat untuk tabel besar
+SELECT * FROM produk ORDER BY RAND() LIMIT 10;
+
+-- ✅ Alternatif: ambil berdasarkan ID acak
+SELECT * FROM produk WHERE id &gt;= (
+  SELECT FLOOR(RAND() * (SELECT MAX(id) FROM produk))
+) LIMIT 10;
+</code></pre>
+<h3 id="10-analisis-dan-optimasi-tabel">10. Analisis dan Optimasi Tabel <a href="#10-analisis-dan-optimasi-tabel" class="anchor" aria-hidden="true">#</a></h3>
+<pre><code class="language-sql">ANALYZE TABLE pesanan;   -- perbarui statistik untuk optimizer
+OPTIMIZE TABLE pesanan;  -- defragmentasi tabel (hati-hati: mengunci tabel)
+</code></pre>
+<p><code>ANALYZE TABLE</code> membantu optimizer memilih index yang tepat.</p>
+<hr>
+<h2 id="konfigurasi-mycnf">Konfigurasi <code>my.cnf</code> <a href="#konfigurasi-mycnf" class="anchor" aria-hidden="true">#</a></h2>
+<p>Konfigurasi server yang tepat bisa meningkatkan performa secara signifikan. Berikut parameter penting:</p>
+<h3 id="innodb_buffer_pool_size"><code>innodb_buffer_pool_size</code> <a href="#innodb_buffer_pool_size" class="anchor" aria-hidden="true">#</a></h3>
+<p><strong>Parameter paling penting</strong> untuk performa InnoDB. Menentukan ukuran cache data dan index di memori.</p>
+<pre><code class="language-ini">[mysqld]
+innodb_buffer_pool_size = 4G
+</code></pre>
+<p><strong>Rekomendasi:</strong> 50–70% dari RAM server khusus MySQL. Untuk server 8 GB, gunakan 4–5 GB.</p>
+<p>Cek ukuran saat ini:</p>
+<pre><code class="language-sql">SHOW VARIABLES LIKE 'innodb_buffer_pool_size';
+</code></pre>
+<p>Cek hit ratio (idealnya &gt; 99%):</p>
+<pre><code class="language-sql">SHOW STATUS LIKE 'Innodb_buffer_pool_read%';
+</code></pre>
+<p>Rasio = <code>1 - (Innodb_buffer_pool_reads / Innodb_buffer_pool_read_requests)</code>.</p>
+<h3 id="innodb_log_file_size"><code>innodb_log_file_size</code> <a href="#innodb_log_file_size" class="anchor" aria-hidden="true">#</a></h3>
+<p>Ukuran redo log. Lebih besar = lebih sedikit checkpoint, tetapi recovery lebih lama.</p>
+<pre><code class="language-ini">innodb_log_file_size = 512M
+</code></pre>
+<p><strong>Rekomendasi:</strong> 256 MB–1 GB untuk workload OLTP.</p>
+<h3 id="innodb_flush_log_at_trx_commit"><code>innodb_flush_log_at_trx_commit</code> <a href="#innodb_flush_log_at_trx_commit" class="anchor" aria-hidden="true">#</a></h3>
+<p>Mengontrol durability vs performa:</p>
+<table>
+<thead>
+<tr>
+<th>Nilai</th>
+<th>Perilaku</th>
+<th>Durability</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>1</code> (default)</td>
+<td>Flush ke disk setiap commit</td>
+<td>Paling aman</td>
+</tr>
+<tr>
+<td><code>2</code></td>
+<td>Flush ke OS cache setiap commit, disk setiap detik</td>
+<td>Kompromi</td>
+</tr>
+<tr>
+<td><code>0</code></td>
+<td>Flush setiap detik</td>
+<td>Paling cepat, risiko kehilangan data</td>
+</tr>
+</tbody>
+</table>
+<pre><code class="language-ini">innodb_flush_log_at_trx_commit = 1  # untuk data kritis
+</code></pre>
+<h3 id="max_connections"><code>max_connections</code> <a href="#max_connections" class="anchor" aria-hidden="true">#</a></h3>
+<p>Jumlah koneksi simultan maksimum.</p>
+<pre><code class="language-ini">max_connections = 200
+</code></pre>
+<p>Cek penggunaan:</p>
+<pre><code class="language-sql">SHOW STATUS LIKE 'Max_used_connections';
+SHOW VARIABLES LIKE 'max_connections';
+</code></pre>
+<p>Jika <code>Max_used_connections</code> mendekati <code>max_connections</code>, naikkan — tetapi ingat setiap koneksi memakan memori.</p>
+<h3 id="query_cache_size-mysql-57"><code>query_cache_size</code> (MySQL 5.7) <a href="#query_cache_size-mysql-57" class="anchor" aria-hidden="true">#</a></h3>
+<blockquote>
+<p>⚠️ <strong>Catatan:</strong> Query cache <strong>dihapus di MySQL 8.0</strong> karena sering menjadi bottleneck. Jika Anda masih di MySQL 5.7, pertimbangkan untuk menonaktifkannya (<code>query_cache_type = 0</code>) dan mengandalkan buffer pool.</p>
+</blockquote>
+<h3 id="tmp_table_size-dan-max_heap_table_size"><code>tmp_table_size</code> dan <code>max_heap_table_size</code> <a href="#tmp_table_size-dan-max_heap_table_size" class="anchor" aria-hidden="true">#</a></h3>
+<p>Ukuran maksimum tabel sementara di memori. Jika terlampaui, MySQL membuat tabel sementara di disk (lambat).</p>
+<pre><code class="language-ini">tmp_table_size = 64M
+max_heap_table_size = 64M
+</code></pre>
+<p>Keduanya sebaiknya diset sama.</p>
+<h3 id="sort_buffer_size-dan-join_buffer_size"><code>sort_buffer_size</code> dan <code>join_buffer_size</code> <a href="#sort_buffer_size-dan-join_buffer_size" class="anchor" aria-hidden="true">#</a></h3>
+<p>Buffer untuk sorting dan JOIN tanpa index. Jangan diset terlalu besar secara global — lebih baik diatur per sesi jika perlu.</p>
+<pre><code class="language-ini">sort_buffer_size = 2M
+join_buffer_size = 2M
+</code></pre>
+<h3 id="table_open_cache"><code>table_open_cache</code> <a href="#table_open_cache" class="anchor" aria-hidden="true">#</a></h3>
+<p>Jumlah file tabel yang bisa dibuka bersamaan.</p>
+<pre><code class="language-ini">table_open_cache = 4000
+</code></pre>
+<p>Cek:</p>
+<pre><code class="language-sql">SHOW STATUS LIKE 'Open_tables';
+SHOW VARIABLES LIKE 'table_open_cache';
+</code></pre>
+<h3 id="melihat-konfigurasi-aktif">Melihat Konfigurasi Aktif <a href="#melihat-konfigurasi-aktif" class="anchor" aria-hidden="true">#</a></h3>
+<pre><code class="language-sql">SHOW VARIABLES LIKE 'innodb_buffer_pool_size';
+SHOW VARIABLES LIKE '%buffer%';
+</code></pre>
+<p>Atau semua:</p>
+<pre><code class="language-sql">SHOW VARIABLES;
+</code></pre>
+<h3 id="konfigurasi-per-sesi">Konfigurasi per Sesi <a href="#konfigurasi-per-sesi" class="anchor" aria-hidden="true">#</a></h3>
+<p>Beberapa parameter bisa diubah per sesi tanpa restart:</p>
+<pre><code class="language-sql">SET SESSION sort_buffer_size = 4 * 1024 * 1024;
+SET SESSION join_buffer_size = 4 * 1024 * 1024;
+</code></pre>
+<hr>
+<h2 id="monitoring-performa">Monitoring Performa <a href="#monitoring-performa" class="anchor" aria-hidden="true">#</a></h2>
+<h3 id="1-show-status">1. <code>SHOW STATUS</code> <a href="#1-show-status" class="anchor" aria-hidden="true">#</a></h3>
+<pre><code class="language-sql">SHOW GLOBAL STATUS LIKE 'Questions';        -- total query
+SHOW GLOBAL STATUS LIKE 'Uptime';           -- detik sejak start
+SHOW GLOBAL STATUS LIKE 'Threads_connected';-- koneksi aktif
+SHOW GLOBAL STATUS LIKE 'Slow_queries';     -- jumlah slow query
+</code></pre>
+<p>Hitung QPS (query per second):</p>
+<pre><code class="language-sql">SELECT
+  (SELECT VARIABLE_VALUE FROM performance_schema.global_status WHERE VARIABLE_NAME = 'Questions') /
+  (SELECT VARIABLE_VALUE FROM performance_schema.global_status WHERE VARIABLE_NAME = 'Uptime') AS qps;
+</code></pre>
+<h3 id="2-show-engine-innodb-status">2. <code>SHOW ENGINE INNODB STATUS</code> <a href="#2-show-engine-innodb-status" class="anchor" aria-hidden="true">#</a></h3>
+<pre><code class="language-sql">SHOW ENGINE INNODB STATUS\G
+</code></pre>
+<p>Menampilkan informasi mendetail tentang InnoDB: lock, deadlock terakhir, buffer pool, I/O, dll.</p>
+<h3 id="3-performance_schema">3. <code>performance_schema</code> <a href="#3-performance_schema" class="anchor" aria-hidden="true">#</a></h3>
+<p>Performance Schema menyediakan metrik mendalam:</p>
+<pre><code class="language-sql">-- Query paling boros
+SELECT DIGEST_TEXT, COUNT_STAR, SUM_ROWS_EXAMINED, SUM_ROWS_SENT
+FROM performance_schema.events_statements_summary_by_digest
+ORDER BY SUM_ROWS_EXAMINED DESC
+LIMIT 10;
+</code></pre>
+<pre><code class="language-sql">-- Tabel yang paling sering diakses
+SELECT OBJECT_NAME, COUNT_READ, COUNT_WRITE
+FROM performance_schema.table_io_waits_summary_by_table
+ORDER BY COUNT_READ + COUNT_WRITE DESC
+LIMIT 10;
+</code></pre>
+<h3 id="4-sys-schema-mysql-57">4. <code>sys</code> Schema (MySQL 5.7+) <a href="#4-sys-schema-mysql-57" class="anchor" aria-hidden="true">#</a></h3>
+<p><code>sys</code> schema menyediakan view siap pakai untuk monitoring:</p>
+<pre><code class="language-sql">-- Query lambat
+SELECT * FROM sys.statement_analysis LIMIT 10;
+
+-- Tabel tanpa primary key
+SELECT * FROM sys.schema_tables_with_full_table_scans;
+
+-- Index yang tidak terpakai
+SELECT * FROM sys.schema_unused_indexes;
+</code></pre>
+<hr>
+<h2 id="checklist-optimasi">Checklist Optimasi <a href="#checklist-optimasi" class="anchor" aria-hidden="true">#</a></h2>
+<p>Gunakan checklist ini saat menghadapi masalah performa:</p>
+<ol>
+<li><strong>Identifikasi query lambat</strong> — slow query log, Performance Schema.</li>
+<li><strong>Jalankan <code>EXPLAIN</code></strong> — periksa <code>type</code>, <code>key</code>, <code>rows</code>, <code>Extra</code>.</li>
+<li><strong>Periksa index</strong> — apakah kolom <code>WHERE</code>/<code>JOIN</code>/<code>ORDER BY</code> sudah ter-index?</li>
+<li><strong>Optimasi query</strong> — hindari <code>SELECT *</code>, fungsi pada kolom, <code>LIKE '%...'</code>, <code>OR</code> yang menghalangi index.</li>
+<li><strong>Pertimbangkan covering index</strong> — jika query hanya butuh beberapa kolom.</li>
+<li><strong>Cek konfigurasi server</strong> — <code>innodb_buffer_pool_size</code> sudah cukup?</li>
+<li><strong>Analisis tabel</strong> — <code>ANALYZE TABLE</code> untuk memperbarui statistik.</li>
+<li><strong>Monitor berkelanjutan</strong> — Performance Schema, <code>sys</code> schema, slow query log.</li>
+</ol>
+<hr>
+<h2 id="ringkasan">Ringkasan <a href="#ringkasan" class="anchor" aria-hidden="true">#</a></h2>
+<table>
+<thead>
+<tr>
+<th>Teknik</th>
+<th>Kapan Digunakan</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>EXPLAIN</code></td>
+<td>Menganalisis execution plan query</td>
+</tr>
+<tr>
+<td><code>EXPLAIN ANALYZE</code></td>
+<td>Melihat waktu aktual per langkah</td>
+</tr>
+<tr>
+<td>Slow query log</td>
+<td>Menemukan query lambat</td>
+</tr>
+<tr>
+<td>Index</td>
+<td>Mempercepat <code>WHERE</code>, <code>JOIN</code>, <code>ORDER BY</code></td>
+</tr>
+<tr>
+<td>Covering index</td>
+<td>Menghindari baca tabel</td>
+</tr>
+<tr>
+<td>Rewrite query</td>
+<td>Menghindari fungsi pada kolom, <code>SELECT *</code>, <code>LIKE '%...'</code></td>
+</tr>
+<tr>
+<td><code>innodb_buffer_pool_size</code></td>
+<td>Parameter server paling penting</td>
+</tr>
+<tr>
+<td><code>ANALYZE TABLE</code></td>
+<td>Memperbarui statistik optimizer</td>
+</tr>
+<tr>
+<td>Performance Schema</td>
+<td>Monitoring query dan tabel</td>
+</tr>
+</tbody>
+</table>
+<p>Poin penting:</p>
+<ul>
+<li><strong>Ukur sebelum optimasi</strong> — jangan menebak, gunakan <code>EXPLAIN</code> dan slow query log.</li>
+<li><strong>Index adalah alat utama</strong>, tetapi index berlebih memperlambat write.</li>
+<li><strong><code>innodb_buffer_pool_size</code></strong> adalah parameter konfigurasi paling berpengaruh.</li>
+<li><strong>Hindari fungsi pada kolom</strong> di <code>WHERE</code> — menghalangi index.</li>
+<li><strong>Keyset pagination</strong> lebih cepat daripada <code>LIMIT ... OFFSET</code> besar.</li>
+<li><strong>Monitor berkelanjutan</strong> — performa berubah seiring pertumbuhan data.</li>
+</ul>
+<p>Pada artikel berikutnya, kita akan membahas <strong>MySQL dengan PHP (PDO/MySQLi)</strong> — menghubungkan aplikasi PHP ke MySQL.</p>
+
+			<div class="page-footer-meta d-flex flex-column flex-md-row justify-content-between">
+				</div>
+			<div class="docs-navigation d-flex justify-content-between">
+	
+	<a href="/mysql/tutorial/13-transaksi-acid/">
+			<div class="card my-1">
+				<div class="card-body py-2">
+					&larr; Transaksi &amp; ACID
+				</div>
+			</div>
+		</a>
+	</div>
+
+			
+		</main>
+	</div>
+
+      </div>
+    </div>
+    
+    
+    <footer class="footer text-muted">
+  <div class="container-xxl">
+    <div class="row">
+      <div class="col-lg-8 order-last order-lg-first">
+        <ul class="list-inline">
+          <li class="list-inline-item">Powered by <a class="text-muted" href="https://gohugo.io/">Hugo</a> and <a class="text-muted" href="https://github.com/">Github</a></li>
+        </ul>
+      </div>
+      <div class="col-lg-8 order-first order-lg-last text-lg-end">
+        <ul class="list-inline">
+          </ul>
+      </div>
+    </div>
+  </div>
+</footer>
+    
+
+<script src="/js/bootstrap.min.650aeec64c81d69d4c0850fc73c93da3f0330cec0a27772feed7f90f60baa5f47f1c45687d71914bdafd1c4e860d40f6dc08ede27a2f08431ff929c9a2d24621.js" integrity="sha512-ZQruxkyB1p1MCFD8c8k9o/AzDOwKJ3cv7tf5D2C6pfR/HEVofXGRS9r9HE6GDUD23Ajt4novCEMf&#43;SnJotJGIQ==" crossorigin="anonymous" defer></script>
+  <script src="/js/highlight.min.ec234bd8a5f487aaffe50a89f17b14501b1bb65633cf177cffd4cb84702dd7030edc08712dceb8dc27ac7e54b53240a08bf0b8d951572ee582bcdbbd06a48a7b.js" integrity="sha512-7CNL2KX0h6r/5QqJ8XsUUBsbtlYzzxd8/9TLhHAt1wMO3AhxLc643CesflS1MkCgi/C42VFXLuWCvNu9BqSKew==" crossorigin="anonymous" defer></script>
+  <script src="/main.min.cd1e5e6b40065b3f7f7fd8548a528fac67019754eda0f37b9918d02d154fc9ef6a22742f6513b0572ad9163152e151ec36221fbeafbecd7759c3dab1f19b64b9.js" integrity="sha512-zR5ea0AGWz9/f9hUilKPrGcBl1TtoPN7mRjQLRVPye9qInQvZROwVyrZFjFS4VHsNiIfvq&#43;&#43;zXdZw9qx8ZtkuQ==" crossorigin="anonymous" defer></script>
+  <script src="https://kaban.my.id/index.min.f90d3536216d10b8ecf574dc8d57b0d2bd45aab605bdc69b1f7697f3476ebdb5db6a63a3f6955150f2c0b02e66fa1adfbf4c5b50c540f663f829ad8bcd5807c6.js" integrity="sha512-&#43;Q01NiFtELjs9XTcjVew0r1FqrYFvcabH3aX80duvbXbamOj9pVRUPLAsC5m&#43;hrfv0xbUMVA9mP4Ka2LzVgHxg==" crossorigin="anonymous" defer></script>
+  
+    <div class="d-flex fixed-bottom pb-4 pb-lg-5 pe-4 pe-lg-5">
+      <a id="toTop" href="#" class="btn btn-outline-primary rounded-circle ms-auto p-2"><span class="visually-hidden">Top</span><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-chevron-up"><polyline points="18 15 12 9 6 15"></polyline></svg></a>
+    </div>
+    
+  </body>
+</html>

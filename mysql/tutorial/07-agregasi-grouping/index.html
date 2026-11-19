@@ -1,0 +1,1216 @@
+<!doctype html>
+<html lang="en-US">
+  <head>
+  <meta charset="utf-8">
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <link rel="preload" as="font" href="https://kaban.my.id/fonts/vendor/jost/jost-v4-latin-regular.woff2" type="font/woff2" crossorigin>
+<link rel="preload" as="font" href="https://kaban.my.id/fonts/vendor/jost/jost-v4-latin-500.woff2" type="font/woff2" crossorigin>
+<link rel="preload" as="font" href="https://kaban.my.id/fonts/vendor/jost/jost-v4-latin-700.woff2" type="font/woff2" crossorigin>
+
+  <script>(()=>{var t=window.matchMedia&&window.matchMedia("(prefers-color-scheme: dark)").matches,e=localStorage.getItem("theme");t&&e===null&&(localStorage.setItem("theme","dark"),document.documentElement.setAttribute("data-dark-mode","")),t&&e==="dark"&&document.documentElement.setAttribute("data-dark-mode",""),e==="dark"&&document.documentElement.setAttribute("data-dark-mode","")})()</script>
+
+  <link rel="stylesheet" href="https://kaban.my.id/main.9f87974e4c1caf828d7f6300ecd98102083d1763683fe424f26c4c7b80fa72a094aa3c62fe333b5026c22ff50b82f74220d559e730c1f032fd8bcec957ac2bb4.css" integrity="sha512-n4eXTkwcr4KNf2MA7NmBAgg9F2NoP&#43;Qk8mxMe4D6cqCUqjxi/jM7UCbCL/ULgvdCINVZ5zDB8DL9i87JV6wrtA==" crossorigin="anonymous">
+<noscript><style>img.lazyload { display: none; }</style></noscript>
+  <meta name="robots" content="index, follow">
+    <meta name="googlebot" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1">
+    <meta name="bingbot" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1">
+  <title>Fungsi Agregasi &amp; Grouping - Roberto Kaban Blog&#39;s</title>
+<meta name="description" content="Panduan lengkap fungsi agregasi MySQL: COUNT, SUM, AVG, MIN, MAX, GROUP BY, dan HAVING.">
+<link rel="canonical" href="https://kaban.my.id/mysql/tutorial/07-agregasi-grouping/">
+<meta property="og:locale" content="en_US">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Fungsi Agregasi &amp; Grouping">
+<meta property="og:description" content="Panduan lengkap fungsi agregasi MySQL: COUNT, SUM, AVG, MIN, MAX, GROUP BY, dan HAVING.">
+<meta property="og:url" content="https://kaban.my.id/mysql/tutorial/07-agregasi-grouping/">
+<meta property="og:site_name" content="Roberto Kaban Blog&#39;s">
+<meta property="article:published_time" content="2022-12-12T08:00:00+00:00">
+  <meta property="article:modified_time" content="2022-12-12T08:00:00+00:00">
+  
+  <meta property="og:image" content="https://kaban.my.id/doks.png"/>
+      <meta property="og:image:alt" content="Roberto Kaban Blog&#39;s">
+    
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:site" content="@robertokaban">
+<meta name="twitter:creator" content="@robertokaban">
+<meta name="twitter:title" content="Fungsi Agregasi &amp; Grouping">
+<meta name="twitter:description" content="Panduan lengkap fungsi agregasi MySQL: COUNT, SUM, AVG, MIN, MAX, GROUP BY, dan HAVING.">
+<meta name="twitter:image" content="https://kaban.my.id/doks.png">
+    <meta name="twitter:image:alt" content="Fungsi Agregasi &amp; Grouping">
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "Person",
+        "@id": "https://kaban.my.id/#/schema/person/1",
+      "name": "BlogRobertoKaban",
+      "url": "https://kaban.my.id/",
+      "sameAs": [
+        "https://twitter.com/robertokaban"
+        , "https://github.com/robertokaban"
+        ],
+      "image": {
+          "@type": "ImageObject",
+          "@id": "https://kaban.my.id/#/schema/image/1",
+          "url": "https://kaban.my.id/doks.png",
+          "width":  1280 ,
+          "height":  640 ,
+          "caption": "BlogRobertoKaban"
+        }
+      },
+    {
+      "@type": "WebSite",
+      "@id": "https://kaban.my.id/#/schema/website/1",
+      "url": "https://kaban.my.id/",
+      "name": "Roberto Kaban Blog\u0027s",
+      "description": "Hanya sebuah catatan kecil untuk hal yang tidak ingin dilupakan.",
+      "publisher": {
+          "@id": "https://kaban.my.id/#/schema/person/1"
+        }
+      },
+    {
+      "@type": "WebPage",
+      "@id": "https://kaban.my.id/mysql/tutorial/07-agregasi-grouping/",
+      "url": "https://kaban.my.id/mysql/tutorial/07-agregasi-grouping/",
+      "name": "Fungsi Agregasi \u0026 Grouping",
+      "description": "Panduan lengkap fungsi agregasi MySQL: COUNT, SUM, AVG, MIN, MAX, GROUP BY, dan HAVING.",
+      "isPartOf": {
+        "@id": "https://kaban.my.id/#/schema/website/1"
+      },
+      "about": {
+          "@id": "https://kaban.my.id/#/schema/person/1"
+        },
+      "datePublished": "2022-12-12T08:00:00CET",
+      "dateModified": "2022-12-12T08:00:00CET",
+      "breadcrumb": {
+        "@id": "https://kaban.my.id/mysql/tutorial/07-agregasi-grouping/#/schema/breadcrumb/1"
+      },
+      "primaryImageOfPage": {
+        "@id": "https://kaban.my.id/mysql/tutorial/07-agregasi-grouping/#/schema/image/2"
+      },
+      "inLanguage": "en-US",
+      "potentialAction": [{
+        "@type": "ReadAction", "target": ["https://kaban.my.id/mysql/tutorial/07-agregasi-grouping/"]
+      }]
+    },
+    {
+      "@type": "BreadcrumbList",
+      "@id": "https://kaban.my.id/mysql/tutorial/07-agregasi-grouping/#/schema/breadcrumb/1",
+      "name": "Breadcrumbs",
+      "itemListElement": [{
+        "@type": "ListItem",
+        "position":  1 ,
+        "item": {
+          "@type": "WebPage",
+          "@id": "https://kaban.my.id/",
+          "url": "https://kaban.my.id/",
+          "name": "Home"
+          }
+        },{
+        "@type": "ListItem",
+        "position":  2 ,
+        "item": {
+          "@type": "WebPage",
+          "@id": "https://kaban.my.id/mysql/",
+          "url": "https://kaban.my.id/mysql/",
+          "name": "Mysql"
+          }
+        },{
+        "@type": "ListItem",
+        "position":  3 ,
+        "item": {
+          "@type": "WebPage",
+          "@id": "https://kaban.my.id/mysql/tutorial/",
+          "url": "https://kaban.my.id/mysql/tutorial/",
+          "name": "Tutorial"
+          }
+        },{
+        "@type": "ListItem",
+        "position":  4 ,
+        "item": {
+          "@id": "https://kaban.my.id/mysql/tutorial/07-agregasi-grouping/"
+          }
+        }]
+    },
+
+    {
+      "@context": "https://schema.org",
+      "@graph": [
+        {
+          "@type": "ImageObject",
+          "@id": "https://kaban.my.id/mysql/tutorial/07-agregasi-grouping/#/schema/image/2",
+          "url": "https://kaban.my.id/doks.png",
+          "contentUrl": "https://kaban.my.id/doks.png",
+          "caption": "Fungsi Agregasi \u0026 Grouping"
+        }
+      ]
+    }
+
+  ]
+}
+</script>
+
+  <meta name="theme-color" content="#fff">
+<link rel="icon" href="https://kaban.my.id/favicon.ico" sizes="any">
+<link rel="icon" type="image/svg+xml" href="https://kaban.my.id/favicon.svg">
+<link rel="apple-touch-icon" sizes="180x180" href="https://kaban.my.id/apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="32x32" href="https://kaban.my.id/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="https://kaban.my.id/favicon-16x16.png">
+<link rel="manifest" crossorigin="use-credentials" href="https://kaban.my.id/site.webmanifest">
+
+  
+
+
+  
+  
+  
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-60VSDZFQR5"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-60VSDZFQR5');
+</script>
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6664512614760985"
+     crossorigin="anonymous"></script>
+</head>
+
+  <body class="mysql single">
+    <div class="sticky-top">
+<div class="header-bar"></div>
+
+<header class="navbar navbar-expand-lg navbar-light doks-navbar">
+  <nav class="container-xxl flex-wrap flex-lg-nowrap" aria-label="Main navigation">
+
+    <a class="navbar-brand order-0" href="/" aria-label="Roberto Kaban Blog&#39;s">
+      Roberto Kaban Blog&#39;s
+    </a>
+
+    <button class="btn btn-menu order-2 d-block d-lg-none" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasDoks" aria-controls="offcanvasDoks" aria-label="Open main menu">
+      <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-menu"><line x1="3" y1="12" x2="21" y2="12"></line><line x1="3" y1="6" x2="21" y2="6"></line><line x1="3" y1="18" x2="21" y2="18"></line></svg>
+    </button>
+    <div class="offcanvas offcanvas-end border-0 py-lg-1" tabindex="-1" id="offcanvasDoks" data-bs-backdrop="true" aria-labelledby="offcanvasDoksLabel">
+      <div class="header-bar d-lg-none"></div>
+      <div class="offcanvas-header d-lg-none">
+        <h2 class="h5 offcanvas-title ps-2" id="offcanvasDoksLabel"><a class="text-dark" href="/">Roberto Kaban Blog&#39;s</a></h2>
+        <button type="button" class="btn-close text-reset me-2" data-bs-dismiss="offcanvas" aria-label="Close main menu"></button>
+      </div>
+      <div class="offcanvas-body p-4 p-lg-0">
+        <ul class="nav flex-column flex-lg-row align-items-lg-center mt-2 mt-lg-0 ms-lg-2 me-lg-auto">
+              <li class="nav-item">
+                <a class="nav-link ps-0 py-1" href="/about/">About Me</a>
+              </li>
+            
+          
+              <li class="nav-item">
+                <a class="nav-link ps-0 py-1" href="/contact/">Contact</a>
+              </li>
+            
+          
+              <li class="nav-item">
+                <a class="nav-link ps-0 py-1" href="/artikel/">Artikel</a>
+              </li>
+            
+          
+              <li class="nav-item">
+                <a class="nav-link ps-0 py-1" href="/coretanku/">Coretanku</a>
+              </li>
+            
+          </ul>
+
+        <hr class="text-black-50 my-4 d-lg-none">
+        <form class="doks-search position-relative flex-grow-1 ms-lg-auto me-lg-2">
+          <input id="search" class="form-control is-search" type="search" placeholder="Cari di blog ini..." aria-label="Cari di blog ini..." autocomplete="off">
+          <div id="suggestions" class="shadow bg-white rounded d-none"></div>
+        </form>
+        <hr class="text-black-50 my-4 d-lg-none">
+        <ul class="nav flex-column flex-lg-row">
+          <li class="nav-item">
+              <a class="nav-link social-link" href="https://github.com/robertokaban"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-github"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path></svg><small class="ms-2 d-lg-none">GitHub</small></a>
+            </li>
+          <li class="nav-item">
+              <a class="nav-link social-link" href="https://facebook.com/roberto.kaban"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-facebook"><path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"></path></svg><small class="ms-2 d-lg-none">Facebook</small></a>
+            </li>
+          <li class="nav-item">
+              <a class="nav-link social-link" href="https://twitter.com/robertokaban"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-twitter"><path d="M23 3a10.9 10.9 0 0 1-3.14 1.53 4.48 4.48 0 0 0-7.86 3v1A10.66 10.66 0 0 1 3 4s-4 9 5 13a11.64 11.64 0 0 1-7 2c9 5 20 0 20-11.5a4.5 4.5 0 0 0-.08-.83A7.72 7.72 0 0 0 23 3z"></path></svg><small class="ms-2 d-lg-none">Twitter</small></a>
+            </li>
+          <li class="nav-item">
+              <a class="nav-link social-link" href="https://youtube.com/@robertokaban"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-youtube"><path d="M10,15L15.19,12L10,9V15M21.56,7.17C21.69,7.64 21.78,8.27 21.84,9.07C21.91,9.87 21.94,10.56 21.94,11.16L22,12C22,14.19 21.84,15.8 21.56,16.83C21.31,17.73 20.73,18.31 19.83,18.56C19.36,18.69 18.5,18.78 17.18,18.84C15.88,18.91 14.69,18.94 13.59,18.94L12,19C7.81,19 5.2,18.84 4.17,18.56C3.27,18.31 2.69,17.73 2.44,16.83C2.31,16.36 2.22,15.73 2.16,14.93C2.09,14.13 2.06,13.44 2.06,12.84L2,12C2,9.81 2.16,8.2 2.44,7.17C2.69,6.27 3.27,5.69 4.17,5.44C4.64,5.31 5.5,5.22 6.82,5.16C8.12,5.09 9.31,5.06 10.41,5.06L12,5C16.19,5 18.8,5.16 19.83,5.44C20.73,5.69 21.31,6.27 21.56,7.17Z"></path></svg><small class="ms-2 d-lg-none">Youtube</small></a>
+            </li>
+          </ul>
+
+        
+        <hr class="text-black-50 my-4 d-lg-none">
+        <button id="mode" class="btn btn-link" type="button" aria-label="Toggle user interface mode">
+          <span class="toggle-dark"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-moon"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path></svg></span>
+          <span class="toggle-light"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-sun"><circle cx="12" cy="12" r="5"></circle><line x1="12" y1="1" x2="12" y2="3"></line><line x1="12" y1="21" x2="12" y2="23"></line><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line><line x1="1" y1="12" x2="3" y2="12"></line><line x1="21" y1="12" x2="23" y2="12"></line><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line></svg></span>
+        </button>
+        
+
+        </div>
+    </div>
+  </nav>
+</header>
+
+
+</div>
+
+
+<div class="container-xxl">
+  <aside class="doks-sidebar">
+    <nav id="doks-docs-nav" class="collapse d-lg-none" aria-label="Tertiary navigation">
+      
+<ul class="list-unstyled collapsible-sidebar">
+  
+    
+      
+      <li class="mb-1">
+        <button class="btn btn-toggle align-items-center rounded collapsed" data-bs-toggle="collapse" data-bs-target="#section-dd2f133c64f99bea60c3e743290ec287" aria-expanded="true">
+          Tutorial MySQL
+        </button>
+        <div class="collapse show" id="section-dd2f133c64f99bea60c3e743290ec287">
+          <ul class="btn-toggle-nav list-unstyled fw-normal pb-1 small">
+            
+              
+                
+                <li><a class="docs-link rounded" href="https://kaban.my.id/mysql/tutorial/pengenalan/">Pengenalan MySQL</a></li>
+              
+            
+              
+                
+                <li><a class="docs-link rounded" href="https://kaban.my.id/mysql/tutorial/02-instalasi/">Instalasi dan Konfigurasi MySQL</a></li>
+              
+            
+              
+                
+                <li><a class="docs-link rounded" href="https://kaban.my.id/mysql/tutorial/03-arsitektur/">Mengenal Arsitektur &amp; Komponen MySQL</a></li>
+              
+            
+              
+                
+                <li><a class="docs-link rounded" href="https://kaban.my.id/mysql/tutorial/04-database-table/">Perintah Dasar SQL: Database &amp; Table</a></li>
+              
+            
+              
+                
+                <li><a class="docs-link rounded" href="https://kaban.my.id/mysql/tutorial/05-crud/">Operasi CRUD (Create, Read, Update, Delete)</a></li>
+              
+            
+              
+                
+                <li><a class="docs-link rounded" href="https://kaban.my.id/mysql/tutorial/06-filtering-sorting/">Filtering &amp; Sorting Data</a></li>
+              
+            
+              
+                
+                <li><a class="docs-link rounded active" href="https://kaban.my.id/mysql/tutorial/07-agregasi-grouping/">Fungsi Agregasi &amp; Grouping</a></li>
+              
+            
+              
+                
+                <li><a class="docs-link rounded" href="https://kaban.my.id/mysql/tutorial/08-join/">JOIN: Menggabungkan Tabel</a></li>
+              
+            
+              
+                
+                <li><a class="docs-link rounded" href="https://kaban.my.id/mysql/tutorial/09-subquery-union/">Subquery &amp; Union</a></li>
+              
+            
+              
+                
+                <li><a class="docs-link rounded" href="https://kaban.my.id/mysql/tutorial/10-view-index-procedure/">View, Index, dan Stored Procedure</a></li>
+              
+            
+              
+                
+                <li><a class="docs-link rounded" href="https://kaban.my.id/mysql/tutorial/11-user-privilege/">Manajemen User &amp; Hak Akses</a></li>
+              
+            
+              
+                
+                <li><a class="docs-link rounded" href="https://kaban.my.id/mysql/tutorial/12-backup-restore/">Backup &amp; Restore Database</a></li>
+              
+            
+              
+                
+                <li><a class="docs-link rounded" href="https://kaban.my.id/mysql/tutorial/13-transaksi-acid/">Transaksi &amp; ACID</a></li>
+              
+            
+              
+                
+                <li><a class="docs-link rounded" href="https://kaban.my.id/mysql/tutorial/14-optimasi-performa/">Optimasi Performa MySQL</a></li>
+              
+            
+          </ul>
+        </div>
+      </li>
+    
+  
+</ul>
+
+    </nav>
+  </aside>
+</div>
+
+    <div class="wrap container-xxl" role="document">
+      <div class="content">
+        
+	<div class="row flex-xl-nowrap">
+		<div class="col-lg-5 col-xl-4 docs-sidebar d-none d-lg-block">
+			<nav class="docs-links" aria-label="Main navigation">
+				
+<ul class="list-unstyled collapsible-sidebar">
+  
+    
+      
+      <li class="mb-1">
+        <button class="btn btn-toggle align-items-center rounded collapsed" data-bs-toggle="collapse" data-bs-target="#section-dd2f133c64f99bea60c3e743290ec287" aria-expanded="true">
+          Tutorial MySQL
+        </button>
+        <div class="collapse show" id="section-dd2f133c64f99bea60c3e743290ec287">
+          <ul class="btn-toggle-nav list-unstyled fw-normal pb-1 small">
+            
+              
+                
+                <li><a class="docs-link rounded" href="https://kaban.my.id/mysql/tutorial/pengenalan/">Pengenalan MySQL</a></li>
+              
+            
+              
+                
+                <li><a class="docs-link rounded" href="https://kaban.my.id/mysql/tutorial/02-instalasi/">Instalasi dan Konfigurasi MySQL</a></li>
+              
+            
+              
+                
+                <li><a class="docs-link rounded" href="https://kaban.my.id/mysql/tutorial/03-arsitektur/">Mengenal Arsitektur &amp; Komponen MySQL</a></li>
+              
+            
+              
+                
+                <li><a class="docs-link rounded" href="https://kaban.my.id/mysql/tutorial/04-database-table/">Perintah Dasar SQL: Database &amp; Table</a></li>
+              
+            
+              
+                
+                <li><a class="docs-link rounded" href="https://kaban.my.id/mysql/tutorial/05-crud/">Operasi CRUD (Create, Read, Update, Delete)</a></li>
+              
+            
+              
+                
+                <li><a class="docs-link rounded" href="https://kaban.my.id/mysql/tutorial/06-filtering-sorting/">Filtering &amp; Sorting Data</a></li>
+              
+            
+              
+                
+                <li><a class="docs-link rounded active" href="https://kaban.my.id/mysql/tutorial/07-agregasi-grouping/">Fungsi Agregasi &amp; Grouping</a></li>
+              
+            
+              
+                
+                <li><a class="docs-link rounded" href="https://kaban.my.id/mysql/tutorial/08-join/">JOIN: Menggabungkan Tabel</a></li>
+              
+            
+              
+                
+                <li><a class="docs-link rounded" href="https://kaban.my.id/mysql/tutorial/09-subquery-union/">Subquery &amp; Union</a></li>
+              
+            
+              
+                
+                <li><a class="docs-link rounded" href="https://kaban.my.id/mysql/tutorial/10-view-index-procedure/">View, Index, dan Stored Procedure</a></li>
+              
+            
+              
+                
+                <li><a class="docs-link rounded" href="https://kaban.my.id/mysql/tutorial/11-user-privilege/">Manajemen User &amp; Hak Akses</a></li>
+              
+            
+              
+                
+                <li><a class="docs-link rounded" href="https://kaban.my.id/mysql/tutorial/12-backup-restore/">Backup &amp; Restore Database</a></li>
+              
+            
+              
+                
+                <li><a class="docs-link rounded" href="https://kaban.my.id/mysql/tutorial/13-transaksi-acid/">Transaksi &amp; ACID</a></li>
+              
+            
+              
+                
+                <li><a class="docs-link rounded" href="https://kaban.my.id/mysql/tutorial/14-optimasi-performa/">Optimasi Performa MySQL</a></li>
+              
+            
+          </ul>
+        </div>
+      </li>
+    
+  
+</ul>
+
+			</nav>
+		</div>
+		<nav class="docs-toc d-none d-xl-block col-xl-3" aria-label="Secondary navigation">
+			<div class="d-xl-none">
+  <button class="btn btn-outline-primary btn-sm doks-toc-toggle collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#onThisPage" aria-controls="doks-docs-nav" aria-expanded="false" aria-label="Toggle On this page navigation">
+    <span>Daftar isi</span>
+    <span>
+      <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" class="doks doks-expand" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><title>Expand</title><polyline points="7 13 12 18 17 13"></polyline><polyline points="7 6 12 11 17 6"></polyline></svg>
+      <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" class="doks doks-collapse" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><title>Collapse</title><polyline points="17 11 12 6 7 11"></polyline><polyline points="17 18 12 13 7 18"></polyline></svg>
+    </span>
+  </button>
+  <div class="collapse" id="onThisPage">
+    <div class="card card-body mt-3 py-1">
+      <div class="page-links">
+        <nav id="TableOfContents">
+  <ul>
+    <li><a href="#pendahuluan">Pendahuluan</a></li>
+    <li><a href="#fungsi-agregasi-dasar">Fungsi Agregasi Dasar</a>
+      <ul>
+        <li><a href="#count--menghitung-jumlah-baris"><code>COUNT</code> — Menghitung Jumlah Baris</a></li>
+        <li><a href="#sum--menjumlahkan-nilai"><code>SUM</code> — Menjumlahkan Nilai</a></li>
+        <li><a href="#avg--rata-rata"><code>AVG</code> — Rata-rata</a></li>
+        <li><a href="#min-dan-max--nilai-terkecil-dan-terbesar"><code>MIN</code> dan <code>MAX</code> — Nilai Terkecil dan Terbesar</a></li>
+        <li><a href="#menggabungkan-beberapa-fungsi-agregasi">Menggabungkan Beberapa Fungsi Agregasi</a></li>
+      </ul>
+    </li>
+    <li><a href="#group-by--mengelompokkan-data"><code>GROUP BY</code> — Mengelompokkan Data</a>
+      <ul>
+        <li><a href="#sintaks">Sintaks</a></li>
+        <li><a href="#contoh-jumlah-pesanan-per-status">Contoh: Jumlah Pesanan per Status</a></li>
+        <li><a href="#contoh-total-penjualan-per-pelanggan">Contoh: Total Penjualan per Pelanggan</a></li>
+        <li><a href="#contoh-rata-rata-harga-per-rentang-stok">Contoh: Rata-rata Harga per Rentang Stok</a></li>
+        <li><a href="#group-by-dengan-beberapa-kolom"><code>GROUP BY</code> dengan Beberapa Kolom</a></li>
+        <li><a href="#aturan-penting-kolom-di-select-harus-ada-di-group-by">Aturan Penting: Kolom di <code>SELECT</code> Harus Ada di <code>GROUP BY</code></a></li>
+        <li><a href="#group-by-dengan-order-by"><code>GROUP BY</code> dengan <code>ORDER BY</code></a></li>
+      </ul>
+    </li>
+    <li><a href="#having--memfilter-hasil-grup"><code>HAVING</code> — Memfilter Hasil Grup</a>
+      <ul>
+        <li><a href="#sintaks-1">Sintaks</a></li>
+        <li><a href="#contoh-grup-dengan-jumlah-tertentu">Contoh: Grup dengan Jumlah Tertentu</a></li>
+        <li><a href="#contoh-grup-dengan-total-di-atas-ambang">Contoh: Grup dengan Total di Atas Ambang</a></li>
+        <li><a href="#where-vs-having"><code>WHERE</code> vs <code>HAVING</code></a></li>
+        <li><a href="#menggabungkan-where-dan-having">Menggabungkan <code>WHERE</code> dan <code>HAVING</code></a></li>
+      </ul>
+    </li>
+    <li><a href="#with-rollup--subtotal-dan-grand-total"><code>WITH ROLLUP</code> — Subtotal dan Grand Total</a>
+      <ul>
+        <li><a href="#sintaks-2">Sintaks</a></li>
+        <li><a href="#contoh">Contoh</a></li>
+      </ul>
+    </li>
+    <li><a href="#contoh-praktis-analisis-penjualan">Contoh Praktis: Analisis Penjualan</a>
+      <ul>
+        <li><a href="#1-ringkasan-keseluruhan">1. Ringkasan Keseluruhan</a></li>
+        <li><a href="#2-penjualan-per-status">2. Penjualan per Status</a></li>
+        <li><a href="#3-top-5-pelanggan-dengan-belanja-tertinggi">3. Top 5 Pelanggan dengan Belanja Tertinggi</a></li>
+        <li><a href="#4-produk-terlaris-dari-detail_pesanan">4. Produk Terlaris (dari <code>detail_pesanan</code>)</a></li>
+        <li><a href="#5-penjualan-per-bulan">5. Penjualan per Bulan</a></li>
+        <li><a href="#6-pelanggan-tanpa-pesanan">6. Pelanggan Tanpa Pesanan</a></li>
+      </ul>
+    </li>
+    <li><a href="#fungsi-agregasi-lain-yang-berguna">Fungsi Agregasi Lain yang Berguna</a>
+      <ul>
+        <li><a href="#group_concat--menggabungkan-nilai-menjadi-string"><code>GROUP_CONCAT</code> — Menggabungkan Nilai menjadi String</a></li>
+        <li><a href="#stddev-dan-variance"><code>STDDEV</code> dan <code>VARIANCE</code></a></li>
+        <li><a href="#json_arrayagg-dan-json_objectagg-mysql-57"><code>JSON_ARRAYAGG</code> dan <code>JSON_OBJECTAGG</code> (MySQL 5.7+)</a></li>
+      </ul>
+    </li>
+    <li><a href="#ringkasan">Ringkasan</a></li>
+  </ul>
+</nav>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="page-links d-none d-xl-block">
+  <h3>Daftar isi</h3>
+  <nav id="TableOfContents">
+  <ul>
+    <li><a href="#pendahuluan">Pendahuluan</a></li>
+    <li><a href="#fungsi-agregasi-dasar">Fungsi Agregasi Dasar</a>
+      <ul>
+        <li><a href="#count--menghitung-jumlah-baris"><code>COUNT</code> — Menghitung Jumlah Baris</a></li>
+        <li><a href="#sum--menjumlahkan-nilai"><code>SUM</code> — Menjumlahkan Nilai</a></li>
+        <li><a href="#avg--rata-rata"><code>AVG</code> — Rata-rata</a></li>
+        <li><a href="#min-dan-max--nilai-terkecil-dan-terbesar"><code>MIN</code> dan <code>MAX</code> — Nilai Terkecil dan Terbesar</a></li>
+        <li><a href="#menggabungkan-beberapa-fungsi-agregasi">Menggabungkan Beberapa Fungsi Agregasi</a></li>
+      </ul>
+    </li>
+    <li><a href="#group-by--mengelompokkan-data"><code>GROUP BY</code> — Mengelompokkan Data</a>
+      <ul>
+        <li><a href="#sintaks">Sintaks</a></li>
+        <li><a href="#contoh-jumlah-pesanan-per-status">Contoh: Jumlah Pesanan per Status</a></li>
+        <li><a href="#contoh-total-penjualan-per-pelanggan">Contoh: Total Penjualan per Pelanggan</a></li>
+        <li><a href="#contoh-rata-rata-harga-per-rentang-stok">Contoh: Rata-rata Harga per Rentang Stok</a></li>
+        <li><a href="#group-by-dengan-beberapa-kolom"><code>GROUP BY</code> dengan Beberapa Kolom</a></li>
+        <li><a href="#aturan-penting-kolom-di-select-harus-ada-di-group-by">Aturan Penting: Kolom di <code>SELECT</code> Harus Ada di <code>GROUP BY</code></a></li>
+        <li><a href="#group-by-dengan-order-by"><code>GROUP BY</code> dengan <code>ORDER BY</code></a></li>
+      </ul>
+    </li>
+    <li><a href="#having--memfilter-hasil-grup"><code>HAVING</code> — Memfilter Hasil Grup</a>
+      <ul>
+        <li><a href="#sintaks-1">Sintaks</a></li>
+        <li><a href="#contoh-grup-dengan-jumlah-tertentu">Contoh: Grup dengan Jumlah Tertentu</a></li>
+        <li><a href="#contoh-grup-dengan-total-di-atas-ambang">Contoh: Grup dengan Total di Atas Ambang</a></li>
+        <li><a href="#where-vs-having"><code>WHERE</code> vs <code>HAVING</code></a></li>
+        <li><a href="#menggabungkan-where-dan-having">Menggabungkan <code>WHERE</code> dan <code>HAVING</code></a></li>
+      </ul>
+    </li>
+    <li><a href="#with-rollup--subtotal-dan-grand-total"><code>WITH ROLLUP</code> — Subtotal dan Grand Total</a>
+      <ul>
+        <li><a href="#sintaks-2">Sintaks</a></li>
+        <li><a href="#contoh">Contoh</a></li>
+      </ul>
+    </li>
+    <li><a href="#contoh-praktis-analisis-penjualan">Contoh Praktis: Analisis Penjualan</a>
+      <ul>
+        <li><a href="#1-ringkasan-keseluruhan">1. Ringkasan Keseluruhan</a></li>
+        <li><a href="#2-penjualan-per-status">2. Penjualan per Status</a></li>
+        <li><a href="#3-top-5-pelanggan-dengan-belanja-tertinggi">3. Top 5 Pelanggan dengan Belanja Tertinggi</a></li>
+        <li><a href="#4-produk-terlaris-dari-detail_pesanan">4. Produk Terlaris (dari <code>detail_pesanan</code>)</a></li>
+        <li><a href="#5-penjualan-per-bulan">5. Penjualan per Bulan</a></li>
+        <li><a href="#6-pelanggan-tanpa-pesanan">6. Pelanggan Tanpa Pesanan</a></li>
+      </ul>
+    </li>
+    <li><a href="#fungsi-agregasi-lain-yang-berguna">Fungsi Agregasi Lain yang Berguna</a>
+      <ul>
+        <li><a href="#group_concat--menggabungkan-nilai-menjadi-string"><code>GROUP_CONCAT</code> — Menggabungkan Nilai menjadi String</a></li>
+        <li><a href="#stddev-dan-variance"><code>STDDEV</code> dan <code>VARIANCE</code></a></li>
+        <li><a href="#json_arrayagg-dan-json_objectagg-mysql-57"><code>JSON_ARRAYAGG</code> dan <code>JSON_OBJECTAGG</code> (MySQL 5.7+)</a></li>
+      </ul>
+    </li>
+    <li><a href="#ringkasan">Ringkasan</a></li>
+  </ul>
+</nav>
+  </div>
+
+		</nav>
+		<main class="docs-content col-lg-11 col-xl-9">
+		
+				<nav aria-label="breadcrumb">
+					<ol class="breadcrumb">
+						<li class="breadcrumb-item"><a href="/">Home</a></li>
+<li class="breadcrumb-item"><a href="/mysql/">Mysql</a></li>
+<li class="breadcrumb-item"><a href="/mysql/tutorial/">Tutorial MySQL</a></li>
+<li class="breadcrumb-item active" aria-current="page">Fungsi Agregasi &amp; Grouping</li>
+					</ol>
+				</nav>
+			
+			<h1>Fungsi Agregasi &amp; Grouping</h1>
+			<p class="lead">Fungsi agregasi memungkinkan kita merangkum data: menghitung total, rata-rata, nilai tertinggi, dan sebagainya. Artikel ini membahas COUNT, SUM, AVG, MIN, MAX, serta GROUP BY dan HAVING untuk analisis data per kelompok.</p>
+			<nav class="d-xl-none" aria-label="Quaternary navigation">
+				<div class="d-xl-none">
+  <button class="btn btn-outline-primary btn-sm doks-toc-toggle collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#onThisPage" aria-controls="doks-docs-nav" aria-expanded="false" aria-label="Toggle On this page navigation">
+    <span>Daftar isi</span>
+    <span>
+      <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" class="doks doks-expand" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><title>Expand</title><polyline points="7 13 12 18 17 13"></polyline><polyline points="7 6 12 11 17 6"></polyline></svg>
+      <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" class="doks doks-collapse" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><title>Collapse</title><polyline points="17 11 12 6 7 11"></polyline><polyline points="17 18 12 13 7 18"></polyline></svg>
+    </span>
+  </button>
+  <div class="collapse" id="onThisPage">
+    <div class="card card-body mt-3 py-1">
+      <div class="page-links">
+        <nav id="TableOfContents">
+  <ul>
+    <li><a href="#pendahuluan">Pendahuluan</a></li>
+    <li><a href="#fungsi-agregasi-dasar">Fungsi Agregasi Dasar</a>
+      <ul>
+        <li><a href="#count--menghitung-jumlah-baris"><code>COUNT</code> — Menghitung Jumlah Baris</a></li>
+        <li><a href="#sum--menjumlahkan-nilai"><code>SUM</code> — Menjumlahkan Nilai</a></li>
+        <li><a href="#avg--rata-rata"><code>AVG</code> — Rata-rata</a></li>
+        <li><a href="#min-dan-max--nilai-terkecil-dan-terbesar"><code>MIN</code> dan <code>MAX</code> — Nilai Terkecil dan Terbesar</a></li>
+        <li><a href="#menggabungkan-beberapa-fungsi-agregasi">Menggabungkan Beberapa Fungsi Agregasi</a></li>
+      </ul>
+    </li>
+    <li><a href="#group-by--mengelompokkan-data"><code>GROUP BY</code> — Mengelompokkan Data</a>
+      <ul>
+        <li><a href="#sintaks">Sintaks</a></li>
+        <li><a href="#contoh-jumlah-pesanan-per-status">Contoh: Jumlah Pesanan per Status</a></li>
+        <li><a href="#contoh-total-penjualan-per-pelanggan">Contoh: Total Penjualan per Pelanggan</a></li>
+        <li><a href="#contoh-rata-rata-harga-per-rentang-stok">Contoh: Rata-rata Harga per Rentang Stok</a></li>
+        <li><a href="#group-by-dengan-beberapa-kolom"><code>GROUP BY</code> dengan Beberapa Kolom</a></li>
+        <li><a href="#aturan-penting-kolom-di-select-harus-ada-di-group-by">Aturan Penting: Kolom di <code>SELECT</code> Harus Ada di <code>GROUP BY</code></a></li>
+        <li><a href="#group-by-dengan-order-by"><code>GROUP BY</code> dengan <code>ORDER BY</code></a></li>
+      </ul>
+    </li>
+    <li><a href="#having--memfilter-hasil-grup"><code>HAVING</code> — Memfilter Hasil Grup</a>
+      <ul>
+        <li><a href="#sintaks-1">Sintaks</a></li>
+        <li><a href="#contoh-grup-dengan-jumlah-tertentu">Contoh: Grup dengan Jumlah Tertentu</a></li>
+        <li><a href="#contoh-grup-dengan-total-di-atas-ambang">Contoh: Grup dengan Total di Atas Ambang</a></li>
+        <li><a href="#where-vs-having"><code>WHERE</code> vs <code>HAVING</code></a></li>
+        <li><a href="#menggabungkan-where-dan-having">Menggabungkan <code>WHERE</code> dan <code>HAVING</code></a></li>
+      </ul>
+    </li>
+    <li><a href="#with-rollup--subtotal-dan-grand-total"><code>WITH ROLLUP</code> — Subtotal dan Grand Total</a>
+      <ul>
+        <li><a href="#sintaks-2">Sintaks</a></li>
+        <li><a href="#contoh">Contoh</a></li>
+      </ul>
+    </li>
+    <li><a href="#contoh-praktis-analisis-penjualan">Contoh Praktis: Analisis Penjualan</a>
+      <ul>
+        <li><a href="#1-ringkasan-keseluruhan">1. Ringkasan Keseluruhan</a></li>
+        <li><a href="#2-penjualan-per-status">2. Penjualan per Status</a></li>
+        <li><a href="#3-top-5-pelanggan-dengan-belanja-tertinggi">3. Top 5 Pelanggan dengan Belanja Tertinggi</a></li>
+        <li><a href="#4-produk-terlaris-dari-detail_pesanan">4. Produk Terlaris (dari <code>detail_pesanan</code>)</a></li>
+        <li><a href="#5-penjualan-per-bulan">5. Penjualan per Bulan</a></li>
+        <li><a href="#6-pelanggan-tanpa-pesanan">6. Pelanggan Tanpa Pesanan</a></li>
+      </ul>
+    </li>
+    <li><a href="#fungsi-agregasi-lain-yang-berguna">Fungsi Agregasi Lain yang Berguna</a>
+      <ul>
+        <li><a href="#group_concat--menggabungkan-nilai-menjadi-string"><code>GROUP_CONCAT</code> — Menggabungkan Nilai menjadi String</a></li>
+        <li><a href="#stddev-dan-variance"><code>STDDEV</code> dan <code>VARIANCE</code></a></li>
+        <li><a href="#json_arrayagg-dan-json_objectagg-mysql-57"><code>JSON_ARRAYAGG</code> dan <code>JSON_OBJECTAGG</code> (MySQL 5.7+)</a></li>
+      </ul>
+    </li>
+    <li><a href="#ringkasan">Ringkasan</a></li>
+  </ul>
+</nav>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="page-links d-none d-xl-block">
+  <h3>Daftar isi</h3>
+  <nav id="TableOfContents">
+  <ul>
+    <li><a href="#pendahuluan">Pendahuluan</a></li>
+    <li><a href="#fungsi-agregasi-dasar">Fungsi Agregasi Dasar</a>
+      <ul>
+        <li><a href="#count--menghitung-jumlah-baris"><code>COUNT</code> — Menghitung Jumlah Baris</a></li>
+        <li><a href="#sum--menjumlahkan-nilai"><code>SUM</code> — Menjumlahkan Nilai</a></li>
+        <li><a href="#avg--rata-rata"><code>AVG</code> — Rata-rata</a></li>
+        <li><a href="#min-dan-max--nilai-terkecil-dan-terbesar"><code>MIN</code> dan <code>MAX</code> — Nilai Terkecil dan Terbesar</a></li>
+        <li><a href="#menggabungkan-beberapa-fungsi-agregasi">Menggabungkan Beberapa Fungsi Agregasi</a></li>
+      </ul>
+    </li>
+    <li><a href="#group-by--mengelompokkan-data"><code>GROUP BY</code> — Mengelompokkan Data</a>
+      <ul>
+        <li><a href="#sintaks">Sintaks</a></li>
+        <li><a href="#contoh-jumlah-pesanan-per-status">Contoh: Jumlah Pesanan per Status</a></li>
+        <li><a href="#contoh-total-penjualan-per-pelanggan">Contoh: Total Penjualan per Pelanggan</a></li>
+        <li><a href="#contoh-rata-rata-harga-per-rentang-stok">Contoh: Rata-rata Harga per Rentang Stok</a></li>
+        <li><a href="#group-by-dengan-beberapa-kolom"><code>GROUP BY</code> dengan Beberapa Kolom</a></li>
+        <li><a href="#aturan-penting-kolom-di-select-harus-ada-di-group-by">Aturan Penting: Kolom di <code>SELECT</code> Harus Ada di <code>GROUP BY</code></a></li>
+        <li><a href="#group-by-dengan-order-by"><code>GROUP BY</code> dengan <code>ORDER BY</code></a></li>
+      </ul>
+    </li>
+    <li><a href="#having--memfilter-hasil-grup"><code>HAVING</code> — Memfilter Hasil Grup</a>
+      <ul>
+        <li><a href="#sintaks-1">Sintaks</a></li>
+        <li><a href="#contoh-grup-dengan-jumlah-tertentu">Contoh: Grup dengan Jumlah Tertentu</a></li>
+        <li><a href="#contoh-grup-dengan-total-di-atas-ambang">Contoh: Grup dengan Total di Atas Ambang</a></li>
+        <li><a href="#where-vs-having"><code>WHERE</code> vs <code>HAVING</code></a></li>
+        <li><a href="#menggabungkan-where-dan-having">Menggabungkan <code>WHERE</code> dan <code>HAVING</code></a></li>
+      </ul>
+    </li>
+    <li><a href="#with-rollup--subtotal-dan-grand-total"><code>WITH ROLLUP</code> — Subtotal dan Grand Total</a>
+      <ul>
+        <li><a href="#sintaks-2">Sintaks</a></li>
+        <li><a href="#contoh">Contoh</a></li>
+      </ul>
+    </li>
+    <li><a href="#contoh-praktis-analisis-penjualan">Contoh Praktis: Analisis Penjualan</a>
+      <ul>
+        <li><a href="#1-ringkasan-keseluruhan">1. Ringkasan Keseluruhan</a></li>
+        <li><a href="#2-penjualan-per-status">2. Penjualan per Status</a></li>
+        <li><a href="#3-top-5-pelanggan-dengan-belanja-tertinggi">3. Top 5 Pelanggan dengan Belanja Tertinggi</a></li>
+        <li><a href="#4-produk-terlaris-dari-detail_pesanan">4. Produk Terlaris (dari <code>detail_pesanan</code>)</a></li>
+        <li><a href="#5-penjualan-per-bulan">5. Penjualan per Bulan</a></li>
+        <li><a href="#6-pelanggan-tanpa-pesanan">6. Pelanggan Tanpa Pesanan</a></li>
+      </ul>
+    </li>
+    <li><a href="#fungsi-agregasi-lain-yang-berguna">Fungsi Agregasi Lain yang Berguna</a>
+      <ul>
+        <li><a href="#group_concat--menggabungkan-nilai-menjadi-string"><code>GROUP_CONCAT</code> — Menggabungkan Nilai menjadi String</a></li>
+        <li><a href="#stddev-dan-variance"><code>STDDEV</code> dan <code>VARIANCE</code></a></li>
+        <li><a href="#json_arrayagg-dan-json_objectagg-mysql-57"><code>JSON_ARRAYAGG</code> dan <code>JSON_OBJECTAGG</code> (MySQL 5.7+)</a></li>
+      </ul>
+    </li>
+    <li><a href="#ringkasan">Ringkasan</a></li>
+  </ul>
+</nav>
+  </div>
+
+			</nav>
+			<h2 id="pendahuluan">Pendahuluan <a href="#pendahuluan" class="anchor" aria-hidden="true">#</a></h2>
+<p>Sampai sekarang kita selalu menampilkan data baris per baris. Namun seringkali kita butuh <strong>ringkasan</strong>: berapa total penjualan bulan ini? Berapa rata-rata harga produk? Produk mana yang paling mahal? Pertanyaan-pertanyaan ini dijawab oleh <strong>fungsi agregasi</strong>.</p>
+<p>Artikel ini membahas lima fungsi agregasi utama (<code>COUNT</code>, <code>SUM</code>, <code>AVG</code>, <code>MIN</code>, <code>MAX</code>), cara mengelompokkan data dengan <code>GROUP BY</code>, dan cara memfilter hasil grup dengan <code>HAVING</code>.</p>
+<blockquote>
+<p><strong>Asumsi:</strong> Anda berada di database <code>toko_online</code> (<code>USE toko_online;</code>) dan sudah mengisi data contoh pada tabel <code>produk</code>, <code>pelanggan</code>, <code>pesanan</code>, dan <code>detail_pesanan</code>.</p>
+</blockquote>
+<hr>
+<h2 id="fungsi-agregasi-dasar">Fungsi Agregasi Dasar <a href="#fungsi-agregasi-dasar" class="anchor" aria-hidden="true">#</a></h2>
+<p>Fungsi agregasi menerima banyak baris dan mengembalikan <strong>satu nilai</strong> ringkasan.</p>
+<h3 id="count--menghitung-jumlah-baris"><code>COUNT</code> — Menghitung Jumlah Baris <a href="#count--menghitung-jumlah-baris" class="anchor" aria-hidden="true">#</a></h3>
+<p><strong>Menghitung semua baris:</strong></p>
+<pre><code class="language-sql">SELECT COUNT(*) AS total_produk FROM produk;
+</code></pre>
+<p><strong>Menghitung baris dengan kolom tertentu tidak <code>NULL</code>:</strong></p>
+<pre><code class="language-sql">SELECT COUNT(telepon) AS pelanggan_punya_telepon FROM pelanggan;
+</code></pre>
+<p>Perbedaan penting:</p>
+<ul>
+<li><code>COUNT(*)</code> — menghitung <strong>semua</strong> baris, termasuk yang memiliki <code>NULL</code>.</li>
+<li><code>COUNT(kolom)</code> — menghitung baris yang <strong>kolomnya tidak <code>NULL</code></strong>.</li>
+</ul>
+<p><strong>Menghitung nilai unik:</strong></p>
+<pre><code class="language-sql">SELECT COUNT(DISTINCT status) AS jumlah_status_berbeda FROM pesanan;
+</code></pre>
+<p><strong>Menghitung dengan kondisi (menggunakan <code>CASE</code>):</strong></p>
+<pre><code class="language-sql">SELECT
+  COUNT(*) AS total_pesanan,
+  COUNT(CASE WHEN status = 'selesai' THEN 1 END) AS pesanan_selesai,
+  COUNT(CASE WHEN status = 'baru' THEN 1 END) AS pesanan_baru
+FROM pesanan;
+</code></pre>
+<h3 id="sum--menjumlahkan-nilai"><code>SUM</code> — Menjumlahkan Nilai <a href="#sum--menjumlahkan-nilai" class="anchor" aria-hidden="true">#</a></h3>
+<pre><code class="language-sql">SELECT SUM(total) AS total_penjualan FROM pesanan;
+</code></pre>
+<p><strong>Dengan kondisi:</strong></p>
+<pre><code class="language-sql">SELECT SUM(total) AS total_penjualan_selesai
+FROM pesanan
+WHERE status = 'selesai';
+</code></pre>
+<blockquote>
+<p><strong>Catatan:</strong> <code>SUM</code> mengabaikan nilai <code>NULL</code>. Jika semua baris <code>NULL</code>, hasilnya <code>NULL</code> (bukan 0). Gunakan <code>IFNULL(SUM(kolom), 0)</code> jika ingin hasil 0.</p>
+</blockquote>
+<h3 id="avg--rata-rata"><code>AVG</code> — Rata-rata <a href="#avg--rata-rata" class="anchor" aria-hidden="true">#</a></h3>
+<pre><code class="language-sql">SELECT AVG(harga) AS rata_rata_harga FROM produk;
+</code></pre>
+<p><code>AVG(kolom)</code> setara dengan <code>SUM(kolom) / COUNT(kolom)</code>. Karena <code>COUNT(kolom)</code> mengabaikan <code>NULL</code>, <code>AVG</code> juga mengabaikan <code>NULL</code>.</p>
+<p><strong>Rata-rata dengan pembulatan:</strong></p>
+<pre><code class="language-sql">SELECT ROUND(AVG(harga), 2) AS rata_rata_harga FROM produk;
+</code></pre>
+<h3 id="min-dan-max--nilai-terkecil-dan-terbesar"><code>MIN</code> dan <code>MAX</code> — Nilai Terkecil dan Terbesar <a href="#min-dan-max--nilai-terkecil-dan-terbesar" class="anchor" aria-hidden="true">#</a></h3>
+<pre><code class="language-sql">SELECT
+  MIN(harga) AS harga_termurah,
+  MAX(harga) AS harga_termahal
+FROM produk;
+</code></pre>
+<p><strong>Dengan tanggal:</strong></p>
+<pre><code class="language-sql">SELECT
+  MIN(dibuat_pada) AS pesanan_pertama,
+  MAX(dibuat_pada) AS pesanan_terakhir
+FROM pesanan;
+</code></pre>
+<p><code>MIN</code> dan <code>MAX</code> juga bekerja pada tipe string (berdasarkan urutan collation) dan tanggal.</p>
+<h3 id="menggabungkan-beberapa-fungsi-agregasi">Menggabungkan Beberapa Fungsi Agregasi <a href="#menggabungkan-beberapa-fungsi-agregasi" class="anchor" aria-hidden="true">#</a></h3>
+<pre><code class="language-sql">SELECT
+  COUNT(*) AS jumlah_produk,
+  SUM(stok) AS total_stok,
+  AVG(harga) AS rata_rata_harga,
+  MIN(harga) AS harga_termurah,
+  MAX(harga) AS harga_termahal
+FROM produk;
+</code></pre>
+<p>Output contoh:</p>
+<pre><code>+---------------+------------+----------------+---------------+---------------+
+| jumlah_produk | total_stok | rata_rata_harga| harga_termurah| harga_termahal|
++---------------+------------+----------------+---------------+---------------+
+|             5 |         85 |     620000.0000|     150000.00 |    1500000.00 |
++---------------+------------+----------------+---------------+---------------+
+</code></pre>
+<hr>
+<h2 id="group-by--mengelompokkan-data"><code>GROUP BY</code> — Mengelompokkan Data <a href="#group-by--mengelompokkan-data" class="anchor" aria-hidden="true">#</a></h2>
+<p>Fungsi agregasi menjadi jauh lebih berguna saat dikombinasikan dengan <code>GROUP BY</code>. Alih-alih satu nilai untuk seluruh tabel, Anda mendapatkan satu nilai <strong>per kelompok</strong>.</p>
+<h3 id="sintaks">Sintaks <a href="#sintaks" class="anchor" aria-hidden="true">#</a></h3>
+<pre><code class="language-sql">SELECT kolom_grup, fungsi_agregasi(kolom)
+FROM nama_tabel
+GROUP BY kolom_grup;
+</code></pre>
+<h3 id="contoh-jumlah-pesanan-per-status">Contoh: Jumlah Pesanan per Status <a href="#contoh-jumlah-pesanan-per-status" class="anchor" aria-hidden="true">#</a></h3>
+<pre><code class="language-sql">SELECT status, COUNT(*) AS jumlah
+FROM pesanan
+GROUP BY status;
+</code></pre>
+<p>Output contoh:</p>
+<pre><code>+---------+--------+
+| status  | jumlah |
++---------+--------+
+| baru    |      3 |
+| selesai |      5 |
+| batal   |      1 |
++---------+--------+
+</code></pre>
+<h3 id="contoh-total-penjualan-per-pelanggan">Contoh: Total Penjualan per Pelanggan <a href="#contoh-total-penjualan-per-pelanggan" class="anchor" aria-hidden="true">#</a></h3>
+<pre><code class="language-sql">SELECT pelanggan_id, SUM(total) AS total_belanja
+FROM pesanan
+GROUP BY pelanggan_id;
+</code></pre>
+<h3 id="contoh-rata-rata-harga-per-rentang-stok">Contoh: Rata-rata Harga per Rentang Stok <a href="#contoh-rata-rata-harga-per-rentang-stok" class="anchor" aria-hidden="true">#</a></h3>
+<pre><code class="language-sql">SELECT
+  CASE
+    WHEN stok = 0 THEN 'habis'
+    WHEN stok &lt; 10 THEN 'sedikit'
+    ELSE 'banyak'
+  END AS kategori_stok,
+  COUNT(*) AS jumlah_produk,
+  AVG(harga) AS rata_rata_harga
+FROM produk
+GROUP BY kategori_stok;
+</code></pre>
+<h3 id="group-by-dengan-beberapa-kolom"><code>GROUP BY</code> dengan Beberapa Kolom <a href="#group-by-dengan-beberapa-kolom" class="anchor" aria-hidden="true">#</a></h3>
+<pre><code class="language-sql">SELECT
+  pelanggan_id,
+  status,
+  COUNT(*) AS jumlah,
+  SUM(total) AS total
+FROM pesanan
+GROUP BY pelanggan_id, status
+ORDER BY pelanggan_id, status;
+</code></pre>
+<p>Setiap kombinasi <code>(pelanggan_id, status)</code> menjadi satu grup.</p>
+<h3 id="aturan-penting-kolom-di-select-harus-ada-di-group-by">Aturan Penting: Kolom di <code>SELECT</code> Harus Ada di <code>GROUP BY</code> <a href="#aturan-penting-kolom-di-select-harus-ada-di-group-by" class="anchor" aria-hidden="true">#</a></h3>
+<p>Dalam mode <code>ONLY_FULL_GROUP_BY</code> (default di MySQL 5.7+), setiap kolom di <code>SELECT</code> yang <strong>bukan</strong> bagian dari fungsi agregasi <strong>harus</strong> muncul di <code>GROUP BY</code>.</p>
+<pre><code class="language-sql">-- ERROR di ONLY_FULL_GROUP_BY: nama tidak ada di GROUP BY
+SELECT pelanggan_id, nama, SUM(total)
+FROM pesanan
+GROUP BY pelanggan_id;
+
+-- Benar: nama diambil dari tabel pelanggan via JOIN, atau diagregasi
+SELECT pelanggan_id, COUNT(*) AS jumlah_pesanan, SUM(total) AS total
+FROM pesanan
+GROUP BY pelanggan_id;
+</code></pre>
+<p>Untuk menonaktifkan sementara (tidak disarankan):</p>
+<pre><code class="language-sql">SET SESSION sql_mode = '';
+</code></pre>
+<blockquote>
+<p><strong>Tips:</strong> Jangan matikan <code>ONLY_FULL_GROUP_BY</code>. Error ini justru membantu Anda menulis query yang benar dan deterministik.</p>
+</blockquote>
+<h3 id="group-by-dengan-order-by"><code>GROUP BY</code> dengan <code>ORDER BY</code> <a href="#group-by-dengan-order-by" class="anchor" aria-hidden="true">#</a></h3>
+<pre><code class="language-sql">SELECT status, COUNT(*) AS jumlah
+FROM pesanan
+GROUP BY status
+ORDER BY jumlah DESC;
+</code></pre>
+<p>Mengurutkan grup berdasarkan hasil agregasi.</p>
+<hr>
+<h2 id="having--memfilter-hasil-grup"><code>HAVING</code> — Memfilter Hasil Grup <a href="#having--memfilter-hasil-grup" class="anchor" aria-hidden="true">#</a></h2>
+<p><code>WHERE</code> memfilter <strong>baris sebelum</strong> pengelompokan. <code>HAVING</code> memfilter <strong>grup setelah</strong> pengelompokan.</p>
+<h3 id="sintaks-1">Sintaks <a href="#sintaks-1" class="anchor" aria-hidden="true">#</a></h3>
+<pre><code class="language-sql">SELECT kolom_grup, fungsi_agregasi(kolom)
+FROM nama_tabel
+GROUP BY kolom_grup
+HAVING kondisi_agregasi;
+</code></pre>
+<h3 id="contoh-grup-dengan-jumlah-tertentu">Contoh: Grup dengan Jumlah Tertentu <a href="#contoh-grup-dengan-jumlah-tertentu" class="anchor" aria-hidden="true">#</a></h3>
+<pre><code class="language-sql">SELECT pelanggan_id, COUNT(*) AS jumlah_pesanan
+FROM pesanan
+GROUP BY pelanggan_id
+HAVING COUNT(*) &gt; 1;
+</code></pre>
+<p>Hanya pelanggan yang memiliki lebih dari 1 pesanan.</p>
+<h3 id="contoh-grup-dengan-total-di-atas-ambang">Contoh: Grup dengan Total di Atas Ambang <a href="#contoh-grup-dengan-total-di-atas-ambang" class="anchor" aria-hidden="true">#</a></h3>
+<pre><code class="language-sql">SELECT pelanggan_id, SUM(total) AS total_belanja
+FROM pesanan
+GROUP BY pelanggan_id
+HAVING SUM(total) &gt; 1000000
+ORDER BY total_belanja DESC;
+</code></pre>
+<h3 id="where-vs-having"><code>WHERE</code> vs <code>HAVING</code> <a href="#where-vs-having" class="anchor" aria-hidden="true">#</a></h3>
+<table>
+<thead>
+<tr>
+<th>Aspek</th>
+<th><code>WHERE</code></th>
+<th><code>HAVING</code></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Kapan dievaluasi</td>
+<td>Sebelum <code>GROUP BY</code></td>
+<td>Setelah <code>GROUP BY</code></td>
+</tr>
+<tr>
+<td>Bekerja pada</td>
+<td>Baris individual</td>
+<td>Grup</td>
+</tr>
+<tr>
+<td>Bisa pakai fungsi agregasi?</td>
+<td>Tidak</td>
+<td>Ya</td>
+</tr>
+<tr>
+<td>Contoh</td>
+<td><code>WHERE status = 'selesai'</code></td>
+<td><code>HAVING COUNT(*) &gt; 1</code></td>
+</tr>
+</tbody>
+</table>
+<h3 id="menggabungkan-where-dan-having">Menggabungkan <code>WHERE</code> dan <code>HAVING</code> <a href="#menggabungkan-where-dan-having" class="anchor" aria-hidden="true">#</a></h3>
+<pre><code class="language-sql">SELECT pelanggan_id, COUNT(*) AS jumlah_pesanan, SUM(total) AS total
+FROM pesanan
+WHERE dibuat_pada &gt;= '2022-01-01'
+GROUP BY pelanggan_id
+HAVING SUM(total) &gt; 500000
+ORDER BY total DESC;
+</code></pre>
+<p>Alur eksekusi:</p>
+<ol>
+<li><code>WHERE</code> memfilter pesanan yang dibuat sejak 2022-01-01.</li>
+<li><code>GROUP BY</code> mengelompokkan per pelanggan.</li>
+<li><code>HAVING</code> memfilter grup dengan total &gt; 500.000.</li>
+<li><code>ORDER BY</code> mengurutkan hasil.</li>
+</ol>
+<hr>
+<h2 id="with-rollup--subtotal-dan-grand-total"><code>WITH ROLLUP</code> — Subtotal dan Grand Total <a href="#with-rollup--subtotal-dan-grand-total" class="anchor" aria-hidden="true">#</a></h2>
+<p><code>WITH ROLLUP</code> menambahkan baris ringkasan (subtotal per grup dan grand total) ke hasil <code>GROUP BY</code>.</p>
+<h3 id="sintaks-2">Sintaks <a href="#sintaks-2" class="anchor" aria-hidden="true">#</a></h3>
+<pre><code class="language-sql">SELECT kolom_grup, fungsi_agregasi(kolom)
+FROM nama_tabel
+GROUP BY kolom_grup WITH ROLLUP;
+</code></pre>
+<h3 id="contoh">Contoh <a href="#contoh" class="anchor" aria-hidden="true">#</a></h3>
+<pre><code class="language-sql">SELECT status, COUNT(*) AS jumlah
+FROM pesanan
+GROUP BY status WITH ROLLUP;
+</code></pre>
+<p>Output contoh:</p>
+<pre><code>+---------+--------+
+| status  | jumlah |
++---------+--------+
+| baru    |      3 |
+| batal   |      1 |
+| selesai |      5 |
+| NULL    |      9 |  ← grand total
++---------+--------+
+</code></pre>
+<p>Baris dengan <code>status = NULL</code> adalah grand total (9 pesanan).</p>
+<p><strong>Dengan beberapa kolom:</strong></p>
+<pre><code class="language-sql">SELECT pelanggan_id, status, COUNT(*) AS jumlah
+FROM pesanan
+GROUP BY pelanggan_id, status WITH ROLLUP;
+</code></pre>
+<p>Akan menghasilkan subtotal per <code>pelanggan_id</code> dan grand total.</p>
+<p><strong>Memberi label pada baris rollup:</strong></p>
+<pre><code class="language-sql">SELECT
+  IFNULL(pelanggan_id, 'TOTAL') AS pelanggan,
+  IFNULL(status, 'SEMUA') AS status,
+  COUNT(*) AS jumlah
+FROM pesanan
+GROUP BY pelanggan_id, status WITH ROLLUP;
+</code></pre>
+<hr>
+<h2 id="contoh-praktis-analisis-penjualan">Contoh Praktis: Analisis Penjualan <a href="#contoh-praktis-analisis-penjualan" class="anchor" aria-hidden="true">#</a></h2>
+<p>Mari gabungkan semua konsep untuk analisis penjualan:</p>
+<h3 id="1-ringkasan-keseluruhan">1. Ringkasan Keseluruhan <a href="#1-ringkasan-keseluruhan" class="anchor" aria-hidden="true">#</a></h3>
+<pre><code class="language-sql">SELECT
+  COUNT(*) AS total_pesanan,
+  COUNT(DISTINCT pelanggan_id) AS pelanggan_unik,
+  SUM(total) AS total_penjualan,
+  AVG(total) AS rata_rata_per_pesanan,
+  MIN(total) AS pesanan_terkecil,
+  MAX(total) AS pesanan_terbesar
+FROM pesanan
+WHERE status = 'selesai';
+</code></pre>
+<h3 id="2-penjualan-per-status">2. Penjualan per Status <a href="#2-penjualan-per-status" class="anchor" aria-hidden="true">#</a></h3>
+<pre><code class="language-sql">SELECT
+  status,
+  COUNT(*) AS jumlah_pesanan,
+  SUM(total) AS total_penjualan,
+  ROUND(AVG(total), 2) AS rata_rata
+FROM pesanan
+GROUP BY status
+ORDER BY total_penjualan DESC;
+</code></pre>
+<h3 id="3-top-5-pelanggan-dengan-belanja-tertinggi">3. Top 5 Pelanggan dengan Belanja Tertinggi <a href="#3-top-5-pelanggan-dengan-belanja-tertinggi" class="anchor" aria-hidden="true">#</a></h3>
+<pre><code class="language-sql">SELECT
+  pelanggan_id,
+  COUNT(*) AS jumlah_pesanan,
+  SUM(total) AS total_belanja
+FROM pesanan
+WHERE status = 'selesai'
+GROUP BY pelanggan_id
+HAVING SUM(total) &gt; 0
+ORDER BY total_belanja DESC
+LIMIT 5;
+</code></pre>
+<h3 id="4-produk-terlaris-dari-detail_pesanan">4. Produk Terlaris (dari <code>detail_pesanan</code>) <a href="#4-produk-terlaris-dari-detail_pesanan" class="anchor" aria-hidden="true">#</a></h3>
+<pre><code class="language-sql">SELECT
+  produk_id,
+  SUM(jumlah) AS total_terjual,
+  SUM(jumlah * harga_satuan) AS total_pendapatan
+FROM detail_pesanan
+GROUP BY produk_id
+ORDER BY total_terjual DESC
+LIMIT 10;
+</code></pre>
+<h3 id="5-penjualan-per-bulan">5. Penjualan per Bulan <a href="#5-penjualan-per-bulan" class="anchor" aria-hidden="true">#</a></h3>
+<pre><code class="language-sql">SELECT
+  DATE_FORMAT(dibuat_pada, '%Y-%m') AS bulan,
+  COUNT(*) AS jumlah_pesanan,
+  SUM(total) AS total_penjualan
+FROM pesanan
+WHERE status = 'selesai'
+GROUP BY bulan
+ORDER BY bulan;
+</code></pre>
+<h3 id="6-pelanggan-tanpa-pesanan">6. Pelanggan Tanpa Pesanan <a href="#6-pelanggan-tanpa-pesanan" class="anchor" aria-hidden="true">#</a></h3>
+<pre><code class="language-sql">SELECT p.id, p.nama
+FROM pelanggan p
+LEFT JOIN pesanan ps ON ps.pelanggan_id = p.id
+GROUP BY p.id, p.nama
+HAVING COUNT(ps.id) = 0;
+</code></pre>
+<p>Query ini menggunakan <code>LEFT JOIN</code> (dibahas di artikel berikutnya) dan <code>HAVING</code> untuk menemukan pelanggan yang belum pernah memesan.</p>
+<hr>
+<h2 id="fungsi-agregasi-lain-yang-berguna">Fungsi Agregasi Lain yang Berguna <a href="#fungsi-agregasi-lain-yang-berguna" class="anchor" aria-hidden="true">#</a></h2>
+<h3 id="group_concat--menggabungkan-nilai-menjadi-string"><code>GROUP_CONCAT</code> — Menggabungkan Nilai menjadi String <a href="#group_concat--menggabungkan-nilai-menjadi-string" class="anchor" aria-hidden="true">#</a></h3>
+<pre><code class="language-sql">SELECT
+  pelanggan_id,
+  GROUP_CONCAT(status ORDER BY dibuat_pada SEPARATOR ', ') AS status_pesanan
+FROM pesanan
+GROUP BY pelanggan_id;
+</code></pre>
+<p>Output contoh:</p>
+<pre><code>+--------------+---------------------------+
+| pelanggan_id | status_pesanan            |
++--------------+---------------------------+
+|            1 | baru, selesai, selesai    |
+|            2 | selesai, batal            |
++--------------+---------------------------+
+</code></pre>
+<p>Berguna untuk menampilkan daftar nilai dalam satu baris.</p>
+<h3 id="stddev-dan-variance"><code>STDDEV</code> dan <code>VARIANCE</code> <a href="#stddev-dan-variance" class="anchor" aria-hidden="true">#</a></h3>
+<pre><code class="language-sql">SELECT
+  STDDEV(harga) AS standar_deviasi_harga,
+  VARIANCE(harga) AS variansi_harga
+FROM produk;
+</code></pre>
+<p>Mengukur sebaran nilai — berguna untuk analisis statistik.</p>
+<h3 id="json_arrayagg-dan-json_objectagg-mysql-57"><code>JSON_ARRAYAGG</code> dan <code>JSON_OBJECTAGG</code> (MySQL 5.7+) <a href="#json_arrayagg-dan-json_objectagg-mysql-57" class="anchor" aria-hidden="true">#</a></h3>
+<pre><code class="language-sql">SELECT
+  pelanggan_id,
+  JSON_ARRAYAGG(status) AS status_json
+FROM pesanan
+GROUP BY pelanggan_id;
+</code></pre>
+<p>Menghasilkan array JSON dari nilai-nilai dalam grup.</p>
+<hr>
+<h2 id="ringkasan">Ringkasan <a href="#ringkasan" class="anchor" aria-hidden="true">#</a></h2>
+<table>
+<thead>
+<tr>
+<th>Fungsi / Klausa</th>
+<th>Fungsi</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>COUNT(*)</code></td>
+<td>Menghitung semua baris</td>
+</tr>
+<tr>
+<td><code>COUNT(kolom)</code></td>
+<td>Menghitung baris dengan kolom tidak <code>NULL</code></td>
+</tr>
+<tr>
+<td><code>COUNT(DISTINCT kolom)</code></td>
+<td>Menghitung nilai unik</td>
+</tr>
+<tr>
+<td><code>SUM(kolom)</code></td>
+<td>Menjumlahkan nilai</td>
+</tr>
+<tr>
+<td><code>AVG(kolom)</code></td>
+<td>Rata-rata</td>
+</tr>
+<tr>
+<td><code>MIN(kolom)</code> / <code>MAX(kolom)</code></td>
+<td>Nilai terkecil / terbesar</td>
+</tr>
+<tr>
+<td><code>GROUP BY</code></td>
+<td>Mengelompokkan baris</td>
+</tr>
+<tr>
+<td><code>HAVING</code></td>
+<td>Memfilter grup setelah agregasi</td>
+</tr>
+<tr>
+<td><code>WITH ROLLUP</code></td>
+<td>Menambah subtotal &amp; grand total</td>
+</tr>
+<tr>
+<td><code>GROUP_CONCAT</code></td>
+<td>Menggabungkan nilai menjadi string</td>
+</tr>
+</tbody>
+</table>
+<p>Poin penting:</p>
+<ul>
+<li><code>WHERE</code> memfilter baris <strong>sebelum</strong> <code>GROUP BY</code>; <code>HAVING</code> memfilter grup <strong>setelah</strong> <code>GROUP BY</code>.</li>
+<li>Setiap kolom di <code>SELECT</code> yang bukan fungsi agregasi harus muncul di <code>GROUP BY</code> (mode <code>ONLY_FULL_GROUP_BY</code>).</li>
+<li><code>COUNT(*)</code> menghitung semua baris; <code>COUNT(kolom)</code> mengabaikan <code>NULL</code>.</li>
+<li><code>SUM</code> dan <code>AVG</code> mengabaikan <code>NULL</code>; gunakan <code>IFNULL</code> jika perlu nilai default 0.</li>
+</ul>
+<p>Pada artikel berikutnya, kita akan membahas <strong>JOIN</strong> — cara menggabungkan data dari beberapa tabel yang saling berelasi.</p>
+
+			<div class="page-footer-meta d-flex flex-column flex-md-row justify-content-between">
+				</div>
+			<div class="docs-navigation d-flex justify-content-between">
+	
+	<a href="/mysql/tutorial/06-filtering-sorting/">
+			<div class="card my-1">
+				<div class="card-body py-2">
+					&larr; Filtering &amp; Sorting Data
+				</div>
+			</div>
+		</a>
+	<a class="ms-auto" href="/mysql/tutorial/08-join/">
+			<div class="card my-1">
+				<div class="card-body py-2">
+					JOIN: Menggabungkan Tabel &rarr;
+				</div>
+			</div>
+		</a>
+	</div>
+
+			
+		</main>
+	</div>
+
+      </div>
+    </div>
+    
+    
+    <footer class="footer text-muted">
+  <div class="container-xxl">
+    <div class="row">
+      <div class="col-lg-8 order-last order-lg-first">
+        <ul class="list-inline">
+          <li class="list-inline-item">Powered by <a class="text-muted" href="https://gohugo.io/">Hugo</a> and <a class="text-muted" href="https://github.com/">Github</a></li>
+        </ul>
+      </div>
+      <div class="col-lg-8 order-first order-lg-last text-lg-end">
+        <ul class="list-inline">
+          </ul>
+      </div>
+    </div>
+  </div>
+</footer>
+    
+
+<script src="/js/bootstrap.min.650aeec64c81d69d4c0850fc73c93da3f0330cec0a27772feed7f90f60baa5f47f1c45687d71914bdafd1c4e860d40f6dc08ede27a2f08431ff929c9a2d24621.js" integrity="sha512-ZQruxkyB1p1MCFD8c8k9o/AzDOwKJ3cv7tf5D2C6pfR/HEVofXGRS9r9HE6GDUD23Ajt4novCEMf&#43;SnJotJGIQ==" crossorigin="anonymous" defer></script>
+  <script src="/js/highlight.min.ec234bd8a5f487aaffe50a89f17b14501b1bb65633cf177cffd4cb84702dd7030edc08712dceb8dc27ac7e54b53240a08bf0b8d951572ee582bcdbbd06a48a7b.js" integrity="sha512-7CNL2KX0h6r/5QqJ8XsUUBsbtlYzzxd8/9TLhHAt1wMO3AhxLc643CesflS1MkCgi/C42VFXLuWCvNu9BqSKew==" crossorigin="anonymous" defer></script>
+  <script src="/main.min.cd1e5e6b40065b3f7f7fd8548a528fac67019754eda0f37b9918d02d154fc9ef6a22742f6513b0572ad9163152e151ec36221fbeafbecd7759c3dab1f19b64b9.js" integrity="sha512-zR5ea0AGWz9/f9hUilKPrGcBl1TtoPN7mRjQLRVPye9qInQvZROwVyrZFjFS4VHsNiIfvq&#43;&#43;zXdZw9qx8ZtkuQ==" crossorigin="anonymous" defer></script>
+  <script src="https://kaban.my.id/index.min.f90d3536216d10b8ecf574dc8d57b0d2bd45aab605bdc69b1f7697f3476ebdb5db6a63a3f6955150f2c0b02e66fa1adfbf4c5b50c540f663f829ad8bcd5807c6.js" integrity="sha512-&#43;Q01NiFtELjs9XTcjVew0r1FqrYFvcabH3aX80duvbXbamOj9pVRUPLAsC5m&#43;hrfv0xbUMVA9mP4Ka2LzVgHxg==" crossorigin="anonymous" defer></script>
+  
+    <div class="d-flex fixed-bottom pb-4 pb-lg-5 pe-4 pe-lg-5">
+      <a id="toTop" href="#" class="btn btn-outline-primary rounded-circle ms-auto p-2"><span class="visually-hidden">Top</span><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-chevron-up"><polyline points="18 15 12 9 6 15"></polyline></svg></a>
+    </div>
+    
+  </body>
+</html>

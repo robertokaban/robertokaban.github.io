@@ -1,0 +1,1365 @@
+<!doctype html>
+<html lang="en-US">
+  <head>
+  <meta charset="utf-8">
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <link rel="preload" as="font" href="https://kaban.my.id/fonts/vendor/jost/jost-v4-latin-regular.woff2" type="font/woff2" crossorigin>
+<link rel="preload" as="font" href="https://kaban.my.id/fonts/vendor/jost/jost-v4-latin-500.woff2" type="font/woff2" crossorigin>
+<link rel="preload" as="font" href="https://kaban.my.id/fonts/vendor/jost/jost-v4-latin-700.woff2" type="font/woff2" crossorigin>
+
+  <script>(()=>{var t=window.matchMedia&&window.matchMedia("(prefers-color-scheme: dark)").matches,e=localStorage.getItem("theme");t&&e===null&&(localStorage.setItem("theme","dark"),document.documentElement.setAttribute("data-dark-mode","")),t&&e==="dark"&&document.documentElement.setAttribute("data-dark-mode",""),e==="dark"&&document.documentElement.setAttribute("data-dark-mode","")})()</script>
+
+  <link rel="stylesheet" href="https://kaban.my.id/main.9f87974e4c1caf828d7f6300ecd98102083d1763683fe424f26c4c7b80fa72a094aa3c62fe333b5026c22ff50b82f74220d559e730c1f032fd8bcec957ac2bb4.css" integrity="sha512-n4eXTkwcr4KNf2MA7NmBAgg9F2NoP&#43;Qk8mxMe4D6cqCUqjxi/jM7UCbCL/ULgvdCINVZ5zDB8DL9i87JV6wrtA==" crossorigin="anonymous">
+<noscript><style>img.lazyload { display: none; }</style></noscript>
+  <meta name="robots" content="index, follow">
+    <meta name="googlebot" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1">
+    <meta name="bingbot" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1">
+  <title>Tipe Data &amp; Konversi - Roberto Kaban Blog&#39;s</title>
+<meta name="description" content="Panduan lengkap tipe data JavaScript: string, number, boolean, null, undefined, serta konversi antar tipe.">
+<link rel="canonical" href="https://kaban.my.id/javascript/tutorial/04-tipe-data-konversi/">
+<meta property="og:locale" content="en_US">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Tipe Data &amp; Konversi">
+<meta property="og:description" content="Panduan lengkap tipe data JavaScript: string, number, boolean, null, undefined, serta konversi antar tipe.">
+<meta property="og:url" content="https://kaban.my.id/javascript/tutorial/04-tipe-data-konversi/">
+<meta property="og:site_name" content="Roberto Kaban Blog&#39;s">
+<meta property="article:published_time" content="2022-12-22T08:00:00+00:00">
+  <meta property="article:modified_time" content="2022-12-22T08:00:00+00:00">
+  
+  <meta property="og:image" content="https://kaban.my.id/doks.png"/>
+      <meta property="og:image:alt" content="Roberto Kaban Blog&#39;s">
+    
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:site" content="@robertokaban">
+<meta name="twitter:creator" content="@robertokaban">
+<meta name="twitter:title" content="Tipe Data &amp; Konversi">
+<meta name="twitter:description" content="Panduan lengkap tipe data JavaScript: string, number, boolean, null, undefined, serta konversi antar tipe.">
+<meta name="twitter:image" content="https://kaban.my.id/doks.png">
+    <meta name="twitter:image:alt" content="Tipe Data &amp; Konversi">
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "Person",
+        "@id": "https://kaban.my.id/#/schema/person/1",
+      "name": "BlogRobertoKaban",
+      "url": "https://kaban.my.id/",
+      "sameAs": [
+        "https://twitter.com/robertokaban"
+        , "https://github.com/robertokaban"
+        ],
+      "image": {
+          "@type": "ImageObject",
+          "@id": "https://kaban.my.id/#/schema/image/1",
+          "url": "https://kaban.my.id/doks.png",
+          "width":  1280 ,
+          "height":  640 ,
+          "caption": "BlogRobertoKaban"
+        }
+      },
+    {
+      "@type": "WebSite",
+      "@id": "https://kaban.my.id/#/schema/website/1",
+      "url": "https://kaban.my.id/",
+      "name": "Roberto Kaban Blog\u0027s",
+      "description": "Hanya sebuah catatan kecil untuk hal yang tidak ingin dilupakan.",
+      "publisher": {
+          "@id": "https://kaban.my.id/#/schema/person/1"
+        }
+      },
+    {
+      "@type": "WebPage",
+      "@id": "https://kaban.my.id/javascript/tutorial/04-tipe-data-konversi/",
+      "url": "https://kaban.my.id/javascript/tutorial/04-tipe-data-konversi/",
+      "name": "Tipe Data \u0026 Konversi",
+      "description": "Panduan lengkap tipe data JavaScript: string, number, boolean, null, undefined, serta konversi antar tipe.",
+      "isPartOf": {
+        "@id": "https://kaban.my.id/#/schema/website/1"
+      },
+      "about": {
+          "@id": "https://kaban.my.id/#/schema/person/1"
+        },
+      "datePublished": "2022-12-22T08:00:00CET",
+      "dateModified": "2022-12-22T08:00:00CET",
+      "breadcrumb": {
+        "@id": "https://kaban.my.id/javascript/tutorial/04-tipe-data-konversi/#/schema/breadcrumb/1"
+      },
+      "primaryImageOfPage": {
+        "@id": "https://kaban.my.id/javascript/tutorial/04-tipe-data-konversi/#/schema/image/2"
+      },
+      "inLanguage": "en-US",
+      "potentialAction": [{
+        "@type": "ReadAction", "target": ["https://kaban.my.id/javascript/tutorial/04-tipe-data-konversi/"]
+      }]
+    },
+    {
+      "@type": "BreadcrumbList",
+      "@id": "https://kaban.my.id/javascript/tutorial/04-tipe-data-konversi/#/schema/breadcrumb/1",
+      "name": "Breadcrumbs",
+      "itemListElement": [{
+        "@type": "ListItem",
+        "position":  1 ,
+        "item": {
+          "@type": "WebPage",
+          "@id": "https://kaban.my.id/",
+          "url": "https://kaban.my.id/",
+          "name": "Home"
+          }
+        },{
+        "@type": "ListItem",
+        "position":  2 ,
+        "item": {
+          "@type": "WebPage",
+          "@id": "https://kaban.my.id/javascript/",
+          "url": "https://kaban.my.id/javascript/",
+          "name": "Javascript"
+          }
+        },{
+        "@type": "ListItem",
+        "position":  3 ,
+        "item": {
+          "@type": "WebPage",
+          "@id": "https://kaban.my.id/javascript/tutorial/",
+          "url": "https://kaban.my.id/javascript/tutorial/",
+          "name": "Tutorial"
+          }
+        },{
+        "@type": "ListItem",
+        "position":  4 ,
+        "item": {
+          "@id": "https://kaban.my.id/javascript/tutorial/04-tipe-data-konversi/"
+          }
+        }]
+    },
+
+    {
+      "@context": "https://schema.org",
+      "@graph": [
+        {
+          "@type": "ImageObject",
+          "@id": "https://kaban.my.id/javascript/tutorial/04-tipe-data-konversi/#/schema/image/2",
+          "url": "https://kaban.my.id/doks.png",
+          "contentUrl": "https://kaban.my.id/doks.png",
+          "caption": "Tipe Data \u0026 Konversi"
+        }
+      ]
+    }
+
+  ]
+}
+</script>
+
+  <meta name="theme-color" content="#fff">
+<link rel="icon" href="https://kaban.my.id/favicon.ico" sizes="any">
+<link rel="icon" type="image/svg+xml" href="https://kaban.my.id/favicon.svg">
+<link rel="apple-touch-icon" sizes="180x180" href="https://kaban.my.id/apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="32x32" href="https://kaban.my.id/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="https://kaban.my.id/favicon-16x16.png">
+<link rel="manifest" crossorigin="use-credentials" href="https://kaban.my.id/site.webmanifest">
+
+  
+
+
+  
+  
+  
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-60VSDZFQR5"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-60VSDZFQR5');
+</script>
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6664512614760985"
+     crossorigin="anonymous"></script>
+</head>
+
+  <body class="javascript single">
+    <div class="sticky-top">
+<div class="header-bar"></div>
+
+<header class="navbar navbar-expand-lg navbar-light doks-navbar">
+  <nav class="container-xxl flex-wrap flex-lg-nowrap" aria-label="Main navigation">
+
+    <a class="navbar-brand order-0" href="/" aria-label="Roberto Kaban Blog&#39;s">
+      Roberto Kaban Blog&#39;s
+    </a>
+
+    <button class="btn btn-menu order-2 d-block d-lg-none" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasDoks" aria-controls="offcanvasDoks" aria-label="Open main menu">
+      <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-menu"><line x1="3" y1="12" x2="21" y2="12"></line><line x1="3" y1="6" x2="21" y2="6"></line><line x1="3" y1="18" x2="21" y2="18"></line></svg>
+    </button>
+    <div class="offcanvas offcanvas-end border-0 py-lg-1" tabindex="-1" id="offcanvasDoks" data-bs-backdrop="true" aria-labelledby="offcanvasDoksLabel">
+      <div class="header-bar d-lg-none"></div>
+      <div class="offcanvas-header d-lg-none">
+        <h2 class="h5 offcanvas-title ps-2" id="offcanvasDoksLabel"><a class="text-dark" href="/">Roberto Kaban Blog&#39;s</a></h2>
+        <button type="button" class="btn-close text-reset me-2" data-bs-dismiss="offcanvas" aria-label="Close main menu"></button>
+      </div>
+      <div class="offcanvas-body p-4 p-lg-0">
+        <ul class="nav flex-column flex-lg-row align-items-lg-center mt-2 mt-lg-0 ms-lg-2 me-lg-auto">
+              <li class="nav-item">
+                <a class="nav-link ps-0 py-1" href="/about/">About Me</a>
+              </li>
+            
+          
+              <li class="nav-item">
+                <a class="nav-link ps-0 py-1" href="/contact/">Contact</a>
+              </li>
+            
+          
+              <li class="nav-item">
+                <a class="nav-link ps-0 py-1" href="/artikel/">Artikel</a>
+              </li>
+            
+          
+              <li class="nav-item">
+                <a class="nav-link ps-0 py-1" href="/coretanku/">Coretanku</a>
+              </li>
+            
+          </ul>
+
+        <hr class="text-black-50 my-4 d-lg-none">
+        <form class="doks-search position-relative flex-grow-1 ms-lg-auto me-lg-2">
+          <input id="search" class="form-control is-search" type="search" placeholder="Cari di blog ini..." aria-label="Cari di blog ini..." autocomplete="off">
+          <div id="suggestions" class="shadow bg-white rounded d-none"></div>
+        </form>
+        <hr class="text-black-50 my-4 d-lg-none">
+        <ul class="nav flex-column flex-lg-row">
+          <li class="nav-item">
+              <a class="nav-link social-link" href="https://github.com/robertokaban"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-github"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path></svg><small class="ms-2 d-lg-none">GitHub</small></a>
+            </li>
+          <li class="nav-item">
+              <a class="nav-link social-link" href="https://facebook.com/roberto.kaban"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-facebook"><path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"></path></svg><small class="ms-2 d-lg-none">Facebook</small></a>
+            </li>
+          <li class="nav-item">
+              <a class="nav-link social-link" href="https://twitter.com/robertokaban"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-twitter"><path d="M23 3a10.9 10.9 0 0 1-3.14 1.53 4.48 4.48 0 0 0-7.86 3v1A10.66 10.66 0 0 1 3 4s-4 9 5 13a11.64 11.64 0 0 1-7 2c9 5 20 0 20-11.5a4.5 4.5 0 0 0-.08-.83A7.72 7.72 0 0 0 23 3z"></path></svg><small class="ms-2 d-lg-none">Twitter</small></a>
+            </li>
+          <li class="nav-item">
+              <a class="nav-link social-link" href="https://youtube.com/@robertokaban"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-youtube"><path d="M10,15L15.19,12L10,9V15M21.56,7.17C21.69,7.64 21.78,8.27 21.84,9.07C21.91,9.87 21.94,10.56 21.94,11.16L22,12C22,14.19 21.84,15.8 21.56,16.83C21.31,17.73 20.73,18.31 19.83,18.56C19.36,18.69 18.5,18.78 17.18,18.84C15.88,18.91 14.69,18.94 13.59,18.94L12,19C7.81,19 5.2,18.84 4.17,18.56C3.27,18.31 2.69,17.73 2.44,16.83C2.31,16.36 2.22,15.73 2.16,14.93C2.09,14.13 2.06,13.44 2.06,12.84L2,12C2,9.81 2.16,8.2 2.44,7.17C2.69,6.27 3.27,5.69 4.17,5.44C4.64,5.31 5.5,5.22 6.82,5.16C8.12,5.09 9.31,5.06 10.41,5.06L12,5C16.19,5 18.8,5.16 19.83,5.44C20.73,5.69 21.31,6.27 21.56,7.17Z"></path></svg><small class="ms-2 d-lg-none">Youtube</small></a>
+            </li>
+          </ul>
+
+        
+        <hr class="text-black-50 my-4 d-lg-none">
+        <button id="mode" class="btn btn-link" type="button" aria-label="Toggle user interface mode">
+          <span class="toggle-dark"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-moon"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path></svg></span>
+          <span class="toggle-light"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-sun"><circle cx="12" cy="12" r="5"></circle><line x1="12" y1="1" x2="12" y2="3"></line><line x1="12" y1="21" x2="12" y2="23"></line><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line><line x1="1" y1="12" x2="3" y2="12"></line><line x1="21" y1="12" x2="23" y2="12"></line><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line></svg></span>
+        </button>
+        
+
+        </div>
+    </div>
+  </nav>
+</header>
+
+
+</div>
+
+
+<div class="container-xxl">
+  <aside class="doks-sidebar">
+    <nav id="doks-docs-nav" class="collapse d-lg-none" aria-label="Tertiary navigation">
+      
+<ul class="list-unstyled collapsible-sidebar">
+  
+    
+      
+      <li class="mb-1">
+        <button class="btn btn-toggle align-items-center rounded collapsed" data-bs-toggle="collapse" data-bs-target="#section-0967e753cd827c7c2576cf6f7292922e" aria-expanded="true">
+          Tutorial Javascript
+        </button>
+        <div class="collapse show" id="section-0967e753cd827c7c2576cf6f7292922e">
+          <ul class="btn-toggle-nav list-unstyled fw-normal pb-1 small">
+            
+              
+                
+                <li><a class="docs-link rounded" href="https://kaban.my.id/javascript/tutorial/pengenalan/">Pengenalan Javascript</a></li>
+              
+            
+              
+                
+                <li><a class="docs-link rounded" href="https://kaban.my.id/javascript/tutorial/02-instalasi-persiapan/">Instalasi &amp; Persiapan Lingkungan JavaScript</a></li>
+              
+            
+              
+                
+                <li><a class="docs-link rounded" href="https://kaban.my.id/javascript/tutorial/03-sintaks-variabel/">Sintaks Dasar &amp; Variabel</a></li>
+              
+            
+              
+                
+                <li><a class="docs-link rounded active" href="https://kaban.my.id/javascript/tutorial/04-tipe-data-konversi/">Tipe Data &amp; Konversi</a></li>
+              
+            
+              
+                
+                <li><a class="docs-link rounded" href="https://kaban.my.id/javascript/tutorial/05-struktur-kontrol/">Struktur Kontrol &amp; Perulangan</a></li>
+              
+            
+              
+                
+                <li><a class="docs-link rounded" href="https://kaban.my.id/javascript/tutorial/06-fungsi/">Fungsi</a></li>
+              
+            
+          </ul>
+        </div>
+      </li>
+    
+  
+</ul>
+
+    </nav>
+  </aside>
+</div>
+
+    <div class="wrap container-xxl" role="document">
+      <div class="content">
+        
+	<div class="row flex-xl-nowrap">
+		<div class="col-lg-5 col-xl-4 docs-sidebar d-none d-lg-block">
+			<nav class="docs-links" aria-label="Main navigation">
+				
+<ul class="list-unstyled collapsible-sidebar">
+  
+    
+      
+      <li class="mb-1">
+        <button class="btn btn-toggle align-items-center rounded collapsed" data-bs-toggle="collapse" data-bs-target="#section-0967e753cd827c7c2576cf6f7292922e" aria-expanded="true">
+          Tutorial Javascript
+        </button>
+        <div class="collapse show" id="section-0967e753cd827c7c2576cf6f7292922e">
+          <ul class="btn-toggle-nav list-unstyled fw-normal pb-1 small">
+            
+              
+                
+                <li><a class="docs-link rounded" href="https://kaban.my.id/javascript/tutorial/pengenalan/">Pengenalan Javascript</a></li>
+              
+            
+              
+                
+                <li><a class="docs-link rounded" href="https://kaban.my.id/javascript/tutorial/02-instalasi-persiapan/">Instalasi &amp; Persiapan Lingkungan JavaScript</a></li>
+              
+            
+              
+                
+                <li><a class="docs-link rounded" href="https://kaban.my.id/javascript/tutorial/03-sintaks-variabel/">Sintaks Dasar &amp; Variabel</a></li>
+              
+            
+              
+                
+                <li><a class="docs-link rounded active" href="https://kaban.my.id/javascript/tutorial/04-tipe-data-konversi/">Tipe Data &amp; Konversi</a></li>
+              
+            
+              
+                
+                <li><a class="docs-link rounded" href="https://kaban.my.id/javascript/tutorial/05-struktur-kontrol/">Struktur Kontrol &amp; Perulangan</a></li>
+              
+            
+              
+                
+                <li><a class="docs-link rounded" href="https://kaban.my.id/javascript/tutorial/06-fungsi/">Fungsi</a></li>
+              
+            
+          </ul>
+        </div>
+      </li>
+    
+  
+</ul>
+
+			</nav>
+		</div>
+		<nav class="docs-toc d-none d-xl-block col-xl-3" aria-label="Secondary navigation">
+			<div class="d-xl-none">
+  <button class="btn btn-outline-primary btn-sm doks-toc-toggle collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#onThisPage" aria-controls="doks-docs-nav" aria-expanded="false" aria-label="Toggle On this page navigation">
+    <span>Daftar isi</span>
+    <span>
+      <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" class="doks doks-expand" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><title>Expand</title><polyline points="7 13 12 18 17 13"></polyline><polyline points="7 6 12 11 17 6"></polyline></svg>
+      <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" class="doks doks-collapse" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><title>Collapse</title><polyline points="17 11 12 6 7 11"></polyline><polyline points="17 18 12 13 7 18"></polyline></svg>
+    </span>
+  </button>
+  <div class="collapse" id="onThisPage">
+    <div class="card card-body mt-3 py-1">
+      <div class="page-links">
+        <nav id="TableOfContents">
+  <ul>
+    <li><a href="#pendahuluan">Pendahuluan</a></li>
+    <li><a href="#dua-kategori-besar-primitif-vs-object">Dua Kategori Besar: Primitif vs Object</a>
+      <ul>
+        <li><a href="#primitif-immutable">Primitif (Immutable)</a></li>
+        <li><a href="#object-mutable">Object (Mutable)</a></li>
+      </ul>
+    </li>
+    <li><a href="#tipe-primitif-secara-detail">Tipe Primitif Secara Detail</a>
+      <ul>
+        <li><a href="#1-string--teks">1. <code>string</code> — Teks</a></li>
+        <li><a href="#2-number--angka">2. <code>number</code> — Angka</a></li>
+        <li><a href="#3-boolean--benarsalah">3. <code>boolean</code> — Benar/Salah</a></li>
+        <li><a href="#4-null--ketiadaan-nilai-yang-disengaja">4. <code>null</code> — Ketiadaan Nilai yang Disengaja</a></li>
+        <li><a href="#5-undefined--belum-diinisialisasi">5. <code>undefined</code> — Belum Diinisialisasi</a></li>
+        <li><a href="#6-symbol--identifier-unik">6. <code>symbol</code> — Identifier Unik</a></li>
+        <li><a href="#7-bigint--integer-besar">7. <code>bigint</code> — Integer Besar</a></li>
+      </ul>
+    </li>
+    <li><a href="#object-tipe-non-primitif">Object: Tipe Non-Primitif</a>
+      <ul>
+        <li><a href="#object-biasa">Object Biasa</a></li>
+        <li><a href="#array">Array</a></li>
+        <li><a href="#function">Function</a></li>
+      </ul>
+    </li>
+    <li><a href="#mengecek-tipe-data">Mengecek Tipe Data</a>
+      <ul>
+        <li><a href="#typeof--untuk-primitif-dan-function"><code>typeof</code> — Untuk Primitif (dan Function)</a></li>
+        <li><a href="#arrayisarray--untuk-array"><code>Array.isArray()</code> — Untuk Array</a></li>
+        <li><a href="#instanceof--untuk-cek-instance-class"><code>instanceof</code> — Untuk Cek Instance Class</a></li>
+        <li><a href="#objectprototypetostringcall--cara-paling-akurat"><code>Object.prototype.toString.call()</code> — Cara Paling Akurat</a></li>
+        <li><a href="#numberisnan-vs-isnan"><code>Number.isNaN()</code> vs <code>isNaN()</code></a></li>
+      </ul>
+    </li>
+    <li><a href="#konversi-tipe-type-conversion">Konversi Tipe (Type Conversion)</a>
+      <ul>
+        <li><a href="#konversi-implisit-coercion">Konversi Implisit (Coercion)</a></li>
+        <li><a href="#konversi-eksplisit">Konversi Eksplisit</a></li>
+      </ul>
+    </li>
+    <li><a href="#contoh-praktis-validasi-input-form">Contoh Praktis: Validasi Input Form</a></li>
+    <li><a href="#ringkasan">Ringkasan</a></li>
+  </ul>
+</nav>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="page-links d-none d-xl-block">
+  <h3>Daftar isi</h3>
+  <nav id="TableOfContents">
+  <ul>
+    <li><a href="#pendahuluan">Pendahuluan</a></li>
+    <li><a href="#dua-kategori-besar-primitif-vs-object">Dua Kategori Besar: Primitif vs Object</a>
+      <ul>
+        <li><a href="#primitif-immutable">Primitif (Immutable)</a></li>
+        <li><a href="#object-mutable">Object (Mutable)</a></li>
+      </ul>
+    </li>
+    <li><a href="#tipe-primitif-secara-detail">Tipe Primitif Secara Detail</a>
+      <ul>
+        <li><a href="#1-string--teks">1. <code>string</code> — Teks</a></li>
+        <li><a href="#2-number--angka">2. <code>number</code> — Angka</a></li>
+        <li><a href="#3-boolean--benarsalah">3. <code>boolean</code> — Benar/Salah</a></li>
+        <li><a href="#4-null--ketiadaan-nilai-yang-disengaja">4. <code>null</code> — Ketiadaan Nilai yang Disengaja</a></li>
+        <li><a href="#5-undefined--belum-diinisialisasi">5. <code>undefined</code> — Belum Diinisialisasi</a></li>
+        <li><a href="#6-symbol--identifier-unik">6. <code>symbol</code> — Identifier Unik</a></li>
+        <li><a href="#7-bigint--integer-besar">7. <code>bigint</code> — Integer Besar</a></li>
+      </ul>
+    </li>
+    <li><a href="#object-tipe-non-primitif">Object: Tipe Non-Primitif</a>
+      <ul>
+        <li><a href="#object-biasa">Object Biasa</a></li>
+        <li><a href="#array">Array</a></li>
+        <li><a href="#function">Function</a></li>
+      </ul>
+    </li>
+    <li><a href="#mengecek-tipe-data">Mengecek Tipe Data</a>
+      <ul>
+        <li><a href="#typeof--untuk-primitif-dan-function"><code>typeof</code> — Untuk Primitif (dan Function)</a></li>
+        <li><a href="#arrayisarray--untuk-array"><code>Array.isArray()</code> — Untuk Array</a></li>
+        <li><a href="#instanceof--untuk-cek-instance-class"><code>instanceof</code> — Untuk Cek Instance Class</a></li>
+        <li><a href="#objectprototypetostringcall--cara-paling-akurat"><code>Object.prototype.toString.call()</code> — Cara Paling Akurat</a></li>
+        <li><a href="#numberisnan-vs-isnan"><code>Number.isNaN()</code> vs <code>isNaN()</code></a></li>
+      </ul>
+    </li>
+    <li><a href="#konversi-tipe-type-conversion">Konversi Tipe (Type Conversion)</a>
+      <ul>
+        <li><a href="#konversi-implisit-coercion">Konversi Implisit (Coercion)</a></li>
+        <li><a href="#konversi-eksplisit">Konversi Eksplisit</a></li>
+      </ul>
+    </li>
+    <li><a href="#contoh-praktis-validasi-input-form">Contoh Praktis: Validasi Input Form</a></li>
+    <li><a href="#ringkasan">Ringkasan</a></li>
+  </ul>
+</nav>
+  </div>
+
+		</nav>
+		<main class="docs-content col-lg-11 col-xl-9">
+		
+				<nav aria-label="breadcrumb">
+					<ol class="breadcrumb">
+						<li class="breadcrumb-item"><a href="/">Home</a></li>
+<li class="breadcrumb-item"><a href="/javascript/">Javascript</a></li>
+<li class="breadcrumb-item"><a href="/javascript/tutorial/">Tutorial Javascript</a></li>
+<li class="breadcrumb-item active" aria-current="page">Tipe Data &amp; Konversi</li>
+					</ol>
+				</nav>
+			
+			<h1>Tipe Data &amp; Konversi</h1>
+			<p class="lead">JavaScript memiliki tipe data dinamis — variabel bisa berisi tipe apa pun. Artikel ini membahas tipe data primitif, object, cara mengecek tipe, serta konversi implisit dan eksplisit antar tipe.</p>
+			<nav class="d-xl-none" aria-label="Quaternary navigation">
+				<div class="d-xl-none">
+  <button class="btn btn-outline-primary btn-sm doks-toc-toggle collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#onThisPage" aria-controls="doks-docs-nav" aria-expanded="false" aria-label="Toggle On this page navigation">
+    <span>Daftar isi</span>
+    <span>
+      <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" class="doks doks-expand" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><title>Expand</title><polyline points="7 13 12 18 17 13"></polyline><polyline points="7 6 12 11 17 6"></polyline></svg>
+      <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" class="doks doks-collapse" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><title>Collapse</title><polyline points="17 11 12 6 7 11"></polyline><polyline points="17 18 12 13 7 18"></polyline></svg>
+    </span>
+  </button>
+  <div class="collapse" id="onThisPage">
+    <div class="card card-body mt-3 py-1">
+      <div class="page-links">
+        <nav id="TableOfContents">
+  <ul>
+    <li><a href="#pendahuluan">Pendahuluan</a></li>
+    <li><a href="#dua-kategori-besar-primitif-vs-object">Dua Kategori Besar: Primitif vs Object</a>
+      <ul>
+        <li><a href="#primitif-immutable">Primitif (Immutable)</a></li>
+        <li><a href="#object-mutable">Object (Mutable)</a></li>
+      </ul>
+    </li>
+    <li><a href="#tipe-primitif-secara-detail">Tipe Primitif Secara Detail</a>
+      <ul>
+        <li><a href="#1-string--teks">1. <code>string</code> — Teks</a></li>
+        <li><a href="#2-number--angka">2. <code>number</code> — Angka</a></li>
+        <li><a href="#3-boolean--benarsalah">3. <code>boolean</code> — Benar/Salah</a></li>
+        <li><a href="#4-null--ketiadaan-nilai-yang-disengaja">4. <code>null</code> — Ketiadaan Nilai yang Disengaja</a></li>
+        <li><a href="#5-undefined--belum-diinisialisasi">5. <code>undefined</code> — Belum Diinisialisasi</a></li>
+        <li><a href="#6-symbol--identifier-unik">6. <code>symbol</code> — Identifier Unik</a></li>
+        <li><a href="#7-bigint--integer-besar">7. <code>bigint</code> — Integer Besar</a></li>
+      </ul>
+    </li>
+    <li><a href="#object-tipe-non-primitif">Object: Tipe Non-Primitif</a>
+      <ul>
+        <li><a href="#object-biasa">Object Biasa</a></li>
+        <li><a href="#array">Array</a></li>
+        <li><a href="#function">Function</a></li>
+      </ul>
+    </li>
+    <li><a href="#mengecek-tipe-data">Mengecek Tipe Data</a>
+      <ul>
+        <li><a href="#typeof--untuk-primitif-dan-function"><code>typeof</code> — Untuk Primitif (dan Function)</a></li>
+        <li><a href="#arrayisarray--untuk-array"><code>Array.isArray()</code> — Untuk Array</a></li>
+        <li><a href="#instanceof--untuk-cek-instance-class"><code>instanceof</code> — Untuk Cek Instance Class</a></li>
+        <li><a href="#objectprototypetostringcall--cara-paling-akurat"><code>Object.prototype.toString.call()</code> — Cara Paling Akurat</a></li>
+        <li><a href="#numberisnan-vs-isnan"><code>Number.isNaN()</code> vs <code>isNaN()</code></a></li>
+      </ul>
+    </li>
+    <li><a href="#konversi-tipe-type-conversion">Konversi Tipe (Type Conversion)</a>
+      <ul>
+        <li><a href="#konversi-implisit-coercion">Konversi Implisit (Coercion)</a></li>
+        <li><a href="#konversi-eksplisit">Konversi Eksplisit</a></li>
+      </ul>
+    </li>
+    <li><a href="#contoh-praktis-validasi-input-form">Contoh Praktis: Validasi Input Form</a></li>
+    <li><a href="#ringkasan">Ringkasan</a></li>
+  </ul>
+</nav>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="page-links d-none d-xl-block">
+  <h3>Daftar isi</h3>
+  <nav id="TableOfContents">
+  <ul>
+    <li><a href="#pendahuluan">Pendahuluan</a></li>
+    <li><a href="#dua-kategori-besar-primitif-vs-object">Dua Kategori Besar: Primitif vs Object</a>
+      <ul>
+        <li><a href="#primitif-immutable">Primitif (Immutable)</a></li>
+        <li><a href="#object-mutable">Object (Mutable)</a></li>
+      </ul>
+    </li>
+    <li><a href="#tipe-primitif-secara-detail">Tipe Primitif Secara Detail</a>
+      <ul>
+        <li><a href="#1-string--teks">1. <code>string</code> — Teks</a></li>
+        <li><a href="#2-number--angka">2. <code>number</code> — Angka</a></li>
+        <li><a href="#3-boolean--benarsalah">3. <code>boolean</code> — Benar/Salah</a></li>
+        <li><a href="#4-null--ketiadaan-nilai-yang-disengaja">4. <code>null</code> — Ketiadaan Nilai yang Disengaja</a></li>
+        <li><a href="#5-undefined--belum-diinisialisasi">5. <code>undefined</code> — Belum Diinisialisasi</a></li>
+        <li><a href="#6-symbol--identifier-unik">6. <code>symbol</code> — Identifier Unik</a></li>
+        <li><a href="#7-bigint--integer-besar">7. <code>bigint</code> — Integer Besar</a></li>
+      </ul>
+    </li>
+    <li><a href="#object-tipe-non-primitif">Object: Tipe Non-Primitif</a>
+      <ul>
+        <li><a href="#object-biasa">Object Biasa</a></li>
+        <li><a href="#array">Array</a></li>
+        <li><a href="#function">Function</a></li>
+      </ul>
+    </li>
+    <li><a href="#mengecek-tipe-data">Mengecek Tipe Data</a>
+      <ul>
+        <li><a href="#typeof--untuk-primitif-dan-function"><code>typeof</code> — Untuk Primitif (dan Function)</a></li>
+        <li><a href="#arrayisarray--untuk-array"><code>Array.isArray()</code> — Untuk Array</a></li>
+        <li><a href="#instanceof--untuk-cek-instance-class"><code>instanceof</code> — Untuk Cek Instance Class</a></li>
+        <li><a href="#objectprototypetostringcall--cara-paling-akurat"><code>Object.prototype.toString.call()</code> — Cara Paling Akurat</a></li>
+        <li><a href="#numberisnan-vs-isnan"><code>Number.isNaN()</code> vs <code>isNaN()</code></a></li>
+      </ul>
+    </li>
+    <li><a href="#konversi-tipe-type-conversion">Konversi Tipe (Type Conversion)</a>
+      <ul>
+        <li><a href="#konversi-implisit-coercion">Konversi Implisit (Coercion)</a></li>
+        <li><a href="#konversi-eksplisit">Konversi Eksplisit</a></li>
+      </ul>
+    </li>
+    <li><a href="#contoh-praktis-validasi-input-form">Contoh Praktis: Validasi Input Form</a></li>
+    <li><a href="#ringkasan">Ringkasan</a></li>
+  </ul>
+</nav>
+  </div>
+
+			</nav>
+			<h2 id="pendahuluan">Pendahuluan <a href="#pendahuluan" class="anchor" aria-hidden="true">#</a></h2>
+<p>JavaScript adalah bahasa <strong>dynamically typed</strong> — Anda tidak perlu mendeklarasikan tipe variabel saat membuatnya. Tipe ditentukan otomatis berdasarkan nilai yang diberikan, dan bisa berubah saat runtime.</p>
+<pre><code class="language-javascript">let x = 42;         // x bertipe number
+x = &quot;Hello&quot;;        // sekarang x bertipe string (tidak error!)
+</code></pre>
+<p>Fleksibilitas ini memudahkan penulisan kode, tetapi juga sumber bug jika tidak dipahami. Artikel ini membahas tipe data JavaScript secara lengkap, cara mengecek tipe, serta konversi implisit dan eksplisit.</p>
+<hr>
+<h2 id="dua-kategori-besar-primitif-vs-object">Dua Kategori Besar: Primitif vs Object <a href="#dua-kategori-besar-primitif-vs-object" class="anchor" aria-hidden="true">#</a></h2>
+<p>Tipe data JavaScript terbagi menjadi dua kategori:</p>
+<h3 id="primitif-immutable">Primitif (Immutable) <a href="#primitif-immutable" class="anchor" aria-hidden="true">#</a></h3>
+<p>Tujuh tipe primitif:</p>
+<ol>
+<li><code>string</code> — teks.</li>
+<li><code>number</code> — angka (integer &amp; desimal).</li>
+<li><code>boolean</code> — <code>true</code> / <code>false</code>.</li>
+<li><code>null</code> — ketiadaan nilai yang disengaja.</li>
+<li><code>undefined</code> — nilai yang belum diinisialisasi.</li>
+<li><code>symbol</code> — identifier unik (ES6).</li>
+<li><code>bigint</code> — integer besar (ES2020).</li>
+</ol>
+<p>Primitif bersifat <strong>immutable</strong> — nilainya tidak bisa diubah. Operasi pada primitif selalu menghasilkan nilai baru.</p>
+<h3 id="object-mutable">Object (Mutable) <a href="#object-mutable" class="anchor" aria-hidden="true">#</a></h3>
+<p>Selain tujuh primitif, semuanya adalah <strong>object</strong>:</p>
+<ul>
+<li><code>Object</code>, <code>Array</code>, <code>Function</code>, <code>Date</code>, <code>RegExp</code>, <code>Map</code>, <code>Set</code>, dll.</li>
+</ul>
+<p>Object bersifat <strong>mutable</strong> — isinya bisa diubah.</p>
+<hr>
+<h2 id="tipe-primitif-secara-detail">Tipe Primitif Secara Detail <a href="#tipe-primitif-secara-detail" class="anchor" aria-hidden="true">#</a></h2>
+<h3 id="1-string--teks">1. <code>string</code> — Teks <a href="#1-string--teks" class="anchor" aria-hidden="true">#</a></h3>
+<p>String adalah urutan karakter. Bisa dibuat dengan <strong>single quote</strong>, <strong>double quote</strong>, atau <strong>backtick</strong> (template literal).</p>
+<pre><code class="language-javascript">const nama1 = 'Budi';
+const nama2 = &quot;Andi&quot;;
+const nama3 = `Citra`;
+
+console.log(nama1); // &quot;Budi&quot;
+console.log(typeof nama1); // &quot;string&quot;
+</code></pre>
+<p><strong>Template literal (backtick) — mendukung interpolasi &amp; multi-baris:</strong></p>
+<pre><code class="language-javascript">const nama = &quot;Budi&quot;;
+const umur = 25;
+
+const sapaan = `Halo, ${nama}! Umur Anda ${umur} tahun.`;
+console.log(sapaan); // &quot;Halo, Budi! Umur Anda 25 tahun.&quot;
+
+const multiBaris = `Baris pertama
+Baris kedua
+Baris ketiga`;
+console.log(multiBaris);
+</code></pre>
+<p><strong>Escape character:</strong></p>
+<table>
+<thead>
+<tr>
+<th>Escape</th>
+<th>Arti</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>\n</code></td>
+<td>Baris baru</td>
+</tr>
+<tr>
+<td><code>\t</code></td>
+<td>Tab</td>
+</tr>
+<tr>
+<td><code>\\</code></td>
+<td>Backslash</td>
+</tr>
+<tr>
+<td><code>\'</code></td>
+<td>Single quote</td>
+</tr>
+<tr>
+<td><code>\&quot;</code></td>
+<td>Double quote</td>
+</tr>
+<tr>
+<td><code>\`</code></td>
+<td>Backtick</td>
+</tr>
+</tbody>
+</table>
+<pre><code class="language-javascript">console.log(&quot;Baris 1\nBaris 2&quot;);
+console.log(&quot;Dia berkata: \&quot;Halo!\&quot;&quot;);
+console.log('It\'s okay');
+</code></pre>
+<p><strong>String adalah immutable:</strong></p>
+<pre><code class="language-javascript">let s = &quot;Hello&quot;;
+s[0] = &quot;J&quot;;           // gagal diam-diam (tidak error di non-strict)
+console.log(s);       // &quot;Hello&quot; (tidak berubah)
+
+// Untuk &quot;mengubah&quot;, buat string baru
+s = &quot;J&quot; + s.slice(1);
+console.log(s);       // &quot;Jello&quot;
+</code></pre>
+<p><strong>Properti &amp; method string yang sering dipakai:</strong></p>
+<pre><code class="language-javascript">const teks = &quot;  Hello World  &quot;;
+
+console.log(teks.length);              // 15 (termasuk spasi)
+console.log(teks.trim());              // &quot;Hello World&quot;
+console.log(teks.toUpperCase());       // &quot;  HELLO WORLD  &quot;
+console.log(teks.toLowerCase());       // &quot;  hello world  &quot;
+console.log(teks.includes(&quot;World&quot;));   // true
+console.log(teks.indexOf(&quot;World&quot;));    // 8
+console.log(teks.slice(2, 7));         // &quot;Hello&quot;
+console.log(teks.replace(&quot;World&quot;, &quot;JS&quot;)); // &quot;  Hello JS  &quot;
+console.log(teks.split(&quot; &quot;));          // [&quot;&quot;, &quot;&quot;, &quot;Hello&quot;, &quot;World&quot;, &quot;&quot;, &quot;&quot;]
+</code></pre>
+<h3 id="2-number--angka">2. <code>number</code> — Angka <a href="#2-number--angka" class="anchor" aria-hidden="true">#</a></h3>
+<p>JavaScript hanya memiliki <strong>satu tipe number</strong> untuk integer dan desimal (floating point 64-bit, standar IEEE 754).</p>
+<pre><code class="language-javascript">const bulat = 42;
+const desimal = 3.14;
+const negatif = -10;
+const eksponensial = 1.5e3;  // 1500
+
+console.log(typeof bulat); // &quot;number&quot;
+</code></pre>
+<p><strong>Nilai khusus:</strong></p>
+<pre><code class="language-javascript">console.log(0 / 0);          // NaN (Not a Number)
+console.log(1 / 0);          // Infinity
+console.log(-1 / 0);         // -Infinity
+console.log(NaN === NaN);    // false (NaN tidak sama dengan dirinya sendiri!)
+console.log(Number.isNaN(NaN)); // true — cara yang benar mengecek NaN
+</code></pre>
+<p><strong>Masalah presisi floating point:</strong></p>
+<pre><code class="language-javascript">console.log(0.1 + 0.2);          // 0.30000000000000004 (!!)
+console.log(0.1 + 0.2 === 0.3);  // false
+</code></pre>
+<blockquote>
+<p><strong>Penyebab:</strong> Bilangan desimal disimpan dalam biner, dan sebagian nilai tidak bisa direpresentasikan secara exact.</p>
+</blockquote>
+<p><strong>Solusi:</strong></p>
+<pre><code class="language-javascript">// Bandingkan dengan toleransi
+console.log(Math.abs((0.1 + 0.2) - 0.3) &lt; Number.EPSILON); // true
+
+// Untuk uang, gunakan integer (dalam sen) atau library seperti decimal.js
+const harga = 1999; // Rp19,99 dalam sen
+</code></pre>
+<p><strong>Batas number:</strong></p>
+<pre><code class="language-javascript">console.log(Number.MAX_SAFE_INTEGER); // 9007199254740991
+console.log(Number.MIN_SAFE_INTEGER); // -9007199254740991
+console.log(Number.MAX_VALUE);        // 1.7976931348623157e+308
+console.log(Number.MIN_VALUE);        // 5e-324
+</code></pre>
+<p>Melebihi <code>MAX_SAFE_INTEGER</code>? Gunakan <code>BigInt</code>.</p>
+<p><strong>Method number yang sering dipakai:</strong></p>
+<pre><code class="language-javascript">const n = 3.14159;
+
+console.log(n.toFixed(2));       // &quot;3.14&quot; (string!)
+console.log(Math.round(n));      // 3
+console.log(Math.floor(n));      // 3
+console.log(Math.ceil(n));       // 4
+console.log(Math.abs(-5));       // 5
+console.log(Math.max(1, 5, 3));  // 5
+console.log(Math.min(1, 5, 3));  // 1
+console.log(Math.random());      // angka acak 0–1
+console.log(Number.isInteger(5));   // true
+console.log(Number.isInteger(5.0)); // true
+</code></pre>
+<h3 id="3-boolean--benarsalah">3. <code>boolean</code> — Benar/Salah <a href="#3-boolean--benarsalah" class="anchor" aria-hidden="true">#</a></h3>
+<p>Hanya dua nilai: <code>true</code> dan <code>false</code>.</p>
+<pre><code class="language-javascript">const aktif = true;
+const selesai = false;
+
+console.log(typeof aktif); // &quot;boolean&quot;
+</code></pre>
+<p><strong>Boolean dari perbandingan:</strong></p>
+<pre><code class="language-javascript">console.log(5 &gt; 3);      // true
+console.log(5 === &quot;5&quot;);  // false
+console.log(!true);      // false
+</code></pre>
+<p><strong>Truthy dan Falsy:</strong></p>
+<p>Semua nilai bisa dikonversi ke boolean. Nilai-nilai <strong>falsy</strong> (dianggap <code>false</code>):</p>
+<table>
+<thead>
+<tr>
+<th>Falsy</th>
+<th>Keterangan</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>false</code></td>
+<td>boolean false</td>
+</tr>
+<tr>
+<td><code>0</code></td>
+<td>angka nol</td>
+</tr>
+<tr>
+<td><code>-0</code></td>
+<td>negatif nol</td>
+</tr>
+<tr>
+<td><code>0n</code></td>
+<td>BigInt nol</td>
+</tr>
+<tr>
+<td><code>&quot;&quot;</code></td>
+<td>string kosong</td>
+</tr>
+<tr>
+<td><code>null</code></td>
+<td>null</td>
+</tr>
+<tr>
+<td><code>undefined</code></td>
+<td>undefined</td>
+</tr>
+<tr>
+<td><code>NaN</code></td>
+<td>Not a Number</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Semua nilai lain adalah truthy</strong> — termasuk <code>&quot;0&quot;</code>, <code>&quot;false&quot;</code>, <code>[]</code>, <code>{}</code>, dan <code>function(){}</code>.</p>
+<pre><code class="language-javascript">console.log(Boolean(&quot;&quot;));        // false
+console.log(Boolean(&quot;0&quot;));       // true  (string non-kosong!)
+console.log(Boolean([]));        // true  (array kosong truthy!)
+console.log(Boolean({}));        // true  (object kosong truthy!)
+console.log(Boolean(0));         // false
+console.log(Boolean(null));      // false
+console.log(Boolean(undefined)); // false
+console.log(Boolean(NaN));       // false
+</code></pre>
+<blockquote>
+<p><strong>Peringatan:</strong> Array kosong <code>[]</code> dan object kosong <code>{}</code> adalah <strong>truthy</strong>. Untuk mengecek array kosong, gunakan <code>arr.length === 0</code>.</p>
+</blockquote>
+<h3 id="4-null--ketiadaan-nilai-yang-disengaja">4. <code>null</code> — Ketiadaan Nilai yang Disengaja <a href="#4-null--ketiadaan-nilai-yang-disengaja" class="anchor" aria-hidden="true">#</a></h3>
+<p><code>null</code> berarti &ldquo;tidak ada nilai&rdquo; — biasanya di-set <strong>secara eksplisit</strong> oleh programmer.</p>
+<pre><code class="language-javascript">let user = null; // sengaja kosong (belum login)
+
+console.log(user);        // null
+console.log(typeof null); // &quot;object&quot; (quirk historis!)
+console.log(user === null); // true
+</code></pre>
+<p><strong>Kapan menggunakan <code>null</code>?</strong></p>
+<ul>
+<li>Ketika sebuah variabel sengaja tidak memiliki nilai.</li>
+<li>Sebagai nilai awal yang akan diisi nanti.</li>
+<li>Untuk menandakan &ldquo;tidak ada hasil&rdquo; (misalnya <code>find()</code> tidak menemukan apa pun).</li>
+</ul>
+<h3 id="5-undefined--belum-diinisialisasi">5. <code>undefined</code> — Belum Diinisialisasi <a href="#5-undefined--belum-diinisialisasi" class="anchor" aria-hidden="true">#</a></h3>
+<p><code>undefined</code> berarti &ldquo;belum didefinisikan&rdquo; — biasanya muncul otomatis.</p>
+<pre><code class="language-javascript">let x;
+console.log(x); // undefined
+
+function sapa(nama) {
+  console.log(nama); // undefined jika dipanggil tanpa argumen
+}
+sapa();
+
+const obj = {};
+console.log(obj.properti); // undefined (properti tidak ada)
+
+console.log(typeof undefined); // &quot;undefined&quot;
+</code></pre>
+<p><strong><code>null</code> vs <code>undefined</code>:</strong></p>
+<table>
+<thead>
+<tr>
+<th>Aspek</th>
+<th><code>null</code></th>
+<th><code>undefined</code></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Arti</td>
+<td>Tidak ada nilai (disengaja)</td>
+<td>Belum diinisialisasi (otomatis)</td>
+</tr>
+<tr>
+<td><code>typeof</code></td>
+<td><code>&quot;object&quot;</code></td>
+<td><code>&quot;undefined&quot;</code></td>
+</tr>
+<tr>
+<td>Di-set oleh</td>
+<td>Programmer</td>
+<td>JavaScript</td>
+</tr>
+<tr>
+<td><code>==</code></td>
+<td><code>null == undefined</code> → <code>true</code></td>
+<td>—</td>
+</tr>
+<tr>
+<td><code>===</code></td>
+<td><code>null === undefined</code> → <code>false</code></td>
+<td>—</td>
+</tr>
+</tbody>
+</table>
+<blockquote>
+<p><strong>Best practice:</strong> Gunakan <code>null</code> untuk menandakan &ldquo;tidak ada nilai&rdquo; secara eksplisit. Biarkan <code>undefined</code> muncul secara alami.</p>
+</blockquote>
+<h3 id="6-symbol--identifier-unik">6. <code>symbol</code> — Identifier Unik <a href="#6-symbol--identifier-unik" class="anchor" aria-hidden="true">#</a></h3>
+<p>Diperkenalkan di ES6. Setiap Symbol dijamin unik.</p>
+<pre><code class="language-javascript">const id1 = Symbol(&quot;id&quot;);
+const id2 = Symbol(&quot;id&quot;);
+
+console.log(id1 === id2); // false (selalu unik)
+console.log(typeof id1);  // &quot;symbol&quot;
+
+// Berguna sebagai key properti object yang &quot;tersembunyi&quot;
+const user = {
+  nama: &quot;Budi&quot;,
+  [Symbol(&quot;id&quot;)]: 12345
+};
+console.log(Object.keys(user)); // [&quot;nama&quot;] — Symbol tidak muncul
+</code></pre>
+<p>Symbol jarang dipakai di kode sehari-hari, tetapi penting untuk library dan framework (misalnya React menggunakan Symbol untuk menandai elemen).</p>
+<h3 id="7-bigint--integer-besar">7. <code>bigint</code> — Integer Besar <a href="#7-bigint--integer-besar" class="anchor" aria-hidden="true">#</a></h3>
+<p>Diperkenalkan di ES2020. Untuk integer yang melebihi <code>Number.MAX_SAFE_INTEGER</code>.</p>
+<pre><code class="language-javascript">const besar = 9007199254740993n; // perhatikan suffix 'n'
+const besarLain = BigInt(&quot;9007199254740993&quot;);
+
+console.log(besar);          // 9007199254740993n
+console.log(typeof besar);   // &quot;bigint&quot;
+console.log(besar + 1n);     // 9007199254740994n
+
+// Tidak bisa dicampur dengan number biasa
+console.log(besar + 1);      // TypeError: Cannot mix BigInt and other types
+console.log(besar + 1n);     // OK
+</code></pre>
+<p>BigInt berguna untuk kriptografi, ID unik besar, atau perhitungan yang butuh presisi integer penuh.</p>
+<hr>
+<h2 id="object-tipe-non-primitif">Object: Tipe Non-Primitif <a href="#object-tipe-non-primitif" class="anchor" aria-hidden="true">#</a></h2>
+<h3 id="object-biasa">Object Biasa <a href="#object-biasa" class="anchor" aria-hidden="true">#</a></h3>
+<pre><code class="language-javascript">const user = {
+  nama: &quot;Budi&quot;,
+  umur: 25,
+  alamat: {
+    kota: &quot;Jakarta&quot;,
+    kodePos: &quot;12345&quot;
+  }
+};
+
+console.log(typeof user);        // &quot;object&quot;
+console.log(user.nama);          // &quot;Budi&quot;
+console.log(user[&quot;umur&quot;]);       // 25
+console.log(user.alamat.kota);   // &quot;Jakarta&quot;
+</code></pre>
+<h3 id="array">Array <a href="#array" class="anchor" aria-hidden="true">#</a></h3>
+<p>Array adalah object khusus untuk menyimpan urutan nilai.</p>
+<pre><code class="language-javascript">const angka = [1, 2, 3, 4, 5];
+
+console.log(typeof angka);     // &quot;object&quot; (bukan &quot;array&quot;!)
+console.log(Array.isArray(angka)); // true — cara yang benar
+console.log(angka.length);     // 5
+console.log(angka[0]);         // 1
+</code></pre>
+<blockquote>
+<p><strong>Peringatan:</strong> <code>typeof []</code> mengembalikan <code>&quot;object&quot;</code>. Untuk mengecek array, gunakan <code>Array.isArray()</code>.</p>
+</blockquote>
+<h3 id="function">Function <a href="#function" class="anchor" aria-hidden="true">#</a></h3>
+<p>Function juga object (dengan properti dan method).</p>
+<pre><code class="language-javascript">function sapa(nama) {
+  return `Halo, ${nama}!`;
+}
+
+console.log(typeof sapa); // &quot;function&quot;
+console.log(sapa(&quot;Budi&quot;)); // &quot;Halo, Budi!&quot;
+</code></pre>
+<hr>
+<h2 id="mengecek-tipe-data">Mengecek Tipe Data <a href="#mengecek-tipe-data" class="anchor" aria-hidden="true">#</a></h2>
+<h3 id="typeof--untuk-primitif-dan-function"><code>typeof</code> — Untuk Primitif (dan Function) <a href="#typeof--untuk-primitif-dan-function" class="anchor" aria-hidden="true">#</a></h3>
+<pre><code class="language-javascript">console.log(typeof &quot;Hello&quot;);    // &quot;string&quot;
+console.log(typeof 42);         // &quot;number&quot;
+console.log(typeof true);       // &quot;boolean&quot;
+console.log(typeof undefined);  // &quot;undefined&quot;
+console.log(typeof null);       // &quot;object&quot;  ← quirk!
+console.log(typeof Symbol());   // &quot;symbol&quot;
+console.log(typeof 10n);        // &quot;bigint&quot;
+console.log(typeof {});         // &quot;object&quot;
+console.log(typeof []);         // &quot;object&quot;  ← quirk!
+console.log(typeof function(){}); // &quot;function&quot;
+</code></pre>
+<h3 id="arrayisarray--untuk-array"><code>Array.isArray()</code> — Untuk Array <a href="#arrayisarray--untuk-array" class="anchor" aria-hidden="true">#</a></h3>
+<pre><code class="language-javascript">console.log(Array.isArray([]));       // true
+console.log(Array.isArray({}));       // false
+console.log(Array.isArray(&quot;Hello&quot;));  // false
+</code></pre>
+<h3 id="instanceof--untuk-cek-instance-class"><code>instanceof</code> — Untuk Cek Instance Class <a href="#instanceof--untuk-cek-instance-class" class="anchor" aria-hidden="true">#</a></h3>
+<pre><code class="language-javascript">console.log([] instanceof Array);     // true
+console.log({} instanceof Object);    // true
+console.log(new Date() instanceof Date); // true
+</code></pre>
+<h3 id="objectprototypetostringcall--cara-paling-akurat"><code>Object.prototype.toString.call()</code> — Cara Paling Akurat <a href="#objectprototypetostringcall--cara-paling-akurat" class="anchor" aria-hidden="true">#</a></h3>
+<pre><code class="language-javascript">const cekTipe = (nilai) =&gt; Object.prototype.toString.call(nilai).slice(8, -1);
+
+console.log(cekTipe(&quot;Hello&quot;));    // &quot;String&quot;
+console.log(cekTipe(42));         // &quot;Number&quot;
+console.log(cekTipe(null));       // &quot;Null&quot;
+console.log(cekTipe(undefined));  // &quot;Undefined&quot;
+console.log(cekTipe([]));         // &quot;Array&quot;
+console.log(cekTipe({}));         // &quot;Object&quot;
+console.log(cekTipe(function(){})); // &quot;Function&quot;
+console.log(cekTipe(new Date())); // &quot;Date&quot;
+</code></pre>
+<h3 id="numberisnan-vs-isnan"><code>Number.isNaN()</code> vs <code>isNaN()</code> <a href="#numberisnan-vs-isnan" class="anchor" aria-hidden="true">#</a></h3>
+<pre><code class="language-javascript">// isNaN() — melakukan konversi tipe dulu (bisa menyesatkan)
+console.log(isNaN(&quot;Hello&quot;));    // true (karena &quot;Hello&quot; -&gt; NaN)
+console.log(isNaN(&quot;123&quot;));      // false (karena &quot;123&quot; -&gt; 123)
+
+// Number.isNaN() — hanya true jika benar-benar NaN (tanpa konversi)
+console.log(Number.isNaN(&quot;Hello&quot;));  // false (bukan NaN, tapi string)
+console.log(Number.isNaN(NaN));      // true
+</code></pre>
+<blockquote>
+<p><strong>Best practice:</strong> Gunakan <code>Number.isNaN()</code> — lebih akurat.</p>
+</blockquote>
+<hr>
+<h2 id="konversi-tipe-type-conversion">Konversi Tipe (Type Conversion) <a href="#konversi-tipe-type-conversion" class="anchor" aria-hidden="true">#</a></h2>
+<h3 id="konversi-implisit-coercion">Konversi Implisit (Coercion) <a href="#konversi-implisit-coercion" class="anchor" aria-hidden="true">#</a></h3>
+<p>JavaScript otomatis mengonversi tipe dalam konteks tertentu. Ini sering menjadi sumber bug.</p>
+<p><strong>Ke string:</strong></p>
+<pre><code class="language-javascript">console.log(&quot;Angka: &quot; + 42);       // &quot;Angka: 42&quot;
+console.log(42 + &quot;&quot;);              // &quot;42&quot;
+console.log([1, 2, 3] + &quot;&quot;);       // &quot;1,2,3&quot;
+console.log({} + &quot;&quot;);              // &quot;[object Object]&quot;
+console.log(null + &quot;&quot;);            // &quot;null&quot;
+console.log(undefined + &quot;&quot;);       // &quot;undefined&quot;
+</code></pre>
+<p><strong>Ke number:</strong></p>
+<pre><code class="language-javascript">console.log(&quot;5&quot; * 2);       // 10 (string -&gt; number)
+console.log(&quot;5&quot; - 2);       // 3
+console.log(&quot;5&quot; / 2);       // 2.5
+console.log(&quot;5&quot; + 2);       // &quot;52&quot; (!!) — plus adalah concatenation untuk string
+console.log(true + 1);      // 2
+console.log(false + 1);     // 1
+console.log(null + 1);      // 1
+console.log(undefined + 1); // NaN
+console.log(&quot;abc&quot; * 2);     // NaN
+</code></pre>
+<p><strong>Ke boolean (truthy/falsy):</strong></p>
+<pre><code class="language-javascript">if (&quot;&quot;) { ... }        // tidak jalan (falsy)
+if (&quot;0&quot;) { ... }       // jalan (truthy!)
+if ([]) { ... }        // jalan (truthy!)
+if (0) { ... }         // tidak jalan (falsy)
+</code></pre>
+<blockquote>
+<p><strong>Peringatan:</strong> Konversi implisit bisa membingungkan. Selalu konversi secara eksplisit agar kode mudah dipahami.</p>
+</blockquote>
+<h3 id="konversi-eksplisit">Konversi Eksplisit <a href="#konversi-eksplisit" class="anchor" aria-hidden="true">#</a></h3>
+<p><strong>Ke string:</strong></p>
+<pre><code class="language-javascript">String(42);          // &quot;42&quot;
+String(true);        // &quot;true&quot;
+String(null);        // &quot;null&quot;
+String(undefined);   // &quot;undefined&quot;
+String([1, 2, 3]);   // &quot;1,2,3&quot;
+
+(42).toString();     // &quot;42&quot;
+(255).toString(16);  // &quot;ff&quot; (hexadecimal)
+(8).toString(2);     // &quot;1000&quot; (binary)
+</code></pre>
+<p><strong>Ke number:</strong></p>
+<pre><code class="language-javascript">Number(&quot;42&quot;);        // 42
+Number(&quot;3.14&quot;);      // 3.14
+Number(&quot;&quot;);          // 0  (!!)
+Number(&quot;   &quot;);       // 0
+Number(&quot;abc&quot;);       // NaN
+Number(&quot;42abc&quot;);     // NaN
+Number(true);        // 1
+Number(false);       // 0
+Number(null);        // 0
+Number(undefined);   // NaN
+
+parseInt(&quot;42&quot;);      // 42
+parseInt(&quot;42px&quot;);    // 42 (berhenti di non-digit)
+parseInt(&quot;3.14&quot;);    // 3 (hanya integer)
+parseInt(&quot;ff&quot;, 16);  // 255 (basis 16)
+parseInt(&quot;abc&quot;);     // NaN
+
+parseFloat(&quot;3.14&quot;);  // 3.14
+parseFloat(&quot;3.14abc&quot;); // 3.14
+parseFloat(&quot;abc&quot;);   // NaN
+
++&quot;42&quot;;               // 42 (unary plus)
++&quot;3.14&quot;;             // 3.14
++&quot;&quot;;                 // 0
++&quot;abc&quot;;              // NaN
+</code></pre>
+<p><strong>Perbedaan <code>Number()</code> vs <code>parseInt()</code> / <code>parseFloat()</code>:</strong></p>
+<table>
+<thead>
+<tr>
+<th>Input</th>
+<th><code>Number()</code></th>
+<th><code>parseInt()</code></th>
+<th><code>parseFloat()</code></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>&quot;42&quot;</code></td>
+<td><code>42</code></td>
+<td><code>42</code></td>
+<td><code>42</code></td>
+</tr>
+<tr>
+<td><code>&quot;42px&quot;</code></td>
+<td><code>NaN</code></td>
+<td><code>42</code></td>
+<td><code>42</code></td>
+</tr>
+<tr>
+<td><code>&quot;3.14&quot;</code></td>
+<td><code>3.14</code></td>
+<td><code>3</code></td>
+<td><code>3.14</code></td>
+</tr>
+<tr>
+<td><code>&quot;&quot;</code></td>
+<td><code>0</code></td>
+<td><code>NaN</code></td>
+<td><code>NaN</code></td>
+</tr>
+<tr>
+<td><code>&quot; 42 &quot;</code></td>
+<td><code>42</code></td>
+<td><code>42</code></td>
+<td><code>42</code></td>
+</tr>
+<tr>
+<td><code>true</code></td>
+<td><code>1</code></td>
+<td><code>NaN</code></td>
+<td><code>NaN</code></td>
+</tr>
+<tr>
+<td><code>null</code></td>
+<td><code>0</code></td>
+<td><code>NaN</code></td>
+<td><code>NaN</code></td>
+</tr>
+</tbody>
+</table>
+<blockquote>
+<p><strong>Tips:</strong> Gunakan <code>Number()</code> untuk konversi ketat (harus angka valid). Gunakan <code>parseInt()</code>/<code>parseFloat()</code> jika string mungkin mengandung karakter non-angka setelah angka (misalnya <code>&quot;42px&quot;</code>).</p>
+</blockquote>
+<p><strong>Ke boolean:</strong></p>
+<pre><code class="language-javascript">Boolean(&quot;Hello&quot;);   // true
+Boolean(&quot;&quot;);        // false
+Boolean(0);         // false
+Boolean(42);        // true
+Boolean(null);      // false
+Boolean(undefined); // false
+Boolean(NaN);       // false
+Boolean([]);        // true
+Boolean({});        // true
+
+// Cara ringkas dengan double negation
+!!&quot;Hello&quot;;          // true
+!!&quot;&quot;;               // false
+!!0;                // false
+!!42;               // true
+</code></pre>
+<hr>
+<h2 id="contoh-praktis-validasi-input-form">Contoh Praktis: Validasi Input Form <a href="#contoh-praktis-validasi-input-form" class="anchor" aria-hidden="true">#</a></h2>
+<p>Mari gabungkan konsep tipe data dan konversi untuk validasi input:</p>
+<pre><code class="language-javascript">function validasiForm(input) {
+  // Pastikan input adalah string
+  const nama = String(input.nama ?? &quot;&quot;).trim();
+  const umurStr = String(input.umur ?? &quot;&quot;).trim();
+  const email = String(input.email ?? &quot;&quot;).trim();
+
+  const error = [];
+
+  // Validasi nama
+  if (nama.length === 0) {
+    error.push(&quot;Nama wajib diisi&quot;);
+  } else if (nama.length &lt; 3) {
+    error.push(&quot;Nama minimal 3 karakter&quot;);
+  }
+
+  // Validasi umur
+  const umur = Number(umurStr);
+  if (umurStr === &quot;&quot;) {
+    error.push(&quot;Umur wajib diisi&quot;);
+  } else if (Number.isNaN(umur)) {
+    error.push(&quot;Umur harus berupa angka&quot;);
+  } else if (!Number.isInteger(umur)) {
+    error.push(&quot;Umur harus bilangan bulat&quot;);
+  } else if (umur &lt; 17 || umur &gt; 100) {
+    error.push(&quot;Umur harus antara 17 dan 100&quot;);
+  }
+
+  // Validasi email (sederhana)
+  if (!email.includes(&quot;@&quot;)) {
+    error.push(&quot;Email tidak valid&quot;);
+  }
+
+  return {
+    valid: error.length === 0,
+    error,
+    data: error.length === 0 ? { nama, umur, email } : null
+  };
+}
+
+// Uji
+console.log(validasiForm({ nama: &quot;Budi&quot;, umur: &quot;25&quot;, email: &quot;budi@example.com&quot; }));
+// { valid: true, error: [], data: { nama: 'Budi', umur: 25, email: 'budi@example.com' } }
+
+console.log(validasiForm({ nama: &quot;B&quot;, umur: &quot;abc&quot;, email: &quot;budi&quot; }));
+// {
+//   valid: false,
+//   error: ['Nama minimal 3 karakter', 'Umur harus berupa angka', 'Email tidak valid'],
+//   data: null
+// }
+</code></pre>
+<hr>
+<h2 id="ringkasan">Ringkasan <a href="#ringkasan" class="anchor" aria-hidden="true">#</a></h2>
+<table>
+<thead>
+<tr>
+<th>Tipe</th>
+<th><code>typeof</code></th>
+<th>Contoh</th>
+<th>Catatan</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>string</code></td>
+<td><code>&quot;string&quot;</code></td>
+<td><code>&quot;Hello&quot;</code></td>
+<td>Immutable</td>
+</tr>
+<tr>
+<td><code>number</code></td>
+<td><code>&quot;number&quot;</code></td>
+<td><code>42</code>, <code>3.14</code></td>
+<td>Floating point 64-bit</td>
+</tr>
+<tr>
+<td><code>boolean</code></td>
+<td><code>&quot;boolean&quot;</code></td>
+<td><code>true</code>, <code>false</code></td>
+<td>—</td>
+</tr>
+<tr>
+<td><code>null</code></td>
+<td><code>&quot;object&quot;</code></td>
+<td><code>null</code></td>
+<td>Quirk historis</td>
+</tr>
+<tr>
+<td><code>undefined</code></td>
+<td><code>&quot;undefined&quot;</code></td>
+<td><code>undefined</code></td>
+<td>Belum diinisialisasi</td>
+</tr>
+<tr>
+<td><code>symbol</code></td>
+<td><code>&quot;symbol&quot;</code></td>
+<td><code>Symbol(&quot;id&quot;)</code></td>
+<td>Selalu unik</td>
+</tr>
+<tr>
+<td><code>bigint</code></td>
+<td><code>&quot;bigint&quot;</code></td>
+<td><code>42n</code></td>
+<td>Integer besar</td>
+</tr>
+<tr>
+<td><code>object</code></td>
+<td><code>&quot;object&quot;</code></td>
+<td><code>{}</code>, <code>[]</code>, <code>new Date()</code></td>
+<td>Mutable</td>
+</tr>
+<tr>
+<td><code>function</code></td>
+<td><code>&quot;function&quot;</code></td>
+<td><code>function(){}</code></td>
+<td>Object khusus</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Falsy values:</strong> <code>false</code>, <code>0</code>, <code>-0</code>, <code>0n</code>, <code>&quot;&quot;</code>, <code>null</code>, <code>undefined</code>, <code>NaN</code>.</p>
+<p>Poin penting:</p>
+<ul>
+<li>JavaScript <strong>dynamically typed</strong> — tipe ditentukan saat runtime.</li>
+<li><code>typeof null</code> → <code>&quot;object&quot;</code> dan <code>typeof []</code> → <code>&quot;object&quot;</code> — gunakan <code>Array.isArray()</code> untuk array.</li>
+<li>Gunakan <code>Number.isNaN()</code> bukan <code>isNaN()</code>.</li>
+<li>Konversi <strong>eksplisit</strong> lebih aman daripada implisit.</li>
+<li><code>Number(&quot;&quot;)</code> → <code>0</code>, tetapi <code>parseInt(&quot;&quot;)</code> → <code>NaN</code> — pahami perbedaannya.</li>
+<li>Hati-hati dengan presisi floating point (<code>0.1 + 0.2 !== 0.3</code>).</li>
+<li><code>[]</code> dan <code>{}</code> adalah <strong>truthy</strong> — jangan gunakan sebagai kondisi &ldquo;kosong&rdquo;.</li>
+</ul>
+<p>Pada artikel berikutnya, kita akan membahas <strong>Struktur Kontrol &amp; Perulangan</strong> — <code>if</code>, <code>switch</code>, <code>for</code>, <code>while</code>, dan lainnya.</p>
+
+			<div class="page-footer-meta d-flex flex-column flex-md-row justify-content-between">
+				</div>
+			<div class="docs-navigation d-flex justify-content-between">
+	
+	<a href="/javascript/tutorial/03-sintaks-variabel/">
+			<div class="card my-1">
+				<div class="card-body py-2">
+					&larr; Sintaks Dasar &amp; Variabel
+				</div>
+			</div>
+		</a>
+	<a class="ms-auto" href="/javascript/tutorial/05-struktur-kontrol/">
+			<div class="card my-1">
+				<div class="card-body py-2">
+					Struktur Kontrol &amp; Perulangan &rarr;
+				</div>
+			</div>
+		</a>
+	</div>
+
+			
+		</main>
+	</div>
+
+      </div>
+    </div>
+    
+    
+    <footer class="footer text-muted">
+  <div class="container-xxl">
+    <div class="row">
+      <div class="col-lg-8 order-last order-lg-first">
+        <ul class="list-inline">
+          <li class="list-inline-item">Powered by <a class="text-muted" href="https://gohugo.io/">Hugo</a> and <a class="text-muted" href="https://github.com/">Github</a></li>
+        </ul>
+      </div>
+      <div class="col-lg-8 order-first order-lg-last text-lg-end">
+        <ul class="list-inline">
+          </ul>
+      </div>
+    </div>
+  </div>
+</footer>
+    
+
+<script src="/js/bootstrap.min.650aeec64c81d69d4c0850fc73c93da3f0330cec0a27772feed7f90f60baa5f47f1c45687d71914bdafd1c4e860d40f6dc08ede27a2f08431ff929c9a2d24621.js" integrity="sha512-ZQruxkyB1p1MCFD8c8k9o/AzDOwKJ3cv7tf5D2C6pfR/HEVofXGRS9r9HE6GDUD23Ajt4novCEMf&#43;SnJotJGIQ==" crossorigin="anonymous" defer></script>
+  <script src="/js/highlight.min.ec234bd8a5f487aaffe50a89f17b14501b1bb65633cf177cffd4cb84702dd7030edc08712dceb8dc27ac7e54b53240a08bf0b8d951572ee582bcdbbd06a48a7b.js" integrity="sha512-7CNL2KX0h6r/5QqJ8XsUUBsbtlYzzxd8/9TLhHAt1wMO3AhxLc643CesflS1MkCgi/C42VFXLuWCvNu9BqSKew==" crossorigin="anonymous" defer></script>
+  <script src="/main.min.cd1e5e6b40065b3f7f7fd8548a528fac67019754eda0f37b9918d02d154fc9ef6a22742f6513b0572ad9163152e151ec36221fbeafbecd7759c3dab1f19b64b9.js" integrity="sha512-zR5ea0AGWz9/f9hUilKPrGcBl1TtoPN7mRjQLRVPye9qInQvZROwVyrZFjFS4VHsNiIfvq&#43;&#43;zXdZw9qx8ZtkuQ==" crossorigin="anonymous" defer></script>
+  <script src="https://kaban.my.id/index.min.f90d3536216d10b8ecf574dc8d57b0d2bd45aab605bdc69b1f7697f3476ebdb5db6a63a3f6955150f2c0b02e66fa1adfbf4c5b50c540f663f829ad8bcd5807c6.js" integrity="sha512-&#43;Q01NiFtELjs9XTcjVew0r1FqrYFvcabH3aX80duvbXbamOj9pVRUPLAsC5m&#43;hrfv0xbUMVA9mP4Ka2LzVgHxg==" crossorigin="anonymous" defer></script>
+  
+    <div class="d-flex fixed-bottom pb-4 pb-lg-5 pe-4 pe-lg-5">
+      <a id="toTop" href="#" class="btn btn-outline-primary rounded-circle ms-auto p-2"><span class="visually-hidden">Top</span><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-chevron-up"><polyline points="18 15 12 9 6 15"></polyline></svg></a>
+    </div>
+    
+  </body>
+</html>

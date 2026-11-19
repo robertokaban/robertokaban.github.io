@@ -18,5 +18,60 @@ JavaScript pertama kali diperkenalkan pada tahun 1995 oleh Brendan Eich di Netsc
 JavaScript dapat digunakan untuk membuat efek animasi, validasi form, dan validasi input data pada sisi klien, serta untuk mengambil dan memanipulasi data pada sisi server dengan menggunakan teknologi seperti Node.</description>
     </item>
     
+    <item>
+      <title>Instalasi &amp; Persiapan Lingkungan JavaScript</title>
+      <link>https://kaban.my.id/javascript/tutorial/02-instalasi-persiapan/</link>
+      <pubDate>Tue, 20 Dec 2022 08:00:00 +0000</pubDate>
+      
+      <guid>https://kaban.my.id/javascript/tutorial/02-instalasi-persiapan/</guid>
+      <description>Pendahuluan # JavaScript adalah bahasa yang unik karena bisa dijalankan di dua lingkungan:
+Browser — untuk membuat halaman web interaktif (sisi klien). Node.js — untuk membuat aplikasi server, CLI, atau tooling (sisi server). Berbeda dengan MySQL yang perlu diinstal sebagai server, JavaScript sudah tersedia di setiap browser modern. Namun untuk pengembangan yang serius, kita perlu menyiapkan beberapa alat tambahan.
+Artikel ini membahas persiapan lingkungan pengembangan JavaScript dari nol: dari membuka console browser hingga menginstal Node.</description>
+    </item>
+    
+    <item>
+      <title>Sintaks Dasar &amp; Variabel</title>
+      <link>https://kaban.my.id/javascript/tutorial/03-sintaks-variabel/</link>
+      <pubDate>Wed, 21 Dec 2022 08:00:00 +0000</pubDate>
+      
+      <guid>https://kaban.my.id/javascript/tutorial/03-sintaks-variabel/</guid>
+      <description>Pendahuluan # Setiap program JavaScript terdiri dari statement (pernyataan) yang dieksekusi baris demi baris. Statement paling dasar adalah deklarasi variabel — cara menyimpan nilai agar bisa digunakan kembali.
+JavaScript memiliki tiga kata kunci untuk mendeklarasikan variabel: var, let, dan const. Memahami perbedaannya sangat penting karena perilakunya berbeda dalam hal scope, hoisting, dan reassignment.
+Artikel ini membahas sintaks dasar, ketiga jenis variabel, aturan penamaan, serta operator-operator dasar JavaScript.
+Asumsi: Anda sudah menyiapkan lingkungan JavaScript (browser console atau Node.</description>
+    </item>
+    
+    <item>
+      <title>Tipe Data &amp; Konversi</title>
+      <link>https://kaban.my.id/javascript/tutorial/04-tipe-data-konversi/</link>
+      <pubDate>Thu, 22 Dec 2022 08:00:00 +0000</pubDate>
+      
+      <guid>https://kaban.my.id/javascript/tutorial/04-tipe-data-konversi/</guid>
+      <description>Pendahuluan # JavaScript adalah bahasa dynamically typed — Anda tidak perlu mendeklarasikan tipe variabel saat membuatnya. Tipe ditentukan otomatis berdasarkan nilai yang diberikan, dan bisa berubah saat runtime.
+let x = 42; // x bertipe number x = &amp;quot;Hello&amp;quot;; // sekarang x bertipe string (tidak error!) Fleksibilitas ini memudahkan penulisan kode, tetapi juga sumber bug jika tidak dipahami. Artikel ini membahas tipe data JavaScript secara lengkap, cara mengecek tipe, serta konversi implisit dan eksplisit.</description>
+    </item>
+    
+    <item>
+      <title>Struktur Kontrol &amp; Perulangan</title>
+      <link>https://kaban.my.id/javascript/tutorial/05-struktur-kontrol/</link>
+      <pubDate>Fri, 23 Dec 2022 08:00:00 +0000</pubDate>
+      
+      <guid>https://kaban.my.id/javascript/tutorial/05-struktur-kontrol/</guid>
+      <description>Pendahuluan # Tanpa struktur kontrol, program hanya berjalan lurus dari atas ke bawah. Struktur kontrol memungkinkan program untuk:
+Mengambil keputusan — menjalankan blok kode tertentu berdasarkan kondisi (if, switch). Mengulang pekerjaan — menjalankan blok kode berkali-kali (for, while). Mengontrol alur — keluar dari perulangan atau melompati iterasi (break, continue). Artikel ini membahas semua struktur kontrol di JavaScript dengan contoh praktis.
+Asumsi: Anda sudah memahami variabel, tipe data, dan operator dari artikel sebelumnya.</description>
+    </item>
+    
+    <item>
+      <title>Fungsi</title>
+      <link>https://kaban.my.id/javascript/tutorial/06-fungsi/</link>
+      <pubDate>Sat, 24 Dec 2022 08:00:00 +0000</pubDate>
+      
+      <guid>https://kaban.my.id/javascript/tutorial/06-fungsi/</guid>
+      <description>Pendahuluan # Fungsi adalah blok kode yang dirancang untuk melakukan tugas tertentu dan dapat dipanggil berulang kali. Fungsi adalah fondasi pemrograman — hampir semua kode JavaScript modern terdiri dari fungsi-fungsi yang saling memanggil.
+Fungsi memungkinkan kita untuk:
+Menghindari duplikasi — tulis sekali, panggil berkali-kali. Memecah masalah kompleks menjadi bagian-bagian kecil. Mengabstraksi detail — pengguna fungsi tidak perlu tahu implementasinya. Menguji kode secara terpisah. Artikel ini membahas semua aspek fungsi di JavaScript: cara mendefinisikan, parameter, return value, arrow function, scope, closure, dan IIFE.</description>
+    </item>
+    
   </channel>
 </rss>

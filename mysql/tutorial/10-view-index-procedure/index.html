@@ -1,0 +1,1282 @@
+<!doctype html>
+<html lang="en-US">
+  <head>
+  <meta charset="utf-8">
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <link rel="preload" as="font" href="https://kaban.my.id/fonts/vendor/jost/jost-v4-latin-regular.woff2" type="font/woff2" crossorigin>
+<link rel="preload" as="font" href="https://kaban.my.id/fonts/vendor/jost/jost-v4-latin-500.woff2" type="font/woff2" crossorigin>
+<link rel="preload" as="font" href="https://kaban.my.id/fonts/vendor/jost/jost-v4-latin-700.woff2" type="font/woff2" crossorigin>
+
+  <script>(()=>{var t=window.matchMedia&&window.matchMedia("(prefers-color-scheme: dark)").matches,e=localStorage.getItem("theme");t&&e===null&&(localStorage.setItem("theme","dark"),document.documentElement.setAttribute("data-dark-mode","")),t&&e==="dark"&&document.documentElement.setAttribute("data-dark-mode",""),e==="dark"&&document.documentElement.setAttribute("data-dark-mode","")})()</script>
+
+  <link rel="stylesheet" href="https://kaban.my.id/main.9f87974e4c1caf828d7f6300ecd98102083d1763683fe424f26c4c7b80fa72a094aa3c62fe333b5026c22ff50b82f74220d559e730c1f032fd8bcec957ac2bb4.css" integrity="sha512-n4eXTkwcr4KNf2MA7NmBAgg9F2NoP&#43;Qk8mxMe4D6cqCUqjxi/jM7UCbCL/ULgvdCINVZ5zDB8DL9i87JV6wrtA==" crossorigin="anonymous">
+<noscript><style>img.lazyload { display: none; }</style></noscript>
+  <meta name="robots" content="index, follow">
+    <meta name="googlebot" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1">
+    <meta name="bingbot" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1">
+  <title>View, Index, dan Stored Procedure - Roberto Kaban Blog&#39;s</title>
+<meta name="description" content="Panduan lengkap VIEW, INDEX, STORED PROCEDURE, FUNCTION, dan TRIGGER di MySQL.">
+<link rel="canonical" href="https://kaban.my.id/mysql/tutorial/10-view-index-procedure/">
+<meta property="og:locale" content="en_US">
+<meta property="og:type" content="article">
+<meta property="og:title" content="View, Index, dan Stored Procedure">
+<meta property="og:description" content="Panduan lengkap VIEW, INDEX, STORED PROCEDURE, FUNCTION, dan TRIGGER di MySQL.">
+<meta property="og:url" content="https://kaban.my.id/mysql/tutorial/10-view-index-procedure/">
+<meta property="og:site_name" content="Roberto Kaban Blog&#39;s">
+<meta property="article:published_time" content="2022-12-15T08:00:00+00:00">
+  <meta property="article:modified_time" content="2022-12-15T08:00:00+00:00">
+  
+  <meta property="og:image" content="https://kaban.my.id/doks.png"/>
+      <meta property="og:image:alt" content="Roberto Kaban Blog&#39;s">
+    
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:site" content="@robertokaban">
+<meta name="twitter:creator" content="@robertokaban">
+<meta name="twitter:title" content="View, Index, dan Stored Procedure">
+<meta name="twitter:description" content="Panduan lengkap VIEW, INDEX, STORED PROCEDURE, FUNCTION, dan TRIGGER di MySQL.">
+<meta name="twitter:image" content="https://kaban.my.id/doks.png">
+    <meta name="twitter:image:alt" content="View, Index, dan Stored Procedure">
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "Person",
+        "@id": "https://kaban.my.id/#/schema/person/1",
+      "name": "BlogRobertoKaban",
+      "url": "https://kaban.my.id/",
+      "sameAs": [
+        "https://twitter.com/robertokaban"
+        , "https://github.com/robertokaban"
+        ],
+      "image": {
+          "@type": "ImageObject",
+          "@id": "https://kaban.my.id/#/schema/image/1",
+          "url": "https://kaban.my.id/doks.png",
+          "width":  1280 ,
+          "height":  640 ,
+          "caption": "BlogRobertoKaban"
+        }
+      },
+    {
+      "@type": "WebSite",
+      "@id": "https://kaban.my.id/#/schema/website/1",
+      "url": "https://kaban.my.id/",
+      "name": "Roberto Kaban Blog\u0027s",
+      "description": "Hanya sebuah catatan kecil untuk hal yang tidak ingin dilupakan.",
+      "publisher": {
+          "@id": "https://kaban.my.id/#/schema/person/1"
+        }
+      },
+    {
+      "@type": "WebPage",
+      "@id": "https://kaban.my.id/mysql/tutorial/10-view-index-procedure/",
+      "url": "https://kaban.my.id/mysql/tutorial/10-view-index-procedure/",
+      "name": "View, Index, dan Stored Procedure",
+      "description": "Panduan lengkap VIEW, INDEX, STORED PROCEDURE, FUNCTION, dan TRIGGER di MySQL.",
+      "isPartOf": {
+        "@id": "https://kaban.my.id/#/schema/website/1"
+      },
+      "about": {
+          "@id": "https://kaban.my.id/#/schema/person/1"
+        },
+      "datePublished": "2022-12-15T08:00:00CET",
+      "dateModified": "2022-12-15T08:00:00CET",
+      "breadcrumb": {
+        "@id": "https://kaban.my.id/mysql/tutorial/10-view-index-procedure/#/schema/breadcrumb/1"
+      },
+      "primaryImageOfPage": {
+        "@id": "https://kaban.my.id/mysql/tutorial/10-view-index-procedure/#/schema/image/2"
+      },
+      "inLanguage": "en-US",
+      "potentialAction": [{
+        "@type": "ReadAction", "target": ["https://kaban.my.id/mysql/tutorial/10-view-index-procedure/"]
+      }]
+    },
+    {
+      "@type": "BreadcrumbList",
+      "@id": "https://kaban.my.id/mysql/tutorial/10-view-index-procedure/#/schema/breadcrumb/1",
+      "name": "Breadcrumbs",
+      "itemListElement": [{
+        "@type": "ListItem",
+        "position":  1 ,
+        "item": {
+          "@type": "WebPage",
+          "@id": "https://kaban.my.id/",
+          "url": "https://kaban.my.id/",
+          "name": "Home"
+          }
+        },{
+        "@type": "ListItem",
+        "position":  2 ,
+        "item": {
+          "@type": "WebPage",
+          "@id": "https://kaban.my.id/mysql/",
+          "url": "https://kaban.my.id/mysql/",
+          "name": "Mysql"
+          }
+        },{
+        "@type": "ListItem",
+        "position":  3 ,
+        "item": {
+          "@type": "WebPage",
+          "@id": "https://kaban.my.id/mysql/tutorial/",
+          "url": "https://kaban.my.id/mysql/tutorial/",
+          "name": "Tutorial"
+          }
+        },{
+        "@type": "ListItem",
+        "position":  4 ,
+        "item": {
+          "@id": "https://kaban.my.id/mysql/tutorial/10-view-index-procedure/"
+          }
+        }]
+    },
+
+    {
+      "@context": "https://schema.org",
+      "@graph": [
+        {
+          "@type": "ImageObject",
+          "@id": "https://kaban.my.id/mysql/tutorial/10-view-index-procedure/#/schema/image/2",
+          "url": "https://kaban.my.id/doks.png",
+          "contentUrl": "https://kaban.my.id/doks.png",
+          "caption": "View, Index, dan Stored Procedure"
+        }
+      ]
+    }
+
+  ]
+}
+</script>
+
+  <meta name="theme-color" content="#fff">
+<link rel="icon" href="https://kaban.my.id/favicon.ico" sizes="any">
+<link rel="icon" type="image/svg+xml" href="https://kaban.my.id/favicon.svg">
+<link rel="apple-touch-icon" sizes="180x180" href="https://kaban.my.id/apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="32x32" href="https://kaban.my.id/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="https://kaban.my.id/favicon-16x16.png">
+<link rel="manifest" crossorigin="use-credentials" href="https://kaban.my.id/site.webmanifest">
+
+  
+
+
+  
+  
+  
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-60VSDZFQR5"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-60VSDZFQR5');
+</script>
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6664512614760985"
+     crossorigin="anonymous"></script>
+</head>
+
+  <body class="mysql single">
+    <div class="sticky-top">
+<div class="header-bar"></div>
+
+<header class="navbar navbar-expand-lg navbar-light doks-navbar">
+  <nav class="container-xxl flex-wrap flex-lg-nowrap" aria-label="Main navigation">
+
+    <a class="navbar-brand order-0" href="/" aria-label="Roberto Kaban Blog&#39;s">
+      Roberto Kaban Blog&#39;s
+    </a>
+
+    <button class="btn btn-menu order-2 d-block d-lg-none" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasDoks" aria-controls="offcanvasDoks" aria-label="Open main menu">
+      <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-menu"><line x1="3" y1="12" x2="21" y2="12"></line><line x1="3" y1="6" x2="21" y2="6"></line><line x1="3" y1="18" x2="21" y2="18"></line></svg>
+    </button>
+    <div class="offcanvas offcanvas-end border-0 py-lg-1" tabindex="-1" id="offcanvasDoks" data-bs-backdrop="true" aria-labelledby="offcanvasDoksLabel">
+      <div class="header-bar d-lg-none"></div>
+      <div class="offcanvas-header d-lg-none">
+        <h2 class="h5 offcanvas-title ps-2" id="offcanvasDoksLabel"><a class="text-dark" href="/">Roberto Kaban Blog&#39;s</a></h2>
+        <button type="button" class="btn-close text-reset me-2" data-bs-dismiss="offcanvas" aria-label="Close main menu"></button>
+      </div>
+      <div class="offcanvas-body p-4 p-lg-0">
+        <ul class="nav flex-column flex-lg-row align-items-lg-center mt-2 mt-lg-0 ms-lg-2 me-lg-auto">
+              <li class="nav-item">
+                <a class="nav-link ps-0 py-1" href="/about/">About Me</a>
+              </li>
+            
+          
+              <li class="nav-item">
+                <a class="nav-link ps-0 py-1" href="/contact/">Contact</a>
+              </li>
+            
+          
+              <li class="nav-item">
+                <a class="nav-link ps-0 py-1" href="/artikel/">Artikel</a>
+              </li>
+            
+          
+              <li class="nav-item">
+                <a class="nav-link ps-0 py-1" href="/coretanku/">Coretanku</a>
+              </li>
+            
+          </ul>
+
+        <hr class="text-black-50 my-4 d-lg-none">
+        <form class="doks-search position-relative flex-grow-1 ms-lg-auto me-lg-2">
+          <input id="search" class="form-control is-search" type="search" placeholder="Cari di blog ini..." aria-label="Cari di blog ini..." autocomplete="off">
+          <div id="suggestions" class="shadow bg-white rounded d-none"></div>
+        </form>
+        <hr class="text-black-50 my-4 d-lg-none">
+        <ul class="nav flex-column flex-lg-row">
+          <li class="nav-item">
+              <a class="nav-link social-link" href="https://github.com/robertokaban"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-github"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path></svg><small class="ms-2 d-lg-none">GitHub</small></a>
+            </li>
+          <li class="nav-item">
+              <a class="nav-link social-link" href="https://facebook.com/roberto.kaban"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-facebook"><path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"></path></svg><small class="ms-2 d-lg-none">Facebook</small></a>
+            </li>
+          <li class="nav-item">
+              <a class="nav-link social-link" href="https://twitter.com/robertokaban"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-twitter"><path d="M23 3a10.9 10.9 0 0 1-3.14 1.53 4.48 4.48 0 0 0-7.86 3v1A10.66 10.66 0 0 1 3 4s-4 9 5 13a11.64 11.64 0 0 1-7 2c9 5 20 0 20-11.5a4.5 4.5 0 0 0-.08-.83A7.72 7.72 0 0 0 23 3z"></path></svg><small class="ms-2 d-lg-none">Twitter</small></a>
+            </li>
+          <li class="nav-item">
+              <a class="nav-link social-link" href="https://youtube.com/@robertokaban"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-youtube"><path d="M10,15L15.19,12L10,9V15M21.56,7.17C21.69,7.64 21.78,8.27 21.84,9.07C21.91,9.87 21.94,10.56 21.94,11.16L22,12C22,14.19 21.84,15.8 21.56,16.83C21.31,17.73 20.73,18.31 19.83,18.56C19.36,18.69 18.5,18.78 17.18,18.84C15.88,18.91 14.69,18.94 13.59,18.94L12,19C7.81,19 5.2,18.84 4.17,18.56C3.27,18.31 2.69,17.73 2.44,16.83C2.31,16.36 2.22,15.73 2.16,14.93C2.09,14.13 2.06,13.44 2.06,12.84L2,12C2,9.81 2.16,8.2 2.44,7.17C2.69,6.27 3.27,5.69 4.17,5.44C4.64,5.31 5.5,5.22 6.82,5.16C8.12,5.09 9.31,5.06 10.41,5.06L12,5C16.19,5 18.8,5.16 19.83,5.44C20.73,5.69 21.31,6.27 21.56,7.17Z"></path></svg><small class="ms-2 d-lg-none">Youtube</small></a>
+            </li>
+          </ul>
+
+        
+        <hr class="text-black-50 my-4 d-lg-none">
+        <button id="mode" class="btn btn-link" type="button" aria-label="Toggle user interface mode">
+          <span class="toggle-dark"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-moon"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path></svg></span>
+          <span class="toggle-light"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-sun"><circle cx="12" cy="12" r="5"></circle><line x1="12" y1="1" x2="12" y2="3"></line><line x1="12" y1="21" x2="12" y2="23"></line><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line><line x1="1" y1="12" x2="3" y2="12"></line><line x1="21" y1="12" x2="23" y2="12"></line><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line></svg></span>
+        </button>
+        
+
+        </div>
+    </div>
+  </nav>
+</header>
+
+
+</div>
+
+
+<div class="container-xxl">
+  <aside class="doks-sidebar">
+    <nav id="doks-docs-nav" class="collapse d-lg-none" aria-label="Tertiary navigation">
+      
+<ul class="list-unstyled collapsible-sidebar">
+  
+    
+      
+      <li class="mb-1">
+        <button class="btn btn-toggle align-items-center rounded collapsed" data-bs-toggle="collapse" data-bs-target="#section-dd2f133c64f99bea60c3e743290ec287" aria-expanded="true">
+          Tutorial MySQL
+        </button>
+        <div class="collapse show" id="section-dd2f133c64f99bea60c3e743290ec287">
+          <ul class="btn-toggle-nav list-unstyled fw-normal pb-1 small">
+            
+              
+                
+                <li><a class="docs-link rounded" href="https://kaban.my.id/mysql/tutorial/pengenalan/">Pengenalan MySQL</a></li>
+              
+            
+              
+                
+                <li><a class="docs-link rounded" href="https://kaban.my.id/mysql/tutorial/02-instalasi/">Instalasi dan Konfigurasi MySQL</a></li>
+              
+            
+              
+                
+                <li><a class="docs-link rounded" href="https://kaban.my.id/mysql/tutorial/03-arsitektur/">Mengenal Arsitektur &amp; Komponen MySQL</a></li>
+              
+            
+              
+                
+                <li><a class="docs-link rounded" href="https://kaban.my.id/mysql/tutorial/04-database-table/">Perintah Dasar SQL: Database &amp; Table</a></li>
+              
+            
+              
+                
+                <li><a class="docs-link rounded" href="https://kaban.my.id/mysql/tutorial/05-crud/">Operasi CRUD (Create, Read, Update, Delete)</a></li>
+              
+            
+              
+                
+                <li><a class="docs-link rounded" href="https://kaban.my.id/mysql/tutorial/06-filtering-sorting/">Filtering &amp; Sorting Data</a></li>
+              
+            
+              
+                
+                <li><a class="docs-link rounded" href="https://kaban.my.id/mysql/tutorial/07-agregasi-grouping/">Fungsi Agregasi &amp; Grouping</a></li>
+              
+            
+              
+                
+                <li><a class="docs-link rounded" href="https://kaban.my.id/mysql/tutorial/08-join/">JOIN: Menggabungkan Tabel</a></li>
+              
+            
+              
+                
+                <li><a class="docs-link rounded" href="https://kaban.my.id/mysql/tutorial/09-subquery-union/">Subquery &amp; Union</a></li>
+              
+            
+              
+                
+                <li><a class="docs-link rounded active" href="https://kaban.my.id/mysql/tutorial/10-view-index-procedure/">View, Index, dan Stored Procedure</a></li>
+              
+            
+              
+                
+                <li><a class="docs-link rounded" href="https://kaban.my.id/mysql/tutorial/11-user-privilege/">Manajemen User &amp; Hak Akses</a></li>
+              
+            
+              
+                
+                <li><a class="docs-link rounded" href="https://kaban.my.id/mysql/tutorial/12-backup-restore/">Backup &amp; Restore Database</a></li>
+              
+            
+              
+                
+                <li><a class="docs-link rounded" href="https://kaban.my.id/mysql/tutorial/13-transaksi-acid/">Transaksi &amp; ACID</a></li>
+              
+            
+              
+                
+                <li><a class="docs-link rounded" href="https://kaban.my.id/mysql/tutorial/14-optimasi-performa/">Optimasi Performa MySQL</a></li>
+              
+            
+          </ul>
+        </div>
+      </li>
+    
+  
+</ul>
+
+    </nav>
+  </aside>
+</div>
+
+    <div class="wrap container-xxl" role="document">
+      <div class="content">
+        
+	<div class="row flex-xl-nowrap">
+		<div class="col-lg-5 col-xl-4 docs-sidebar d-none d-lg-block">
+			<nav class="docs-links" aria-label="Main navigation">
+				
+<ul class="list-unstyled collapsible-sidebar">
+  
+    
+      
+      <li class="mb-1">
+        <button class="btn btn-toggle align-items-center rounded collapsed" data-bs-toggle="collapse" data-bs-target="#section-dd2f133c64f99bea60c3e743290ec287" aria-expanded="true">
+          Tutorial MySQL
+        </button>
+        <div class="collapse show" id="section-dd2f133c64f99bea60c3e743290ec287">
+          <ul class="btn-toggle-nav list-unstyled fw-normal pb-1 small">
+            
+              
+                
+                <li><a class="docs-link rounded" href="https://kaban.my.id/mysql/tutorial/pengenalan/">Pengenalan MySQL</a></li>
+              
+            
+              
+                
+                <li><a class="docs-link rounded" href="https://kaban.my.id/mysql/tutorial/02-instalasi/">Instalasi dan Konfigurasi MySQL</a></li>
+              
+            
+              
+                
+                <li><a class="docs-link rounded" href="https://kaban.my.id/mysql/tutorial/03-arsitektur/">Mengenal Arsitektur &amp; Komponen MySQL</a></li>
+              
+            
+              
+                
+                <li><a class="docs-link rounded" href="https://kaban.my.id/mysql/tutorial/04-database-table/">Perintah Dasar SQL: Database &amp; Table</a></li>
+              
+            
+              
+                
+                <li><a class="docs-link rounded" href="https://kaban.my.id/mysql/tutorial/05-crud/">Operasi CRUD (Create, Read, Update, Delete)</a></li>
+              
+            
+              
+                
+                <li><a class="docs-link rounded" href="https://kaban.my.id/mysql/tutorial/06-filtering-sorting/">Filtering &amp; Sorting Data</a></li>
+              
+            
+              
+                
+                <li><a class="docs-link rounded" href="https://kaban.my.id/mysql/tutorial/07-agregasi-grouping/">Fungsi Agregasi &amp; Grouping</a></li>
+              
+            
+              
+                
+                <li><a class="docs-link rounded" href="https://kaban.my.id/mysql/tutorial/08-join/">JOIN: Menggabungkan Tabel</a></li>
+              
+            
+              
+                
+                <li><a class="docs-link rounded" href="https://kaban.my.id/mysql/tutorial/09-subquery-union/">Subquery &amp; Union</a></li>
+              
+            
+              
+                
+                <li><a class="docs-link rounded active" href="https://kaban.my.id/mysql/tutorial/10-view-index-procedure/">View, Index, dan Stored Procedure</a></li>
+              
+            
+              
+                
+                <li><a class="docs-link rounded" href="https://kaban.my.id/mysql/tutorial/11-user-privilege/">Manajemen User &amp; Hak Akses</a></li>
+              
+            
+              
+                
+                <li><a class="docs-link rounded" href="https://kaban.my.id/mysql/tutorial/12-backup-restore/">Backup &amp; Restore Database</a></li>
+              
+            
+              
+                
+                <li><a class="docs-link rounded" href="https://kaban.my.id/mysql/tutorial/13-transaksi-acid/">Transaksi &amp; ACID</a></li>
+              
+            
+              
+                
+                <li><a class="docs-link rounded" href="https://kaban.my.id/mysql/tutorial/14-optimasi-performa/">Optimasi Performa MySQL</a></li>
+              
+            
+          </ul>
+        </div>
+      </li>
+    
+  
+</ul>
+
+			</nav>
+		</div>
+		<nav class="docs-toc d-none d-xl-block col-xl-3" aria-label="Secondary navigation">
+			<div class="d-xl-none">
+  <button class="btn btn-outline-primary btn-sm doks-toc-toggle collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#onThisPage" aria-controls="doks-docs-nav" aria-expanded="false" aria-label="Toggle On this page navigation">
+    <span>Daftar isi</span>
+    <span>
+      <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" class="doks doks-expand" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><title>Expand</title><polyline points="7 13 12 18 17 13"></polyline><polyline points="7 6 12 11 17 6"></polyline></svg>
+      <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" class="doks doks-collapse" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><title>Collapse</title><polyline points="17 11 12 6 7 11"></polyline><polyline points="17 18 12 13 7 18"></polyline></svg>
+    </span>
+  </button>
+  <div class="collapse" id="onThisPage">
+    <div class="card card-body mt-3 py-1">
+      <div class="page-links">
+        <nav id="TableOfContents">
+  <ul>
+    <li><a href="#pendahuluan">Pendahuluan</a></li>
+    <li><a href="#view--tabel-virtual">VIEW — Tabel Virtual</a>
+      <ul>
+        <li><a href="#manfaat-view">Manfaat VIEW</a></li>
+        <li><a href="#membuat-view">Membuat VIEW</a></li>
+        <li><a href="#melihat-daftar-view">Melihat Daftar VIEW</a></li>
+        <li><a href="#melihat-definisi-view">Melihat Definisi VIEW</a></li>
+        <li><a href="#mengubah-view">Mengubah VIEW</a></li>
+        <li><a href="#menghapus-view">Menghapus VIEW</a></li>
+        <li><a href="#view-yang-bisa-di-update">VIEW yang Bisa Di-Update</a></li>
+        <li><a href="#view-dengan-with-check-option">VIEW dengan <code>WITH CHECK OPTION</code></a></li>
+      </ul>
+    </li>
+    <li><a href="#index--mempercepat-pencarian">INDEX — Mempercepat Pencarian</a>
+      <ul>
+        <li><a href="#kapan-index-digunakan">Kapan INDEX Digunakan?</a></li>
+        <li><a href="#jenis-index-di-mysql">Jenis INDEX di MySQL</a></li>
+        <li><a href="#membuat-index">Membuat INDEX</a></li>
+        <li><a href="#melihat-index-pada-tabel">Melihat INDEX pada Tabel</a></li>
+        <li><a href="#menghapus-index">Menghapus INDEX</a></li>
+        <li><a href="#kapan-index-tidak-berguna">Kapan INDEX Tidak Berguna?</a></li>
+        <li><a href="#melihat-apakah-index-dipakai-explain">Melihat Apakah Index Dipakai: <code>EXPLAIN</code></a></li>
+        <li><a href="#biaya-index">Biaya INDEX</a></li>
+      </ul>
+    </li>
+    <li><a href="#stored-procedure">STORED PROCEDURE</a>
+      <ul>
+        <li><a href="#membuat-stored-procedure">Membuat STORED PROCEDURE</a></li>
+        <li><a href="#contoh-1-procedure-tanpa-parameter">Contoh 1: Procedure Tanpa Parameter</a></li>
+        <li><a href="#contoh-2-procedure-dengan-parameter-in">Contoh 2: Procedure dengan Parameter <code>IN</code></a></li>
+        <li><a href="#contoh-3-procedure-dengan-parameter-out">Contoh 3: Procedure dengan Parameter <code>OUT</code></a></li>
+        <li><a href="#contoh-4-procedure-dengan-logika-if-dan-transaksi">Contoh 4: Procedure dengan Logika <code>IF</code> dan Transaksi</a></li>
+        <li><a href="#melihat-daftar-stored-procedure">Melihat Daftar STORED PROCEDURE</a></li>
+        <li><a href="#menghapus-stored-procedure">Menghapus STORED PROCEDURE</a></li>
+      </ul>
+    </li>
+    <li><a href="#function--procedure-yang-mengembalikan-nilai">FUNCTION — Procedure yang Mengembalikan Nilai</a>
+      <ul>
+        <li><a href="#membuat-function">Membuat FUNCTION</a></li>
+        <li><a href="#perbedaan-procedure-vs-function">Perbedaan PROCEDURE vs FUNCTION</a></li>
+        <li><a href="#menghapus-function">Menghapus FUNCTION</a></li>
+      </ul>
+    </li>
+    <li><a href="#trigger--aksi-otomatis-pada-event">TRIGGER — Aksi Otomatis pada Event</a>
+      <ul>
+        <li><a href="#jenis-trigger">Jenis Trigger</a></li>
+        <li><a href="#contoh-1-trigger-untuk-mencatat-perubahan-stok">Contoh 1: Trigger untuk Mencatat Perubahan Stok</a></li>
+        <li><a href="#contoh-2-trigger-untuk-validasi-sebelum-insert">Contoh 2: Trigger untuk Validasi Sebelum Insert</a></li>
+        <li><a href="#melihat-daftar-trigger">Melihat Daftar TRIGGER</a></li>
+        <li><a href="#menghapus-trigger">Menghapus TRIGGER</a></li>
+        <li><a href="#keterbatasan-trigger">Keterbatasan TRIGGER</a></li>
+      </ul>
+    </li>
+    <li><a href="#ringkasan">Ringkasan</a></li>
+  </ul>
+</nav>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="page-links d-none d-xl-block">
+  <h3>Daftar isi</h3>
+  <nav id="TableOfContents">
+  <ul>
+    <li><a href="#pendahuluan">Pendahuluan</a></li>
+    <li><a href="#view--tabel-virtual">VIEW — Tabel Virtual</a>
+      <ul>
+        <li><a href="#manfaat-view">Manfaat VIEW</a></li>
+        <li><a href="#membuat-view">Membuat VIEW</a></li>
+        <li><a href="#melihat-daftar-view">Melihat Daftar VIEW</a></li>
+        <li><a href="#melihat-definisi-view">Melihat Definisi VIEW</a></li>
+        <li><a href="#mengubah-view">Mengubah VIEW</a></li>
+        <li><a href="#menghapus-view">Menghapus VIEW</a></li>
+        <li><a href="#view-yang-bisa-di-update">VIEW yang Bisa Di-Update</a></li>
+        <li><a href="#view-dengan-with-check-option">VIEW dengan <code>WITH CHECK OPTION</code></a></li>
+      </ul>
+    </li>
+    <li><a href="#index--mempercepat-pencarian">INDEX — Mempercepat Pencarian</a>
+      <ul>
+        <li><a href="#kapan-index-digunakan">Kapan INDEX Digunakan?</a></li>
+        <li><a href="#jenis-index-di-mysql">Jenis INDEX di MySQL</a></li>
+        <li><a href="#membuat-index">Membuat INDEX</a></li>
+        <li><a href="#melihat-index-pada-tabel">Melihat INDEX pada Tabel</a></li>
+        <li><a href="#menghapus-index">Menghapus INDEX</a></li>
+        <li><a href="#kapan-index-tidak-berguna">Kapan INDEX Tidak Berguna?</a></li>
+        <li><a href="#melihat-apakah-index-dipakai-explain">Melihat Apakah Index Dipakai: <code>EXPLAIN</code></a></li>
+        <li><a href="#biaya-index">Biaya INDEX</a></li>
+      </ul>
+    </li>
+    <li><a href="#stored-procedure">STORED PROCEDURE</a>
+      <ul>
+        <li><a href="#membuat-stored-procedure">Membuat STORED PROCEDURE</a></li>
+        <li><a href="#contoh-1-procedure-tanpa-parameter">Contoh 1: Procedure Tanpa Parameter</a></li>
+        <li><a href="#contoh-2-procedure-dengan-parameter-in">Contoh 2: Procedure dengan Parameter <code>IN</code></a></li>
+        <li><a href="#contoh-3-procedure-dengan-parameter-out">Contoh 3: Procedure dengan Parameter <code>OUT</code></a></li>
+        <li><a href="#contoh-4-procedure-dengan-logika-if-dan-transaksi">Contoh 4: Procedure dengan Logika <code>IF</code> dan Transaksi</a></li>
+        <li><a href="#melihat-daftar-stored-procedure">Melihat Daftar STORED PROCEDURE</a></li>
+        <li><a href="#menghapus-stored-procedure">Menghapus STORED PROCEDURE</a></li>
+      </ul>
+    </li>
+    <li><a href="#function--procedure-yang-mengembalikan-nilai">FUNCTION — Procedure yang Mengembalikan Nilai</a>
+      <ul>
+        <li><a href="#membuat-function">Membuat FUNCTION</a></li>
+        <li><a href="#perbedaan-procedure-vs-function">Perbedaan PROCEDURE vs FUNCTION</a></li>
+        <li><a href="#menghapus-function">Menghapus FUNCTION</a></li>
+      </ul>
+    </li>
+    <li><a href="#trigger--aksi-otomatis-pada-event">TRIGGER — Aksi Otomatis pada Event</a>
+      <ul>
+        <li><a href="#jenis-trigger">Jenis Trigger</a></li>
+        <li><a href="#contoh-1-trigger-untuk-mencatat-perubahan-stok">Contoh 1: Trigger untuk Mencatat Perubahan Stok</a></li>
+        <li><a href="#contoh-2-trigger-untuk-validasi-sebelum-insert">Contoh 2: Trigger untuk Validasi Sebelum Insert</a></li>
+        <li><a href="#melihat-daftar-trigger">Melihat Daftar TRIGGER</a></li>
+        <li><a href="#menghapus-trigger">Menghapus TRIGGER</a></li>
+        <li><a href="#keterbatasan-trigger">Keterbatasan TRIGGER</a></li>
+      </ul>
+    </li>
+    <li><a href="#ringkasan">Ringkasan</a></li>
+  </ul>
+</nav>
+  </div>
+
+		</nav>
+		<main class="docs-content col-lg-11 col-xl-9">
+		
+				<nav aria-label="breadcrumb">
+					<ol class="breadcrumb">
+						<li class="breadcrumb-item"><a href="/">Home</a></li>
+<li class="breadcrumb-item"><a href="/mysql/">Mysql</a></li>
+<li class="breadcrumb-item"><a href="/mysql/tutorial/">Tutorial MySQL</a></li>
+<li class="breadcrumb-item active" aria-current="page">View, Index, dan Stored Procedure</li>
+					</ol>
+				</nav>
+			
+			<h1>View, Index, dan Stored Procedure</h1>
+			<p class="lead">Selain tabel, MySQL menyediakan objek-objek lain yang meningkatkan efisiensi dan maintainability: VIEW untuk menyederhanakan query, INDEX untuk mempercepat pencarian, serta STORED PROCEDURE, FUNCTION, dan TRIGGER untuk logika yang tersimpan di server.</p>
+			<nav class="d-xl-none" aria-label="Quaternary navigation">
+				<div class="d-xl-none">
+  <button class="btn btn-outline-primary btn-sm doks-toc-toggle collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#onThisPage" aria-controls="doks-docs-nav" aria-expanded="false" aria-label="Toggle On this page navigation">
+    <span>Daftar isi</span>
+    <span>
+      <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" class="doks doks-expand" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><title>Expand</title><polyline points="7 13 12 18 17 13"></polyline><polyline points="7 6 12 11 17 6"></polyline></svg>
+      <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" class="doks doks-collapse" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><title>Collapse</title><polyline points="17 11 12 6 7 11"></polyline><polyline points="17 18 12 13 7 18"></polyline></svg>
+    </span>
+  </button>
+  <div class="collapse" id="onThisPage">
+    <div class="card card-body mt-3 py-1">
+      <div class="page-links">
+        <nav id="TableOfContents">
+  <ul>
+    <li><a href="#pendahuluan">Pendahuluan</a></li>
+    <li><a href="#view--tabel-virtual">VIEW — Tabel Virtual</a>
+      <ul>
+        <li><a href="#manfaat-view">Manfaat VIEW</a></li>
+        <li><a href="#membuat-view">Membuat VIEW</a></li>
+        <li><a href="#melihat-daftar-view">Melihat Daftar VIEW</a></li>
+        <li><a href="#melihat-definisi-view">Melihat Definisi VIEW</a></li>
+        <li><a href="#mengubah-view">Mengubah VIEW</a></li>
+        <li><a href="#menghapus-view">Menghapus VIEW</a></li>
+        <li><a href="#view-yang-bisa-di-update">VIEW yang Bisa Di-Update</a></li>
+        <li><a href="#view-dengan-with-check-option">VIEW dengan <code>WITH CHECK OPTION</code></a></li>
+      </ul>
+    </li>
+    <li><a href="#index--mempercepat-pencarian">INDEX — Mempercepat Pencarian</a>
+      <ul>
+        <li><a href="#kapan-index-digunakan">Kapan INDEX Digunakan?</a></li>
+        <li><a href="#jenis-index-di-mysql">Jenis INDEX di MySQL</a></li>
+        <li><a href="#membuat-index">Membuat INDEX</a></li>
+        <li><a href="#melihat-index-pada-tabel">Melihat INDEX pada Tabel</a></li>
+        <li><a href="#menghapus-index">Menghapus INDEX</a></li>
+        <li><a href="#kapan-index-tidak-berguna">Kapan INDEX Tidak Berguna?</a></li>
+        <li><a href="#melihat-apakah-index-dipakai-explain">Melihat Apakah Index Dipakai: <code>EXPLAIN</code></a></li>
+        <li><a href="#biaya-index">Biaya INDEX</a></li>
+      </ul>
+    </li>
+    <li><a href="#stored-procedure">STORED PROCEDURE</a>
+      <ul>
+        <li><a href="#membuat-stored-procedure">Membuat STORED PROCEDURE</a></li>
+        <li><a href="#contoh-1-procedure-tanpa-parameter">Contoh 1: Procedure Tanpa Parameter</a></li>
+        <li><a href="#contoh-2-procedure-dengan-parameter-in">Contoh 2: Procedure dengan Parameter <code>IN</code></a></li>
+        <li><a href="#contoh-3-procedure-dengan-parameter-out">Contoh 3: Procedure dengan Parameter <code>OUT</code></a></li>
+        <li><a href="#contoh-4-procedure-dengan-logika-if-dan-transaksi">Contoh 4: Procedure dengan Logika <code>IF</code> dan Transaksi</a></li>
+        <li><a href="#melihat-daftar-stored-procedure">Melihat Daftar STORED PROCEDURE</a></li>
+        <li><a href="#menghapus-stored-procedure">Menghapus STORED PROCEDURE</a></li>
+      </ul>
+    </li>
+    <li><a href="#function--procedure-yang-mengembalikan-nilai">FUNCTION — Procedure yang Mengembalikan Nilai</a>
+      <ul>
+        <li><a href="#membuat-function">Membuat FUNCTION</a></li>
+        <li><a href="#perbedaan-procedure-vs-function">Perbedaan PROCEDURE vs FUNCTION</a></li>
+        <li><a href="#menghapus-function">Menghapus FUNCTION</a></li>
+      </ul>
+    </li>
+    <li><a href="#trigger--aksi-otomatis-pada-event">TRIGGER — Aksi Otomatis pada Event</a>
+      <ul>
+        <li><a href="#jenis-trigger">Jenis Trigger</a></li>
+        <li><a href="#contoh-1-trigger-untuk-mencatat-perubahan-stok">Contoh 1: Trigger untuk Mencatat Perubahan Stok</a></li>
+        <li><a href="#contoh-2-trigger-untuk-validasi-sebelum-insert">Contoh 2: Trigger untuk Validasi Sebelum Insert</a></li>
+        <li><a href="#melihat-daftar-trigger">Melihat Daftar TRIGGER</a></li>
+        <li><a href="#menghapus-trigger">Menghapus TRIGGER</a></li>
+        <li><a href="#keterbatasan-trigger">Keterbatasan TRIGGER</a></li>
+      </ul>
+    </li>
+    <li><a href="#ringkasan">Ringkasan</a></li>
+  </ul>
+</nav>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="page-links d-none d-xl-block">
+  <h3>Daftar isi</h3>
+  <nav id="TableOfContents">
+  <ul>
+    <li><a href="#pendahuluan">Pendahuluan</a></li>
+    <li><a href="#view--tabel-virtual">VIEW — Tabel Virtual</a>
+      <ul>
+        <li><a href="#manfaat-view">Manfaat VIEW</a></li>
+        <li><a href="#membuat-view">Membuat VIEW</a></li>
+        <li><a href="#melihat-daftar-view">Melihat Daftar VIEW</a></li>
+        <li><a href="#melihat-definisi-view">Melihat Definisi VIEW</a></li>
+        <li><a href="#mengubah-view">Mengubah VIEW</a></li>
+        <li><a href="#menghapus-view">Menghapus VIEW</a></li>
+        <li><a href="#view-yang-bisa-di-update">VIEW yang Bisa Di-Update</a></li>
+        <li><a href="#view-dengan-with-check-option">VIEW dengan <code>WITH CHECK OPTION</code></a></li>
+      </ul>
+    </li>
+    <li><a href="#index--mempercepat-pencarian">INDEX — Mempercepat Pencarian</a>
+      <ul>
+        <li><a href="#kapan-index-digunakan">Kapan INDEX Digunakan?</a></li>
+        <li><a href="#jenis-index-di-mysql">Jenis INDEX di MySQL</a></li>
+        <li><a href="#membuat-index">Membuat INDEX</a></li>
+        <li><a href="#melihat-index-pada-tabel">Melihat INDEX pada Tabel</a></li>
+        <li><a href="#menghapus-index">Menghapus INDEX</a></li>
+        <li><a href="#kapan-index-tidak-berguna">Kapan INDEX Tidak Berguna?</a></li>
+        <li><a href="#melihat-apakah-index-dipakai-explain">Melihat Apakah Index Dipakai: <code>EXPLAIN</code></a></li>
+        <li><a href="#biaya-index">Biaya INDEX</a></li>
+      </ul>
+    </li>
+    <li><a href="#stored-procedure">STORED PROCEDURE</a>
+      <ul>
+        <li><a href="#membuat-stored-procedure">Membuat STORED PROCEDURE</a></li>
+        <li><a href="#contoh-1-procedure-tanpa-parameter">Contoh 1: Procedure Tanpa Parameter</a></li>
+        <li><a href="#contoh-2-procedure-dengan-parameter-in">Contoh 2: Procedure dengan Parameter <code>IN</code></a></li>
+        <li><a href="#contoh-3-procedure-dengan-parameter-out">Contoh 3: Procedure dengan Parameter <code>OUT</code></a></li>
+        <li><a href="#contoh-4-procedure-dengan-logika-if-dan-transaksi">Contoh 4: Procedure dengan Logika <code>IF</code> dan Transaksi</a></li>
+        <li><a href="#melihat-daftar-stored-procedure">Melihat Daftar STORED PROCEDURE</a></li>
+        <li><a href="#menghapus-stored-procedure">Menghapus STORED PROCEDURE</a></li>
+      </ul>
+    </li>
+    <li><a href="#function--procedure-yang-mengembalikan-nilai">FUNCTION — Procedure yang Mengembalikan Nilai</a>
+      <ul>
+        <li><a href="#membuat-function">Membuat FUNCTION</a></li>
+        <li><a href="#perbedaan-procedure-vs-function">Perbedaan PROCEDURE vs FUNCTION</a></li>
+        <li><a href="#menghapus-function">Menghapus FUNCTION</a></li>
+      </ul>
+    </li>
+    <li><a href="#trigger--aksi-otomatis-pada-event">TRIGGER — Aksi Otomatis pada Event</a>
+      <ul>
+        <li><a href="#jenis-trigger">Jenis Trigger</a></li>
+        <li><a href="#contoh-1-trigger-untuk-mencatat-perubahan-stok">Contoh 1: Trigger untuk Mencatat Perubahan Stok</a></li>
+        <li><a href="#contoh-2-trigger-untuk-validasi-sebelum-insert">Contoh 2: Trigger untuk Validasi Sebelum Insert</a></li>
+        <li><a href="#melihat-daftar-trigger">Melihat Daftar TRIGGER</a></li>
+        <li><a href="#menghapus-trigger">Menghapus TRIGGER</a></li>
+        <li><a href="#keterbatasan-trigger">Keterbatasan TRIGGER</a></li>
+      </ul>
+    </li>
+    <li><a href="#ringkasan">Ringkasan</a></li>
+  </ul>
+</nav>
+  </div>
+
+			</nav>
+			<h2 id="pendahuluan">Pendahuluan <a href="#pendahuluan" class="anchor" aria-hidden="true">#</a></h2>
+<p>Sampai sekarang kita sudah banyak bermain dengan tabel dan query. Namun MySQL juga menyediakan objek-objek lain yang membuat database lebih efisien dan mudah dipelihara:</p>
+<ul>
+<li><strong>VIEW</strong> — &ldquo;tabel virtual&rdquo; dari hasil query, menyederhanakan query kompleks.</li>
+<li><strong>INDEX</strong> — struktur data yang mempercepat pencarian.</li>
+<li><strong>STORED PROCEDURE</strong> — kumpulan perintah SQL yang disimpan di server.</li>
+<li><strong>FUNCTION</strong> — mirip stored procedure tetapi mengembalikan nilai.</li>
+<li><strong>TRIGGER</strong> — kode yang otomatis dijalankan saat terjadi event pada tabel.</li>
+</ul>
+<p>Artikel ini membahas kelima objek tersebut dengan contoh menggunakan skema <code>toko_online</code>.</p>
+<blockquote>
+<p><strong>Asumsi:</strong> Anda berada di database <code>toko_online</code> (<code>USE toko_online;</code>) dengan data contoh pada tabel <code>pelanggan</code>, <code>produk</code>, <code>pesanan</code>, dan <code>detail_pesanan</code>.</p>
+</blockquote>
+<hr>
+<h2 id="view--tabel-virtual">VIEW — Tabel Virtual <a href="#view--tabel-virtual" class="anchor" aria-hidden="true">#</a></h2>
+<p><strong>VIEW</strong> adalah query yang disimpan dengan nama, seolah-olah sebuah tabel. View tidak menyimpan data sendiri; ia menjalankan query dasarnya setiap kali diakses.</p>
+<h3 id="manfaat-view">Manfaat VIEW <a href="#manfaat-view" class="anchor" aria-hidden="true">#</a></h3>
+<ul>
+<li><strong>Menyederhanakan query kompleks</strong> — simpan JOIN dan agregasi sebagai view, lalu query view seperti tabel biasa.</li>
+<li><strong>Keamanan</strong> — berikan akses ke view yang hanya menampilkan kolom tertentu, tanpa memberi akses ke tabel asli.</li>
+<li><strong>Konsistensi</strong> — jika logika query berubah, cukup ubah view, bukan seluruh aplikasi.</li>
+</ul>
+<h3 id="membuat-view">Membuat VIEW <a href="#membuat-view" class="anchor" aria-hidden="true">#</a></h3>
+<pre><code class="language-sql">CREATE VIEW nama_view AS
+SELECT ...;
+</code></pre>
+<p><strong>Contoh: View ringkasan pesanan</strong></p>
+<pre><code class="language-sql">CREATE VIEW v_ringkasan_pesanan AS
+SELECT
+  ps.id AS pesanan_id,
+  p.nama AS pelanggan,
+  ps.status,
+  ps.total,
+  ps.dibuat_pada
+FROM pesanan AS ps
+INNER JOIN pelanggan AS p ON ps.pelanggan_id = p.id;
+</code></pre>
+<p>Setelah dibuat, view bisa di-query seperti tabel:</p>
+<pre><code class="language-sql">SELECT * FROM v_ringkasan_pesanan WHERE status = 'selesai';
+</code></pre>
+<p><strong>Contoh: View dengan agregasi</strong></p>
+<pre><code class="language-sql">CREATE VIEW v_total_belanja_pelanggan AS
+SELECT
+  p.id AS pelanggan_id,
+  p.nama,
+  COUNT(ps.id) AS jumlah_pesanan,
+  IFNULL(SUM(ps.total), 0) AS total_belanja
+FROM pelanggan AS p
+LEFT JOIN pesanan AS ps ON ps.pelanggan_id = p.id
+GROUP BY p.id, p.nama;
+</code></pre>
+<p>Query view:</p>
+<pre><code class="language-sql">SELECT * FROM v_total_belanja_pelanggan
+ORDER BY total_belanja DESC
+LIMIT 5;
+</code></pre>
+<h3 id="melihat-daftar-view">Melihat Daftar VIEW <a href="#melihat-daftar-view" class="anchor" aria-hidden="true">#</a></h3>
+<pre><code class="language-sql">SHOW FULL TABLES WHERE Table_type = 'VIEW';
+</code></pre>
+<h3 id="melihat-definisi-view">Melihat Definisi VIEW <a href="#melihat-definisi-view" class="anchor" aria-hidden="true">#</a></h3>
+<pre><code class="language-sql">SHOW CREATE VIEW v_ringkasan_pesanan;
+</code></pre>
+<h3 id="mengubah-view">Mengubah VIEW <a href="#mengubah-view" class="anchor" aria-hidden="true">#</a></h3>
+<pre><code class="language-sql">CREATE OR REPLACE VIEW v_ringkasan_pesanan AS
+SELECT
+  ps.id AS pesanan_id,
+  p.nama AS pelanggan,
+  p.email,
+  ps.status,
+  ps.total,
+  ps.dibuat_pada
+FROM pesanan AS ps
+INNER JOIN pelanggan AS p ON ps.pelanggan_id = p.id;
+</code></pre>
+<p>Atau:</p>
+<pre><code class="language-sql">ALTER VIEW v_ringkasan_pesanan AS
+SELECT ...;
+</code></pre>
+<h3 id="menghapus-view">Menghapus VIEW <a href="#menghapus-view" class="anchor" aria-hidden="true">#</a></h3>
+<pre><code class="language-sql">DROP VIEW IF EXISTS v_ringkasan_pesanan;
+</code></pre>
+<h3 id="view-yang-bisa-di-update">VIEW yang Bisa Di-Update <a href="#view-yang-bisa-di-update" class="anchor" aria-hidden="true">#</a></h3>
+<p>View sederhana (tanpa <code>JOIN</code>, <code>GROUP BY</code>, <code>DISTINCT</code>, fungsi agregasi, atau subquery) bisa di-<code>UPDATE</code>, <code>INSERT</code>, dan <code>DELETE</code>. Perubahan akan diteruskan ke tabel dasar.</p>
+<pre><code class="language-sql">CREATE VIEW v_pelanggan_aktif AS
+SELECT id, nama, email FROM pelanggan;
+
+-- Bisa di-update
+UPDATE v_pelanggan_aktif SET email = 'baru@example.com' WHERE id = 1;
+</code></pre>
+<blockquote>
+<p><strong>Catatan:</strong> View dengan <code>JOIN</code> atau agregasi umumnya <strong>read-only</strong>. Untuk view yang kompleks, gunakan <code>WITH CHECK OPTION</code> jika ingin membatasi baris yang bisa diubah.</p>
+</blockquote>
+<h3 id="view-dengan-with-check-option">VIEW dengan <code>WITH CHECK OPTION</code> <a href="#view-dengan-with-check-option" class="anchor" aria-hidden="true">#</a></h3>
+<p>Mencegah <code>INSERT</code>/<code>UPDATE</code> yang menghasilkan baris di luar kondisi view:</p>
+<pre><code class="language-sql">CREATE VIEW v_produk_tersedia AS
+SELECT * FROM produk WHERE stok &gt; 0
+WITH CHECK OPTION;
+</code></pre>
+<p>Jika Anda mencoba <code>INSERT</code> produk dengan <code>stok = 0</code> melalui view ini, MySQL akan menolak.</p>
+<hr>
+<h2 id="index--mempercepat-pencarian">INDEX — Mempercepat Pencarian <a href="#index--mempercepat-pencarian" class="anchor" aria-hidden="true">#</a></h2>
+<p><strong>INDEX</strong> adalah struktur data (biasanya B-tree) yang memungkinkan MySQL menemukan baris dengan cepat tanpa memindai seluruh tabel (<em>full table scan</em>).</p>
+<h3 id="kapan-index-digunakan">Kapan INDEX Digunakan? <a href="#kapan-index-digunakan" class="anchor" aria-hidden="true">#</a></h3>
+<ul>
+<li>Kolom yang sering muncul di <code>WHERE</code>, <code>JOIN</code>, dan <code>ORDER BY</code>.</li>
+<li>Kolom dengan banyak nilai unik (high cardinality).</li>
+<li>Kolom <code>PRIMARY KEY</code> dan <code>UNIQUE</code> otomatis memiliki index.</li>
+</ul>
+<h3 id="jenis-index-di-mysql">Jenis INDEX di MySQL <a href="#jenis-index-di-mysql" class="anchor" aria-hidden="true">#</a></h3>
+<table>
+<thead>
+<tr>
+<th>Jenis</th>
+<th>Keterangan</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>PRIMARY KEY</code></td>
+<td>Index unik utama; satu per tabel</td>
+</tr>
+<tr>
+<td><code>UNIQUE</code></td>
+<td>Index yang memastikan nilai unik</td>
+</tr>
+<tr>
+<td><code>INDEX</code> / <code>KEY</code></td>
+<td>Index biasa (non-unique)</td>
+</tr>
+<tr>
+<td><code>FULLTEXT</code></td>
+<td>Untuk pencarian teks (InnoDB &amp; MyISAM)</td>
+</tr>
+<tr>
+<td><code>SPATIAL</code></td>
+<td>Untuk data geometri (InnoDB)</td>
+</tr>
+</tbody>
+</table>
+<h3 id="membuat-index">Membuat INDEX <a href="#membuat-index" class="anchor" aria-hidden="true">#</a></h3>
+<p><strong>Saat membuat tabel:</strong></p>
+<pre><code class="language-sql">CREATE TABLE produk (
+  id INT UNSIGNED AUTO_INCREMENT PRIMARY KEY,
+  nama VARCHAR(100) NOT NULL,
+  harga DECIMAL(12,2) NOT NULL,
+  INDEX idx_harga (harga)
+);
+</code></pre>
+<p><strong>Setelah tabel dibuat:</strong></p>
+<pre><code class="language-sql">CREATE INDEX idx_nama_produk ON produk (nama);
+</code></pre>
+<p><strong>Index komposit (beberapa kolom):</strong></p>
+<pre><code class="language-sql">CREATE INDEX idx_status_total ON pesanan (status, total);
+</code></pre>
+<p>Urutan kolom penting: index <code>(status, total)</code> bisa dipakai untuk query yang memfilter <code>status</code> saja, atau <code>status</code> + <code>total</code>, tetapi <strong>tidak</strong> untuk <code>total</code> saja.</p>
+<p><strong>Unique index:</strong></p>
+<pre><code class="language-sql">CREATE UNIQUE INDEX idx_email ON pelanggan (email);
+</code></pre>
+<p><strong>Fulltext index:</strong></p>
+<pre><code class="language-sql">CREATE FULLTEXT INDEX idx_deskripsi ON produk (deskripsi);
+</code></pre>
+<p>Query fulltext:</p>
+<pre><code class="language-sql">SELECT * FROM produk
+WHERE MATCH(deskripsi) AGAINST('gaming' IN NATURAL LANGUAGE MODE);
+</code></pre>
+<h3 id="melihat-index-pada-tabel">Melihat INDEX pada Tabel <a href="#melihat-index-pada-tabel" class="anchor" aria-hidden="true">#</a></h3>
+<pre><code class="language-sql">SHOW INDEX FROM produk;
+</code></pre>
+<h3 id="menghapus-index">Menghapus INDEX <a href="#menghapus-index" class="anchor" aria-hidden="true">#</a></h3>
+<pre><code class="language-sql">DROP INDEX idx_harga ON produk;
+</code></pre>
+<p>Atau via <code>ALTER TABLE</code>:</p>
+<pre><code class="language-sql">ALTER TABLE produk DROP INDEX idx_harga;
+</code></pre>
+<h3 id="kapan-index-tidak-berguna">Kapan INDEX Tidak Berguna? <a href="#kapan-index-tidak-berguna" class="anchor" aria-hidden="true">#</a></h3>
+<p>Index bisa <strong>tidak dipakai</strong> (atau bahkan memperlambat) jika:</p>
+<ul>
+<li>Tabel sangat kecil (full scan lebih cepat).</li>
+<li>Kolom memiliki <strong>low cardinality</strong> (sedikit nilai unik, misalnya kolom <code>gender</code>).</li>
+<li>Query menggunakan fungsi pada kolom: <code>WHERE YEAR(dibuat_pada) = 2022</code> tidak memakai index pada <code>dibuat_pada</code>. Gunakan rentang: <code>WHERE dibuat_pada &gt;= '2022-01-01' AND dibuat_pada &lt; '2023-01-01'</code>.</li>
+<li>Query menggunakan <code>LIKE '%kata'</code> (wildcard di awal) — index tidak bisa dipakai.</li>
+<li>Query memilih sebagian besar baris tabel — optimizer mungkin memilih full scan.</li>
+</ul>
+<h3 id="melihat-apakah-index-dipakai-explain">Melihat Apakah Index Dipakai: <code>EXPLAIN</code> <a href="#melihat-apakah-index-dipakai-explain" class="anchor" aria-hidden="true">#</a></h3>
+<pre><code class="language-sql">EXPLAIN SELECT * FROM produk WHERE harga &gt; 500000;
+</code></pre>
+<p>Perhatikan kolom <code>type</code> dan <code>key</code>:</p>
+<ul>
+<li><code>type = ALL</code> → full table scan (buruk untuk tabel besar).</li>
+<li><code>type = ref</code> / <code>range</code> / <code>eq_ref</code> → index dipakai.</li>
+<li><code>key</code> → nama index yang dipakai.</li>
+</ul>
+<blockquote>
+<p><strong>Tips:</strong> Gunakan <code>EXPLAIN</code> sebelum dan sesudah menambah index untuk melihat dampaknya.</p>
+</blockquote>
+<h3 id="biaya-index">Biaya INDEX <a href="#biaya-index" class="anchor" aria-hidden="true">#</a></h3>
+<p>Index mempercepat <code>SELECT</code> tetapi memperlambat <code>INSERT</code>, <code>UPDATE</code>, dan <code>DELETE</code> karena index juga harus diperbarui. Jangan membuat index berlebihan — buat hanya untuk kolom yang benar-benar sering di-query.</p>
+<hr>
+<h2 id="stored-procedure">STORED PROCEDURE <a href="#stored-procedure" class="anchor" aria-hidden="true">#</a></h2>
+<p><strong>Stored Procedure</strong> adalah kumpulan perintah SQL yang disimpan di server dan bisa dipanggil dengan <code>CALL</code>. Berguna untuk:</p>
+<ul>
+<li>Menyederhanakan logika kompleks.</li>
+<li>Mengurangi lalu lintas jaringan (satu panggilan menggantikan banyak query).</li>
+<li>Menyentralisasi logika bisnis.</li>
+</ul>
+<h3 id="membuat-stored-procedure">Membuat STORED PROCEDURE <a href="#membuat-stored-procedure" class="anchor" aria-hidden="true">#</a></h3>
+<pre><code class="language-sql">DELIMITER //
+
+CREATE PROCEDURE nama_prosedur(parameter)
+BEGIN
+  -- perintah SQL
+END //
+
+DELIMITER ;
+</code></pre>
+<p><strong>Mengapa <code>DELIMITER</code>?</strong> MySQL menggunakan <code>;</code> sebagai pemisah perintah. Di dalam procedure ada banyak <code>;</code>, jadi kita ubah sementara delimiter menjadi <code>//</code> agar MySQL tidak berhenti di <code>;</code> pertama.</p>
+<h3 id="contoh-1-procedure-tanpa-parameter">Contoh 1: Procedure Tanpa Parameter <a href="#contoh-1-procedure-tanpa-parameter" class="anchor" aria-hidden="true">#</a></h3>
+<pre><code class="language-sql">DELIMITER //
+
+CREATE PROCEDURE sp_semua_produk()
+BEGIN
+  SELECT id, nama, harga, stok FROM produk ORDER BY nama;
+END //
+
+DELIMITER ;
+</code></pre>
+<p>Memanggil:</p>
+<pre><code class="language-sql">CALL sp_semua_produk();
+</code></pre>
+<h3 id="contoh-2-procedure-dengan-parameter-in">Contoh 2: Procedure dengan Parameter <code>IN</code> <a href="#contoh-2-procedure-dengan-parameter-in" class="anchor" aria-hidden="true">#</a></h3>
+<pre><code class="language-sql">DELIMITER //
+
+CREATE PROCEDURE sp_produk_by_harga_min(IN harga_min DECIMAL(12,2))
+BEGIN
+  SELECT id, nama, harga
+  FROM produk
+  WHERE harga &gt;= harga_min
+  ORDER BY harga;
+END //
+
+DELIMITER ;
+</code></pre>
+<p>Memanggil:</p>
+<pre><code class="language-sql">CALL sp_produk_by_harga_min(500000);
+</code></pre>
+<h3 id="contoh-3-procedure-dengan-parameter-out">Contoh 3: Procedure dengan Parameter <code>OUT</code> <a href="#contoh-3-procedure-dengan-parameter-out" class="anchor" aria-hidden="true">#</a></h3>
+<pre><code class="language-sql">DELIMITER //
+
+CREATE PROCEDURE sp_total_penjualan(
+  IN p_status VARCHAR(20),
+  OUT p_total DECIMAL(12,2)
+)
+BEGIN
+  SELECT IFNULL(SUM(total), 0) INTO p_total
+  FROM pesanan
+  WHERE status = p_status;
+END //
+
+DELIMITER ;
+</code></pre>
+<p>Memanggil:</p>
+<pre><code class="language-sql">CALL sp_total_penjualan('selesai', @total);
+SELECT @total;
+</code></pre>
+<h3 id="contoh-4-procedure-dengan-logika-if-dan-transaksi">Contoh 4: Procedure dengan Logika <code>IF</code> dan Transaksi <a href="#contoh-4-procedure-dengan-logika-if-dan-transaksi" class="anchor" aria-hidden="true">#</a></h3>
+<pre><code class="language-sql">DELIMITER //
+
+CREATE PROCEDURE sp_buat_pesanan(
+  IN p_pelanggan_id INT UNSIGNED,
+  IN p_produk_id INT UNSIGNED,
+  IN p_jumlah INT,
+  OUT p_pesanan_id INT UNSIGNED
+)
+BEGIN
+  DECLARE v_harga DECIMAL(12,2);
+  DECLARE v_stok INT;
+
+  -- Cek stok dan ambil harga
+  SELECT harga, stok INTO v_harga, v_stok
+  FROM produk WHERE id = p_produk_id;
+
+  IF v_stok &lt; p_jumlah THEN
+    SIGNAL SQLSTATE '45000'
+      SET MESSAGE_TEXT = 'Stok tidak mencukupi';
+  END IF;
+
+  START TRANSACTION;
+
+  -- Buat header pesanan
+  INSERT INTO pesanan (pelanggan_id, total, status)
+  VALUES (p_pelanggan_id, v_harga * p_jumlah, 'baru');
+
+  SET p_pesanan_id = LAST_INSERT_ID();
+
+  -- Buat detail pesanan
+  INSERT INTO detail_pesanan (pesanan_id, produk_id, jumlah, harga_satuan)
+  VALUES (p_pesanan_id, p_produk_id, p_jumlah, v_harga);
+
+  -- Kurangi stok
+  UPDATE produk SET stok = stok - p_jumlah WHERE id = p_produk_id;
+
+  COMMIT;
+END //
+
+DELIMITER ;
+</code></pre>
+<p>Memanggil:</p>
+<pre><code class="language-sql">CALL sp_buat_pesanan(1, 2, 3, @pesanan_id);
+SELECT @pesanan_id;
+</code></pre>
+<h3 id="melihat-daftar-stored-procedure">Melihat Daftar STORED PROCEDURE <a href="#melihat-daftar-stored-procedure" class="anchor" aria-hidden="true">#</a></h3>
+<pre><code class="language-sql">SHOW PROCEDURE STATUS WHERE Db = 'toko_online';
+</code></pre>
+<p>Melihat definisi:</p>
+<pre><code class="language-sql">SHOW CREATE PROCEDURE sp_semua_produk;
+</code></pre>
+<h3 id="menghapus-stored-procedure">Menghapus STORED PROCEDURE <a href="#menghapus-stored-procedure" class="anchor" aria-hidden="true">#</a></h3>
+<pre><code class="language-sql">DROP PROCEDURE IF EXISTS sp_semua_produk;
+</code></pre>
+<hr>
+<h2 id="function--procedure-yang-mengembalikan-nilai">FUNCTION — Procedure yang Mengembalikan Nilai <a href="#function--procedure-yang-mengembalikan-nilai" class="anchor" aria-hidden="true">#</a></h2>
+<p><strong>Function</strong> mirip stored procedure, tetapi <strong>wajib mengembalikan satu nilai</strong> dan bisa dipakai di dalam query <code>SELECT</code>.</p>
+<h3 id="membuat-function">Membuat FUNCTION <a href="#membuat-function" class="anchor" aria-hidden="true">#</a></h3>
+<pre><code class="language-sql">DELIMITER //
+
+CREATE FUNCTION fn_harga_pajak(harga DECIMAL(12,2))
+RETURNS DECIMAL(12,2)
+DETERMINISTIC
+BEGIN
+  RETURN harga * 1.11;
+END //
+
+DELIMITER ;
+</code></pre>
+<p>Memakai function di query:</p>
+<pre><code class="language-sql">SELECT nama, harga, fn_harga_pajak(harga) AS harga_pajak FROM produk;
+</code></pre>
+<h3 id="perbedaan-procedure-vs-function">Perbedaan PROCEDURE vs FUNCTION <a href="#perbedaan-procedure-vs-function" class="anchor" aria-hidden="true">#</a></h3>
+<table>
+<thead>
+<tr>
+<th>Aspek</th>
+<th>STORED PROCEDURE</th>
+<th>FUNCTION</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Nilai kembali</td>
+<td>Bisa <code>OUT</code> parameter, tidak wajib return</td>
+<td><strong>Wajib</strong> <code>RETURNS</code> satu nilai</td>
+</tr>
+<tr>
+<td>Dipanggil dengan</td>
+<td><code>CALL</code></td>
+<td>Di dalam <code>SELECT</code> / ekspresi</td>
+</tr>
+<tr>
+<td>Bisa di query <code>SELECT</code>?</td>
+<td>Tidak</td>
+<td>Ya</td>
+</tr>
+<tr>
+<td>Bisa mengandung transaksi?</td>
+<td>Ya</td>
+<td>Umumnya tidak</td>
+</tr>
+<tr>
+<td>Kegunaan</td>
+<td>Logika bisnis, batch</td>
+<td>Perhitungan, transformasi nilai</td>
+</tr>
+</tbody>
+</table>
+<h3 id="menghapus-function">Menghapus FUNCTION <a href="#menghapus-function" class="anchor" aria-hidden="true">#</a></h3>
+<pre><code class="language-sql">DROP FUNCTION IF EXISTS fn_harga_pajak;
+</code></pre>
+<hr>
+<h2 id="trigger--aksi-otomatis-pada-event">TRIGGER — Aksi Otomatis pada Event <a href="#trigger--aksi-otomatis-pada-event" class="anchor" aria-hidden="true">#</a></h2>
+<p><strong>Trigger</strong> adalah kode yang otomatis dijalankan saat terjadi <code>INSERT</code>, <code>UPDATE</code>, atau <code>DELETE</code> pada tabel.</p>
+<h3 id="jenis-trigger">Jenis Trigger <a href="#jenis-trigger" class="anchor" aria-hidden="true">#</a></h3>
+<ul>
+<li><code>BEFORE INSERT</code> / <code>AFTER INSERT</code></li>
+<li><code>BEFORE UPDATE</code> / <code>AFTER UPDATE</code></li>
+<li><code>BEFORE DELETE</code> / <code>AFTER DELETE</code></li>
+</ul>
+<h3 id="contoh-1-trigger-untuk-mencatat-perubahan-stok">Contoh 1: Trigger untuk Mencatat Perubahan Stok <a href="#contoh-1-trigger-untuk-mencatat-perubahan-stok" class="anchor" aria-hidden="true">#</a></h3>
+<pre><code class="language-sql">CREATE TABLE log_stok (
+  id INT UNSIGNED AUTO_INCREMENT PRIMARY KEY,
+  produk_id INT UNSIGNED NOT NULL,
+  stok_lama INT NOT NULL,
+  stok_baru INT NOT NULL,
+  diubah_pada TIMESTAMP DEFAULT CURRENT_TIMESTAMP
+);
+
+DELIMITER //
+
+CREATE TRIGGER trg_stok_update
+AFTER UPDATE ON produk
+FOR EACH ROW
+BEGIN
+  IF OLD.stok &lt;&gt; NEW.stok THEN
+    INSERT INTO log_stok (produk_id, stok_lama, stok_baru)
+    VALUES (OLD.id, OLD.stok, NEW.stok);
+  END IF;
+END //
+
+DELIMITER ;
+</code></pre>
+<p>Setiap kali <code>stok</code> produk berubah, perubahan tercatat di <code>log_stok</code>.</p>
+<h3 id="contoh-2-trigger-untuk-validasi-sebelum-insert">Contoh 2: Trigger untuk Validasi Sebelum Insert <a href="#contoh-2-trigger-untuk-validasi-sebelum-insert" class="anchor" aria-hidden="true">#</a></h3>
+<pre><code class="language-sql">DELIMITER //
+
+CREATE TRIGGER trg_validasi_harga
+BEFORE INSERT ON produk
+FOR EACH ROW
+BEGIN
+  IF NEW.harga &lt; 0 THEN
+    SIGNAL SQLSTATE '45000'
+      SET MESSAGE_TEXT = 'Harga tidak boleh negatif';
+  END IF;
+END //
+
+DELIMITER ;
+</code></pre>
+<h3 id="melihat-daftar-trigger">Melihat Daftar TRIGGER <a href="#melihat-daftar-trigger" class="anchor" aria-hidden="true">#</a></h3>
+<pre><code class="language-sql">SHOW TRIGGERS FROM toko_online;
+</code></pre>
+<h3 id="menghapus-trigger">Menghapus TRIGGER <a href="#menghapus-trigger" class="anchor" aria-hidden="true">#</a></h3>
+<pre><code class="language-sql">DROP TRIGGER IF EXISTS trg_stok_update;
+</code></pre>
+<h3 id="keterbatasan-trigger">Keterbatasan TRIGGER <a href="#keterbatasan-trigger" class="anchor" aria-hidden="true">#</a></h3>
+<ul>
+<li>Trigger tidak bisa memodifikasi tabel yang sama yang memicunya (mencegah rekursi tak terbatas).</li>
+<li>Trigger menyulitkan debugging karena logika &ldquo;tersembunyi&rdquo;.</li>
+<li>Gunakan trigger secukupnya — untuk audit log, validasi sederhana, atau sinkronisasi data.</li>
+</ul>
+<hr>
+<h2 id="ringkasan">Ringkasan <a href="#ringkasan" class="anchor" aria-hidden="true">#</a></h2>
+<table>
+<thead>
+<tr>
+<th>Objek</th>
+<th>Fungsi</th>
+<th>Perintah Utama</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>VIEW</code></td>
+<td>Tabel virtual dari query</td>
+<td><code>CREATE VIEW</code>, <code>DROP VIEW</code></td>
+</tr>
+<tr>
+<td><code>INDEX</code></td>
+<td>Mempercepat pencarian</td>
+<td><code>CREATE INDEX</code>, <code>DROP INDEX</code>, <code>EXPLAIN</code></td>
+</tr>
+<tr>
+<td><code>STORED PROCEDURE</code></td>
+<td>Kumpulan SQL yang bisa dipanggil</td>
+<td><code>CREATE PROCEDURE</code>, <code>CALL</code></td>
+</tr>
+<tr>
+<td><code>FUNCTION</code></td>
+<td>Seperti procedure, mengembalikan nilai</td>
+<td><code>CREATE FUNCTION</code>, dipakai di <code>SELECT</code></td>
+</tr>
+<tr>
+<td><code>TRIGGER</code></td>
+<td>Aksi otomatis pada event tabel</td>
+<td><code>CREATE TRIGGER</code>, <code>DROP TRIGGER</code></td>
+</tr>
+</tbody>
+</table>
+<p>Poin penting:</p>
+<ul>
+<li><strong>VIEW</strong> menyederhanakan query kompleks dan bisa membatasi akses kolom.</li>
+<li><strong>INDEX</strong> mempercepat <code>SELECT</code> tetapi memperlambat <code>INSERT</code>/<code>UPDATE</code>/<code>DELETE</code> — gunakan secukupnya.</li>
+<li>Gunakan <code>EXPLAIN</code> untuk memeriksa apakah index dipakai.</li>
+<li><strong>STORED PROCEDURE</strong> dan <strong>FUNCTION</strong> menyimpan logika di server; <code>FUNCTION</code> bisa dipakai di <code>SELECT</code>.</li>
+<li><strong>TRIGGER</strong> berguna untuk audit dan validasi, tetapi jangan berlebihan.</li>
+</ul>
+<p>Pada artikel berikutnya, kita akan membahas <strong>Manajemen User &amp; Hak Akses</strong> — mengelola akun dan privilege di MySQL.</p>
+
+			<div class="page-footer-meta d-flex flex-column flex-md-row justify-content-between">
+				</div>
+			<div class="docs-navigation d-flex justify-content-between">
+	
+	<a href="/mysql/tutorial/09-subquery-union/">
+			<div class="card my-1">
+				<div class="card-body py-2">
+					&larr; Subquery &amp; Union
+				</div>
+			</div>
+		</a>
+	<a class="ms-auto" href="/mysql/tutorial/11-user-privilege/">
+			<div class="card my-1">
+				<div class="card-body py-2">
+					Manajemen User &amp; Hak Akses &rarr;
+				</div>
+			</div>
+		</a>
+	</div>
+
+			
+		</main>
+	</div>
+
+      </div>
+    </div>
+    
+    
+    <footer class="footer text-muted">
+  <div class="container-xxl">
+    <div class="row">
+      <div class="col-lg-8 order-last order-lg-first">
+        <ul class="list-inline">
+          <li class="list-inline-item">Powered by <a class="text-muted" href="https://gohugo.io/">Hugo</a> and <a class="text-muted" href="https://github.com/">Github</a></li>
+        </ul>
+      </div>
+      <div class="col-lg-8 order-first order-lg-last text-lg-end">
+        <ul class="list-inline">
+          </ul>
+      </div>
+    </div>
+  </div>
+</footer>
+    
+
+<script src="/js/bootstrap.min.650aeec64c81d69d4c0850fc73c93da3f0330cec0a27772feed7f90f60baa5f47f1c45687d71914bdafd1c4e860d40f6dc08ede27a2f08431ff929c9a2d24621.js" integrity="sha512-ZQruxkyB1p1MCFD8c8k9o/AzDOwKJ3cv7tf5D2C6pfR/HEVofXGRS9r9HE6GDUD23Ajt4novCEMf&#43;SnJotJGIQ==" crossorigin="anonymous" defer></script>
+  <script src="/js/highlight.min.ec234bd8a5f487aaffe50a89f17b14501b1bb65633cf177cffd4cb84702dd7030edc08712dceb8dc27ac7e54b53240a08bf0b8d951572ee582bcdbbd06a48a7b.js" integrity="sha512-7CNL2KX0h6r/5QqJ8XsUUBsbtlYzzxd8/9TLhHAt1wMO3AhxLc643CesflS1MkCgi/C42VFXLuWCvNu9BqSKew==" crossorigin="anonymous" defer></script>
+  <script src="/main.min.cd1e5e6b40065b3f7f7fd8548a528fac67019754eda0f37b9918d02d154fc9ef6a22742f6513b0572ad9163152e151ec36221fbeafbecd7759c3dab1f19b64b9.js" integrity="sha512-zR5ea0AGWz9/f9hUilKPrGcBl1TtoPN7mRjQLRVPye9qInQvZROwVyrZFjFS4VHsNiIfvq&#43;&#43;zXdZw9qx8ZtkuQ==" crossorigin="anonymous" defer></script>
+  <script src="https://kaban.my.id/index.min.f90d3536216d10b8ecf574dc8d57b0d2bd45aab605bdc69b1f7697f3476ebdb5db6a63a3f6955150f2c0b02e66fa1adfbf4c5b50c540f663f829ad8bcd5807c6.js" integrity="sha512-&#43;Q01NiFtELjs9XTcjVew0r1FqrYFvcabH3aX80duvbXbamOj9pVRUPLAsC5m&#43;hrfv0xbUMVA9mP4Ka2LzVgHxg==" crossorigin="anonymous" defer></script>
+  
+    <div class="d-flex fixed-bottom pb-4 pb-lg-5 pe-4 pe-lg-5">
+      <a id="toTop" href="#" class="btn btn-outline-primary rounded-circle ms-auto p-2"><span class="visually-hidden">Top</span><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-chevron-up"><polyline points="18 15 12 9 6 15"></polyline></svg></a>
+    </div>
+    
+  </body>
+</html>

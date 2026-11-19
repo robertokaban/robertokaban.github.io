@@ -1,0 +1,1196 @@
+<!doctype html>
+<html lang="en-US">
+  <head>
+  <meta charset="utf-8">
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <link rel="preload" as="font" href="https://kaban.my.id/fonts/vendor/jost/jost-v4-latin-regular.woff2" type="font/woff2" crossorigin>
+<link rel="preload" as="font" href="https://kaban.my.id/fonts/vendor/jost/jost-v4-latin-500.woff2" type="font/woff2" crossorigin>
+<link rel="preload" as="font" href="https://kaban.my.id/fonts/vendor/jost/jost-v4-latin-700.woff2" type="font/woff2" crossorigin>
+
+  <script>(()=>{var t=window.matchMedia&&window.matchMedia("(prefers-color-scheme: dark)").matches,e=localStorage.getItem("theme");t&&e===null&&(localStorage.setItem("theme","dark"),document.documentElement.setAttribute("data-dark-mode","")),t&&e==="dark"&&document.documentElement.setAttribute("data-dark-mode",""),e==="dark"&&document.documentElement.setAttribute("data-dark-mode","")})()</script>
+
+  <link rel="stylesheet" href="https://kaban.my.id/main.9f87974e4c1caf828d7f6300ecd98102083d1763683fe424f26c4c7b80fa72a094aa3c62fe333b5026c22ff50b82f74220d559e730c1f032fd8bcec957ac2bb4.css" integrity="sha512-n4eXTkwcr4KNf2MA7NmBAgg9F2NoP&#43;Qk8mxMe4D6cqCUqjxi/jM7UCbCL/ULgvdCINVZ5zDB8DL9i87JV6wrtA==" crossorigin="anonymous">
+<noscript><style>img.lazyload { display: none; }</style></noscript>
+  <meta name="robots" content="index, follow">
+    <meta name="googlebot" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1">
+    <meta name="bingbot" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1">
+  <title>Instalasi &amp; Persiapan Lingkungan JavaScript - Roberto Kaban Blog&#39;s</title>
+<meta name="description" content="Panduan lengkap menyiapkan lingkungan pengembangan JavaScript: browser DevTools, Node.js, npm, dan editor VS Code.">
+<link rel="canonical" href="https://kaban.my.id/javascript/tutorial/02-instalasi-persiapan/">
+<meta property="og:locale" content="en_US">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Instalasi &amp; Persiapan Lingkungan JavaScript">
+<meta property="og:description" content="Panduan lengkap menyiapkan lingkungan pengembangan JavaScript: browser DevTools, Node.js, npm, dan editor VS Code.">
+<meta property="og:url" content="https://kaban.my.id/javascript/tutorial/02-instalasi-persiapan/">
+<meta property="og:site_name" content="Roberto Kaban Blog&#39;s">
+<meta property="article:published_time" content="2022-12-20T08:00:00+00:00">
+  <meta property="article:modified_time" content="2022-12-20T08:00:00+00:00">
+  
+  <meta property="og:image" content="https://kaban.my.id/doks.png"/>
+      <meta property="og:image:alt" content="Roberto Kaban Blog&#39;s">
+    
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:site" content="@robertokaban">
+<meta name="twitter:creator" content="@robertokaban">
+<meta name="twitter:title" content="Instalasi &amp; Persiapan Lingkungan JavaScript">
+<meta name="twitter:description" content="Panduan lengkap menyiapkan lingkungan pengembangan JavaScript: browser DevTools, Node.js, npm, dan editor VS Code.">
+<meta name="twitter:image" content="https://kaban.my.id/doks.png">
+    <meta name="twitter:image:alt" content="Instalasi &amp; Persiapan Lingkungan JavaScript">
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "Person",
+        "@id": "https://kaban.my.id/#/schema/person/1",
+      "name": "BlogRobertoKaban",
+      "url": "https://kaban.my.id/",
+      "sameAs": [
+        "https://twitter.com/robertokaban"
+        , "https://github.com/robertokaban"
+        ],
+      "image": {
+          "@type": "ImageObject",
+          "@id": "https://kaban.my.id/#/schema/image/1",
+          "url": "https://kaban.my.id/doks.png",
+          "width":  1280 ,
+          "height":  640 ,
+          "caption": "BlogRobertoKaban"
+        }
+      },
+    {
+      "@type": "WebSite",
+      "@id": "https://kaban.my.id/#/schema/website/1",
+      "url": "https://kaban.my.id/",
+      "name": "Roberto Kaban Blog\u0027s",
+      "description": "Hanya sebuah catatan kecil untuk hal yang tidak ingin dilupakan.",
+      "publisher": {
+          "@id": "https://kaban.my.id/#/schema/person/1"
+        }
+      },
+    {
+      "@type": "WebPage",
+      "@id": "https://kaban.my.id/javascript/tutorial/02-instalasi-persiapan/",
+      "url": "https://kaban.my.id/javascript/tutorial/02-instalasi-persiapan/",
+      "name": "Instalasi \u0026 Persiapan Lingkungan JavaScript",
+      "description": "Panduan lengkap menyiapkan lingkungan pengembangan JavaScript: browser DevTools, Node.js, npm, dan editor VS Code.",
+      "isPartOf": {
+        "@id": "https://kaban.my.id/#/schema/website/1"
+      },
+      "about": {
+          "@id": "https://kaban.my.id/#/schema/person/1"
+        },
+      "datePublished": "2022-12-20T08:00:00CET",
+      "dateModified": "2022-12-20T08:00:00CET",
+      "breadcrumb": {
+        "@id": "https://kaban.my.id/javascript/tutorial/02-instalasi-persiapan/#/schema/breadcrumb/1"
+      },
+      "primaryImageOfPage": {
+        "@id": "https://kaban.my.id/javascript/tutorial/02-instalasi-persiapan/#/schema/image/2"
+      },
+      "inLanguage": "en-US",
+      "potentialAction": [{
+        "@type": "ReadAction", "target": ["https://kaban.my.id/javascript/tutorial/02-instalasi-persiapan/"]
+      }]
+    },
+    {
+      "@type": "BreadcrumbList",
+      "@id": "https://kaban.my.id/javascript/tutorial/02-instalasi-persiapan/#/schema/breadcrumb/1",
+      "name": "Breadcrumbs",
+      "itemListElement": [{
+        "@type": "ListItem",
+        "position":  1 ,
+        "item": {
+          "@type": "WebPage",
+          "@id": "https://kaban.my.id/",
+          "url": "https://kaban.my.id/",
+          "name": "Home"
+          }
+        },{
+        "@type": "ListItem",
+        "position":  2 ,
+        "item": {
+          "@type": "WebPage",
+          "@id": "https://kaban.my.id/javascript/",
+          "url": "https://kaban.my.id/javascript/",
+          "name": "Javascript"
+          }
+        },{
+        "@type": "ListItem",
+        "position":  3 ,
+        "item": {
+          "@type": "WebPage",
+          "@id": "https://kaban.my.id/javascript/tutorial/",
+          "url": "https://kaban.my.id/javascript/tutorial/",
+          "name": "Tutorial"
+          }
+        },{
+        "@type": "ListItem",
+        "position":  4 ,
+        "item": {
+          "@id": "https://kaban.my.id/javascript/tutorial/02-instalasi-persiapan/"
+          }
+        }]
+    },
+
+    {
+      "@context": "https://schema.org",
+      "@graph": [
+        {
+          "@type": "ImageObject",
+          "@id": "https://kaban.my.id/javascript/tutorial/02-instalasi-persiapan/#/schema/image/2",
+          "url": "https://kaban.my.id/doks.png",
+          "contentUrl": "https://kaban.my.id/doks.png",
+          "caption": "Instalasi \u0026 Persiapan Lingkungan JavaScript"
+        }
+      ]
+    }
+
+  ]
+}
+</script>
+
+  <meta name="theme-color" content="#fff">
+<link rel="icon" href="https://kaban.my.id/favicon.ico" sizes="any">
+<link rel="icon" type="image/svg+xml" href="https://kaban.my.id/favicon.svg">
+<link rel="apple-touch-icon" sizes="180x180" href="https://kaban.my.id/apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="32x32" href="https://kaban.my.id/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="https://kaban.my.id/favicon-16x16.png">
+<link rel="manifest" crossorigin="use-credentials" href="https://kaban.my.id/site.webmanifest">
+
+  
+
+
+  
+  
+  
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-60VSDZFQR5"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-60VSDZFQR5');
+</script>
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6664512614760985"
+     crossorigin="anonymous"></script>
+</head>
+
+  <body class="javascript single">
+    <div class="sticky-top">
+<div class="header-bar"></div>
+
+<header class="navbar navbar-expand-lg navbar-light doks-navbar">
+  <nav class="container-xxl flex-wrap flex-lg-nowrap" aria-label="Main navigation">
+
+    <a class="navbar-brand order-0" href="/" aria-label="Roberto Kaban Blog&#39;s">
+      Roberto Kaban Blog&#39;s
+    </a>
+
+    <button class="btn btn-menu order-2 d-block d-lg-none" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasDoks" aria-controls="offcanvasDoks" aria-label="Open main menu">
+      <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-menu"><line x1="3" y1="12" x2="21" y2="12"></line><line x1="3" y1="6" x2="21" y2="6"></line><line x1="3" y1="18" x2="21" y2="18"></line></svg>
+    </button>
+    <div class="offcanvas offcanvas-end border-0 py-lg-1" tabindex="-1" id="offcanvasDoks" data-bs-backdrop="true" aria-labelledby="offcanvasDoksLabel">
+      <div class="header-bar d-lg-none"></div>
+      <div class="offcanvas-header d-lg-none">
+        <h2 class="h5 offcanvas-title ps-2" id="offcanvasDoksLabel"><a class="text-dark" href="/">Roberto Kaban Blog&#39;s</a></h2>
+        <button type="button" class="btn-close text-reset me-2" data-bs-dismiss="offcanvas" aria-label="Close main menu"></button>
+      </div>
+      <div class="offcanvas-body p-4 p-lg-0">
+        <ul class="nav flex-column flex-lg-row align-items-lg-center mt-2 mt-lg-0 ms-lg-2 me-lg-auto">
+              <li class="nav-item">
+                <a class="nav-link ps-0 py-1" href="/about/">About Me</a>
+              </li>
+            
+          
+              <li class="nav-item">
+                <a class="nav-link ps-0 py-1" href="/contact/">Contact</a>
+              </li>
+            
+          
+              <li class="nav-item">
+                <a class="nav-link ps-0 py-1" href="/artikel/">Artikel</a>
+              </li>
+            
+          
+              <li class="nav-item">
+                <a class="nav-link ps-0 py-1" href="/coretanku/">Coretanku</a>
+              </li>
+            
+          </ul>
+
+        <hr class="text-black-50 my-4 d-lg-none">
+        <form class="doks-search position-relative flex-grow-1 ms-lg-auto me-lg-2">
+          <input id="search" class="form-control is-search" type="search" placeholder="Cari di blog ini..." aria-label="Cari di blog ini..." autocomplete="off">
+          <div id="suggestions" class="shadow bg-white rounded d-none"></div>
+        </form>
+        <hr class="text-black-50 my-4 d-lg-none">
+        <ul class="nav flex-column flex-lg-row">
+          <li class="nav-item">
+              <a class="nav-link social-link" href="https://github.com/robertokaban"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-github"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path></svg><small class="ms-2 d-lg-none">GitHub</small></a>
+            </li>
+          <li class="nav-item">
+              <a class="nav-link social-link" href="https://facebook.com/roberto.kaban"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-facebook"><path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"></path></svg><small class="ms-2 d-lg-none">Facebook</small></a>
+            </li>
+          <li class="nav-item">
+              <a class="nav-link social-link" href="https://twitter.com/robertokaban"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-twitter"><path d="M23 3a10.9 10.9 0 0 1-3.14 1.53 4.48 4.48 0 0 0-7.86 3v1A10.66 10.66 0 0 1 3 4s-4 9 5 13a11.64 11.64 0 0 1-7 2c9 5 20 0 20-11.5a4.5 4.5 0 0 0-.08-.83A7.72 7.72 0 0 0 23 3z"></path></svg><small class="ms-2 d-lg-none">Twitter</small></a>
+            </li>
+          <li class="nav-item">
+              <a class="nav-link social-link" href="https://youtube.com/@robertokaban"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-youtube"><path d="M10,15L15.19,12L10,9V15M21.56,7.17C21.69,7.64 21.78,8.27 21.84,9.07C21.91,9.87 21.94,10.56 21.94,11.16L22,12C22,14.19 21.84,15.8 21.56,16.83C21.31,17.73 20.73,18.31 19.83,18.56C19.36,18.69 18.5,18.78 17.18,18.84C15.88,18.91 14.69,18.94 13.59,18.94L12,19C7.81,19 5.2,18.84 4.17,18.56C3.27,18.31 2.69,17.73 2.44,16.83C2.31,16.36 2.22,15.73 2.16,14.93C2.09,14.13 2.06,13.44 2.06,12.84L2,12C2,9.81 2.16,8.2 2.44,7.17C2.69,6.27 3.27,5.69 4.17,5.44C4.64,5.31 5.5,5.22 6.82,5.16C8.12,5.09 9.31,5.06 10.41,5.06L12,5C16.19,5 18.8,5.16 19.83,5.44C20.73,5.69 21.31,6.27 21.56,7.17Z"></path></svg><small class="ms-2 d-lg-none">Youtube</small></a>
+            </li>
+          </ul>
+
+        
+        <hr class="text-black-50 my-4 d-lg-none">
+        <button id="mode" class="btn btn-link" type="button" aria-label="Toggle user interface mode">
+          <span class="toggle-dark"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-moon"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path></svg></span>
+          <span class="toggle-light"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-sun"><circle cx="12" cy="12" r="5"></circle><line x1="12" y1="1" x2="12" y2="3"></line><line x1="12" y1="21" x2="12" y2="23"></line><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line><line x1="1" y1="12" x2="3" y2="12"></line><line x1="21" y1="12" x2="23" y2="12"></line><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line></svg></span>
+        </button>
+        
+
+        </div>
+    </div>
+  </nav>
+</header>
+
+
+</div>
+
+
+<div class="container-xxl">
+  <aside class="doks-sidebar">
+    <nav id="doks-docs-nav" class="collapse d-lg-none" aria-label="Tertiary navigation">
+      
+<ul class="list-unstyled collapsible-sidebar">
+  
+    
+      
+      <li class="mb-1">
+        <button class="btn btn-toggle align-items-center rounded collapsed" data-bs-toggle="collapse" data-bs-target="#section-0967e753cd827c7c2576cf6f7292922e" aria-expanded="true">
+          Tutorial Javascript
+        </button>
+        <div class="collapse show" id="section-0967e753cd827c7c2576cf6f7292922e">
+          <ul class="btn-toggle-nav list-unstyled fw-normal pb-1 small">
+            
+              
+                
+                <li><a class="docs-link rounded" href="https://kaban.my.id/javascript/tutorial/pengenalan/">Pengenalan Javascript</a></li>
+              
+            
+              
+                
+                <li><a class="docs-link rounded active" href="https://kaban.my.id/javascript/tutorial/02-instalasi-persiapan/">Instalasi &amp; Persiapan Lingkungan JavaScript</a></li>
+              
+            
+              
+                
+                <li><a class="docs-link rounded" href="https://kaban.my.id/javascript/tutorial/03-sintaks-variabel/">Sintaks Dasar &amp; Variabel</a></li>
+              
+            
+              
+                
+                <li><a class="docs-link rounded" href="https://kaban.my.id/javascript/tutorial/04-tipe-data-konversi/">Tipe Data &amp; Konversi</a></li>
+              
+            
+              
+                
+                <li><a class="docs-link rounded" href="https://kaban.my.id/javascript/tutorial/05-struktur-kontrol/">Struktur Kontrol &amp; Perulangan</a></li>
+              
+            
+              
+                
+                <li><a class="docs-link rounded" href="https://kaban.my.id/javascript/tutorial/06-fungsi/">Fungsi</a></li>
+              
+            
+          </ul>
+        </div>
+      </li>
+    
+  
+</ul>
+
+    </nav>
+  </aside>
+</div>
+
+    <div class="wrap container-xxl" role="document">
+      <div class="content">
+        
+	<div class="row flex-xl-nowrap">
+		<div class="col-lg-5 col-xl-4 docs-sidebar d-none d-lg-block">
+			<nav class="docs-links" aria-label="Main navigation">
+				
+<ul class="list-unstyled collapsible-sidebar">
+  
+    
+      
+      <li class="mb-1">
+        <button class="btn btn-toggle align-items-center rounded collapsed" data-bs-toggle="collapse" data-bs-target="#section-0967e753cd827c7c2576cf6f7292922e" aria-expanded="true">
+          Tutorial Javascript
+        </button>
+        <div class="collapse show" id="section-0967e753cd827c7c2576cf6f7292922e">
+          <ul class="btn-toggle-nav list-unstyled fw-normal pb-1 small">
+            
+              
+                
+                <li><a class="docs-link rounded" href="https://kaban.my.id/javascript/tutorial/pengenalan/">Pengenalan Javascript</a></li>
+              
+            
+              
+                
+                <li><a class="docs-link rounded active" href="https://kaban.my.id/javascript/tutorial/02-instalasi-persiapan/">Instalasi &amp; Persiapan Lingkungan JavaScript</a></li>
+              
+            
+              
+                
+                <li><a class="docs-link rounded" href="https://kaban.my.id/javascript/tutorial/03-sintaks-variabel/">Sintaks Dasar &amp; Variabel</a></li>
+              
+            
+              
+                
+                <li><a class="docs-link rounded" href="https://kaban.my.id/javascript/tutorial/04-tipe-data-konversi/">Tipe Data &amp; Konversi</a></li>
+              
+            
+              
+                
+                <li><a class="docs-link rounded" href="https://kaban.my.id/javascript/tutorial/05-struktur-kontrol/">Struktur Kontrol &amp; Perulangan</a></li>
+              
+            
+              
+                
+                <li><a class="docs-link rounded" href="https://kaban.my.id/javascript/tutorial/06-fungsi/">Fungsi</a></li>
+              
+            
+          </ul>
+        </div>
+      </li>
+    
+  
+</ul>
+
+			</nav>
+		</div>
+		<nav class="docs-toc d-none d-xl-block col-xl-3" aria-label="Secondary navigation">
+			<div class="d-xl-none">
+  <button class="btn btn-outline-primary btn-sm doks-toc-toggle collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#onThisPage" aria-controls="doks-docs-nav" aria-expanded="false" aria-label="Toggle On this page navigation">
+    <span>Daftar isi</span>
+    <span>
+      <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" class="doks doks-expand" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><title>Expand</title><polyline points="7 13 12 18 17 13"></polyline><polyline points="7 6 12 11 17 6"></polyline></svg>
+      <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" class="doks doks-collapse" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><title>Collapse</title><polyline points="17 11 12 6 7 11"></polyline><polyline points="17 18 12 13 7 18"></polyline></svg>
+    </span>
+  </button>
+  <div class="collapse" id="onThisPage">
+    <div class="card card-body mt-3 py-1">
+      <div class="page-links">
+        <nav id="TableOfContents">
+  <ul>
+    <li><a href="#pendahuluan">Pendahuluan</a></li>
+    <li><a href="#menjalankan-javascript-di-browser">Menjalankan JavaScript di Browser</a>
+      <ul>
+        <li><a href="#1-javascript-console-cara-tercepat">1. JavaScript Console (Cara Tercepat)</a></li>
+        <li><a href="#2-menyisipkan-javascript-ke-html">2. Menyisipkan JavaScript ke HTML</a></li>
+        <li><a href="#3-posisi-tag-script">3. Posisi Tag <code>&lt;script&gt;</code></a></li>
+        <li><a href="#4-devtools-untuk-debugging">4. DevTools untuk Debugging</a></li>
+      </ul>
+    </li>
+    <li><a href="#menginstal-nodejs">Menginstal Node.js</a>
+      <ul>
+        <li><a href="#1-unduh--instal-nodejs">1. Unduh &amp; Instal Node.js</a></li>
+        <li><a href="#2-verifikasi-instalasi">2. Verifikasi Instalasi</a></li>
+        <li><a href="#3-menjalankan-javascript-dengan-nodejs">3. Menjalankan JavaScript dengan Node.js</a></li>
+        <li><a href="#4-nodejs-repl">4. Node.js REPL</a></li>
+        <li><a href="#5-perbedaan-browser-vs-nodejs">5. Perbedaan Browser vs Node.js</a></li>
+      </ul>
+    </li>
+    <li><a href="#mengenal-npm">Mengenal npm</a>
+      <ul>
+        <li><a href="#1-inisialisasi-proyek">1. Inisialisasi Proyek</a></li>
+        <li><a href="#2-menginstal-package">2. Menginstal Package</a></li>
+        <li><a href="#3-dependencies-vs-devdependencies">3. <code>dependencies</code> vs <code>devDependencies</code></a></li>
+        <li><a href="#4-script-npm">4. Script npm</a></li>
+        <li><a href="#5-node_modules-dan-gitignore">5. <code>node_modules</code> dan <code>.gitignore</code></a></li>
+        <li><a href="#6-npx--menjalankan-package-tanpa-install-global">6. <code>npx</code> — Menjalankan Package Tanpa Install Global</a></li>
+      </ul>
+    </li>
+    <li><a href="#editor-visual-studio-code">Editor: Visual Studio Code</a>
+      <ul>
+        <li><a href="#extension-yang-direkomendasikan">Extension yang Direkomendasikan</a></li>
+        <li><a href="#fitur-vs-code-untuk-javascript">Fitur VS Code untuk JavaScript</a></li>
+        <li><a href="#konfigurasi-vscodesettingsjson">Konfigurasi <code>.vscode/settings.json</code></a></li>
+      </ul>
+    </li>
+    <li><a href="#struktur-proyek-javascript">Struktur Proyek JavaScript</a></li>
+    <li><a href="#latihan-pertama-hello-world-di-tiga-lingkungan">Latihan Pertama: Hello World di Tiga Lingkungan</a>
+      <ul>
+        <li><a href="#1-di-browser-console">1. Di Browser Console</a></li>
+        <li><a href="#2-di-file-html">2. Di File HTML</a></li>
+        <li><a href="#3-di-nodejs">3. Di Node.js</a></li>
+      </ul>
+    </li>
+    <li><a href="#ringkasan">Ringkasan</a></li>
+  </ul>
+</nav>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="page-links d-none d-xl-block">
+  <h3>Daftar isi</h3>
+  <nav id="TableOfContents">
+  <ul>
+    <li><a href="#pendahuluan">Pendahuluan</a></li>
+    <li><a href="#menjalankan-javascript-di-browser">Menjalankan JavaScript di Browser</a>
+      <ul>
+        <li><a href="#1-javascript-console-cara-tercepat">1. JavaScript Console (Cara Tercepat)</a></li>
+        <li><a href="#2-menyisipkan-javascript-ke-html">2. Menyisipkan JavaScript ke HTML</a></li>
+        <li><a href="#3-posisi-tag-script">3. Posisi Tag <code>&lt;script&gt;</code></a></li>
+        <li><a href="#4-devtools-untuk-debugging">4. DevTools untuk Debugging</a></li>
+      </ul>
+    </li>
+    <li><a href="#menginstal-nodejs">Menginstal Node.js</a>
+      <ul>
+        <li><a href="#1-unduh--instal-nodejs">1. Unduh &amp; Instal Node.js</a></li>
+        <li><a href="#2-verifikasi-instalasi">2. Verifikasi Instalasi</a></li>
+        <li><a href="#3-menjalankan-javascript-dengan-nodejs">3. Menjalankan JavaScript dengan Node.js</a></li>
+        <li><a href="#4-nodejs-repl">4. Node.js REPL</a></li>
+        <li><a href="#5-perbedaan-browser-vs-nodejs">5. Perbedaan Browser vs Node.js</a></li>
+      </ul>
+    </li>
+    <li><a href="#mengenal-npm">Mengenal npm</a>
+      <ul>
+        <li><a href="#1-inisialisasi-proyek">1. Inisialisasi Proyek</a></li>
+        <li><a href="#2-menginstal-package">2. Menginstal Package</a></li>
+        <li><a href="#3-dependencies-vs-devdependencies">3. <code>dependencies</code> vs <code>devDependencies</code></a></li>
+        <li><a href="#4-script-npm">4. Script npm</a></li>
+        <li><a href="#5-node_modules-dan-gitignore">5. <code>node_modules</code> dan <code>.gitignore</code></a></li>
+        <li><a href="#6-npx--menjalankan-package-tanpa-install-global">6. <code>npx</code> — Menjalankan Package Tanpa Install Global</a></li>
+      </ul>
+    </li>
+    <li><a href="#editor-visual-studio-code">Editor: Visual Studio Code</a>
+      <ul>
+        <li><a href="#extension-yang-direkomendasikan">Extension yang Direkomendasikan</a></li>
+        <li><a href="#fitur-vs-code-untuk-javascript">Fitur VS Code untuk JavaScript</a></li>
+        <li><a href="#konfigurasi-vscodesettingsjson">Konfigurasi <code>.vscode/settings.json</code></a></li>
+      </ul>
+    </li>
+    <li><a href="#struktur-proyek-javascript">Struktur Proyek JavaScript</a></li>
+    <li><a href="#latihan-pertama-hello-world-di-tiga-lingkungan">Latihan Pertama: Hello World di Tiga Lingkungan</a>
+      <ul>
+        <li><a href="#1-di-browser-console">1. Di Browser Console</a></li>
+        <li><a href="#2-di-file-html">2. Di File HTML</a></li>
+        <li><a href="#3-di-nodejs">3. Di Node.js</a></li>
+      </ul>
+    </li>
+    <li><a href="#ringkasan">Ringkasan</a></li>
+  </ul>
+</nav>
+  </div>
+
+		</nav>
+		<main class="docs-content col-lg-11 col-xl-9">
+		
+				<nav aria-label="breadcrumb">
+					<ol class="breadcrumb">
+						<li class="breadcrumb-item"><a href="/">Home</a></li>
+<li class="breadcrumb-item"><a href="/javascript/">Javascript</a></li>
+<li class="breadcrumb-item"><a href="/javascript/tutorial/">Tutorial Javascript</a></li>
+<li class="breadcrumb-item active" aria-current="page">Instalasi &amp; Persiapan Lingkungan JavaScript</li>
+					</ol>
+				</nav>
+			
+			<h1>Instalasi &amp; Persiapan Lingkungan JavaScript</h1>
+			<p class="lead">Sebelum menulis kode JavaScript, kita perlu menyiapkan lingkungan pengembangan: browser untuk sisi klien, Node.js untuk sisi server, npm untuk package manager, dan editor yang nyaman.</p>
+			<nav class="d-xl-none" aria-label="Quaternary navigation">
+				<div class="d-xl-none">
+  <button class="btn btn-outline-primary btn-sm doks-toc-toggle collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#onThisPage" aria-controls="doks-docs-nav" aria-expanded="false" aria-label="Toggle On this page navigation">
+    <span>Daftar isi</span>
+    <span>
+      <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" class="doks doks-expand" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><title>Expand</title><polyline points="7 13 12 18 17 13"></polyline><polyline points="7 6 12 11 17 6"></polyline></svg>
+      <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" class="doks doks-collapse" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><title>Collapse</title><polyline points="17 11 12 6 7 11"></polyline><polyline points="17 18 12 13 7 18"></polyline></svg>
+    </span>
+  </button>
+  <div class="collapse" id="onThisPage">
+    <div class="card card-body mt-3 py-1">
+      <div class="page-links">
+        <nav id="TableOfContents">
+  <ul>
+    <li><a href="#pendahuluan">Pendahuluan</a></li>
+    <li><a href="#menjalankan-javascript-di-browser">Menjalankan JavaScript di Browser</a>
+      <ul>
+        <li><a href="#1-javascript-console-cara-tercepat">1. JavaScript Console (Cara Tercepat)</a></li>
+        <li><a href="#2-menyisipkan-javascript-ke-html">2. Menyisipkan JavaScript ke HTML</a></li>
+        <li><a href="#3-posisi-tag-script">3. Posisi Tag <code>&lt;script&gt;</code></a></li>
+        <li><a href="#4-devtools-untuk-debugging">4. DevTools untuk Debugging</a></li>
+      </ul>
+    </li>
+    <li><a href="#menginstal-nodejs">Menginstal Node.js</a>
+      <ul>
+        <li><a href="#1-unduh--instal-nodejs">1. Unduh &amp; Instal Node.js</a></li>
+        <li><a href="#2-verifikasi-instalasi">2. Verifikasi Instalasi</a></li>
+        <li><a href="#3-menjalankan-javascript-dengan-nodejs">3. Menjalankan JavaScript dengan Node.js</a></li>
+        <li><a href="#4-nodejs-repl">4. Node.js REPL</a></li>
+        <li><a href="#5-perbedaan-browser-vs-nodejs">5. Perbedaan Browser vs Node.js</a></li>
+      </ul>
+    </li>
+    <li><a href="#mengenal-npm">Mengenal npm</a>
+      <ul>
+        <li><a href="#1-inisialisasi-proyek">1. Inisialisasi Proyek</a></li>
+        <li><a href="#2-menginstal-package">2. Menginstal Package</a></li>
+        <li><a href="#3-dependencies-vs-devdependencies">3. <code>dependencies</code> vs <code>devDependencies</code></a></li>
+        <li><a href="#4-script-npm">4. Script npm</a></li>
+        <li><a href="#5-node_modules-dan-gitignore">5. <code>node_modules</code> dan <code>.gitignore</code></a></li>
+        <li><a href="#6-npx--menjalankan-package-tanpa-install-global">6. <code>npx</code> — Menjalankan Package Tanpa Install Global</a></li>
+      </ul>
+    </li>
+    <li><a href="#editor-visual-studio-code">Editor: Visual Studio Code</a>
+      <ul>
+        <li><a href="#extension-yang-direkomendasikan">Extension yang Direkomendasikan</a></li>
+        <li><a href="#fitur-vs-code-untuk-javascript">Fitur VS Code untuk JavaScript</a></li>
+        <li><a href="#konfigurasi-vscodesettingsjson">Konfigurasi <code>.vscode/settings.json</code></a></li>
+      </ul>
+    </li>
+    <li><a href="#struktur-proyek-javascript">Struktur Proyek JavaScript</a></li>
+    <li><a href="#latihan-pertama-hello-world-di-tiga-lingkungan">Latihan Pertama: Hello World di Tiga Lingkungan</a>
+      <ul>
+        <li><a href="#1-di-browser-console">1. Di Browser Console</a></li>
+        <li><a href="#2-di-file-html">2. Di File HTML</a></li>
+        <li><a href="#3-di-nodejs">3. Di Node.js</a></li>
+      </ul>
+    </li>
+    <li><a href="#ringkasan">Ringkasan</a></li>
+  </ul>
+</nav>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="page-links d-none d-xl-block">
+  <h3>Daftar isi</h3>
+  <nav id="TableOfContents">
+  <ul>
+    <li><a href="#pendahuluan">Pendahuluan</a></li>
+    <li><a href="#menjalankan-javascript-di-browser">Menjalankan JavaScript di Browser</a>
+      <ul>
+        <li><a href="#1-javascript-console-cara-tercepat">1. JavaScript Console (Cara Tercepat)</a></li>
+        <li><a href="#2-menyisipkan-javascript-ke-html">2. Menyisipkan JavaScript ke HTML</a></li>
+        <li><a href="#3-posisi-tag-script">3. Posisi Tag <code>&lt;script&gt;</code></a></li>
+        <li><a href="#4-devtools-untuk-debugging">4. DevTools untuk Debugging</a></li>
+      </ul>
+    </li>
+    <li><a href="#menginstal-nodejs">Menginstal Node.js</a>
+      <ul>
+        <li><a href="#1-unduh--instal-nodejs">1. Unduh &amp; Instal Node.js</a></li>
+        <li><a href="#2-verifikasi-instalasi">2. Verifikasi Instalasi</a></li>
+        <li><a href="#3-menjalankan-javascript-dengan-nodejs">3. Menjalankan JavaScript dengan Node.js</a></li>
+        <li><a href="#4-nodejs-repl">4. Node.js REPL</a></li>
+        <li><a href="#5-perbedaan-browser-vs-nodejs">5. Perbedaan Browser vs Node.js</a></li>
+      </ul>
+    </li>
+    <li><a href="#mengenal-npm">Mengenal npm</a>
+      <ul>
+        <li><a href="#1-inisialisasi-proyek">1. Inisialisasi Proyek</a></li>
+        <li><a href="#2-menginstal-package">2. Menginstal Package</a></li>
+        <li><a href="#3-dependencies-vs-devdependencies">3. <code>dependencies</code> vs <code>devDependencies</code></a></li>
+        <li><a href="#4-script-npm">4. Script npm</a></li>
+        <li><a href="#5-node_modules-dan-gitignore">5. <code>node_modules</code> dan <code>.gitignore</code></a></li>
+        <li><a href="#6-npx--menjalankan-package-tanpa-install-global">6. <code>npx</code> — Menjalankan Package Tanpa Install Global</a></li>
+      </ul>
+    </li>
+    <li><a href="#editor-visual-studio-code">Editor: Visual Studio Code</a>
+      <ul>
+        <li><a href="#extension-yang-direkomendasikan">Extension yang Direkomendasikan</a></li>
+        <li><a href="#fitur-vs-code-untuk-javascript">Fitur VS Code untuk JavaScript</a></li>
+        <li><a href="#konfigurasi-vscodesettingsjson">Konfigurasi <code>.vscode/settings.json</code></a></li>
+      </ul>
+    </li>
+    <li><a href="#struktur-proyek-javascript">Struktur Proyek JavaScript</a></li>
+    <li><a href="#latihan-pertama-hello-world-di-tiga-lingkungan">Latihan Pertama: Hello World di Tiga Lingkungan</a>
+      <ul>
+        <li><a href="#1-di-browser-console">1. Di Browser Console</a></li>
+        <li><a href="#2-di-file-html">2. Di File HTML</a></li>
+        <li><a href="#3-di-nodejs">3. Di Node.js</a></li>
+      </ul>
+    </li>
+    <li><a href="#ringkasan">Ringkasan</a></li>
+  </ul>
+</nav>
+  </div>
+
+			</nav>
+			<h2 id="pendahuluan">Pendahuluan <a href="#pendahuluan" class="anchor" aria-hidden="true">#</a></h2>
+<p>JavaScript adalah bahasa yang unik karena bisa dijalankan di <strong>dua lingkungan</strong>:</p>
+<ul>
+<li><strong>Browser</strong> — untuk membuat halaman web interaktif (sisi klien).</li>
+<li><strong>Node.js</strong> — untuk membuat aplikasi server, CLI, atau tooling (sisi server).</li>
+</ul>
+<p>Berbeda dengan MySQL yang perlu diinstal sebagai server, JavaScript <strong>sudah tersedia</strong> di setiap browser modern. Namun untuk pengembangan yang serius, kita perlu menyiapkan beberapa alat tambahan.</p>
+<p>Artikel ini membahas persiapan lingkungan pengembangan JavaScript dari nol: dari membuka console browser hingga menginstal Node.js dan editor kode.</p>
+<hr>
+<h2 id="menjalankan-javascript-di-browser">Menjalankan JavaScript di Browser <a href="#menjalankan-javascript-di-browser" class="anchor" aria-hidden="true">#</a></h2>
+<p>Setiap browser modern (Chrome, Firefox, Edge, Safari) memiliki <strong>JavaScript engine</strong> bawaan:</p>
+<table>
+<thead>
+<tr>
+<th>Browser</th>
+<th>Engine</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Chrome / Edge</td>
+<td>V8</td>
+</tr>
+<tr>
+<td>Firefox</td>
+<td>SpiderMonkey</td>
+</tr>
+<tr>
+<td>Safari</td>
+<td>JavaScriptCore</td>
+</tr>
+</tbody>
+</table>
+<p>Artinya, Anda <strong>tidak perlu menginstal apa pun</strong> untuk mulai menulis JavaScript di browser.</p>
+<h3 id="1-javascript-console-cara-tercepat">1. JavaScript Console (Cara Tercepat) <a href="#1-javascript-console-cara-tercepat" class="anchor" aria-hidden="true">#</a></h3>
+<p><strong>Membuka Console:</strong></p>
+<ul>
+<li><strong>Chrome/Edge:</strong> <code>Ctrl + Shift + J</code> (Windows/Linux) atau <code>Cmd + Option + J</code> (macOS).</li>
+<li><strong>Firefox:</strong> <code>Ctrl + Shift + K</code> (Windows/Linux) atau <code>Cmd + Option + K</code> (macOS).</li>
+<li>Atau klik kanan di halaman → <strong>Inspect</strong> → tab <strong>Console</strong>.</li>
+</ul>
+<p><strong>Mencoba JavaScript pertama:</strong></p>
+<pre><code class="language-javascript">console.log(&quot;Hello, JavaScript!&quot;);
+</code></pre>
+<p>Tekan <code>Enter</code>, dan Anda akan melihat output di console.</p>
+<p><strong>Eksperimen langsung:</strong></p>
+<pre><code class="language-javascript">2 + 3
+// 5
+
+&quot;Hello&quot; + &quot; &quot; + &quot;World&quot;
+// &quot;Hello World&quot;
+
+[1, 2, 3].map(x =&gt; x * 2)
+// [2, 4, 6]
+</code></pre>
+<p>Console adalah tempat terbaik untuk bereksperimen dengan potongan kode kecil.</p>
+<h3 id="2-menyisipkan-javascript-ke-html">2. Menyisipkan JavaScript ke HTML <a href="#2-menyisipkan-javascript-ke-html" class="anchor" aria-hidden="true">#</a></h3>
+<p>Ada tiga cara menyisipkan JavaScript ke halaman web:</p>
+<p><strong>a. Inline (langsung di atribut HTML):</strong></p>
+<pre><code class="language-html">&lt;button onclick=&quot;alert('Halo!')&quot;&gt;Klik Saya&lt;/button&gt;
+</code></pre>
+<blockquote>
+<p>⚠️ Tidak disarankan untuk kode yang kompleks — sulit dipelihara.</p>
+</blockquote>
+<p><strong>b. Internal (di dalam tag <code>&lt;script&gt;</code>):</strong></p>
+<pre><code class="language-html">&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+&lt;head&gt;
+  &lt;title&gt;Latihan JavaScript&lt;/title&gt;
+&lt;/head&gt;
+&lt;body&gt;
+  &lt;h1&gt;Halo!&lt;/h1&gt;
+
+  &lt;script&gt;
+    console.log(&quot;JavaScript berjalan!&quot;);
+    document.querySelector(&quot;h1&quot;).textContent = &quot;Halo, JavaScript!&quot;;
+  &lt;/script&gt;
+&lt;/body&gt;
+&lt;/html&gt;
+</code></pre>
+<p><strong>c. External (file <code>.js</code> terpisah) — <strong>direkomendasikan</strong>:</strong></p>
+<pre><code class="language-html">&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+&lt;head&gt;
+  &lt;title&gt;Latihan JavaScript&lt;/title&gt;
+&lt;/head&gt;
+&lt;body&gt;
+  &lt;h1&gt;Halo!&lt;/h1&gt;
+  &lt;script src=&quot;app.js&quot;&gt;&lt;/script&gt;
+&lt;/body&gt;
+&lt;/html&gt;
+</code></pre>
+<p>Dengan file <code>app.js</code>:</p>
+<pre><code class="language-javascript">console.log(&quot;JavaScript dari file eksternal!&quot;);
+document.querySelector(&quot;h1&quot;).textContent = &quot;Halo, JavaScript!&quot;;
+</code></pre>
+<p><strong>Keuntungan external file:</strong></p>
+<ul>
+<li>Kode terpisah dari HTML (clean separation).</li>
+<li>Bisa di-cache browser.</li>
+<li>Mudah digunakan ulang di banyak halaman.</li>
+</ul>
+<h3 id="3-posisi-tag-script">3. Posisi Tag <code>&lt;script&gt;</code> <a href="#3-posisi-tag-script" class="anchor" aria-hidden="true">#</a></h3>
+<p><strong>Di <code>&lt;head&gt;</code> (tanpa <code>defer</code>):</strong></p>
+<pre><code class="language-html">&lt;head&gt;
+  &lt;script src=&quot;app.js&quot;&gt;&lt;/script&gt;
+&lt;/head&gt;
+</code></pre>
+<p>JavaScript dieksekusi <strong>sebelum</strong> HTML body dimuat — jika kode mengakses elemen DOM, akan error karena elemen belum ada.</p>
+<p><strong>Di akhir <code>&lt;body&gt;</code>:</strong></p>
+<pre><code class="language-html">&lt;body&gt;
+  &lt;h1&gt;Halo!&lt;/h1&gt;
+  &lt;script src=&quot;app.js&quot;&gt;&lt;/script&gt;
+&lt;/body&gt;
+</code></pre>
+<p>JavaScript dieksekusi <strong>setelah</strong> semua elemen HTML dimuat — aman untuk mengakses DOM.</p>
+<p><strong>Di <code>&lt;head&gt;</code> dengan <code>defer</code>:</strong></p>
+<pre><code class="language-html">&lt;head&gt;
+  &lt;script src=&quot;app.js&quot; defer&gt;&lt;/script&gt;
+&lt;/head&gt;
+</code></pre>
+<p><code>defer</code> menunda eksekusi sampai HTML selesai di-parse. Ini adalah <strong>cara modern yang direkomendasikan</strong>.</p>
+<p><strong>Perbandingan:</strong></p>
+<table>
+<thead>
+<tr>
+<th>Atribut</th>
+<th>Kapan Dieksekusi</th>
+<th>Urutan</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Tanpa atribut</td>
+<td>Segera saat ditemui</td>
+<td>Sesuai urutan</td>
+</tr>
+<tr>
+<td><code>defer</code></td>
+<td>Setelah HTML selesai di-parse</td>
+<td>Sesuai urutan</td>
+</tr>
+<tr>
+<td><code>async</code></td>
+<td>Segera setelah diunduh</td>
+<td>Tidak dijamin</td>
+</tr>
+</tbody>
+</table>
+<blockquote>
+<p><strong>Tips:</strong> Gunakan <code>defer</code> untuk script yang butuh DOM, <code>async</code> untuk script independen (misalnya analytics).</p>
+</blockquote>
+<h3 id="4-devtools-untuk-debugging">4. DevTools untuk Debugging <a href="#4-devtools-untuk-debugging" class="anchor" aria-hidden="true">#</a></h3>
+<p>Selain Console, DevTools memiliki tab lain yang berguna:</p>
+<ul>
+<li><strong>Elements</strong> — inspect &amp; edit HTML/CSS.</li>
+<li><strong>Sources</strong> — debug JavaScript dengan breakpoint.</li>
+<li><strong>Network</strong> — lihat request HTTP (berguna saat belajar <code>fetch</code>).</li>
+<li><strong>Application</strong> — lihat <code>localStorage</code>, <code>sessionStorage</code>, cookie.</li>
+<li><strong>Performance</strong> — analisis performa.</li>
+</ul>
+<p><strong>Debugging dengan breakpoint:</strong></p>
+<ol>
+<li>Buka tab <strong>Sources</strong>.</li>
+<li>Buka file JavaScript Anda.</li>
+<li>Klik nomor baris untuk menambah breakpoint (titik biru).</li>
+<li>Jalankan ulang halaman — eksekusi akan berhenti di breakpoint.</li>
+<li>Gunakan tombol <strong>Step over</strong> (<code>F10</code>), <strong>Step into</strong> (<code>F11</code>), <strong>Resume</strong> (<code>F8</code>).</li>
+</ol>
+<hr>
+<h2 id="menginstal-nodejs">Menginstal Node.js <a href="#menginstal-nodejs" class="anchor" aria-hidden="true">#</a></h2>
+<p><strong>Node.js</strong> memungkinkan JavaScript berjalan di luar browser — di server, CLI, atau tooling. Node.js juga menyertakan <strong>npm</strong> (Node Package Manager) untuk mengelola package.</p>
+<h3 id="1-unduh--instal-nodejs">1. Unduh &amp; Instal Node.js <a href="#1-unduh--instal-nodejs" class="anchor" aria-hidden="true">#</a></h3>
+<p>Kunjungi <code>https://nodejs.org/</code> dan unduh versi <strong>LTS</strong> (Long Term Support) — versi yang stabil dan didukung jangka panjang.</p>
+<p><strong>Windows:</strong></p>
+<ul>
+<li>Unduh installer <code>.msi</code>, jalankan, dan ikuti wizard.</li>
+<li>Pastikan opsi <strong>&ldquo;Add to PATH&rdquo;</strong> dicentang.</li>
+</ul>
+<p><strong>macOS:</strong></p>
+<ul>
+<li>Unduh installer <code>.pkg</code> dan jalankan.</li>
+<li>Atau via Homebrew: <code>brew install node</code></li>
+</ul>
+<p><strong>Linux (Ubuntu/Debian):</strong></p>
+<pre><code class="language-bash"># Via NodeSource (versi terbaru)
+curl -fsSL https://deb.nodesource.com/setup_lts.x | sudo -E bash -
+sudo apt install -y nodejs
+
+# Atau via apt (versi mungkin lebih lama)
+sudo apt install nodejs npm
+</code></pre>
+<h3 id="2-verifikasi-instalasi">2. Verifikasi Instalasi <a href="#2-verifikasi-instalasi" class="anchor" aria-hidden="true">#</a></h3>
+<p>Buka terminal/Command Prompt:</p>
+<pre><code class="language-bash">node --version
+# v20.x.x (contoh)
+
+npm --version
+# 10.x.x (contoh)
+</code></pre>
+<p>Jika kedua perintah menampilkan versi, instalasi berhasil.</p>
+<h3 id="3-menjalankan-javascript-dengan-nodejs">3. Menjalankan JavaScript dengan Node.js <a href="#3-menjalankan-javascript-dengan-nodejs" class="anchor" aria-hidden="true">#</a></h3>
+<p>Buat file <code>hello.js</code>:</p>
+<pre><code class="language-javascript">console.log(&quot;Hello dari Node.js!&quot;);
+console.log(&quot;Versi Node:&quot;, process.version);
+</code></pre>
+<p>Jalankan:</p>
+<pre><code class="language-bash">node hello.js
+</code></pre>
+<p>Output:</p>
+<pre><code>Hello dari Node.js!
+Versi Node: v20.10.0
+</code></pre>
+<h3 id="4-nodejs-repl">4. Node.js REPL <a href="#4-nodejs-repl" class="anchor" aria-hidden="true">#</a></h3>
+<p>Node.js juga memiliki REPL (Read-Eval-Print Loop) — mirip console browser:</p>
+<pre><code class="language-bash">node
+</code></pre>
+<p>Prompt <code>&gt;</code> akan muncul. Coba:</p>
+<pre><code class="language-javascript">&gt; 2 + 3
+5
+&gt; [1, 2, 3].map(x =&gt; x * 2)
+[ 2, 4, 6 ]
+&gt; .exit
+</code></pre>
+<p>Ketik <code>.exit</code> atau <code>Ctrl + D</code> untuk keluar.</p>
+<h3 id="5-perbedaan-browser-vs-nodejs">5. Perbedaan Browser vs Node.js <a href="#5-perbedaan-browser-vs-nodejs" class="anchor" aria-hidden="true">#</a></h3>
+<p>Tidak semua fitur JavaScript tersedia di kedua lingkungan:</p>
+<table>
+<thead>
+<tr>
+<th>Fitur</th>
+<th>Browser</th>
+<th>Node.js</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>document</code>, <code>window</code></td>
+<td>✅</td>
+<td>❌</td>
+</tr>
+<tr>
+<td><code>localStorage</code></td>
+<td>✅</td>
+<td>❌</td>
+</tr>
+<tr>
+<td><code>fetch</code></td>
+<td>✅</td>
+<td>✅ (sejak Node 18)</td>
+</tr>
+<tr>
+<td><code>fs</code> (file system)</td>
+<td>❌</td>
+<td>✅</td>
+</tr>
+<tr>
+<td><code>process</code></td>
+<td>❌</td>
+<td>✅</td>
+</tr>
+<tr>
+<td><code>console.log</code></td>
+<td>✅</td>
+<td>✅</td>
+</tr>
+</tbody>
+</table>
+<p>Kode yang menggunakan <code>document</code> <strong>tidak akan berjalan</strong> di Node.js, dan sebaliknya.</p>
+<hr>
+<h2 id="mengenal-npm">Mengenal npm <a href="#mengenal-npm" class="anchor" aria-hidden="true">#</a></h2>
+<p><strong>npm</strong> (Node Package Manager) adalah package manager untuk JavaScript. Dengan npm, Anda bisa menginstal library pihak ketiga (misalnya Express, Lodash, React) dan mengelola dependensi proyek.</p>
+<h3 id="1-inisialisasi-proyek">1. Inisialisasi Proyek <a href="#1-inisialisasi-proyek" class="anchor" aria-hidden="true">#</a></h3>
+<p>Buat folder proyek:</p>
+<pre><code class="language-bash">mkdir latihan-js
+cd latihan-js
+</code></pre>
+<p>Inisialisasi npm:</p>
+<pre><code class="language-bash">npm init -y
+</code></pre>
+<p>Perintah ini membuat file <code>package.json</code>:</p>
+<pre><code class="language-json">{
+  &quot;name&quot;: &quot;latihan-js&quot;,
+  &quot;version&quot;: &quot;1.0.0&quot;,
+  &quot;description&quot;: &quot;&quot;,
+  &quot;main&quot;: &quot;index.js&quot;,
+  &quot;scripts&quot;: {
+    &quot;test&quot;: &quot;echo \&quot;Error: no test specified\&quot; &amp;&amp; exit 1&quot;
+  },
+  &quot;keywords&quot;: [],
+  &quot;author&quot;: &quot;&quot;,
+  &quot;license&quot;: &quot;ISC&quot;
+}
+</code></pre>
+<h3 id="2-menginstal-package">2. Menginstal Package <a href="#2-menginstal-package" class="anchor" aria-hidden="true">#</a></h3>
+<pre><code class="language-bash">npm install lodash
+</code></pre>
+<p>Perintah ini:</p>
+<ul>
+<li>Mengunduh <code>lodash</code> ke folder <code>node_modules/</code>.</li>
+<li>Menambahkan <code>lodash</code> ke <code>dependencies</code> di <code>package.json</code>.</li>
+<li>Membuat/memperbarui <code>package-lock.json</code> (mengunci versi).</li>
+</ul>
+<p><strong>Menggunakan package:</strong></p>
+<pre><code class="language-javascript">const _ = require('lodash');
+
+console.log(_.chunk([1, 2, 3, 4, 5], 2));
+// [[1, 2], [3, 4], [5]]
+</code></pre>
+<h3 id="3-dependencies-vs-devdependencies">3. <code>dependencies</code> vs <code>devDependencies</code> <a href="#3-dependencies-vs-devdependencies" class="anchor" aria-hidden="true">#</a></h3>
+<p><strong><code>dependencies</code></strong> — dibutuhkan saat aplikasi berjalan:</p>
+<pre><code class="language-bash">npm install express
+</code></pre>
+<p><strong><code>devDependencies</code></strong> — hanya dibutuhkan saat development (testing, linting, build):</p>
+<pre><code class="language-bash">npm install --save-dev jest
+</code></pre>
+<h3 id="4-script-npm">4. Script npm <a href="#4-script-npm" class="anchor" aria-hidden="true">#</a></h3>
+<p>Di <code>package.json</code>, Anda bisa mendefinisikan script:</p>
+<pre><code class="language-json">{
+  &quot;scripts&quot;: {
+    &quot;start&quot;: &quot;node index.js&quot;,
+    &quot;dev&quot;: &quot;nodemon index.js&quot;,
+    &quot;test&quot;: &quot;jest&quot;
+  }
+}
+</code></pre>
+<p>Jalankan dengan:</p>
+<pre><code class="language-bash">npm start
+npm run dev
+npm test
+</code></pre>
+<h3 id="5-node_modules-dan-gitignore">5. <code>node_modules</code> dan <code>.gitignore</code> <a href="#5-node_modules-dan-gitignore" class="anchor" aria-hidden="true">#</a></h3>
+<p>Folder <code>node_modules/</code> berisi semua package yang diinstal. Ukurannya bisa sangat besar dan <strong>tidak boleh</strong> di-commit ke Git.</p>
+<p>Buat file <code>.gitignore</code>:</p>
+<pre><code>node_modules/
+.env
+*.log
+</code></pre>
+<p>Untuk menginstal ulang dependensi dari <code>package.json</code> (misalnya setelah clone repo):</p>
+<pre><code class="language-bash">npm install
+</code></pre>
+<h3 id="6-npx--menjalankan-package-tanpa-install-global">6. <code>npx</code> — Menjalankan Package Tanpa Install Global <a href="#6-npx--menjalankan-package-tanpa-install-global" class="anchor" aria-hidden="true">#</a></h3>
+<pre><code class="language-bash">npx create-vite my-app
+npx eslint .
+</code></pre>
+<p><code>npx</code> mengunduh package sementara (jika belum ada) dan menjalankannya — tanpa perlu <code>npm install -g</code>.</p>
+<hr>
+<h2 id="editor-visual-studio-code">Editor: Visual Studio Code <a href="#editor-visual-studio-code" class="anchor" aria-hidden="true">#</a></h2>
+<p><strong>VS Code</strong> adalah editor gratis yang paling populer untuk JavaScript. Unduh di <code>https://code.visualstudio.com/</code>.</p>
+<h3 id="extension-yang-direkomendasikan">Extension yang Direkomendasikan <a href="#extension-yang-direkomendasikan" class="anchor" aria-hidden="true">#</a></h3>
+<table>
+<thead>
+<tr>
+<th>Extension</th>
+<th>Fungsi</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>ESLint</strong></td>
+<td>Linting — mendeteksi error dan style issue</td>
+</tr>
+<tr>
+<td><strong>Prettier</strong></td>
+<td>Code formatter otomatis</td>
+</tr>
+<tr>
+<td><strong>JavaScript (ES6) code snippets</strong></td>
+<td>Snippet untuk kode umum</td>
+</tr>
+<tr>
+<td><strong>Live Server</strong></td>
+<td>Server lokal dengan auto-reload</td>
+</tr>
+<tr>
+<td><strong>Path Intellisense</strong></td>
+<td>Autocomplete path file</td>
+</tr>
+<tr>
+<td><strong>GitLens</strong></td>
+<td>Integrasi Git yang powerful</td>
+</tr>
+<tr>
+<td><strong>Error Lens</strong></td>
+<td>Menampilkan error langsung di baris kode</td>
+</tr>
+</tbody>
+</table>
+<h3 id="fitur-vs-code-untuk-javascript">Fitur VS Code untuk JavaScript <a href="#fitur-vs-code-untuk-javascript" class="anchor" aria-hidden="true">#</a></h3>
+<ul>
+<li><strong>IntelliSense</strong> — autocomplete cerdas berdasarkan tipe.</li>
+<li><strong>Integrated Terminal</strong> — <code>Ctrl + `` </code> untuk membuka terminal.</li>
+<li><strong>Debugging</strong> — <code>F5</code> untuk menjalankan debugger.</li>
+<li><strong>Go to Definition</strong> — <code>F12</code> untuk lompat ke definisi fungsi/variabel.</li>
+<li><strong>Rename Symbol</strong> — <code>F2</code> untuk rename variabel di seluruh file.</li>
+</ul>
+<h3 id="konfigurasi-vscodesettingsjson">Konfigurasi <code>.vscode/settings.json</code> <a href="#konfigurasi-vscodesettingsjson" class="anchor" aria-hidden="true">#</a></h3>
+<p>Pengaturan proyek yang direkomendasikan:</p>
+<pre><code class="language-json">{
+  &quot;editor.formatOnSave&quot;: true,
+  &quot;editor.defaultFormatter&quot;: &quot;esbenp.prettier-vscode&quot;,
+  &quot;editor.tabSize&quot;: 2,
+  &quot;files.autoSave&quot;: &quot;onFocusChange&quot;,
+  &quot;javascript.updateImportsOnFileMove.enabled&quot;: &quot;always&quot;
+}
+</code></pre>
+<hr>
+<h2 id="struktur-proyek-javascript">Struktur Proyek JavaScript <a href="#struktur-proyek-javascript" class="anchor" aria-hidden="true">#</a></h2>
+<p>Untuk proyek kecil (latihan), struktur sederhana sudah cukup:</p>
+<pre><code>latihan-js/
+├── index.html
+├── app.js
+└── style.css
+</code></pre>
+<p>Untuk proyek yang lebih besar, pertimbangkan struktur:</p>
+<pre><code>proyek/
+├── src/
+│   ├── index.js
+│   ├── utils/
+│   │   └── helpers.js
+│   └── components/
+│       └── button.js
+├── public/
+│   └── index.html
+├── tests/
+│   └── app.test.js
+├── package.json
+├── .gitignore
+└── README.md
+</code></pre>
+<hr>
+<h2 id="latihan-pertama-hello-world-di-tiga-lingkungan">Latihan Pertama: Hello World di Tiga Lingkungan <a href="#latihan-pertama-hello-world-di-tiga-lingkungan" class="anchor" aria-hidden="true">#</a></h2>
+<p>Mari kita praktikkan dengan tiga cara menjalankan JavaScript:</p>
+<h3 id="1-di-browser-console">1. Di Browser Console <a href="#1-di-browser-console" class="anchor" aria-hidden="true">#</a></h3>
+<p>Buka DevTools (<code>Ctrl + Shift + J</code>), ketik:</p>
+<pre><code class="language-javascript">console.log(&quot;Hello dari browser!&quot;);
+</code></pre>
+<h3 id="2-di-file-html">2. Di File HTML <a href="#2-di-file-html" class="anchor" aria-hidden="true">#</a></h3>
+<p>Buat <code>index.html</code>:</p>
+<pre><code class="language-html">&lt;!DOCTYPE html&gt;
+&lt;html lang=&quot;id&quot;&gt;
+&lt;head&gt;
+  &lt;meta charset=&quot;UTF-8&quot;&gt;
+  &lt;title&gt;Latihan JS&lt;/title&gt;
+&lt;/head&gt;
+&lt;body&gt;
+  &lt;h1 id=&quot;judul&quot;&gt;Halo!&lt;/h1&gt;
+  &lt;button id=&quot;tombol&quot;&gt;Klik Saya&lt;/button&gt;
+
+  &lt;script&gt;
+    document.getElementById(&quot;tombol&quot;).addEventListener(&quot;click&quot;, () =&gt; {
+      document.getElementById(&quot;judul&quot;).textContent = &quot;Tombol diklik!&quot;;
+    });
+  &lt;/script&gt;
+&lt;/body&gt;
+&lt;/html&gt;
+</code></pre>
+<p>Buka file di browser, klik tombol — judul berubah.</p>
+<h3 id="3-di-nodejs">3. Di Node.js <a href="#3-di-nodejs" class="anchor" aria-hidden="true">#</a></h3>
+<p>Buat <code>hello.js</code>:</p>
+<pre><code class="language-javascript">const nama = &quot;JavaScript&quot;;
+console.log(`Hello dari Node.js, ${nama}!`);
+
+const os = require('os');
+console.log(`Platform: ${os.platform()}`);
+console.log(`Total memori: ${(os.totalmem() / 1024 / 1024 / 1024).toFixed(2)} GB`);
+</code></pre>
+<p>Jalankan:</p>
+<pre><code class="language-bash">node hello.js
+</code></pre>
+<hr>
+<h2 id="ringkasan">Ringkasan <a href="#ringkasan" class="anchor" aria-hidden="true">#</a></h2>
+<table>
+<thead>
+<tr>
+<th>Alat</th>
+<th>Fungsi</th>
+<th>Cara Mendapatkan</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Browser DevTools</td>
+<td>Menjalankan &amp; debug JS sisi klien</td>
+<td>Bawaan browser</td>
+</tr>
+<tr>
+<td>Node.js</td>
+<td>Menjalankan JS sisi server/CLI</td>
+<td><code>nodejs.org</code></td>
+</tr>
+<tr>
+<td>npm</td>
+<td>Package manager</td>
+<td>Termasuk Node.js</td>
+</tr>
+<tr>
+<td>VS Code</td>
+<td>Editor kode</td>
+<td><code>code.visualstudio.com</code></td>
+</tr>
+<tr>
+<td>Live Server</td>
+<td>Server lokal auto-reload</td>
+<td>Extension VS Code</td>
+</tr>
+</tbody>
+</table>
+<p>Poin penting:</p>
+<ul>
+<li>JavaScript <strong>sudah tersedia</strong> di browser — tidak perlu instal untuk mulai belajar.</li>
+<li><strong>Node.js</strong> diperlukan untuk menjalankan JS di luar browser.</li>
+<li><strong>npm</strong> mengelola dependensi proyek.</li>
+<li>Gunakan <code>defer</code> pada tag <code>&lt;script&gt;</code> di <code>&lt;head&gt;</code> agar DOM siap saat kode dieksekusi.</li>
+<li><strong>VS Code</strong> + extension yang tepat meningkatkan produktivitas.</li>
+<li><code>node_modules/</code> <strong>jangan</strong> di-commit ke Git.</li>
+</ul>
+<p>Pada artikel berikutnya, kita akan membahas <strong>Sintaks Dasar &amp; Variabel</strong> — <code>var</code>, <code>let</code>, <code>const</code>, tipe data, dan operator.</p>
+
+			<div class="page-footer-meta d-flex flex-column flex-md-row justify-content-between">
+				</div>
+			<div class="docs-navigation d-flex justify-content-between">
+	
+	<a href="/javascript/tutorial/pengenalan/">
+			<div class="card my-1">
+				<div class="card-body py-2">
+					&larr; Pengenalan Javascript
+				</div>
+			</div>
+		</a>
+	<a class="ms-auto" href="/javascript/tutorial/03-sintaks-variabel/">
+			<div class="card my-1">
+				<div class="card-body py-2">
+					Sintaks Dasar &amp; Variabel &rarr;
+				</div>
+			</div>
+		</a>
+	</div>
+
+			
+		</main>
+	</div>
+
+      </div>
+    </div>
+    
+    
+    <footer class="footer text-muted">
+  <div class="container-xxl">
+    <div class="row">
+      <div class="col-lg-8 order-last order-lg-first">
+        <ul class="list-inline">
+          <li class="list-inline-item">Powered by <a class="text-muted" href="https://gohugo.io/">Hugo</a> and <a class="text-muted" href="https://github.com/">Github</a></li>
+        </ul>
+      </div>
+      <div class="col-lg-8 order-first order-lg-last text-lg-end">
+        <ul class="list-inline">
+          </ul>
+      </div>
+    </div>
+  </div>
+</footer>
+    
+
+<script src="/js/bootstrap.min.650aeec64c81d69d4c0850fc73c93da3f0330cec0a27772feed7f90f60baa5f47f1c45687d71914bdafd1c4e860d40f6dc08ede27a2f08431ff929c9a2d24621.js" integrity="sha512-ZQruxkyB1p1MCFD8c8k9o/AzDOwKJ3cv7tf5D2C6pfR/HEVofXGRS9r9HE6GDUD23Ajt4novCEMf&#43;SnJotJGIQ==" crossorigin="anonymous" defer></script>
+  <script src="/js/highlight.min.ec234bd8a5f487aaffe50a89f17b14501b1bb65633cf177cffd4cb84702dd7030edc08712dceb8dc27ac7e54b53240a08bf0b8d951572ee582bcdbbd06a48a7b.js" integrity="sha512-7CNL2KX0h6r/5QqJ8XsUUBsbtlYzzxd8/9TLhHAt1wMO3AhxLc643CesflS1MkCgi/C42VFXLuWCvNu9BqSKew==" crossorigin="anonymous" defer></script>
+  <script src="/main.min.cd1e5e6b40065b3f7f7fd8548a528fac67019754eda0f37b9918d02d154fc9ef6a22742f6513b0572ad9163152e151ec36221fbeafbecd7759c3dab1f19b64b9.js" integrity="sha512-zR5ea0AGWz9/f9hUilKPrGcBl1TtoPN7mRjQLRVPye9qInQvZROwVyrZFjFS4VHsNiIfvq&#43;&#43;zXdZw9qx8ZtkuQ==" crossorigin="anonymous" defer></script>
+  <script src="https://kaban.my.id/index.min.f90d3536216d10b8ecf574dc8d57b0d2bd45aab605bdc69b1f7697f3476ebdb5db6a63a3f6955150f2c0b02e66fa1adfbf4c5b50c540f663f829ad8bcd5807c6.js" integrity="sha512-&#43;Q01NiFtELjs9XTcjVew0r1FqrYFvcabH3aX80duvbXbamOj9pVRUPLAsC5m&#43;hrfv0xbUMVA9mP4Ka2LzVgHxg==" crossorigin="anonymous" defer></script>
+  
+    <div class="d-flex fixed-bottom pb-4 pb-lg-5 pe-4 pe-lg-5">
+      <a id="toTop" href="#" class="btn btn-outline-primary rounded-circle ms-auto p-2"><span class="visually-hidden">Top</span><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-chevron-up"><polyline points="18 15 12 9 6 15"></polyline></svg></a>
+    </div>
+    
+  </body>
+</html>

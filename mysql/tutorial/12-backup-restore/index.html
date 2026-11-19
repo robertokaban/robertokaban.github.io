@@ -1,0 +1,1331 @@
+<!doctype html>
+<html lang="en-US">
+  <head>
+  <meta charset="utf-8">
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <link rel="preload" as="font" href="https://kaban.my.id/fonts/vendor/jost/jost-v4-latin-regular.woff2" type="font/woff2" crossorigin>
+<link rel="preload" as="font" href="https://kaban.my.id/fonts/vendor/jost/jost-v4-latin-500.woff2" type="font/woff2" crossorigin>
+<link rel="preload" as="font" href="https://kaban.my.id/fonts/vendor/jost/jost-v4-latin-700.woff2" type="font/woff2" crossorigin>
+
+  <script>(()=>{var t=window.matchMedia&&window.matchMedia("(prefers-color-scheme: dark)").matches,e=localStorage.getItem("theme");t&&e===null&&(localStorage.setItem("theme","dark"),document.documentElement.setAttribute("data-dark-mode","")),t&&e==="dark"&&document.documentElement.setAttribute("data-dark-mode",""),e==="dark"&&document.documentElement.setAttribute("data-dark-mode","")})()</script>
+
+  <link rel="stylesheet" href="https://kaban.my.id/main.9f87974e4c1caf828d7f6300ecd98102083d1763683fe424f26c4c7b80fa72a094aa3c62fe333b5026c22ff50b82f74220d559e730c1f032fd8bcec957ac2bb4.css" integrity="sha512-n4eXTkwcr4KNf2MA7NmBAgg9F2NoP&#43;Qk8mxMe4D6cqCUqjxi/jM7UCbCL/ULgvdCINVZ5zDB8DL9i87JV6wrtA==" crossorigin="anonymous">
+<noscript><style>img.lazyload { display: none; }</style></noscript>
+  <meta name="robots" content="index, follow">
+    <meta name="googlebot" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1">
+    <meta name="bingbot" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1">
+  <title>Backup &amp; Restore Database - Roberto Kaban Blog&#39;s</title>
+<meta name="description" content="Panduan lengkap backup dan restore database MySQL: mysqldump, mysqlpump, physical backup, dan strategi backup.">
+<link rel="canonical" href="https://kaban.my.id/mysql/tutorial/12-backup-restore/">
+<meta property="og:locale" content="en_US">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Backup &amp; Restore Database">
+<meta property="og:description" content="Panduan lengkap backup dan restore database MySQL: mysqldump, mysqlpump, physical backup, dan strategi backup.">
+<meta property="og:url" content="https://kaban.my.id/mysql/tutorial/12-backup-restore/">
+<meta property="og:site_name" content="Roberto Kaban Blog&#39;s">
+<meta property="article:published_time" content="2022-12-17T08:00:00+00:00">
+  <meta property="article:modified_time" content="2022-12-17T08:00:00+00:00">
+  
+  <meta property="og:image" content="https://kaban.my.id/doks.png"/>
+      <meta property="og:image:alt" content="Roberto Kaban Blog&#39;s">
+    
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:site" content="@robertokaban">
+<meta name="twitter:creator" content="@robertokaban">
+<meta name="twitter:title" content="Backup &amp; Restore Database">
+<meta name="twitter:description" content="Panduan lengkap backup dan restore database MySQL: mysqldump, mysqlpump, physical backup, dan strategi backup.">
+<meta name="twitter:image" content="https://kaban.my.id/doks.png">
+    <meta name="twitter:image:alt" content="Backup &amp; Restore Database">
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "Person",
+        "@id": "https://kaban.my.id/#/schema/person/1",
+      "name": "BlogRobertoKaban",
+      "url": "https://kaban.my.id/",
+      "sameAs": [
+        "https://twitter.com/robertokaban"
+        , "https://github.com/robertokaban"
+        ],
+      "image": {
+          "@type": "ImageObject",
+          "@id": "https://kaban.my.id/#/schema/image/1",
+          "url": "https://kaban.my.id/doks.png",
+          "width":  1280 ,
+          "height":  640 ,
+          "caption": "BlogRobertoKaban"
+        }
+      },
+    {
+      "@type": "WebSite",
+      "@id": "https://kaban.my.id/#/schema/website/1",
+      "url": "https://kaban.my.id/",
+      "name": "Roberto Kaban Blog\u0027s",
+      "description": "Hanya sebuah catatan kecil untuk hal yang tidak ingin dilupakan.",
+      "publisher": {
+          "@id": "https://kaban.my.id/#/schema/person/1"
+        }
+      },
+    {
+      "@type": "WebPage",
+      "@id": "https://kaban.my.id/mysql/tutorial/12-backup-restore/",
+      "url": "https://kaban.my.id/mysql/tutorial/12-backup-restore/",
+      "name": "Backup \u0026 Restore Database",
+      "description": "Panduan lengkap backup dan restore database MySQL: mysqldump, mysqlpump, physical backup, dan strategi backup.",
+      "isPartOf": {
+        "@id": "https://kaban.my.id/#/schema/website/1"
+      },
+      "about": {
+          "@id": "https://kaban.my.id/#/schema/person/1"
+        },
+      "datePublished": "2022-12-17T08:00:00CET",
+      "dateModified": "2022-12-17T08:00:00CET",
+      "breadcrumb": {
+        "@id": "https://kaban.my.id/mysql/tutorial/12-backup-restore/#/schema/breadcrumb/1"
+      },
+      "primaryImageOfPage": {
+        "@id": "https://kaban.my.id/mysql/tutorial/12-backup-restore/#/schema/image/2"
+      },
+      "inLanguage": "en-US",
+      "potentialAction": [{
+        "@type": "ReadAction", "target": ["https://kaban.my.id/mysql/tutorial/12-backup-restore/"]
+      }]
+    },
+    {
+      "@type": "BreadcrumbList",
+      "@id": "https://kaban.my.id/mysql/tutorial/12-backup-restore/#/schema/breadcrumb/1",
+      "name": "Breadcrumbs",
+      "itemListElement": [{
+        "@type": "ListItem",
+        "position":  1 ,
+        "item": {
+          "@type": "WebPage",
+          "@id": "https://kaban.my.id/",
+          "url": "https://kaban.my.id/",
+          "name": "Home"
+          }
+        },{
+        "@type": "ListItem",
+        "position":  2 ,
+        "item": {
+          "@type": "WebPage",
+          "@id": "https://kaban.my.id/mysql/",
+          "url": "https://kaban.my.id/mysql/",
+          "name": "Mysql"
+          }
+        },{
+        "@type": "ListItem",
+        "position":  3 ,
+        "item": {
+          "@type": "WebPage",
+          "@id": "https://kaban.my.id/mysql/tutorial/",
+          "url": "https://kaban.my.id/mysql/tutorial/",
+          "name": "Tutorial"
+          }
+        },{
+        "@type": "ListItem",
+        "position":  4 ,
+        "item": {
+          "@id": "https://kaban.my.id/mysql/tutorial/12-backup-restore/"
+          }
+        }]
+    },
+
+    {
+      "@context": "https://schema.org",
+      "@graph": [
+        {
+          "@type": "ImageObject",
+          "@id": "https://kaban.my.id/mysql/tutorial/12-backup-restore/#/schema/image/2",
+          "url": "https://kaban.my.id/doks.png",
+          "contentUrl": "https://kaban.my.id/doks.png",
+          "caption": "Backup \u0026 Restore Database"
+        }
+      ]
+    }
+
+  ]
+}
+</script>
+
+  <meta name="theme-color" content="#fff">
+<link rel="icon" href="https://kaban.my.id/favicon.ico" sizes="any">
+<link rel="icon" type="image/svg+xml" href="https://kaban.my.id/favicon.svg">
+<link rel="apple-touch-icon" sizes="180x180" href="https://kaban.my.id/apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="32x32" href="https://kaban.my.id/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="https://kaban.my.id/favicon-16x16.png">
+<link rel="manifest" crossorigin="use-credentials" href="https://kaban.my.id/site.webmanifest">
+
+  
+
+
+  
+  
+  
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-60VSDZFQR5"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-60VSDZFQR5');
+</script>
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6664512614760985"
+     crossorigin="anonymous"></script>
+</head>
+
+  <body class="mysql single">
+    <div class="sticky-top">
+<div class="header-bar"></div>
+
+<header class="navbar navbar-expand-lg navbar-light doks-navbar">
+  <nav class="container-xxl flex-wrap flex-lg-nowrap" aria-label="Main navigation">
+
+    <a class="navbar-brand order-0" href="/" aria-label="Roberto Kaban Blog&#39;s">
+      Roberto Kaban Blog&#39;s
+    </a>
+
+    <button class="btn btn-menu order-2 d-block d-lg-none" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasDoks" aria-controls="offcanvasDoks" aria-label="Open main menu">
+      <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-menu"><line x1="3" y1="12" x2="21" y2="12"></line><line x1="3" y1="6" x2="21" y2="6"></line><line x1="3" y1="18" x2="21" y2="18"></line></svg>
+    </button>
+    <div class="offcanvas offcanvas-end border-0 py-lg-1" tabindex="-1" id="offcanvasDoks" data-bs-backdrop="true" aria-labelledby="offcanvasDoksLabel">
+      <div class="header-bar d-lg-none"></div>
+      <div class="offcanvas-header d-lg-none">
+        <h2 class="h5 offcanvas-title ps-2" id="offcanvasDoksLabel"><a class="text-dark" href="/">Roberto Kaban Blog&#39;s</a></h2>
+        <button type="button" class="btn-close text-reset me-2" data-bs-dismiss="offcanvas" aria-label="Close main menu"></button>
+      </div>
+      <div class="offcanvas-body p-4 p-lg-0">
+        <ul class="nav flex-column flex-lg-row align-items-lg-center mt-2 mt-lg-0 ms-lg-2 me-lg-auto">
+              <li class="nav-item">
+                <a class="nav-link ps-0 py-1" href="/about/">About Me</a>
+              </li>
+            
+          
+              <li class="nav-item">
+                <a class="nav-link ps-0 py-1" href="/contact/">Contact</a>
+              </li>
+            
+          
+              <li class="nav-item">
+                <a class="nav-link ps-0 py-1" href="/artikel/">Artikel</a>
+              </li>
+            
+          
+              <li class="nav-item">
+                <a class="nav-link ps-0 py-1" href="/coretanku/">Coretanku</a>
+              </li>
+            
+          </ul>
+
+        <hr class="text-black-50 my-4 d-lg-none">
+        <form class="doks-search position-relative flex-grow-1 ms-lg-auto me-lg-2">
+          <input id="search" class="form-control is-search" type="search" placeholder="Cari di blog ini..." aria-label="Cari di blog ini..." autocomplete="off">
+          <div id="suggestions" class="shadow bg-white rounded d-none"></div>
+        </form>
+        <hr class="text-black-50 my-4 d-lg-none">
+        <ul class="nav flex-column flex-lg-row">
+          <li class="nav-item">
+              <a class="nav-link social-link" href="https://github.com/robertokaban"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-github"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path></svg><small class="ms-2 d-lg-none">GitHub</small></a>
+            </li>
+          <li class="nav-item">
+              <a class="nav-link social-link" href="https://facebook.com/roberto.kaban"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-facebook"><path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"></path></svg><small class="ms-2 d-lg-none">Facebook</small></a>
+            </li>
+          <li class="nav-item">
+              <a class="nav-link social-link" href="https://twitter.com/robertokaban"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-twitter"><path d="M23 3a10.9 10.9 0 0 1-3.14 1.53 4.48 4.48 0 0 0-7.86 3v1A10.66 10.66 0 0 1 3 4s-4 9 5 13a11.64 11.64 0 0 1-7 2c9 5 20 0 20-11.5a4.5 4.5 0 0 0-.08-.83A7.72 7.72 0 0 0 23 3z"></path></svg><small class="ms-2 d-lg-none">Twitter</small></a>
+            </li>
+          <li class="nav-item">
+              <a class="nav-link social-link" href="https://youtube.com/@robertokaban"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-youtube"><path d="M10,15L15.19,12L10,9V15M21.56,7.17C21.69,7.64 21.78,8.27 21.84,9.07C21.91,9.87 21.94,10.56 21.94,11.16L22,12C22,14.19 21.84,15.8 21.56,16.83C21.31,17.73 20.73,18.31 19.83,18.56C19.36,18.69 18.5,18.78 17.18,18.84C15.88,18.91 14.69,18.94 13.59,18.94L12,19C7.81,19 5.2,18.84 4.17,18.56C3.27,18.31 2.69,17.73 2.44,16.83C2.31,16.36 2.22,15.73 2.16,14.93C2.09,14.13 2.06,13.44 2.06,12.84L2,12C2,9.81 2.16,8.2 2.44,7.17C2.69,6.27 3.27,5.69 4.17,5.44C4.64,5.31 5.5,5.22 6.82,5.16C8.12,5.09 9.31,5.06 10.41,5.06L12,5C16.19,5 18.8,5.16 19.83,5.44C20.73,5.69 21.31,6.27 21.56,7.17Z"></path></svg><small class="ms-2 d-lg-none">Youtube</small></a>
+            </li>
+          </ul>
+
+        
+        <hr class="text-black-50 my-4 d-lg-none">
+        <button id="mode" class="btn btn-link" type="button" aria-label="Toggle user interface mode">
+          <span class="toggle-dark"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-moon"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path></svg></span>
+          <span class="toggle-light"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-sun"><circle cx="12" cy="12" r="5"></circle><line x1="12" y1="1" x2="12" y2="3"></line><line x1="12" y1="21" x2="12" y2="23"></line><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line><line x1="1" y1="12" x2="3" y2="12"></line><line x1="21" y1="12" x2="23" y2="12"></line><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line></svg></span>
+        </button>
+        
+
+        </div>
+    </div>
+  </nav>
+</header>
+
+
+</div>
+
+
+<div class="container-xxl">
+  <aside class="doks-sidebar">
+    <nav id="doks-docs-nav" class="collapse d-lg-none" aria-label="Tertiary navigation">
+      
+<ul class="list-unstyled collapsible-sidebar">
+  
+    
+      
+      <li class="mb-1">
+        <button class="btn btn-toggle align-items-center rounded collapsed" data-bs-toggle="collapse" data-bs-target="#section-dd2f133c64f99bea60c3e743290ec287" aria-expanded="true">
+          Tutorial MySQL
+        </button>
+        <div class="collapse show" id="section-dd2f133c64f99bea60c3e743290ec287">
+          <ul class="btn-toggle-nav list-unstyled fw-normal pb-1 small">
+            
+              
+                
+                <li><a class="docs-link rounded" href="https://kaban.my.id/mysql/tutorial/pengenalan/">Pengenalan MySQL</a></li>
+              
+            
+              
+                
+                <li><a class="docs-link rounded" href="https://kaban.my.id/mysql/tutorial/02-instalasi/">Instalasi dan Konfigurasi MySQL</a></li>
+              
+            
+              
+                
+                <li><a class="docs-link rounded" href="https://kaban.my.id/mysql/tutorial/03-arsitektur/">Mengenal Arsitektur &amp; Komponen MySQL</a></li>
+              
+            
+              
+                
+                <li><a class="docs-link rounded" href="https://kaban.my.id/mysql/tutorial/04-database-table/">Perintah Dasar SQL: Database &amp; Table</a></li>
+              
+            
+              
+                
+                <li><a class="docs-link rounded" href="https://kaban.my.id/mysql/tutorial/05-crud/">Operasi CRUD (Create, Read, Update, Delete)</a></li>
+              
+            
+              
+                
+                <li><a class="docs-link rounded" href="https://kaban.my.id/mysql/tutorial/06-filtering-sorting/">Filtering &amp; Sorting Data</a></li>
+              
+            
+              
+                
+                <li><a class="docs-link rounded" href="https://kaban.my.id/mysql/tutorial/07-agregasi-grouping/">Fungsi Agregasi &amp; Grouping</a></li>
+              
+            
+              
+                
+                <li><a class="docs-link rounded" href="https://kaban.my.id/mysql/tutorial/08-join/">JOIN: Menggabungkan Tabel</a></li>
+              
+            
+              
+                
+                <li><a class="docs-link rounded" href="https://kaban.my.id/mysql/tutorial/09-subquery-union/">Subquery &amp; Union</a></li>
+              
+            
+              
+                
+                <li><a class="docs-link rounded" href="https://kaban.my.id/mysql/tutorial/10-view-index-procedure/">View, Index, dan Stored Procedure</a></li>
+              
+            
+              
+                
+                <li><a class="docs-link rounded" href="https://kaban.my.id/mysql/tutorial/11-user-privilege/">Manajemen User &amp; Hak Akses</a></li>
+              
+            
+              
+                
+                <li><a class="docs-link rounded active" href="https://kaban.my.id/mysql/tutorial/12-backup-restore/">Backup &amp; Restore Database</a></li>
+              
+            
+              
+                
+                <li><a class="docs-link rounded" href="https://kaban.my.id/mysql/tutorial/13-transaksi-acid/">Transaksi &amp; ACID</a></li>
+              
+            
+              
+                
+                <li><a class="docs-link rounded" href="https://kaban.my.id/mysql/tutorial/14-optimasi-performa/">Optimasi Performa MySQL</a></li>
+              
+            
+          </ul>
+        </div>
+      </li>
+    
+  
+</ul>
+
+    </nav>
+  </aside>
+</div>
+
+    <div class="wrap container-xxl" role="document">
+      <div class="content">
+        
+	<div class="row flex-xl-nowrap">
+		<div class="col-lg-5 col-xl-4 docs-sidebar d-none d-lg-block">
+			<nav class="docs-links" aria-label="Main navigation">
+				
+<ul class="list-unstyled collapsible-sidebar">
+  
+    
+      
+      <li class="mb-1">
+        <button class="btn btn-toggle align-items-center rounded collapsed" data-bs-toggle="collapse" data-bs-target="#section-dd2f133c64f99bea60c3e743290ec287" aria-expanded="true">
+          Tutorial MySQL
+        </button>
+        <div class="collapse show" id="section-dd2f133c64f99bea60c3e743290ec287">
+          <ul class="btn-toggle-nav list-unstyled fw-normal pb-1 small">
+            
+              
+                
+                <li><a class="docs-link rounded" href="https://kaban.my.id/mysql/tutorial/pengenalan/">Pengenalan MySQL</a></li>
+              
+            
+              
+                
+                <li><a class="docs-link rounded" href="https://kaban.my.id/mysql/tutorial/02-instalasi/">Instalasi dan Konfigurasi MySQL</a></li>
+              
+            
+              
+                
+                <li><a class="docs-link rounded" href="https://kaban.my.id/mysql/tutorial/03-arsitektur/">Mengenal Arsitektur &amp; Komponen MySQL</a></li>
+              
+            
+              
+                
+                <li><a class="docs-link rounded" href="https://kaban.my.id/mysql/tutorial/04-database-table/">Perintah Dasar SQL: Database &amp; Table</a></li>
+              
+            
+              
+                
+                <li><a class="docs-link rounded" href="https://kaban.my.id/mysql/tutorial/05-crud/">Operasi CRUD (Create, Read, Update, Delete)</a></li>
+              
+            
+              
+                
+                <li><a class="docs-link rounded" href="https://kaban.my.id/mysql/tutorial/06-filtering-sorting/">Filtering &amp; Sorting Data</a></li>
+              
+            
+              
+                
+                <li><a class="docs-link rounded" href="https://kaban.my.id/mysql/tutorial/07-agregasi-grouping/">Fungsi Agregasi &amp; Grouping</a></li>
+              
+            
+              
+                
+                <li><a class="docs-link rounded" href="https://kaban.my.id/mysql/tutorial/08-join/">JOIN: Menggabungkan Tabel</a></li>
+              
+            
+              
+                
+                <li><a class="docs-link rounded" href="https://kaban.my.id/mysql/tutorial/09-subquery-union/">Subquery &amp; Union</a></li>
+              
+            
+              
+                
+                <li><a class="docs-link rounded" href="https://kaban.my.id/mysql/tutorial/10-view-index-procedure/">View, Index, dan Stored Procedure</a></li>
+              
+            
+              
+                
+                <li><a class="docs-link rounded" href="https://kaban.my.id/mysql/tutorial/11-user-privilege/">Manajemen User &amp; Hak Akses</a></li>
+              
+            
+              
+                
+                <li><a class="docs-link rounded active" href="https://kaban.my.id/mysql/tutorial/12-backup-restore/">Backup &amp; Restore Database</a></li>
+              
+            
+              
+                
+                <li><a class="docs-link rounded" href="https://kaban.my.id/mysql/tutorial/13-transaksi-acid/">Transaksi &amp; ACID</a></li>
+              
+            
+              
+                
+                <li><a class="docs-link rounded" href="https://kaban.my.id/mysql/tutorial/14-optimasi-performa/">Optimasi Performa MySQL</a></li>
+              
+            
+          </ul>
+        </div>
+      </li>
+    
+  
+</ul>
+
+			</nav>
+		</div>
+		<nav class="docs-toc d-none d-xl-block col-xl-3" aria-label="Secondary navigation">
+			<div class="d-xl-none">
+  <button class="btn btn-outline-primary btn-sm doks-toc-toggle collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#onThisPage" aria-controls="doks-docs-nav" aria-expanded="false" aria-label="Toggle On this page navigation">
+    <span>Daftar isi</span>
+    <span>
+      <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" class="doks doks-expand" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><title>Expand</title><polyline points="7 13 12 18 17 13"></polyline><polyline points="7 6 12 11 17 6"></polyline></svg>
+      <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" class="doks doks-collapse" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><title>Collapse</title><polyline points="17 11 12 6 7 11"></polyline><polyline points="17 18 12 13 7 18"></polyline></svg>
+    </span>
+  </button>
+  <div class="collapse" id="onThisPage">
+    <div class="card card-body mt-3 py-1">
+      <div class="page-links">
+        <nav id="TableOfContents">
+  <ul>
+    <li><a href="#pendahuluan">Pendahuluan</a></li>
+    <li><a href="#jenis-jenis-backup">Jenis-Jenis Backup</a>
+      <ul>
+        <li><a href="#1-logical-backup">1. Logical Backup</a></li>
+        <li><a href="#2-physical-backup">2. Physical Backup</a></li>
+        <li><a href="#3-snapshot-backup">3. Snapshot Backup</a></li>
+        <li><a href="#4-binary-log-backup">4. Binary Log Backup</a></li>
+      </ul>
+    </li>
+    <li><a href="#backup-logis-dengan-mysqldump">Backup Logis dengan <code>mysqldump</code></a>
+      <ul>
+        <li><a href="#sintaks-dasar">Sintaks Dasar</a></li>
+        <li><a href="#contoh-backup-satu-database">Contoh: Backup Satu Database</a></li>
+        <li><a href="#backup-beberapa-database">Backup Beberapa Database</a></li>
+        <li><a href="#backup-semua-database">Backup Semua Database</a></li>
+        <li><a href="#backup-satu-tabel">Backup Satu Tabel</a></li>
+        <li><a href="#backup-beberapa-tabel">Backup Beberapa Tabel</a></li>
+        <li><a href="#opsi-penting-mysqldump">Opsi Penting <code>mysqldump</code></a></li>
+        <li><a href="#contoh-backup-lengkap-direkomendasikan">Contoh Backup Lengkap (Direkomendasikan)</a></li>
+        <li><a href="#backup-terkompresi">Backup Terkompresi</a></li>
+        <li><a href="#backup-hanya-struktur">Backup Hanya Struktur</a></li>
+        <li><a href="#backup-hanya-data">Backup Hanya Data</a></li>
+        <li><a href="#backup-dengan-kondisi">Backup dengan Kondisi</a></li>
+        <li><a href="#backup-tanpa-tabel-tertentu">Backup Tanpa Tabel Tertentu</a></li>
+      </ul>
+    </li>
+    <li><a href="#restore-logis">Restore Logis</a>
+      <ul>
+        <li><a href="#restore-satu-database">Restore Satu Database</a></li>
+        <li><a href="#restore-dari-backup-terkompresi">Restore dari Backup Terkompresi</a></li>
+        <li><a href="#restore-backup-dengan---databases">Restore Backup dengan <code>--databases</code></a></li>
+        <li><a href="#restore-satu-tabel">Restore Satu Tabel</a></li>
+        <li><a href="#restore-ke-database-berbeda">Restore ke Database Berbeda</a></li>
+        <li><a href="#verifikasi-setelah-restore">Verifikasi Setelah Restore</a></li>
+      </ul>
+    </li>
+    <li><a href="#backup-fisik">Backup Fisik</a>
+      <ul>
+        <li><a href="#percona-xtrabackup-rekomendasi-untuk-innodb">Percona XtraBackup (Rekomendasi untuk InnoDB)</a></li>
+        <li><a href="#file-level-backup-server-berhenti">File-Level Backup (Server Berhenti)</a></li>
+        <li><a href="#snapshot-lvm-zfs-cloud">Snapshot (LVM, ZFS, Cloud)</a></li>
+      </ul>
+    </li>
+    <li><a href="#backup-incremental-dengan-binary-log">Backup Incremental dengan Binary Log</a>
+      <ul>
+        <li><a href="#mengaktifkan-binary-log">Mengaktifkan Binary Log</a></li>
+        <li><a href="#point-in-time-recovery">Point-in-Time Recovery</a></li>
+        <li><a href="#melihat-isi-binary-log">Melihat Isi Binary Log</a></li>
+      </ul>
+    </li>
+    <li><a href="#backup-otomatis-dengan-cron">Backup Otomatis dengan Cron</a>
+      <ul>
+        <li><a href="#skrip-backup-sederhana">Skrip Backup Sederhana</a></li>
+        <li><a href="#jadwalkan-dengan-cron">Jadwalkan dengan Cron</a></li>
+        <li><a href="#backup-user-khusus">Backup User Khusus</a></li>
+      </ul>
+    </li>
+    <li><a href="#strategi-backup-yang-andal">Strategi Backup yang Andal</a>
+      <ul>
+        <li><a href="#aturan-3-2-1">Aturan 3-2-1</a></li>
+        <li><a href="#contoh-jadwal">Contoh Jadwal</a></li>
+        <li><a href="#uji-restore-secara-berkala">Uji Restore Secara Berkala</a></li>
+        <li><a href="#monitoring-backup">Monitoring Backup</a></li>
+        <li><a href="#enkripsi-backup">Enkripsi Backup</a></li>
+      </ul>
+    </li>
+    <li><a href="#alat-backup-alternatif">Alat Backup Alternatif</a></li>
+    <li><a href="#ringkasan">Ringkasan</a></li>
+  </ul>
+</nav>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="page-links d-none d-xl-block">
+  <h3>Daftar isi</h3>
+  <nav id="TableOfContents">
+  <ul>
+    <li><a href="#pendahuluan">Pendahuluan</a></li>
+    <li><a href="#jenis-jenis-backup">Jenis-Jenis Backup</a>
+      <ul>
+        <li><a href="#1-logical-backup">1. Logical Backup</a></li>
+        <li><a href="#2-physical-backup">2. Physical Backup</a></li>
+        <li><a href="#3-snapshot-backup">3. Snapshot Backup</a></li>
+        <li><a href="#4-binary-log-backup">4. Binary Log Backup</a></li>
+      </ul>
+    </li>
+    <li><a href="#backup-logis-dengan-mysqldump">Backup Logis dengan <code>mysqldump</code></a>
+      <ul>
+        <li><a href="#sintaks-dasar">Sintaks Dasar</a></li>
+        <li><a href="#contoh-backup-satu-database">Contoh: Backup Satu Database</a></li>
+        <li><a href="#backup-beberapa-database">Backup Beberapa Database</a></li>
+        <li><a href="#backup-semua-database">Backup Semua Database</a></li>
+        <li><a href="#backup-satu-tabel">Backup Satu Tabel</a></li>
+        <li><a href="#backup-beberapa-tabel">Backup Beberapa Tabel</a></li>
+        <li><a href="#opsi-penting-mysqldump">Opsi Penting <code>mysqldump</code></a></li>
+        <li><a href="#contoh-backup-lengkap-direkomendasikan">Contoh Backup Lengkap (Direkomendasikan)</a></li>
+        <li><a href="#backup-terkompresi">Backup Terkompresi</a></li>
+        <li><a href="#backup-hanya-struktur">Backup Hanya Struktur</a></li>
+        <li><a href="#backup-hanya-data">Backup Hanya Data</a></li>
+        <li><a href="#backup-dengan-kondisi">Backup dengan Kondisi</a></li>
+        <li><a href="#backup-tanpa-tabel-tertentu">Backup Tanpa Tabel Tertentu</a></li>
+      </ul>
+    </li>
+    <li><a href="#restore-logis">Restore Logis</a>
+      <ul>
+        <li><a href="#restore-satu-database">Restore Satu Database</a></li>
+        <li><a href="#restore-dari-backup-terkompresi">Restore dari Backup Terkompresi</a></li>
+        <li><a href="#restore-backup-dengan---databases">Restore Backup dengan <code>--databases</code></a></li>
+        <li><a href="#restore-satu-tabel">Restore Satu Tabel</a></li>
+        <li><a href="#restore-ke-database-berbeda">Restore ke Database Berbeda</a></li>
+        <li><a href="#verifikasi-setelah-restore">Verifikasi Setelah Restore</a></li>
+      </ul>
+    </li>
+    <li><a href="#backup-fisik">Backup Fisik</a>
+      <ul>
+        <li><a href="#percona-xtrabackup-rekomendasi-untuk-innodb">Percona XtraBackup (Rekomendasi untuk InnoDB)</a></li>
+        <li><a href="#file-level-backup-server-berhenti">File-Level Backup (Server Berhenti)</a></li>
+        <li><a href="#snapshot-lvm-zfs-cloud">Snapshot (LVM, ZFS, Cloud)</a></li>
+      </ul>
+    </li>
+    <li><a href="#backup-incremental-dengan-binary-log">Backup Incremental dengan Binary Log</a>
+      <ul>
+        <li><a href="#mengaktifkan-binary-log">Mengaktifkan Binary Log</a></li>
+        <li><a href="#point-in-time-recovery">Point-in-Time Recovery</a></li>
+        <li><a href="#melihat-isi-binary-log">Melihat Isi Binary Log</a></li>
+      </ul>
+    </li>
+    <li><a href="#backup-otomatis-dengan-cron">Backup Otomatis dengan Cron</a>
+      <ul>
+        <li><a href="#skrip-backup-sederhana">Skrip Backup Sederhana</a></li>
+        <li><a href="#jadwalkan-dengan-cron">Jadwalkan dengan Cron</a></li>
+        <li><a href="#backup-user-khusus">Backup User Khusus</a></li>
+      </ul>
+    </li>
+    <li><a href="#strategi-backup-yang-andal">Strategi Backup yang Andal</a>
+      <ul>
+        <li><a href="#aturan-3-2-1">Aturan 3-2-1</a></li>
+        <li><a href="#contoh-jadwal">Contoh Jadwal</a></li>
+        <li><a href="#uji-restore-secara-berkala">Uji Restore Secara Berkala</a></li>
+        <li><a href="#monitoring-backup">Monitoring Backup</a></li>
+        <li><a href="#enkripsi-backup">Enkripsi Backup</a></li>
+      </ul>
+    </li>
+    <li><a href="#alat-backup-alternatif">Alat Backup Alternatif</a></li>
+    <li><a href="#ringkasan">Ringkasan</a></li>
+  </ul>
+</nav>
+  </div>
+
+		</nav>
+		<main class="docs-content col-lg-11 col-xl-9">
+		
+				<nav aria-label="breadcrumb">
+					<ol class="breadcrumb">
+						<li class="breadcrumb-item"><a href="/">Home</a></li>
+<li class="breadcrumb-item"><a href="/mysql/">Mysql</a></li>
+<li class="breadcrumb-item"><a href="/mysql/tutorial/">Tutorial MySQL</a></li>
+<li class="breadcrumb-item active" aria-current="page">Backup &amp; Restore Database</li>
+					</ol>
+				</nav>
+			
+			<h1>Backup &amp; Restore Database</h1>
+			<p class="lead">Backup adalah asuransi terhadap kehilangan data. Artikel ini membahas cara melakukan backup logis dan fisik, melakukan restore, serta menyusun strategi backup yang andal untuk MySQL.</p>
+			<nav class="d-xl-none" aria-label="Quaternary navigation">
+				<div class="d-xl-none">
+  <button class="btn btn-outline-primary btn-sm doks-toc-toggle collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#onThisPage" aria-controls="doks-docs-nav" aria-expanded="false" aria-label="Toggle On this page navigation">
+    <span>Daftar isi</span>
+    <span>
+      <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" class="doks doks-expand" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><title>Expand</title><polyline points="7 13 12 18 17 13"></polyline><polyline points="7 6 12 11 17 6"></polyline></svg>
+      <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" class="doks doks-collapse" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><title>Collapse</title><polyline points="17 11 12 6 7 11"></polyline><polyline points="17 18 12 13 7 18"></polyline></svg>
+    </span>
+  </button>
+  <div class="collapse" id="onThisPage">
+    <div class="card card-body mt-3 py-1">
+      <div class="page-links">
+        <nav id="TableOfContents">
+  <ul>
+    <li><a href="#pendahuluan">Pendahuluan</a></li>
+    <li><a href="#jenis-jenis-backup">Jenis-Jenis Backup</a>
+      <ul>
+        <li><a href="#1-logical-backup">1. Logical Backup</a></li>
+        <li><a href="#2-physical-backup">2. Physical Backup</a></li>
+        <li><a href="#3-snapshot-backup">3. Snapshot Backup</a></li>
+        <li><a href="#4-binary-log-backup">4. Binary Log Backup</a></li>
+      </ul>
+    </li>
+    <li><a href="#backup-logis-dengan-mysqldump">Backup Logis dengan <code>mysqldump</code></a>
+      <ul>
+        <li><a href="#sintaks-dasar">Sintaks Dasar</a></li>
+        <li><a href="#contoh-backup-satu-database">Contoh: Backup Satu Database</a></li>
+        <li><a href="#backup-beberapa-database">Backup Beberapa Database</a></li>
+        <li><a href="#backup-semua-database">Backup Semua Database</a></li>
+        <li><a href="#backup-satu-tabel">Backup Satu Tabel</a></li>
+        <li><a href="#backup-beberapa-tabel">Backup Beberapa Tabel</a></li>
+        <li><a href="#opsi-penting-mysqldump">Opsi Penting <code>mysqldump</code></a></li>
+        <li><a href="#contoh-backup-lengkap-direkomendasikan">Contoh Backup Lengkap (Direkomendasikan)</a></li>
+        <li><a href="#backup-terkompresi">Backup Terkompresi</a></li>
+        <li><a href="#backup-hanya-struktur">Backup Hanya Struktur</a></li>
+        <li><a href="#backup-hanya-data">Backup Hanya Data</a></li>
+        <li><a href="#backup-dengan-kondisi">Backup dengan Kondisi</a></li>
+        <li><a href="#backup-tanpa-tabel-tertentu">Backup Tanpa Tabel Tertentu</a></li>
+      </ul>
+    </li>
+    <li><a href="#restore-logis">Restore Logis</a>
+      <ul>
+        <li><a href="#restore-satu-database">Restore Satu Database</a></li>
+        <li><a href="#restore-dari-backup-terkompresi">Restore dari Backup Terkompresi</a></li>
+        <li><a href="#restore-backup-dengan---databases">Restore Backup dengan <code>--databases</code></a></li>
+        <li><a href="#restore-satu-tabel">Restore Satu Tabel</a></li>
+        <li><a href="#restore-ke-database-berbeda">Restore ke Database Berbeda</a></li>
+        <li><a href="#verifikasi-setelah-restore">Verifikasi Setelah Restore</a></li>
+      </ul>
+    </li>
+    <li><a href="#backup-fisik">Backup Fisik</a>
+      <ul>
+        <li><a href="#percona-xtrabackup-rekomendasi-untuk-innodb">Percona XtraBackup (Rekomendasi untuk InnoDB)</a></li>
+        <li><a href="#file-level-backup-server-berhenti">File-Level Backup (Server Berhenti)</a></li>
+        <li><a href="#snapshot-lvm-zfs-cloud">Snapshot (LVM, ZFS, Cloud)</a></li>
+      </ul>
+    </li>
+    <li><a href="#backup-incremental-dengan-binary-log">Backup Incremental dengan Binary Log</a>
+      <ul>
+        <li><a href="#mengaktifkan-binary-log">Mengaktifkan Binary Log</a></li>
+        <li><a href="#point-in-time-recovery">Point-in-Time Recovery</a></li>
+        <li><a href="#melihat-isi-binary-log">Melihat Isi Binary Log</a></li>
+      </ul>
+    </li>
+    <li><a href="#backup-otomatis-dengan-cron">Backup Otomatis dengan Cron</a>
+      <ul>
+        <li><a href="#skrip-backup-sederhana">Skrip Backup Sederhana</a></li>
+        <li><a href="#jadwalkan-dengan-cron">Jadwalkan dengan Cron</a></li>
+        <li><a href="#backup-user-khusus">Backup User Khusus</a></li>
+      </ul>
+    </li>
+    <li><a href="#strategi-backup-yang-andal">Strategi Backup yang Andal</a>
+      <ul>
+        <li><a href="#aturan-3-2-1">Aturan 3-2-1</a></li>
+        <li><a href="#contoh-jadwal">Contoh Jadwal</a></li>
+        <li><a href="#uji-restore-secara-berkala">Uji Restore Secara Berkala</a></li>
+        <li><a href="#monitoring-backup">Monitoring Backup</a></li>
+        <li><a href="#enkripsi-backup">Enkripsi Backup</a></li>
+      </ul>
+    </li>
+    <li><a href="#alat-backup-alternatif">Alat Backup Alternatif</a></li>
+    <li><a href="#ringkasan">Ringkasan</a></li>
+  </ul>
+</nav>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="page-links d-none d-xl-block">
+  <h3>Daftar isi</h3>
+  <nav id="TableOfContents">
+  <ul>
+    <li><a href="#pendahuluan">Pendahuluan</a></li>
+    <li><a href="#jenis-jenis-backup">Jenis-Jenis Backup</a>
+      <ul>
+        <li><a href="#1-logical-backup">1. Logical Backup</a></li>
+        <li><a href="#2-physical-backup">2. Physical Backup</a></li>
+        <li><a href="#3-snapshot-backup">3. Snapshot Backup</a></li>
+        <li><a href="#4-binary-log-backup">4. Binary Log Backup</a></li>
+      </ul>
+    </li>
+    <li><a href="#backup-logis-dengan-mysqldump">Backup Logis dengan <code>mysqldump</code></a>
+      <ul>
+        <li><a href="#sintaks-dasar">Sintaks Dasar</a></li>
+        <li><a href="#contoh-backup-satu-database">Contoh: Backup Satu Database</a></li>
+        <li><a href="#backup-beberapa-database">Backup Beberapa Database</a></li>
+        <li><a href="#backup-semua-database">Backup Semua Database</a></li>
+        <li><a href="#backup-satu-tabel">Backup Satu Tabel</a></li>
+        <li><a href="#backup-beberapa-tabel">Backup Beberapa Tabel</a></li>
+        <li><a href="#opsi-penting-mysqldump">Opsi Penting <code>mysqldump</code></a></li>
+        <li><a href="#contoh-backup-lengkap-direkomendasikan">Contoh Backup Lengkap (Direkomendasikan)</a></li>
+        <li><a href="#backup-terkompresi">Backup Terkompresi</a></li>
+        <li><a href="#backup-hanya-struktur">Backup Hanya Struktur</a></li>
+        <li><a href="#backup-hanya-data">Backup Hanya Data</a></li>
+        <li><a href="#backup-dengan-kondisi">Backup dengan Kondisi</a></li>
+        <li><a href="#backup-tanpa-tabel-tertentu">Backup Tanpa Tabel Tertentu</a></li>
+      </ul>
+    </li>
+    <li><a href="#restore-logis">Restore Logis</a>
+      <ul>
+        <li><a href="#restore-satu-database">Restore Satu Database</a></li>
+        <li><a href="#restore-dari-backup-terkompresi">Restore dari Backup Terkompresi</a></li>
+        <li><a href="#restore-backup-dengan---databases">Restore Backup dengan <code>--databases</code></a></li>
+        <li><a href="#restore-satu-tabel">Restore Satu Tabel</a></li>
+        <li><a href="#restore-ke-database-berbeda">Restore ke Database Berbeda</a></li>
+        <li><a href="#verifikasi-setelah-restore">Verifikasi Setelah Restore</a></li>
+      </ul>
+    </li>
+    <li><a href="#backup-fisik">Backup Fisik</a>
+      <ul>
+        <li><a href="#percona-xtrabackup-rekomendasi-untuk-innodb">Percona XtraBackup (Rekomendasi untuk InnoDB)</a></li>
+        <li><a href="#file-level-backup-server-berhenti">File-Level Backup (Server Berhenti)</a></li>
+        <li><a href="#snapshot-lvm-zfs-cloud">Snapshot (LVM, ZFS, Cloud)</a></li>
+      </ul>
+    </li>
+    <li><a href="#backup-incremental-dengan-binary-log">Backup Incremental dengan Binary Log</a>
+      <ul>
+        <li><a href="#mengaktifkan-binary-log">Mengaktifkan Binary Log</a></li>
+        <li><a href="#point-in-time-recovery">Point-in-Time Recovery</a></li>
+        <li><a href="#melihat-isi-binary-log">Melihat Isi Binary Log</a></li>
+      </ul>
+    </li>
+    <li><a href="#backup-otomatis-dengan-cron">Backup Otomatis dengan Cron</a>
+      <ul>
+        <li><a href="#skrip-backup-sederhana">Skrip Backup Sederhana</a></li>
+        <li><a href="#jadwalkan-dengan-cron">Jadwalkan dengan Cron</a></li>
+        <li><a href="#backup-user-khusus">Backup User Khusus</a></li>
+      </ul>
+    </li>
+    <li><a href="#strategi-backup-yang-andal">Strategi Backup yang Andal</a>
+      <ul>
+        <li><a href="#aturan-3-2-1">Aturan 3-2-1</a></li>
+        <li><a href="#contoh-jadwal">Contoh Jadwal</a></li>
+        <li><a href="#uji-restore-secara-berkala">Uji Restore Secara Berkala</a></li>
+        <li><a href="#monitoring-backup">Monitoring Backup</a></li>
+        <li><a href="#enkripsi-backup">Enkripsi Backup</a></li>
+      </ul>
+    </li>
+    <li><a href="#alat-backup-alternatif">Alat Backup Alternatif</a></li>
+    <li><a href="#ringkasan">Ringkasan</a></li>
+  </ul>
+</nav>
+  </div>
+
+			</nav>
+			<h2 id="pendahuluan">Pendahuluan <a href="#pendahuluan" class="anchor" aria-hidden="true">#</a></h2>
+<p>Data adalah aset paling berharga dalam sebuah aplikasi. Hardware bisa rusak, human error bisa terjadi, dan serangan siber bisa datang kapan saja. Tanpa backup yang baik, satu insiden kecil bisa menghapus data bertahun-tahun.</p>
+<p>Artikel ini membahas:</p>
+<ul>
+<li>Jenis-jenis backup (logis vs fisik).</li>
+<li>Cara backup dan restore dengan <code>mysqldump</code>.</li>
+<li>Backup fisik dengan <code>mysqlbackup</code> / file-level.</li>
+<li>Backup otomatis dengan cron.</li>
+<li>Strategi backup yang andal.</li>
+</ul>
+<blockquote>
+<p><strong>Asumsi:</strong> Anda memiliki akses ke server MySQL dan bisa menjalankan perintah shell. Contoh menggunakan database <code>toko_online</code>.</p>
+</blockquote>
+<hr>
+<h2 id="jenis-jenis-backup">Jenis-Jenis Backup <a href="#jenis-jenis-backup" class="anchor" aria-hidden="true">#</a></h2>
+<h3 id="1-logical-backup">1. Logical Backup <a href="#1-logical-backup" class="anchor" aria-hidden="true">#</a></h3>
+<p>Backup berupa <strong>perintah SQL</strong> (<code>CREATE TABLE</code>, <code>INSERT</code>, dll.) yang bisa dieksekusi ulang untuk membangun database.</p>
+<ul>
+<li><strong>Kelebihan:</strong> Portabel (bisa dipulihkan di versi MySQL lain atau bahkan database lain), mudah dibaca, bisa backup per tabel.</li>
+<li><strong>Kekurangan:</strong> Lambat untuk database besar, ukuran file bisa sangat besar.</li>
+<li><strong>Alat:</strong> <code>mysqldump</code>, <code>mysqlpump</code>, <code>mysqldumper</code>.</li>
+</ul>
+<h3 id="2-physical-backup">2. Physical Backup <a href="#2-physical-backup" class="anchor" aria-hidden="true">#</a></h3>
+<p>Backup berupa <strong>file data mentah</strong> (file <code>.ibd</code>, <code>.frm</code>, file log, dll.).</p>
+<ul>
+<li><strong>Kelebihan:</strong> Sangat cepat, cocok untuk database besar.</li>
+<li><strong>Kekurangan:</strong> Kurang portabel (terikat versi dan platform), tidak bisa backup per tabel dengan mudah.</li>
+<li><strong>Alat:</strong> <code>mysqlbackup</code> (Enterprise), <code>Percona XtraBackup</code>, <code>cp</code>/<code>rsync</code> (dengan database berhenti).</li>
+</ul>
+<h3 id="3-snapshot-backup">3. Snapshot Backup <a href="#3-snapshot-backup" class="anchor" aria-hidden="true">#</a></h3>
+<p>Backup menggunakan <strong>snapshot</strong> dari filesystem atau storage (LVM, ZFS, cloud snapshot).</p>
+<ul>
+<li>Sangat cepat, tetapi memerlukan dukungan infrastruktur.</li>
+</ul>
+<h3 id="4-binary-log-backup">4. Binary Log Backup <a href="#4-binary-log-backup" class="anchor" aria-hidden="true">#</a></h3>
+<p>Backup <strong>incremental</strong> menggunakan binary log (<code>binlog</code>) untuk menangkap perubahan sejak backup terakhir.</p>
+<ul>
+<li>Berguna untuk <strong>point-in-time recovery</strong>.</li>
+</ul>
+<hr>
+<h2 id="backup-logis-dengan-mysqldump">Backup Logis dengan <code>mysqldump</code> <a href="#backup-logis-dengan-mysqldump" class="anchor" aria-hidden="true">#</a></h2>
+<p><code>mysqldump</code> adalah alat bawaan MySQL untuk backup logis. Tersedia di semua instalasi MySQL.</p>
+<h3 id="sintaks-dasar">Sintaks Dasar <a href="#sintaks-dasar" class="anchor" aria-hidden="true">#</a></h3>
+<pre><code class="language-bash">mysqldump -u username -p nama_database &gt; file_backup.sql
+</code></pre>
+<h3 id="contoh-backup-satu-database">Contoh: Backup Satu Database <a href="#contoh-backup-satu-database" class="anchor" aria-hidden="true">#</a></h3>
+<pre><code class="language-bash">mysqldump -u root -p toko_online &gt; toko_online_backup.sql
+</code></pre>
+<p>Setelah dijalankan, Anda akan diminta password. File <code>toko_online_backup.sql</code> berisi semua perintah SQL untuk membangun ulang database.</p>
+<h3 id="backup-beberapa-database">Backup Beberapa Database <a href="#backup-beberapa-database" class="anchor" aria-hidden="true">#</a></h3>
+<pre><code class="language-bash">mysqldump -u root -p --databases toko_online db_lain &gt; backup_gabungan.sql
+</code></pre>
+<p>Opsi <code>--databases</code> menambahkan perintah <code>CREATE DATABASE</code> dan <code>USE</code> ke file backup.</p>
+<h3 id="backup-semua-database">Backup Semua Database <a href="#backup-semua-database" class="anchor" aria-hidden="true">#</a></h3>
+<pre><code class="language-bash">mysqldump -u root -p --all-databases &gt; semua_database.sql
+</code></pre>
+<blockquote>
+<p>⚠️ <strong>Peringatan:</strong> Backup semua database mencakup database sistem (<code>mysql</code>, <code>information_schema</code>, dll.). Hati-hati saat restore — bisa menimpa user dan privilege.</p>
+</blockquote>
+<h3 id="backup-satu-tabel">Backup Satu Tabel <a href="#backup-satu-tabel" class="anchor" aria-hidden="true">#</a></h3>
+<pre><code class="language-bash">mysqldump -u root -p toko_online pelanggan &gt; pelanggan_backup.sql
+</code></pre>
+<h3 id="backup-beberapa-tabel">Backup Beberapa Tabel <a href="#backup-beberapa-tabel" class="anchor" aria-hidden="true">#</a></h3>
+<pre><code class="language-bash">mysqldump -u root -p toko_online pelanggan produk pesanan &gt; sebagian_backup.sql
+</code></pre>
+<h3 id="opsi-penting-mysqldump">Opsi Penting <code>mysqldump</code> <a href="#opsi-penting-mysqldump" class="anchor" aria-hidden="true">#</a></h3>
+<table>
+<thead>
+<tr>
+<th>Opsi</th>
+<th>Fungsi</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>--single-transaction</code></td>
+<td>Backup konsisten untuk InnoDB tanpa mengunci tabel</td>
+</tr>
+<tr>
+<td><code>--quick</code></td>
+<td>Mengambil baris satu per satu, hemat memori</td>
+</tr>
+<tr>
+<td><code>--lock-tables=false</code></td>
+<td>Tidak mengunci tabel (gunakan dengan <code>--single-transaction</code>)</td>
+</tr>
+<tr>
+<td><code>--routines</code></td>
+<td>Sertakan stored procedure dan function</td>
+</tr>
+<tr>
+<td><code>--triggers</code></td>
+<td>Sertakan trigger (default aktif)</td>
+</tr>
+<tr>
+<td><code>--events</code></td>
+<td>Sertakan event scheduler</td>
+</tr>
+<tr>
+<td><code>--no-data</code></td>
+<td>Backup struktur saja, tanpa data</td>
+</tr>
+<tr>
+<td><code>--no-create-info</code></td>
+<td>Backup data saja, tanpa <code>CREATE TABLE</code></td>
+</tr>
+<tr>
+<td><code>--compress</code></td>
+<td>Kompres data saat transfer</td>
+</tr>
+<tr>
+<td><code>--where=&quot;kondisi&quot;</code></td>
+<td>Backup baris tertentu saja</td>
+</tr>
+<tr>
+<td><code>--ignore-table=db.tabel</code></td>
+<td>Lewati tabel tertentu</td>
+</tr>
+</tbody>
+</table>
+<h3 id="contoh-backup-lengkap-direkomendasikan">Contoh Backup Lengkap (Direkomendasikan) <a href="#contoh-backup-lengkap-direkomendasikan" class="anchor" aria-hidden="true">#</a></h3>
+<pre><code class="language-bash">mysqldump -u root -p \
+  --single-transaction \
+  --quick \
+  --routines \
+  --triggers \
+  --events \
+  --set-gtid-purged=OFF \
+  toko_online &gt; toko_online_backup.sql
+</code></pre>
+<p>Penjelasan:</p>
+<ul>
+<li><code>--single-transaction</code> — konsisten untuk InnoDB, tidak mengunci tabel.</li>
+<li><code>--quick</code> — hemat memori untuk tabel besar.</li>
+<li><code>--routines --triggers --events</code> — sertakan objek-objek database.</li>
+<li><code>--set-gtid-purged=OFF</code> — hindari peringatan GTID saat restore di server lain.</li>
+</ul>
+<h3 id="backup-terkompresi">Backup Terkompresi <a href="#backup-terkompresi" class="anchor" aria-hidden="true">#</a></h3>
+<pre><code class="language-bash">mysqldump -u root -p toko_online | gzip &gt; toko_online_backup.sql.gz
+</code></pre>
+<p>Atau dengan <code>pigz</code> (paralel, lebih cepat):</p>
+<pre><code class="language-bash">mysqldump -u root -p toko_online | pigz &gt; toko_online_backup.sql.gz
+</code></pre>
+<h3 id="backup-hanya-struktur">Backup Hanya Struktur <a href="#backup-hanya-struktur" class="anchor" aria-hidden="true">#</a></h3>
+<pre><code class="language-bash">mysqldump -u root -p --no-data toko_online &gt; toko_online_schema.sql
+</code></pre>
+<p>Berguna untuk versioning skema di Git.</p>
+<h3 id="backup-hanya-data">Backup Hanya Data <a href="#backup-hanya-data" class="anchor" aria-hidden="true">#</a></h3>
+<pre><code class="language-bash">mysqldump -u root -p --no-create-info toko_online &gt; toko_online_data.sql
+</code></pre>
+<h3 id="backup-dengan-kondisi">Backup dengan Kondisi <a href="#backup-dengan-kondisi" class="anchor" aria-hidden="true">#</a></h3>
+<pre><code class="language-bash">mysqldump -u root -p toko_online pesanan \
+  --where=&quot;dibuat_pada &gt;= '2022-01-01'&quot; &gt; pesanan_2022.sql
+</code></pre>
+<p>Hanya backup pesanan tahun 2022.</p>
+<h3 id="backup-tanpa-tabel-tertentu">Backup Tanpa Tabel Tertentu <a href="#backup-tanpa-tabel-tertentu" class="anchor" aria-hidden="true">#</a></h3>
+<pre><code class="language-bash">mysqldump -u root -p toko_online \
+  --ignore-table=toko_online.log_stok \
+  --ignore-table=toko_online.audit_log &gt; toko_online_backup.sql
+</code></pre>
+<hr>
+<h2 id="restore-logis">Restore Logis <a href="#restore-logis" class="anchor" aria-hidden="true">#</a></h2>
+<h3 id="restore-satu-database">Restore Satu Database <a href="#restore-satu-database" class="anchor" aria-hidden="true">#</a></h3>
+<pre><code class="language-bash">mysql -u root -p toko_online &lt; toko_online_backup.sql
+</code></pre>
+<p>Database <code>toko_online</code> harus sudah ada. Jika belum:</p>
+<pre><code class="language-bash">mysql -u root -p -e &quot;CREATE DATABASE toko_online CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci;&quot;
+mysql -u root -p toko_online &lt; toko_online_backup.sql
+</code></pre>
+<h3 id="restore-dari-backup-terkompresi">Restore dari Backup Terkompresi <a href="#restore-dari-backup-terkompresi" class="anchor" aria-hidden="true">#</a></h3>
+<pre><code class="language-bash">gunzip &lt; toko_online_backup.sql.gz | mysql -u root -p toko_online
+</code></pre>
+<p>Atau dengan <code>zcat</code>:</p>
+<pre><code class="language-bash">zcat toko_online_backup.sql.gz | mysql -u root -p toko_online
+</code></pre>
+<h3 id="restore-backup-dengan---databases">Restore Backup dengan <code>--databases</code> <a href="#restore-backup-dengan---databases" class="anchor" aria-hidden="true">#</a></h3>
+<p>Jika backup dibuat dengan <code>--databases</code>, file sudah berisi <code>CREATE DATABASE</code> dan <code>USE</code>:</p>
+<pre><code class="language-bash">mysql -u root -p &lt; backup_gabungan.sql
+</code></pre>
+<h3 id="restore-satu-tabel">Restore Satu Tabel <a href="#restore-satu-tabel" class="anchor" aria-hidden="true">#</a></h3>
+<pre><code class="language-bash">mysql -u root -p toko_online &lt; pelanggan_backup.sql
+</code></pre>
+<h3 id="restore-ke-database-berbeda">Restore ke Database Berbeda <a href="#restore-ke-database-berbeda" class="anchor" aria-hidden="true">#</a></h3>
+<pre><code class="language-bash">mysql -u root -p toko_online_test &lt; toko_online_backup.sql
+</code></pre>
+<p>Berguna untuk menguji backup tanpa menyentuh database produksi.</p>
+<h3 id="verifikasi-setelah-restore">Verifikasi Setelah Restore <a href="#verifikasi-setelah-restore" class="anchor" aria-hidden="true">#</a></h3>
+<pre><code class="language-sql">USE toko_online;
+SHOW TABLES;
+SELECT COUNT(*) FROM pelanggan;
+SELECT COUNT(*) FROM pesanan;
+</code></pre>
+<p>Bandingkan jumlah baris dengan database asli.</p>
+<hr>
+<h2 id="backup-fisik">Backup Fisik <a href="#backup-fisik" class="anchor" aria-hidden="true">#</a></h2>
+<h3 id="percona-xtrabackup-rekomendasi-untuk-innodb">Percona XtraBackup (Rekomendasi untuk InnoDB) <a href="#percona-xtrabackup-rekomendasi-untuk-innodb" class="anchor" aria-hidden="true">#</a></h3>
+<p><code>XtraBackup</code> adalah alat open source populer untuk backup fisik MySQL/Percona Server. Mendukung <strong>hot backup</strong> (tanpa menghentikan server) untuk InnoDB.</p>
+<p><strong>Instalasi (Ubuntu):</strong></p>
+<pre><code class="language-bash">sudo apt install percona-xtrabackup-80
+</code></pre>
+<p><strong>Backup:</strong></p>
+<pre><code class="language-bash">xtrabackup --backup --target-dir=/backup/mysql/full --user=root --password=...
+</code></pre>
+<p><strong>Prepare (menerapkan log):</strong></p>
+<pre><code class="language-bash">xtrabackup --prepare --target-dir=/backup/mysql/full
+</code></pre>
+<p><strong>Restore:</strong></p>
+<pre><code class="language-bash">sudo systemctl stop mysql
+sudo rsync -avrP /backup/mysql/full/ /var/lib/mysql/
+sudo chown -R mysql:mysql /var/lib/mysql
+sudo systemctl start mysql
+</code></pre>
+<blockquote>
+<p><strong>Catatan:</strong> XtraBackup memerlukan versi yang sesuai dengan versi MySQL. Periksa kompatibilitas sebelum menggunakannya.</p>
+</blockquote>
+<h3 id="file-level-backup-server-berhenti">File-Level Backup (Server Berhenti) <a href="#file-level-backup-server-berhenti" class="anchor" aria-hidden="true">#</a></h3>
+<p>Jika Anda bisa menghentikan server sementara:</p>
+<pre><code class="language-bash">sudo systemctl stop mysql
+sudo rsync -av /var/lib/mysql/ /backup/mysql/cold/
+sudo systemctl start mysql
+</code></pre>
+<p>Cara ini sederhana tetapi memerlukan <strong>downtime</strong>.</p>
+<h3 id="snapshot-lvm-zfs-cloud">Snapshot (LVM, ZFS, Cloud) <a href="#snapshot-lvm-zfs-cloud" class="anchor" aria-hidden="true">#</a></h3>
+<p>Jika filesystem mendukung snapshot:</p>
+<pre><code class="language-bash">sudo lvcreate --size 10G --snapshot --name mysql_snap /dev/vg0/mysql_lv
+</code></pre>
+<p>Snapshot bisa di-mount dan di-backup tanpa menghentikan server.</p>
+<hr>
+<h2 id="backup-incremental-dengan-binary-log">Backup Incremental dengan Binary Log <a href="#backup-incremental-dengan-binary-log" class="anchor" aria-hidden="true">#</a></h2>
+<p><strong>Binary log</strong> (<code>binlog</code>) mencatat semua perubahan data. Dengan kombinasi <strong>full backup + binlog</strong>, Anda bisa melakukan <strong>point-in-time recovery</strong> (PITR) — memulihkan database ke detik tertentu.</p>
+<h3 id="mengaktifkan-binary-log">Mengaktifkan Binary Log <a href="#mengaktifkan-binary-log" class="anchor" aria-hidden="true">#</a></h3>
+<p>Edit <code>my.cnf</code>:</p>
+<pre><code class="language-ini">[mysqld]
+log_bin = /var/log/mysql/mysql-bin
+binlog_format = ROW
+expire_logs_days = 7
+</code></pre>
+<p>Restart MySQL:</p>
+<pre><code class="language-bash">sudo systemctl restart mysql
+</code></pre>
+<p>Verifikasi:</p>
+<pre><code class="language-sql">SHOW VARIABLES LIKE 'log_bin';
+SHOW BINARY LOGS;
+</code></pre>
+<h3 id="point-in-time-recovery">Point-in-Time Recovery <a href="#point-in-time-recovery" class="anchor" aria-hidden="true">#</a></h3>
+<p>Skenario: backup penuh dilakukan pukul 02:00, lalu terjadi kesalahan <code>DELETE</code> pukul 10:30. Kita ingin memulihkan ke pukul 10:29.</p>
+<p><strong>1. Restore full backup:</strong></p>
+<pre><code class="language-bash">mysql -u root -p toko_online &lt; full_backup_0200.sql
+</code></pre>
+<p><strong>2. Terapkan binlog hingga pukul 10:29:</strong></p>
+<pre><code class="language-bash">mysqlbinlog --stop-datetime=&quot;2022-12-17 10:29:00&quot; \
+  /var/log/mysql/mysql-bin.000001 | mysql -u root -p toko_online
+</code></pre>
+<p>Database kini berada di kondisi pukul 10:29, sebelum <code>DELETE</code> yang merusak.</p>
+<h3 id="melihat-isi-binary-log">Melihat Isi Binary Log <a href="#melihat-isi-binary-log" class="anchor" aria-hidden="true">#</a></h3>
+<pre><code class="language-bash">mysqlbinlog /var/log/mysql/mysql-bin.000001 | less
+</code></pre>
+<p>Atau via SQL:</p>
+<pre><code class="language-sql">SHOW BINLOG EVENTS IN 'mysql-bin.000001' LIMIT 20;
+</code></pre>
+<hr>
+<h2 id="backup-otomatis-dengan-cron">Backup Otomatis dengan Cron <a href="#backup-otomatis-dengan-cron" class="anchor" aria-hidden="true">#</a></h2>
+<p>Backup manual tidak cukup — harus <strong>otomatis</strong> dan <strong>terjadwal</strong>.</p>
+<h3 id="skrip-backup-sederhana">Skrip Backup Sederhana <a href="#skrip-backup-sederhana" class="anchor" aria-hidden="true">#</a></h3>
+<p>Buat file <code>/usr/local/bin/backup_mysql.sh</code>:</p>
+<pre><code class="language-bash">#!/bin/bash
+
+# Konfigurasi
+DB_USER=&quot;backup_user&quot;
+DB_PASS=&quot;BackupP@ss!2022&quot;
+DB_NAME=&quot;toko_online&quot;
+BACKUP_DIR=&quot;/backup/mysql&quot;
+DATE=$(date +%Y-%m-%d_%H-%M-%S)
+FILE=&quot;$BACKUP_DIR/${DB_NAME}_${DATE}.sql.gz&quot;
+RETENTION_DAYS=7
+
+# Buat direktori jika belum ada
+mkdir -p &quot;$BACKUP_DIR&quot;
+
+# Backup
+mysqldump -u &quot;$DB_USER&quot; -p&quot;$DB_PASS&quot; \
+  --single-transaction \
+  --quick \
+  --routines \
+  --triggers \
+  --events \
+  &quot;$DB_NAME&quot; | gzip &gt; &quot;$FILE&quot;
+
+# Cek hasil
+if [ $? -eq 0 ]; then
+  echo &quot;[$(date)] Backup berhasil: $FILE&quot;
+else
+  echo &quot;[$(date)] Backup GAGAL!&quot; &gt;&amp;2
+  exit 1
+fi
+
+# Hapus backup lama
+find &quot;$BACKUP_DIR&quot; -name &quot;${DB_NAME}_*.sql.gz&quot; -mtime +$RETENTION_DAYS -delete
+
+echo &quot;[$(date)] Backup selesai.&quot;
+</code></pre>
+<p>Beri izin eksekusi:</p>
+<pre><code class="language-bash">sudo chmod +x /usr/local/bin/backup_mysql.sh
+</code></pre>
+<h3 id="jadwalkan-dengan-cron">Jadwalkan dengan Cron <a href="#jadwalkan-dengan-cron" class="anchor" aria-hidden="true">#</a></h3>
+<p>Edit crontab:</p>
+<pre><code class="language-bash">crontab -e
+</code></pre>
+<p>Tambahkan baris berikut untuk backup setiap hari pukul 02:00:</p>
+<pre><code>0 2 * * * /usr/local/bin/backup_mysql.sh &gt;&gt; /var/log/backup_mysql.log 2&gt;&amp;1
+</code></pre>
+<h3 id="backup-user-khusus">Backup User Khusus <a href="#backup-user-khusus" class="anchor" aria-hidden="true">#</a></h3>
+<p>Buat user khusus backup dengan privilege minimal:</p>
+<pre><code class="language-sql">CREATE USER 'backup_user'@'localhost' IDENTIFIED BY 'BackupP@ss!2022';
+GRANT SELECT, LOCK TABLES, SHOW VIEW, EVENT, TRIGGER ON *.* TO 'backup_user'@'localhost';
+GRANT RELOAD ON *.* TO 'backup_user'@'localhost';
+</code></pre>
+<hr>
+<h2 id="strategi-backup-yang-andal">Strategi Backup yang Andal <a href="#strategi-backup-yang-andal" class="anchor" aria-hidden="true">#</a></h2>
+<h3 id="aturan-3-2-1">Aturan 3-2-1 <a href="#aturan-3-2-1" class="anchor" aria-hidden="true">#</a></h3>
+<ul>
+<li><strong>3</strong> salinan data (asli + 2 backup).</li>
+<li><strong>2</strong> media berbeda (misalnya disk lokal + cloud).</li>
+<li><strong>1</strong> salinan di lokasi off-site (cloud atau remote server).</li>
+</ul>
+<h3 id="contoh-jadwal">Contoh Jadwal <a href="#contoh-jadwal" class="anchor" aria-hidden="true">#</a></h3>
+<table>
+<thead>
+<tr>
+<th>Frekuensi</th>
+<th>Jenis</th>
+<th>Retensi</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Setiap hari</td>
+<td>Full logical backup (<code>mysqldump</code>)</td>
+<td>7 hari</td>
+</tr>
+<tr>
+<td>Setiap minggu</td>
+<td>Full physical backup (XtraBackup)</td>
+<td>4 minggu</td>
+</tr>
+<tr>
+<td>Setiap bulan</td>
+<td>Full backup + arsip ke cloud</td>
+<td>12 bulan</td>
+</tr>
+<tr>
+<td>Berkelanjutan</td>
+<td>Binary log</td>
+<td>7 hari</td>
+</tr>
+</tbody>
+</table>
+<h3 id="uji-restore-secara-berkala">Uji Restore Secara Berkala <a href="#uji-restore-secara-berkala" class="anchor" aria-hidden="true">#</a></h3>
+<p><strong>Backup yang tidak pernah diuji restore bukanlah backup.</strong> Lakukan uji restore minimal sebulan sekali ke server percobaan:</p>
+<ol>
+<li>Restore ke database <code>toko_online_test</code>.</li>
+<li>Jalankan query verifikasi (jumlah baris, cek integritas).</li>
+<li>Bandingkan dengan produksi.</li>
+</ol>
+<h3 id="monitoring-backup">Monitoring Backup <a href="#monitoring-backup" class="anchor" aria-hidden="true">#</a></h3>
+<ul>
+<li>Kirim notifikasi (email/Slack) jika backup <strong>gagal</strong>.</li>
+<li>Pantau ukuran file backup — lonjakan atau penurunan drastis bisa menandakan masalah.</li>
+<li>Cek log backup secara berkala.</li>
+</ul>
+<h3 id="enkripsi-backup">Enkripsi Backup <a href="#enkripsi-backup" class="anchor" aria-hidden="true">#</a></h3>
+<p>Backup berisi data sensitif. Enkripsi file backup:</p>
+<pre><code class="language-bash">mysqldump -u root -p toko_online | gzip | \
+  openssl enc -aes-256-cbc -salt -out toko_online_backup.sql.gz.enc
+</code></pre>
+<p>Restore:</p>
+<pre><code class="language-bash">openssl enc -d -aes-256-cbc -in toko_online_backup.sql.gz.enc | \
+  gunzip | mysql -u root -p toko_online
+</code></pre>
+<p>Simpan passphrase enkripsi <strong>terpisah</strong> dari file backup.</p>
+<hr>
+<h2 id="alat-backup-alternatif">Alat Backup Alternatif <a href="#alat-backup-alternatif" class="anchor" aria-hidden="true">#</a></h2>
+<table>
+<thead>
+<tr>
+<th>Alat</th>
+<th>Jenis</th>
+<th>Kelebihan</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>mysqldump</code></td>
+<td>Logis</td>
+<td>Bawaan MySQL, portabel</td>
+</tr>
+<tr>
+<td><code>mysqlpump</code></td>
+<td>Logis</td>
+<td>Paralel, lebih cepat dari <code>mysqldump</code> (deprecated di MySQL 8.0.34+)</td>
+</tr>
+<tr>
+<td><code>Percona XtraBackup</code></td>
+<td>Fisik</td>
+<td>Hot backup, open source</td>
+</tr>
+<tr>
+<td><code>mysqlbackup</code></td>
+<td>Fisik</td>
+<td>Fitur lengkap (MySQL Enterprise)</td>
+</tr>
+<tr>
+<td><code>mydumper</code> / <code>myloader</code></td>
+<td>Logis</td>
+<td>Paralel, cepat untuk database besar</td>
+</tr>
+<tr>
+<td>Cloud snapshot</td>
+<td>Fisik</td>
+<td>Cepat, terintegrasi dengan infrastruktur</td>
+</tr>
+</tbody>
+</table>
+<hr>
+<h2 id="ringkasan">Ringkasan <a href="#ringkasan" class="anchor" aria-hidden="true">#</a></h2>
+<table>
+<thead>
+<tr>
+<th>Kebutuhan</th>
+<th>Alat / Perintah</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Backup logis satu database</td>
+<td><code>mysqldump -u root -p db &gt; file.sql</code></td>
+</tr>
+<tr>
+<td>Backup terkompresi</td>
+<td><code>mysqldump ... | gzip &gt; file.sql.gz</code></td>
+</tr>
+<tr>
+<td>Restore</td>
+<td><code>mysql -u root -p db &lt; file.sql</code></td>
+</tr>
+<tr>
+<td>Restore terkompresi</td>
+<td><code>zcat file.sql.gz | mysql -u root -p db</code></td>
+</tr>
+<tr>
+<td>Backup fisik hot</td>
+<td><code>xtrabackup --backup</code></td>
+</tr>
+<tr>
+<td>Point-in-time recovery</td>
+<td>Full backup + <code>mysqlbinlog</code></td>
+</tr>
+<tr>
+<td>Backup otomatis</td>
+<td>Cron + skrip backup</td>
+</tr>
+<tr>
+<td>Backup terenkripsi</td>
+<td><code>openssl enc</code></td>
+</tr>
+</tbody>
+</table>
+<p>Poin penting:</p>
+<ul>
+<li><strong>Uji restore</strong> secara berkala — backup yang tidak diuji bukan backup.</li>
+<li>Gunakan <code>--single-transaction</code> untuk backup InnoDB yang konsisten tanpa mengunci tabel.</li>
+<li>Terapkan aturan <strong>3-2-1</strong> untuk redundansi.</li>
+<li>Aktifkan <strong>binary log</strong> untuk point-in-time recovery.</li>
+<li>Enkripsi backup yang berisi data sensitif.</li>
+<li>Simpan backup di lokasi <strong>terpisah</strong> dari server produksi.</li>
+</ul>
+<p>Pada artikel berikutnya, kita akan membahas <strong>Transaksi &amp; ACID</strong> — memastikan integritas data dalam operasi kompleks.</p>
+
+			<div class="page-footer-meta d-flex flex-column flex-md-row justify-content-between">
+				</div>
+			<div class="docs-navigation d-flex justify-content-between">
+	
+	<a href="/mysql/tutorial/11-user-privilege/">
+			<div class="card my-1">
+				<div class="card-body py-2">
+					&larr; Manajemen User &amp; Hak Akses
+				</div>
+			</div>
+		</a>
+	<a class="ms-auto" href="/mysql/tutorial/13-transaksi-acid/">
+			<div class="card my-1">
+				<div class="card-body py-2">
+					Transaksi &amp; ACID &rarr;
+				</div>
+			</div>
+		</a>
+	</div>
+
+			
+		</main>
+	</div>
+
+      </div>
+    </div>
+    
+    
+    <footer class="footer text-muted">
+  <div class="container-xxl">
+    <div class="row">
+      <div class="col-lg-8 order-last order-lg-first">
+        <ul class="list-inline">
+          <li class="list-inline-item">Powered by <a class="text-muted" href="https://gohugo.io/">Hugo</a> and <a class="text-muted" href="https://github.com/">Github</a></li>
+        </ul>
+      </div>
+      <div class="col-lg-8 order-first order-lg-last text-lg-end">
+        <ul class="list-inline">
+          </ul>
+      </div>
+    </div>
+  </div>
+</footer>
+    
+
+<script src="/js/bootstrap.min.650aeec64c81d69d4c0850fc73c93da3f0330cec0a27772feed7f90f60baa5f47f1c45687d71914bdafd1c4e860d40f6dc08ede27a2f08431ff929c9a2d24621.js" integrity="sha512-ZQruxkyB1p1MCFD8c8k9o/AzDOwKJ3cv7tf5D2C6pfR/HEVofXGRS9r9HE6GDUD23Ajt4novCEMf&#43;SnJotJGIQ==" crossorigin="anonymous" defer></script>
+  <script src="/js/highlight.min.ec234bd8a5f487aaffe50a89f17b14501b1bb65633cf177cffd4cb84702dd7030edc08712dceb8dc27ac7e54b53240a08bf0b8d951572ee582bcdbbd06a48a7b.js" integrity="sha512-7CNL2KX0h6r/5QqJ8XsUUBsbtlYzzxd8/9TLhHAt1wMO3AhxLc643CesflS1MkCgi/C42VFXLuWCvNu9BqSKew==" crossorigin="anonymous" defer></script>
+  <script src="/main.min.cd1e5e6b40065b3f7f7fd8548a528fac67019754eda0f37b9918d02d154fc9ef6a22742f6513b0572ad9163152e151ec36221fbeafbecd7759c3dab1f19b64b9.js" integrity="sha512-zR5ea0AGWz9/f9hUilKPrGcBl1TtoPN7mRjQLRVPye9qInQvZROwVyrZFjFS4VHsNiIfvq&#43;&#43;zXdZw9qx8ZtkuQ==" crossorigin="anonymous" defer></script>
+  <script src="https://kaban.my.id/index.min.f90d3536216d10b8ecf574dc8d57b0d2bd45aab605bdc69b1f7697f3476ebdb5db6a63a3f6955150f2c0b02e66fa1adfbf4c5b50c540f663f829ad8bcd5807c6.js" integrity="sha512-&#43;Q01NiFtELjs9XTcjVew0r1FqrYFvcabH3aX80duvbXbamOj9pVRUPLAsC5m&#43;hrfv0xbUMVA9mP4Ka2LzVgHxg==" crossorigin="anonymous" defer></script>
+  
+    <div class="d-flex fixed-bottom pb-4 pb-lg-5 pe-4 pe-lg-5">
+      <a id="toTop" href="#" class="btn btn-outline-primary rounded-circle ms-auto p-2"><span class="visually-hidden">Top</span><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-chevron-up"><polyline points="18 15 12 9 6 15"></polyline></svg></a>
+    </div>
+    
+  </body>
+</html>

@@ -1,0 +1,1236 @@
+<!doctype html>
+<html lang="en-US">
+  <head>
+  <meta charset="utf-8">
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <link rel="preload" as="font" href="https://kaban.my.id/fonts/vendor/jost/jost-v4-latin-regular.woff2" type="font/woff2" crossorigin>
+<link rel="preload" as="font" href="https://kaban.my.id/fonts/vendor/jost/jost-v4-latin-500.woff2" type="font/woff2" crossorigin>
+<link rel="preload" as="font" href="https://kaban.my.id/fonts/vendor/jost/jost-v4-latin-700.woff2" type="font/woff2" crossorigin>
+
+  <script>(()=>{var t=window.matchMedia&&window.matchMedia("(prefers-color-scheme: dark)").matches,e=localStorage.getItem("theme");t&&e===null&&(localStorage.setItem("theme","dark"),document.documentElement.setAttribute("data-dark-mode","")),t&&e==="dark"&&document.documentElement.setAttribute("data-dark-mode",""),e==="dark"&&document.documentElement.setAttribute("data-dark-mode","")})()</script>
+
+  <link rel="stylesheet" href="https://kaban.my.id/main.9f87974e4c1caf828d7f6300ecd98102083d1763683fe424f26c4c7b80fa72a094aa3c62fe333b5026c22ff50b82f74220d559e730c1f032fd8bcec957ac2bb4.css" integrity="sha512-n4eXTkwcr4KNf2MA7NmBAgg9F2NoP&#43;Qk8mxMe4D6cqCUqjxi/jM7UCbCL/ULgvdCINVZ5zDB8DL9i87JV6wrtA==" crossorigin="anonymous">
+<noscript><style>img.lazyload { display: none; }</style></noscript>
+  <meta name="robots" content="index, follow">
+    <meta name="googlebot" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1">
+    <meta name="bingbot" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1">
+  <title>Transaksi &amp; ACID - Roberto Kaban Blog&#39;s</title>
+<meta name="description" content="Panduan lengkap transaksi di MySQL: START TRANSACTION, COMMIT, ROLLBACK, savepoint, isolation level, dan ACID.">
+<link rel="canonical" href="https://kaban.my.id/mysql/tutorial/13-transaksi-acid/">
+<meta property="og:locale" content="en_US">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Transaksi &amp; ACID">
+<meta property="og:description" content="Panduan lengkap transaksi di MySQL: START TRANSACTION, COMMIT, ROLLBACK, savepoint, isolation level, dan ACID.">
+<meta property="og:url" content="https://kaban.my.id/mysql/tutorial/13-transaksi-acid/">
+<meta property="og:site_name" content="Roberto Kaban Blog&#39;s">
+<meta property="article:published_time" content="2022-12-18T08:00:00+00:00">
+  <meta property="article:modified_time" content="2022-12-18T08:00:00+00:00">
+  
+  <meta property="og:image" content="https://kaban.my.id/doks.png"/>
+      <meta property="og:image:alt" content="Roberto Kaban Blog&#39;s">
+    
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:site" content="@robertokaban">
+<meta name="twitter:creator" content="@robertokaban">
+<meta name="twitter:title" content="Transaksi &amp; ACID">
+<meta name="twitter:description" content="Panduan lengkap transaksi di MySQL: START TRANSACTION, COMMIT, ROLLBACK, savepoint, isolation level, dan ACID.">
+<meta name="twitter:image" content="https://kaban.my.id/doks.png">
+    <meta name="twitter:image:alt" content="Transaksi &amp; ACID">
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "Person",
+        "@id": "https://kaban.my.id/#/schema/person/1",
+      "name": "BlogRobertoKaban",
+      "url": "https://kaban.my.id/",
+      "sameAs": [
+        "https://twitter.com/robertokaban"
+        , "https://github.com/robertokaban"
+        ],
+      "image": {
+          "@type": "ImageObject",
+          "@id": "https://kaban.my.id/#/schema/image/1",
+          "url": "https://kaban.my.id/doks.png",
+          "width":  1280 ,
+          "height":  640 ,
+          "caption": "BlogRobertoKaban"
+        }
+      },
+    {
+      "@type": "WebSite",
+      "@id": "https://kaban.my.id/#/schema/website/1",
+      "url": "https://kaban.my.id/",
+      "name": "Roberto Kaban Blog\u0027s",
+      "description": "Hanya sebuah catatan kecil untuk hal yang tidak ingin dilupakan.",
+      "publisher": {
+          "@id": "https://kaban.my.id/#/schema/person/1"
+        }
+      },
+    {
+      "@type": "WebPage",
+      "@id": "https://kaban.my.id/mysql/tutorial/13-transaksi-acid/",
+      "url": "https://kaban.my.id/mysql/tutorial/13-transaksi-acid/",
+      "name": "Transaksi \u0026 ACID",
+      "description": "Panduan lengkap transaksi di MySQL: START TRANSACTION, COMMIT, ROLLBACK, savepoint, isolation level, dan ACID.",
+      "isPartOf": {
+        "@id": "https://kaban.my.id/#/schema/website/1"
+      },
+      "about": {
+          "@id": "https://kaban.my.id/#/schema/person/1"
+        },
+      "datePublished": "2022-12-18T08:00:00CET",
+      "dateModified": "2022-12-18T08:00:00CET",
+      "breadcrumb": {
+        "@id": "https://kaban.my.id/mysql/tutorial/13-transaksi-acid/#/schema/breadcrumb/1"
+      },
+      "primaryImageOfPage": {
+        "@id": "https://kaban.my.id/mysql/tutorial/13-transaksi-acid/#/schema/image/2"
+      },
+      "inLanguage": "en-US",
+      "potentialAction": [{
+        "@type": "ReadAction", "target": ["https://kaban.my.id/mysql/tutorial/13-transaksi-acid/"]
+      }]
+    },
+    {
+      "@type": "BreadcrumbList",
+      "@id": "https://kaban.my.id/mysql/tutorial/13-transaksi-acid/#/schema/breadcrumb/1",
+      "name": "Breadcrumbs",
+      "itemListElement": [{
+        "@type": "ListItem",
+        "position":  1 ,
+        "item": {
+          "@type": "WebPage",
+          "@id": "https://kaban.my.id/",
+          "url": "https://kaban.my.id/",
+          "name": "Home"
+          }
+        },{
+        "@type": "ListItem",
+        "position":  2 ,
+        "item": {
+          "@type": "WebPage",
+          "@id": "https://kaban.my.id/mysql/",
+          "url": "https://kaban.my.id/mysql/",
+          "name": "Mysql"
+          }
+        },{
+        "@type": "ListItem",
+        "position":  3 ,
+        "item": {
+          "@type": "WebPage",
+          "@id": "https://kaban.my.id/mysql/tutorial/",
+          "url": "https://kaban.my.id/mysql/tutorial/",
+          "name": "Tutorial"
+          }
+        },{
+        "@type": "ListItem",
+        "position":  4 ,
+        "item": {
+          "@id": "https://kaban.my.id/mysql/tutorial/13-transaksi-acid/"
+          }
+        }]
+    },
+
+    {
+      "@context": "https://schema.org",
+      "@graph": [
+        {
+          "@type": "ImageObject",
+          "@id": "https://kaban.my.id/mysql/tutorial/13-transaksi-acid/#/schema/image/2",
+          "url": "https://kaban.my.id/doks.png",
+          "contentUrl": "https://kaban.my.id/doks.png",
+          "caption": "Transaksi \u0026 ACID"
+        }
+      ]
+    }
+
+  ]
+}
+</script>
+
+  <meta name="theme-color" content="#fff">
+<link rel="icon" href="https://kaban.my.id/favicon.ico" sizes="any">
+<link rel="icon" type="image/svg+xml" href="https://kaban.my.id/favicon.svg">
+<link rel="apple-touch-icon" sizes="180x180" href="https://kaban.my.id/apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="32x32" href="https://kaban.my.id/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="https://kaban.my.id/favicon-16x16.png">
+<link rel="manifest" crossorigin="use-credentials" href="https://kaban.my.id/site.webmanifest">
+
+  
+
+
+  
+  
+  
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-60VSDZFQR5"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-60VSDZFQR5');
+</script>
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6664512614760985"
+     crossorigin="anonymous"></script>
+</head>
+
+  <body class="mysql single">
+    <div class="sticky-top">
+<div class="header-bar"></div>
+
+<header class="navbar navbar-expand-lg navbar-light doks-navbar">
+  <nav class="container-xxl flex-wrap flex-lg-nowrap" aria-label="Main navigation">
+
+    <a class="navbar-brand order-0" href="/" aria-label="Roberto Kaban Blog&#39;s">
+      Roberto Kaban Blog&#39;s
+    </a>
+
+    <button class="btn btn-menu order-2 d-block d-lg-none" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasDoks" aria-controls="offcanvasDoks" aria-label="Open main menu">
+      <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-menu"><line x1="3" y1="12" x2="21" y2="12"></line><line x1="3" y1="6" x2="21" y2="6"></line><line x1="3" y1="18" x2="21" y2="18"></line></svg>
+    </button>
+    <div class="offcanvas offcanvas-end border-0 py-lg-1" tabindex="-1" id="offcanvasDoks" data-bs-backdrop="true" aria-labelledby="offcanvasDoksLabel">
+      <div class="header-bar d-lg-none"></div>
+      <div class="offcanvas-header d-lg-none">
+        <h2 class="h5 offcanvas-title ps-2" id="offcanvasDoksLabel"><a class="text-dark" href="/">Roberto Kaban Blog&#39;s</a></h2>
+        <button type="button" class="btn-close text-reset me-2" data-bs-dismiss="offcanvas" aria-label="Close main menu"></button>
+      </div>
+      <div class="offcanvas-body p-4 p-lg-0">
+        <ul class="nav flex-column flex-lg-row align-items-lg-center mt-2 mt-lg-0 ms-lg-2 me-lg-auto">
+              <li class="nav-item">
+                <a class="nav-link ps-0 py-1" href="/about/">About Me</a>
+              </li>
+            
+          
+              <li class="nav-item">
+                <a class="nav-link ps-0 py-1" href="/contact/">Contact</a>
+              </li>
+            
+          
+              <li class="nav-item">
+                <a class="nav-link ps-0 py-1" href="/artikel/">Artikel</a>
+              </li>
+            
+          
+              <li class="nav-item">
+                <a class="nav-link ps-0 py-1" href="/coretanku/">Coretanku</a>
+              </li>
+            
+          </ul>
+
+        <hr class="text-black-50 my-4 d-lg-none">
+        <form class="doks-search position-relative flex-grow-1 ms-lg-auto me-lg-2">
+          <input id="search" class="form-control is-search" type="search" placeholder="Cari di blog ini..." aria-label="Cari di blog ini..." autocomplete="off">
+          <div id="suggestions" class="shadow bg-white rounded d-none"></div>
+        </form>
+        <hr class="text-black-50 my-4 d-lg-none">
+        <ul class="nav flex-column flex-lg-row">
+          <li class="nav-item">
+              <a class="nav-link social-link" href="https://github.com/robertokaban"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-github"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path></svg><small class="ms-2 d-lg-none">GitHub</small></a>
+            </li>
+          <li class="nav-item">
+              <a class="nav-link social-link" href="https://facebook.com/roberto.kaban"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-facebook"><path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"></path></svg><small class="ms-2 d-lg-none">Facebook</small></a>
+            </li>
+          <li class="nav-item">
+              <a class="nav-link social-link" href="https://twitter.com/robertokaban"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-twitter"><path d="M23 3a10.9 10.9 0 0 1-3.14 1.53 4.48 4.48 0 0 0-7.86 3v1A10.66 10.66 0 0 1 3 4s-4 9 5 13a11.64 11.64 0 0 1-7 2c9 5 20 0 20-11.5a4.5 4.5 0 0 0-.08-.83A7.72 7.72 0 0 0 23 3z"></path></svg><small class="ms-2 d-lg-none">Twitter</small></a>
+            </li>
+          <li class="nav-item">
+              <a class="nav-link social-link" href="https://youtube.com/@robertokaban"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-youtube"><path d="M10,15L15.19,12L10,9V15M21.56,7.17C21.69,7.64 21.78,8.27 21.84,9.07C21.91,9.87 21.94,10.56 21.94,11.16L22,12C22,14.19 21.84,15.8 21.56,16.83C21.31,17.73 20.73,18.31 19.83,18.56C19.36,18.69 18.5,18.78 17.18,18.84C15.88,18.91 14.69,18.94 13.59,18.94L12,19C7.81,19 5.2,18.84 4.17,18.56C3.27,18.31 2.69,17.73 2.44,16.83C2.31,16.36 2.22,15.73 2.16,14.93C2.09,14.13 2.06,13.44 2.06,12.84L2,12C2,9.81 2.16,8.2 2.44,7.17C2.69,6.27 3.27,5.69 4.17,5.44C4.64,5.31 5.5,5.22 6.82,5.16C8.12,5.09 9.31,5.06 10.41,5.06L12,5C16.19,5 18.8,5.16 19.83,5.44C20.73,5.69 21.31,6.27 21.56,7.17Z"></path></svg><small class="ms-2 d-lg-none">Youtube</small></a>
+            </li>
+          </ul>
+
+        
+        <hr class="text-black-50 my-4 d-lg-none">
+        <button id="mode" class="btn btn-link" type="button" aria-label="Toggle user interface mode">
+          <span class="toggle-dark"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-moon"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path></svg></span>
+          <span class="toggle-light"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-sun"><circle cx="12" cy="12" r="5"></circle><line x1="12" y1="1" x2="12" y2="3"></line><line x1="12" y1="21" x2="12" y2="23"></line><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line><line x1="1" y1="12" x2="3" y2="12"></line><line x1="21" y1="12" x2="23" y2="12"></line><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line></svg></span>
+        </button>
+        
+
+        </div>
+    </div>
+  </nav>
+</header>
+
+
+</div>
+
+
+<div class="container-xxl">
+  <aside class="doks-sidebar">
+    <nav id="doks-docs-nav" class="collapse d-lg-none" aria-label="Tertiary navigation">
+      
+<ul class="list-unstyled collapsible-sidebar">
+  
+    
+      
+      <li class="mb-1">
+        <button class="btn btn-toggle align-items-center rounded collapsed" data-bs-toggle="collapse" data-bs-target="#section-dd2f133c64f99bea60c3e743290ec287" aria-expanded="true">
+          Tutorial MySQL
+        </button>
+        <div class="collapse show" id="section-dd2f133c64f99bea60c3e743290ec287">
+          <ul class="btn-toggle-nav list-unstyled fw-normal pb-1 small">
+            
+              
+                
+                <li><a class="docs-link rounded" href="https://kaban.my.id/mysql/tutorial/pengenalan/">Pengenalan MySQL</a></li>
+              
+            
+              
+                
+                <li><a class="docs-link rounded" href="https://kaban.my.id/mysql/tutorial/02-instalasi/">Instalasi dan Konfigurasi MySQL</a></li>
+              
+            
+              
+                
+                <li><a class="docs-link rounded" href="https://kaban.my.id/mysql/tutorial/03-arsitektur/">Mengenal Arsitektur &amp; Komponen MySQL</a></li>
+              
+            
+              
+                
+                <li><a class="docs-link rounded" href="https://kaban.my.id/mysql/tutorial/04-database-table/">Perintah Dasar SQL: Database &amp; Table</a></li>
+              
+            
+              
+                
+                <li><a class="docs-link rounded" href="https://kaban.my.id/mysql/tutorial/05-crud/">Operasi CRUD (Create, Read, Update, Delete)</a></li>
+              
+            
+              
+                
+                <li><a class="docs-link rounded" href="https://kaban.my.id/mysql/tutorial/06-filtering-sorting/">Filtering &amp; Sorting Data</a></li>
+              
+            
+              
+                
+                <li><a class="docs-link rounded" href="https://kaban.my.id/mysql/tutorial/07-agregasi-grouping/">Fungsi Agregasi &amp; Grouping</a></li>
+              
+            
+              
+                
+                <li><a class="docs-link rounded" href="https://kaban.my.id/mysql/tutorial/08-join/">JOIN: Menggabungkan Tabel</a></li>
+              
+            
+              
+                
+                <li><a class="docs-link rounded" href="https://kaban.my.id/mysql/tutorial/09-subquery-union/">Subquery &amp; Union</a></li>
+              
+            
+              
+                
+                <li><a class="docs-link rounded" href="https://kaban.my.id/mysql/tutorial/10-view-index-procedure/">View, Index, dan Stored Procedure</a></li>
+              
+            
+              
+                
+                <li><a class="docs-link rounded" href="https://kaban.my.id/mysql/tutorial/11-user-privilege/">Manajemen User &amp; Hak Akses</a></li>
+              
+            
+              
+                
+                <li><a class="docs-link rounded" href="https://kaban.my.id/mysql/tutorial/12-backup-restore/">Backup &amp; Restore Database</a></li>
+              
+            
+              
+                
+                <li><a class="docs-link rounded active" href="https://kaban.my.id/mysql/tutorial/13-transaksi-acid/">Transaksi &amp; ACID</a></li>
+              
+            
+              
+                
+                <li><a class="docs-link rounded" href="https://kaban.my.id/mysql/tutorial/14-optimasi-performa/">Optimasi Performa MySQL</a></li>
+              
+            
+          </ul>
+        </div>
+      </li>
+    
+  
+</ul>
+
+    </nav>
+  </aside>
+</div>
+
+    <div class="wrap container-xxl" role="document">
+      <div class="content">
+        
+	<div class="row flex-xl-nowrap">
+		<div class="col-lg-5 col-xl-4 docs-sidebar d-none d-lg-block">
+			<nav class="docs-links" aria-label="Main navigation">
+				
+<ul class="list-unstyled collapsible-sidebar">
+  
+    
+      
+      <li class="mb-1">
+        <button class="btn btn-toggle align-items-center rounded collapsed" data-bs-toggle="collapse" data-bs-target="#section-dd2f133c64f99bea60c3e743290ec287" aria-expanded="true">
+          Tutorial MySQL
+        </button>
+        <div class="collapse show" id="section-dd2f133c64f99bea60c3e743290ec287">
+          <ul class="btn-toggle-nav list-unstyled fw-normal pb-1 small">
+            
+              
+                
+                <li><a class="docs-link rounded" href="https://kaban.my.id/mysql/tutorial/pengenalan/">Pengenalan MySQL</a></li>
+              
+            
+              
+                
+                <li><a class="docs-link rounded" href="https://kaban.my.id/mysql/tutorial/02-instalasi/">Instalasi dan Konfigurasi MySQL</a></li>
+              
+            
+              
+                
+                <li><a class="docs-link rounded" href="https://kaban.my.id/mysql/tutorial/03-arsitektur/">Mengenal Arsitektur &amp; Komponen MySQL</a></li>
+              
+            
+              
+                
+                <li><a class="docs-link rounded" href="https://kaban.my.id/mysql/tutorial/04-database-table/">Perintah Dasar SQL: Database &amp; Table</a></li>
+              
+            
+              
+                
+                <li><a class="docs-link rounded" href="https://kaban.my.id/mysql/tutorial/05-crud/">Operasi CRUD (Create, Read, Update, Delete)</a></li>
+              
+            
+              
+                
+                <li><a class="docs-link rounded" href="https://kaban.my.id/mysql/tutorial/06-filtering-sorting/">Filtering &amp; Sorting Data</a></li>
+              
+            
+              
+                
+                <li><a class="docs-link rounded" href="https://kaban.my.id/mysql/tutorial/07-agregasi-grouping/">Fungsi Agregasi &amp; Grouping</a></li>
+              
+            
+              
+                
+                <li><a class="docs-link rounded" href="https://kaban.my.id/mysql/tutorial/08-join/">JOIN: Menggabungkan Tabel</a></li>
+              
+            
+              
+                
+                <li><a class="docs-link rounded" href="https://kaban.my.id/mysql/tutorial/09-subquery-union/">Subquery &amp; Union</a></li>
+              
+            
+              
+                
+                <li><a class="docs-link rounded" href="https://kaban.my.id/mysql/tutorial/10-view-index-procedure/">View, Index, dan Stored Procedure</a></li>
+              
+            
+              
+                
+                <li><a class="docs-link rounded" href="https://kaban.my.id/mysql/tutorial/11-user-privilege/">Manajemen User &amp; Hak Akses</a></li>
+              
+            
+              
+                
+                <li><a class="docs-link rounded" href="https://kaban.my.id/mysql/tutorial/12-backup-restore/">Backup &amp; Restore Database</a></li>
+              
+            
+              
+                
+                <li><a class="docs-link rounded active" href="https://kaban.my.id/mysql/tutorial/13-transaksi-acid/">Transaksi &amp; ACID</a></li>
+              
+            
+              
+                
+                <li><a class="docs-link rounded" href="https://kaban.my.id/mysql/tutorial/14-optimasi-performa/">Optimasi Performa MySQL</a></li>
+              
+            
+          </ul>
+        </div>
+      </li>
+    
+  
+</ul>
+
+			</nav>
+		</div>
+		<nav class="docs-toc d-none d-xl-block col-xl-3" aria-label="Secondary navigation">
+			<div class="d-xl-none">
+  <button class="btn btn-outline-primary btn-sm doks-toc-toggle collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#onThisPage" aria-controls="doks-docs-nav" aria-expanded="false" aria-label="Toggle On this page navigation">
+    <span>Daftar isi</span>
+    <span>
+      <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" class="doks doks-expand" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><title>Expand</title><polyline points="7 13 12 18 17 13"></polyline><polyline points="7 6 12 11 17 6"></polyline></svg>
+      <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" class="doks doks-collapse" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><title>Collapse</title><polyline points="17 11 12 6 7 11"></polyline><polyline points="17 18 12 13 7 18"></polyline></svg>
+    </span>
+  </button>
+  <div class="collapse" id="onThisPage">
+    <div class="card card-body mt-3 py-1">
+      <div class="page-links">
+        <nav id="TableOfContents">
+  <ul>
+    <li><a href="#pendahuluan">Pendahuluan</a></li>
+    <li><a href="#apa-itu-transaksi">Apa itu Transaksi?</a>
+      <ul>
+        <li><a href="#contoh-sederhana">Contoh Sederhana</a></li>
+      </ul>
+    </li>
+    <li><a href="#acid-empat-jaminan-transaksi">ACID: Empat Jaminan Transaksi</a>
+      <ul>
+        <li><a href="#1-atomicity-atomisitas">1. Atomicity (Atomisitas)</a></li>
+        <li><a href="#2-consistency-konsistensi">2. Consistency (Konsistensi)</a></li>
+        <li><a href="#3-isolation-isolasi">3. Isolation (Isolasi)</a></li>
+        <li><a href="#4-durability-durabilitas">4. Durability (Durabilitas)</a></li>
+      </ul>
+    </li>
+    <li><a href="#perintah-transaksi-di-mysql">Perintah Transaksi di MySQL</a>
+      <ul>
+        <li><a href="#start-transaction"><code>START TRANSACTION</code></a></li>
+        <li><a href="#commit"><code>COMMIT</code></a></li>
+        <li><a href="#rollback"><code>ROLLBACK</code></a></li>
+        <li><a href="#savepoint-dan-rollback-to-savepoint"><code>SAVEPOINT</code> dan <code>ROLLBACK TO SAVEPOINT</code></a></li>
+        <li><a href="#set-autocommit"><code>SET autocommit</code></a></li>
+        <li><a href="#melihat-status-transaksi">Melihat Status Transaksi</a></li>
+      </ul>
+    </li>
+    <li><a href="#contoh-nyata-transfer-stok-antar-gudang">Contoh Nyata: Transfer Stok Antar Gudang</a>
+      <ul>
+        <li><a href="#contoh-dengan-pengecekan-kondisi">Contoh dengan Pengecekan Kondisi</a></li>
+      </ul>
+    </li>
+    <li><a href="#isolation-level">Isolation Level</a>
+      <ul>
+        <li><a href="#penjelasan-fenomena">Penjelasan Fenomena</a></li>
+        <li><a href="#melihat-isolation-level">Melihat Isolation Level</a></li>
+        <li><a href="#mengubah-isolation-level">Mengubah Isolation Level</a></li>
+        <li><a href="#contoh-perbedaan-isolation-level">Contoh Perbedaan Isolation Level</a></li>
+      </ul>
+    </li>
+    <li><a href="#locking">Locking</a>
+      <ul>
+        <li><a href="#jenis-lock">Jenis Lock</a></li>
+        <li><a href="#contoh-for-update">Contoh <code>FOR UPDATE</code></a></li>
+        <li><a href="#contoh-for-share">Contoh <code>FOR SHARE</code></a></li>
+        <li><a href="#lock-timeout">Lock Timeout</a></li>
+        <li><a href="#deadlock">Deadlock</a></li>
+      </ul>
+    </li>
+    <li><a href="#transaksi-dan-ddl">Transaksi dan DDL</a></li>
+    <li><a href="#transaksi-dalam-aplikasi">Transaksi dalam Aplikasi</a></li>
+    <li><a href="#best-practice-transaksi">Best Practice Transaksi</a></li>
+    <li><a href="#ringkasan">Ringkasan</a></li>
+  </ul>
+</nav>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="page-links d-none d-xl-block">
+  <h3>Daftar isi</h3>
+  <nav id="TableOfContents">
+  <ul>
+    <li><a href="#pendahuluan">Pendahuluan</a></li>
+    <li><a href="#apa-itu-transaksi">Apa itu Transaksi?</a>
+      <ul>
+        <li><a href="#contoh-sederhana">Contoh Sederhana</a></li>
+      </ul>
+    </li>
+    <li><a href="#acid-empat-jaminan-transaksi">ACID: Empat Jaminan Transaksi</a>
+      <ul>
+        <li><a href="#1-atomicity-atomisitas">1. Atomicity (Atomisitas)</a></li>
+        <li><a href="#2-consistency-konsistensi">2. Consistency (Konsistensi)</a></li>
+        <li><a href="#3-isolation-isolasi">3. Isolation (Isolasi)</a></li>
+        <li><a href="#4-durability-durabilitas">4. Durability (Durabilitas)</a></li>
+      </ul>
+    </li>
+    <li><a href="#perintah-transaksi-di-mysql">Perintah Transaksi di MySQL</a>
+      <ul>
+        <li><a href="#start-transaction"><code>START TRANSACTION</code></a></li>
+        <li><a href="#commit"><code>COMMIT</code></a></li>
+        <li><a href="#rollback"><code>ROLLBACK</code></a></li>
+        <li><a href="#savepoint-dan-rollback-to-savepoint"><code>SAVEPOINT</code> dan <code>ROLLBACK TO SAVEPOINT</code></a></li>
+        <li><a href="#set-autocommit"><code>SET autocommit</code></a></li>
+        <li><a href="#melihat-status-transaksi">Melihat Status Transaksi</a></li>
+      </ul>
+    </li>
+    <li><a href="#contoh-nyata-transfer-stok-antar-gudang">Contoh Nyata: Transfer Stok Antar Gudang</a>
+      <ul>
+        <li><a href="#contoh-dengan-pengecekan-kondisi">Contoh dengan Pengecekan Kondisi</a></li>
+      </ul>
+    </li>
+    <li><a href="#isolation-level">Isolation Level</a>
+      <ul>
+        <li><a href="#penjelasan-fenomena">Penjelasan Fenomena</a></li>
+        <li><a href="#melihat-isolation-level">Melihat Isolation Level</a></li>
+        <li><a href="#mengubah-isolation-level">Mengubah Isolation Level</a></li>
+        <li><a href="#contoh-perbedaan-isolation-level">Contoh Perbedaan Isolation Level</a></li>
+      </ul>
+    </li>
+    <li><a href="#locking">Locking</a>
+      <ul>
+        <li><a href="#jenis-lock">Jenis Lock</a></li>
+        <li><a href="#contoh-for-update">Contoh <code>FOR UPDATE</code></a></li>
+        <li><a href="#contoh-for-share">Contoh <code>FOR SHARE</code></a></li>
+        <li><a href="#lock-timeout">Lock Timeout</a></li>
+        <li><a href="#deadlock">Deadlock</a></li>
+      </ul>
+    </li>
+    <li><a href="#transaksi-dan-ddl">Transaksi dan DDL</a></li>
+    <li><a href="#transaksi-dalam-aplikasi">Transaksi dalam Aplikasi</a></li>
+    <li><a href="#best-practice-transaksi">Best Practice Transaksi</a></li>
+    <li><a href="#ringkasan">Ringkasan</a></li>
+  </ul>
+</nav>
+  </div>
+
+		</nav>
+		<main class="docs-content col-lg-11 col-xl-9">
+		
+				<nav aria-label="breadcrumb">
+					<ol class="breadcrumb">
+						<li class="breadcrumb-item"><a href="/">Home</a></li>
+<li class="breadcrumb-item"><a href="/mysql/">Mysql</a></li>
+<li class="breadcrumb-item"><a href="/mysql/tutorial/">Tutorial MySQL</a></li>
+<li class="breadcrumb-item active" aria-current="page">Transaksi &amp; ACID</li>
+					</ol>
+				</nav>
+			
+			<h1>Transaksi &amp; ACID</h1>
+			<p class="lead">Transaksi memastikan sekumpulan operasi database dieksekusi sebagai satu kesatuan—berhasil semua atau gagal semua. Artikel ini membahas konsep ACID, cara menggunakan transaksi, isolation level, serta locking di MySQL.</p>
+			<nav class="d-xl-none" aria-label="Quaternary navigation">
+				<div class="d-xl-none">
+  <button class="btn btn-outline-primary btn-sm doks-toc-toggle collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#onThisPage" aria-controls="doks-docs-nav" aria-expanded="false" aria-label="Toggle On this page navigation">
+    <span>Daftar isi</span>
+    <span>
+      <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" class="doks doks-expand" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><title>Expand</title><polyline points="7 13 12 18 17 13"></polyline><polyline points="7 6 12 11 17 6"></polyline></svg>
+      <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" class="doks doks-collapse" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><title>Collapse</title><polyline points="17 11 12 6 7 11"></polyline><polyline points="17 18 12 13 7 18"></polyline></svg>
+    </span>
+  </button>
+  <div class="collapse" id="onThisPage">
+    <div class="card card-body mt-3 py-1">
+      <div class="page-links">
+        <nav id="TableOfContents">
+  <ul>
+    <li><a href="#pendahuluan">Pendahuluan</a></li>
+    <li><a href="#apa-itu-transaksi">Apa itu Transaksi?</a>
+      <ul>
+        <li><a href="#contoh-sederhana">Contoh Sederhana</a></li>
+      </ul>
+    </li>
+    <li><a href="#acid-empat-jaminan-transaksi">ACID: Empat Jaminan Transaksi</a>
+      <ul>
+        <li><a href="#1-atomicity-atomisitas">1. Atomicity (Atomisitas)</a></li>
+        <li><a href="#2-consistency-konsistensi">2. Consistency (Konsistensi)</a></li>
+        <li><a href="#3-isolation-isolasi">3. Isolation (Isolasi)</a></li>
+        <li><a href="#4-durability-durabilitas">4. Durability (Durabilitas)</a></li>
+      </ul>
+    </li>
+    <li><a href="#perintah-transaksi-di-mysql">Perintah Transaksi di MySQL</a>
+      <ul>
+        <li><a href="#start-transaction"><code>START TRANSACTION</code></a></li>
+        <li><a href="#commit"><code>COMMIT</code></a></li>
+        <li><a href="#rollback"><code>ROLLBACK</code></a></li>
+        <li><a href="#savepoint-dan-rollback-to-savepoint"><code>SAVEPOINT</code> dan <code>ROLLBACK TO SAVEPOINT</code></a></li>
+        <li><a href="#set-autocommit"><code>SET autocommit</code></a></li>
+        <li><a href="#melihat-status-transaksi">Melihat Status Transaksi</a></li>
+      </ul>
+    </li>
+    <li><a href="#contoh-nyata-transfer-stok-antar-gudang">Contoh Nyata: Transfer Stok Antar Gudang</a>
+      <ul>
+        <li><a href="#contoh-dengan-pengecekan-kondisi">Contoh dengan Pengecekan Kondisi</a></li>
+      </ul>
+    </li>
+    <li><a href="#isolation-level">Isolation Level</a>
+      <ul>
+        <li><a href="#penjelasan-fenomena">Penjelasan Fenomena</a></li>
+        <li><a href="#melihat-isolation-level">Melihat Isolation Level</a></li>
+        <li><a href="#mengubah-isolation-level">Mengubah Isolation Level</a></li>
+        <li><a href="#contoh-perbedaan-isolation-level">Contoh Perbedaan Isolation Level</a></li>
+      </ul>
+    </li>
+    <li><a href="#locking">Locking</a>
+      <ul>
+        <li><a href="#jenis-lock">Jenis Lock</a></li>
+        <li><a href="#contoh-for-update">Contoh <code>FOR UPDATE</code></a></li>
+        <li><a href="#contoh-for-share">Contoh <code>FOR SHARE</code></a></li>
+        <li><a href="#lock-timeout">Lock Timeout</a></li>
+        <li><a href="#deadlock">Deadlock</a></li>
+      </ul>
+    </li>
+    <li><a href="#transaksi-dan-ddl">Transaksi dan DDL</a></li>
+    <li><a href="#transaksi-dalam-aplikasi">Transaksi dalam Aplikasi</a></li>
+    <li><a href="#best-practice-transaksi">Best Practice Transaksi</a></li>
+    <li><a href="#ringkasan">Ringkasan</a></li>
+  </ul>
+</nav>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="page-links d-none d-xl-block">
+  <h3>Daftar isi</h3>
+  <nav id="TableOfContents">
+  <ul>
+    <li><a href="#pendahuluan">Pendahuluan</a></li>
+    <li><a href="#apa-itu-transaksi">Apa itu Transaksi?</a>
+      <ul>
+        <li><a href="#contoh-sederhana">Contoh Sederhana</a></li>
+      </ul>
+    </li>
+    <li><a href="#acid-empat-jaminan-transaksi">ACID: Empat Jaminan Transaksi</a>
+      <ul>
+        <li><a href="#1-atomicity-atomisitas">1. Atomicity (Atomisitas)</a></li>
+        <li><a href="#2-consistency-konsistensi">2. Consistency (Konsistensi)</a></li>
+        <li><a href="#3-isolation-isolasi">3. Isolation (Isolasi)</a></li>
+        <li><a href="#4-durability-durabilitas">4. Durability (Durabilitas)</a></li>
+      </ul>
+    </li>
+    <li><a href="#perintah-transaksi-di-mysql">Perintah Transaksi di MySQL</a>
+      <ul>
+        <li><a href="#start-transaction"><code>START TRANSACTION</code></a></li>
+        <li><a href="#commit"><code>COMMIT</code></a></li>
+        <li><a href="#rollback"><code>ROLLBACK</code></a></li>
+        <li><a href="#savepoint-dan-rollback-to-savepoint"><code>SAVEPOINT</code> dan <code>ROLLBACK TO SAVEPOINT</code></a></li>
+        <li><a href="#set-autocommit"><code>SET autocommit</code></a></li>
+        <li><a href="#melihat-status-transaksi">Melihat Status Transaksi</a></li>
+      </ul>
+    </li>
+    <li><a href="#contoh-nyata-transfer-stok-antar-gudang">Contoh Nyata: Transfer Stok Antar Gudang</a>
+      <ul>
+        <li><a href="#contoh-dengan-pengecekan-kondisi">Contoh dengan Pengecekan Kondisi</a></li>
+      </ul>
+    </li>
+    <li><a href="#isolation-level">Isolation Level</a>
+      <ul>
+        <li><a href="#penjelasan-fenomena">Penjelasan Fenomena</a></li>
+        <li><a href="#melihat-isolation-level">Melihat Isolation Level</a></li>
+        <li><a href="#mengubah-isolation-level">Mengubah Isolation Level</a></li>
+        <li><a href="#contoh-perbedaan-isolation-level">Contoh Perbedaan Isolation Level</a></li>
+      </ul>
+    </li>
+    <li><a href="#locking">Locking</a>
+      <ul>
+        <li><a href="#jenis-lock">Jenis Lock</a></li>
+        <li><a href="#contoh-for-update">Contoh <code>FOR UPDATE</code></a></li>
+        <li><a href="#contoh-for-share">Contoh <code>FOR SHARE</code></a></li>
+        <li><a href="#lock-timeout">Lock Timeout</a></li>
+        <li><a href="#deadlock">Deadlock</a></li>
+      </ul>
+    </li>
+    <li><a href="#transaksi-dan-ddl">Transaksi dan DDL</a></li>
+    <li><a href="#transaksi-dalam-aplikasi">Transaksi dalam Aplikasi</a></li>
+    <li><a href="#best-practice-transaksi">Best Practice Transaksi</a></li>
+    <li><a href="#ringkasan">Ringkasan</a></li>
+  </ul>
+</nav>
+  </div>
+
+			</nav>
+			<h2 id="pendahuluan">Pendahuluan <a href="#pendahuluan" class="anchor" aria-hidden="true">#</a></h2>
+<p>Bayangkan Anda mentransfer uang antar dua rekening: saldo rekening A berkurang, lalu saldo rekening B bertambah. Jika server mati setelah pengurangan A tetapi sebelum penambahan B, uang &ldquo;hilang&rdquo; — data menjadi tidak konsisten.</p>
+<p><strong>Transaksi</strong> mencegah hal ini. Transaksi memastikan sekumpulan operasi dieksekusi sebagai <strong>satu kesatuan</strong>: berhasil semua (<em>commit</em>) atau gagal semua (<em>rollback</em>). Sifat-sifat inilah yang dijamin oleh <strong>ACID</strong>.</p>
+<p>Artikel ini membahas cara menggunakan transaksi, isolation level, dan locking di MySQL. Semua contoh menggunakan skema <code>toko_online</code> dengan storage engine <strong>InnoDB</strong> (satu-satunya engine MySQL yang mendukung transaksi penuh).</p>
+<blockquote>
+<p><strong>Asumsi:</strong> Anda berada di database <code>toko_online</code> (<code>USE toko_online;</code>) dan tabel menggunakan engine InnoDB.</p>
+</blockquote>
+<hr>
+<h2 id="apa-itu-transaksi">Apa itu Transaksi? <a href="#apa-itu-transaksi" class="anchor" aria-hidden="true">#</a></h2>
+<p><strong>Transaksi</strong> adalah urutan satu atau lebih perintah SQL yang diperlakukan sebagai satu unit kerja. Transaksi dimulai dengan <code>START TRANSACTION</code> dan diakhiri dengan <code>COMMIT</code> (menyimpan) atau <code>ROLLBACK</code> (membatalkan).</p>
+<h3 id="contoh-sederhana">Contoh Sederhana <a href="#contoh-sederhana" class="anchor" aria-hidden="true">#</a></h3>
+<pre><code class="language-sql">START TRANSACTION;
+
+UPDATE produk SET stok = stok - 1 WHERE id = 1;
+INSERT INTO detail_pesanan (pesanan_id, produk_id, jumlah, harga_satuan)
+VALUES (1, 1, 1, 1500000.00);
+
+COMMIT;
+</code></pre>
+<p>Jika salah satu perintah gagal, kita bisa <code>ROLLBACK</code> untuk membatalkan semua perubahan.</p>
+<hr>
+<h2 id="acid-empat-jaminan-transaksi">ACID: Empat Jaminan Transaksi <a href="#acid-empat-jaminan-transaksi" class="anchor" aria-hidden="true">#</a></h2>
+<p>ACID adalah akronim dari empat properti yang menjamin keandalan transaksi.</p>
+<h3 id="1-atomicity-atomisitas">1. Atomicity (Atomisitas) <a href="#1-atomicity-atomisitas" class="anchor" aria-hidden="true">#</a></h3>
+<p><strong>Semua atau tidak sama sekali.</strong> Jika satu perintah dalam transaksi gagal, seluruh transaksi dibatalkan.</p>
+<p>Contoh: transfer saldo — pengurangan dan penambahan harus terjadi bersamaan. Jika satu gagal, keduanya dibatalkan.</p>
+<h3 id="2-consistency-konsistensi">2. Consistency (Konsistensi) <a href="#2-consistency-konsistensi" class="anchor" aria-hidden="true">#</a></h3>
+<p>Transaksi membawa database dari satu <strong>keadaan valid</strong> ke keadaan valid lainnya. Constraints (<code>PRIMARY KEY</code>, <code>FOREIGN KEY</code>, <code>CHECK</code>, <code>UNIQUE</code>) tetap terjaga.</p>
+<p>Contoh: <code>FOREIGN KEY</code> mencegah <code>detail_pesanan</code> merujuk <code>pesanan_id</code> yang tidak ada.</p>
+<h3 id="3-isolation-isolasi">3. Isolation (Isolasi) <a href="#3-isolation-isolasi" class="anchor" aria-hidden="true">#</a></h3>
+<p>Transaksi yang berjalan bersamaan <strong>tidak saling mengganggu</strong>. Setiap transaksi melihat dunia seolah-olah ia satu-satunya yang berjalan. Tingkat isolasi bisa diatur (dibahas di bagian <em>Isolation Level</em>).</p>
+<h3 id="4-durability-durabilitas">4. Durability (Durabilitas) <a href="#4-durability-durabilitas" class="anchor" aria-hidden="true">#</a></h3>
+<p>Setelah <code>COMMIT</code>, perubahan <strong>permanen</strong> — tetap ada meskipun server crash. InnoDB menjamin ini melalui <strong>write-ahead log</strong> (redo log) dan flush ke disk.</p>
+<hr>
+<h2 id="perintah-transaksi-di-mysql">Perintah Transaksi di MySQL <a href="#perintah-transaksi-di-mysql" class="anchor" aria-hidden="true">#</a></h2>
+<h3 id="start-transaction"><code>START TRANSACTION</code> <a href="#start-transaction" class="anchor" aria-hidden="true">#</a></h3>
+<p>Memulai transaksi baru:</p>
+<pre><code class="language-sql">START TRANSACTION;
+</code></pre>
+<p>Atau:</p>
+<pre><code class="language-sql">BEGIN;
+</code></pre>
+<h3 id="commit"><code>COMMIT</code> <a href="#commit" class="anchor" aria-hidden="true">#</a></h3>
+<p>Menyimpan semua perubahan secara permanen:</p>
+<pre><code class="language-sql">COMMIT;
+</code></pre>
+<h3 id="rollback"><code>ROLLBACK</code> <a href="#rollback" class="anchor" aria-hidden="true">#</a></h3>
+<p>Membatalkan semua perubahan sejak <code>START TRANSACTION</code>:</p>
+<pre><code class="language-sql">ROLLBACK;
+</code></pre>
+<h3 id="savepoint-dan-rollback-to-savepoint"><code>SAVEPOINT</code> dan <code>ROLLBACK TO SAVEPOINT</code> <a href="#savepoint-dan-rollback-to-savepoint" class="anchor" aria-hidden="true">#</a></h3>
+<p><strong>Savepoint</strong> adalah titik penanda di dalam transaksi. Anda bisa rollback ke savepoint tertentu tanpa membatalkan seluruh transaksi.</p>
+<pre><code class="language-sql">START TRANSACTION;
+
+INSERT INTO pelanggan (nama, email) VALUES ('Andi', 'andi@example.com');
+SAVEPOINT sp1;
+
+INSERT INTO pelanggan (nama, email) VALUES ('Budi', 'budi@example.com');
+SAVEPOINT sp2;
+
+INSERT INTO pelanggan (nama, email) VALUES ('Citra', 'citra@example.com');
+
+-- Batalkan hanya insert Citra
+ROLLBACK TO SAVEPOINT sp2;
+
+COMMIT;
+</code></pre>
+<p>Hasil: Andi dan Budi tersimpan; Citra dibatalkan.</p>
+<p><strong>Menghapus savepoint:</strong></p>
+<pre><code class="language-sql">RELEASE SAVEPOINT sp1;
+</code></pre>
+<h3 id="set-autocommit"><code>SET autocommit</code> <a href="#set-autocommit" class="anchor" aria-hidden="true">#</a></h3>
+<p>Secara default, MySQL berjalan dalam mode <strong>autocommit</strong> — setiap perintah langsung di-commit. Untuk menggunakan transaksi eksplisit:</p>
+<pre><code class="language-sql">SET autocommit = 0;  -- matikan autocommit
+-- ... perintah SQL ...
+COMMIT;              -- simpan
+-- atau ROLLBACK;
+SET autocommit = 1;  -- aktifkan kembali
+</code></pre>
+<blockquote>
+<p><strong>Tips:</strong> Kebanyakan aplikasi menggunakan <code>START TRANSACTION</code> eksplisit daripada mematikan <code>autocommit</code>, karena lebih jelas dan aman.</p>
+</blockquote>
+<h3 id="melihat-status-transaksi">Melihat Status Transaksi <a href="#melihat-status-transaksi" class="anchor" aria-hidden="true">#</a></h3>
+<pre><code class="language-sql">SELECT @@autocommit;
+SELECT @@transaction_isolation;
+</code></pre>
+<hr>
+<h2 id="contoh-nyata-transfer-stok-antar-gudang">Contoh Nyata: Transfer Stok Antar Gudang <a href="#contoh-nyata-transfer-stok-antar-gudang" class="anchor" aria-hidden="true">#</a></h2>
+<p>Misalkan kita menambahkan tabel <code>gudang</code> dan <code>stok_gudang</code>:</p>
+<pre><code class="language-sql">CREATE TABLE gudang (
+  id INT UNSIGNED AUTO_INCREMENT PRIMARY KEY,
+  nama VARCHAR(100) NOT NULL
+);
+
+CREATE TABLE stok_gudang (
+  gudang_id INT UNSIGNED NOT NULL,
+  produk_id INT UNSIGNED NOT NULL,
+  jumlah INT NOT NULL DEFAULT 0,
+  PRIMARY KEY (gudang_id, produk_id),
+  FOREIGN KEY (gudang_id) REFERENCES gudang(id),
+  FOREIGN KEY (produk_id) REFERENCES produk(id),
+  CONSTRAINT chk_jumlah_gudang CHECK (jumlah &gt;= 0)
+);
+</code></pre>
+<p><strong>Transfer 5 unit produk dari gudang 1 ke gudang 2:</strong></p>
+<pre><code class="language-sql">START TRANSACTION;
+
+-- Kurangi stok gudang asal
+UPDATE stok_gudang
+SET jumlah = jumlah - 5
+WHERE gudang_id = 1 AND produk_id = 1;
+
+-- Tambah stok gudang tujuan
+UPDATE stok_gudang
+SET jumlah = jumlah + 5
+WHERE gudang_id = 2 AND produk_id = 1;
+
+-- Verifikasi tidak ada stok negatif
+-- (CHECK constraint akan menolak jika jumlah &lt; 0)
+
+COMMIT;
+</code></pre>
+<p>Jika <code>UPDATE</code> pertama gagal (misalnya stok tidak cukup dan <code>CHECK</code> menolak), seluruh transaksi bisa di-<code>ROLLBACK</code>, sehingga stok gudang tujuan tidak bertambah.</p>
+<h3 id="contoh-dengan-pengecekan-kondisi">Contoh dengan Pengecekan Kondisi <a href="#contoh-dengan-pengecekan-kondisi" class="anchor" aria-hidden="true">#</a></h3>
+<pre><code class="language-sql">START TRANSACTION;
+
+-- Cek stok tersedia
+SELECT jumlah INTO @stok_tersedia
+FROM stok_gudang
+WHERE gudang_id = 1 AND produk_id = 1
+FOR UPDATE;
+
+-- Jika stok cukup, lanjutkan
+-- (logika ini biasanya di aplikasi, bukan SQL murni)
+UPDATE stok_gudang SET jumlah = jumlah - 5
+WHERE gudang_id = 1 AND produk_id = 1;
+
+UPDATE stok_gudang SET jumlah = jumlah + 5
+WHERE gudang_id = 2 AND produk_id = 1;
+
+COMMIT;
+</code></pre>
+<p><code>FOR UPDATE</code> mengunci baris agar transaksi lain tidak mengubahnya sampai transaksi ini selesai (dibahas di bagian <em>Locking</em>).</p>
+<hr>
+<h2 id="isolation-level">Isolation Level <a href="#isolation-level" class="anchor" aria-hidden="true">#</a></h2>
+<p><strong>Isolation level</strong> menentukan seberapa besar transaksi saling terisolasi. MySQL mendukung empat level (dari paling longgar ke paling ketat):</p>
+<table>
+<thead>
+<tr>
+<th>Level</th>
+<th>Dirty Read</th>
+<th>Non-Repeatable Read</th>
+<th>Phantom Read</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>READ UNCOMMITTED</code></td>
+<td>✅ Mungkin</td>
+<td>✅ Mungkin</td>
+<td>✅ Mungkin</td>
+</tr>
+<tr>
+<td><code>READ COMMITTED</code></td>
+<td>❌ Tidak</td>
+<td>✅ Mungkin</td>
+<td>✅ Mungkin</td>
+</tr>
+<tr>
+<td><code>REPEATABLE READ</code> (default)</td>
+<td>❌ Tidak</td>
+<td>❌ Tidak</td>
+<td>⚠️ Mungkin (di InnoDB dicegah via next-key lock)</td>
+</tr>
+<tr>
+<td><code>SERIALIZABLE</code></td>
+<td>❌ Tidak</td>
+<td>❌ Tidak</td>
+<td>❌ Tidak</td>
+</tr>
+</tbody>
+</table>
+<h3 id="penjelasan-fenomena">Penjelasan Fenomena <a href="#penjelasan-fenomena" class="anchor" aria-hidden="true">#</a></h3>
+<ul>
+<li><strong>Dirty Read</strong> — membaca data yang belum di-commit oleh transaksi lain (bisa berubah jika transaksi itu rollback).</li>
+<li><strong>Non-Repeatable Read</strong> — membaca baris yang sama dua kali dalam satu transaksi menghasilkan nilai berbeda (karena transaksi lain mengubahnya).</li>
+<li><strong>Phantom Read</strong> — menjalankan query yang sama dua kali menghasilkan <strong>jumlah baris</strong> berbeda (karena transaksi lain menambah/menghapus baris).</li>
+</ul>
+<h3 id="melihat-isolation-level">Melihat Isolation Level <a href="#melihat-isolation-level" class="anchor" aria-hidden="true">#</a></h3>
+<pre><code class="language-sql">SELECT @@transaction_isolation;
+</code></pre>
+<h3 id="mengubah-isolation-level">Mengubah Isolation Level <a href="#mengubah-isolation-level" class="anchor" aria-hidden="true">#</a></h3>
+<p><strong>Untuk sesi saat ini:</strong></p>
+<pre><code class="language-sql">SET SESSION TRANSACTION ISOLATION LEVEL READ COMMITTED;
+</code></pre>
+<p><strong>Untuk transaksi berikutnya saja:</strong></p>
+<pre><code class="language-sql">SET TRANSACTION ISOLATION LEVEL SERIALIZABLE;
+START TRANSACTION;
+-- ...
+COMMIT;
+</code></pre>
+<p><strong>Secara global (semua koneksi baru):</strong></p>
+<pre><code class="language-sql">SET GLOBAL TRANSACTION ISOLATION LEVEL READ COMMITTED;
+</code></pre>
+<blockquote>
+<p><strong>Tips:</strong> Default MySQL adalah <code>REPEATABLE READ</code>, yang cocok untuk sebagian besar aplikasi. Gunakan <code>READ COMMITTED</code> jika aplikasi Anda banyak melakukan update bersamaan dan toleran terhadap non-repeatable read (misalnya aplikasi web modern). <code>SERIALIZABLE</code> sangat ketat tetapi paling lambat — jarang dipakai.</p>
+</blockquote>
+<h3 id="contoh-perbedaan-isolation-level">Contoh Perbedaan Isolation Level <a href="#contoh-perbedaan-isolation-level" class="anchor" aria-hidden="true">#</a></h3>
+<p><strong>Sesi A:</strong></p>
+<pre><code class="language-sql">SET SESSION TRANSACTION ISOLATION LEVEL READ COMMITTED;
+START TRANSACTION;
+SELECT total FROM pesanan WHERE id = 1;
+-- hasil: 100000
+</code></pre>
+<p><strong>Sesi B:</strong></p>
+<pre><code class="language-sql">UPDATE pesanan SET total = 200000 WHERE id = 1;
+COMMIT;
+</code></pre>
+<p><strong>Sesi A (masih dalam transaksi):</strong></p>
+<pre><code class="language-sql">SELECT total FROM pesanan WHERE id = 1;
+-- READ COMMITTED: 200000 (non-repeatable read terjadi)
+-- REPEATABLE READ: 100000 (nilai awal tetap)
+</code></pre>
+<p>Pada <code>REPEATABLE READ</code>, MySQL menggunakan <strong>MVCC</strong> (Multi-Version Concurrency Control) sehingga sesi A tetap melihat snapshot data saat transaksi dimulai.</p>
+<hr>
+<h2 id="locking">Locking <a href="#locking" class="anchor" aria-hidden="true">#</a></h2>
+<p><strong>Lock</strong> mencegah konflik antar transaksi yang mengakses data yang sama.</p>
+<h3 id="jenis-lock">Jenis Lock <a href="#jenis-lock" class="anchor" aria-hidden="true">#</a></h3>
+<table>
+<thead>
+<tr>
+<th>Lock</th>
+<th>Keterangan</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Shared Lock</strong> (<code>LOCK IN SHARE MODE</code> / <code>FOR SHARE</code>)</td>
+<td>Bisa dibaca banyak transaksi, tetapi tidak bisa diubah sampai lock dilepas</td>
+</tr>
+<tr>
+<td><strong>Exclusive Lock</strong> (<code>FOR UPDATE</code>)</td>
+<td>Hanya transaksi pemegang lock yang bisa membaca dan mengubah baris</td>
+</tr>
+</tbody>
+</table>
+<h3 id="contoh-for-update">Contoh <code>FOR UPDATE</code> <a href="#contoh-for-update" class="anchor" aria-hidden="true">#</a></h3>
+<p>Mengunci baris yang dibaca agar transaksi lain tidak bisa mengubahnya:</p>
+<pre><code class="language-sql">START TRANSACTION;
+
+SELECT jumlah FROM stok_gudang
+WHERE gudang_id = 1 AND produk_id = 1
+FOR UPDATE;
+
+-- Baris terkunci sampai COMMIT/ROLLBACK
+UPDATE stok_gudang SET jumlah = jumlah - 5
+WHERE gudang_id = 1 AND produk_id = 1;
+
+COMMIT;
+</code></pre>
+<p>Transaksi lain yang mencoba <code>SELECT ... FOR UPDATE</code> atau <code>UPDATE</code> pada baris yang sama akan <strong>menunggu</strong> sampai lock dilepas.</p>
+<h3 id="contoh-for-share">Contoh <code>FOR SHARE</code> <a href="#contoh-for-share" class="anchor" aria-hidden="true">#</a></h3>
+<p>Mengizinkan transaksi lain membaca tetapi tidak mengubah:</p>
+<pre><code class="language-sql">START TRANSACTION;
+
+SELECT jumlah FROM stok_gudang
+WHERE gudang_id = 1 AND produk_id = 1
+FOR SHARE;
+
+-- Transaksi lain bisa membaca (FOR SHARE) tetapi tidak bisa UPDATE
+COMMIT;
+</code></pre>
+<h3 id="lock-timeout">Lock Timeout <a href="#lock-timeout" class="anchor" aria-hidden="true">#</a></h3>
+<p>Jika transaksi menunggu lock terlalu lama, MySQL akan menghasilkan error:</p>
+<pre><code>ERROR 1205 (HY000): Lock wait timeout exceeded; try restarting transaction
+</code></pre>
+<p>Atur timeout (detik):</p>
+<pre><code class="language-sql">SET SESSION innodb_lock_wait_timeout = 10;
+</code></pre>
+<h3 id="deadlock">Deadlock <a href="#deadlock" class="anchor" aria-hidden="true">#</a></h3>
+<p><strong>Deadlock</strong> terjadi jika dua transaksi saling menunggu lock yang dipegang oleh transaksi lain.</p>
+<p>Contoh:</p>
+<ul>
+<li>Transaksi A mengunci baris 1, lalu ingin mengunci baris 2.</li>
+<li>Transaksi B mengunci baris 2, lalu ingin mengunci baris 1.</li>
+<li>Keduanya menunggu selamanya.</li>
+</ul>
+<p>MySQL mendeteksi deadlock dan otomatis me-<code>ROLLBACK</code> salah satu transaksi dengan error:</p>
+<pre><code>ERROR 1213 (40001): Deadlock found when trying to get lock; try restarting transaction
+</code></pre>
+<p><strong>Melihat deadlock terakhir:</strong></p>
+<pre><code class="language-sql">SHOW ENGINE INNODB STATUS\G
+</code></pre>
+<p>Cari bagian <code>LATEST DETECTED DEADLOCK</code>.</p>
+<p><strong>Mencegah deadlock:</strong></p>
+<ul>
+<li>Akses tabel/baris dalam <strong>urutan yang konsisten</strong> di semua transaksi.</li>
+<li>Jaga transaksi tetap <strong>singkat</strong>.</li>
+<li>Gunakan isolation level yang sesuai.</li>
+<li>Tangani error deadlock di aplikasi dengan <strong>retry</strong>.</li>
+</ul>
+<hr>
+<h2 id="transaksi-dan-ddl">Transaksi dan DDL <a href="#transaksi-dan-ddl" class="anchor" aria-hidden="true">#</a></h2>
+<p>Di MySQL, sebagian besar perintah <strong>DDL</strong> (<code>CREATE</code>, <code>ALTER</code>, <code>DROP</code>, <code>TRUNCATE</code>) menyebabkan <strong>implicit commit</strong> — transaksi yang sedang berjalan otomatis di-commit sebelum DDL dieksekusi.</p>
+<pre><code class="language-sql">START TRANSACTION;
+INSERT INTO pelanggan (nama, email) VALUES ('Test', 'test@example.com');
+
+-- DDL menyebabkan implicit commit
+CREATE TABLE test_table (id INT);
+
+ROLLBACK;  -- INSERT di atas TIDAK dibatalkan!
+</code></pre>
+<blockquote>
+<p>⚠️ <strong>Peringatan:</strong> Jangan mencampur DDL dengan DML dalam satu transaksi jika Anda mengandalkan <code>ROLLBACK</code>.</p>
+</blockquote>
+<hr>
+<h2 id="transaksi-dalam-aplikasi">Transaksi dalam Aplikasi <a href="#transaksi-dalam-aplikasi" class="anchor" aria-hidden="true">#</a></h2>
+<p>Saat menggunakan MySQL dari aplikasi (PHP, Python, Node.js, dll.), transaksi dikelola melalui API driver:</p>
+<p><strong>PHP (PDO):</strong></p>
+<pre><code class="language-php">$pdo-&gt;beginTransaction();
+try {
+    $pdo-&gt;exec(&quot;UPDATE stok_gudang SET jumlah = jumlah - 5 WHERE ...&quot;);
+    $pdo-&gt;exec(&quot;UPDATE stok_gudang SET jumlah = jumlah + 5 WHERE ...&quot;);
+    $pdo-&gt;commit();
+} catch (Exception $e) {
+    $pdo-&gt;rollBack();
+    throw $e;
+}
+</code></pre>
+<p><strong>Python (mysql-connector):</strong></p>
+<pre><code class="language-python">conn.start_transaction()
+try:
+    cursor.execute(&quot;UPDATE stok_gudang SET jumlah = jumlah - 5 WHERE ...&quot;)
+    cursor.execute(&quot;UPDATE stok_gudang SET jumlah = jumlah + 5 WHERE ...&quot;)
+    conn.commit()
+except Exception:
+    conn.rollback()
+    raise
+</code></pre>
+<p><strong>Node.js (mysql2):</strong></p>
+<pre><code class="language-javascript">const conn = await pool.getConnection();
+await conn.beginTransaction();
+try {
+    await conn.execute(&quot;UPDATE stok_gudang SET jumlah = jumlah - 5 WHERE ...&quot;);
+    await conn.execute(&quot;UPDATE stok_gudang SET jumlah = jumlah + 5 WHERE ...&quot;);
+    await conn.commit();
+} catch (err) {
+    await conn.rollback();
+    throw err;
+} finally {
+    conn.release();
+}
+</code></pre>
+<p>Prinsipnya sama: <strong>begin → operasi → commit/rollback</strong>, dengan <code>try/catch</code> untuk menangani error.</p>
+<hr>
+<h2 id="best-practice-transaksi">Best Practice Transaksi <a href="#best-practice-transaksi" class="anchor" aria-hidden="true">#</a></h2>
+<ol>
+<li>
+<p><strong>Jaga transaksi tetap singkat.</strong> Transaksi panjang mengunci baris lebih lama dan meningkatkan risiko deadlock.</p>
+</li>
+<li>
+<p><strong>Jangan menunggu interaksi user di dalam transaksi.</strong> Jika user harus mengisi form, jangan buka transaksi sebelum data lengkap.</p>
+</li>
+<li>
+<p><strong>Tangani deadlock dengan retry.</strong> Deadlock adalah hal normal di sistem konkuren; aplikasi harus bisa mencoba ulang.</p>
+</li>
+<li>
+<p><strong>Gunakan isolation level yang sesuai.</strong> Default <code>REPEATABLE READ</code> cocok untuk sebagian besar kasus; <code>READ COMMITTED</code> untuk aplikasi dengan banyak update.</p>
+</li>
+<li>
+<p><strong>Hindari DDL di dalam transaksi DML.</strong> DDL menyebabkan implicit commit.</p>
+</li>
+<li>
+<p><strong>Gunakan <code>FOR UPDATE</code> dengan bijak.</strong> Kunci hanya baris yang benar-benar akan diubah.</p>
+</li>
+<li>
+<p><strong>Pantau transaksi panjang.</strong> Query berikut membantu menemukan transaksi yang berjalan lama:</p>
+</li>
+</ol>
+<pre><code class="language-sql">SELECT trx_id, trx_state, trx_started,
+       TIMESTAMPDIFF(SECOND, trx_started, NOW()) AS durasi_detik,
+       trx_query
+FROM information_schema.innodb_trx
+ORDER BY trx_started;
+</code></pre>
+<ol start="8">
+<li><strong>Rollback transaksi yang menggantung.</strong> Jika ada transaksi macet, identifikasi dan <code>KILL</code>:</li>
+</ol>
+<pre><code class="language-sql">KILL &lt;thread_id&gt;;
+</code></pre>
+<hr>
+<h2 id="ringkasan">Ringkasan <a href="#ringkasan" class="anchor" aria-hidden="true">#</a></h2>
+<table>
+<thead>
+<tr>
+<th>Perintah / Konsep</th>
+<th>Fungsi</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>START TRANSACTION</code> / <code>BEGIN</code></td>
+<td>Memulai transaksi</td>
+</tr>
+<tr>
+<td><code>COMMIT</code></td>
+<td>Menyimpan perubahan permanen</td>
+</tr>
+<tr>
+<td><code>ROLLBACK</code></td>
+<td>Membatalkan semua perubahan</td>
+</tr>
+<tr>
+<td><code>SAVEPOINT</code></td>
+<td>Titik rollback di dalam transaksi</td>
+</tr>
+<tr>
+<td><code>ROLLBACK TO SAVEPOINT</code></td>
+<td>Rollback ke savepoint tertentu</td>
+</tr>
+<tr>
+<td><code>SET autocommit</code></td>
+<td>Mengatur mode autocommit</td>
+</tr>
+<tr>
+<td><code>FOR UPDATE</code></td>
+<td>Exclusive lock pada baris</td>
+</tr>
+<tr>
+<td><code>FOR SHARE</code></td>
+<td>Shared lock pada baris</td>
+</tr>
+<tr>
+<td>Isolation level</td>
+<td>Mengatur tingkat isolasi transaksi</td>
+</tr>
+</tbody>
+</table>
+<p><strong>ACID:</strong></p>
+<ul>
+<li><strong>Atomicity</strong> — semua atau tidak sama sekali.</li>
+<li><strong>Consistency</strong> — data tetap valid sesuai constraints.</li>
+<li><strong>Isolation</strong> — transaksi tidak saling mengganggu.</li>
+<li><strong>Durability</strong> — perubahan permanen setelah <code>COMMIT</code>.</li>
+</ul>
+<p>Poin penting:</p>
+<ul>
+<li>Hanya <strong>InnoDB</strong> yang mendukung transaksi penuh di MySQL.</li>
+<li>Default isolation level adalah <code>REPEATABLE READ</code>.</li>
+<li>DDL (<code>CREATE</code>, <code>ALTER</code>, <code>DROP</code>) menyebabkan <strong>implicit commit</strong>.</li>
+<li>Deadlock adalah hal normal — tangani dengan retry di aplikasi.</li>
+<li>Jaga transaksi tetap singkat dan gunakan lock seperlunya.</li>
+</ul>
+<p>Pada artikel berikutnya, kita akan membahas <strong>Optimasi Performa MySQL</strong> — membuat query dan database berjalan lebih cepat.</p>
+
+			<div class="page-footer-meta d-flex flex-column flex-md-row justify-content-between">
+				</div>
+			<div class="docs-navigation d-flex justify-content-between">
+	
+	<a href="/mysql/tutorial/12-backup-restore/">
+			<div class="card my-1">
+				<div class="card-body py-2">
+					&larr; Backup &amp; Restore Database
+				</div>
+			</div>
+		</a>
+	<a class="ms-auto" href="/mysql/tutorial/14-optimasi-performa/">
+			<div class="card my-1">
+				<div class="card-body py-2">
+					Optimasi Performa MySQL &rarr;
+				</div>
+			</div>
+		</a>
+	</div>
+
+			
+		</main>
+	</div>
+
+      </div>
+    </div>
+    
+    
+    <footer class="footer text-muted">
+  <div class="container-xxl">
+    <div class="row">
+      <div class="col-lg-8 order-last order-lg-first">
+        <ul class="list-inline">
+          <li class="list-inline-item">Powered by <a class="text-muted" href="https://gohugo.io/">Hugo</a> and <a class="text-muted" href="https://github.com/">Github</a></li>
+        </ul>
+      </div>
+      <div class="col-lg-8 order-first order-lg-last text-lg-end">
+        <ul class="list-inline">
+          </ul>
+      </div>
+    </div>
+  </div>
+</footer>
+    
+
+<script src="/js/bootstrap.min.650aeec64c81d69d4c0850fc73c93da3f0330cec0a27772feed7f90f60baa5f47f1c45687d71914bdafd1c4e860d40f6dc08ede27a2f08431ff929c9a2d24621.js" integrity="sha512-ZQruxkyB1p1MCFD8c8k9o/AzDOwKJ3cv7tf5D2C6pfR/HEVofXGRS9r9HE6GDUD23Ajt4novCEMf&#43;SnJotJGIQ==" crossorigin="anonymous" defer></script>
+  <script src="/js/highlight.min.ec234bd8a5f487aaffe50a89f17b14501b1bb65633cf177cffd4cb84702dd7030edc08712dceb8dc27ac7e54b53240a08bf0b8d951572ee582bcdbbd06a48a7b.js" integrity="sha512-7CNL2KX0h6r/5QqJ8XsUUBsbtlYzzxd8/9TLhHAt1wMO3AhxLc643CesflS1MkCgi/C42VFXLuWCvNu9BqSKew==" crossorigin="anonymous" defer></script>
+  <script src="/main.min.cd1e5e6b40065b3f7f7fd8548a528fac67019754eda0f37b9918d02d154fc9ef6a22742f6513b0572ad9163152e151ec36221fbeafbecd7759c3dab1f19b64b9.js" integrity="sha512-zR5ea0AGWz9/f9hUilKPrGcBl1TtoPN7mRjQLRVPye9qInQvZROwVyrZFjFS4VHsNiIfvq&#43;&#43;zXdZw9qx8ZtkuQ==" crossorigin="anonymous" defer></script>
+  <script src="https://kaban.my.id/index.min.f90d3536216d10b8ecf574dc8d57b0d2bd45aab605bdc69b1f7697f3476ebdb5db6a63a3f6955150f2c0b02e66fa1adfbf4c5b50c540f663f829ad8bcd5807c6.js" integrity="sha512-&#43;Q01NiFtELjs9XTcjVew0r1FqrYFvcabH3aX80duvbXbamOj9pVRUPLAsC5m&#43;hrfv0xbUMVA9mP4Ka2LzVgHxg==" crossorigin="anonymous" defer></script>
+  
+    <div class="d-flex fixed-bottom pb-4 pb-lg-5 pe-4 pe-lg-5">
+      <a id="toTop" href="#" class="btn btn-outline-primary rounded-circle ms-auto p-2"><span class="visually-hidden">Top</span><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-chevron-up"><polyline points="18 15 12 9 6 15"></polyline></svg></a>
+    </div>
+    
+  </body>
+</html>

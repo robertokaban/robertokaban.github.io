@@ -220,6 +220,11 @@
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url><url>
+    <loc>https://kaban.my.id/mysql/tutorial/02-instalasi/</loc>
+    <lastmod>2022-12-07T08:00:00+00:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url><url>
     <loc>https://kaban.my.id/mengenal-composer-dependency-manager-php/</loc>
     <lastmod>2022-11-17T02:55:26+07:00</lastmod>
     <changefreq>weekly</changefreq>
@@ -350,6 +355,11 @@
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url><url>
+    <loc>https://kaban.my.id/mysql/tutorial/03-arsitektur/</loc>
+    <lastmod>2022-12-08T08:00:00+00:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url><url>
     <loc>https://kaban.my.id/css/tutorial/colors/</loc>
     <lastmod>2021-12-06T08:49:31+00:00</lastmod>
     <changefreq>weekly</changefreq>
@@ -365,6 +375,11 @@
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url><url>
+    <loc>https://kaban.my.id/mysql/tutorial/04-database-table/</loc>
+    <lastmod>2022-12-09T08:00:00+00:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url><url>
     <loc>https://kaban.my.id/css/tutorial/backgroud/</loc>
     <lastmod>2021-12-06T08:49:31+00:00</lastmod>
     <changefreq>weekly</changefreq>
@@ -372,6 +387,11 @@
   </url><url>
     <loc>https://kaban.my.id/html/tutorial/text-formatiing/</loc>
     <lastmod>2021-12-06T08:49:31+00:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url><url>
+    <loc>https://kaban.my.id/mysql/tutorial/05-crud/</loc>
+    <lastmod>2022-12-10T08:00:00+00:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url><url>
@@ -385,6 +405,11 @@
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url><url>
+    <loc>https://kaban.my.id/mysql/tutorial/06-filtering-sorting/</loc>
+    <lastmod>2022-12-11T08:00:00+00:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url><url>
     <loc>https://kaban.my.id/css/tutorial/border-radius/</loc>
     <lastmod>2021-12-06T08:49:31+00:00</lastmod>
     <changefreq>weekly</changefreq>
@@ -392,6 +417,11 @@
   </url><url>
     <loc>https://kaban.my.id/html/tutorial/comments/</loc>
     <lastmod>2021-12-06T08:49:31+00:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url><url>
+    <loc>https://kaban.my.id/mysql/tutorial/07-agregasi-grouping/</loc>
+    <lastmod>2022-12-12T08:00:00+00:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url><url>
@@ -410,6 +440,11 @@
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url><url>
+    <loc>https://kaban.my.id/mysql/tutorial/08-join/</loc>
+    <lastmod>2022-12-13T08:00:00+00:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url><url>
     <loc>https://kaban.my.id/html/tutorial/css/</loc>
     <lastmod>2021-12-06T08:49:31+00:00</lastmod>
     <changefreq>weekly</changefreq>
@@ -422,6 +457,11 @@
   </url><url>
     <loc>https://kaban.my.id/python/tutorial/instalasi-python/</loc>
     <lastmod>2020-12-06T08:49:31+00:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url><url>
+    <loc>https://kaban.my.id/mysql/tutorial/09-subquery-union/</loc>
+    <lastmod>2022-12-14T08:00:00+00:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url><url>
@@ -440,6 +480,11 @@
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url><url>
+    <loc>https://kaban.my.id/mysql/tutorial/10-view-index-procedure/</loc>
+    <lastmod>2022-12-15T08:00:00+00:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url><url>
     <loc>https://kaban.my.id/css/tutorial/box-model/</loc>
     <lastmod>2021-12-06T08:49:31+00:00</lastmod>
     <changefreq>weekly</changefreq>
@@ -452,6 +497,11 @@
   </url><url>
     <loc>https://kaban.my.id/python/tutorial/aturan-penulisan/</loc>
     <lastmod>2020-12-06T08:49:31+00:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url><url>
+    <loc>https://kaban.my.id/mysql/tutorial/11-user-privilege/</loc>
+    <lastmod>2022-12-16T08:00:00+00:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url><url>
@@ -470,6 +520,11 @@
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url><url>
+    <loc>https://kaban.my.id/mysql/tutorial/12-backup-restore/</loc>
+    <lastmod>2022-12-17T08:00:00+00:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url><url>
     <loc>https://kaban.my.id/html/tutorial/tables/</loc>
     <lastmod>2021-12-06T08:49:31+00:00</lastmod>
     <changefreq>weekly</changefreq>
@@ -485,6 +540,11 @@
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url><url>
+    <loc>https://kaban.my.id/mysql/tutorial/13-transaksi-acid/</loc>
+    <lastmod>2022-12-18T08:00:00+00:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url><url>
     <loc>https://kaban.my.id/html/tutorial/lists/</loc>
     <lastmod>2021-12-06T08:49:31+00:00</lastmod>
     <changefreq>weekly</changefreq>
@@ -497,6 +557,11 @@
   </url><url>
     <loc>https://kaban.my.id/python/tutorial/variabel/</loc>
     <lastmod>2020-12-06T08:49:31+00:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url><url>
+    <loc>https://kaban.my.id/mysql/tutorial/14-optimasi-performa/</loc>
+    <lastmod>2022-12-19T08:00:00+00:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url><url>
@@ -715,6 +780,11 @@
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url><url>
+    <loc>https://kaban.my.id/javascript/tutorial/02-instalasi-persiapan/</loc>
+    <lastmod>2022-12-20T08:00:00+00:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url><url>
     <loc>https://kaban.my.id/html/tutorial/input/</loc>
     <lastmod>2021-12-06T08:49:31+00:00</lastmod>
     <changefreq>weekly</changefreq>
@@ -730,13 +800,28 @@
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url><url>
+    <loc>https://kaban.my.id/javascript/tutorial/03-sintaks-variabel/</loc>
+    <lastmod>2022-12-21T08:00:00+00:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url><url>
     <loc>https://kaban.my.id/html/tutorial/button/</loc>
     <lastmod>2021-12-06T08:49:31+00:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url><url>
+    <loc>https://kaban.my.id/javascript/tutorial/04-tipe-data-konversi/</loc>
+    <lastmod>2022-12-22T08:00:00+00:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url><url>
     <loc>https://kaban.my.id/html/tutorial/textarea/</loc>
     <lastmod>2021-12-06T08:49:31+00:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url><url>
+    <loc>https://kaban.my.id/javascript/tutorial/05-struktur-kontrol/</loc>
+    <lastmod>2022-12-23T08:00:00+00:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url><url>
@@ -747,6 +832,11 @@
   </url><url>
     <loc>https://kaban.my.id/css/tutorial/units/</loc>
     <lastmod>2021-12-06T08:49:31+00:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url><url>
+    <loc>https://kaban.my.id/javascript/tutorial/06-fungsi/</loc>
+    <lastmod>2022-12-24T08:00:00+00:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url><url>

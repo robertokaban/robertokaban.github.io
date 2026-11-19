@@ -1,0 +1,1298 @@
+<!doctype html>
+<html lang="en-US">
+  <head>
+  <meta charset="utf-8">
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <link rel="preload" as="font" href="https://kaban.my.id/fonts/vendor/jost/jost-v4-latin-regular.woff2" type="font/woff2" crossorigin>
+<link rel="preload" as="font" href="https://kaban.my.id/fonts/vendor/jost/jost-v4-latin-500.woff2" type="font/woff2" crossorigin>
+<link rel="preload" as="font" href="https://kaban.my.id/fonts/vendor/jost/jost-v4-latin-700.woff2" type="font/woff2" crossorigin>
+
+  <script>(()=>{var t=window.matchMedia&&window.matchMedia("(prefers-color-scheme: dark)").matches,e=localStorage.getItem("theme");t&&e===null&&(localStorage.setItem("theme","dark"),document.documentElement.setAttribute("data-dark-mode","")),t&&e==="dark"&&document.documentElement.setAttribute("data-dark-mode",""),e==="dark"&&document.documentElement.setAttribute("data-dark-mode","")})()</script>
+
+  <link rel="stylesheet" href="https://kaban.my.id/main.9f87974e4c1caf828d7f6300ecd98102083d1763683fe424f26c4c7b80fa72a094aa3c62fe333b5026c22ff50b82f74220d559e730c1f032fd8bcec957ac2bb4.css" integrity="sha512-n4eXTkwcr4KNf2MA7NmBAgg9F2NoP&#43;Qk8mxMe4D6cqCUqjxi/jM7UCbCL/ULgvdCINVZ5zDB8DL9i87JV6wrtA==" crossorigin="anonymous">
+<noscript><style>img.lazyload { display: none; }</style></noscript>
+  <meta name="robots" content="index, follow">
+    <meta name="googlebot" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1">
+    <meta name="bingbot" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1">
+  <title>Manajemen User &amp; Hak Akses - Roberto Kaban Blog&#39;s</title>
+<meta name="description" content="Panduan lengkap mengelola user, role, dan privilege di MySQL: CREATE USER, GRANT, REVOKE, dan best practice keamanan.">
+<link rel="canonical" href="https://kaban.my.id/mysql/tutorial/11-user-privilege/">
+<meta property="og:locale" content="en_US">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Manajemen User &amp; Hak Akses">
+<meta property="og:description" content="Panduan lengkap mengelola user, role, dan privilege di MySQL: CREATE USER, GRANT, REVOKE, dan best practice keamanan.">
+<meta property="og:url" content="https://kaban.my.id/mysql/tutorial/11-user-privilege/">
+<meta property="og:site_name" content="Roberto Kaban Blog&#39;s">
+<meta property="article:published_time" content="2022-12-16T08:00:00+00:00">
+  <meta property="article:modified_time" content="2022-12-16T08:00:00+00:00">
+  
+  <meta property="og:image" content="https://kaban.my.id/doks.png"/>
+      <meta property="og:image:alt" content="Roberto Kaban Blog&#39;s">
+    
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:site" content="@robertokaban">
+<meta name="twitter:creator" content="@robertokaban">
+<meta name="twitter:title" content="Manajemen User &amp; Hak Akses">
+<meta name="twitter:description" content="Panduan lengkap mengelola user, role, dan privilege di MySQL: CREATE USER, GRANT, REVOKE, dan best practice keamanan.">
+<meta name="twitter:image" content="https://kaban.my.id/doks.png">
+    <meta name="twitter:image:alt" content="Manajemen User &amp; Hak Akses">
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "Person",
+        "@id": "https://kaban.my.id/#/schema/person/1",
+      "name": "BlogRobertoKaban",
+      "url": "https://kaban.my.id/",
+      "sameAs": [
+        "https://twitter.com/robertokaban"
+        , "https://github.com/robertokaban"
+        ],
+      "image": {
+          "@type": "ImageObject",
+          "@id": "https://kaban.my.id/#/schema/image/1",
+          "url": "https://kaban.my.id/doks.png",
+          "width":  1280 ,
+          "height":  640 ,
+          "caption": "BlogRobertoKaban"
+        }
+      },
+    {
+      "@type": "WebSite",
+      "@id": "https://kaban.my.id/#/schema/website/1",
+      "url": "https://kaban.my.id/",
+      "name": "Roberto Kaban Blog\u0027s",
+      "description": "Hanya sebuah catatan kecil untuk hal yang tidak ingin dilupakan.",
+      "publisher": {
+          "@id": "https://kaban.my.id/#/schema/person/1"
+        }
+      },
+    {
+      "@type": "WebPage",
+      "@id": "https://kaban.my.id/mysql/tutorial/11-user-privilege/",
+      "url": "https://kaban.my.id/mysql/tutorial/11-user-privilege/",
+      "name": "Manajemen User \u0026 Hak Akses",
+      "description": "Panduan lengkap mengelola user, role, dan privilege di MySQL: CREATE USER, GRANT, REVOKE, dan best practice keamanan.",
+      "isPartOf": {
+        "@id": "https://kaban.my.id/#/schema/website/1"
+      },
+      "about": {
+          "@id": "https://kaban.my.id/#/schema/person/1"
+        },
+      "datePublished": "2022-12-16T08:00:00CET",
+      "dateModified": "2022-12-16T08:00:00CET",
+      "breadcrumb": {
+        "@id": "https://kaban.my.id/mysql/tutorial/11-user-privilege/#/schema/breadcrumb/1"
+      },
+      "primaryImageOfPage": {
+        "@id": "https://kaban.my.id/mysql/tutorial/11-user-privilege/#/schema/image/2"
+      },
+      "inLanguage": "en-US",
+      "potentialAction": [{
+        "@type": "ReadAction", "target": ["https://kaban.my.id/mysql/tutorial/11-user-privilege/"]
+      }]
+    },
+    {
+      "@type": "BreadcrumbList",
+      "@id": "https://kaban.my.id/mysql/tutorial/11-user-privilege/#/schema/breadcrumb/1",
+      "name": "Breadcrumbs",
+      "itemListElement": [{
+        "@type": "ListItem",
+        "position":  1 ,
+        "item": {
+          "@type": "WebPage",
+          "@id": "https://kaban.my.id/",
+          "url": "https://kaban.my.id/",
+          "name": "Home"
+          }
+        },{
+        "@type": "ListItem",
+        "position":  2 ,
+        "item": {
+          "@type": "WebPage",
+          "@id": "https://kaban.my.id/mysql/",
+          "url": "https://kaban.my.id/mysql/",
+          "name": "Mysql"
+          }
+        },{
+        "@type": "ListItem",
+        "position":  3 ,
+        "item": {
+          "@type": "WebPage",
+          "@id": "https://kaban.my.id/mysql/tutorial/",
+          "url": "https://kaban.my.id/mysql/tutorial/",
+          "name": "Tutorial"
+          }
+        },{
+        "@type": "ListItem",
+        "position":  4 ,
+        "item": {
+          "@id": "https://kaban.my.id/mysql/tutorial/11-user-privilege/"
+          }
+        }]
+    },
+
+    {
+      "@context": "https://schema.org",
+      "@graph": [
+        {
+          "@type": "ImageObject",
+          "@id": "https://kaban.my.id/mysql/tutorial/11-user-privilege/#/schema/image/2",
+          "url": "https://kaban.my.id/doks.png",
+          "contentUrl": "https://kaban.my.id/doks.png",
+          "caption": "Manajemen User \u0026 Hak Akses"
+        }
+      ]
+    }
+
+  ]
+}
+</script>
+
+  <meta name="theme-color" content="#fff">
+<link rel="icon" href="https://kaban.my.id/favicon.ico" sizes="any">
+<link rel="icon" type="image/svg+xml" href="https://kaban.my.id/favicon.svg">
+<link rel="apple-touch-icon" sizes="180x180" href="https://kaban.my.id/apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="32x32" href="https://kaban.my.id/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="https://kaban.my.id/favicon-16x16.png">
+<link rel="manifest" crossorigin="use-credentials" href="https://kaban.my.id/site.webmanifest">
+
+  
+
+
+  
+  
+  
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-60VSDZFQR5"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-60VSDZFQR5');
+</script>
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6664512614760985"
+     crossorigin="anonymous"></script>
+</head>
+
+  <body class="mysql single">
+    <div class="sticky-top">
+<div class="header-bar"></div>
+
+<header class="navbar navbar-expand-lg navbar-light doks-navbar">
+  <nav class="container-xxl flex-wrap flex-lg-nowrap" aria-label="Main navigation">
+
+    <a class="navbar-brand order-0" href="/" aria-label="Roberto Kaban Blog&#39;s">
+      Roberto Kaban Blog&#39;s
+    </a>
+
+    <button class="btn btn-menu order-2 d-block d-lg-none" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasDoks" aria-controls="offcanvasDoks" aria-label="Open main menu">
+      <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-menu"><line x1="3" y1="12" x2="21" y2="12"></line><line x1="3" y1="6" x2="21" y2="6"></line><line x1="3" y1="18" x2="21" y2="18"></line></svg>
+    </button>
+    <div class="offcanvas offcanvas-end border-0 py-lg-1" tabindex="-1" id="offcanvasDoks" data-bs-backdrop="true" aria-labelledby="offcanvasDoksLabel">
+      <div class="header-bar d-lg-none"></div>
+      <div class="offcanvas-header d-lg-none">
+        <h2 class="h5 offcanvas-title ps-2" id="offcanvasDoksLabel"><a class="text-dark" href="/">Roberto Kaban Blog&#39;s</a></h2>
+        <button type="button" class="btn-close text-reset me-2" data-bs-dismiss="offcanvas" aria-label="Close main menu"></button>
+      </div>
+      <div class="offcanvas-body p-4 p-lg-0">
+        <ul class="nav flex-column flex-lg-row align-items-lg-center mt-2 mt-lg-0 ms-lg-2 me-lg-auto">
+              <li class="nav-item">
+                <a class="nav-link ps-0 py-1" href="/about/">About Me</a>
+              </li>
+            
+          
+              <li class="nav-item">
+                <a class="nav-link ps-0 py-1" href="/contact/">Contact</a>
+              </li>
+            
+          
+              <li class="nav-item">
+                <a class="nav-link ps-0 py-1" href="/artikel/">Artikel</a>
+              </li>
+            
+          
+              <li class="nav-item">
+                <a class="nav-link ps-0 py-1" href="/coretanku/">Coretanku</a>
+              </li>
+            
+          </ul>
+
+        <hr class="text-black-50 my-4 d-lg-none">
+        <form class="doks-search position-relative flex-grow-1 ms-lg-auto me-lg-2">
+          <input id="search" class="form-control is-search" type="search" placeholder="Cari di blog ini..." aria-label="Cari di blog ini..." autocomplete="off">
+          <div id="suggestions" class="shadow bg-white rounded d-none"></div>
+        </form>
+        <hr class="text-black-50 my-4 d-lg-none">
+        <ul class="nav flex-column flex-lg-row">
+          <li class="nav-item">
+              <a class="nav-link social-link" href="https://github.com/robertokaban"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-github"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path></svg><small class="ms-2 d-lg-none">GitHub</small></a>
+            </li>
+          <li class="nav-item">
+              <a class="nav-link social-link" href="https://facebook.com/roberto.kaban"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-facebook"><path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"></path></svg><small class="ms-2 d-lg-none">Facebook</small></a>
+            </li>
+          <li class="nav-item">
+              <a class="nav-link social-link" href="https://twitter.com/robertokaban"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-twitter"><path d="M23 3a10.9 10.9 0 0 1-3.14 1.53 4.48 4.48 0 0 0-7.86 3v1A10.66 10.66 0 0 1 3 4s-4 9 5 13a11.64 11.64 0 0 1-7 2c9 5 20 0 20-11.5a4.5 4.5 0 0 0-.08-.83A7.72 7.72 0 0 0 23 3z"></path></svg><small class="ms-2 d-lg-none">Twitter</small></a>
+            </li>
+          <li class="nav-item">
+              <a class="nav-link social-link" href="https://youtube.com/@robertokaban"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-youtube"><path d="M10,15L15.19,12L10,9V15M21.56,7.17C21.69,7.64 21.78,8.27 21.84,9.07C21.91,9.87 21.94,10.56 21.94,11.16L22,12C22,14.19 21.84,15.8 21.56,16.83C21.31,17.73 20.73,18.31 19.83,18.56C19.36,18.69 18.5,18.78 17.18,18.84C15.88,18.91 14.69,18.94 13.59,18.94L12,19C7.81,19 5.2,18.84 4.17,18.56C3.27,18.31 2.69,17.73 2.44,16.83C2.31,16.36 2.22,15.73 2.16,14.93C2.09,14.13 2.06,13.44 2.06,12.84L2,12C2,9.81 2.16,8.2 2.44,7.17C2.69,6.27 3.27,5.69 4.17,5.44C4.64,5.31 5.5,5.22 6.82,5.16C8.12,5.09 9.31,5.06 10.41,5.06L12,5C16.19,5 18.8,5.16 19.83,5.44C20.73,5.69 21.31,6.27 21.56,7.17Z"></path></svg><small class="ms-2 d-lg-none">Youtube</small></a>
+            </li>
+          </ul>
+
+        
+        <hr class="text-black-50 my-4 d-lg-none">
+        <button id="mode" class="btn btn-link" type="button" aria-label="Toggle user interface mode">
+          <span class="toggle-dark"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-moon"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path></svg></span>
+          <span class="toggle-light"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-sun"><circle cx="12" cy="12" r="5"></circle><line x1="12" y1="1" x2="12" y2="3"></line><line x1="12" y1="21" x2="12" y2="23"></line><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line><line x1="1" y1="12" x2="3" y2="12"></line><line x1="21" y1="12" x2="23" y2="12"></line><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line></svg></span>
+        </button>
+        
+
+        </div>
+    </div>
+  </nav>
+</header>
+
+
+</div>
+
+
+<div class="container-xxl">
+  <aside class="doks-sidebar">
+    <nav id="doks-docs-nav" class="collapse d-lg-none" aria-label="Tertiary navigation">
+      
+<ul class="list-unstyled collapsible-sidebar">
+  
+    
+      
+      <li class="mb-1">
+        <button class="btn btn-toggle align-items-center rounded collapsed" data-bs-toggle="collapse" data-bs-target="#section-dd2f133c64f99bea60c3e743290ec287" aria-expanded="true">
+          Tutorial MySQL
+        </button>
+        <div class="collapse show" id="section-dd2f133c64f99bea60c3e743290ec287">
+          <ul class="btn-toggle-nav list-unstyled fw-normal pb-1 small">
+            
+              
+                
+                <li><a class="docs-link rounded" href="https://kaban.my.id/mysql/tutorial/pengenalan/">Pengenalan MySQL</a></li>
+              
+            
+              
+                
+                <li><a class="docs-link rounded" href="https://kaban.my.id/mysql/tutorial/02-instalasi/">Instalasi dan Konfigurasi MySQL</a></li>
+              
+            
+              
+                
+                <li><a class="docs-link rounded" href="https://kaban.my.id/mysql/tutorial/03-arsitektur/">Mengenal Arsitektur &amp; Komponen MySQL</a></li>
+              
+            
+              
+                
+                <li><a class="docs-link rounded" href="https://kaban.my.id/mysql/tutorial/04-database-table/">Perintah Dasar SQL: Database &amp; Table</a></li>
+              
+            
+              
+                
+                <li><a class="docs-link rounded" href="https://kaban.my.id/mysql/tutorial/05-crud/">Operasi CRUD (Create, Read, Update, Delete)</a></li>
+              
+            
+              
+                
+                <li><a class="docs-link rounded" href="https://kaban.my.id/mysql/tutorial/06-filtering-sorting/">Filtering &amp; Sorting Data</a></li>
+              
+            
+              
+                
+                <li><a class="docs-link rounded" href="https://kaban.my.id/mysql/tutorial/07-agregasi-grouping/">Fungsi Agregasi &amp; Grouping</a></li>
+              
+            
+              
+                
+                <li><a class="docs-link rounded" href="https://kaban.my.id/mysql/tutorial/08-join/">JOIN: Menggabungkan Tabel</a></li>
+              
+            
+              
+                
+                <li><a class="docs-link rounded" href="https://kaban.my.id/mysql/tutorial/09-subquery-union/">Subquery &amp; Union</a></li>
+              
+            
+              
+                
+                <li><a class="docs-link rounded" href="https://kaban.my.id/mysql/tutorial/10-view-index-procedure/">View, Index, dan Stored Procedure</a></li>
+              
+            
+              
+                
+                <li><a class="docs-link rounded active" href="https://kaban.my.id/mysql/tutorial/11-user-privilege/">Manajemen User &amp; Hak Akses</a></li>
+              
+            
+              
+                
+                <li><a class="docs-link rounded" href="https://kaban.my.id/mysql/tutorial/12-backup-restore/">Backup &amp; Restore Database</a></li>
+              
+            
+              
+                
+                <li><a class="docs-link rounded" href="https://kaban.my.id/mysql/tutorial/13-transaksi-acid/">Transaksi &amp; ACID</a></li>
+              
+            
+              
+                
+                <li><a class="docs-link rounded" href="https://kaban.my.id/mysql/tutorial/14-optimasi-performa/">Optimasi Performa MySQL</a></li>
+              
+            
+          </ul>
+        </div>
+      </li>
+    
+  
+</ul>
+
+    </nav>
+  </aside>
+</div>
+
+    <div class="wrap container-xxl" role="document">
+      <div class="content">
+        
+	<div class="row flex-xl-nowrap">
+		<div class="col-lg-5 col-xl-4 docs-sidebar d-none d-lg-block">
+			<nav class="docs-links" aria-label="Main navigation">
+				
+<ul class="list-unstyled collapsible-sidebar">
+  
+    
+      
+      <li class="mb-1">
+        <button class="btn btn-toggle align-items-center rounded collapsed" data-bs-toggle="collapse" data-bs-target="#section-dd2f133c64f99bea60c3e743290ec287" aria-expanded="true">
+          Tutorial MySQL
+        </button>
+        <div class="collapse show" id="section-dd2f133c64f99bea60c3e743290ec287">
+          <ul class="btn-toggle-nav list-unstyled fw-normal pb-1 small">
+            
+              
+                
+                <li><a class="docs-link rounded" href="https://kaban.my.id/mysql/tutorial/pengenalan/">Pengenalan MySQL</a></li>
+              
+            
+              
+                
+                <li><a class="docs-link rounded" href="https://kaban.my.id/mysql/tutorial/02-instalasi/">Instalasi dan Konfigurasi MySQL</a></li>
+              
+            
+              
+                
+                <li><a class="docs-link rounded" href="https://kaban.my.id/mysql/tutorial/03-arsitektur/">Mengenal Arsitektur &amp; Komponen MySQL</a></li>
+              
+            
+              
+                
+                <li><a class="docs-link rounded" href="https://kaban.my.id/mysql/tutorial/04-database-table/">Perintah Dasar SQL: Database &amp; Table</a></li>
+              
+            
+              
+                
+                <li><a class="docs-link rounded" href="https://kaban.my.id/mysql/tutorial/05-crud/">Operasi CRUD (Create, Read, Update, Delete)</a></li>
+              
+            
+              
+                
+                <li><a class="docs-link rounded" href="https://kaban.my.id/mysql/tutorial/06-filtering-sorting/">Filtering &amp; Sorting Data</a></li>
+              
+            
+              
+                
+                <li><a class="docs-link rounded" href="https://kaban.my.id/mysql/tutorial/07-agregasi-grouping/">Fungsi Agregasi &amp; Grouping</a></li>
+              
+            
+              
+                
+                <li><a class="docs-link rounded" href="https://kaban.my.id/mysql/tutorial/08-join/">JOIN: Menggabungkan Tabel</a></li>
+              
+            
+              
+                
+                <li><a class="docs-link rounded" href="https://kaban.my.id/mysql/tutorial/09-subquery-union/">Subquery &amp; Union</a></li>
+              
+            
+              
+                
+                <li><a class="docs-link rounded" href="https://kaban.my.id/mysql/tutorial/10-view-index-procedure/">View, Index, dan Stored Procedure</a></li>
+              
+            
+              
+                
+                <li><a class="docs-link rounded active" href="https://kaban.my.id/mysql/tutorial/11-user-privilege/">Manajemen User &amp; Hak Akses</a></li>
+              
+            
+              
+                
+                <li><a class="docs-link rounded" href="https://kaban.my.id/mysql/tutorial/12-backup-restore/">Backup &amp; Restore Database</a></li>
+              
+            
+              
+                
+                <li><a class="docs-link rounded" href="https://kaban.my.id/mysql/tutorial/13-transaksi-acid/">Transaksi &amp; ACID</a></li>
+              
+            
+              
+                
+                <li><a class="docs-link rounded" href="https://kaban.my.id/mysql/tutorial/14-optimasi-performa/">Optimasi Performa MySQL</a></li>
+              
+            
+          </ul>
+        </div>
+      </li>
+    
+  
+</ul>
+
+			</nav>
+		</div>
+		<nav class="docs-toc d-none d-xl-block col-xl-3" aria-label="Secondary navigation">
+			<div class="d-xl-none">
+  <button class="btn btn-outline-primary btn-sm doks-toc-toggle collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#onThisPage" aria-controls="doks-docs-nav" aria-expanded="false" aria-label="Toggle On this page navigation">
+    <span>Daftar isi</span>
+    <span>
+      <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" class="doks doks-expand" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><title>Expand</title><polyline points="7 13 12 18 17 13"></polyline><polyline points="7 6 12 11 17 6"></polyline></svg>
+      <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" class="doks doks-collapse" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><title>Collapse</title><polyline points="17 11 12 6 7 11"></polyline><polyline points="17 18 12 13 7 18"></polyline></svg>
+    </span>
+  </button>
+  <div class="collapse" id="onThisPage">
+    <div class="card card-body mt-3 py-1">
+      <div class="page-links">
+        <nav id="TableOfContents">
+  <ul>
+    <li><a href="#pendahuluan">Pendahuluan</a></li>
+    <li><a href="#konsep-dasar-user-host-dan-privilege">Konsep Dasar: User, Host, dan Privilege</a>
+      <ul>
+        <li><a href="#format-user-mysql">Format User MySQL</a></li>
+        <li><a href="#tingkatan-privilege">Tingkatan Privilege</a></li>
+      </ul>
+    </li>
+    <li><a href="#melihat-user-yang-ada">Melihat User yang Ada</a></li>
+    <li><a href="#membuat-user-baru">Membuat User Baru</a>
+      <ul>
+        <li><a href="#sintaks">Sintaks</a></li>
+        <li><a href="#contoh">Contoh</a></li>
+        <li><a href="#opsi-tambahan">Opsi Tambahan</a></li>
+        <li><a href="#mengubah-password-user">Mengubah Password User</a></li>
+        <li><a href="#menghapus-user">Menghapus User</a></li>
+      </ul>
+    </li>
+    <li><a href="#memberikan-privilege-dengan-grant">Memberikan Privilege dengan <code>GRANT</code></a>
+      <ul>
+        <li><a href="#sintaks-1">Sintaks</a></li>
+        <li><a href="#privilege-umum">Privilege Umum</a></li>
+        <li><a href="#contoh-1-user-read-only-pada-satu-database">Contoh 1: User Read-Only pada Satu Database</a></li>
+        <li><a href="#contoh-2-user-aplikasi-dengan-crud-terbatas">Contoh 2: User Aplikasi dengan CRUD Terbatas</a></li>
+        <li><a href="#contoh-3-privilege-pada-tabel-tertentu">Contoh 3: Privilege pada Tabel Tertentu</a></li>
+        <li><a href="#contoh-4-privilege-pada-kolom-tertentu">Contoh 4: Privilege pada Kolom Tertentu</a></li>
+        <li><a href="#contoh-5-privilege-global-hati-hati">Contoh 5: Privilege Global (Hati-hati!)</a></li>
+        <li><a href="#contoh-6-privilege-untuk-menjalankan-procedure">Contoh 6: Privilege untuk Menjalankan Procedure</a></li>
+        <li><a href="#setelah-grant-flush-privileges">Setelah <code>GRANT</code>: <code>FLUSH PRIVILEGES</code>?</a></li>
+      </ul>
+    </li>
+    <li><a href="#mencabut-privilege-dengan-revoke">Mencabut Privilege dengan <code>REVOKE</code></a>
+      <ul>
+        <li><a href="#sintaks-2">Sintaks</a></li>
+        <li><a href="#contoh-1">Contoh</a></li>
+        <li><a href="#melihat-privilege-setelah-revoke">Melihat Privilege Setelah <code>REVOKE</code></a></li>
+      </ul>
+    </li>
+    <li><a href="#role-manajemen-privilege-yang-lebih-rapi">Role: Manajemen Privilege yang Lebih Rapi</a>
+      <ul>
+        <li><a href="#membuat-role">Membuat Role</a></li>
+        <li><a href="#memberikan-privilege-ke-role">Memberikan Privilege ke Role</a></li>
+        <li><a href="#memberikan-role-ke-user">Memberikan Role ke User</a></li>
+        <li><a href="#mengaktifkan-role">Mengaktifkan Role</a></li>
+        <li><a href="#mencabut-role-dari-user">Mencabut Role dari User</a></li>
+        <li><a href="#menghapus-role">Menghapus Role</a></li>
+        <li><a href="#melihat-daftar-role">Melihat Daftar Role</a></li>
+      </ul>
+    </li>
+    <li><a href="#best-practice-keamanan">Best Practice Keamanan</a>
+      <ul>
+        <li><a href="#1-jangan-gunakan-root-untuk-aplikasi">1. Jangan Gunakan <code>root</code> untuk Aplikasi</a></li>
+        <li><a href="#2-batasi-host">2. Batasi Host</a></li>
+        <li><a href="#3-gunakan-password-kuat">3. Gunakan Password Kuat</a></li>
+        <li><a href="#4-pisahkan-user-berdasarkan-peran">4. Pisahkan User Berdasarkan Peran</a></li>
+        <li><a href="#5-audit-user-secara-berkala">5. Audit User Secara Berkala</a></li>
+        <li><a href="#6-batasi-akses-ke-tabel-sensitif">6. Batasi Akses ke Tabel Sensitif</a></li>
+        <li><a href="#7-gunakan-ssltls-untuk-koneksi-remote">7. Gunakan SSL/TLS untuk Koneksi Remote</a></li>
+        <li><a href="#8-log-aktivitas-penting">8. Log Aktivitas Penting</a></li>
+      </ul>
+    </li>
+    <li><a href="#contoh-lengkap-setup-user-untuk-aplikasi-toko-online">Contoh Lengkap: Setup User untuk Aplikasi Toko Online</a>
+      <ul>
+        <li><a href="#menguji-akses">Menguji Akses</a></li>
+      </ul>
+    </li>
+    <li><a href="#ringkasan">Ringkasan</a></li>
+  </ul>
+</nav>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="page-links d-none d-xl-block">
+  <h3>Daftar isi</h3>
+  <nav id="TableOfContents">
+  <ul>
+    <li><a href="#pendahuluan">Pendahuluan</a></li>
+    <li><a href="#konsep-dasar-user-host-dan-privilege">Konsep Dasar: User, Host, dan Privilege</a>
+      <ul>
+        <li><a href="#format-user-mysql">Format User MySQL</a></li>
+        <li><a href="#tingkatan-privilege">Tingkatan Privilege</a></li>
+      </ul>
+    </li>
+    <li><a href="#melihat-user-yang-ada">Melihat User yang Ada</a></li>
+    <li><a href="#membuat-user-baru">Membuat User Baru</a>
+      <ul>
+        <li><a href="#sintaks">Sintaks</a></li>
+        <li><a href="#contoh">Contoh</a></li>
+        <li><a href="#opsi-tambahan">Opsi Tambahan</a></li>
+        <li><a href="#mengubah-password-user">Mengubah Password User</a></li>
+        <li><a href="#menghapus-user">Menghapus User</a></li>
+      </ul>
+    </li>
+    <li><a href="#memberikan-privilege-dengan-grant">Memberikan Privilege dengan <code>GRANT</code></a>
+      <ul>
+        <li><a href="#sintaks-1">Sintaks</a></li>
+        <li><a href="#privilege-umum">Privilege Umum</a></li>
+        <li><a href="#contoh-1-user-read-only-pada-satu-database">Contoh 1: User Read-Only pada Satu Database</a></li>
+        <li><a href="#contoh-2-user-aplikasi-dengan-crud-terbatas">Contoh 2: User Aplikasi dengan CRUD Terbatas</a></li>
+        <li><a href="#contoh-3-privilege-pada-tabel-tertentu">Contoh 3: Privilege pada Tabel Tertentu</a></li>
+        <li><a href="#contoh-4-privilege-pada-kolom-tertentu">Contoh 4: Privilege pada Kolom Tertentu</a></li>
+        <li><a href="#contoh-5-privilege-global-hati-hati">Contoh 5: Privilege Global (Hati-hati!)</a></li>
+        <li><a href="#contoh-6-privilege-untuk-menjalankan-procedure">Contoh 6: Privilege untuk Menjalankan Procedure</a></li>
+        <li><a href="#setelah-grant-flush-privileges">Setelah <code>GRANT</code>: <code>FLUSH PRIVILEGES</code>?</a></li>
+      </ul>
+    </li>
+    <li><a href="#mencabut-privilege-dengan-revoke">Mencabut Privilege dengan <code>REVOKE</code></a>
+      <ul>
+        <li><a href="#sintaks-2">Sintaks</a></li>
+        <li><a href="#contoh-1">Contoh</a></li>
+        <li><a href="#melihat-privilege-setelah-revoke">Melihat Privilege Setelah <code>REVOKE</code></a></li>
+      </ul>
+    </li>
+    <li><a href="#role-manajemen-privilege-yang-lebih-rapi">Role: Manajemen Privilege yang Lebih Rapi</a>
+      <ul>
+        <li><a href="#membuat-role">Membuat Role</a></li>
+        <li><a href="#memberikan-privilege-ke-role">Memberikan Privilege ke Role</a></li>
+        <li><a href="#memberikan-role-ke-user">Memberikan Role ke User</a></li>
+        <li><a href="#mengaktifkan-role">Mengaktifkan Role</a></li>
+        <li><a href="#mencabut-role-dari-user">Mencabut Role dari User</a></li>
+        <li><a href="#menghapus-role">Menghapus Role</a></li>
+        <li><a href="#melihat-daftar-role">Melihat Daftar Role</a></li>
+      </ul>
+    </li>
+    <li><a href="#best-practice-keamanan">Best Practice Keamanan</a>
+      <ul>
+        <li><a href="#1-jangan-gunakan-root-untuk-aplikasi">1. Jangan Gunakan <code>root</code> untuk Aplikasi</a></li>
+        <li><a href="#2-batasi-host">2. Batasi Host</a></li>
+        <li><a href="#3-gunakan-password-kuat">3. Gunakan Password Kuat</a></li>
+        <li><a href="#4-pisahkan-user-berdasarkan-peran">4. Pisahkan User Berdasarkan Peran</a></li>
+        <li><a href="#5-audit-user-secara-berkala">5. Audit User Secara Berkala</a></li>
+        <li><a href="#6-batasi-akses-ke-tabel-sensitif">6. Batasi Akses ke Tabel Sensitif</a></li>
+        <li><a href="#7-gunakan-ssltls-untuk-koneksi-remote">7. Gunakan SSL/TLS untuk Koneksi Remote</a></li>
+        <li><a href="#8-log-aktivitas-penting">8. Log Aktivitas Penting</a></li>
+      </ul>
+    </li>
+    <li><a href="#contoh-lengkap-setup-user-untuk-aplikasi-toko-online">Contoh Lengkap: Setup User untuk Aplikasi Toko Online</a>
+      <ul>
+        <li><a href="#menguji-akses">Menguji Akses</a></li>
+      </ul>
+    </li>
+    <li><a href="#ringkasan">Ringkasan</a></li>
+  </ul>
+</nav>
+  </div>
+
+		</nav>
+		<main class="docs-content col-lg-11 col-xl-9">
+		
+				<nav aria-label="breadcrumb">
+					<ol class="breadcrumb">
+						<li class="breadcrumb-item"><a href="/">Home</a></li>
+<li class="breadcrumb-item"><a href="/mysql/">Mysql</a></li>
+<li class="breadcrumb-item"><a href="/mysql/tutorial/">Tutorial MySQL</a></li>
+<li class="breadcrumb-item active" aria-current="page">Manajemen User &amp; Hak Akses</li>
+					</ol>
+				</nav>
+			
+			<h1>Manajemen User &amp; Hak Akses</h1>
+			<p class="lead">Keamanan database dimulai dari pengelolaan user dan hak akses yang tepat. Artikel ini membahas cara membuat user, memberikan privilege, mencabut akses, serta menggunakan role untuk manajemen yang lebih rapi.</p>
+			<nav class="d-xl-none" aria-label="Quaternary navigation">
+				<div class="d-xl-none">
+  <button class="btn btn-outline-primary btn-sm doks-toc-toggle collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#onThisPage" aria-controls="doks-docs-nav" aria-expanded="false" aria-label="Toggle On this page navigation">
+    <span>Daftar isi</span>
+    <span>
+      <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" class="doks doks-expand" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><title>Expand</title><polyline points="7 13 12 18 17 13"></polyline><polyline points="7 6 12 11 17 6"></polyline></svg>
+      <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" class="doks doks-collapse" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><title>Collapse</title><polyline points="17 11 12 6 7 11"></polyline><polyline points="17 18 12 13 7 18"></polyline></svg>
+    </span>
+  </button>
+  <div class="collapse" id="onThisPage">
+    <div class="card card-body mt-3 py-1">
+      <div class="page-links">
+        <nav id="TableOfContents">
+  <ul>
+    <li><a href="#pendahuluan">Pendahuluan</a></li>
+    <li><a href="#konsep-dasar-user-host-dan-privilege">Konsep Dasar: User, Host, dan Privilege</a>
+      <ul>
+        <li><a href="#format-user-mysql">Format User MySQL</a></li>
+        <li><a href="#tingkatan-privilege">Tingkatan Privilege</a></li>
+      </ul>
+    </li>
+    <li><a href="#melihat-user-yang-ada">Melihat User yang Ada</a></li>
+    <li><a href="#membuat-user-baru">Membuat User Baru</a>
+      <ul>
+        <li><a href="#sintaks">Sintaks</a></li>
+        <li><a href="#contoh">Contoh</a></li>
+        <li><a href="#opsi-tambahan">Opsi Tambahan</a></li>
+        <li><a href="#mengubah-password-user">Mengubah Password User</a></li>
+        <li><a href="#menghapus-user">Menghapus User</a></li>
+      </ul>
+    </li>
+    <li><a href="#memberikan-privilege-dengan-grant">Memberikan Privilege dengan <code>GRANT</code></a>
+      <ul>
+        <li><a href="#sintaks-1">Sintaks</a></li>
+        <li><a href="#privilege-umum">Privilege Umum</a></li>
+        <li><a href="#contoh-1-user-read-only-pada-satu-database">Contoh 1: User Read-Only pada Satu Database</a></li>
+        <li><a href="#contoh-2-user-aplikasi-dengan-crud-terbatas">Contoh 2: User Aplikasi dengan CRUD Terbatas</a></li>
+        <li><a href="#contoh-3-privilege-pada-tabel-tertentu">Contoh 3: Privilege pada Tabel Tertentu</a></li>
+        <li><a href="#contoh-4-privilege-pada-kolom-tertentu">Contoh 4: Privilege pada Kolom Tertentu</a></li>
+        <li><a href="#contoh-5-privilege-global-hati-hati">Contoh 5: Privilege Global (Hati-hati!)</a></li>
+        <li><a href="#contoh-6-privilege-untuk-menjalankan-procedure">Contoh 6: Privilege untuk Menjalankan Procedure</a></li>
+        <li><a href="#setelah-grant-flush-privileges">Setelah <code>GRANT</code>: <code>FLUSH PRIVILEGES</code>?</a></li>
+      </ul>
+    </li>
+    <li><a href="#mencabut-privilege-dengan-revoke">Mencabut Privilege dengan <code>REVOKE</code></a>
+      <ul>
+        <li><a href="#sintaks-2">Sintaks</a></li>
+        <li><a href="#contoh-1">Contoh</a></li>
+        <li><a href="#melihat-privilege-setelah-revoke">Melihat Privilege Setelah <code>REVOKE</code></a></li>
+      </ul>
+    </li>
+    <li><a href="#role-manajemen-privilege-yang-lebih-rapi">Role: Manajemen Privilege yang Lebih Rapi</a>
+      <ul>
+        <li><a href="#membuat-role">Membuat Role</a></li>
+        <li><a href="#memberikan-privilege-ke-role">Memberikan Privilege ke Role</a></li>
+        <li><a href="#memberikan-role-ke-user">Memberikan Role ke User</a></li>
+        <li><a href="#mengaktifkan-role">Mengaktifkan Role</a></li>
+        <li><a href="#mencabut-role-dari-user">Mencabut Role dari User</a></li>
+        <li><a href="#menghapus-role">Menghapus Role</a></li>
+        <li><a href="#melihat-daftar-role">Melihat Daftar Role</a></li>
+      </ul>
+    </li>
+    <li><a href="#best-practice-keamanan">Best Practice Keamanan</a>
+      <ul>
+        <li><a href="#1-jangan-gunakan-root-untuk-aplikasi">1. Jangan Gunakan <code>root</code> untuk Aplikasi</a></li>
+        <li><a href="#2-batasi-host">2. Batasi Host</a></li>
+        <li><a href="#3-gunakan-password-kuat">3. Gunakan Password Kuat</a></li>
+        <li><a href="#4-pisahkan-user-berdasarkan-peran">4. Pisahkan User Berdasarkan Peran</a></li>
+        <li><a href="#5-audit-user-secara-berkala">5. Audit User Secara Berkala</a></li>
+        <li><a href="#6-batasi-akses-ke-tabel-sensitif">6. Batasi Akses ke Tabel Sensitif</a></li>
+        <li><a href="#7-gunakan-ssltls-untuk-koneksi-remote">7. Gunakan SSL/TLS untuk Koneksi Remote</a></li>
+        <li><a href="#8-log-aktivitas-penting">8. Log Aktivitas Penting</a></li>
+      </ul>
+    </li>
+    <li><a href="#contoh-lengkap-setup-user-untuk-aplikasi-toko-online">Contoh Lengkap: Setup User untuk Aplikasi Toko Online</a>
+      <ul>
+        <li><a href="#menguji-akses">Menguji Akses</a></li>
+      </ul>
+    </li>
+    <li><a href="#ringkasan">Ringkasan</a></li>
+  </ul>
+</nav>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="page-links d-none d-xl-block">
+  <h3>Daftar isi</h3>
+  <nav id="TableOfContents">
+  <ul>
+    <li><a href="#pendahuluan">Pendahuluan</a></li>
+    <li><a href="#konsep-dasar-user-host-dan-privilege">Konsep Dasar: User, Host, dan Privilege</a>
+      <ul>
+        <li><a href="#format-user-mysql">Format User MySQL</a></li>
+        <li><a href="#tingkatan-privilege">Tingkatan Privilege</a></li>
+      </ul>
+    </li>
+    <li><a href="#melihat-user-yang-ada">Melihat User yang Ada</a></li>
+    <li><a href="#membuat-user-baru">Membuat User Baru</a>
+      <ul>
+        <li><a href="#sintaks">Sintaks</a></li>
+        <li><a href="#contoh">Contoh</a></li>
+        <li><a href="#opsi-tambahan">Opsi Tambahan</a></li>
+        <li><a href="#mengubah-password-user">Mengubah Password User</a></li>
+        <li><a href="#menghapus-user">Menghapus User</a></li>
+      </ul>
+    </li>
+    <li><a href="#memberikan-privilege-dengan-grant">Memberikan Privilege dengan <code>GRANT</code></a>
+      <ul>
+        <li><a href="#sintaks-1">Sintaks</a></li>
+        <li><a href="#privilege-umum">Privilege Umum</a></li>
+        <li><a href="#contoh-1-user-read-only-pada-satu-database">Contoh 1: User Read-Only pada Satu Database</a></li>
+        <li><a href="#contoh-2-user-aplikasi-dengan-crud-terbatas">Contoh 2: User Aplikasi dengan CRUD Terbatas</a></li>
+        <li><a href="#contoh-3-privilege-pada-tabel-tertentu">Contoh 3: Privilege pada Tabel Tertentu</a></li>
+        <li><a href="#contoh-4-privilege-pada-kolom-tertentu">Contoh 4: Privilege pada Kolom Tertentu</a></li>
+        <li><a href="#contoh-5-privilege-global-hati-hati">Contoh 5: Privilege Global (Hati-hati!)</a></li>
+        <li><a href="#contoh-6-privilege-untuk-menjalankan-procedure">Contoh 6: Privilege untuk Menjalankan Procedure</a></li>
+        <li><a href="#setelah-grant-flush-privileges">Setelah <code>GRANT</code>: <code>FLUSH PRIVILEGES</code>?</a></li>
+      </ul>
+    </li>
+    <li><a href="#mencabut-privilege-dengan-revoke">Mencabut Privilege dengan <code>REVOKE</code></a>
+      <ul>
+        <li><a href="#sintaks-2">Sintaks</a></li>
+        <li><a href="#contoh-1">Contoh</a></li>
+        <li><a href="#melihat-privilege-setelah-revoke">Melihat Privilege Setelah <code>REVOKE</code></a></li>
+      </ul>
+    </li>
+    <li><a href="#role-manajemen-privilege-yang-lebih-rapi">Role: Manajemen Privilege yang Lebih Rapi</a>
+      <ul>
+        <li><a href="#membuat-role">Membuat Role</a></li>
+        <li><a href="#memberikan-privilege-ke-role">Memberikan Privilege ke Role</a></li>
+        <li><a href="#memberikan-role-ke-user">Memberikan Role ke User</a></li>
+        <li><a href="#mengaktifkan-role">Mengaktifkan Role</a></li>
+        <li><a href="#mencabut-role-dari-user">Mencabut Role dari User</a></li>
+        <li><a href="#menghapus-role">Menghapus Role</a></li>
+        <li><a href="#melihat-daftar-role">Melihat Daftar Role</a></li>
+      </ul>
+    </li>
+    <li><a href="#best-practice-keamanan">Best Practice Keamanan</a>
+      <ul>
+        <li><a href="#1-jangan-gunakan-root-untuk-aplikasi">1. Jangan Gunakan <code>root</code> untuk Aplikasi</a></li>
+        <li><a href="#2-batasi-host">2. Batasi Host</a></li>
+        <li><a href="#3-gunakan-password-kuat">3. Gunakan Password Kuat</a></li>
+        <li><a href="#4-pisahkan-user-berdasarkan-peran">4. Pisahkan User Berdasarkan Peran</a></li>
+        <li><a href="#5-audit-user-secara-berkala">5. Audit User Secara Berkala</a></li>
+        <li><a href="#6-batasi-akses-ke-tabel-sensitif">6. Batasi Akses ke Tabel Sensitif</a></li>
+        <li><a href="#7-gunakan-ssltls-untuk-koneksi-remote">7. Gunakan SSL/TLS untuk Koneksi Remote</a></li>
+        <li><a href="#8-log-aktivitas-penting">8. Log Aktivitas Penting</a></li>
+      </ul>
+    </li>
+    <li><a href="#contoh-lengkap-setup-user-untuk-aplikasi-toko-online">Contoh Lengkap: Setup User untuk Aplikasi Toko Online</a>
+      <ul>
+        <li><a href="#menguji-akses">Menguji Akses</a></li>
+      </ul>
+    </li>
+    <li><a href="#ringkasan">Ringkasan</a></li>
+  </ul>
+</nav>
+  </div>
+
+			</nav>
+			<h2 id="pendahuluan">Pendahuluan <a href="#pendahuluan" class="anchor" aria-hidden="true">#</a></h2>
+<p>Sejauh ini kita selalu terhubung ke MySQL menggunakan user <code>root</code>. Padahal, menggunakan <code>root</code> untuk aplikasi sehari-hari adalah <strong>praktik yang sangat berbahaya</strong> — <code>root</code> memiliki akses tak terbatas, dan jika kredensialnya bocor, seluruh server bisa dikompromikan.</p>
+<p>Praktik yang benar adalah <strong>principle of least privilege</strong>: setiap user hanya diberi hak akses seminimal mungkin yang dibutuhkan untuk tugasnya. Artikel ini membahas cara membuat user, memberikan privilege, mencabutnya, serta menggunakan <strong>role</strong> untuk manajemen yang lebih rapi.</p>
+<blockquote>
+<p><strong>Asumsi:</strong> Anda terhubung sebagai user dengan hak administratif (misalnya <code>root</code>) untuk menjalankan perintah di artikel ini.</p>
+</blockquote>
+<hr>
+<h2 id="konsep-dasar-user-host-dan-privilege">Konsep Dasar: User, Host, dan Privilege <a href="#konsep-dasar-user-host-dan-privilege" class="anchor" aria-hidden="true">#</a></h2>
+<h3 id="format-user-mysql">Format User MySQL <a href="#format-user-mysql" class="anchor" aria-hidden="true">#</a></h3>
+<p>Di MySQL, user diidentifikasi oleh <strong>kombinasi username dan host</strong>:</p>
+<pre><code>'username'@'host'
+</code></pre>
+<p>Contoh:</p>
+<ul>
+<li><code>'app_user'@'localhost'</code> — hanya bisa connect dari server lokal.</li>
+<li><code>'app_user'@'192.168.1.%'</code> — bisa connect dari jaringan <code>192.168.1.x</code>.</li>
+<li><code>'app_user'@'%'</code> — bisa connect dari mana saja (kurang aman).</li>
+</ul>
+<blockquote>
+<p>⚠️ <strong>Peringatan:</strong> <code>'user'@'%'</code> membuka akses dari seluruh internet. Gunakan hanya jika benar-benar diperlukan dan server dilindungi firewall.</p>
+</blockquote>
+<h3 id="tingkatan-privilege">Tingkatan Privilege <a href="#tingkatan-privilege" class="anchor" aria-hidden="true">#</a></h3>
+<p>Privilege di MySQL bisa diberikan pada beberapa tingkatan:</p>
+<table>
+<thead>
+<tr>
+<th>Tingkatan</th>
+<th>Contoh</th>
+<th>Cakupan</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Global</strong></td>
+<td><code>ON *.*</code></td>
+<td>Semua database di server</td>
+</tr>
+<tr>
+<td><strong>Database</strong></td>
+<td><code>ON toko_online.*</code></td>
+<td>Semua tabel di satu database</td>
+</tr>
+<tr>
+<td><strong>Tabel</strong></td>
+<td><code>ON toko_online.produk</code></td>
+<td>Satu tabel tertentu</td>
+</tr>
+<tr>
+<td><strong>Kolom</strong></td>
+<td><code>(nama, harga)</code></td>
+<td>Kolom tertentu dalam tabel</td>
+</tr>
+<tr>
+<td><strong>Routine</strong></td>
+<td><code>ON PROCEDURE ...</code></td>
+<td>Stored procedure / function</td>
+</tr>
+</tbody>
+</table>
+<p>Semakin spesifik tingkatan, semakin aman (least privilege).</p>
+<hr>
+<h2 id="melihat-user-yang-ada">Melihat User yang Ada <a href="#melihat-user-yang-ada" class="anchor" aria-hidden="true">#</a></h2>
+<pre><code class="language-sql">SELECT user, host FROM mysql.user;
+</code></pre>
+<p>Atau untuk informasi lebih lengkap:</p>
+<pre><code class="language-sql">SELECT user, host, account_locked, password_expired FROM mysql.user;
+</code></pre>
+<p>Melihat privilege user tertentu:</p>
+<pre><code class="language-sql">SHOW GRANTS FOR 'app_user'@'localhost';
+</code></pre>
+<hr>
+<h2 id="membuat-user-baru">Membuat User Baru <a href="#membuat-user-baru" class="anchor" aria-hidden="true">#</a></h2>
+<h3 id="sintaks">Sintaks <a href="#sintaks" class="anchor" aria-hidden="true">#</a></h3>
+<pre><code class="language-sql">CREATE USER 'username'@'host' IDENTIFIED BY 'password';
+</code></pre>
+<h3 id="contoh">Contoh <a href="#contoh" class="anchor" aria-hidden="true">#</a></h3>
+<p><strong>User untuk aplikasi lokal:</strong></p>
+<pre><code class="language-sql">CREATE USER 'app_user'@'localhost' IDENTIFIED BY 'P@ssw0rdKuat!2022';
+</code></pre>
+<p><strong>User untuk aplikasi dari jaringan tertentu:</strong></p>
+<pre><code class="language-sql">CREATE USER 'app_user'@'192.168.1.%' IDENTIFIED BY 'P@ssw0rdKuat!2022';
+</code></pre>
+<p><strong>Membuat beberapa user sekaligus:</strong></p>
+<pre><code class="language-sql">CREATE USER
+  'admin_toko'@'localhost' IDENTIFIED BY 'AdminP@ss!2022',
+  'readonly_user'@'localhost' IDENTIFIED BY 'ReadOnlyP@ss!2022';
+</code></pre>
+<h3 id="opsi-tambahan">Opsi Tambahan <a href="#opsi-tambahan" class="anchor" aria-hidden="true">#</a></h3>
+<p><strong>Membatasi jumlah koneksi simultan:</strong></p>
+<pre><code class="language-sql">CREATE USER 'app_user'@'localhost'
+  IDENTIFIED BY 'P@ssw0rdKuat!2022'
+  WITH MAX_CONNECTIONS_PER_HOUR 100
+       MAX_USER_CONNECTIONS 10;
+</code></pre>
+<p><strong>Membatasi sumber koneksi (MySQL 8.0.14+):</strong></p>
+<pre><code class="language-sql">CREATE USER 'app_user'@'%'
+  IDENTIFIED BY 'P@ssw0rdKuat!2022'
+  REQUIRE CIPHER 'ECDHE-RSA-AES256-SHA384';
+</code></pre>
+<h3 id="mengubah-password-user">Mengubah Password User <a href="#mengubah-password-user" class="anchor" aria-hidden="true">#</a></h3>
+<pre><code class="language-sql">ALTER USER 'app_user'@'localhost' IDENTIFIED BY 'PasswordBaru!2022';
+</code></pre>
+<p>Untuk user yang sedang login:</p>
+<pre><code class="language-sql">ALTER USER USER() IDENTIFIED BY 'PasswordBaru!2022';
+</code></pre>
+<h3 id="menghapus-user">Menghapus User <a href="#menghapus-user" class="anchor" aria-hidden="true">#</a></h3>
+<pre><code class="language-sql">DROP USER 'app_user'@'localhost';
+</code></pre>
+<p>Atau dengan pengaman:</p>
+<pre><code class="language-sql">DROP USER IF EXISTS 'app_user'@'localhost';
+</code></pre>
+<blockquote>
+<p><strong>Tips:</strong> Setelah <code>DROP USER</code>, privilege user tersebut otomatis dicabut. Tidak perlu <code>REVOKE</code> manual.</p>
+</blockquote>
+<hr>
+<h2 id="memberikan-privilege-dengan-grant">Memberikan Privilege dengan <code>GRANT</code> <a href="#memberikan-privilege-dengan-grant" class="anchor" aria-hidden="true">#</a></h2>
+<h3 id="sintaks-1">Sintaks <a href="#sintaks-1" class="anchor" aria-hidden="true">#</a></h3>
+<pre><code class="language-sql">GRANT privilege ON objek TO 'username'@'host';
+</code></pre>
+<h3 id="privilege-umum">Privilege Umum <a href="#privilege-umum" class="anchor" aria-hidden="true">#</a></h3>
+<table>
+<thead>
+<tr>
+<th>Privilege</th>
+<th>Kegunaan</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>ALL PRIVILEGES</code></td>
+<td>Semua hak (hati-hati!)</td>
+</tr>
+<tr>
+<td><code>SELECT</code></td>
+<td>Membaca data</td>
+</tr>
+<tr>
+<td><code>INSERT</code></td>
+<td>Menambah data</td>
+</tr>
+<tr>
+<td><code>UPDATE</code></td>
+<td>Mengubah data</td>
+</tr>
+<tr>
+<td><code>DELETE</code></td>
+<td>Menghapus data</td>
+</tr>
+<tr>
+<td><code>CREATE</code></td>
+<td>Membuat tabel/database</td>
+</tr>
+<tr>
+<td><code>DROP</code></td>
+<td>Menghapus tabel/database</td>
+</tr>
+<tr>
+<td><code>ALTER</code></td>
+<td>Mengubah struktur</td>
+</tr>
+<tr>
+<td><code>INDEX</code></td>
+<td>Membuat/menghapus index</td>
+</tr>
+<tr>
+<td><code>CREATE VIEW</code></td>
+<td>Membuat view</td>
+</tr>
+<tr>
+<td><code>SHOW VIEW</code></td>
+<td>Melihat definisi view</td>
+</tr>
+<tr>
+<td><code>EXECUTE</code></td>
+<td>Menjalankan procedure/function</td>
+</tr>
+<tr>
+<td><code>TRIGGER</code></td>
+<td>Membuat/menghapus trigger</td>
+</tr>
+<tr>
+<td><code>CREATE USER</code></td>
+<td>Membuat user</td>
+</tr>
+<tr>
+<td><code>GRANT OPTION</code></td>
+<td>Memberi hak ke user lain</td>
+</tr>
+</tbody>
+</table>
+<h3 id="contoh-1-user-read-only-pada-satu-database">Contoh 1: User Read-Only pada Satu Database <a href="#contoh-1-user-read-only-pada-satu-database" class="anchor" aria-hidden="true">#</a></h3>
+<pre><code class="language-sql">GRANT SELECT ON toko_online.* TO 'readonly_user'@'localhost';
+</code></pre>
+<p>Hanya bisa membaca semua tabel di <code>toko_online</code>.</p>
+<h3 id="contoh-2-user-aplikasi-dengan-crud-terbatas">Contoh 2: User Aplikasi dengan CRUD Terbatas <a href="#contoh-2-user-aplikasi-dengan-crud-terbatas" class="anchor" aria-hidden="true">#</a></h3>
+<pre><code class="language-sql">GRANT SELECT, INSERT, UPDATE, DELETE ON toko_online.* TO 'app_user'@'localhost';
+</code></pre>
+<p>Bisa membaca dan memodifikasi <strong>data</strong>, tetapi <strong>tidak</strong> bisa mengubah struktur (<code>CREATE</code>, <code>DROP</code>, <code>ALTER</code>).</p>
+<h3 id="contoh-3-privilege-pada-tabel-tertentu">Contoh 3: Privilege pada Tabel Tertentu <a href="#contoh-3-privilege-pada-tabel-tertentu" class="anchor" aria-hidden="true">#</a></h3>
+<pre><code class="language-sql">GRANT SELECT, INSERT ON toko_online.pelanggan TO 'marketing_user'@'localhost';
+GRANT SELECT ON toko_online.produk TO 'marketing_user'@'localhost';
+</code></pre>
+<p><code>marketing_user</code> hanya bisa mengakses tabel <code>pelanggan</code> dan <code>produk</code>, bukan tabel lain.</p>
+<h3 id="contoh-4-privilege-pada-kolom-tertentu">Contoh 4: Privilege pada Kolom Tertentu <a href="#contoh-4-privilege-pada-kolom-tertentu" class="anchor" aria-hidden="true">#</a></h3>
+<pre><code class="language-sql">GRANT SELECT (id, nama, email) ON toko_online.pelanggan TO 'support_user'@'localhost';
+</code></pre>
+<p><code>support_user</code> hanya bisa membaca tiga kolom tersebut, bukan kolom <code>telepon</code> atau lainnya.</p>
+<h3 id="contoh-5-privilege-global-hati-hati">Contoh 5: Privilege Global (Hati-hati!) <a href="#contoh-5-privilege-global-hati-hati" class="anchor" aria-hidden="true">#</a></h3>
+<pre><code class="language-sql">GRANT ALL PRIVILEGES ON *.* TO 'admin_user'@'localhost' WITH GRANT OPTION;
+</code></pre>
+<p>Memberi <strong>semua</strong> hak di <strong>semua</strong> database, plus kemampuan memberi hak ke user lain. Gunakan hanya untuk administrator tepercaya.</p>
+<h3 id="contoh-6-privilege-untuk-menjalankan-procedure">Contoh 6: Privilege untuk Menjalankan Procedure <a href="#contoh-6-privilege-untuk-menjalankan-procedure" class="anchor" aria-hidden="true">#</a></h3>
+<pre><code class="language-sql">GRANT EXECUTE ON PROCEDURE toko_online.sp_semua_produk TO 'app_user'@'localhost';
+</code></pre>
+<h3 id="setelah-grant-flush-privileges">Setelah <code>GRANT</code>: <code>FLUSH PRIVILEGES</code>? <a href="#setelah-grant-flush-privileges" class="anchor" aria-hidden="true">#</a></h3>
+<p>Jika Anda menggunakan perintah <code>GRANT</code> dan <code>REVOKE</code> (bukan memodifikasi tabel <code>mysql.user</code> secara langsung), <strong><code>FLUSH PRIVILEGES</code> tidak diperlukan</strong>. MySQL otomatis memuat ulang privilege.</p>
+<p><code>FLUSH PRIVILEGES</code> hanya diperlukan jika Anda mengubah tabel grant secara langsung dengan <code>INSERT</code>/<code>UPDATE</code>/<code>DELETE</code>:</p>
+<pre><code class="language-sql">FLUSH PRIVILEGES;
+</code></pre>
+<hr>
+<h2 id="mencabut-privilege-dengan-revoke">Mencabut Privilege dengan <code>REVOKE</code> <a href="#mencabut-privilege-dengan-revoke" class="anchor" aria-hidden="true">#</a></h2>
+<h3 id="sintaks-2">Sintaks <a href="#sintaks-2" class="anchor" aria-hidden="true">#</a></h3>
+<pre><code class="language-sql">REVOKE privilege ON objek FROM 'username'@'host';
+</code></pre>
+<h3 id="contoh-1">Contoh <a href="#contoh-1" class="anchor" aria-hidden="true">#</a></h3>
+<p><strong>Mencabut hak <code>DELETE</code>:</strong></p>
+<pre><code class="language-sql">REVOKE DELETE ON toko_online.* FROM 'app_user'@'localhost';
+</code></pre>
+<p><strong>Mencabut semua hak pada database:</strong></p>
+<pre><code class="language-sql">REVOKE ALL PRIVILEGES ON toko_online.* FROM 'app_user'@'localhost';
+</code></pre>
+<p><strong>Mencabut <code>GRANT OPTION</code>:</strong></p>
+<pre><code class="language-sql">REVOKE GRANT OPTION ON toko_online.* FROM 'admin_user'@'localhost';
+</code></pre>
+<h3 id="melihat-privilege-setelah-revoke">Melihat Privilege Setelah <code>REVOKE</code> <a href="#melihat-privilege-setelah-revoke" class="anchor" aria-hidden="true">#</a></h3>
+<pre><code class="language-sql">SHOW GRANTS FOR 'app_user'@'localhost';
+</code></pre>
+<hr>
+<h2 id="role-manajemen-privilege-yang-lebih-rapi">Role: Manajemen Privilege yang Lebih Rapi <a href="#role-manajemen-privilege-yang-lebih-rapi" class="anchor" aria-hidden="true">#</a></h2>
+<p><strong>Role</strong> adalah kumpulan privilege yang bisa diberikan ke banyak user. Ini menghindari pengulangan <code>GRANT</code> untuk setiap user dengan kebutuhan yang sama. Role didukung sejak MySQL 8.0.</p>
+<h3 id="membuat-role">Membuat Role <a href="#membuat-role" class="anchor" aria-hidden="true">#</a></h3>
+<pre><code class="language-sql">CREATE ROLE 'role_readonly';
+CREATE ROLE 'role_app';
+CREATE ROLE 'role_admin';
+</code></pre>
+<h3 id="memberikan-privilege-ke-role">Memberikan Privilege ke Role <a href="#memberikan-privilege-ke-role" class="anchor" aria-hidden="true">#</a></h3>
+<pre><code class="language-sql">-- Role read-only
+GRANT SELECT ON toko_online.* TO 'role_readonly';
+
+-- Role aplikasi (CRUD)
+GRANT SELECT, INSERT, UPDATE, DELETE ON toko_online.* TO 'role_app';
+
+-- Role admin (semua + grant option)
+GRANT ALL PRIVILEGES ON toko_online.* TO 'role_admin' WITH GRANT OPTION;
+</code></pre>
+<h3 id="memberikan-role-ke-user">Memberikan Role ke User <a href="#memberikan-role-ke-user" class="anchor" aria-hidden="true">#</a></h3>
+<pre><code class="language-sql">GRANT 'role_app' TO 'app_user'@'localhost';
+GRANT 'role_readonly' TO 'report_user'@'localhost';
+GRANT 'role_admin' TO 'admin_toko'@'localhost';
+</code></pre>
+<h3 id="mengaktifkan-role">Mengaktifkan Role <a href="#mengaktifkan-role" class="anchor" aria-hidden="true">#</a></h3>
+<p>Setelah role diberikan, user harus <strong>mengaktifkannya</strong> agar privilege berlaku:</p>
+<pre><code class="language-sql">-- Login sebagai app_user, lalu:
+SET DEFAULT ROLE 'role_app' TO 'app_user'@'localhost';
+</code></pre>
+<p>Atau aktifkan untuk sesi saat ini:</p>
+<pre><code class="language-sql">SET ROLE 'role_app';
+</code></pre>
+<p>Melihat role yang aktif:</p>
+<pre><code class="language-sql">SELECT CURRENT_ROLE();
+</code></pre>
+<h3 id="mencabut-role-dari-user">Mencabut Role dari User <a href="#mencabut-role-dari-user" class="anchor" aria-hidden="true">#</a></h3>
+<pre><code class="language-sql">REVOKE 'role_app' FROM 'app_user'@'localhost';
+</code></pre>
+<h3 id="menghapus-role">Menghapus Role <a href="#menghapus-role" class="anchor" aria-hidden="true">#</a></h3>
+<pre><code class="language-sql">DROP ROLE IF EXISTS 'role_readonly';
+</code></pre>
+<h3 id="melihat-daftar-role">Melihat Daftar Role <a href="#melihat-daftar-role" class="anchor" aria-hidden="true">#</a></h3>
+<pre><code class="language-sql">SELECT * FROM mysql.role_edges;
+</code></pre>
+<p>Atau:</p>
+<pre><code class="language-sql">SHOW GRANTS FOR 'role_app';
+</code></pre>
+<hr>
+<h2 id="best-practice-keamanan">Best Practice Keamanan <a href="#best-practice-keamanan" class="anchor" aria-hidden="true">#</a></h2>
+<h3 id="1-jangan-gunakan-root-untuk-aplikasi">1. Jangan Gunakan <code>root</code> untuk Aplikasi <a href="#1-jangan-gunakan-root-untuk-aplikasi" class="anchor" aria-hidden="true">#</a></h3>
+<p>Buat user khusus untuk setiap aplikasi dengan privilege minimal:</p>
+<pre><code class="language-sql">CREATE USER 'webapp_toko'@'localhost' IDENTIFIED BY 'P@ssw0rdKuat!2022';
+GRANT SELECT, INSERT, UPDATE, DELETE ON toko_online.* TO 'webapp_toko'@'localhost';
+</code></pre>
+<h3 id="2-batasi-host">2. Batasi Host <a href="#2-batasi-host" class="anchor" aria-hidden="true">#</a></h3>
+<p>Gunakan <code>localhost</code> atau IP spesifik, bukan <code>%</code>:</p>
+<pre><code class="language-sql">-- Baik
+CREATE USER 'app_user'@'192.168.1.10' IDENTIFIED BY '...';
+
+-- Hindari (kecuali perlu)
+CREATE USER 'app_user'@'%' IDENTIFIED BY '...';
+</code></pre>
+<h3 id="3-gunakan-password-kuat">3. Gunakan Password Kuat <a href="#3-gunakan-password-kuat" class="anchor" aria-hidden="true">#</a></h3>
+<ul>
+<li>Minimal 12 karakter.</li>
+<li>Kombinasi huruf besar, kecil, angka, dan simbol.</li>
+<li>Jangan gunakan password yang sama dengan layanan lain.</li>
+</ul>
+<p>MySQL 8 memiliki <strong>validate_password component</strong> yang bisa diaktifkan:</p>
+<pre><code class="language-sql">INSTALL COMPONENT 'file://component_validate_password';
+
+-- Cek kebijakan
+SHOW VARIABLES LIKE 'validate_password%';
+
+-- Set kebijakan kuat
+SET GLOBAL validate_password.policy = 'STRONG';
+SET GLOBAL validate_password.length = 12;
+</code></pre>
+<h3 id="4-pisahkan-user-berdasarkan-peran">4. Pisahkan User Berdasarkan Peran <a href="#4-pisahkan-user-berdasarkan-peran" class="anchor" aria-hidden="true">#</a></h3>
+<ul>
+<li><code>app_readonly</code> — untuk laporan/analitik.</li>
+<li><code>app_write</code> — untuk aplikasi yang menulis data.</li>
+<li><code>app_migration</code> — untuk migrasi skema (privilege <code>ALTER</code>, <code>CREATE</code>, <code>DROP</code>).</li>
+<li><code>admin</code> — untuk administrator, hanya digunakan saat perlu.</li>
+</ul>
+<h3 id="5-audit-user-secara-berkala">5. Audit User Secara Berkala <a href="#5-audit-user-secara-berkala" class="anchor" aria-hidden="true">#</a></h3>
+<pre><code class="language-sql">-- Melihat user yang tidak pernah login
+SELECT user, host, last_login FROM mysql.user
+WHERE last_login IS NULL OR last_login &lt; NOW() - INTERVAL 90 DAY;
+</code></pre>
+<p>Hapus user yang tidak lagi digunakan:</p>
+<pre><code class="language-sql">DROP USER 'user_lama'@'localhost';
+</code></pre>
+<h3 id="6-batasi-akses-ke-tabel-sensitif">6. Batasi Akses ke Tabel Sensitif <a href="#6-batasi-akses-ke-tabel-sensitif" class="anchor" aria-hidden="true">#</a></h3>
+<p>Untuk tabel berisi data pribadi (misalnya <code>pelanggan</code>), berikan akses kolom saja:</p>
+<pre><code class="language-sql">GRANT SELECT (id, nama, email) ON toko_online.pelanggan TO 'support_user'@'localhost';
+</code></pre>
+<h3 id="7-gunakan-ssltls-untuk-koneksi-remote">7. Gunakan SSL/TLS untuk Koneksi Remote <a href="#7-gunakan-ssltls-untuk-koneksi-remote" class="anchor" aria-hidden="true">#</a></h3>
+<pre><code class="language-sql">CREATE USER 'remote_user'@'%'
+  IDENTIFIED BY 'P@ssw0rdKuat!2022'
+  REQUIRE SSL;
+</code></pre>
+<p>Atau wajibkan cipher tertentu:</p>
+<pre><code class="language-sql">ALTER USER 'remote_user'@'%' REQUIRE CIPHER 'ECDHE-RSA-AES256-SHA384';
+</code></pre>
+<h3 id="8-log-aktivitas-penting">8. Log Aktivitas Penting <a href="#8-log-aktivitas-penting" class="anchor" aria-hidden="true">#</a></h3>
+<p>Aktifkan <strong>general query log</strong> atau <strong>audit plugin</strong> (MySQL Enterprise) untuk memantau query yang dijalankan:</p>
+<pre><code class="language-sql">SET GLOBAL general_log = 'ON';
+SET GLOBAL general_log_file = '/var/log/mysql/general.log';
+</code></pre>
+<blockquote>
+<p>⚠️ <strong>Peringatan:</strong> General log bisa sangat besar dan memperlambat server. Aktifkan hanya untuk debugging jangka pendek.</p>
+</blockquote>
+<hr>
+<h2 id="contoh-lengkap-setup-user-untuk-aplikasi-toko-online">Contoh Lengkap: Setup User untuk Aplikasi Toko Online <a href="#contoh-lengkap-setup-user-untuk-aplikasi-toko-online" class="anchor" aria-hidden="true">#</a></h2>
+<p>Berikut skenario lengkap membuat user untuk berbagai kebutuhan aplikasi <code>toko_online</code>:</p>
+<pre><code class="language-sql">-- 1. User untuk aplikasi web (CRUD data)
+CREATE USER 'webapp_toko'@'localhost' IDENTIFIED BY 'WebAppP@ss!2022';
+GRANT SELECT, INSERT, UPDATE, DELETE ON toko_online.* TO 'webapp_toko'@'localhost';
+
+-- 2. User untuk laporan/analitik (read-only)
+CREATE USER 'report_toko'@'localhost' IDENTIFIED BY 'ReportP@ss!2022';
+GRANT SELECT ON toko_online.* TO 'report_toko'@'localhost';
+
+-- 3. User untuk migrasi skema (privilege struktur)
+CREATE USER 'migrate_toko'@'localhost' IDENTIFIED BY 'MigrateP@ss!2022';
+GRANT SELECT, INSERT, UPDATE, DELETE, CREATE, DROP, ALTER, INDEX,
+      CREATE VIEW, SHOW VIEW, TRIGGER, EXECUTE
+ON toko_online.* TO 'migrate_toko'@'localhost';
+
+-- 4. User admin (untuk DBA)
+CREATE USER 'admin_toko'@'localhost' IDENTIFIED BY 'AdminP@ss!2022';
+GRANT ALL PRIVILEGES ON toko_online.* TO 'admin_toko'@'localhost' WITH GRANT OPTION;
+
+-- 5. User support (hanya baca data pelanggan terbatas)
+CREATE USER 'support_toko'@'localhost' IDENTIFIED BY 'SupportP@ss!2022';
+GRANT SELECT (id, nama, email) ON toko_online.pelanggan TO 'support_toko'@'localhost';
+GRANT SELECT ON toko_online.pesanan TO 'support_toko'@'localhost';
+
+-- Verifikasi
+SHOW GRANTS FOR 'webapp_toko'@'localhost';
+SHOW GRANTS FOR 'report_toko'@'localhost';
+</code></pre>
+<h3 id="menguji-akses">Menguji Akses <a href="#menguji-akses" class="anchor" aria-hidden="true">#</a></h3>
+<p>Login sebagai <code>webapp_toko</code>:</p>
+<pre><code class="language-bash">mysql -u webapp_toko -p toko_online
+</code></pre>
+<p>Coba query:</p>
+<pre><code class="language-sql">-- Berhasil (punya SELECT)
+SELECT * FROM produk;
+
+-- Berhasil (punya INSERT)
+INSERT INTO pelanggan (nama, email) VALUES ('Test', 'test@example.com');
+
+-- GAGAL (tidak punya CREATE)
+CREATE TABLE test_table (id INT);
+-- ERROR 1142 (42000): CREATE command denied to user 'webapp_toko'@'localhost'
+</code></pre>
+<hr>
+<h2 id="ringkasan">Ringkasan <a href="#ringkasan" class="anchor" aria-hidden="true">#</a></h2>
+<table>
+<thead>
+<tr>
+<th>Perintah</th>
+<th>Fungsi</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>CREATE USER</code></td>
+<td>Membuat user baru</td>
+</tr>
+<tr>
+<td><code>ALTER USER</code></td>
+<td>Mengubah password / properti user</td>
+</tr>
+<tr>
+<td><code>DROP USER</code></td>
+<td>Menghapus user</td>
+</tr>
+<tr>
+<td><code>GRANT</code></td>
+<td>Memberikan privilege</td>
+</tr>
+<tr>
+<td><code>REVOKE</code></td>
+<td>Mencabut privilege</td>
+</tr>
+<tr>
+<td><code>SHOW GRANTS</code></td>
+<td>Melihat privilege user</td>
+</tr>
+<tr>
+<td><code>CREATE ROLE</code></td>
+<td>Membuat role (kumpulan privilege)</td>
+</tr>
+<tr>
+<td><code>SET DEFAULT ROLE</code></td>
+<td>Mengaktifkan role untuk user</td>
+</tr>
+<tr>
+<td><code>SET ROLE</code></td>
+<td>Mengaktifkan role untuk sesi saat ini</td>
+</tr>
+</tbody>
+</table>
+<p>Poin penting:</p>
+<ul>
+<li>User diidentifikasi oleh <code>'username'@'host'</code>.</li>
+<li>Terapkan <strong>principle of least privilege</strong> — beri hak seminimal mungkin.</li>
+<li>Jangan gunakan <code>root</code> untuk aplikasi.</li>
+<li>Gunakan <strong>role</strong> untuk mengelola privilege banyak user dengan rapi.</li>
+<li><code>FLUSH PRIVILEGES</code> hanya diperlukan jika memodifikasi tabel grant secara langsung.</li>
+<li>Batasi host, gunakan password kuat, dan audit user secara berkala.</li>
+</ul>
+<p>Pada artikel berikutnya, kita akan membahas <strong>Backup &amp; Restore Database</strong> — melindungi data dari kehilangan.</p>
+
+			<div class="page-footer-meta d-flex flex-column flex-md-row justify-content-between">
+				</div>
+			<div class="docs-navigation d-flex justify-content-between">
+	
+	<a href="/mysql/tutorial/10-view-index-procedure/">
+			<div class="card my-1">
+				<div class="card-body py-2">
+					&larr; View, Index, dan Stored Procedure
+				</div>
+			</div>
+		</a>
+	<a class="ms-auto" href="/mysql/tutorial/12-backup-restore/">
+			<div class="card my-1">
+				<div class="card-body py-2">
+					Backup &amp; Restore Database &rarr;
+				</div>
+			</div>
+		</a>
+	</div>
+
+			
+		</main>
+	</div>
+
+      </div>
+    </div>
+    
+    
+    <footer class="footer text-muted">
+  <div class="container-xxl">
+    <div class="row">
+      <div class="col-lg-8 order-last order-lg-first">
+        <ul class="list-inline">
+          <li class="list-inline-item">Powered by <a class="text-muted" href="https://gohugo.io/">Hugo</a> and <a class="text-muted" href="https://github.com/">Github</a></li>
+        </ul>
+      </div>
+      <div class="col-lg-8 order-first order-lg-last text-lg-end">
+        <ul class="list-inline">
+          </ul>
+      </div>
+    </div>
+  </div>
+</footer>
+    
+
+<script src="/js/bootstrap.min.650aeec64c81d69d4c0850fc73c93da3f0330cec0a27772feed7f90f60baa5f47f1c45687d71914bdafd1c4e860d40f6dc08ede27a2f08431ff929c9a2d24621.js" integrity="sha512-ZQruxkyB1p1MCFD8c8k9o/AzDOwKJ3cv7tf5D2C6pfR/HEVofXGRS9r9HE6GDUD23Ajt4novCEMf&#43;SnJotJGIQ==" crossorigin="anonymous" defer></script>
+  <script src="/js/highlight.min.ec234bd8a5f487aaffe50a89f17b14501b1bb65633cf177cffd4cb84702dd7030edc08712dceb8dc27ac7e54b53240a08bf0b8d951572ee582bcdbbd06a48a7b.js" integrity="sha512-7CNL2KX0h6r/5QqJ8XsUUBsbtlYzzxd8/9TLhHAt1wMO3AhxLc643CesflS1MkCgi/C42VFXLuWCvNu9BqSKew==" crossorigin="anonymous" defer></script>
+  <script src="/main.min.cd1e5e6b40065b3f7f7fd8548a528fac67019754eda0f37b9918d02d154fc9ef6a22742f6513b0572ad9163152e151ec36221fbeafbecd7759c3dab1f19b64b9.js" integrity="sha512-zR5ea0AGWz9/f9hUilKPrGcBl1TtoPN7mRjQLRVPye9qInQvZROwVyrZFjFS4VHsNiIfvq&#43;&#43;zXdZw9qx8ZtkuQ==" crossorigin="anonymous" defer></script>
+  <script src="https://kaban.my.id/index.min.f90d3536216d10b8ecf574dc8d57b0d2bd45aab605bdc69b1f7697f3476ebdb5db6a63a3f6955150f2c0b02e66fa1adfbf4c5b50c540f663f829ad8bcd5807c6.js" integrity="sha512-&#43;Q01NiFtELjs9XTcjVew0r1FqrYFvcabH3aX80duvbXbamOj9pVRUPLAsC5m&#43;hrfv0xbUMVA9mP4Ka2LzVgHxg==" crossorigin="anonymous" defer></script>
+  
+    <div class="d-flex fixed-bottom pb-4 pb-lg-5 pe-4 pe-lg-5">
+      <a id="toTop" href="#" class="btn btn-outline-primary rounded-circle ms-auto p-2"><span class="visually-hidden">Top</span><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-chevron-up"><polyline points="18 15 12 9 6 15"></polyline></svg></a>
+    </div>
+    
+  </body>
+</html>

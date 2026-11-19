@@ -1,0 +1,1285 @@
+<!doctype html>
+<html lang="en-US">
+  <head>
+  <meta charset="utf-8">
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <link rel="preload" as="font" href="https://kaban.my.id/fonts/vendor/jost/jost-v4-latin-regular.woff2" type="font/woff2" crossorigin>
+<link rel="preload" as="font" href="https://kaban.my.id/fonts/vendor/jost/jost-v4-latin-500.woff2" type="font/woff2" crossorigin>
+<link rel="preload" as="font" href="https://kaban.my.id/fonts/vendor/jost/jost-v4-latin-700.woff2" type="font/woff2" crossorigin>
+
+  <script>(()=>{var t=window.matchMedia&&window.matchMedia("(prefers-color-scheme: dark)").matches,e=localStorage.getItem("theme");t&&e===null&&(localStorage.setItem("theme","dark"),document.documentElement.setAttribute("data-dark-mode","")),t&&e==="dark"&&document.documentElement.setAttribute("data-dark-mode",""),e==="dark"&&document.documentElement.setAttribute("data-dark-mode","")})()</script>
+
+  <link rel="stylesheet" href="https://kaban.my.id/main.9f87974e4c1caf828d7f6300ecd98102083d1763683fe424f26c4c7b80fa72a094aa3c62fe333b5026c22ff50b82f74220d559e730c1f032fd8bcec957ac2bb4.css" integrity="sha512-n4eXTkwcr4KNf2MA7NmBAgg9F2NoP&#43;Qk8mxMe4D6cqCUqjxi/jM7UCbCL/ULgvdCINVZ5zDB8DL9i87JV6wrtA==" crossorigin="anonymous">
+<noscript><style>img.lazyload { display: none; }</style></noscript>
+  <meta name="robots" content="index, follow">
+    <meta name="googlebot" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1">
+    <meta name="bingbot" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1">
+  <title>Sintaks Dasar &amp; Variabel - Roberto Kaban Blog&#39;s</title>
+<meta name="description" content="Panduan lengkap sintaks dasar JavaScript: variabel var, let, const, operator, dan aturan penulisan kode.">
+<link rel="canonical" href="https://kaban.my.id/javascript/tutorial/03-sintaks-variabel/">
+<meta property="og:locale" content="en_US">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Sintaks Dasar &amp; Variabel">
+<meta property="og:description" content="Panduan lengkap sintaks dasar JavaScript: variabel var, let, const, operator, dan aturan penulisan kode.">
+<meta property="og:url" content="https://kaban.my.id/javascript/tutorial/03-sintaks-variabel/">
+<meta property="og:site_name" content="Roberto Kaban Blog&#39;s">
+<meta property="article:published_time" content="2022-12-21T08:00:00+00:00">
+  <meta property="article:modified_time" content="2022-12-21T08:00:00+00:00">
+  
+  <meta property="og:image" content="https://kaban.my.id/doks.png"/>
+      <meta property="og:image:alt" content="Roberto Kaban Blog&#39;s">
+    
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:site" content="@robertokaban">
+<meta name="twitter:creator" content="@robertokaban">
+<meta name="twitter:title" content="Sintaks Dasar &amp; Variabel">
+<meta name="twitter:description" content="Panduan lengkap sintaks dasar JavaScript: variabel var, let, const, operator, dan aturan penulisan kode.">
+<meta name="twitter:image" content="https://kaban.my.id/doks.png">
+    <meta name="twitter:image:alt" content="Sintaks Dasar &amp; Variabel">
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "Person",
+        "@id": "https://kaban.my.id/#/schema/person/1",
+      "name": "BlogRobertoKaban",
+      "url": "https://kaban.my.id/",
+      "sameAs": [
+        "https://twitter.com/robertokaban"
+        , "https://github.com/robertokaban"
+        ],
+      "image": {
+          "@type": "ImageObject",
+          "@id": "https://kaban.my.id/#/schema/image/1",
+          "url": "https://kaban.my.id/doks.png",
+          "width":  1280 ,
+          "height":  640 ,
+          "caption": "BlogRobertoKaban"
+        }
+      },
+    {
+      "@type": "WebSite",
+      "@id": "https://kaban.my.id/#/schema/website/1",
+      "url": "https://kaban.my.id/",
+      "name": "Roberto Kaban Blog\u0027s",
+      "description": "Hanya sebuah catatan kecil untuk hal yang tidak ingin dilupakan.",
+      "publisher": {
+          "@id": "https://kaban.my.id/#/schema/person/1"
+        }
+      },
+    {
+      "@type": "WebPage",
+      "@id": "https://kaban.my.id/javascript/tutorial/03-sintaks-variabel/",
+      "url": "https://kaban.my.id/javascript/tutorial/03-sintaks-variabel/",
+      "name": "Sintaks Dasar \u0026 Variabel",
+      "description": "Panduan lengkap sintaks dasar JavaScript: variabel var, let, const, operator, dan aturan penulisan kode.",
+      "isPartOf": {
+        "@id": "https://kaban.my.id/#/schema/website/1"
+      },
+      "about": {
+          "@id": "https://kaban.my.id/#/schema/person/1"
+        },
+      "datePublished": "2022-12-21T08:00:00CET",
+      "dateModified": "2022-12-21T08:00:00CET",
+      "breadcrumb": {
+        "@id": "https://kaban.my.id/javascript/tutorial/03-sintaks-variabel/#/schema/breadcrumb/1"
+      },
+      "primaryImageOfPage": {
+        "@id": "https://kaban.my.id/javascript/tutorial/03-sintaks-variabel/#/schema/image/2"
+      },
+      "inLanguage": "en-US",
+      "potentialAction": [{
+        "@type": "ReadAction", "target": ["https://kaban.my.id/javascript/tutorial/03-sintaks-variabel/"]
+      }]
+    },
+    {
+      "@type": "BreadcrumbList",
+      "@id": "https://kaban.my.id/javascript/tutorial/03-sintaks-variabel/#/schema/breadcrumb/1",
+      "name": "Breadcrumbs",
+      "itemListElement": [{
+        "@type": "ListItem",
+        "position":  1 ,
+        "item": {
+          "@type": "WebPage",
+          "@id": "https://kaban.my.id/",
+          "url": "https://kaban.my.id/",
+          "name": "Home"
+          }
+        },{
+        "@type": "ListItem",
+        "position":  2 ,
+        "item": {
+          "@type": "WebPage",
+          "@id": "https://kaban.my.id/javascript/",
+          "url": "https://kaban.my.id/javascript/",
+          "name": "Javascript"
+          }
+        },{
+        "@type": "ListItem",
+        "position":  3 ,
+        "item": {
+          "@type": "WebPage",
+          "@id": "https://kaban.my.id/javascript/tutorial/",
+          "url": "https://kaban.my.id/javascript/tutorial/",
+          "name": "Tutorial"
+          }
+        },{
+        "@type": "ListItem",
+        "position":  4 ,
+        "item": {
+          "@id": "https://kaban.my.id/javascript/tutorial/03-sintaks-variabel/"
+          }
+        }]
+    },
+
+    {
+      "@context": "https://schema.org",
+      "@graph": [
+        {
+          "@type": "ImageObject",
+          "@id": "https://kaban.my.id/javascript/tutorial/03-sintaks-variabel/#/schema/image/2",
+          "url": "https://kaban.my.id/doks.png",
+          "contentUrl": "https://kaban.my.id/doks.png",
+          "caption": "Sintaks Dasar \u0026 Variabel"
+        }
+      ]
+    }
+
+  ]
+}
+</script>
+
+  <meta name="theme-color" content="#fff">
+<link rel="icon" href="https://kaban.my.id/favicon.ico" sizes="any">
+<link rel="icon" type="image/svg+xml" href="https://kaban.my.id/favicon.svg">
+<link rel="apple-touch-icon" sizes="180x180" href="https://kaban.my.id/apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="32x32" href="https://kaban.my.id/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="https://kaban.my.id/favicon-16x16.png">
+<link rel="manifest" crossorigin="use-credentials" href="https://kaban.my.id/site.webmanifest">
+
+  
+
+
+  
+  
+  
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-60VSDZFQR5"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-60VSDZFQR5');
+</script>
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6664512614760985"
+     crossorigin="anonymous"></script>
+</head>
+
+  <body class="javascript single">
+    <div class="sticky-top">
+<div class="header-bar"></div>
+
+<header class="navbar navbar-expand-lg navbar-light doks-navbar">
+  <nav class="container-xxl flex-wrap flex-lg-nowrap" aria-label="Main navigation">
+
+    <a class="navbar-brand order-0" href="/" aria-label="Roberto Kaban Blog&#39;s">
+      Roberto Kaban Blog&#39;s
+    </a>
+
+    <button class="btn btn-menu order-2 d-block d-lg-none" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasDoks" aria-controls="offcanvasDoks" aria-label="Open main menu">
+      <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-menu"><line x1="3" y1="12" x2="21" y2="12"></line><line x1="3" y1="6" x2="21" y2="6"></line><line x1="3" y1="18" x2="21" y2="18"></line></svg>
+    </button>
+    <div class="offcanvas offcanvas-end border-0 py-lg-1" tabindex="-1" id="offcanvasDoks" data-bs-backdrop="true" aria-labelledby="offcanvasDoksLabel">
+      <div class="header-bar d-lg-none"></div>
+      <div class="offcanvas-header d-lg-none">
+        <h2 class="h5 offcanvas-title ps-2" id="offcanvasDoksLabel"><a class="text-dark" href="/">Roberto Kaban Blog&#39;s</a></h2>
+        <button type="button" class="btn-close text-reset me-2" data-bs-dismiss="offcanvas" aria-label="Close main menu"></button>
+      </div>
+      <div class="offcanvas-body p-4 p-lg-0">
+        <ul class="nav flex-column flex-lg-row align-items-lg-center mt-2 mt-lg-0 ms-lg-2 me-lg-auto">
+              <li class="nav-item">
+                <a class="nav-link ps-0 py-1" href="/about/">About Me</a>
+              </li>
+            
+          
+              <li class="nav-item">
+                <a class="nav-link ps-0 py-1" href="/contact/">Contact</a>
+              </li>
+            
+          
+              <li class="nav-item">
+                <a class="nav-link ps-0 py-1" href="/artikel/">Artikel</a>
+              </li>
+            
+          
+              <li class="nav-item">
+                <a class="nav-link ps-0 py-1" href="/coretanku/">Coretanku</a>
+              </li>
+            
+          </ul>
+
+        <hr class="text-black-50 my-4 d-lg-none">
+        <form class="doks-search position-relative flex-grow-1 ms-lg-auto me-lg-2">
+          <input id="search" class="form-control is-search" type="search" placeholder="Cari di blog ini..." aria-label="Cari di blog ini..." autocomplete="off">
+          <div id="suggestions" class="shadow bg-white rounded d-none"></div>
+        </form>
+        <hr class="text-black-50 my-4 d-lg-none">
+        <ul class="nav flex-column flex-lg-row">
+          <li class="nav-item">
+              <a class="nav-link social-link" href="https://github.com/robertokaban"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-github"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path></svg><small class="ms-2 d-lg-none">GitHub</small></a>
+            </li>
+          <li class="nav-item">
+              <a class="nav-link social-link" href="https://facebook.com/roberto.kaban"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-facebook"><path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"></path></svg><small class="ms-2 d-lg-none">Facebook</small></a>
+            </li>
+          <li class="nav-item">
+              <a class="nav-link social-link" href="https://twitter.com/robertokaban"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-twitter"><path d="M23 3a10.9 10.9 0 0 1-3.14 1.53 4.48 4.48 0 0 0-7.86 3v1A10.66 10.66 0 0 1 3 4s-4 9 5 13a11.64 11.64 0 0 1-7 2c9 5 20 0 20-11.5a4.5 4.5 0 0 0-.08-.83A7.72 7.72 0 0 0 23 3z"></path></svg><small class="ms-2 d-lg-none">Twitter</small></a>
+            </li>
+          <li class="nav-item">
+              <a class="nav-link social-link" href="https://youtube.com/@robertokaban"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-youtube"><path d="M10,15L15.19,12L10,9V15M21.56,7.17C21.69,7.64 21.78,8.27 21.84,9.07C21.91,9.87 21.94,10.56 21.94,11.16L22,12C22,14.19 21.84,15.8 21.56,16.83C21.31,17.73 20.73,18.31 19.83,18.56C19.36,18.69 18.5,18.78 17.18,18.84C15.88,18.91 14.69,18.94 13.59,18.94L12,19C7.81,19 5.2,18.84 4.17,18.56C3.27,18.31 2.69,17.73 2.44,16.83C2.31,16.36 2.22,15.73 2.16,14.93C2.09,14.13 2.06,13.44 2.06,12.84L2,12C2,9.81 2.16,8.2 2.44,7.17C2.69,6.27 3.27,5.69 4.17,5.44C4.64,5.31 5.5,5.22 6.82,5.16C8.12,5.09 9.31,5.06 10.41,5.06L12,5C16.19,5 18.8,5.16 19.83,5.44C20.73,5.69 21.31,6.27 21.56,7.17Z"></path></svg><small class="ms-2 d-lg-none">Youtube</small></a>
+            </li>
+          </ul>
+
+        
+        <hr class="text-black-50 my-4 d-lg-none">
+        <button id="mode" class="btn btn-link" type="button" aria-label="Toggle user interface mode">
+          <span class="toggle-dark"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-moon"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path></svg></span>
+          <span class="toggle-light"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-sun"><circle cx="12" cy="12" r="5"></circle><line x1="12" y1="1" x2="12" y2="3"></line><line x1="12" y1="21" x2="12" y2="23"></line><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line><line x1="1" y1="12" x2="3" y2="12"></line><line x1="21" y1="12" x2="23" y2="12"></line><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line></svg></span>
+        </button>
+        
+
+        </div>
+    </div>
+  </nav>
+</header>
+
+
+</div>
+
+
+<div class="container-xxl">
+  <aside class="doks-sidebar">
+    <nav id="doks-docs-nav" class="collapse d-lg-none" aria-label="Tertiary navigation">
+      
+<ul class="list-unstyled collapsible-sidebar">
+  
+    
+      
+      <li class="mb-1">
+        <button class="btn btn-toggle align-items-center rounded collapsed" data-bs-toggle="collapse" data-bs-target="#section-0967e753cd827c7c2576cf6f7292922e" aria-expanded="true">
+          Tutorial Javascript
+        </button>
+        <div class="collapse show" id="section-0967e753cd827c7c2576cf6f7292922e">
+          <ul class="btn-toggle-nav list-unstyled fw-normal pb-1 small">
+            
+              
+                
+                <li><a class="docs-link rounded" href="https://kaban.my.id/javascript/tutorial/pengenalan/">Pengenalan Javascript</a></li>
+              
+            
+              
+                
+                <li><a class="docs-link rounded" href="https://kaban.my.id/javascript/tutorial/02-instalasi-persiapan/">Instalasi &amp; Persiapan Lingkungan JavaScript</a></li>
+              
+            
+              
+                
+                <li><a class="docs-link rounded active" href="https://kaban.my.id/javascript/tutorial/03-sintaks-variabel/">Sintaks Dasar &amp; Variabel</a></li>
+              
+            
+              
+                
+                <li><a class="docs-link rounded" href="https://kaban.my.id/javascript/tutorial/04-tipe-data-konversi/">Tipe Data &amp; Konversi</a></li>
+              
+            
+              
+                
+                <li><a class="docs-link rounded" href="https://kaban.my.id/javascript/tutorial/05-struktur-kontrol/">Struktur Kontrol &amp; Perulangan</a></li>
+              
+            
+              
+                
+                <li><a class="docs-link rounded" href="https://kaban.my.id/javascript/tutorial/06-fungsi/">Fungsi</a></li>
+              
+            
+          </ul>
+        </div>
+      </li>
+    
+  
+</ul>
+
+    </nav>
+  </aside>
+</div>
+
+    <div class="wrap container-xxl" role="document">
+      <div class="content">
+        
+	<div class="row flex-xl-nowrap">
+		<div class="col-lg-5 col-xl-4 docs-sidebar d-none d-lg-block">
+			<nav class="docs-links" aria-label="Main navigation">
+				
+<ul class="list-unstyled collapsible-sidebar">
+  
+    
+      
+      <li class="mb-1">
+        <button class="btn btn-toggle align-items-center rounded collapsed" data-bs-toggle="collapse" data-bs-target="#section-0967e753cd827c7c2576cf6f7292922e" aria-expanded="true">
+          Tutorial Javascript
+        </button>
+        <div class="collapse show" id="section-0967e753cd827c7c2576cf6f7292922e">
+          <ul class="btn-toggle-nav list-unstyled fw-normal pb-1 small">
+            
+              
+                
+                <li><a class="docs-link rounded" href="https://kaban.my.id/javascript/tutorial/pengenalan/">Pengenalan Javascript</a></li>
+              
+            
+              
+                
+                <li><a class="docs-link rounded" href="https://kaban.my.id/javascript/tutorial/02-instalasi-persiapan/">Instalasi &amp; Persiapan Lingkungan JavaScript</a></li>
+              
+            
+              
+                
+                <li><a class="docs-link rounded active" href="https://kaban.my.id/javascript/tutorial/03-sintaks-variabel/">Sintaks Dasar &amp; Variabel</a></li>
+              
+            
+              
+                
+                <li><a class="docs-link rounded" href="https://kaban.my.id/javascript/tutorial/04-tipe-data-konversi/">Tipe Data &amp; Konversi</a></li>
+              
+            
+              
+                
+                <li><a class="docs-link rounded" href="https://kaban.my.id/javascript/tutorial/05-struktur-kontrol/">Struktur Kontrol &amp; Perulangan</a></li>
+              
+            
+              
+                
+                <li><a class="docs-link rounded" href="https://kaban.my.id/javascript/tutorial/06-fungsi/">Fungsi</a></li>
+              
+            
+          </ul>
+        </div>
+      </li>
+    
+  
+</ul>
+
+			</nav>
+		</div>
+		<nav class="docs-toc d-none d-xl-block col-xl-3" aria-label="Secondary navigation">
+			<div class="d-xl-none">
+  <button class="btn btn-outline-primary btn-sm doks-toc-toggle collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#onThisPage" aria-controls="doks-docs-nav" aria-expanded="false" aria-label="Toggle On this page navigation">
+    <span>Daftar isi</span>
+    <span>
+      <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" class="doks doks-expand" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><title>Expand</title><polyline points="7 13 12 18 17 13"></polyline><polyline points="7 6 12 11 17 6"></polyline></svg>
+      <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" class="doks doks-collapse" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><title>Collapse</title><polyline points="17 11 12 6 7 11"></polyline><polyline points="17 18 12 13 7 18"></polyline></svg>
+    </span>
+  </button>
+  <div class="collapse" id="onThisPage">
+    <div class="card card-body mt-3 py-1">
+      <div class="page-links">
+        <nav id="TableOfContents">
+  <ul>
+    <li><a href="#pendahuluan">Pendahuluan</a></li>
+    <li><a href="#statement-dan-ekspresi">Statement dan Ekspresi</a></li>
+    <li><a href="#variabel-var-let-dan-const">Variabel: <code>var</code>, <code>let</code>, dan <code>const</code></a>
+      <ul>
+        <li><a href="#var--cara-lama-hindari"><code>var</code> — Cara Lama (Hindari)</a></li>
+        <li><a href="#let--variabel-yang-bisa-diubah"><code>let</code> — Variabel yang Bisa Diubah</a></li>
+        <li><a href="#const--konstanta-tidak-bisa-di-reassign"><code>const</code> — Konstanta (Tidak Bisa Di-reassign)</a></li>
+        <li><a href="#perbandingan-var-let-const">Perbandingan <code>var</code>, <code>let</code>, <code>const</code></a></li>
+        <li><a href="#hoisting-dan-temporal-dead-zone-tdz">Hoisting dan Temporal Dead Zone (TDZ)</a></li>
+      </ul>
+    </li>
+    <li><a href="#aturan-penamaan-variabel">Aturan Penamaan Variabel</a>
+      <ul>
+        <li><a href="#aturan-wajib">Aturan Wajib</a></li>
+        <li><a href="#convention-kesepakatan">Convention (Kesepakatan)</a></li>
+        <li><a href="#nama-yang-deskriptif">Nama yang Deskriptif</a></li>
+      </ul>
+    </li>
+    <li><a href="#operator-dasar">Operator Dasar</a>
+      <ul>
+        <li><a href="#1-operator-aritmatika">1. Operator Aritmatika</a></li>
+        <li><a href="#2-operator-penugasan-assignment">2. Operator Penugasan (Assignment)</a></li>
+        <li><a href="#3-operator-increment--decrement">3. Operator Increment &amp; Decrement</a></li>
+        <li><a href="#4-operator-perbandingan">4. Operator Perbandingan</a></li>
+        <li><a href="#5-operator-logika">5. Operator Logika</a></li>
+        <li><a href="#6-operator-ternary-kondisional">6. Operator Ternary (Kondisional)</a></li>
+        <li><a href="#7-operator-typeof">7. Operator <code>typeof</code></a></li>
+        <li><a href="#8-operator-nullish-coalescing-">8. Operator Nullish Coalescing (<code>??</code>)</a></li>
+        <li><a href="#9-operator-optional-chaining-">9. Operator Optional Chaining (<code>?.</code>)</a></li>
+      </ul>
+    </li>
+    <li><a href="#komentar">Komentar</a></li>
+    <li><a href="#contoh-praktis-menghitung-total-belanja">Contoh Praktis: Menghitung Total Belanja</a></li>
+    <li><a href="#ringkasan">Ringkasan</a></li>
+  </ul>
+</nav>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="page-links d-none d-xl-block">
+  <h3>Daftar isi</h3>
+  <nav id="TableOfContents">
+  <ul>
+    <li><a href="#pendahuluan">Pendahuluan</a></li>
+    <li><a href="#statement-dan-ekspresi">Statement dan Ekspresi</a></li>
+    <li><a href="#variabel-var-let-dan-const">Variabel: <code>var</code>, <code>let</code>, dan <code>const</code></a>
+      <ul>
+        <li><a href="#var--cara-lama-hindari"><code>var</code> — Cara Lama (Hindari)</a></li>
+        <li><a href="#let--variabel-yang-bisa-diubah"><code>let</code> — Variabel yang Bisa Diubah</a></li>
+        <li><a href="#const--konstanta-tidak-bisa-di-reassign"><code>const</code> — Konstanta (Tidak Bisa Di-reassign)</a></li>
+        <li><a href="#perbandingan-var-let-const">Perbandingan <code>var</code>, <code>let</code>, <code>const</code></a></li>
+        <li><a href="#hoisting-dan-temporal-dead-zone-tdz">Hoisting dan Temporal Dead Zone (TDZ)</a></li>
+      </ul>
+    </li>
+    <li><a href="#aturan-penamaan-variabel">Aturan Penamaan Variabel</a>
+      <ul>
+        <li><a href="#aturan-wajib">Aturan Wajib</a></li>
+        <li><a href="#convention-kesepakatan">Convention (Kesepakatan)</a></li>
+        <li><a href="#nama-yang-deskriptif">Nama yang Deskriptif</a></li>
+      </ul>
+    </li>
+    <li><a href="#operator-dasar">Operator Dasar</a>
+      <ul>
+        <li><a href="#1-operator-aritmatika">1. Operator Aritmatika</a></li>
+        <li><a href="#2-operator-penugasan-assignment">2. Operator Penugasan (Assignment)</a></li>
+        <li><a href="#3-operator-increment--decrement">3. Operator Increment &amp; Decrement</a></li>
+        <li><a href="#4-operator-perbandingan">4. Operator Perbandingan</a></li>
+        <li><a href="#5-operator-logika">5. Operator Logika</a></li>
+        <li><a href="#6-operator-ternary-kondisional">6. Operator Ternary (Kondisional)</a></li>
+        <li><a href="#7-operator-typeof">7. Operator <code>typeof</code></a></li>
+        <li><a href="#8-operator-nullish-coalescing-">8. Operator Nullish Coalescing (<code>??</code>)</a></li>
+        <li><a href="#9-operator-optional-chaining-">9. Operator Optional Chaining (<code>?.</code>)</a></li>
+      </ul>
+    </li>
+    <li><a href="#komentar">Komentar</a></li>
+    <li><a href="#contoh-praktis-menghitung-total-belanja">Contoh Praktis: Menghitung Total Belanja</a></li>
+    <li><a href="#ringkasan">Ringkasan</a></li>
+  </ul>
+</nav>
+  </div>
+
+		</nav>
+		<main class="docs-content col-lg-11 col-xl-9">
+		
+				<nav aria-label="breadcrumb">
+					<ol class="breadcrumb">
+						<li class="breadcrumb-item"><a href="/">Home</a></li>
+<li class="breadcrumb-item"><a href="/javascript/">Javascript</a></li>
+<li class="breadcrumb-item"><a href="/javascript/tutorial/">Tutorial Javascript</a></li>
+<li class="breadcrumb-item active" aria-current="page">Sintaks Dasar &amp; Variabel</li>
+					</ol>
+				</nav>
+			
+			<h1>Sintaks Dasar &amp; Variabel</h1>
+			<p class="lead">Variabel adalah fondasi setiap program. Artikel ini membahas cara mendeklarasikan variabel dengan var, let, dan const, memahami perbedaannya, serta mengenal operator-operator dasar JavaScript.</p>
+			<nav class="d-xl-none" aria-label="Quaternary navigation">
+				<div class="d-xl-none">
+  <button class="btn btn-outline-primary btn-sm doks-toc-toggle collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#onThisPage" aria-controls="doks-docs-nav" aria-expanded="false" aria-label="Toggle On this page navigation">
+    <span>Daftar isi</span>
+    <span>
+      <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" class="doks doks-expand" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><title>Expand</title><polyline points="7 13 12 18 17 13"></polyline><polyline points="7 6 12 11 17 6"></polyline></svg>
+      <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" class="doks doks-collapse" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><title>Collapse</title><polyline points="17 11 12 6 7 11"></polyline><polyline points="17 18 12 13 7 18"></polyline></svg>
+    </span>
+  </button>
+  <div class="collapse" id="onThisPage">
+    <div class="card card-body mt-3 py-1">
+      <div class="page-links">
+        <nav id="TableOfContents">
+  <ul>
+    <li><a href="#pendahuluan">Pendahuluan</a></li>
+    <li><a href="#statement-dan-ekspresi">Statement dan Ekspresi</a></li>
+    <li><a href="#variabel-var-let-dan-const">Variabel: <code>var</code>, <code>let</code>, dan <code>const</code></a>
+      <ul>
+        <li><a href="#var--cara-lama-hindari"><code>var</code> — Cara Lama (Hindari)</a></li>
+        <li><a href="#let--variabel-yang-bisa-diubah"><code>let</code> — Variabel yang Bisa Diubah</a></li>
+        <li><a href="#const--konstanta-tidak-bisa-di-reassign"><code>const</code> — Konstanta (Tidak Bisa Di-reassign)</a></li>
+        <li><a href="#perbandingan-var-let-const">Perbandingan <code>var</code>, <code>let</code>, <code>const</code></a></li>
+        <li><a href="#hoisting-dan-temporal-dead-zone-tdz">Hoisting dan Temporal Dead Zone (TDZ)</a></li>
+      </ul>
+    </li>
+    <li><a href="#aturan-penamaan-variabel">Aturan Penamaan Variabel</a>
+      <ul>
+        <li><a href="#aturan-wajib">Aturan Wajib</a></li>
+        <li><a href="#convention-kesepakatan">Convention (Kesepakatan)</a></li>
+        <li><a href="#nama-yang-deskriptif">Nama yang Deskriptif</a></li>
+      </ul>
+    </li>
+    <li><a href="#operator-dasar">Operator Dasar</a>
+      <ul>
+        <li><a href="#1-operator-aritmatika">1. Operator Aritmatika</a></li>
+        <li><a href="#2-operator-penugasan-assignment">2. Operator Penugasan (Assignment)</a></li>
+        <li><a href="#3-operator-increment--decrement">3. Operator Increment &amp; Decrement</a></li>
+        <li><a href="#4-operator-perbandingan">4. Operator Perbandingan</a></li>
+        <li><a href="#5-operator-logika">5. Operator Logika</a></li>
+        <li><a href="#6-operator-ternary-kondisional">6. Operator Ternary (Kondisional)</a></li>
+        <li><a href="#7-operator-typeof">7. Operator <code>typeof</code></a></li>
+        <li><a href="#8-operator-nullish-coalescing-">8. Operator Nullish Coalescing (<code>??</code>)</a></li>
+        <li><a href="#9-operator-optional-chaining-">9. Operator Optional Chaining (<code>?.</code>)</a></li>
+      </ul>
+    </li>
+    <li><a href="#komentar">Komentar</a></li>
+    <li><a href="#contoh-praktis-menghitung-total-belanja">Contoh Praktis: Menghitung Total Belanja</a></li>
+    <li><a href="#ringkasan">Ringkasan</a></li>
+  </ul>
+</nav>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="page-links d-none d-xl-block">
+  <h3>Daftar isi</h3>
+  <nav id="TableOfContents">
+  <ul>
+    <li><a href="#pendahuluan">Pendahuluan</a></li>
+    <li><a href="#statement-dan-ekspresi">Statement dan Ekspresi</a></li>
+    <li><a href="#variabel-var-let-dan-const">Variabel: <code>var</code>, <code>let</code>, dan <code>const</code></a>
+      <ul>
+        <li><a href="#var--cara-lama-hindari"><code>var</code> — Cara Lama (Hindari)</a></li>
+        <li><a href="#let--variabel-yang-bisa-diubah"><code>let</code> — Variabel yang Bisa Diubah</a></li>
+        <li><a href="#const--konstanta-tidak-bisa-di-reassign"><code>const</code> — Konstanta (Tidak Bisa Di-reassign)</a></li>
+        <li><a href="#perbandingan-var-let-const">Perbandingan <code>var</code>, <code>let</code>, <code>const</code></a></li>
+        <li><a href="#hoisting-dan-temporal-dead-zone-tdz">Hoisting dan Temporal Dead Zone (TDZ)</a></li>
+      </ul>
+    </li>
+    <li><a href="#aturan-penamaan-variabel">Aturan Penamaan Variabel</a>
+      <ul>
+        <li><a href="#aturan-wajib">Aturan Wajib</a></li>
+        <li><a href="#convention-kesepakatan">Convention (Kesepakatan)</a></li>
+        <li><a href="#nama-yang-deskriptif">Nama yang Deskriptif</a></li>
+      </ul>
+    </li>
+    <li><a href="#operator-dasar">Operator Dasar</a>
+      <ul>
+        <li><a href="#1-operator-aritmatika">1. Operator Aritmatika</a></li>
+        <li><a href="#2-operator-penugasan-assignment">2. Operator Penugasan (Assignment)</a></li>
+        <li><a href="#3-operator-increment--decrement">3. Operator Increment &amp; Decrement</a></li>
+        <li><a href="#4-operator-perbandingan">4. Operator Perbandingan</a></li>
+        <li><a href="#5-operator-logika">5. Operator Logika</a></li>
+        <li><a href="#6-operator-ternary-kondisional">6. Operator Ternary (Kondisional)</a></li>
+        <li><a href="#7-operator-typeof">7. Operator <code>typeof</code></a></li>
+        <li><a href="#8-operator-nullish-coalescing-">8. Operator Nullish Coalescing (<code>??</code>)</a></li>
+        <li><a href="#9-operator-optional-chaining-">9. Operator Optional Chaining (<code>?.</code>)</a></li>
+      </ul>
+    </li>
+    <li><a href="#komentar">Komentar</a></li>
+    <li><a href="#contoh-praktis-menghitung-total-belanja">Contoh Praktis: Menghitung Total Belanja</a></li>
+    <li><a href="#ringkasan">Ringkasan</a></li>
+  </ul>
+</nav>
+  </div>
+
+			</nav>
+			<h2 id="pendahuluan">Pendahuluan <a href="#pendahuluan" class="anchor" aria-hidden="true">#</a></h2>
+<p>Setiap program JavaScript terdiri dari <strong>statement</strong> (pernyataan) yang dieksekusi baris demi baris. Statement paling dasar adalah <strong>deklarasi variabel</strong> — cara menyimpan nilai agar bisa digunakan kembali.</p>
+<p>JavaScript memiliki tiga kata kunci untuk mendeklarasikan variabel: <code>var</code>, <code>let</code>, dan <code>const</code>. Memahami perbedaannya sangat penting karena perilakunya berbeda dalam hal <strong>scope</strong>, <strong>hoisting</strong>, dan <strong>reassignment</strong>.</p>
+<p>Artikel ini membahas sintaks dasar, ketiga jenis variabel, aturan penamaan, serta operator-operator dasar JavaScript.</p>
+<blockquote>
+<p><strong>Asumsi:</strong> Anda sudah menyiapkan lingkungan JavaScript (browser console atau Node.js) sesuai artikel sebelumnya.</p>
+</blockquote>
+<hr>
+<h2 id="statement-dan-ekspresi">Statement dan Ekspresi <a href="#statement-dan-ekspresi" class="anchor" aria-hidden="true">#</a></h2>
+<p>Sebelum masuk ke variabel, pahami dua istilah dasar:</p>
+<ul>
+<li><strong>Statement</strong> — instruksi lengkap yang melakukan sesuatu. Contoh: <code>let x = 5;</code></li>
+<li><strong>Ekspresi</strong> — potongan kode yang menghasilkan nilai. Contoh: <code>2 + 3</code>, <code>x * 2</code>, <code>&quot;Hello&quot;</code>.</li>
+</ul>
+<p>Statement biasanya diakhiri <strong>titik koma</strong> (<code>;</code>). Meskipun JavaScript memiliki <strong>ASI</strong> (Automatic Semicolon Insertion) yang otomatis menambahkan titik koma, menuliskannya secara eksplisit adalah praktik yang baik.</p>
+<pre><code class="language-javascript">let x = 5;          // statement
+let y = x + 3;      // statement, dengan ekspresi x + 3
+console.log(y);     // statement
+</code></pre>
+<hr>
+<h2 id="variabel-var-let-dan-const">Variabel: <code>var</code>, <code>let</code>, dan <code>const</code> <a href="#variabel-var-let-dan-const" class="anchor" aria-hidden="true">#</a></h2>
+<h3 id="var--cara-lama-hindari"><code>var</code> — Cara Lama (Hindari) <a href="#var--cara-lama-hindari" class="anchor" aria-hidden="true">#</a></h3>
+<p><code>var</code> adalah cara mendeklarasikan variabel di JavaScript versi awal. Masih didukung, tetapi memiliki perilaku yang sering menimbulkan bug.</p>
+<pre><code class="language-javascript">var nama = &quot;Budi&quot;;
+console.log(nama); // &quot;Budi&quot;
+
+var nama = &quot;Andi&quot;; // bisa dideklarasikan ulang
+console.log(nama); // &quot;Andi&quot;
+</code></pre>
+<p><strong>Masalah <code>var</code>:</strong></p>
+<ul>
+<li><strong>Function scope</strong>, bukan block scope — variabel bocor keluar dari blok <code>{}</code>.</li>
+<li>Bisa dideklarasikan ulang tanpa error.</li>
+<li>Hoisting-nya membingungkan (variabel &ldquo;ada&rdquo; sebelum dideklarasikan, bernilai <code>undefined</code>).</li>
+</ul>
+<pre><code class="language-javascript">if (true) {
+  var x = 10;
+}
+console.log(x); // 10 — bocor keluar blok!
+</code></pre>
+<blockquote>
+<p><strong>Rekomendasi:</strong> Jangan gunakan <code>var</code> di kode modern. Gunakan <code>let</code> atau <code>const</code>.</p>
+</blockquote>
+<h3 id="let--variabel-yang-bisa-diubah"><code>let</code> — Variabel yang Bisa Diubah <a href="#let--variabel-yang-bisa-diubah" class="anchor" aria-hidden="true">#</a></h3>
+<p><code>let</code> diperkenalkan di ES6 (2015). Memiliki <strong>block scope</strong> dan bisa di-<em>reassign</em>.</p>
+<pre><code class="language-javascript">let umur = 25;
+console.log(umur); // 25
+
+umur = 26;         // reassignment OK
+console.log(umur); // 26
+</code></pre>
+<p><strong>Block scope:</strong></p>
+<pre><code class="language-javascript">if (true) {
+  let x = 10;
+  console.log(x); // 10
+}
+console.log(x);   // ReferenceError: x is not defined
+</code></pre>
+<p>Variabel <code>x</code> hanya hidup di dalam blok <code>if</code>.</p>
+<p><strong>Tidak bisa dideklarasikan ulang dalam scope yang sama:</strong></p>
+<pre><code class="language-javascript">let nama = &quot;Budi&quot;;
+let nama = &quot;Andi&quot;; // SyntaxError: Identifier 'nama' has already been declared
+</code></pre>
+<h3 id="const--konstanta-tidak-bisa-di-reassign"><code>const</code> — Konstanta (Tidak Bisa Di-reassign) <a href="#const--konstanta-tidak-bisa-di-reassign" class="anchor" aria-hidden="true">#</a></h3>
+<p><code>const</code> juga memiliki <strong>block scope</strong>, tetapi nilainya <strong>tidak bisa di-<em>reassign</em></strong> setelah dideklarasikan.</p>
+<pre><code class="language-javascript">const PI = 3.14159;
+console.log(PI); // 3.14159
+
+PI = 3.14;       // TypeError: Assignment to constant variable
+</code></pre>
+<p><strong>Wajib diinisialisasi saat deklarasi:</strong></p>
+<pre><code class="language-javascript">const x;         // SyntaxError: Missing initializer in const declaration
+const y = 10;    // OK
+</code></pre>
+<p><strong><code>const</code> bukan berarti &ldquo;immutable&rdquo; untuk object/array:</strong></p>
+<p>Meskipun binding-nya tidak bisa diubah, <strong>isi</strong> object atau array yang dideklarasikan dengan <code>const</code> masih bisa dimodifikasi:</p>
+<pre><code class="language-javascript">const user = { nama: &quot;Budi&quot; };
+user.nama = &quot;Andi&quot;;        // OK — mengubah properti
+console.log(user.nama);    // &quot;Andi&quot;
+
+user = { nama: &quot;Citra&quot; };  // TypeError — reassign binding
+
+const angka = [1, 2, 3];
+angka.push(4);             // OK
+console.log(angka);        // [1, 2, 3, 4]
+</code></pre>
+<p>Untuk benar-benar membekukan object, gunakan <code>Object.freeze()</code>:</p>
+<pre><code class="language-javascript">const config = Object.freeze({ host: &quot;localhost&quot;, port: 3306 });
+config.port = 5432;        // gagal diam-diam (atau error di strict mode)
+console.log(config.port);  // 3306
+</code></pre>
+<h3 id="perbandingan-var-let-const">Perbandingan <code>var</code>, <code>let</code>, <code>const</code> <a href="#perbandingan-var-let-const" class="anchor" aria-hidden="true">#</a></h3>
+<table>
+<thead>
+<tr>
+<th>Aspek</th>
+<th><code>var</code></th>
+<th><code>let</code></th>
+<th><code>const</code></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Scope</td>
+<td>Function scope</td>
+<td>Block scope</td>
+<td>Block scope</td>
+</tr>
+<tr>
+<td>Reassign</td>
+<td>✅</td>
+<td>✅</td>
+<td>❌</td>
+</tr>
+<tr>
+<td>Redeclare</td>
+<td>✅</td>
+<td>❌</td>
+<td>❌</td>
+</tr>
+<tr>
+<td>Hoisting</td>
+<td>✅ (nilai <code>undefined</code>)</td>
+<td>✅ (TDZ)</td>
+<td>✅ (TDZ)</td>
+</tr>
+<tr>
+<td>Wajib inisialisasi</td>
+<td>❌</td>
+<td>❌</td>
+<td>✅</td>
+</tr>
+<tr>
+<td>Rekomendasi</td>
+<td>Hindari</td>
+<td>Untuk nilai berubah</td>
+<td><strong>Default pilihan</strong></td>
+</tr>
+</tbody>
+</table>
+<blockquote>
+<p><strong>Best practice:</strong> Gunakan <code>const</code> sebagai default. Gunakan <code>let</code> hanya jika nilai memang perlu berubah. Jangan gunakan <code>var</code>.</p>
+</blockquote>
+<h3 id="hoisting-dan-temporal-dead-zone-tdz">Hoisting dan Temporal Dead Zone (TDZ) <a href="#hoisting-dan-temporal-dead-zone-tdz" class="anchor" aria-hidden="true">#</a></h3>
+<p><strong>Hoisting</strong> adalah perilaku JavaScript yang &ldquo;mengangkat&rdquo; deklarasi variabel ke atas scope-nya.</p>
+<p><strong>Dengan <code>var</code>:</strong></p>
+<pre><code class="language-javascript">console.log(x); // undefined (bukan error!)
+var x = 5;
+</code></pre>
+<p>Deklarasi <code>var x</code> diangkat ke atas, tetapi nilainya belum diinisialisasi — hasilnya <code>undefined</code>.</p>
+<p><strong>Dengan <code>let</code> dan <code>const</code>:</strong></p>
+<pre><code class="language-javascript">console.log(y); // ReferenceError: Cannot access 'y' before initialization
+let y = 5;
+</code></pre>
+<p>Variabel <code>let</code>/<code>const</code> juga diangkat, tetapi berada di <strong>Temporal Dead Zone (TDZ)</strong> — periode antara awal scope dan baris deklarasi. Mengaksesnya sebelum deklarasi menghasilkan <code>ReferenceError</code>.</p>
+<blockquote>
+<p><strong>Tips:</strong> Selalu deklarasikan variabel <strong>sebelum</strong> digunakan. TDZ mencegah bug yang tidak terlihat.</p>
+</blockquote>
+<hr>
+<h2 id="aturan-penamaan-variabel">Aturan Penamaan Variabel <a href="#aturan-penamaan-variabel" class="anchor" aria-hidden="true">#</a></h2>
+<h3 id="aturan-wajib">Aturan Wajib <a href="#aturan-wajib" class="anchor" aria-hidden="true">#</a></h3>
+<ol>
+<li>
+<p><strong>Diawali huruf, <code>_</code>, atau <code>$</code></strong> — tidak boleh angka.</p>
+<pre><code class="language-javascript">let nama = &quot;Budi&quot;;    // ✅
+let _private = 1;     // ✅
+let $harga = 100;     // ✅
+let 1nama = &quot;Budi&quot;;   // ❌ SyntaxError
+</code></pre>
+</li>
+<li>
+<p><strong>Hanya berisi huruf, angka, <code>_</code>, dan <code>$</code></strong> — tanpa spasi atau karakter khusus.</p>
+<pre><code class="language-javascript">let nama_saya = &quot;Budi&quot;;   // ✅
+let nama-saya = &quot;Budi&quot;;   // ❌ (dianggap pengurangan)
+</code></pre>
+</li>
+<li>
+<p><strong>Case-sensitive</strong> — <code>nama</code> dan <code>Nama</code> adalah variabel berbeda.</p>
+</li>
+<li>
+<p><strong>Tidak boleh menggunakan reserved words</strong> — seperti <code>let</code>, <code>const</code>, <code>if</code>, <code>for</code>, <code>return</code>, dll.</p>
+</li>
+</ol>
+<h3 id="convention-kesepakatan">Convention (Kesepakatan) <a href="#convention-kesepakatan" class="anchor" aria-hidden="true">#</a></h3>
+<table>
+<thead>
+<tr>
+<th>Gaya</th>
+<th>Contoh</th>
+<th>Digunakan Untuk</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>camelCase</code></td>
+<td><code>namaLengkap</code>, <code>totalHarga</code></td>
+<td>Variabel &amp; fungsi (standar JS)</td>
+</tr>
+<tr>
+<td><code>PascalCase</code></td>
+<td><code>UserService</code>, <code>ProductCard</code></td>
+<td>Class &amp; constructor</td>
+</tr>
+<tr>
+<td><code>UPPER_SNAKE_CASE</code></td>
+<td><code>MAX_SIZE</code>, <code>API_URL</code></td>
+<td>Konstanta global</td>
+</tr>
+<tr>
+<td><code>_prefix</code></td>
+<td><code>_private</code></td>
+<td>Properti &ldquo;internal&rdquo; (konvensi)</td>
+</tr>
+</tbody>
+</table>
+<pre><code class="language-javascript">const MAX_LOGIN_ATTEMPTS = 5;      // konstanta
+let jumlahPercobaan = 0;           // variabel
+function hitungTotal() {}          // fungsi
+class KeranjangBelanja {}          // class
+</code></pre>
+<h3 id="nama-yang-deskriptif">Nama yang Deskriptif <a href="#nama-yang-deskriptif" class="anchor" aria-hidden="true">#</a></h3>
+<pre><code class="language-javascript">// ❌ Buruk
+let x = 5;
+let d = new Date();
+
+// ✅ Baik
+let jumlahProduk = 5;
+let tanggalSekarang = new Date();
+</code></pre>
+<hr>
+<h2 id="operator-dasar">Operator Dasar <a href="#operator-dasar" class="anchor" aria-hidden="true">#</a></h2>
+<h3 id="1-operator-aritmatika">1. Operator Aritmatika <a href="#1-operator-aritmatika" class="anchor" aria-hidden="true">#</a></h3>
+<table>
+<thead>
+<tr>
+<th>Operator</th>
+<th>Arti</th>
+<th>Contoh</th>
+<th>Hasil</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>+</code></td>
+<td>Penjumlahan</td>
+<td><code>5 + 3</code></td>
+<td><code>8</code></td>
+</tr>
+<tr>
+<td><code>-</code></td>
+<td>Pengurangan</td>
+<td><code>5 - 3</code></td>
+<td><code>2</code></td>
+</tr>
+<tr>
+<td><code>*</code></td>
+<td>Perkalian</td>
+<td><code>5 * 3</code></td>
+<td><code>15</code></td>
+</tr>
+<tr>
+<td><code>/</code></td>
+<td>Pembagian</td>
+<td><code>10 / 4</code></td>
+<td><code>2.5</code></td>
+</tr>
+<tr>
+<td><code>%</code></td>
+<td>Modulus (sisa bagi)</td>
+<td><code>10 % 3</code></td>
+<td><code>1</code></td>
+</tr>
+<tr>
+<td><code>**</code></td>
+<td>Pangkat</td>
+<td><code>2 ** 3</code></td>
+<td><code>8</code></td>
+</tr>
+</tbody>
+</table>
+<pre><code class="language-javascript">let a = 10;
+let b = 3;
+
+console.log(a + b);   // 13
+console.log(a - b);   // 7
+console.log(a * b);   // 30
+console.log(a / b);   // 3.3333...
+console.log(a % b);   // 1
+console.log(a ** b);  // 1000
+</code></pre>
+<p><strong>Operator <code>+</code> pada string (concatenation):</strong></p>
+<pre><code class="language-javascript">console.log(&quot;Hello&quot; + &quot; &quot; + &quot;World&quot;); // &quot;Hello World&quot;
+console.log(&quot;Angka: &quot; + 5);           // &quot;Angka: 5&quot; (number jadi string)
+console.log(5 + 3 + &quot;!&quot;);             // &quot;8!&quot; (5+3 dulu, lalu + &quot;!&quot;)
+console.log(&quot;!&quot; + 5 + 3);             // &quot;!53&quot; (string + 5 = &quot;!5&quot;, + 3 = &quot;!53&quot;)
+</code></pre>
+<blockquote>
+<p><strong>Perhatian:</strong> Urutan operasi memengaruhi hasil saat mencampur string dan number.</p>
+</blockquote>
+<h3 id="2-operator-penugasan-assignment">2. Operator Penugasan (Assignment) <a href="#2-operator-penugasan-assignment" class="anchor" aria-hidden="true">#</a></h3>
+<table>
+<thead>
+<tr>
+<th>Operator</th>
+<th>Contoh</th>
+<th>Setara Dengan</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>=</code></td>
+<td><code>x = 5</code></td>
+<td>—</td>
+</tr>
+<tr>
+<td><code>+=</code></td>
+<td><code>x += 3</code></td>
+<td><code>x = x + 3</code></td>
+</tr>
+<tr>
+<td><code>-=</code></td>
+<td><code>x -= 3</code></td>
+<td><code>x = x - 3</code></td>
+</tr>
+<tr>
+<td><code>*=</code></td>
+<td><code>x *= 3</code></td>
+<td><code>x = x * 3</code></td>
+</tr>
+<tr>
+<td><code>/=</code></td>
+<td><code>x /= 3</code></td>
+<td><code>x = x / 3</code></td>
+</tr>
+<tr>
+<td><code>%=</code></td>
+<td><code>x %= 3</code></td>
+<td><code>x = x % 3</code></td>
+</tr>
+<tr>
+<td><code>**=</code></td>
+<td><code>x **= 3</code></td>
+<td><code>x = x ** 3</code></td>
+</tr>
+</tbody>
+</table>
+<pre><code class="language-javascript">let total = 100;
+total += 50;   // 150
+total -= 20;   // 130
+total *= 2;    // 260
+total /= 4;    // 65
+</code></pre>
+<h3 id="3-operator-increment--decrement">3. Operator Increment &amp; Decrement <a href="#3-operator-increment--decrement" class="anchor" aria-hidden="true">#</a></h3>
+<pre><code class="language-javascript">let counter = 0;
+
+counter++;    // 1 (post-increment: kembalikan nilai lama, lalu tambah)
+counter--;    // 0 (post-decrement)
+
+++counter;    // 1 (pre-increment: tambah dulu, lalu kembalikan)
+--counter;    // 0 (pre-decrement)
+</code></pre>
+<p><strong>Perbedaan pre dan post:</strong></p>
+<pre><code class="language-javascript">let x = 5;
+console.log(x++); // 5 (kembalikan 5, lalu x jadi 6)
+console.log(x);   // 6
+
+let y = 5;
+console.log(++y); // 6 (y jadi 6 dulu, lalu kembalikan 6)
+console.log(y);   // 6
+</code></pre>
+<h3 id="4-operator-perbandingan">4. Operator Perbandingan <a href="#4-operator-perbandingan" class="anchor" aria-hidden="true">#</a></h3>
+<table>
+<thead>
+<tr>
+<th>Operator</th>
+<th>Arti</th>
+<th>Contoh</th>
+<th>Hasil</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>==</code></td>
+<td>Sama (longgar, dengan konversi tipe)</td>
+<td><code>5 == &quot;5&quot;</code></td>
+<td><code>true</code></td>
+</tr>
+<tr>
+<td><code>===</code></td>
+<td>Sama (ketat, tanpa konversi)</td>
+<td><code>5 === &quot;5&quot;</code></td>
+<td><code>false</code></td>
+</tr>
+<tr>
+<td><code>!=</code></td>
+<td>Tidak sama (longgar)</td>
+<td><code>5 != &quot;5&quot;</code></td>
+<td><code>false</code></td>
+</tr>
+<tr>
+<td><code>!==</code></td>
+<td>Tidak sama (ketat)</td>
+<td><code>5 !== &quot;5&quot;</code></td>
+<td><code>true</code></td>
+</tr>
+<tr>
+<td><code>&gt;</code></td>
+<td>Lebih besar</td>
+<td><code>5 &gt; 3</code></td>
+<td><code>true</code></td>
+</tr>
+<tr>
+<td><code>&lt;</code></td>
+<td>Lebih kecil</td>
+<td><code>5 &lt; 3</code></td>
+<td><code>false</code></td>
+</tr>
+<tr>
+<td><code>&gt;=</code></td>
+<td>Lebih besar atau sama</td>
+<td><code>5 &gt;= 5</code></td>
+<td><code>true</code></td>
+</tr>
+<tr>
+<td><code>&lt;=</code></td>
+<td>Lebih kecil atau sama</td>
+<td><code>5 &lt;= 3</code></td>
+<td><code>false</code></td>
+</tr>
+</tbody>
+</table>
+<p><strong>Selalu gunakan <code>===</code> dan <code>!==</code></strong> — hindari <code>==</code> dan <code>!=</code> karena melakukan konversi tipe yang tidak terduga:</p>
+<pre><code class="language-javascript">console.log(0 == &quot;&quot;);        // true  (!!)
+console.log(0 == &quot;0&quot;);       // true
+console.log(&quot;&quot; == &quot;0&quot;);      // false
+console.log(null == undefined); // true
+console.log(null === undefined); // false
+</code></pre>
+<blockquote>
+<p><strong>Best practice:</strong> Gunakan <code>===</code> dan <code>!==</code> secara konsisten. Ini mencegah bug halus akibat konversi tipe otomatis.</p>
+</blockquote>
+<h3 id="5-operator-logika">5. Operator Logika <a href="#5-operator-logika" class="anchor" aria-hidden="true">#</a></h3>
+<table>
+<thead>
+<tr>
+<th>Operator</th>
+<th>Arti</th>
+<th>Contoh</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>&amp;&amp;</code></td>
+<td>AND (dan)</td>
+<td><code>true &amp;&amp; false</code> → <code>false</code></td>
+</tr>
+<tr>
+<td><code>||</code></td>
+<td>OR (atau)</td>
+<td><code>true || false</code> → <code>true</code></td>
+</tr>
+<tr>
+<td><code>!</code></td>
+<td>NOT (negasi)</td>
+<td><code>!true</code> → <code>false</code></td>
+</tr>
+</tbody>
+</table>
+<p><strong>Short-circuit evaluation:</strong></p>
+<pre><code class="language-javascript">// &amp;&amp; mengembalikan operand pertama yang falsy, atau operand terakhir
+console.log(true &amp;&amp; &quot;Hello&quot;);   // &quot;Hello&quot;
+console.log(false &amp;&amp; &quot;Hello&quot;);  // false
+
+// || mengembalikan operand pertama yang truthy, atau operand terakhir
+console.log(false || &quot;Default&quot;); // &quot;Default&quot;
+console.log(&quot;Hello&quot; || &quot;Default&quot;); // &quot;Hello&quot;
+</code></pre>
+<p><strong>Pola umum:</strong></p>
+<pre><code class="language-javascript">// Nilai default
+const nama = inputNama || &quot;Anonim&quot;;
+
+// Eksekusi kondisional
+isLoggedIn &amp;&amp; tampilkanDashboard();
+</code></pre>
+<h3 id="6-operator-ternary-kondisional">6. Operator Ternary (Kondisional) <a href="#6-operator-ternary-kondisional" class="anchor" aria-hidden="true">#</a></h3>
+<p>Sintaks: <code>kondisi ? nilai_jika_true : nilai_jika_false</code></p>
+<pre><code class="language-javascript">const umur = 20;
+const status = umur &gt;= 18 ? &quot;Dewasa&quot; : &quot;Anak-anak&quot;;
+console.log(status); // &quot;Dewasa&quot;
+</code></pre>
+<p>Setara dengan:</p>
+<pre><code class="language-javascript">let status;
+if (umur &gt;= 18) {
+  status = &quot;Dewasa&quot;;
+} else {
+  status = &quot;Anak-anak&quot;;
+}
+</code></pre>
+<p>Ternary cocok untuk kondisi sederhana. Untuk logika kompleks, gunakan <code>if...else</code> agar lebih mudah dibaca.</p>
+<h3 id="7-operator-typeof">7. Operator <code>typeof</code> <a href="#7-operator-typeof" class="anchor" aria-hidden="true">#</a></h3>
+<p>Mengecek tipe data:</p>
+<pre><code class="language-javascript">console.log(typeof &quot;Hello&quot;);    // &quot;string&quot;
+console.log(typeof 42);         // &quot;number&quot;
+console.log(typeof true);       // &quot;boolean&quot;
+console.log(typeof undefined);  // &quot;undefined&quot;
+console.log(typeof null);       // &quot;object&quot; (quirk historis!)
+console.log(typeof {});         // &quot;object&quot;
+console.log(typeof []);         // &quot;object&quot;
+console.log(typeof function(){}); // &quot;function&quot;
+</code></pre>
+<blockquote>
+<p><strong>Catatan:</strong> <code>typeof null</code> mengembalikan <code>&quot;object&quot;</code> — ini adalah bug historis JavaScript yang tidak bisa diperbaiki tanpa merusak kode lama.</p>
+</blockquote>
+<h3 id="8-operator-nullish-coalescing-">8. Operator Nullish Coalescing (<code>??</code>) <a href="#8-operator-nullish-coalescing-" class="anchor" aria-hidden="true">#</a></h3>
+<p>Diperkenalkan di ES2020. Mirip <code>||</code>, tetapi hanya fallback jika nilai <strong><code>null</code> atau <code>undefined</code></strong> (bukan falsy seperti <code>0</code> atau <code>&quot;&quot;</code>).</p>
+<pre><code class="language-javascript">const nilai = 0;
+
+console.log(nilai || 100);  // 100 (karena 0 falsy)
+console.log(nilai ?? 100);  // 0   (karena 0 bukan null/undefined)
+
+const nama = null;
+console.log(nama ?? &quot;Anonim&quot;); // &quot;Anonim&quot;
+</code></pre>
+<blockquote>
+<p><strong>Tips:</strong> Gunakan <code>??</code> ketika <code>0</code> atau <code>&quot;&quot;</code> adalah nilai valid yang tidak boleh diganti default.</p>
+</blockquote>
+<h3 id="9-operator-optional-chaining-">9. Operator Optional Chaining (<code>?.</code>) <a href="#9-operator-optional-chaining-" class="anchor" aria-hidden="true">#</a></h3>
+<p>Diperkenalkan di ES2020. Mengakses properti dengan aman — jika objek <code>null</code> atau <code>undefined</code>, hasilnya <code>undefined</code> alih-alih error.</p>
+<pre><code class="language-javascript">const user = {
+  nama: &quot;Budi&quot;,
+  alamat: {
+    kota: &quot;Jakarta&quot;
+  }
+};
+
+console.log(user.alamat?.kota);      // &quot;Jakarta&quot;
+console.log(user.pekerjaan?.kantor); // undefined (tidak error)
+</code></pre>
+<p>Tanpa <code>?.</code>:</p>
+<pre><code class="language-javascript">console.log(user.pekerjaan.kantor); // TypeError: Cannot read property 'kantor' of undefined
+</code></pre>
+<hr>
+<h2 id="komentar">Komentar <a href="#komentar" class="anchor" aria-hidden="true">#</a></h2>
+<p>Komentar diabaikan oleh JavaScript — berguna untuk dokumentasi.</p>
+<pre><code class="language-javascript">// Komentar satu baris
+
+/*
+  Komentar
+  multi-baris
+*/
+
+/**
+ * Komentar JSDoc — untuk dokumentasi fungsi
+ * @param {string} nama - nama pengguna
+ * @returns {string} sapaan
+ */
+function sapa(nama) {
+  return `Halo, ${nama}!`;
+}
+</code></pre>
+<blockquote>
+<p><strong>Tips:</strong> Tulis komentar untuk menjelaskan <strong>mengapa</strong>, bukan <strong>apa</strong>. Kode yang baik sudah menjelaskan &ldquo;apa&rdquo; melalui nama variabel yang jelas.</p>
+</blockquote>
+<hr>
+<h2 id="contoh-praktis-menghitung-total-belanja">Contoh Praktis: Menghitung Total Belanja <a href="#contoh-praktis-menghitung-total-belanja" class="anchor" aria-hidden="true">#</a></h2>
+<p>Mari gabungkan semua yang telah dipelajari:</p>
+<pre><code class="language-javascript">// Konstanta
+const HARGA_PRODUK = 150000;
+const DISKON_PERSEN = 10;
+
+// Variabel
+let jumlahBeli = 3;
+let totalSebelumDiskon = HARGA_PRODUK * jumlahBeli;
+let nilaiDiskon = totalSebelumDiskon * (DISKON_PERSEN / 100);
+let totalAkhir = totalSebelumDiskon - nilaiDiskon;
+
+// Cek apakah dapat gratis ongkir (minimal 300rb)
+const gratisOngkir = totalAkhir &gt;= 300000;
+
+// Output
+console.log(`Jumlah beli: ${jumlahBeli}`);
+console.log(`Total sebelum diskon: Rp${totalSebelumDiskon}`);
+console.log(`Diskon (${DISKON_PERSEN}%): Rp${nilaiDiskon}`);
+console.log(`Total akhir: Rp${totalAkhir}`);
+console.log(`Gratis ongkir: ${gratisOngkir ? &quot;Ya&quot; : &quot;Tidak&quot;}`);
+</code></pre>
+<p>Output:</p>
+<pre><code>Jumlah beli: 3
+Total sebelum diskon: Rp450000
+Diskon (10%): Rp45000
+Total akhir: Rp405000
+Gratis ongkir: Ya
+</code></pre>
+<hr>
+<h2 id="ringkasan">Ringkasan <a href="#ringkasan" class="anchor" aria-hidden="true">#</a></h2>
+<table>
+<thead>
+<tr>
+<th>Konsep</th>
+<th>Poin Penting</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>var</code></td>
+<td>Function scope, bisa redeclare — <strong>hindari</strong></td>
+</tr>
+<tr>
+<td><code>let</code></td>
+<td>Block scope, bisa reassign</td>
+</tr>
+<tr>
+<td><code>const</code></td>
+<td>Block scope, tidak bisa reassign — <strong>default pilihan</strong></td>
+</tr>
+<tr>
+<td>Hoisting</td>
+<td><code>var</code> → <code>undefined</code>; <code>let</code>/<code>const</code> → TDZ</td>
+</tr>
+<tr>
+<td>Penamaan</td>
+<td><code>camelCase</code> untuk variabel, <code>UPPER_SNAKE_CASE</code> untuk konstanta</td>
+</tr>
+<tr>
+<td><code>===</code> vs <code>==</code></td>
+<td>Selalu gunakan <code>===</code> (strict equality)</td>
+</tr>
+<tr>
+<td><code>??</code> vs <code>||</code></td>
+<td><code>??</code> hanya fallback untuk <code>null</code>/<code>undefined</code></td>
+</tr>
+<tr>
+<td><code>?.</code></td>
+<td>Akses properti aman tanpa error</td>
+</tr>
+</tbody>
+</table>
+<p>Poin penting:</p>
+<ul>
+<li>Gunakan <code>const</code> sebagai default, <code>let</code> hanya jika perlu berubah.</li>
+<li>Jangan gunakan <code>var</code> di kode modern.</li>
+<li>Selalu gunakan <code>===</code> dan <code>!==</code> untuk perbandingan.</li>
+<li>Pahami <strong>TDZ</strong> — akses variabel sebelum deklarasi menghasilkan error.</li>
+<li><code>const</code> tidak membuat object/array immutable — gunakan <code>Object.freeze()</code> jika perlu.</li>
+<li>Gunakan nama variabel yang <strong>deskriptif</strong>.</li>
+</ul>
+<p>Pada artikel berikutnya, kita akan membahas <strong>Tipe Data &amp; Konversi</strong> — string, number, boolean, dan cara mengonversi antar tipe.</p>
+
+			<div class="page-footer-meta d-flex flex-column flex-md-row justify-content-between">
+				</div>
+			<div class="docs-navigation d-flex justify-content-between">
+	
+	<a href="/javascript/tutorial/02-instalasi-persiapan/">
+			<div class="card my-1">
+				<div class="card-body py-2">
+					&larr; Instalasi &amp; Persiapan Lingkungan JavaScript
+				</div>
+			</div>
+		</a>
+	<a class="ms-auto" href="/javascript/tutorial/04-tipe-data-konversi/">
+			<div class="card my-1">
+				<div class="card-body py-2">
+					Tipe Data &amp; Konversi &rarr;
+				</div>
+			</div>
+		</a>
+	</div>
+
+			
+		</main>
+	</div>
+
+      </div>
+    </div>
+    
+    
+    <footer class="footer text-muted">
+  <div class="container-xxl">
+    <div class="row">
+      <div class="col-lg-8 order-last order-lg-first">
+        <ul class="list-inline">
+          <li class="list-inline-item">Powered by <a class="text-muted" href="https://gohugo.io/">Hugo</a> and <a class="text-muted" href="https://github.com/">Github</a></li>
+        </ul>
+      </div>
+      <div class="col-lg-8 order-first order-lg-last text-lg-end">
+        <ul class="list-inline">
+          </ul>
+      </div>
+    </div>
+  </div>
+</footer>
+    
+
+<script src="/js/bootstrap.min.650aeec64c81d69d4c0850fc73c93da3f0330cec0a27772feed7f90f60baa5f47f1c45687d71914bdafd1c4e860d40f6dc08ede27a2f08431ff929c9a2d24621.js" integrity="sha512-ZQruxkyB1p1MCFD8c8k9o/AzDOwKJ3cv7tf5D2C6pfR/HEVofXGRS9r9HE6GDUD23Ajt4novCEMf&#43;SnJotJGIQ==" crossorigin="anonymous" defer></script>
+  <script src="/js/highlight.min.ec234bd8a5f487aaffe50a89f17b14501b1bb65633cf177cffd4cb84702dd7030edc08712dceb8dc27ac7e54b53240a08bf0b8d951572ee582bcdbbd06a48a7b.js" integrity="sha512-7CNL2KX0h6r/5QqJ8XsUUBsbtlYzzxd8/9TLhHAt1wMO3AhxLc643CesflS1MkCgi/C42VFXLuWCvNu9BqSKew==" crossorigin="anonymous" defer></script>
+  <script src="/main.min.cd1e5e6b40065b3f7f7fd8548a528fac67019754eda0f37b9918d02d154fc9ef6a22742f6513b0572ad9163152e151ec36221fbeafbecd7759c3dab1f19b64b9.js" integrity="sha512-zR5ea0AGWz9/f9hUilKPrGcBl1TtoPN7mRjQLRVPye9qInQvZROwVyrZFjFS4VHsNiIfvq&#43;&#43;zXdZw9qx8ZtkuQ==" crossorigin="anonymous" defer></script>
+  <script src="https://kaban.my.id/index.min.f90d3536216d10b8ecf574dc8d57b0d2bd45aab605bdc69b1f7697f3476ebdb5db6a63a3f6955150f2c0b02e66fa1adfbf4c5b50c540f663f829ad8bcd5807c6.js" integrity="sha512-&#43;Q01NiFtELjs9XTcjVew0r1FqrYFvcabH3aX80duvbXbamOj9pVRUPLAsC5m&#43;hrfv0xbUMVA9mP4Ka2LzVgHxg==" crossorigin="anonymous" defer></script>
+  
+    <div class="d-flex fixed-bottom pb-4 pb-lg-5 pe-4 pe-lg-5">
+      <a id="toTop" href="#" class="btn btn-outline-primary rounded-circle ms-auto p-2"><span class="visually-hidden">Top</span><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-chevron-up"><polyline points="18 15 12 9 6 15"></polyline></svg></a>
+    </div>
+    
+  </body>
+</html>

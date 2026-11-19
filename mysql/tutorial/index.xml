@@ -17,5 +17,105 @@
 MySQL didesain untuk memudahkan pengguna dalam mengakses, mengelola, dan memanipulasi data dalam sebuah basis data secara efisien dan aman. MySQL menggunakan bahasa SQL (Structured Query Language) untuk mengelola dan mengakses data dalam basis data.</description>
     </item>
     
+    <item>
+      <title>Instalasi dan Konfigurasi MySQL</title>
+      <link>https://kaban.my.id/mysql/tutorial/02-instalasi/</link>
+      <pubDate>Wed, 07 Dec 2022 08:00:00 +0000</pubDate>
+      
+      <guid>https://kaban.my.id/mysql/tutorial/02-instalasi/</guid>
+      <description>Pendahuluan # Setelah mengenal apa itu MySQL dan keunggulannya, langkah selanjutnya adalah menginstalnya di komputer atau server Anda. MySQL tersedia untuk berbagai sistem operasi, dan cara instalasinya pun berbeda-beda tergantung platform yang digunakan.
+Artikel ini akan membahas instalasi MySQL di tiga sistem operasi utama: Windows, Linux (Ubuntu), dan macOS. Pilih bagian yang sesuai dengan sistem operasi Anda.
+Instalasi MySQL di Windows # Di Windows, metode instalasi yang paling mudah dan direkomendasikan adalah menggunakan MySQL Installer (file MSI).</description>
+    </item>
+    
+    <item>
+      <title>Mengenal Arsitektur &amp; Komponen MySQL</title>
+      <link>https://kaban.my.id/mysql/tutorial/03-arsitektur/</link>
+      <pubDate>Thu, 08 Dec 2022 08:00:00 +0000</pubDate>
+      
+      <guid>https://kaban.my.id/mysql/tutorial/03-arsitektur/</guid>
+      <description>Pendahuluan # MySQL bukan sekadar tempat menyimpan data. Di balik perintah SELECT yang sederhana, terdapat arsitektur kompleks yang terdiri dari beberapa lapisan: koneksi client-server, parser query, optimizer, storage engine, dan lain-lain. Memahami arsitektur ini akan membantu Anda menulis query yang lebih efisien, memilih storage engine yang tepat, dan melakukan troubleshooting saat ada masalah.
+Artikel ini membahas komponen utama MySQL serta konsep dasar database, table, row, dan column yang akan Anda gunakan sehari-hari.</description>
+    </item>
+    
+    <item>
+      <title>Perintah Dasar SQL: Database &amp; Table</title>
+      <link>https://kaban.my.id/mysql/tutorial/04-database-table/</link>
+      <pubDate>Fri, 09 Dec 2022 08:00:00 +0000</pubDate>
+      
+      <guid>https://kaban.my.id/mysql/tutorial/04-database-table/</guid>
+      <description>Pendahuluan # Pada artikel sebelumnya kita sudah membahas arsitektur MySQL dan konsep database, table, row, serta column. Sekarang saatnya mulai menulis perintah SQL. Artikel ini membahas perintah-perintah dasar untuk mengelola database dan table, termasuk penerapan constraints yang berfungsi menjaga integritas data.
+Semua contoh di artikel ini menggunakan database contoh toko_online yang akan kita bangun bertahap.
+Perintah Dasar untuk Database # Membuat Database # Sintaks dasar:
+CREATE DATABASE nama_database; Contoh:
+CREATE DATABASE toko_online; Agar perintah tidak error jika database sudah ada, gunakan IF NOT EXISTS:</description>
+    </item>
+    
+    <item>
+      <title>Operasi CRUD (Create, Read, Update, Delete)</title>
+      <link>https://kaban.my.id/mysql/tutorial/05-crud/</link>
+      <pubDate>Sat, 10 Dec 2022 08:00:00 +0000</pubDate>
+      
+      <guid>https://kaban.my.id/mysql/tutorial/05-crud/</guid>
+      <description>Pendahuluan # Setelah skema database toko_online terbentuk pada artikel sebelumnya, sekarang saatnya mengisi dan mengelola datanya. CRUD adalah akronim dari empat operasi dasar yang akan Anda lakukan hampir setiap hari:
+Create — menambah data baru (INSERT) Read — membaca data (SELECT) Update — mengubah data (UPDATE) Delete — menghapus data (DELETE) Artikel ini membahas keempat operasi tersebut dengan contoh menggunakan tabel pelanggan dan produk yang sudah kita buat.
+Asumsi: Anda sudah menjalankan skrip pembuatan skema pada artikel sebelumnya dan sedang berada di database toko_online (USE toko_online;).</description>
+    </item>
+    
+    <item>
+      <title>Filtering &amp; Sorting Data</title>
+      <link>https://kaban.my.id/mysql/tutorial/06-filtering-sorting/</link>
+      <pubDate>Sun, 11 Dec 2022 08:00:00 +0000</pubDate>
+      
+      <guid>https://kaban.my.id/mysql/tutorial/06-filtering-sorting/</guid>
+      <description>Pendahuluan # Pada artikel CRUD sebelumnya, kita sudah bisa membaca data dengan SELECT. Namun di aplikasi nyata, kita hampir selalu perlu memfilter data (misalnya &amp;ldquo;tampilkan pesanan hari ini&amp;rdquo;) dan mengurutkannya (misalnya &amp;ldquo;urutkan dari harga termahal&amp;rdquo;). Dua operasi inilah yang dibahas di artikel ini.
+Kita akan menggunakan tabel pelanggan, produk, dan pesanan dari skema toko_online. Pastikan Anda sudah mengisi beberapa data contoh agar query bisa diuji.
+Asumsi: Anda berada di database toko_online (USE toko_online;).</description>
+    </item>
+    
+    <item>
+      <title>Fungsi Agregasi &amp; Grouping</title>
+      <link>https://kaban.my.id/mysql/tutorial/07-agregasi-grouping/</link>
+      <pubDate>Mon, 12 Dec 2022 08:00:00 +0000</pubDate>
+      
+      <guid>https://kaban.my.id/mysql/tutorial/07-agregasi-grouping/</guid>
+      <description>Pendahuluan # Sampai sekarang kita selalu menampilkan data baris per baris. Namun seringkali kita butuh ringkasan: berapa total penjualan bulan ini? Berapa rata-rata harga produk? Produk mana yang paling mahal? Pertanyaan-pertanyaan ini dijawab oleh fungsi agregasi.
+Artikel ini membahas lima fungsi agregasi utama (COUNT, SUM, AVG, MIN, MAX), cara mengelompokkan data dengan GROUP BY, dan cara memfilter hasil grup dengan HAVING.
+Asumsi: Anda berada di database toko_online (USE toko_online;) dan sudah mengisi data contoh pada tabel produk, pelanggan, pesanan, dan detail_pesanan.</description>
+    </item>
+    
+    <item>
+      <title>JOIN: Menggabungkan Tabel</title>
+      <link>https://kaban.my.id/mysql/tutorial/08-join/</link>
+      <pubDate>Tue, 13 Dec 2022 08:00:00 +0000</pubDate>
+      
+      <guid>https://kaban.my.id/mysql/tutorial/08-join/</guid>
+      <description>Pendahuluan # Dalam database relasional, data disimpan di banyak tabel yang saling berelasi — bukan di satu tabel besar. Sebagai contoh, skema toko_online kita memiliki tabel pelanggan, pesanan, dan detail_pesanan yang saling terhubung melalui foreign key.
+Untuk menjawab pertanyaan seperti &amp;ldquo;siapa nama pelanggan yang membuat pesanan nomor 5?&amp;rdquo; atau &amp;ldquo;produk apa saja yang ada di pesanan tersebut?&amp;rdquo;, kita perlu menggabungkan data dari beberapa tabel. Di sinilah JOIN berperan.
+Artikel ini membahas semua jenis JOIN di MySQL dengan contoh menggunakan skema toko_online.</description>
+    </item>
+    
+    <item>
+      <title>Subquery &amp; Union</title>
+      <link>https://kaban.my.id/mysql/tutorial/09-subquery-union/</link>
+      <pubDate>Wed, 14 Dec 2022 08:00:00 +0000</pubDate>
+      
+      <guid>https://kaban.my.id/mysql/tutorial/09-subquery-union/</guid>
+      <description>Pendahuluan # Pada artikel JOIN, kita menggabungkan tabel secara horizontal (menambah kolom). Namun ada kalanya kita perlu:
+Menggunakan hasil satu query sebagai input bagi query lain (subquery). Menggabungkan hasil beberapa query secara vertikal (UNION). Kedua teknik ini memperluas kemampuan SQL Anda dan sering muncul dalam analisis data maupun pengembangan aplikasi.
+Asumsi: Anda berada di database toko_online (USE toko_online;) dengan data contoh pada tabel pelanggan, produk, pesanan, dan detail_pesanan.
+Subquery: Query di Dalam Query # Subquery (atau inner query / nested query) adalah query SELECT yang dieksekusi di dalam query lain.</description>
+    </item>
+    
+    <item>
+      <title>View, Index, dan Stored Procedure</title>
+      <link>https://kaban.my.id/mysql/tutorial/10-view-index-procedure/</link>
+      <pubDate>Thu, 15 Dec 2022 08:00:00 +0000</pubDate>
+      
+      <guid>https://kaban.my.id/mysql/tutorial/10-view-index-procedure/</guid>
+      <description>Pendahuluan # Sampai sekarang kita sudah banyak bermain dengan tabel dan query. Namun MySQL juga menyediakan objek-objek lain yang membuat database lebih efisien dan mudah dipelihara:
+VIEW — &amp;ldquo;tabel virtual&amp;rdquo; dari hasil query, menyederhanakan query kompleks. INDEX — struktur data yang mempercepat pencarian. STORED PROCEDURE — kumpulan perintah SQL yang disimpan di server. FUNCTION — mirip stored procedure tetapi mengembalikan nilai. TRIGGER — kode yang otomatis dijalankan saat terjadi event pada tabel.</description>
+    </item>
+    
   </channel>
 </rss>
