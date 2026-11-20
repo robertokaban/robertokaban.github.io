@@ -1,0 +1,1701 @@
+<!doctype html>
+<html lang="en-US">
+  <head>
+  <meta charset="utf-8">
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <link rel="preload" as="font" href="https://kaban.my.id/fonts/vendor/jost/jost-v4-latin-regular.woff2" type="font/woff2" crossorigin>
+<link rel="preload" as="font" href="https://kaban.my.id/fonts/vendor/jost/jost-v4-latin-500.woff2" type="font/woff2" crossorigin>
+<link rel="preload" as="font" href="https://kaban.my.id/fonts/vendor/jost/jost-v4-latin-700.woff2" type="font/woff2" crossorigin>
+
+  <script>(()=>{var t=window.matchMedia&&window.matchMedia("(prefers-color-scheme: dark)").matches,e=localStorage.getItem("theme");t&&e===null&&(localStorage.setItem("theme","dark"),document.documentElement.setAttribute("data-dark-mode","")),t&&e==="dark"&&document.documentElement.setAttribute("data-dark-mode",""),e==="dark"&&document.documentElement.setAttribute("data-dark-mode","")})()</script>
+
+  <link rel="stylesheet" href="https://kaban.my.id/main.4296e689affcd00e933b8954c10fc43cd1a5f16d5552e78183d12ea50d3e0bf5a596df23a379a4936743f01a7cd8ba048a628b2b9b60b34aa49fad468287100a.css" integrity="sha512-Qpbmia/80A6TO4lUwQ/EPNGl8W1VUueBg9EupQ0&#43;C/Wllt8jo3mkk2dD8Bp82LoEimKLK5tgs0qkn61GgocQCg==" crossorigin="anonymous">
+<noscript><style>img.lazyload { display: none; }</style></noscript>
+  <meta name="robots" content="index, follow">
+    <meta name="googlebot" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1">
+    <meta name="bingbot" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1">
+  <title>String dan Manipulasi - Roberto Kaban Blog&#39;s</title>
+<meta name="description" content="Panduan lengkap manipulasi string PHP: fungsi string, formatting, heredoc, multibyte, dan regex dasar.">
+<link rel="canonical" href="https://kaban.my.id/php/tutorial/08-string/">
+<meta property="og:locale" content="en_US">
+<meta property="og:type" content="article">
+<meta property="og:title" content="String dan Manipulasi">
+<meta property="og:description" content="Panduan lengkap manipulasi string PHP: fungsi string, formatting, heredoc, multibyte, dan regex dasar.">
+<meta property="og:url" content="https://kaban.my.id/php/tutorial/08-string/">
+<meta property="og:site_name" content="Roberto Kaban Blog&#39;s">
+<meta property="article:published_time" content="2023-01-10T08:00:00+00:00">
+  <meta property="article:modified_time" content="2023-01-10T08:00:00+00:00">
+  
+  <meta property="og:image" content="https://kaban.my.id/doks.png"/>
+      <meta property="og:image:alt" content="Roberto Kaban Blog&#39;s">
+    
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:site" content="@robertokaban">
+<meta name="twitter:creator" content="@robertokaban">
+<meta name="twitter:title" content="String dan Manipulasi">
+<meta name="twitter:description" content="Panduan lengkap manipulasi string PHP: fungsi string, formatting, heredoc, multibyte, dan regex dasar.">
+<meta name="twitter:image" content="https://kaban.my.id/doks.png">
+    <meta name="twitter:image:alt" content="String dan Manipulasi">
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "Person",
+        "@id": "https://kaban.my.id/#/schema/person/1",
+      "name": "BlogRobertoKaban",
+      "url": "https://kaban.my.id/",
+      "sameAs": [
+        "https://twitter.com/robertokaban"
+        , "https://github.com/robertokaban"
+        ],
+      "image": {
+          "@type": "ImageObject",
+          "@id": "https://kaban.my.id/#/schema/image/1",
+          "url": "https://kaban.my.id/doks.png",
+          "width":  1280 ,
+          "height":  640 ,
+          "caption": "BlogRobertoKaban"
+        }
+      },
+    {
+      "@type": "WebSite",
+      "@id": "https://kaban.my.id/#/schema/website/1",
+      "url": "https://kaban.my.id/",
+      "name": "Roberto Kaban Blog\u0027s",
+      "description": "Hanya sebuah catatan kecil untuk hal yang tidak ingin dilupakan.",
+      "publisher": {
+          "@id": "https://kaban.my.id/#/schema/person/1"
+        }
+      },
+    {
+      "@type": "WebPage",
+      "@id": "https://kaban.my.id/php/tutorial/08-string/",
+      "url": "https://kaban.my.id/php/tutorial/08-string/",
+      "name": "String dan Manipulasi",
+      "description": "Panduan lengkap manipulasi string PHP: fungsi string, formatting, heredoc, multibyte, dan regex dasar.",
+      "isPartOf": {
+        "@id": "https://kaban.my.id/#/schema/website/1"
+      },
+      "about": {
+          "@id": "https://kaban.my.id/#/schema/person/1"
+        },
+      "datePublished": "2023-01-10T08:00:00CET",
+      "dateModified": "2023-01-10T08:00:00CET",
+      "breadcrumb": {
+        "@id": "https://kaban.my.id/php/tutorial/08-string/#/schema/breadcrumb/1"
+      },
+      "primaryImageOfPage": {
+        "@id": "https://kaban.my.id/php/tutorial/08-string/#/schema/image/2"
+      },
+      "inLanguage": "en-US",
+      "potentialAction": [{
+        "@type": "ReadAction", "target": ["https://kaban.my.id/php/tutorial/08-string/"]
+      }]
+    },
+    {
+      "@type": "BreadcrumbList",
+      "@id": "https://kaban.my.id/php/tutorial/08-string/#/schema/breadcrumb/1",
+      "name": "Breadcrumbs",
+      "itemListElement": [{
+        "@type": "ListItem",
+        "position":  1 ,
+        "item": {
+          "@type": "WebPage",
+          "@id": "https://kaban.my.id/",
+          "url": "https://kaban.my.id/",
+          "name": "Home"
+          }
+        },{
+        "@type": "ListItem",
+        "position":  2 ,
+        "item": {
+          "@type": "WebPage",
+          "@id": "https://kaban.my.id/php/",
+          "url": "https://kaban.my.id/php/",
+          "name": "Php"
+          }
+        },{
+        "@type": "ListItem",
+        "position":  3 ,
+        "item": {
+          "@type": "WebPage",
+          "@id": "https://kaban.my.id/php/tutorial/",
+          "url": "https://kaban.my.id/php/tutorial/",
+          "name": "Tutorial"
+          }
+        },{
+        "@type": "ListItem",
+        "position":  4 ,
+        "item": {
+          "@id": "https://kaban.my.id/php/tutorial/08-string/"
+          }
+        }]
+    },
+
+    {
+      "@context": "https://schema.org",
+      "@graph": [
+        {
+          "@type": "ImageObject",
+          "@id": "https://kaban.my.id/php/tutorial/08-string/#/schema/image/2",
+          "url": "https://kaban.my.id/doks.png",
+          "contentUrl": "https://kaban.my.id/doks.png",
+          "caption": "String dan Manipulasi"
+        }
+      ]
+    }
+
+  ]
+}
+</script>
+
+  <meta name="theme-color" content="#fff">
+<link rel="icon" href="https://kaban.my.id/favicon.ico" sizes="any">
+<link rel="icon" type="image/svg+xml" href="https://kaban.my.id/favicon.svg">
+<link rel="apple-touch-icon" sizes="180x180" href="https://kaban.my.id/apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="32x32" href="https://kaban.my.id/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="https://kaban.my.id/favicon-16x16.png">
+<link rel="manifest" crossorigin="use-credentials" href="https://kaban.my.id/site.webmanifest">
+
+  
+
+
+  
+  
+  
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-60VSDZFQR5"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-60VSDZFQR5');
+</script>
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6664512614760985"
+     crossorigin="anonymous"></script>
+</head>
+
+  <body class="php single">
+    <div class="sticky-top">
+<div class="header-bar"></div>
+
+<header class="navbar navbar-expand-lg navbar-light doks-navbar">
+  <nav class="container-xxl flex-wrap flex-lg-nowrap" aria-label="Main navigation">
+
+    <a class="navbar-brand order-0" href="/" aria-label="Roberto Kaban Blog&#39;s">
+      Roberto Kaban Blog&#39;s
+    </a>
+
+    <button class="btn btn-menu order-2 d-block d-lg-none" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasDoks" aria-controls="offcanvasDoks" aria-label="Open main menu">
+      <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-menu"><line x1="3" y1="12" x2="21" y2="12"></line><line x1="3" y1="6" x2="21" y2="6"></line><line x1="3" y1="18" x2="21" y2="18"></line></svg>
+    </button>
+    <div class="offcanvas offcanvas-end border-0 py-lg-1" tabindex="-1" id="offcanvasDoks" data-bs-backdrop="true" aria-labelledby="offcanvasDoksLabel">
+      <div class="header-bar d-lg-none"></div>
+      <div class="offcanvas-header d-lg-none">
+        <h2 class="h5 offcanvas-title ps-2" id="offcanvasDoksLabel"><a class="text-dark" href="/">Roberto Kaban Blog&#39;s</a></h2>
+        <button type="button" class="btn-close text-reset me-2" data-bs-dismiss="offcanvas" aria-label="Close main menu"></button>
+      </div>
+      <div class="offcanvas-body p-4 p-lg-0">
+        <ul class="nav flex-column flex-lg-row align-items-lg-center mt-2 mt-lg-0 ms-lg-2 me-lg-auto">
+              <li class="nav-item">
+                <a class="nav-link ps-0 py-1" href="/about/">About Me</a>
+              </li>
+            
+          
+              <li class="nav-item">
+                <a class="nav-link ps-0 py-1" href="/contact/">Contact</a>
+              </li>
+            
+          
+              <li class="nav-item">
+                <a class="nav-link ps-0 py-1" href="/artikel/">Artikel</a>
+              </li>
+            
+          
+              <li class="nav-item">
+                <a class="nav-link ps-0 py-1" href="/coretanku/">Coretanku</a>
+              </li>
+            
+          </ul>
+
+        <hr class="text-black-50 my-4 d-lg-none">
+        <form class="doks-search position-relative flex-grow-1 ms-lg-auto me-lg-2">
+          <input id="search" class="form-control is-search" type="search" placeholder="Cari di blog ini..." aria-label="Cari di blog ini..." autocomplete="off">
+          <div id="suggestions" class="shadow bg-white rounded d-none"></div>
+        </form>
+        <hr class="text-black-50 my-4 d-lg-none">
+        <ul class="nav flex-column flex-lg-row">
+          <li class="nav-item">
+              <a class="nav-link social-link" href="https://github.com/robertokaban"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-github"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path></svg><small class="ms-2 d-lg-none">GitHub</small></a>
+            </li>
+          <li class="nav-item">
+              <a class="nav-link social-link" href="https://facebook.com/roberto.kaban"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-facebook"><path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"></path></svg><small class="ms-2 d-lg-none">Facebook</small></a>
+            </li>
+          <li class="nav-item">
+              <a class="nav-link social-link" href="https://twitter.com/robertokaban"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-twitter"><path d="M23 3a10.9 10.9 0 0 1-3.14 1.53 4.48 4.48 0 0 0-7.86 3v1A10.66 10.66 0 0 1 3 4s-4 9 5 13a11.64 11.64 0 0 1-7 2c9 5 20 0 20-11.5a4.5 4.5 0 0 0-.08-.83A7.72 7.72 0 0 0 23 3z"></path></svg><small class="ms-2 d-lg-none">Twitter</small></a>
+            </li>
+          <li class="nav-item">
+              <a class="nav-link social-link" href="https://youtube.com/@robertokaban"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-youtube"><path d="M10,15L15.19,12L10,9V15M21.56,7.17C21.69,7.64 21.78,8.27 21.84,9.07C21.91,9.87 21.94,10.56 21.94,11.16L22,12C22,14.19 21.84,15.8 21.56,16.83C21.31,17.73 20.73,18.31 19.83,18.56C19.36,18.69 18.5,18.78 17.18,18.84C15.88,18.91 14.69,18.94 13.59,18.94L12,19C7.81,19 5.2,18.84 4.17,18.56C3.27,18.31 2.69,17.73 2.44,16.83C2.31,16.36 2.22,15.73 2.16,14.93C2.09,14.13 2.06,13.44 2.06,12.84L2,12C2,9.81 2.16,8.2 2.44,7.17C2.69,6.27 3.27,5.69 4.17,5.44C4.64,5.31 5.5,5.22 6.82,5.16C8.12,5.09 9.31,5.06 10.41,5.06L12,5C16.19,5 18.8,5.16 19.83,5.44C20.73,5.69 21.31,6.27 21.56,7.17Z"></path></svg><small class="ms-2 d-lg-none">Youtube</small></a>
+            </li>
+          </ul>
+
+        
+        <hr class="text-black-50 my-4 d-lg-none">
+        <button id="mode" class="btn btn-link" type="button" aria-label="Toggle user interface mode">
+          <span class="toggle-dark"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-moon"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path></svg></span>
+          <span class="toggle-light"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-sun"><circle cx="12" cy="12" r="5"></circle><line x1="12" y1="1" x2="12" y2="3"></line><line x1="12" y1="21" x2="12" y2="23"></line><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line><line x1="1" y1="12" x2="3" y2="12"></line><line x1="21" y1="12" x2="23" y2="12"></line><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line></svg></span>
+        </button>
+        
+
+        </div>
+    </div>
+  </nav>
+</header>
+
+
+</div>
+
+
+<div class="container-xxl">
+  <aside class="doks-sidebar">
+    <nav id="doks-docs-nav" class="collapse d-lg-none" aria-label="Tertiary navigation">
+      
+<ul class="list-unstyled collapsible-sidebar">
+  
+    
+      
+      <li class="mb-1">
+        <button class="btn btn-toggle align-items-center rounded collapsed" data-bs-toggle="collapse" data-bs-target="#section-de2591224751442a3b2101e94880333c" aria-expanded="true">
+          Tutorial PHP
+        </button>
+        <div class="collapse show" id="section-de2591224751442a3b2101e94880333c">
+          <ul class="btn-toggle-nav list-unstyled fw-normal pb-1 small">
+            
+              
+                
+                <li><a class="docs-link rounded" href="https://kaban.my.id/php/tutorial/pengenalan/">Pengenalan PHP</a></li>
+              
+            
+              
+                
+                <li><a class="docs-link rounded" href="https://kaban.my.id/php/tutorial/02-instalasi-persiapan/">Instalasi &amp; Persiapan Lingkungan PHP</a></li>
+              
+            
+              
+                
+                <li><a class="docs-link rounded" href="https://kaban.my.id/php/tutorial/03-sintaks-variabel/">Sintaks Dasar &amp; Variabel PHP</a></li>
+              
+            
+              
+                
+                <li><a class="docs-link rounded" href="https://kaban.my.id/php/tutorial/04-tipe-data-konversi/">Tipe Data &amp; Konversi</a></li>
+              
+            
+              
+                
+                <li><a class="docs-link rounded" href="https://kaban.my.id/php/tutorial/05-struktur-kontrol/">Struktur Kontrol &amp; Perulangan</a></li>
+              
+            
+              
+                
+                <li><a class="docs-link rounded" href="https://kaban.my.id/php/tutorial/06-fungsi/">Fungsi</a></li>
+              
+            
+              
+                
+                <li><a class="docs-link rounded" href="https://kaban.my.id/php/tutorial/07-array/">Array dan Method-nya</a></li>
+              
+            
+              
+                
+                <li><a class="docs-link rounded active" href="https://kaban.my.id/php/tutorial/08-string/">String dan Manipulasi</a></li>
+              
+            
+              
+                
+                <li><a class="docs-link rounded" href="https://kaban.my.id/php/tutorial/09-superglobal-form/">Superglobal dan Form Handling</a></li>
+              
+            
+              
+                
+                <li><a class="docs-link rounded" href="https://kaban.my.id/php/tutorial/10-session-cookie/">Session dan Cookie</a></li>
+              
+            
+              
+                
+                <li><a class="docs-link rounded" href="https://kaban.my.id/php/tutorial/11-include-require/">Include dan Require</a></li>
+              
+            
+          </ul>
+        </div>
+      </li>
+    
+  
+</ul>
+
+    </nav>
+  </aside>
+</div>
+
+    <div class="wrap container-xxl" role="document">
+      <div class="content">
+        
+	<div class="row flex-xl-nowrap">
+		<div class="col-lg-5 col-xl-4 docs-sidebar d-none d-lg-block">
+			<nav class="docs-links" aria-label="Main navigation">
+				
+<ul class="list-unstyled collapsible-sidebar">
+  
+    
+      
+      <li class="mb-1">
+        <button class="btn btn-toggle align-items-center rounded collapsed" data-bs-toggle="collapse" data-bs-target="#section-de2591224751442a3b2101e94880333c" aria-expanded="true">
+          Tutorial PHP
+        </button>
+        <div class="collapse show" id="section-de2591224751442a3b2101e94880333c">
+          <ul class="btn-toggle-nav list-unstyled fw-normal pb-1 small">
+            
+              
+                
+                <li><a class="docs-link rounded" href="https://kaban.my.id/php/tutorial/pengenalan/">Pengenalan PHP</a></li>
+              
+            
+              
+                
+                <li><a class="docs-link rounded" href="https://kaban.my.id/php/tutorial/02-instalasi-persiapan/">Instalasi &amp; Persiapan Lingkungan PHP</a></li>
+              
+            
+              
+                
+                <li><a class="docs-link rounded" href="https://kaban.my.id/php/tutorial/03-sintaks-variabel/">Sintaks Dasar &amp; Variabel PHP</a></li>
+              
+            
+              
+                
+                <li><a class="docs-link rounded" href="https://kaban.my.id/php/tutorial/04-tipe-data-konversi/">Tipe Data &amp; Konversi</a></li>
+              
+            
+              
+                
+                <li><a class="docs-link rounded" href="https://kaban.my.id/php/tutorial/05-struktur-kontrol/">Struktur Kontrol &amp; Perulangan</a></li>
+              
+            
+              
+                
+                <li><a class="docs-link rounded" href="https://kaban.my.id/php/tutorial/06-fungsi/">Fungsi</a></li>
+              
+            
+              
+                
+                <li><a class="docs-link rounded" href="https://kaban.my.id/php/tutorial/07-array/">Array dan Method-nya</a></li>
+              
+            
+              
+                
+                <li><a class="docs-link rounded active" href="https://kaban.my.id/php/tutorial/08-string/">String dan Manipulasi</a></li>
+              
+            
+              
+                
+                <li><a class="docs-link rounded" href="https://kaban.my.id/php/tutorial/09-superglobal-form/">Superglobal dan Form Handling</a></li>
+              
+            
+              
+                
+                <li><a class="docs-link rounded" href="https://kaban.my.id/php/tutorial/10-session-cookie/">Session dan Cookie</a></li>
+              
+            
+              
+                
+                <li><a class="docs-link rounded" href="https://kaban.my.id/php/tutorial/11-include-require/">Include dan Require</a></li>
+              
+            
+          </ul>
+        </div>
+      </li>
+    
+  
+</ul>
+
+			</nav>
+		</div>
+		<nav class="docs-toc d-none d-xl-block col-xl-3" aria-label="Secondary navigation">
+			<div class="d-xl-none">
+  <button class="btn btn-outline-primary btn-sm doks-toc-toggle collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#onThisPage" aria-controls="doks-docs-nav" aria-expanded="false" aria-label="Toggle On this page navigation">
+    <span>Daftar isi</span>
+    <span>
+      <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" class="doks doks-expand" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><title>Expand</title><polyline points="7 13 12 18 17 13"></polyline><polyline points="7 6 12 11 17 6"></polyline></svg>
+      <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" class="doks doks-collapse" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><title>Collapse</title><polyline points="17 11 12 6 7 11"></polyline><polyline points="17 18 12 13 7 18"></polyline></svg>
+    </span>
+  </button>
+  <div class="collapse" id="onThisPage">
+    <div class="card card-body mt-3 py-1">
+      <div class="page-links">
+        <nav id="TableOfContents">
+  <ul>
+    <li><a href="#pendahuluan">Pendahuluan</a></li>
+    <li><a href="#membuat-string">Membuat String</a>
+      <ul>
+        <li><a href="#single-quote-double-quote-dan-heredoc">Single Quote, Double Quote, dan Heredoc</a></li>
+        <li><a href="#interpolasi-variabel">Interpolasi Variabel</a></li>
+        <li><a href="#escape-character">Escape Character</a></li>
+      </ul>
+    </li>
+    <li><a href="#fungsi-string-dasar">Fungsi String Dasar</a>
+      <ul>
+        <li><a href="#panjang-string">Panjang String</a></li>
+        <li><a href="#mengubah-case">Mengubah Case</a></li>
+        <li><a href="#trim-hapus-spasi">Trim (Hapus Spasi)</a></li>
+        <li><a href="#mencari-substring">Mencari Substring</a></li>
+        <li><a href="#mengambil-substring">Mengambil Substring</a></li>
+        <li><a href="#mengganti-string">Mengganti String</a></li>
+        <li><a href="#membalik-string">Membalik String</a></li>
+        <li><a href="#mengulang-string">Mengulang String</a></li>
+        <li><a href="#padding">Padding</a></li>
+      </ul>
+    </li>
+    <li><a href="#memecah-dan-menggabung-string">Memecah dan Menggabung String</a>
+      <ul>
+        <li><a href="#explode--string-ke-array"><code>explode()</code> — String ke Array</a></li>
+        <li><a href="#implode--array-ke-string"><code>implode()</code> — Array ke String</a></li>
+        <li><a href="#preg_split--pecah-dengan-regex"><code>preg_split()</code> — Pecah dengan Regex</a></li>
+      </ul>
+    </li>
+    <li><a href="#formatting-string">Formatting String</a>
+      <ul>
+        <li><a href="#sprintf-dan-printf"><code>sprintf()</code> dan <code>printf()</code></a></li>
+        <li><a href="#number_format--format-angka"><code>number_format()</code> — Format Angka</a></li>
+        <li><a href="#nl2br--newline-ke-br"><code>nl2br()</code> — Newline ke <code>&lt;br&gt;</code></a></li>
+        <li><a href="#wordwrap--bungkus-teks"><code>wordwrap()</code> — Bungkus Teks</a></li>
+        <li><a href="#htmlspecialchars--escape-html"><code>htmlspecialchars()</code> — Escape HTML</a></li>
+        <li><a href="#strip_tags--hapus-tag-html"><code>strip_tags()</code> — Hapus Tag HTML</a></li>
+      </ul>
+    </li>
+    <li><a href="#multibyte-string-unicode">Multibyte String (Unicode)</a></li>
+    <li><a href="#regex-dasar">Regex Dasar</a>
+      <ul>
+        <li><a href="#preg_match--cek-pola"><code>preg_match()</code> — Cek Pola</a></li>
+        <li><a href="#preg_match_all--cari-semua-kecocokan"><code>preg_match_all()</code> — Cari Semua Kecocokan</a></li>
+        <li><a href="#preg_replace--ganti-dengan-pola"><code>preg_replace()</code> — Ganti dengan Pola</a></li>
+        <li><a href="#preg_split--pecah-dengan-pola"><code>preg_split()</code> — Pecah dengan Pola</a></li>
+        <li><a href="#pola-regex-umum">Pola Regex Umum</a></li>
+        <li><a href="#contoh-pola-umum">Contoh Pola Umum</a></li>
+        <li><a href="#flag-regex">Flag Regex</a></li>
+        <li><a href="#preg_quote--escape-karakter-regex"><code>preg_quote()</code> — Escape Karakter Regex</a></li>
+        <li><a href="#error-handling-regex">Error Handling Regex</a></li>
+      </ul>
+    </li>
+    <li><a href="#contoh-praktis">Contoh Praktis</a>
+      <ul>
+        <li><a href="#1-format-nama">1. Format Nama</a></li>
+        <li><a href="#2-slug-dari-judul">2. Slug dari Judul</a></li>
+        <li><a href="#3-potong-teks-dengan-ellipsis">3. Potong Teks dengan Ellipsis</a></li>
+        <li><a href="#4-validasi-email">4. Validasi Email</a></li>
+        <li><a href="#5-ekstrak-data-dari-string">5. Ekstrak Data dari String</a></li>
+        <li><a href="#6-format-rupiah">6. Format Rupiah</a></li>
+        <li><a href="#7-hitung-kata">7. Hitung Kata</a></li>
+      </ul>
+    </li>
+    <li><a href="#tips-dan-best-practice">Tips dan Best Practice</a></li>
+    <li><a href="#ringkasan">Ringkasan</a></li>
+  </ul>
+</nav>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="page-links d-none d-xl-block">
+  <h3>Daftar isi</h3>
+  <nav id="TableOfContents">
+  <ul>
+    <li><a href="#pendahuluan">Pendahuluan</a></li>
+    <li><a href="#membuat-string">Membuat String</a>
+      <ul>
+        <li><a href="#single-quote-double-quote-dan-heredoc">Single Quote, Double Quote, dan Heredoc</a></li>
+        <li><a href="#interpolasi-variabel">Interpolasi Variabel</a></li>
+        <li><a href="#escape-character">Escape Character</a></li>
+      </ul>
+    </li>
+    <li><a href="#fungsi-string-dasar">Fungsi String Dasar</a>
+      <ul>
+        <li><a href="#panjang-string">Panjang String</a></li>
+        <li><a href="#mengubah-case">Mengubah Case</a></li>
+        <li><a href="#trim-hapus-spasi">Trim (Hapus Spasi)</a></li>
+        <li><a href="#mencari-substring">Mencari Substring</a></li>
+        <li><a href="#mengambil-substring">Mengambil Substring</a></li>
+        <li><a href="#mengganti-string">Mengganti String</a></li>
+        <li><a href="#membalik-string">Membalik String</a></li>
+        <li><a href="#mengulang-string">Mengulang String</a></li>
+        <li><a href="#padding">Padding</a></li>
+      </ul>
+    </li>
+    <li><a href="#memecah-dan-menggabung-string">Memecah dan Menggabung String</a>
+      <ul>
+        <li><a href="#explode--string-ke-array"><code>explode()</code> — String ke Array</a></li>
+        <li><a href="#implode--array-ke-string"><code>implode()</code> — Array ke String</a></li>
+        <li><a href="#preg_split--pecah-dengan-regex"><code>preg_split()</code> — Pecah dengan Regex</a></li>
+      </ul>
+    </li>
+    <li><a href="#formatting-string">Formatting String</a>
+      <ul>
+        <li><a href="#sprintf-dan-printf"><code>sprintf()</code> dan <code>printf()</code></a></li>
+        <li><a href="#number_format--format-angka"><code>number_format()</code> — Format Angka</a></li>
+        <li><a href="#nl2br--newline-ke-br"><code>nl2br()</code> — Newline ke <code>&lt;br&gt;</code></a></li>
+        <li><a href="#wordwrap--bungkus-teks"><code>wordwrap()</code> — Bungkus Teks</a></li>
+        <li><a href="#htmlspecialchars--escape-html"><code>htmlspecialchars()</code> — Escape HTML</a></li>
+        <li><a href="#strip_tags--hapus-tag-html"><code>strip_tags()</code> — Hapus Tag HTML</a></li>
+      </ul>
+    </li>
+    <li><a href="#multibyte-string-unicode">Multibyte String (Unicode)</a></li>
+    <li><a href="#regex-dasar">Regex Dasar</a>
+      <ul>
+        <li><a href="#preg_match--cek-pola"><code>preg_match()</code> — Cek Pola</a></li>
+        <li><a href="#preg_match_all--cari-semua-kecocokan"><code>preg_match_all()</code> — Cari Semua Kecocokan</a></li>
+        <li><a href="#preg_replace--ganti-dengan-pola"><code>preg_replace()</code> — Ganti dengan Pola</a></li>
+        <li><a href="#preg_split--pecah-dengan-pola"><code>preg_split()</code> — Pecah dengan Pola</a></li>
+        <li><a href="#pola-regex-umum">Pola Regex Umum</a></li>
+        <li><a href="#contoh-pola-umum">Contoh Pola Umum</a></li>
+        <li><a href="#flag-regex">Flag Regex</a></li>
+        <li><a href="#preg_quote--escape-karakter-regex"><code>preg_quote()</code> — Escape Karakter Regex</a></li>
+        <li><a href="#error-handling-regex">Error Handling Regex</a></li>
+      </ul>
+    </li>
+    <li><a href="#contoh-praktis">Contoh Praktis</a>
+      <ul>
+        <li><a href="#1-format-nama">1. Format Nama</a></li>
+        <li><a href="#2-slug-dari-judul">2. Slug dari Judul</a></li>
+        <li><a href="#3-potong-teks-dengan-ellipsis">3. Potong Teks dengan Ellipsis</a></li>
+        <li><a href="#4-validasi-email">4. Validasi Email</a></li>
+        <li><a href="#5-ekstrak-data-dari-string">5. Ekstrak Data dari String</a></li>
+        <li><a href="#6-format-rupiah">6. Format Rupiah</a></li>
+        <li><a href="#7-hitung-kata">7. Hitung Kata</a></li>
+      </ul>
+    </li>
+    <li><a href="#tips-dan-best-practice">Tips dan Best Practice</a></li>
+    <li><a href="#ringkasan">Ringkasan</a></li>
+  </ul>
+</nav>
+  </div>
+
+		</nav>
+		<main class="docs-content col-lg-11 col-xl-9">
+		
+				<nav aria-label="breadcrumb">
+					<ol class="breadcrumb">
+						<li class="breadcrumb-item"><a href="/">Home</a></li>
+<li class="breadcrumb-item"><a href="/php/">Php</a></li>
+<li class="breadcrumb-item"><a href="/php/tutorial/">Tutorial PHP</a></li>
+<li class="breadcrumb-item active" aria-current="page">String dan Manipulasi</li>
+					</ol>
+				</nav>
+			
+			<h1>String dan Manipulasi</h1>
+			<p class="lead">String adalah tipe data yang paling sering diolah dalam aplikasi web. Artikel ini membahas fungsi string penting, formatting, heredoc/nowdoc, multibyte string, serta regex dasar dengan preg_match dan preg_replace.</p>
+			<nav class="d-xl-none" aria-label="Quaternary navigation">
+				<div class="d-xl-none">
+  <button class="btn btn-outline-primary btn-sm doks-toc-toggle collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#onThisPage" aria-controls="doks-docs-nav" aria-expanded="false" aria-label="Toggle On this page navigation">
+    <span>Daftar isi</span>
+    <span>
+      <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" class="doks doks-expand" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><title>Expand</title><polyline points="7 13 12 18 17 13"></polyline><polyline points="7 6 12 11 17 6"></polyline></svg>
+      <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" class="doks doks-collapse" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><title>Collapse</title><polyline points="17 11 12 6 7 11"></polyline><polyline points="17 18 12 13 7 18"></polyline></svg>
+    </span>
+  </button>
+  <div class="collapse" id="onThisPage">
+    <div class="card card-body mt-3 py-1">
+      <div class="page-links">
+        <nav id="TableOfContents">
+  <ul>
+    <li><a href="#pendahuluan">Pendahuluan</a></li>
+    <li><a href="#membuat-string">Membuat String</a>
+      <ul>
+        <li><a href="#single-quote-double-quote-dan-heredoc">Single Quote, Double Quote, dan Heredoc</a></li>
+        <li><a href="#interpolasi-variabel">Interpolasi Variabel</a></li>
+        <li><a href="#escape-character">Escape Character</a></li>
+      </ul>
+    </li>
+    <li><a href="#fungsi-string-dasar">Fungsi String Dasar</a>
+      <ul>
+        <li><a href="#panjang-string">Panjang String</a></li>
+        <li><a href="#mengubah-case">Mengubah Case</a></li>
+        <li><a href="#trim-hapus-spasi">Trim (Hapus Spasi)</a></li>
+        <li><a href="#mencari-substring">Mencari Substring</a></li>
+        <li><a href="#mengambil-substring">Mengambil Substring</a></li>
+        <li><a href="#mengganti-string">Mengganti String</a></li>
+        <li><a href="#membalik-string">Membalik String</a></li>
+        <li><a href="#mengulang-string">Mengulang String</a></li>
+        <li><a href="#padding">Padding</a></li>
+      </ul>
+    </li>
+    <li><a href="#memecah-dan-menggabung-string">Memecah dan Menggabung String</a>
+      <ul>
+        <li><a href="#explode--string-ke-array"><code>explode()</code> — String ke Array</a></li>
+        <li><a href="#implode--array-ke-string"><code>implode()</code> — Array ke String</a></li>
+        <li><a href="#preg_split--pecah-dengan-regex"><code>preg_split()</code> — Pecah dengan Regex</a></li>
+      </ul>
+    </li>
+    <li><a href="#formatting-string">Formatting String</a>
+      <ul>
+        <li><a href="#sprintf-dan-printf"><code>sprintf()</code> dan <code>printf()</code></a></li>
+        <li><a href="#number_format--format-angka"><code>number_format()</code> — Format Angka</a></li>
+        <li><a href="#nl2br--newline-ke-br"><code>nl2br()</code> — Newline ke <code>&lt;br&gt;</code></a></li>
+        <li><a href="#wordwrap--bungkus-teks"><code>wordwrap()</code> — Bungkus Teks</a></li>
+        <li><a href="#htmlspecialchars--escape-html"><code>htmlspecialchars()</code> — Escape HTML</a></li>
+        <li><a href="#strip_tags--hapus-tag-html"><code>strip_tags()</code> — Hapus Tag HTML</a></li>
+      </ul>
+    </li>
+    <li><a href="#multibyte-string-unicode">Multibyte String (Unicode)</a></li>
+    <li><a href="#regex-dasar">Regex Dasar</a>
+      <ul>
+        <li><a href="#preg_match--cek-pola"><code>preg_match()</code> — Cek Pola</a></li>
+        <li><a href="#preg_match_all--cari-semua-kecocokan"><code>preg_match_all()</code> — Cari Semua Kecocokan</a></li>
+        <li><a href="#preg_replace--ganti-dengan-pola"><code>preg_replace()</code> — Ganti dengan Pola</a></li>
+        <li><a href="#preg_split--pecah-dengan-pola"><code>preg_split()</code> — Pecah dengan Pola</a></li>
+        <li><a href="#pola-regex-umum">Pola Regex Umum</a></li>
+        <li><a href="#contoh-pola-umum">Contoh Pola Umum</a></li>
+        <li><a href="#flag-regex">Flag Regex</a></li>
+        <li><a href="#preg_quote--escape-karakter-regex"><code>preg_quote()</code> — Escape Karakter Regex</a></li>
+        <li><a href="#error-handling-regex">Error Handling Regex</a></li>
+      </ul>
+    </li>
+    <li><a href="#contoh-praktis">Contoh Praktis</a>
+      <ul>
+        <li><a href="#1-format-nama">1. Format Nama</a></li>
+        <li><a href="#2-slug-dari-judul">2. Slug dari Judul</a></li>
+        <li><a href="#3-potong-teks-dengan-ellipsis">3. Potong Teks dengan Ellipsis</a></li>
+        <li><a href="#4-validasi-email">4. Validasi Email</a></li>
+        <li><a href="#5-ekstrak-data-dari-string">5. Ekstrak Data dari String</a></li>
+        <li><a href="#6-format-rupiah">6. Format Rupiah</a></li>
+        <li><a href="#7-hitung-kata">7. Hitung Kata</a></li>
+      </ul>
+    </li>
+    <li><a href="#tips-dan-best-practice">Tips dan Best Practice</a></li>
+    <li><a href="#ringkasan">Ringkasan</a></li>
+  </ul>
+</nav>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="page-links d-none d-xl-block">
+  <h3>Daftar isi</h3>
+  <nav id="TableOfContents">
+  <ul>
+    <li><a href="#pendahuluan">Pendahuluan</a></li>
+    <li><a href="#membuat-string">Membuat String</a>
+      <ul>
+        <li><a href="#single-quote-double-quote-dan-heredoc">Single Quote, Double Quote, dan Heredoc</a></li>
+        <li><a href="#interpolasi-variabel">Interpolasi Variabel</a></li>
+        <li><a href="#escape-character">Escape Character</a></li>
+      </ul>
+    </li>
+    <li><a href="#fungsi-string-dasar">Fungsi String Dasar</a>
+      <ul>
+        <li><a href="#panjang-string">Panjang String</a></li>
+        <li><a href="#mengubah-case">Mengubah Case</a></li>
+        <li><a href="#trim-hapus-spasi">Trim (Hapus Spasi)</a></li>
+        <li><a href="#mencari-substring">Mencari Substring</a></li>
+        <li><a href="#mengambil-substring">Mengambil Substring</a></li>
+        <li><a href="#mengganti-string">Mengganti String</a></li>
+        <li><a href="#membalik-string">Membalik String</a></li>
+        <li><a href="#mengulang-string">Mengulang String</a></li>
+        <li><a href="#padding">Padding</a></li>
+      </ul>
+    </li>
+    <li><a href="#memecah-dan-menggabung-string">Memecah dan Menggabung String</a>
+      <ul>
+        <li><a href="#explode--string-ke-array"><code>explode()</code> — String ke Array</a></li>
+        <li><a href="#implode--array-ke-string"><code>implode()</code> — Array ke String</a></li>
+        <li><a href="#preg_split--pecah-dengan-regex"><code>preg_split()</code> — Pecah dengan Regex</a></li>
+      </ul>
+    </li>
+    <li><a href="#formatting-string">Formatting String</a>
+      <ul>
+        <li><a href="#sprintf-dan-printf"><code>sprintf()</code> dan <code>printf()</code></a></li>
+        <li><a href="#number_format--format-angka"><code>number_format()</code> — Format Angka</a></li>
+        <li><a href="#nl2br--newline-ke-br"><code>nl2br()</code> — Newline ke <code>&lt;br&gt;</code></a></li>
+        <li><a href="#wordwrap--bungkus-teks"><code>wordwrap()</code> — Bungkus Teks</a></li>
+        <li><a href="#htmlspecialchars--escape-html"><code>htmlspecialchars()</code> — Escape HTML</a></li>
+        <li><a href="#strip_tags--hapus-tag-html"><code>strip_tags()</code> — Hapus Tag HTML</a></li>
+      </ul>
+    </li>
+    <li><a href="#multibyte-string-unicode">Multibyte String (Unicode)</a></li>
+    <li><a href="#regex-dasar">Regex Dasar</a>
+      <ul>
+        <li><a href="#preg_match--cek-pola"><code>preg_match()</code> — Cek Pola</a></li>
+        <li><a href="#preg_match_all--cari-semua-kecocokan"><code>preg_match_all()</code> — Cari Semua Kecocokan</a></li>
+        <li><a href="#preg_replace--ganti-dengan-pola"><code>preg_replace()</code> — Ganti dengan Pola</a></li>
+        <li><a href="#preg_split--pecah-dengan-pola"><code>preg_split()</code> — Pecah dengan Pola</a></li>
+        <li><a href="#pola-regex-umum">Pola Regex Umum</a></li>
+        <li><a href="#contoh-pola-umum">Contoh Pola Umum</a></li>
+        <li><a href="#flag-regex">Flag Regex</a></li>
+        <li><a href="#preg_quote--escape-karakter-regex"><code>preg_quote()</code> — Escape Karakter Regex</a></li>
+        <li><a href="#error-handling-regex">Error Handling Regex</a></li>
+      </ul>
+    </li>
+    <li><a href="#contoh-praktis">Contoh Praktis</a>
+      <ul>
+        <li><a href="#1-format-nama">1. Format Nama</a></li>
+        <li><a href="#2-slug-dari-judul">2. Slug dari Judul</a></li>
+        <li><a href="#3-potong-teks-dengan-ellipsis">3. Potong Teks dengan Ellipsis</a></li>
+        <li><a href="#4-validasi-email">4. Validasi Email</a></li>
+        <li><a href="#5-ekstrak-data-dari-string">5. Ekstrak Data dari String</a></li>
+        <li><a href="#6-format-rupiah">6. Format Rupiah</a></li>
+        <li><a href="#7-hitung-kata">7. Hitung Kata</a></li>
+      </ul>
+    </li>
+    <li><a href="#tips-dan-best-practice">Tips dan Best Practice</a></li>
+    <li><a href="#ringkasan">Ringkasan</a></li>
+  </ul>
+</nav>
+  </div>
+
+			</nav>
+			<h2 id="pendahuluan">Pendahuluan <a href="#pendahuluan" class="anchor" aria-hidden="true">#</a></h2>
+<p><strong>String</strong> adalah urutan karakter — tipe data yang paling sering diolah dalam aplikasi web. Mulai dari menampilkan nama user, memformat harga, memvalidasi input, hingga memproses teks dari database, semuanya melibatkan string.</p>
+<p>PHP menyediakan <strong>puluhan fungsi string</strong> bawaan yang membuat manipulasi teks menjadi mudah. Artikel ini membahas fungsi-fungsi yang paling sering digunakan, cara formatting, heredoc/nowdoc, multibyte string untuk Unicode, serta regex dasar.</p>
+<blockquote>
+<p><strong>Asumsi:</strong> Anda sudah memahami variabel, tipe data, fungsi, dan array dari artikel sebelumnya.</p>
+</blockquote>
+<hr>
+<h2 id="membuat-string">Membuat String <a href="#membuat-string" class="anchor" aria-hidden="true">#</a></h2>
+<h3 id="single-quote-double-quote-dan-heredoc">Single Quote, Double Quote, dan Heredoc <a href="#single-quote-double-quote-dan-heredoc" class="anchor" aria-hidden="true">#</a></h3>
+<pre><code class="language-php">&lt;?php
+$single = 'Hello';
+$double = &quot;Hello&quot;;
+$heredoc = &lt;&lt;&lt;EOT
+Hello, World!
+EOT;
+$nowdoc = &lt;&lt;&lt;'EOT'
+Hello, World!
+EOT;
+</code></pre>
+<p><strong>Perbedaan:</strong></p>
+<table>
+<thead>
+<tr>
+<th>Aspek</th>
+<th>Single Quote <code>'...'</code></th>
+<th>Double Quote <code>&quot;...&quot;</code></th>
+<th>Heredoc <code>&lt;&lt;&lt;EOT</code></th>
+<th>Nowdoc <code>&lt;&lt;&lt;'EOT'</code></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Interpolasi variabel</td>
+<td>Tidak</td>
+<td>Ya</td>
+<td>Ya</td>
+<td>Tidak</td>
+</tr>
+<tr>
+<td>Escape <code>\n</code>, <code>\t</code></td>
+<td>Tidak</td>
+<td>Ya</td>
+<td>Ya</td>
+<td>Tidak</td>
+</tr>
+<tr>
+<td>Multi-baris</td>
+<td>Tidak</td>
+<td>Tidak (kecuali <code>\n</code>)</td>
+<td>Ya</td>
+<td>Ya</td>
+</tr>
+<tr>
+<td>Performa</td>
+<td>Paling cepat</td>
+<td>Sedikit lebih lambat</td>
+<td>Sedikit lebih lambat</td>
+<td>Paling cepat untuk multi-baris</td>
+</tr>
+</tbody>
+</table>
+<h3 id="interpolasi-variabel">Interpolasi Variabel <a href="#interpolasi-variabel" class="anchor" aria-hidden="true">#</a></h3>
+<p><strong>Double quote:</strong></p>
+<pre><code class="language-php">&lt;?php
+$nama = &quot;Budi&quot;;
+$umur = 25;
+
+echo &quot;Halo, $nama! Umur Anda $umur tahun.&quot;;
+// &quot;Halo, Budi! Umur Anda 25 tahun.&quot;
+
+// Kurung kurawal untuk ekspresi kompleks
+echo &quot;Halo, {$nama}!&quot;;
+echo &quot;Total: {$harga * $jumlah}&quot;;
+</code></pre>
+<p><strong>Heredoc:</strong></p>
+<pre><code class="language-php">&lt;?php
+$nama = &quot;Budi&quot;;
+$umur = 25;
+
+$teks = &lt;&lt;&lt;EOT
+Halo, $nama!
+Umur Anda $umur tahun.
+EOT;
+
+echo $teks;
+// Halo, Budi!
+// Umur Anda 25 tahun.
+</code></pre>
+<blockquote>
+<p><strong>Tips:</strong> Gunakan <strong>single quote</strong> untuk string statis (performa lebih baik), <strong>double quote</strong> atau <strong>heredoc</strong> jika butuh interpolasi, dan <strong>nowdoc</strong> untuk string multi-baris tanpa interpolasi (misalnya SQL atau kode).</p>
+</blockquote>
+<h3 id="escape-character">Escape Character <a href="#escape-character" class="anchor" aria-hidden="true">#</a></h3>
+<table>
+<thead>
+<tr>
+<th>Escape</th>
+<th>Arti</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>\n</code></td>
+<td>Baris baru</td>
+</tr>
+<tr>
+<td><code>\t</code></td>
+<td>Tab</td>
+</tr>
+<tr>
+<td><code>\r</code></td>
+<td>Carriage return</td>
+</tr>
+<tr>
+<td><code>\\</code></td>
+<td>Backslash</td>
+</tr>
+<tr>
+<td><code>\'</code></td>
+<td>Single quote (dalam single quote)</td>
+</tr>
+<tr>
+<td><code>\&quot;</code></td>
+<td>Double quote (dalam double quote)</td>
+</tr>
+<tr>
+<td><code>\$</code></td>
+<td>Dolar literal (dalam double quote)</td>
+</tr>
+<tr>
+<td><code>\u{XXXX}</code></td>
+<td>Unicode (PHP 7+)</td>
+</tr>
+</tbody>
+</table>
+<pre><code class="language-php">&lt;?php
+echo &quot;Baris 1\nBaris 2&quot;;
+echo &quot;Tab\tDi sini&quot;;
+echo &quot;Dia berkata: \&quot;Halo!\&quot;&quot;;
+echo 'It\'s okay';
+echo &quot;Harga: \$100&quot;;
+echo &quot;\u{1F600}&quot;; // 😀
+</code></pre>
+<hr>
+<h2 id="fungsi-string-dasar">Fungsi String Dasar <a href="#fungsi-string-dasar" class="anchor" aria-hidden="true">#</a></h2>
+<h3 id="panjang-string">Panjang String <a href="#panjang-string" class="anchor" aria-hidden="true">#</a></h3>
+<pre><code class="language-php">&lt;?php
+$teks = &quot;Hello World&quot;;
+
+echo strlen($teks);       // 11 (byte)
+echo mb_strlen($teks);    // 11 (karakter)
+
+$unicode = &quot;Halo, 世界!&quot;;
+echo strlen($unicode);    // 13 (byte)
+echo mb_strlen($unicode); // 10 (karakter)
+</code></pre>
+<blockquote>
+<p><strong>Tips:</strong> Gunakan <strong><code>mb_strlen()</code></strong> untuk string yang mungkin mengandung karakter Unicode (emoji, huruf non-Latin).</p>
+</blockquote>
+<h3 id="mengubah-case">Mengubah Case <a href="#mengubah-case" class="anchor" aria-hidden="true">#</a></h3>
+<pre><code class="language-php">&lt;?php
+$teks = &quot;Hello World&quot;;
+
+echo strtolower($teks);   // &quot;hello world&quot;
+echo strtoupper($teks);   // &quot;HELLO WORLD&quot;
+echo ucfirst(&quot;hello&quot;);    // &quot;Hello&quot;
+echo lcfirst(&quot;Hello&quot;);    // &quot;hello&quot;
+echo ucwords(&quot;hello world&quot;); // &quot;Hello World&quot;
+
+// Multibyte
+echo mb_strtolower(&quot;HALO DUNIA&quot;); // &quot;halo dunia&quot;
+echo mb_strtoupper(&quot;halo dunia&quot;); // &quot;HALO DUNIA&quot;
+</code></pre>
+<h3 id="trim-hapus-spasi">Trim (Hapus Spasi) <a href="#trim-hapus-spasi" class="anchor" aria-hidden="true">#</a></h3>
+<pre><code class="language-php">&lt;?php
+$teks = &quot;  Hello World  &quot;;
+
+echo trim($teks);       // &quot;Hello World&quot;
+echo ltrim($teks);      // &quot;Hello World  &quot; (kiri)
+echo rtrim($teks);      // &quot;  Hello World&quot; (kanan)
+
+// Trim karakter tertentu
+$kode = &quot;###Hello###&quot;;
+echo trim($kode, &quot;#&quot;);  // &quot;Hello&quot;
+
+$csv = &quot;apel,jeruk,&quot;;
+echo rtrim($csv, &quot;,&quot;);  // &quot;apel,jeruk&quot;
+</code></pre>
+<h3 id="mencari-substring">Mencari Substring <a href="#mencari-substring" class="anchor" aria-hidden="true">#</a></h3>
+<pre><code class="language-php">&lt;?php
+$teks = &quot;Hello World&quot;;
+
+echo strpos($teks, &quot;World&quot;);    // 6
+echo strpos($teks, &quot;world&quot;);    // false (case-sensitive)
+echo stripos($teks, &quot;world&quot;);   // 6 (case-insensitive)
+
+echo strrpos($teks, &quot;o&quot;);       // 7 (posisi terakhir)
+
+// PHP 8+
+var_dump(str_contains($teks, &quot;World&quot;));    // bool(true)
+var_dump(str_starts_with($teks, &quot;Hello&quot;)); // bool(true)
+var_dump(str_ends_with($teks, &quot;World&quot;));   // bool(true)
+</code></pre>
+<blockquote>
+<p><strong>Peringatan:</strong> <code>strpos()</code> mengembalikan <code>0</code> jika substring ada di awal string. Selalu gunakan <strong><code>!== false</code></strong> untuk mengecek keberadaan, bukan <code>!= false</code> atau <code>if (strpos(...))</code>.</p>
+</blockquote>
+<pre><code class="language-php">&lt;?php
+$teks = &quot;Hello World&quot;;
+
+// ❌ Salah — 0 dianggap falsy
+if (strpos($teks, &quot;Hello&quot;)) {
+    echo &quot;Tidak akan jalan&quot;;
+}
+
+// ✅ Benar
+if (strpos($teks, &quot;Hello&quot;) !== false) {
+    echo &quot;Ditemukan di awal&quot;;
+}
+</code></pre>
+<h3 id="mengambil-substring">Mengambil Substring <a href="#mengambil-substring" class="anchor" aria-hidden="true">#</a></h3>
+<pre><code class="language-php">&lt;?php
+$teks = &quot;Hello World&quot;;
+
+echo substr($teks, 0, 5);   // &quot;Hello&quot;
+echo substr($teks, 6);      // &quot;World&quot;
+echo substr($teks, -5);     // &quot;World&quot; (dari akhir)
+echo substr($teks, 0, -6);  // &quot;Hello&quot; (buang 6 karakter terakhir)
+
+// Multibyte
+echo mb_substr(&quot;Halo, 世界!&quot;, 0, 5); // &quot;Halo,&quot;
+</code></pre>
+<h3 id="mengganti-string">Mengganti String <a href="#mengganti-string" class="anchor" aria-hidden="true">#</a></h3>
+<pre><code class="language-php">&lt;?php
+$teks = &quot;Hello World&quot;;
+
+echo str_replace(&quot;World&quot;, &quot;PHP&quot;, $teks);   // &quot;Hello PHP&quot;
+echo str_ireplace(&quot;world&quot;, &quot;PHP&quot;, $teks);  // &quot;Hello PHP&quot; (case-insensitive)
+
+// Dengan array
+$cari = [&quot;Hello&quot;, &quot;World&quot;];
+$ganti = [&quot;Halo&quot;, &quot;Dunia&quot;];
+echo str_replace($cari, $ganti, $teks);    // &quot;Halo Dunia&quot;
+
+// Hitung jumlah penggantian
+$jumlah = 0;
+str_replace(&quot;o&quot;, &quot;0&quot;, $teks, $jumlah);
+echo $jumlah; // 2
+</code></pre>
+<blockquote>
+<p><strong>Catatan:</strong> <code>str_replace()</code> mengganti <strong>semua</strong> kemunculan. Untuk mengganti hanya sekali, gunakan <code>preg_replace()</code> dengan limit, atau fungsi khusus.</p>
+</blockquote>
+<h3 id="membalik-string">Membalik String <a href="#membalik-string" class="anchor" aria-hidden="true">#</a></h3>
+<pre><code class="language-php">&lt;?php
+echo strrev(&quot;Hello&quot;); // &quot;olleH&quot;
+</code></pre>
+<h3 id="mengulang-string">Mengulang String <a href="#mengulang-string" class="anchor" aria-hidden="true">#</a></h3>
+<pre><code class="language-php">&lt;?php
+echo str_repeat(&quot;ab&quot;, 3);  // &quot;ababab&quot;
+echo str_repeat(&quot;-&quot;, 20);  // &quot;--------------------&quot;
+</code></pre>
+<h3 id="padding">Padding <a href="#padding" class="anchor" aria-hidden="true">#</a></h3>
+<pre><code class="language-php">&lt;?php
+echo str_pad(&quot;5&quot;, 3, &quot;0&quot;, STR_PAD_LEFT);   // &quot;005&quot;
+echo str_pad(&quot;5&quot;, 3, &quot;0&quot;, STR_PAD_RIGHT);  // &quot;500&quot;
+echo str_pad(&quot;5&quot;, 3, &quot;0&quot;, STR_PAD_BOTH);   // &quot;050&quot;
+
+echo str_pad(&quot;Hello&quot;, 10, &quot;*&quot;, STR_PAD_BOTH); // &quot;**Hello***&quot;
+</code></pre>
+<hr>
+<h2 id="memecah-dan-menggabung-string">Memecah dan Menggabung String <a href="#memecah-dan-menggabung-string" class="anchor" aria-hidden="true">#</a></h2>
+<h3 id="explode--string-ke-array"><code>explode()</code> — String ke Array <a href="#explode--string-ke-array" class="anchor" aria-hidden="true">#</a></h3>
+<pre><code class="language-php">&lt;?php
+$csv = &quot;apel,jeruk,mangga&quot;;
+$buah = explode(&quot;,&quot;, $csv);
+print_r($buah); // [&quot;apel&quot;, &quot;jeruk&quot;, &quot;mangga&quot;]
+
+// Dengan limit
+$bagian = explode(&quot;,&quot;, $csv, 2);
+print_r($bagian); // [&quot;apel&quot;, &quot;jeruk,mangga&quot;]
+
+// Pecah per karakter
+$chars = str_split(&quot;Hello&quot;);
+print_r($chars); // [&quot;H&quot;, &quot;e&quot;, &quot;l&quot;, &quot;l&quot;, &quot;o&quot;]
+
+// Pecah per 2 karakter
+$chunks = str_split(&quot;HelloWorld&quot;, 2);
+print_r($chunks); // [&quot;He&quot;, &quot;ll&quot;, &quot;oW&quot;, &quot;or&quot;, &quot;ld&quot;]
+</code></pre>
+<h3 id="implode--array-ke-string"><code>implode()</code> — Array ke String <a href="#implode--array-ke-string" class="anchor" aria-hidden="true">#</a></h3>
+<pre><code class="language-php">&lt;?php
+$buah = [&quot;apel&quot;, &quot;jeruk&quot;, &quot;mangga&quot;];
+
+echo implode(&quot;, &quot;, $buah);  // &quot;apel, jeruk, mangga&quot;
+echo implode(&quot; - &quot;, $buah); // &quot;apel - jeruk - mangga&quot;
+echo implode(&quot;&quot;, $buah);    // &quot;apeljerukmangga&quot;
+
+// Alias: join()
+echo join(&quot;, &quot;, $buah);     // &quot;apel, jeruk, mangga&quot;
+</code></pre>
+<h3 id="preg_split--pecah-dengan-regex"><code>preg_split()</code> — Pecah dengan Regex <a href="#preg_split--pecah-dengan-regex" class="anchor" aria-hidden="true">#</a></h3>
+<pre><code class="language-php">&lt;?php
+$teks = &quot;apel, jeruk; mangga|pisang&quot;;
+$buah = preg_split(&quot;/[,;|]\s*/&quot;, $teks);
+print_r($buah); // [&quot;apel&quot;, &quot;jeruk&quot;, &quot;mangga&quot;, &quot;pisang&quot;]
+</code></pre>
+<hr>
+<h2 id="formatting-string">Formatting String <a href="#formatting-string" class="anchor" aria-hidden="true">#</a></h2>
+<h3 id="sprintf-dan-printf"><code>sprintf()</code> dan <code>printf()</code> <a href="#sprintf-dan-printf" class="anchor" aria-hidden="true">#</a></h3>
+<p><strong><code>sprintf()</code></strong> mengembalikan string terformat, <strong><code>printf()</code></strong> langsung mencetak.</p>
+<pre><code class="language-php">&lt;?php
+$nama = &quot;Budi&quot;;
+$umur = 25;
+$harga = 150000.5;
+
+// sprintf — mengembalikan string
+$teks = sprintf(&quot;Halo, %s! Umur Anda %d tahun.&quot;, $nama, $umur);
+echo $teks; // &quot;Halo, Budi! Umur Anda 25 tahun.&quot;
+
+// printf — langsung mencetak
+printf(&quot;Halo, %s! Umur Anda %d tahun.\n&quot;, $nama, $umur);
+
+// Format harga
+printf(&quot;Harga: Rp%.2f\n&quot;, $harga); // &quot;Harga: Rp150000.50&quot;
+
+// Padding
+printf(&quot;|%10s|\n&quot;, &quot;Hello&quot;);  // &quot;|     Hello|&quot;
+printf(&quot;|%-10s|\n&quot;, &quot;Hello&quot;); // &quot;|Hello     |&quot;
+printf(&quot;|%010d|\n&quot;, 42);      // &quot;|0000000042|&quot;
+</code></pre>
+<p><strong>Format specifier umum:</strong></p>
+<table>
+<thead>
+<tr>
+<th>Specifier</th>
+<th>Arti</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>%s</code></td>
+<td>String</td>
+</tr>
+<tr>
+<td><code>%d</code></td>
+<td>Integer</td>
+</tr>
+<tr>
+<td><code>%f</code></td>
+<td>Float</td>
+</tr>
+<tr>
+<td><code>%.2f</code></td>
+<td>Float 2 desimal</td>
+</tr>
+<tr>
+<td><code>%x</code></td>
+<td>Heksadesimal</td>
+</tr>
+<tr>
+<td><code>%b</code></td>
+<td>Biner</td>
+</tr>
+<tr>
+<td><code>%o</code></td>
+<td>Oktal</td>
+</tr>
+<tr>
+<td><code>%e</code></td>
+<td>Notasi ilmiah</td>
+</tr>
+<tr>
+<td><code>%%</code></td>
+<td>Karakter <code>%</code> literal</td>
+</tr>
+<tr>
+<td><code>%10s</code></td>
+<td>String, lebar 10 (rata kanan)</td>
+</tr>
+<tr>
+<td><code>%-10s</code></td>
+<td>String, lebar 10 (rata kiri)</td>
+</tr>
+<tr>
+<td><code>%010d</code></td>
+<td>Integer, lebar 10, padding nol</td>
+</tr>
+</tbody>
+</table>
+<h3 id="number_format--format-angka"><code>number_format()</code> — Format Angka <a href="#number_format--format-angka" class="anchor" aria-hidden="true">#</a></h3>
+<pre><code class="language-php">&lt;?php
+$angka = 1500000.567;
+
+echo number_format($angka);                    // &quot;1,500,001&quot; (dibulatkan)
+echo number_format($angka, 2);                 // &quot;1,500,000.57&quot;
+echo number_format($angka, 2, &quot;,&quot;, &quot;.&quot;);       // &quot;1.500.000,57&quot; (format Indonesia)
+echo number_format($angka, 0, &quot;,&quot;, &quot;.&quot;);       // &quot;1.500.001&quot;
+
+// Format Rupiah
+echo &quot;Rp&quot; . number_format(1500000, 0, &quot;,&quot;, &quot;.&quot;); // &quot;Rp1.500.000&quot;
+</code></pre>
+<h3 id="nl2br--newline-ke-br"><code>nl2br()</code> — Newline ke <code>&lt;br&gt;</code> <a href="#nl2br--newline-ke-br" class="anchor" aria-hidden="true">#</a></h3>
+<pre><code class="language-php">&lt;?php
+$teks = &quot;Baris 1\nBaris 2\nBaris 3&quot;;
+echo nl2br($teks);
+// &quot;Baris 1&lt;br /&gt;\nBaris 2&lt;br /&gt;\nBaris 3&quot;
+</code></pre>
+<blockquote>
+<p><strong>Peringatan:</strong> <code>nl2br()</code> <strong>tidak</strong> meng-escape HTML. Selalu gabungkan dengan <code>htmlspecialchars()</code> untuk output ke browser.</p>
+</blockquote>
+<h3 id="wordwrap--bungkus-teks"><code>wordwrap()</code> — Bungkus Teks <a href="#wordwrap--bungkus-teks" class="anchor" aria-hidden="true">#</a></h3>
+<pre><code class="language-php">&lt;?php
+$teks = &quot;Ini adalah teks yang sangat panjang dan perlu dibungkus.&quot;;
+echo wordwrap($teks, 20, &quot;\n&quot;, true);
+</code></pre>
+<h3 id="htmlspecialchars--escape-html"><code>htmlspecialchars()</code> — Escape HTML <a href="#htmlspecialchars--escape-html" class="anchor" aria-hidden="true">#</a></h3>
+<p><strong>Wajib</strong> digunakan saat menampilkan input user ke HTML — mencegah XSS.</p>
+<pre><code class="language-php">&lt;?php
+$input = '&lt;script&gt;alert(&quot;XSS&quot;)&lt;/script&gt;';
+echo htmlspecialchars($input);
+// &quot;&amp;lt;script&amp;gt;alert(&amp;quot;XSS&amp;quot;)&amp;lt;/script&amp;gt;&quot;
+
+// Dengan ENT_QUOTES (escape single dan double quote)
+echo htmlspecialchars($input, ENT_QUOTES, &quot;UTF-8&quot;);
+</code></pre>
+<blockquote>
+<p><strong>Tips:</strong> Selalu gunakan <code>htmlspecialchars($string, ENT_QUOTES, &quot;UTF-8&quot;)</code> saat menampilkan data dari user ke HTML. Ini adalah pertahanan utama terhadap XSS.</p>
+</blockquote>
+<h3 id="strip_tags--hapus-tag-html"><code>strip_tags()</code> — Hapus Tag HTML <a href="#strip_tags--hapus-tag-html" class="anchor" aria-hidden="true">#</a></h3>
+<pre><code class="language-php">&lt;?php
+$html = &quot;&lt;p&gt;Hello &lt;strong&gt;World&lt;/strong&gt;&lt;/p&gt;&quot;;
+echo strip_tags($html); // &quot;Hello World&quot;
+
+// Izinkan tag tertentu
+echo strip_tags($html, &quot;&lt;strong&gt;&quot;); // &quot;Hello &lt;strong&gt;World&lt;/strong&gt;&quot;
+</code></pre>
+<blockquote>
+<p><strong>Catatan:</strong> <code>strip_tags()</code> bukan pengganti <code>htmlspecialchars()</code>. Gunakan <code>htmlspecialchars()</code> untuk output, <code>strip_tags()</code> hanya jika memang perlu menghapus tag.</p>
+</blockquote>
+<hr>
+<h2 id="multibyte-string-unicode">Multibyte String (Unicode) <a href="#multibyte-string-unicode" class="anchor" aria-hidden="true">#</a></h2>
+<p>Fungsi <code>strlen()</code>, <code>substr()</code>, <code>strpos()</code> bekerja pada <strong>byte</strong>, bukan karakter. Untuk string Unicode (emoji, huruf non-Latin), gunakan <code>mb_*</code>.</p>
+<pre><code class="language-php">&lt;?php
+$teks = &quot;Halo, 世界! 😀&quot;;
+
+// Byte vs karakter
+echo strlen($teks);       // 19 (byte)
+echo mb_strlen($teks);    // 11 (karakter)
+
+// Substring
+echo substr($teks, 0, 5);    // &quot;Halo,&quot; (mungkin rusak untuk Unicode)
+echo mb_substr($teks, 0, 5); // &quot;Halo,&quot; (aman)
+
+// Posisi
+echo mb_strpos($teks, &quot;世界&quot;); // 6
+</code></pre>
+<blockquote>
+<p><strong>Tips:</strong> Jika aplikasi Anda menangani teks non-ASCII, <strong>selalu</strong> gunakan <code>mb_*</code> functions dan set <code>default_charset = &quot;UTF-8&quot;</code> di <code>php.ini</code>.</p>
+</blockquote>
+<p><strong>Fungsi <code>mb_*</code> umum:</strong></p>
+<table>
+<thead>
+<tr>
+<th>Fungsi Byte</th>
+<th>Fungsi Multibyte</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>strlen()</code></td>
+<td><code>mb_strlen()</code></td>
+</tr>
+<tr>
+<td><code>substr()</code></td>
+<td><code>mb_substr()</code></td>
+</tr>
+<tr>
+<td><code>strpos()</code></td>
+<td><code>mb_strpos()</code></td>
+</tr>
+<tr>
+<td><code>strtolower()</code></td>
+<td><code>mb_strtolower()</code></td>
+</tr>
+<tr>
+<td><code>strtoupper()</code></td>
+<td><code>mb_strtoupper()</code></td>
+</tr>
+<tr>
+<td><code>str_split()</code></td>
+<td><code>mb_str_split()</code> (PHP 7.4+)</td>
+</tr>
+</tbody>
+</table>
+<hr>
+<h2 id="regex-dasar">Regex Dasar <a href="#regex-dasar" class="anchor" aria-hidden="true">#</a></h2>
+<p>PHP mendukung <strong>PCRE</strong> (Perl Compatible Regular Expressions) melalui fungsi <code>preg_*</code>.</p>
+<h3 id="preg_match--cek-pola"><code>preg_match()</code> — Cek Pola <a href="#preg_match--cek-pola" class="anchor" aria-hidden="true">#</a></h3>
+<p>Mengembalikan <code>1</code> jika cocok, <code>0</code> jika tidak.</p>
+<pre><code class="language-php">&lt;?php
+$teks = &quot;Halo, Budi!&quot;;
+
+// Cek apakah mengandung &quot;Budi&quot;
+if (preg_match(&quot;/Budi/&quot;, $teks)) {
+    echo &quot;Ditemukan&quot;;
+}
+
+// Dengan capture group
+preg_match(&quot;/Halo, (\w+)!/&quot;, $teks, $matches);
+print_r($matches);
+// [0 =&gt; &quot;Halo, Budi!&quot;, 1 =&gt; &quot;Budi&quot;]
+</code></pre>
+<h3 id="preg_match_all--cari-semua-kecocokan"><code>preg_match_all()</code> — Cari Semua Kecocokan <a href="#preg_match_all--cari-semua-kecocokan" class="anchor" aria-hidden="true">#</a></h3>
+<pre><code class="language-php">&lt;?php
+$teks = &quot;Email: budi@example.com, siti@example.org&quot;;
+
+preg_match_all(&quot;/[\w.]+@[\w.]+/&quot;, $teks, $matches);
+print_r($matches[0]);
+// [&quot;budi@example.com&quot;, &quot;siti@example.org&quot;]
+</code></pre>
+<h3 id="preg_replace--ganti-dengan-pola"><code>preg_replace()</code> — Ganti dengan Pola <a href="#preg_replace--ganti-dengan-pola" class="anchor" aria-hidden="true">#</a></h3>
+<pre><code class="language-php">&lt;?php
+$teks = &quot;Halo, Budi! Halo, Siti!&quot;;
+
+echo preg_replace(&quot;/Halo/&quot;, &quot;Hi&quot;, $teks);
+// &quot;Hi, Budi! Hi, Siti!&quot;
+
+// Dengan capture group
+echo preg_replace(&quot;/(\w+)@(\w+)\.com/&quot;, &quot;$1 [at] $2&quot;, &quot;budi@example.com&quot;);
+// &quot;budi [at] example&quot;
+</code></pre>
+<h3 id="preg_split--pecah-dengan-pola"><code>preg_split()</code> — Pecah dengan Pola <a href="#preg_split--pecah-dengan-pola" class="anchor" aria-hidden="true">#</a></h3>
+<pre><code class="language-php">&lt;?php
+$teks = &quot;apel, jeruk; mangga|pisang&quot;;
+$buah = preg_split(&quot;/[,;|]\s*/&quot;, $teks);
+print_r($buah); // [&quot;apel&quot;, &quot;jeruk&quot;, &quot;mangga&quot;, &quot;pisang&quot;]
+</code></pre>
+<h3 id="pola-regex-umum">Pola Regex Umum <a href="#pola-regex-umum" class="anchor" aria-hidden="true">#</a></h3>
+<table>
+<thead>
+<tr>
+<th>Pola</th>
+<th>Arti</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>.</code></td>
+<td>Karakter apa pun (kecuali newline)</td>
+</tr>
+<tr>
+<td><code>\d</code></td>
+<td>Digit (0-9)</td>
+</tr>
+<tr>
+<td><code>\D</code></td>
+<td>Bukan digit</td>
+</tr>
+<tr>
+<td><code>\w</code></td>
+<td>Word character (huruf, angka, underscore)</td>
+</tr>
+<tr>
+<td><code>\W</code></td>
+<td>Bukan word character</td>
+</tr>
+<tr>
+<td><code>\s</code></td>
+<td>Whitespace (spasi, tab, newline)</td>
+</tr>
+<tr>
+<td><code>\S</code></td>
+<td>Bukan whitespace</td>
+</tr>
+<tr>
+<td><code>^</code></td>
+<td>Awal string</td>
+</tr>
+<tr>
+<td><code>$</code></td>
+<td>Akhir string</td>
+</tr>
+<tr>
+<td><code>*</code></td>
+<td>0 atau lebih</td>
+</tr>
+<tr>
+<td><code>+</code></td>
+<td>1 atau lebih</td>
+</tr>
+<tr>
+<td><code>?</code></td>
+<td>0 atau 1</td>
+</tr>
+<tr>
+<td><code>{n}</code></td>
+<td>Tepat n kali</td>
+</tr>
+<tr>
+<td><code>{n,m}</code></td>
+<td>Antara n dan m kali</td>
+</tr>
+<tr>
+<td><code>[abc]</code></td>
+<td>Salah satu dari a, b, c</td>
+</tr>
+<tr>
+<td><code>[^abc]</code></td>
+<td>Bukan a, b, c</td>
+</tr>
+<tr>
+<td><code>(abc)</code></td>
+<td>Capture group</td>
+</tr>
+<tr>
+<td><code>(?:abc)</code></td>
+<td>Non-capture group</td>
+</tr>
+<tr>
+<td><code>a|b</code></td>
+<td>a atau b</td>
+</tr>
+<tr>
+<td><code>\b</code></td>
+<td>Word boundary</td>
+</tr>
+</tbody>
+</table>
+<h3 id="contoh-pola-umum">Contoh Pola Umum <a href="#contoh-pola-umum" class="anchor" aria-hidden="true">#</a></h3>
+<pre><code class="language-php">&lt;?php
+// Email
+$email = &quot;budi@example.com&quot;;
+var_dump(preg_match(&quot;/^[\w.+-]+@[\w-]+\.[\w.]+$/&quot;, $email)); // 1
+
+// Nomor telepon Indonesia
+$telepon = &quot;081234567890&quot;;
+var_dump(preg_match(&quot;/^08\d{8,11}$/&quot;, $telepon)); // 1
+
+// URL
+$url = &quot;https://example.com/path?query=1&quot;;
+var_dump(preg_match(&quot;/^https?:\/\/[\w.-]+/&quot;, $url)); // 1
+
+// Username (huruf, angka, underscore, 3-20 karakter)
+$username = &quot;budi_123&quot;;
+var_dump(preg_match(&quot;/^\w{3,20}$/&quot;, $username)); // 1
+
+// Slug (huruf kecil, angka, dash)
+$slug = &quot;hello-world-123&quot;;
+var_dump(preg_match(&quot;/^[a-z0-9-]+$/&quot;, $slug)); // 1
+</code></pre>
+<h3 id="flag-regex">Flag Regex <a href="#flag-regex" class="anchor" aria-hidden="true">#</a></h3>
+<pre><code class="language-php">&lt;?php
+$teks = &quot;Hello World&quot;;
+
+// i — case-insensitive
+preg_match(&quot;/hello/i&quot;, $teks); // 1
+
+// m — multi-line (^ dan $ per baris)
+preg_match(&quot;/^World$/m&quot;, &quot;Hello\nWorld&quot;); // 1
+
+// s — dotall (. cocok dengan newline)
+preg_match(&quot;/Hello.World/s&quot;, &quot;Hello\nWorld&quot;); // 1
+
+// u — UTF-8 (untuk Unicode)
+preg_match(&quot;/世界/u&quot;, &quot;Halo, 世界!&quot;); // 1
+</code></pre>
+<h3 id="preg_quote--escape-karakter-regex"><code>preg_quote()</code> — Escape Karakter Regex <a href="#preg_quote--escape-karakter-regex" class="anchor" aria-hidden="true">#</a></h3>
+<pre><code class="language-php">&lt;?php
+$input = &quot;Harga: Rp100.000 (diskon)&quot;;
+$pola = &quot;/&quot; . preg_quote($input, &quot;/&quot;) . &quot;/&quot;;
+// Pola aman untuk mencari $input literal
+</code></pre>
+<blockquote>
+<p><strong>Tips:</strong> Selalu gunakan <strong><code>preg_quote()</code></strong> saat memasukkan input user ke dalam pola regex — mencegah karakter khusus merusak pola.</p>
+</blockquote>
+<h3 id="error-handling-regex">Error Handling Regex <a href="#error-handling-regex" class="anchor" aria-hidden="true">#</a></h3>
+<pre><code class="language-php">&lt;?php
+$pola = &quot;/[a-z/&quot;; // pola tidak valid
+
+if (preg_match($pola, &quot;test&quot;) === false) {
+    echo &quot;Pola regex tidak valid: &quot; . preg_last_error_msg();
+}
+</code></pre>
+<hr>
+<h2 id="contoh-praktis">Contoh Praktis <a href="#contoh-praktis" class="anchor" aria-hidden="true">#</a></h2>
+<h3 id="1-format-nama">1. Format Nama <a href="#1-format-nama" class="anchor" aria-hidden="true">#</a></h3>
+<pre><code class="language-php">&lt;?php
+function formatNama(string $nama): string {
+    $nama = trim($nama);
+    $nama = preg_replace(&quot;/\s+/&quot;, &quot; &quot;, $nama); // rapikan spasi
+    return ucwords(mb_strtolower($nama));
+}
+
+echo formatNama(&quot;  budi   santoso  &quot;); // &quot;Budi Santoso&quot;
+echo formatNama(&quot;SITI AMINAH&quot;);       // &quot;Siti Aminah&quot;
+</code></pre>
+<h3 id="2-slug-dari-judul">2. Slug dari Judul <a href="#2-slug-dari-judul" class="anchor" aria-hidden="true">#</a></h3>
+<pre><code class="language-php">&lt;?php
+function buatSlug(string $judul): string {
+    $slug = mb_strtolower($judul);
+    $slug = preg_replace(&quot;/[^\w\s-]/u&quot;, &quot;&quot;, $slug); // hapus karakter non-word
+    $slug = preg_replace(&quot;/[\s_]+/&quot;, &quot;-&quot;, $slug);    // spasi/underscore → dash
+    $slug = trim($slug, &quot;-&quot;);                         // trim dash di ujung
+    return $slug;
+}
+
+echo buatSlug(&quot;Panduan Lengkap PHP untuk Pemula!&quot;);
+// &quot;panduan-lengkap-php-untuk-pemula&quot;
+
+echo buatSlug(&quot;10 Tips  Memasak  Nasi Goreng&quot;);
+// &quot;10-tips-memasak-nasi-goreng&quot;
+</code></pre>
+<h3 id="3-potong-teks-dengan-ellipsis">3. Potong Teks dengan Ellipsis <a href="#3-potong-teks-dengan-ellipsis" class="anchor" aria-hidden="true">#</a></h3>
+<pre><code class="language-php">&lt;?php
+function potongTeks(string $teks, int $panjang = 100): string {
+    $teks = strip_tags($teks);
+    if (mb_strlen($teks) &lt;= $panjang) {
+        return $teks;
+    }
+    return mb_substr($teks, 0, $panjang) . &quot;...&quot;;
+}
+
+echo potongTeks(&quot;Ini adalah teks yang sangat panjang dan perlu dipotong.&quot;, 20);
+// &quot;Ini adalah teks ya...&quot;
+</code></pre>
+<h3 id="4-validasi-email">4. Validasi Email <a href="#4-validasi-email" class="anchor" aria-hidden="true">#</a></h3>
+<pre><code class="language-php">&lt;?php
+function validasiEmail(string $email): bool {
+    return filter_var($email, FILTER_VALIDATE_EMAIL) !== false;
+}
+
+var_dump(validasiEmail(&quot;budi@example.com&quot;)); // bool(true)
+var_dump(validasiEmail(&quot;bukan-email&quot;));      // bool(false)
+</code></pre>
+<blockquote>
+<p><strong>Tips:</strong> Untuk validasi email, gunakan <strong><code>filter_var()</code></strong> dengan <code>FILTER_VALIDATE_EMAIL</code> — lebih akurat daripada regex manual.</p>
+</blockquote>
+<h3 id="5-ekstrak-data-dari-string">5. Ekstrak Data dari String <a href="#5-ekstrak-data-dari-string" class="anchor" aria-hidden="true">#</a></h3>
+<pre><code class="language-php">&lt;?php
+$log = &quot;[2022-12-01 10:30:45] INFO: User budi@example.com login&quot;;
+
+// Ekstrak tanggal, level, email
+preg_match(&quot;/\[([\d-]+) ([\d:]+)\] (\w+): .+ ([\w.]+@[\w.]+)/&quot;, $log, $matches);
+print_r($matches);
+// [
+//   0 =&gt; &quot;[2022-12-01 10:30:45] INFO: User budi@example.com&quot;,
+//   1 =&gt; &quot;2022-12-01&quot;,
+//   2 =&gt; &quot;10:30:45&quot;,
+//   3 =&gt; &quot;INFO&quot;,
+//   4 =&gt; &quot;budi@example.com&quot;
+// ]
+
+// Named capture group
+preg_match(&quot;/\[(?&lt;tanggal&gt;[\d-]+) (?&lt;waktu&gt;[\d:]+)\] (?&lt;level&gt;\w+)/&quot;, $log, $m);
+echo $m[&quot;tanggal&quot;]; // &quot;2022-12-01&quot;
+echo $m[&quot;level&quot;];   // &quot;INFO&quot;
+</code></pre>
+<h3 id="6-format-rupiah">6. Format Rupiah <a href="#6-format-rupiah" class="anchor" aria-hidden="true">#</a></h3>
+<pre><code class="language-php">&lt;?php
+function formatRupiah(float $angka): string {
+    return &quot;Rp&quot; . number_format($angka, 0, &quot;,&quot;, &quot;.&quot;);
+}
+
+echo formatRupiah(1500000);    // &quot;Rp1.500.000&quot;
+echo formatRupiah(1500000.75); // &quot;Rp1.500.001&quot;
+</code></pre>
+<h3 id="7-hitung-kata">7. Hitung Kata <a href="#7-hitung-kata" class="anchor" aria-hidden="true">#</a></h3>
+<pre><code class="language-php">&lt;?php
+function hitungKata(string $teks): int {
+    $teks = trim($teks);
+    if ($teks === &quot;&quot;) return 0;
+    return count(preg_split(&quot;/\s+/&quot;, $teks));
+}
+
+echo hitungKata(&quot;Halo, dunia! Ini adalah kalimat.&quot;); // 5
+</code></pre>
+<hr>
+<h2 id="tips-dan-best-practice">Tips dan Best Practice <a href="#tips-dan-best-practice" class="anchor" aria-hidden="true">#</a></h2>
+<ol>
+<li>
+<p><strong>Gunakan <code>mb_*</code> functions</strong> untuk string Unicode — <code>strlen()</code> dan <code>substr()</code> bekerja pada byte, bukan karakter.</p>
+</li>
+<li>
+<p><strong>Selalu <code>htmlspecialchars()</code></strong> saat menampilkan input user ke HTML — mencegah XSS.</p>
+</li>
+</ol>
+<pre><code class="language-php">&lt;?php
+// SELALU
+echo htmlspecialchars($userInput, ENT_QUOTES, &quot;UTF-8&quot;);
+</code></pre>
+<ol start="3">
+<li>
+<p><strong>Gunakan <code>!== false</code></strong> saat mengecek <code>strpos()</code> — <code>0</code> adalah posisi valid.</p>
+</li>
+<li>
+<p><strong>Gunakan single quote</strong> untuk string statis — performa lebih baik.</p>
+</li>
+<li>
+<p><strong>Gunakan <code>preg_quote()</code></strong> saat memasukkan input user ke pola regex.</p>
+</li>
+<li>
+<p><strong>Gunakan <code>filter_var()</code></strong> untuk validasi email/URL — lebih akurat daripada regex manual.</p>
+</li>
+<li>
+<p><strong>Gunakan <code>str_contains()</code>, <code>str_starts_with()</code>, <code>str_ends_with()</code></strong> (PHP 8+) daripada <code>strpos()</code> — lebih mudah dibaca.</p>
+</li>
+<li>
+<p><strong>Hindari regex untuk tugas sederhana</strong> — <code>str_replace()</code> atau <code>explode()</code> seringkali lebih cepat dan mudah dibaca.</p>
+</li>
+<li>
+<p><strong>Gunakan <code>sprintf()</code></strong> untuk formatting kompleks — lebih rapi daripada concatenation.</p>
+</li>
+<li>
+<p><strong>Trim input user</strong> sebelum diproses — mencegah spasi tak sengaja.</p>
+</li>
+<li>
+<p><strong>Gunakan <code>nl2br()</code></strong> dengan hati-hati — tidak meng-escape HTML. Gabungkan dengan <code>htmlspecialchars()</code>.</p>
+</li>
+<li>
+<p><strong>Untuk string multi-baris</strong>, gunakan <strong>heredoc</strong> (dengan interpolasi) atau <strong>nowdoc</strong> (tanpa interpolasi).</p>
+</li>
+</ol>
+<hr>
+<h2 id="ringkasan">Ringkasan <a href="#ringkasan" class="anchor" aria-hidden="true">#</a></h2>
+<table>
+<thead>
+<tr>
+<th>Kategori</th>
+<th>Fungsi</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Panjang</strong></td>
+<td><code>strlen</code>, <code>mb_strlen</code></td>
+</tr>
+<tr>
+<td><strong>Case</strong></td>
+<td><code>strtolower</code>, <code>strtoupper</code>, <code>ucfirst</code>, <code>ucwords</code></td>
+</tr>
+<tr>
+<td><strong>Trim</strong></td>
+<td><code>trim</code>, <code>ltrim</code>, <code>rtrim</code></td>
+</tr>
+<tr>
+<td><strong>Cari</strong></td>
+<td><code>strpos</code>, <code>stripos</code>, <code>strrpos</code>, <code>str_contains</code>, <code>str_starts_with</code>, <code>str_ends_with</code></td>
+</tr>
+<tr>
+<td><strong>Substring</strong></td>
+<td><code>substr</code>, <code>mb_substr</code></td>
+</tr>
+<tr>
+<td><strong>Ganti</strong></td>
+<td><code>str_replace</code>, <code>str_ireplace</code>, <code>preg_replace</code></td>
+</tr>
+<tr>
+<td><strong>Pecah/gabung</strong></td>
+<td><code>explode</code>, <code>implode</code>, <code>str_split</code>, <code>preg_split</code></td>
+</tr>
+<tr>
+<td><strong>Format</strong></td>
+<td><code>sprintf</code>, <code>printf</code>, <code>number_format</code>, <code>nl2br</code>, <code>wordwrap</code></td>
+</tr>
+<tr>
+<td><strong>Escape</strong></td>
+<td><code>htmlspecialchars</code>, <code>strip_tags</code></td>
+</tr>
+<tr>
+<td><strong>Multibyte</strong></td>
+<td><code>mb_strlen</code>, <code>mb_substr</code>, <code>mb_strtolower</code>, <code>mb_strtoupper</code></td>
+</tr>
+<tr>
+<td><strong>Regex</strong></td>
+<td><code>preg_match</code>, <code>preg_match_all</code>, <code>preg_replace</code>, <code>preg_split</code>, <code>preg_quote</code></td>
+</tr>
+</tbody>
+</table>
+<p>Poin penting:</p>
+<ul>
+<li><strong>Single quote</strong> untuk string statis, <strong>double quote</strong> untuk interpolasi.</li>
+<li><strong><code>mb_*</code> functions</strong> untuk string Unicode — <code>strlen()</code> bekerja pada byte.</li>
+<li><strong>Selalu <code>htmlspecialchars()</code></strong> saat output ke HTML — mencegah XSS.</li>
+<li><strong><code>strpos()</code> mengembalikan <code>0</code></strong> jika di awal — gunakan <code>!== false</code>.</li>
+<li><strong><code>preg_quote()</code></strong> untuk input user dalam pola regex.</li>
+<li><strong><code>filter_var()</code></strong> untuk validasi email/URL — lebih akurat dari regex.</li>
+<li><strong>PHP 8+</strong> menyediakan <code>str_contains()</code>, <code>str_starts_with()</code>, <code>str_ends_with()</code> — lebih mudah dibaca.</li>
+<li><strong>Heredoc</strong> untuk multi-baris dengan interpolasi, <strong>nowdoc</strong> tanpa interpolasi.</li>
+<li><strong><code>number_format()</code></strong> untuk format angka Indonesia (<code>1.500.000</code>).</li>
+</ul>
+<p>Pada artikel berikutnya, kita akan membahas <strong>Superglobal dan Form Handling</strong> — memproses input dari user.</p>
+
+			<div class="page-footer-meta d-flex flex-column flex-md-row justify-content-between">
+				</div>
+			<div class="docs-navigation d-flex justify-content-between">
+	
+	<a href="/php/tutorial/07-array/">
+			<div class="card my-1">
+				<div class="card-body py-2">
+					&larr; Array dan Method-nya
+				</div>
+			</div>
+		</a>
+	<a class="ms-auto" href="/php/tutorial/09-superglobal-form/">
+			<div class="card my-1">
+				<div class="card-body py-2">
+					Superglobal dan Form Handling &rarr;
+				</div>
+			</div>
+		</a>
+	</div>
+
+			
+		</main>
+	</div>
+
+      </div>
+    </div>
+    
+    
+    <footer class="footer text-muted">
+  <div class="container-xxl">
+    <div class="row">
+      <div class="col-lg-8 order-last order-lg-first">
+        <ul class="list-inline">
+          <li class="list-inline-item">Powered by <a class="text-muted" href="https://gohugo.io/">Hugo</a> and <a class="text-muted" href="https://github.com/">Github</a></li>
+        </ul>
+      </div>
+      <div class="col-lg-8 order-first order-lg-last text-lg-end">
+        <ul class="list-inline">
+          </ul>
+      </div>
+    </div>
+  </div>
+</footer>
+    
+
+<script src="/js/bootstrap.min.650aeec64c81d69d4c0850fc73c93da3f0330cec0a27772feed7f90f60baa5f47f1c45687d71914bdafd1c4e860d40f6dc08ede27a2f08431ff929c9a2d24621.js" integrity="sha512-ZQruxkyB1p1MCFD8c8k9o/AzDOwKJ3cv7tf5D2C6pfR/HEVofXGRS9r9HE6GDUD23Ajt4novCEMf&#43;SnJotJGIQ==" crossorigin="anonymous" defer></script>
+  <script src="/js/highlight.min.ec234bd8a5f487aaffe50a89f17b14501b1bb65633cf177cffd4cb84702dd7030edc08712dceb8dc27ac7e54b53240a08bf0b8d951572ee582bcdbbd06a48a7b.js" integrity="sha512-7CNL2KX0h6r/5QqJ8XsUUBsbtlYzzxd8/9TLhHAt1wMO3AhxLc643CesflS1MkCgi/C42VFXLuWCvNu9BqSKew==" crossorigin="anonymous" defer></script>
+  <script src="/main.min.cd1e5e6b40065b3f7f7fd8548a528fac67019754eda0f37b9918d02d154fc9ef6a22742f6513b0572ad9163152e151ec36221fbeafbecd7759c3dab1f19b64b9.js" integrity="sha512-zR5ea0AGWz9/f9hUilKPrGcBl1TtoPN7mRjQLRVPye9qInQvZROwVyrZFjFS4VHsNiIfvq&#43;&#43;zXdZw9qx8ZtkuQ==" crossorigin="anonymous" defer></script>
+  <script src="https://kaban.my.id/index.min.797ba4de6d8a5423115e651882a6de105e1744ee10ab32e79b10db26c6fbcd5d2706c0392c663ea0d01e04e8a21e3a87bb2ea742d9df2d62f481a7e793b68ec4.js" integrity="sha512-eXuk3m2KVCMRXmUYgqbeEF4XRO4QqzLnmxDbJsb7zV0nBsA5LGY&#43;oNAeBOiiHjqHuy6nQtnfLWL0gafnk7aOxA==" crossorigin="anonymous" defer></script>
+  
+    <div class="d-flex fixed-bottom pb-4 pb-lg-5 pe-4 pe-lg-5">
+      <a id="toTop" href="#" class="btn btn-outline-primary rounded-circle ms-auto p-2"><span class="visually-hidden">Top</span><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-chevron-up"><polyline points="18 15 12 9 6 15"></polyline></svg></a>
+    </div>
+    
+  </body>
+</html>

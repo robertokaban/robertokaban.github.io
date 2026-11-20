@@ -1,0 +1,1624 @@
+<!doctype html>
+<html lang="en-US">
+  <head>
+  <meta charset="utf-8">
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <link rel="preload" as="font" href="https://kaban.my.id/fonts/vendor/jost/jost-v4-latin-regular.woff2" type="font/woff2" crossorigin>
+<link rel="preload" as="font" href="https://kaban.my.id/fonts/vendor/jost/jost-v4-latin-500.woff2" type="font/woff2" crossorigin>
+<link rel="preload" as="font" href="https://kaban.my.id/fonts/vendor/jost/jost-v4-latin-700.woff2" type="font/woff2" crossorigin>
+
+  <script>(()=>{var t=window.matchMedia&&window.matchMedia("(prefers-color-scheme: dark)").matches,e=localStorage.getItem("theme");t&&e===null&&(localStorage.setItem("theme","dark"),document.documentElement.setAttribute("data-dark-mode","")),t&&e==="dark"&&document.documentElement.setAttribute("data-dark-mode",""),e==="dark"&&document.documentElement.setAttribute("data-dark-mode","")})()</script>
+
+  <link rel="stylesheet" href="https://kaban.my.id/main.4296e689affcd00e933b8954c10fc43cd1a5f16d5552e78183d12ea50d3e0bf5a596df23a379a4936743f01a7cd8ba048a628b2b9b60b34aa49fad468287100a.css" integrity="sha512-Qpbmia/80A6TO4lUwQ/EPNGl8W1VUueBg9EupQ0&#43;C/Wllt8jo3mkk2dD8Bp82LoEimKLK5tgs0qkn61GgocQCg==" crossorigin="anonymous">
+<noscript><style>img.lazyload { display: none; }</style></noscript>
+  <meta name="robots" content="index, follow">
+    <meta name="googlebot" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1">
+    <meta name="bingbot" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1">
+  <title>Superglobal dan Form Handling - Roberto Kaban Blog&#39;s</title>
+<meta name="description" content="Panduan lengkap superglobal PHP dan pemrosesan form: GET, POST, REQUEST, SERVER, FILES, validasi, dan sanitasi input.">
+<link rel="canonical" href="https://kaban.my.id/php/tutorial/09-superglobal-form/">
+<meta property="og:locale" content="en_US">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Superglobal dan Form Handling">
+<meta property="og:description" content="Panduan lengkap superglobal PHP dan pemrosesan form: GET, POST, REQUEST, SERVER, FILES, validasi, dan sanitasi input.">
+<meta property="og:url" content="https://kaban.my.id/php/tutorial/09-superglobal-form/">
+<meta property="og:site_name" content="Roberto Kaban Blog&#39;s">
+<meta property="article:published_time" content="2023-01-11T08:00:00+00:00">
+  <meta property="article:modified_time" content="2023-01-11T08:00:00+00:00">
+  
+  <meta property="og:image" content="https://kaban.my.id/doks.png"/>
+      <meta property="og:image:alt" content="Roberto Kaban Blog&#39;s">
+    
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:site" content="@robertokaban">
+<meta name="twitter:creator" content="@robertokaban">
+<meta name="twitter:title" content="Superglobal dan Form Handling">
+<meta name="twitter:description" content="Panduan lengkap superglobal PHP dan pemrosesan form: GET, POST, REQUEST, SERVER, FILES, validasi, dan sanitasi input.">
+<meta name="twitter:image" content="https://kaban.my.id/doks.png">
+    <meta name="twitter:image:alt" content="Superglobal dan Form Handling">
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "Person",
+        "@id": "https://kaban.my.id/#/schema/person/1",
+      "name": "BlogRobertoKaban",
+      "url": "https://kaban.my.id/",
+      "sameAs": [
+        "https://twitter.com/robertokaban"
+        , "https://github.com/robertokaban"
+        ],
+      "image": {
+          "@type": "ImageObject",
+          "@id": "https://kaban.my.id/#/schema/image/1",
+          "url": "https://kaban.my.id/doks.png",
+          "width":  1280 ,
+          "height":  640 ,
+          "caption": "BlogRobertoKaban"
+        }
+      },
+    {
+      "@type": "WebSite",
+      "@id": "https://kaban.my.id/#/schema/website/1",
+      "url": "https://kaban.my.id/",
+      "name": "Roberto Kaban Blog\u0027s",
+      "description": "Hanya sebuah catatan kecil untuk hal yang tidak ingin dilupakan.",
+      "publisher": {
+          "@id": "https://kaban.my.id/#/schema/person/1"
+        }
+      },
+    {
+      "@type": "WebPage",
+      "@id": "https://kaban.my.id/php/tutorial/09-superglobal-form/",
+      "url": "https://kaban.my.id/php/tutorial/09-superglobal-form/",
+      "name": "Superglobal dan Form Handling",
+      "description": "Panduan lengkap superglobal PHP dan pemrosesan form: GET, POST, REQUEST, SERVER, FILES, validasi, dan sanitasi input.",
+      "isPartOf": {
+        "@id": "https://kaban.my.id/#/schema/website/1"
+      },
+      "about": {
+          "@id": "https://kaban.my.id/#/schema/person/1"
+        },
+      "datePublished": "2023-01-11T08:00:00CET",
+      "dateModified": "2023-01-11T08:00:00CET",
+      "breadcrumb": {
+        "@id": "https://kaban.my.id/php/tutorial/09-superglobal-form/#/schema/breadcrumb/1"
+      },
+      "primaryImageOfPage": {
+        "@id": "https://kaban.my.id/php/tutorial/09-superglobal-form/#/schema/image/2"
+      },
+      "inLanguage": "en-US",
+      "potentialAction": [{
+        "@type": "ReadAction", "target": ["https://kaban.my.id/php/tutorial/09-superglobal-form/"]
+      }]
+    },
+    {
+      "@type": "BreadcrumbList",
+      "@id": "https://kaban.my.id/php/tutorial/09-superglobal-form/#/schema/breadcrumb/1",
+      "name": "Breadcrumbs",
+      "itemListElement": [{
+        "@type": "ListItem",
+        "position":  1 ,
+        "item": {
+          "@type": "WebPage",
+          "@id": "https://kaban.my.id/",
+          "url": "https://kaban.my.id/",
+          "name": "Home"
+          }
+        },{
+        "@type": "ListItem",
+        "position":  2 ,
+        "item": {
+          "@type": "WebPage",
+          "@id": "https://kaban.my.id/php/",
+          "url": "https://kaban.my.id/php/",
+          "name": "Php"
+          }
+        },{
+        "@type": "ListItem",
+        "position":  3 ,
+        "item": {
+          "@type": "WebPage",
+          "@id": "https://kaban.my.id/php/tutorial/",
+          "url": "https://kaban.my.id/php/tutorial/",
+          "name": "Tutorial"
+          }
+        },{
+        "@type": "ListItem",
+        "position":  4 ,
+        "item": {
+          "@id": "https://kaban.my.id/php/tutorial/09-superglobal-form/"
+          }
+        }]
+    },
+
+    {
+      "@context": "https://schema.org",
+      "@graph": [
+        {
+          "@type": "ImageObject",
+          "@id": "https://kaban.my.id/php/tutorial/09-superglobal-form/#/schema/image/2",
+          "url": "https://kaban.my.id/doks.png",
+          "contentUrl": "https://kaban.my.id/doks.png",
+          "caption": "Superglobal dan Form Handling"
+        }
+      ]
+    }
+
+  ]
+}
+</script>
+
+  <meta name="theme-color" content="#fff">
+<link rel="icon" href="https://kaban.my.id/favicon.ico" sizes="any">
+<link rel="icon" type="image/svg+xml" href="https://kaban.my.id/favicon.svg">
+<link rel="apple-touch-icon" sizes="180x180" href="https://kaban.my.id/apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="32x32" href="https://kaban.my.id/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="https://kaban.my.id/favicon-16x16.png">
+<link rel="manifest" crossorigin="use-credentials" href="https://kaban.my.id/site.webmanifest">
+
+  
+
+
+  
+  
+  
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-60VSDZFQR5"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-60VSDZFQR5');
+</script>
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6664512614760985"
+     crossorigin="anonymous"></script>
+</head>
+
+  <body class="php single">
+    <div class="sticky-top">
+<div class="header-bar"></div>
+
+<header class="navbar navbar-expand-lg navbar-light doks-navbar">
+  <nav class="container-xxl flex-wrap flex-lg-nowrap" aria-label="Main navigation">
+
+    <a class="navbar-brand order-0" href="/" aria-label="Roberto Kaban Blog&#39;s">
+      Roberto Kaban Blog&#39;s
+    </a>
+
+    <button class="btn btn-menu order-2 d-block d-lg-none" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasDoks" aria-controls="offcanvasDoks" aria-label="Open main menu">
+      <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-menu"><line x1="3" y1="12" x2="21" y2="12"></line><line x1="3" y1="6" x2="21" y2="6"></line><line x1="3" y1="18" x2="21" y2="18"></line></svg>
+    </button>
+    <div class="offcanvas offcanvas-end border-0 py-lg-1" tabindex="-1" id="offcanvasDoks" data-bs-backdrop="true" aria-labelledby="offcanvasDoksLabel">
+      <div class="header-bar d-lg-none"></div>
+      <div class="offcanvas-header d-lg-none">
+        <h2 class="h5 offcanvas-title ps-2" id="offcanvasDoksLabel"><a class="text-dark" href="/">Roberto Kaban Blog&#39;s</a></h2>
+        <button type="button" class="btn-close text-reset me-2" data-bs-dismiss="offcanvas" aria-label="Close main menu"></button>
+      </div>
+      <div class="offcanvas-body p-4 p-lg-0">
+        <ul class="nav flex-column flex-lg-row align-items-lg-center mt-2 mt-lg-0 ms-lg-2 me-lg-auto">
+              <li class="nav-item">
+                <a class="nav-link ps-0 py-1" href="/about/">About Me</a>
+              </li>
+            
+          
+              <li class="nav-item">
+                <a class="nav-link ps-0 py-1" href="/contact/">Contact</a>
+              </li>
+            
+          
+              <li class="nav-item">
+                <a class="nav-link ps-0 py-1" href="/artikel/">Artikel</a>
+              </li>
+            
+          
+              <li class="nav-item">
+                <a class="nav-link ps-0 py-1" href="/coretanku/">Coretanku</a>
+              </li>
+            
+          </ul>
+
+        <hr class="text-black-50 my-4 d-lg-none">
+        <form class="doks-search position-relative flex-grow-1 ms-lg-auto me-lg-2">
+          <input id="search" class="form-control is-search" type="search" placeholder="Cari di blog ini..." aria-label="Cari di blog ini..." autocomplete="off">
+          <div id="suggestions" class="shadow bg-white rounded d-none"></div>
+        </form>
+        <hr class="text-black-50 my-4 d-lg-none">
+        <ul class="nav flex-column flex-lg-row">
+          <li class="nav-item">
+              <a class="nav-link social-link" href="https://github.com/robertokaban"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-github"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path></svg><small class="ms-2 d-lg-none">GitHub</small></a>
+            </li>
+          <li class="nav-item">
+              <a class="nav-link social-link" href="https://facebook.com/roberto.kaban"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-facebook"><path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"></path></svg><small class="ms-2 d-lg-none">Facebook</small></a>
+            </li>
+          <li class="nav-item">
+              <a class="nav-link social-link" href="https://twitter.com/robertokaban"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-twitter"><path d="M23 3a10.9 10.9 0 0 1-3.14 1.53 4.48 4.48 0 0 0-7.86 3v1A10.66 10.66 0 0 1 3 4s-4 9 5 13a11.64 11.64 0 0 1-7 2c9 5 20 0 20-11.5a4.5 4.5 0 0 0-.08-.83A7.72 7.72 0 0 0 23 3z"></path></svg><small class="ms-2 d-lg-none">Twitter</small></a>
+            </li>
+          <li class="nav-item">
+              <a class="nav-link social-link" href="https://youtube.com/@robertokaban"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-youtube"><path d="M10,15L15.19,12L10,9V15M21.56,7.17C21.69,7.64 21.78,8.27 21.84,9.07C21.91,9.87 21.94,10.56 21.94,11.16L22,12C22,14.19 21.84,15.8 21.56,16.83C21.31,17.73 20.73,18.31 19.83,18.56C19.36,18.69 18.5,18.78 17.18,18.84C15.88,18.91 14.69,18.94 13.59,18.94L12,19C7.81,19 5.2,18.84 4.17,18.56C3.27,18.31 2.69,17.73 2.44,16.83C2.31,16.36 2.22,15.73 2.16,14.93C2.09,14.13 2.06,13.44 2.06,12.84L2,12C2,9.81 2.16,8.2 2.44,7.17C2.69,6.27 3.27,5.69 4.17,5.44C4.64,5.31 5.5,5.22 6.82,5.16C8.12,5.09 9.31,5.06 10.41,5.06L12,5C16.19,5 18.8,5.16 19.83,5.44C20.73,5.69 21.31,6.27 21.56,7.17Z"></path></svg><small class="ms-2 d-lg-none">Youtube</small></a>
+            </li>
+          </ul>
+
+        
+        <hr class="text-black-50 my-4 d-lg-none">
+        <button id="mode" class="btn btn-link" type="button" aria-label="Toggle user interface mode">
+          <span class="toggle-dark"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-moon"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path></svg></span>
+          <span class="toggle-light"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-sun"><circle cx="12" cy="12" r="5"></circle><line x1="12" y1="1" x2="12" y2="3"></line><line x1="12" y1="21" x2="12" y2="23"></line><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line><line x1="1" y1="12" x2="3" y2="12"></line><line x1="21" y1="12" x2="23" y2="12"></line><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line></svg></span>
+        </button>
+        
+
+        </div>
+    </div>
+  </nav>
+</header>
+
+
+</div>
+
+
+<div class="container-xxl">
+  <aside class="doks-sidebar">
+    <nav id="doks-docs-nav" class="collapse d-lg-none" aria-label="Tertiary navigation">
+      
+<ul class="list-unstyled collapsible-sidebar">
+  
+    
+      
+      <li class="mb-1">
+        <button class="btn btn-toggle align-items-center rounded collapsed" data-bs-toggle="collapse" data-bs-target="#section-de2591224751442a3b2101e94880333c" aria-expanded="true">
+          Tutorial PHP
+        </button>
+        <div class="collapse show" id="section-de2591224751442a3b2101e94880333c">
+          <ul class="btn-toggle-nav list-unstyled fw-normal pb-1 small">
+            
+              
+                
+                <li><a class="docs-link rounded" href="https://kaban.my.id/php/tutorial/pengenalan/">Pengenalan PHP</a></li>
+              
+            
+              
+                
+                <li><a class="docs-link rounded" href="https://kaban.my.id/php/tutorial/02-instalasi-persiapan/">Instalasi &amp; Persiapan Lingkungan PHP</a></li>
+              
+            
+              
+                
+                <li><a class="docs-link rounded" href="https://kaban.my.id/php/tutorial/03-sintaks-variabel/">Sintaks Dasar &amp; Variabel PHP</a></li>
+              
+            
+              
+                
+                <li><a class="docs-link rounded" href="https://kaban.my.id/php/tutorial/04-tipe-data-konversi/">Tipe Data &amp; Konversi</a></li>
+              
+            
+              
+                
+                <li><a class="docs-link rounded" href="https://kaban.my.id/php/tutorial/05-struktur-kontrol/">Struktur Kontrol &amp; Perulangan</a></li>
+              
+            
+              
+                
+                <li><a class="docs-link rounded" href="https://kaban.my.id/php/tutorial/06-fungsi/">Fungsi</a></li>
+              
+            
+              
+                
+                <li><a class="docs-link rounded" href="https://kaban.my.id/php/tutorial/07-array/">Array dan Method-nya</a></li>
+              
+            
+              
+                
+                <li><a class="docs-link rounded" href="https://kaban.my.id/php/tutorial/08-string/">String dan Manipulasi</a></li>
+              
+            
+              
+                
+                <li><a class="docs-link rounded active" href="https://kaban.my.id/php/tutorial/09-superglobal-form/">Superglobal dan Form Handling</a></li>
+              
+            
+              
+                
+                <li><a class="docs-link rounded" href="https://kaban.my.id/php/tutorial/10-session-cookie/">Session dan Cookie</a></li>
+              
+            
+              
+                
+                <li><a class="docs-link rounded" href="https://kaban.my.id/php/tutorial/11-include-require/">Include dan Require</a></li>
+              
+            
+          </ul>
+        </div>
+      </li>
+    
+  
+</ul>
+
+    </nav>
+  </aside>
+</div>
+
+    <div class="wrap container-xxl" role="document">
+      <div class="content">
+        
+	<div class="row flex-xl-nowrap">
+		<div class="col-lg-5 col-xl-4 docs-sidebar d-none d-lg-block">
+			<nav class="docs-links" aria-label="Main navigation">
+				
+<ul class="list-unstyled collapsible-sidebar">
+  
+    
+      
+      <li class="mb-1">
+        <button class="btn btn-toggle align-items-center rounded collapsed" data-bs-toggle="collapse" data-bs-target="#section-de2591224751442a3b2101e94880333c" aria-expanded="true">
+          Tutorial PHP
+        </button>
+        <div class="collapse show" id="section-de2591224751442a3b2101e94880333c">
+          <ul class="btn-toggle-nav list-unstyled fw-normal pb-1 small">
+            
+              
+                
+                <li><a class="docs-link rounded" href="https://kaban.my.id/php/tutorial/pengenalan/">Pengenalan PHP</a></li>
+              
+            
+              
+                
+                <li><a class="docs-link rounded" href="https://kaban.my.id/php/tutorial/02-instalasi-persiapan/">Instalasi &amp; Persiapan Lingkungan PHP</a></li>
+              
+            
+              
+                
+                <li><a class="docs-link rounded" href="https://kaban.my.id/php/tutorial/03-sintaks-variabel/">Sintaks Dasar &amp; Variabel PHP</a></li>
+              
+            
+              
+                
+                <li><a class="docs-link rounded" href="https://kaban.my.id/php/tutorial/04-tipe-data-konversi/">Tipe Data &amp; Konversi</a></li>
+              
+            
+              
+                
+                <li><a class="docs-link rounded" href="https://kaban.my.id/php/tutorial/05-struktur-kontrol/">Struktur Kontrol &amp; Perulangan</a></li>
+              
+            
+              
+                
+                <li><a class="docs-link rounded" href="https://kaban.my.id/php/tutorial/06-fungsi/">Fungsi</a></li>
+              
+            
+              
+                
+                <li><a class="docs-link rounded" href="https://kaban.my.id/php/tutorial/07-array/">Array dan Method-nya</a></li>
+              
+            
+              
+                
+                <li><a class="docs-link rounded" href="https://kaban.my.id/php/tutorial/08-string/">String dan Manipulasi</a></li>
+              
+            
+              
+                
+                <li><a class="docs-link rounded active" href="https://kaban.my.id/php/tutorial/09-superglobal-form/">Superglobal dan Form Handling</a></li>
+              
+            
+              
+                
+                <li><a class="docs-link rounded" href="https://kaban.my.id/php/tutorial/10-session-cookie/">Session dan Cookie</a></li>
+              
+            
+              
+                
+                <li><a class="docs-link rounded" href="https://kaban.my.id/php/tutorial/11-include-require/">Include dan Require</a></li>
+              
+            
+          </ul>
+        </div>
+      </li>
+    
+  
+</ul>
+
+			</nav>
+		</div>
+		<nav class="docs-toc d-none d-xl-block col-xl-3" aria-label="Secondary navigation">
+			<div class="d-xl-none">
+  <button class="btn btn-outline-primary btn-sm doks-toc-toggle collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#onThisPage" aria-controls="doks-docs-nav" aria-expanded="false" aria-label="Toggle On this page navigation">
+    <span>Daftar isi</span>
+    <span>
+      <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" class="doks doks-expand" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><title>Expand</title><polyline points="7 13 12 18 17 13"></polyline><polyline points="7 6 12 11 17 6"></polyline></svg>
+      <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" class="doks doks-collapse" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><title>Collapse</title><polyline points="17 11 12 6 7 11"></polyline><polyline points="17 18 12 13 7 18"></polyline></svg>
+    </span>
+  </button>
+  <div class="collapse" id="onThisPage">
+    <div class="card card-body mt-3 py-1">
+      <div class="page-links">
+        <nav id="TableOfContents">
+  <ul>
+    <li><a href="#pendahuluan">Pendahuluan</a></li>
+    <li><a href="#apa-itu-superglobal">Apa Itu Superglobal?</a></li>
+    <li><a href="#_get--data-dari-query-string"><code>$_GET</code> — Data dari Query String</a>
+      <ul>
+        <li><a href="#karakteristik-_get">Karakteristik <code>$_GET</code></a></li>
+        <li><a href="#form-dengan-method-get">Form dengan Method GET</a></li>
+        <li><a href="#query-string-dengan-array">Query String dengan Array</a></li>
+        <li><a href="#membangun-query-string">Membangun Query String</a></li>
+      </ul>
+    </li>
+    <li><a href="#_post--data-dari-form-post"><code>$_POST</code> — Data dari Form POST</a>
+      <ul>
+        <li><a href="#karakteristik-_post">Karakteristik <code>$_POST</code></a></li>
+        <li><a href="#cek-method-request">Cek Method Request</a></li>
+        <li><a href="#form-dengan-file-upload">Form dengan File Upload</a></li>
+      </ul>
+    </li>
+    <li><a href="#_request--gabungan-get-post-cookie"><code>$_REQUEST</code> — Gabungan GET, POST, COOKIE</a></li>
+    <li><a href="#_server--informasi-server-dan-request"><code>$_SERVER</code> — Informasi Server dan Request</a>
+      <ul>
+        <li><a href="#php_self-dan-xss"><code>PHP_SELF</code> dan XSS</a></li>
+        <li><a href="#mendapatkan-ip-client">Mendapatkan IP Client</a></li>
+      </ul>
+    </li>
+    <li><a href="#_files--upload-file"><code>$_FILES</code> — Upload File</a>
+      <ul>
+        <li><a href="#struktur-_files">Struktur <code>$_FILES</code></a></li>
+        <li><a href="#kode-error-upload">Kode Error Upload</a></li>
+        <li><a href="#proses-upload-aman">Proses Upload Aman</a></li>
+        <li><a href="#menonaktifkan-eksekusi-php-di-folder-upload">Menonaktifkan Eksekusi PHP di Folder Upload</a></li>
+      </ul>
+    </li>
+    <li><a href="#validasi-dan-sanitasi-input">Validasi dan Sanitasi Input</a>
+      <ul>
+        <li><a href="#prinsip-dasar">Prinsip Dasar</a></li>
+        <li><a href="#validasi-dengan-filter_var">Validasi dengan <code>filter_var()</code></a></li>
+        <li><a href="#sanitasi-dengan-filter_var">Sanitasi dengan <code>filter_var()</code></a></li>
+        <li><a href="#contoh-form-validasi-lengkap">Contoh Form Validasi Lengkap</a></li>
+      </ul>
+    </li>
+    <li><a href="#csrf-protection">CSRF Protection</a>
+      <ul>
+        <li><a href="#cara-kerja">Cara Kerja</a></li>
+        <li><a href="#solusi-csrf-token">Solusi: CSRF Token</a></li>
+      </ul>
+    </li>
+    <li><a href="#contoh-praktis">Contoh Praktis</a>
+      <ul>
+        <li><a href="#1-form-login-dengan-validasi">1. Form Login dengan Validasi</a></li>
+        <li><a href="#2-form-pencarian-dengan-get">2. Form Pencarian dengan GET</a></li>
+        <li><a href="#3-upload-file-dengan-validasi">3. Upload File dengan Validasi</a></li>
+        <li><a href="#4-form-kontak-dengan-csrf">4. Form Kontak dengan CSRF</a></li>
+      </ul>
+    </li>
+    <li><a href="#tips-dan-best-practice">Tips dan Best Practice</a></li>
+    <li><a href="#ringkasan">Ringkasan</a></li>
+  </ul>
+</nav>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="page-links d-none d-xl-block">
+  <h3>Daftar isi</h3>
+  <nav id="TableOfContents">
+  <ul>
+    <li><a href="#pendahuluan">Pendahuluan</a></li>
+    <li><a href="#apa-itu-superglobal">Apa Itu Superglobal?</a></li>
+    <li><a href="#_get--data-dari-query-string"><code>$_GET</code> — Data dari Query String</a>
+      <ul>
+        <li><a href="#karakteristik-_get">Karakteristik <code>$_GET</code></a></li>
+        <li><a href="#form-dengan-method-get">Form dengan Method GET</a></li>
+        <li><a href="#query-string-dengan-array">Query String dengan Array</a></li>
+        <li><a href="#membangun-query-string">Membangun Query String</a></li>
+      </ul>
+    </li>
+    <li><a href="#_post--data-dari-form-post"><code>$_POST</code> — Data dari Form POST</a>
+      <ul>
+        <li><a href="#karakteristik-_post">Karakteristik <code>$_POST</code></a></li>
+        <li><a href="#cek-method-request">Cek Method Request</a></li>
+        <li><a href="#form-dengan-file-upload">Form dengan File Upload</a></li>
+      </ul>
+    </li>
+    <li><a href="#_request--gabungan-get-post-cookie"><code>$_REQUEST</code> — Gabungan GET, POST, COOKIE</a></li>
+    <li><a href="#_server--informasi-server-dan-request"><code>$_SERVER</code> — Informasi Server dan Request</a>
+      <ul>
+        <li><a href="#php_self-dan-xss"><code>PHP_SELF</code> dan XSS</a></li>
+        <li><a href="#mendapatkan-ip-client">Mendapatkan IP Client</a></li>
+      </ul>
+    </li>
+    <li><a href="#_files--upload-file"><code>$_FILES</code> — Upload File</a>
+      <ul>
+        <li><a href="#struktur-_files">Struktur <code>$_FILES</code></a></li>
+        <li><a href="#kode-error-upload">Kode Error Upload</a></li>
+        <li><a href="#proses-upload-aman">Proses Upload Aman</a></li>
+        <li><a href="#menonaktifkan-eksekusi-php-di-folder-upload">Menonaktifkan Eksekusi PHP di Folder Upload</a></li>
+      </ul>
+    </li>
+    <li><a href="#validasi-dan-sanitasi-input">Validasi dan Sanitasi Input</a>
+      <ul>
+        <li><a href="#prinsip-dasar">Prinsip Dasar</a></li>
+        <li><a href="#validasi-dengan-filter_var">Validasi dengan <code>filter_var()</code></a></li>
+        <li><a href="#sanitasi-dengan-filter_var">Sanitasi dengan <code>filter_var()</code></a></li>
+        <li><a href="#contoh-form-validasi-lengkap">Contoh Form Validasi Lengkap</a></li>
+      </ul>
+    </li>
+    <li><a href="#csrf-protection">CSRF Protection</a>
+      <ul>
+        <li><a href="#cara-kerja">Cara Kerja</a></li>
+        <li><a href="#solusi-csrf-token">Solusi: CSRF Token</a></li>
+      </ul>
+    </li>
+    <li><a href="#contoh-praktis">Contoh Praktis</a>
+      <ul>
+        <li><a href="#1-form-login-dengan-validasi">1. Form Login dengan Validasi</a></li>
+        <li><a href="#2-form-pencarian-dengan-get">2. Form Pencarian dengan GET</a></li>
+        <li><a href="#3-upload-file-dengan-validasi">3. Upload File dengan Validasi</a></li>
+        <li><a href="#4-form-kontak-dengan-csrf">4. Form Kontak dengan CSRF</a></li>
+      </ul>
+    </li>
+    <li><a href="#tips-dan-best-practice">Tips dan Best Practice</a></li>
+    <li><a href="#ringkasan">Ringkasan</a></li>
+  </ul>
+</nav>
+  </div>
+
+		</nav>
+		<main class="docs-content col-lg-11 col-xl-9">
+		
+				<nav aria-label="breadcrumb">
+					<ol class="breadcrumb">
+						<li class="breadcrumb-item"><a href="/">Home</a></li>
+<li class="breadcrumb-item"><a href="/php/">Php</a></li>
+<li class="breadcrumb-item"><a href="/php/tutorial/">Tutorial PHP</a></li>
+<li class="breadcrumb-item active" aria-current="page">Superglobal dan Form Handling</li>
+					</ol>
+				</nav>
+			
+			<h1>Superglobal dan Form Handling</h1>
+			<p class="lead">Superglobal adalah variabel bawaan PHP yang dapat diakses dari mana saja. Artikel ini membahas GET, POST, REQUEST, SERVER, FILES, cara memproses form HTML, validasi, sanitasi input, dan upload file dengan aman.</p>
+			<nav class="d-xl-none" aria-label="Quaternary navigation">
+				<div class="d-xl-none">
+  <button class="btn btn-outline-primary btn-sm doks-toc-toggle collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#onThisPage" aria-controls="doks-docs-nav" aria-expanded="false" aria-label="Toggle On this page navigation">
+    <span>Daftar isi</span>
+    <span>
+      <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" class="doks doks-expand" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><title>Expand</title><polyline points="7 13 12 18 17 13"></polyline><polyline points="7 6 12 11 17 6"></polyline></svg>
+      <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" class="doks doks-collapse" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><title>Collapse</title><polyline points="17 11 12 6 7 11"></polyline><polyline points="17 18 12 13 7 18"></polyline></svg>
+    </span>
+  </button>
+  <div class="collapse" id="onThisPage">
+    <div class="card card-body mt-3 py-1">
+      <div class="page-links">
+        <nav id="TableOfContents">
+  <ul>
+    <li><a href="#pendahuluan">Pendahuluan</a></li>
+    <li><a href="#apa-itu-superglobal">Apa Itu Superglobal?</a></li>
+    <li><a href="#_get--data-dari-query-string"><code>$_GET</code> — Data dari Query String</a>
+      <ul>
+        <li><a href="#karakteristik-_get">Karakteristik <code>$_GET</code></a></li>
+        <li><a href="#form-dengan-method-get">Form dengan Method GET</a></li>
+        <li><a href="#query-string-dengan-array">Query String dengan Array</a></li>
+        <li><a href="#membangun-query-string">Membangun Query String</a></li>
+      </ul>
+    </li>
+    <li><a href="#_post--data-dari-form-post"><code>$_POST</code> — Data dari Form POST</a>
+      <ul>
+        <li><a href="#karakteristik-_post">Karakteristik <code>$_POST</code></a></li>
+        <li><a href="#cek-method-request">Cek Method Request</a></li>
+        <li><a href="#form-dengan-file-upload">Form dengan File Upload</a></li>
+      </ul>
+    </li>
+    <li><a href="#_request--gabungan-get-post-cookie"><code>$_REQUEST</code> — Gabungan GET, POST, COOKIE</a></li>
+    <li><a href="#_server--informasi-server-dan-request"><code>$_SERVER</code> — Informasi Server dan Request</a>
+      <ul>
+        <li><a href="#php_self-dan-xss"><code>PHP_SELF</code> dan XSS</a></li>
+        <li><a href="#mendapatkan-ip-client">Mendapatkan IP Client</a></li>
+      </ul>
+    </li>
+    <li><a href="#_files--upload-file"><code>$_FILES</code> — Upload File</a>
+      <ul>
+        <li><a href="#struktur-_files">Struktur <code>$_FILES</code></a></li>
+        <li><a href="#kode-error-upload">Kode Error Upload</a></li>
+        <li><a href="#proses-upload-aman">Proses Upload Aman</a></li>
+        <li><a href="#menonaktifkan-eksekusi-php-di-folder-upload">Menonaktifkan Eksekusi PHP di Folder Upload</a></li>
+      </ul>
+    </li>
+    <li><a href="#validasi-dan-sanitasi-input">Validasi dan Sanitasi Input</a>
+      <ul>
+        <li><a href="#prinsip-dasar">Prinsip Dasar</a></li>
+        <li><a href="#validasi-dengan-filter_var">Validasi dengan <code>filter_var()</code></a></li>
+        <li><a href="#sanitasi-dengan-filter_var">Sanitasi dengan <code>filter_var()</code></a></li>
+        <li><a href="#contoh-form-validasi-lengkap">Contoh Form Validasi Lengkap</a></li>
+      </ul>
+    </li>
+    <li><a href="#csrf-protection">CSRF Protection</a>
+      <ul>
+        <li><a href="#cara-kerja">Cara Kerja</a></li>
+        <li><a href="#solusi-csrf-token">Solusi: CSRF Token</a></li>
+      </ul>
+    </li>
+    <li><a href="#contoh-praktis">Contoh Praktis</a>
+      <ul>
+        <li><a href="#1-form-login-dengan-validasi">1. Form Login dengan Validasi</a></li>
+        <li><a href="#2-form-pencarian-dengan-get">2. Form Pencarian dengan GET</a></li>
+        <li><a href="#3-upload-file-dengan-validasi">3. Upload File dengan Validasi</a></li>
+        <li><a href="#4-form-kontak-dengan-csrf">4. Form Kontak dengan CSRF</a></li>
+      </ul>
+    </li>
+    <li><a href="#tips-dan-best-practice">Tips dan Best Practice</a></li>
+    <li><a href="#ringkasan">Ringkasan</a></li>
+  </ul>
+</nav>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="page-links d-none d-xl-block">
+  <h3>Daftar isi</h3>
+  <nav id="TableOfContents">
+  <ul>
+    <li><a href="#pendahuluan">Pendahuluan</a></li>
+    <li><a href="#apa-itu-superglobal">Apa Itu Superglobal?</a></li>
+    <li><a href="#_get--data-dari-query-string"><code>$_GET</code> — Data dari Query String</a>
+      <ul>
+        <li><a href="#karakteristik-_get">Karakteristik <code>$_GET</code></a></li>
+        <li><a href="#form-dengan-method-get">Form dengan Method GET</a></li>
+        <li><a href="#query-string-dengan-array">Query String dengan Array</a></li>
+        <li><a href="#membangun-query-string">Membangun Query String</a></li>
+      </ul>
+    </li>
+    <li><a href="#_post--data-dari-form-post"><code>$_POST</code> — Data dari Form POST</a>
+      <ul>
+        <li><a href="#karakteristik-_post">Karakteristik <code>$_POST</code></a></li>
+        <li><a href="#cek-method-request">Cek Method Request</a></li>
+        <li><a href="#form-dengan-file-upload">Form dengan File Upload</a></li>
+      </ul>
+    </li>
+    <li><a href="#_request--gabungan-get-post-cookie"><code>$_REQUEST</code> — Gabungan GET, POST, COOKIE</a></li>
+    <li><a href="#_server--informasi-server-dan-request"><code>$_SERVER</code> — Informasi Server dan Request</a>
+      <ul>
+        <li><a href="#php_self-dan-xss"><code>PHP_SELF</code> dan XSS</a></li>
+        <li><a href="#mendapatkan-ip-client">Mendapatkan IP Client</a></li>
+      </ul>
+    </li>
+    <li><a href="#_files--upload-file"><code>$_FILES</code> — Upload File</a>
+      <ul>
+        <li><a href="#struktur-_files">Struktur <code>$_FILES</code></a></li>
+        <li><a href="#kode-error-upload">Kode Error Upload</a></li>
+        <li><a href="#proses-upload-aman">Proses Upload Aman</a></li>
+        <li><a href="#menonaktifkan-eksekusi-php-di-folder-upload">Menonaktifkan Eksekusi PHP di Folder Upload</a></li>
+      </ul>
+    </li>
+    <li><a href="#validasi-dan-sanitasi-input">Validasi dan Sanitasi Input</a>
+      <ul>
+        <li><a href="#prinsip-dasar">Prinsip Dasar</a></li>
+        <li><a href="#validasi-dengan-filter_var">Validasi dengan <code>filter_var()</code></a></li>
+        <li><a href="#sanitasi-dengan-filter_var">Sanitasi dengan <code>filter_var()</code></a></li>
+        <li><a href="#contoh-form-validasi-lengkap">Contoh Form Validasi Lengkap</a></li>
+      </ul>
+    </li>
+    <li><a href="#csrf-protection">CSRF Protection</a>
+      <ul>
+        <li><a href="#cara-kerja">Cara Kerja</a></li>
+        <li><a href="#solusi-csrf-token">Solusi: CSRF Token</a></li>
+      </ul>
+    </li>
+    <li><a href="#contoh-praktis">Contoh Praktis</a>
+      <ul>
+        <li><a href="#1-form-login-dengan-validasi">1. Form Login dengan Validasi</a></li>
+        <li><a href="#2-form-pencarian-dengan-get">2. Form Pencarian dengan GET</a></li>
+        <li><a href="#3-upload-file-dengan-validasi">3. Upload File dengan Validasi</a></li>
+        <li><a href="#4-form-kontak-dengan-csrf">4. Form Kontak dengan CSRF</a></li>
+      </ul>
+    </li>
+    <li><a href="#tips-dan-best-practice">Tips dan Best Practice</a></li>
+    <li><a href="#ringkasan">Ringkasan</a></li>
+  </ul>
+</nav>
+  </div>
+
+			</nav>
+			<h2 id="pendahuluan">Pendahuluan <a href="#pendahuluan" class="anchor" aria-hidden="true">#</a></h2>
+<p>Aplikasi web tidak lepas dari <strong>input dari user</strong> — mengisi form, mengirim data, mengunggah file. PHP menyediakan <strong>superglobal</strong> — variabel bawaan yang bisa diakses dari mana saja, termasuk di dalam fungsi, tanpa perlu <code>global</code>.</p>
+<p>Superglobal utama untuk form handling:</p>
+<ul>
+<li><strong><code>$_GET</code></strong> — data dari query string (URL).</li>
+<li><strong><code>$_POST</code></strong> — data dari form method POST.</li>
+<li><strong><code>$_REQUEST</code></strong> — gabungan GET, POST, dan COOKIE.</li>
+<li><strong><code>$_SERVER</code></strong> — informasi server dan request.</li>
+<li><strong><code>$_FILES</code></strong> — file yang diunggah.</li>
+</ul>
+<p>Artikel ini membahas cara memproses form dengan aman: validasi, sanitasi, dan upload file.</p>
+<blockquote>
+<p><strong>Asumsi:</strong> Anda sudah memahami variabel, array, string, dan fungsi dari artikel sebelumnya.</p>
+</blockquote>
+<hr>
+<h2 id="apa-itu-superglobal">Apa Itu Superglobal? <a href="#apa-itu-superglobal" class="anchor" aria-hidden="true">#</a></h2>
+<p><strong>Superglobal</strong> adalah array bawaan PHP yang <strong>tersedia di semua scope</strong> — global, fungsi, method. Namanya diawali <code>$_</code> dan ditulis huruf besar.</p>
+<table>
+<thead>
+<tr>
+<th>Superglobal</th>
+<th>Isi</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>$_GET</code></td>
+<td>Data dari query string</td>
+</tr>
+<tr>
+<td><code>$_POST</code></td>
+<td>Data dari form method POST</td>
+</tr>
+<tr>
+<td><code>$_REQUEST</code></td>
+<td>Gabungan GET, POST, COOKIE</td>
+</tr>
+<tr>
+<td><code>$_SERVER</code></td>
+<td>Info server dan request</td>
+</tr>
+<tr>
+<td><code>$_FILES</code></td>
+<td>File yang diunggah</td>
+</tr>
+<tr>
+<td><code>$_SESSION</code></td>
+<td>Data session (dibahas artikel terpisah)</td>
+</tr>
+<tr>
+<td><code>$_COOKIE</code></td>
+<td>Data cookie (dibahas artikel terpisah)</td>
+</tr>
+<tr>
+<td><code>$_ENV</code></td>
+<td>Environment variables</td>
+</tr>
+<tr>
+<td><code>$GLOBALS</code></td>
+<td>Semua variabel global</td>
+</tr>
+</tbody>
+</table>
+<pre><code class="language-php">&lt;?php
+// Bisa diakses di dalam fungsi tanpa `global`
+function tampilkanNama() {
+    echo $_GET[&quot;nama&quot;] ?? &quot;Anonim&quot;;
+}
+
+tampilkanNama();
+</code></pre>
+<blockquote>
+<p><strong>Peringatan:</strong> Jangan pernah mempercayai data superglobal langsung. Selalu <strong>validasi</strong> dan <strong>sanitasi</strong> sebelum digunakan.</p>
+</blockquote>
+<hr>
+<h2 id="_get--data-dari-query-string"><code>$_GET</code> — Data dari Query String <a href="#_get--data-dari-query-string" class="anchor" aria-hidden="true">#</a></h2>
+<p>Data dikirim melalui <strong>URL</strong> setelah tanda <code>?</code>.</p>
+<pre><code>https://example.com/produk.php?kategori=elektronik&amp;page=2
+</code></pre>
+<pre><code class="language-php">&lt;?php
+// URL: produk.php?kategori=elektronik&amp;page=2
+$kategori = $_GET[&quot;kategori&quot;] ?? &quot;&quot;;
+$page = $_GET[&quot;page&quot;] ?? 1;
+
+echo &quot;Kategori: $kategori&quot;; // &quot;elektronik&quot;
+echo &quot;Halaman: $page&quot;;       // &quot;2&quot;
+</code></pre>
+<h3 id="karakteristik-_get">Karakteristik <code>$_GET</code> <a href="#karakteristik-_get" class="anchor" aria-hidden="true">#</a></h3>
+<ul>
+<li>Data <strong>terlihat</strong> di URL — jangan kirim data sensitif (password, token).</li>
+<li>Panjang terbatas (sekitar 2000 karakter, tergantung browser dan server).</li>
+<li>Bisa di-bookmark dan di-share.</li>
+<li>Cocok untuk <strong>pencarian, filter, pagination</strong>.</li>
+<li><strong>Idempotent</strong> — request GET seharusnya tidak mengubah data di server.</li>
+</ul>
+<h3 id="form-dengan-method-get">Form dengan Method GET <a href="#form-dengan-method-get" class="anchor" aria-hidden="true">#</a></h3>
+<pre><code class="language-html">&lt;form action=&quot;cari.php&quot; method=&quot;get&quot;&gt;
+    &lt;input type=&quot;text&quot; name=&quot;q&quot; placeholder=&quot;Cari produk...&quot;&gt;
+    &lt;button type=&quot;submit&quot;&gt;Cari&lt;/button&gt;
+&lt;/form&gt;
+</code></pre>
+<p>Saat di-submit, URL menjadi:</p>
+<pre><code>cari.php?q=laptop
+</code></pre>
+<pre><code class="language-php">&lt;?php
+// cari.php
+$keyword = $_GET[&quot;q&quot;] ?? &quot;&quot;;
+if ($keyword !== &quot;&quot;) {
+    echo &quot;Mencari: &quot; . htmlspecialchars($keyword);
+}
+</code></pre>
+<h3 id="query-string-dengan-array">Query String dengan Array <a href="#query-string-dengan-array" class="anchor" aria-hidden="true">#</a></h3>
+<pre><code class="language-html">&lt;form method=&quot;get&quot;&gt;
+    &lt;input type=&quot;checkbox&quot; name=&quot;kategori[]&quot; value=&quot;elektronik&quot;&gt; Elektronik
+    &lt;input type=&quot;checkbox&quot; name=&quot;kategori[]&quot; value=&quot;fashion&quot;&gt; Fashion
+    &lt;button type=&quot;submit&quot;&gt;Filter&lt;/button&gt;
+&lt;/form&gt;
+</code></pre>
+<pre><code class="language-php">&lt;?php
+// URL: filter.php?kategori[]=elektronik&amp;kategori[]=fashion
+$kategori = $_GET[&quot;kategori&quot;] ?? [];
+print_r($kategori);
+// [&quot;elektronik&quot;, &quot;fashion&quot;]
+</code></pre>
+<blockquote>
+<p><strong>Catatan:</strong> Nama input dengan <code>[]</code> di akhir membuat PHP mengumpulkan nilai menjadi array.</p>
+</blockquote>
+<h3 id="membangun-query-string">Membangun Query String <a href="#membangun-query-string" class="anchor" aria-hidden="true">#</a></h3>
+<pre><code class="language-php">&lt;?php
+$params = [
+    &quot;kategori&quot; =&gt; &quot;elektronik&quot;,
+    &quot;page&quot; =&gt; 2,
+    &quot;limit&quot; =&gt; 10,
+];
+
+$query = http_build_query($params);
+echo $query;
+// &quot;kategori=elektronik&amp;page=2&amp;limit=10&quot;
+
+// Gunakan di URL
+$url = &quot;produk.php?&quot; . $query;
+echo $url;
+// &quot;produk.php?kategori=elektronik&amp;page=2&amp;limit=10&quot;
+</code></pre>
+<blockquote>
+<p><strong>Tips:</strong> Gunakan <strong><code>http_build_query()</code></strong> untuk membangun query string — otomatis meng-encode karakter khusus.</p>
+</blockquote>
+<hr>
+<h2 id="_post--data-dari-form-post"><code>$_POST</code> — Data dari Form POST <a href="#_post--data-dari-form-post" class="anchor" aria-hidden="true">#</a></h2>
+<p>Data dikirim melalui <strong>body request</strong>, tidak terlihat di URL.</p>
+<pre><code class="language-html">&lt;form action=&quot;proses.php&quot; method=&quot;post&quot;&gt;
+    &lt;input type=&quot;text&quot; name=&quot;nama&quot; placeholder=&quot;Nama&quot;&gt;
+    &lt;input type=&quot;email&quot; name=&quot;email&quot; placeholder=&quot;Email&quot;&gt;
+    &lt;input type=&quot;password&quot; name=&quot;password&quot; placeholder=&quot;Password&quot;&gt;
+    &lt;button type=&quot;submit&quot;&gt;Daftar&lt;/button&gt;
+&lt;/form&gt;
+</code></pre>
+<pre><code class="language-php">&lt;?php
+// proses.php
+$nama = $_POST[&quot;nama&quot;] ?? &quot;&quot;;
+$email = $_POST[&quot;email&quot;] ?? &quot;&quot;;
+$password = $_POST[&quot;password&quot;] ?? &quot;&quot;;
+
+echo &quot;Nama: &quot; . htmlspecialchars($nama);
+echo &quot;Email: &quot; . htmlspecialchars($email);
+// JANGAN tampilkan password!
+</code></pre>
+<h3 id="karakteristik-_post">Karakteristik <code>$_POST</code> <a href="#karakteristik-_post" class="anchor" aria-hidden="true">#</a></h3>
+<ul>
+<li>Data <strong>tidak terlihat</strong> di URL — cocok untuk data sensitif.</li>
+<li>Tidak ada batasan panjang yang ketat (tergantung <code>post_max_size</code>).</li>
+<li><strong>Tidak idempotent</strong> — request POST seharusnya mengubah data di server.</li>
+<li>Cocok untuk <strong>login, registrasi, create/update data</strong>.</li>
+<li>Tidak bisa di-bookmark.</li>
+</ul>
+<h3 id="cek-method-request">Cek Method Request <a href="#cek-method-request" class="anchor" aria-hidden="true">#</a></h3>
+<pre><code class="language-php">&lt;?php
+if ($_SERVER[&quot;REQUEST_METHOD&quot;] === &quot;POST&quot;) {
+    // proses form
+    $nama = $_POST[&quot;nama&quot;] ?? &quot;&quot;;
+    // ...
+}
+</code></pre>
+<blockquote>
+<p><strong>Tips:</strong> Selalu cek <code>$_SERVER[&quot;REQUEST_METHOD&quot;]</code> sebelum memproses form — mencegah eksekusi kode saat halaman diakses langsung via GET.</p>
+</blockquote>
+<h3 id="form-dengan-file-upload">Form dengan File Upload <a href="#form-dengan-file-upload" class="anchor" aria-hidden="true">#</a></h3>
+<p>Form yang mengunggah file <strong>wajib</strong> menggunakan <code>enctype=&quot;multipart/form-data&quot;</code>:</p>
+<pre><code class="language-html">&lt;form action=&quot;upload.php&quot; method=&quot;post&quot; enctype=&quot;multipart/form-data&quot;&gt;
+    &lt;input type=&quot;file&quot; name=&quot;foto&quot;&gt;
+    &lt;button type=&quot;submit&quot;&gt;Upload&lt;/button&gt;
+&lt;/form&gt;
+</code></pre>
+<p>Tanpa <code>enctype</code>, file tidak akan terkirim.</p>
+<hr>
+<h2 id="_request--gabungan-get-post-cookie"><code>$_REQUEST</code> — Gabungan GET, POST, COOKIE <a href="#_request--gabungan-get-post-cookie" class="anchor" aria-hidden="true">#</a></h2>
+<p><code>$_REQUEST</code> menggabungkan <code>$_GET</code>, <code>$_POST</code>, dan <code>$_COOKIE</code>. Urutan prioritas ditentukan oleh <code>request_order</code> di <code>php.ini</code> (default: <code>GP</code> — GET lalu POST).</p>
+<pre><code class="language-php">&lt;?php
+// Bisa dari GET atau POST
+$nama = $_REQUEST[&quot;nama&quot;] ?? &quot;&quot;;
+</code></pre>
+<blockquote>
+<p>⚠️ <strong>Peringatan:</strong> <strong>Hindari <code>$_REQUEST</code></strong> — sulit diprediksi dan bisa menjadi celah keamanan. Gunakan <code>$_GET</code> atau <code>$_POST</code> secara eksplisit sesuai kebutuhan.</p>
+</blockquote>
+<hr>
+<h2 id="_server--informasi-server-dan-request"><code>$_SERVER</code> — Informasi Server dan Request <a href="#_server--informasi-server-dan-request" class="anchor" aria-hidden="true">#</a></h2>
+<p>Berisi informasi tentang server dan request yang sedang diproses.</p>
+<pre><code class="language-php">&lt;?php
+// Method request
+echo $_SERVER[&quot;REQUEST_METHOD&quot;]; // &quot;GET&quot; / &quot;POST&quot;
+
+// URL dan path
+echo $_SERVER[&quot;REQUEST_URI&quot;];    // &quot;/produk.php?page=2&quot;
+echo $_SERVER[&quot;SCRIPT_NAME&quot;];    // &quot;/produk.php&quot;
+echo $_SERVER[&quot;PHP_SELF&quot;];       // &quot;/produk.php&quot; (hati-hati XSS!)
+
+// Host dan port
+echo $_SERVER[&quot;HTTP_HOST&quot;];      // &quot;example.com&quot;
+echo $_SERVER[&quot;SERVER_NAME&quot;];    // &quot;example.com&quot;
+echo $_SERVER[&quot;SERVER_PORT&quot;];    // &quot;80&quot; / &quot;443&quot;
+
+// IP client
+echo $_SERVER[&quot;REMOTE_ADDR&quot;];   // &quot;192.168.1.10&quot;
+
+// User agent
+echo $_SERVER[&quot;HTTP_USER_AGENT&quot;]; // &quot;Mozilla/5.0 ...&quot;
+
+// HTTPS?
+$isHttps = !empty($_SERVER[&quot;HTTPS&quot;]) &amp;&amp; $_SERVER[&quot;HTTPS&quot;] !== &quot;off&quot;;
+</code></pre>
+<h3 id="php_self-dan-xss"><code>PHP_SELF</code> dan XSS <a href="#php_self-dan-xss" class="anchor" aria-hidden="true">#</a></h3>
+<p><code>$_SERVER[&quot;PHP_SELF&quot;]</code> bisa dimanipulasi oleh penyerang melalui URL:</p>
+<pre><code>https://example.com/produk.php/&quot;&gt;&lt;script&gt;alert('XSS')&lt;/script&gt;
+</code></pre>
+<p>Jika digunakan langsung di form action:</p>
+<pre><code class="language-php">&lt;!-- ❌ RENTAN XSS --&gt;
+&lt;form action=&quot;&lt;?= $_SERVER['PHP_SELF'] ?&gt;&quot;&gt;
+</code></pre>
+<p><strong>Solusi:</strong></p>
+<pre><code class="language-php">&lt;!-- ✅ AMAN --&gt;
+&lt;form action=&quot;&lt;?= htmlspecialchars($_SERVER['PHP_SELF'], ENT_QUOTES, 'UTF-8') ?&gt;&quot;&gt;
+
+&lt;!-- ✅ Lebih baik: gunakan path spesifik --&gt;
+&lt;form action=&quot;/proses.php&quot;&gt;
+</code></pre>
+<blockquote>
+<p><strong>Peringatan:</strong> Jangan pernah menampilkan <code>$_SERVER[&quot;PHP_SELF&quot;]</code> tanpa <code>htmlspecialchars()</code>.</p>
+</blockquote>
+<h3 id="mendapatkan-ip-client">Mendapatkan IP Client <a href="#mendapatkan-ip-client" class="anchor" aria-hidden="true">#</a></h3>
+<pre><code class="language-php">&lt;?php
+function getClientIp(): string {
+    // Jika di belakang proxy, cek header X-Forwarded-For
+    if (!empty($_SERVER[&quot;HTTP_X_FORWARDED_FOR&quot;])) {
+        $ips = explode(&quot;,&quot;, $_SERVER[&quot;HTTP_X_FORWARDED_FOR&quot;]);
+        return trim($ips[0]);
+    }
+    return $_SERVER[&quot;REMOTE_ADDR&quot;] ?? &quot;unknown&quot;;
+}
+</code></pre>
+<blockquote>
+<p><strong>Catatan:</strong> Header <code>X-Forwarded-For</code> bisa dipalsukan. Hanya percayai jika request datang dari proxy tepercaya.</p>
+</blockquote>
+<hr>
+<h2 id="_files--upload-file"><code>$_FILES</code> — Upload File <a href="#_files--upload-file" class="anchor" aria-hidden="true">#</a></h2>
+<p>Berisi informasi file yang diunggah melalui form <code>multipart/form-data</code>.</p>
+<h3 id="struktur-_files">Struktur <code>$_FILES</code> <a href="#struktur-_files" class="anchor" aria-hidden="true">#</a></h3>
+<pre><code class="language-php">&lt;?php
+print_r($_FILES[&quot;foto&quot;]);
+// [
+//     &quot;name&quot; =&gt; &quot;gambar.jpg&quot;,         // nama asli
+//     &quot;type&quot; =&gt; &quot;image/jpeg&quot;,         // MIME type (bisa dipalsukan!)
+//     &quot;tmp_name&quot; =&gt; &quot;/tmp/phpXXXX&quot;,   // lokasi sementara
+//     &quot;error&quot; =&gt; 0,                   // kode error
+//     &quot;size&quot; =&gt; 102400                // ukuran dalam byte
+// ]
+</code></pre>
+<h3 id="kode-error-upload">Kode Error Upload <a href="#kode-error-upload" class="anchor" aria-hidden="true">#</a></h3>
+<table>
+<thead>
+<tr>
+<th>Kode</th>
+<th>Konstanta</th>
+<th>Arti</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>0</code></td>
+<td><code>UPLOAD_ERR_OK</code></td>
+<td>Berhasil</td>
+</tr>
+<tr>
+<td><code>1</code></td>
+<td><code>UPLOAD_ERR_INI_SIZE</code></td>
+<td>Melebihi <code>upload_max_filesize</code></td>
+</tr>
+<tr>
+<td><code>2</code></td>
+<td><code>UPLOAD_ERR_FORM_SIZE</code></td>
+<td>Melebihi <code>MAX_FILE_SIZE</code> di form</td>
+</tr>
+<tr>
+<td><code>3</code></td>
+<td><code>UPLOAD_ERR_PARTIAL</code></td>
+<td>Upload terputus</td>
+</tr>
+<tr>
+<td><code>4</code></td>
+<td><code>UPLOAD_ERR_NO_FILE</code></td>
+<td>Tidak ada file</td>
+</tr>
+<tr>
+<td><code>6</code></td>
+<td><code>UPLOAD_ERR_NO_TMP_DIR</code></td>
+<td>Folder tmp tidak ada</td>
+</tr>
+<tr>
+<td><code>7</code></td>
+<td><code>UPLOAD_ERR_CANT_WRITE</code></td>
+<td>Gagal menulis ke disk</td>
+</tr>
+<tr>
+<td><code>8</code></td>
+<td><code>UPLOAD_ERR_EXTENSION</code></td>
+<td>Diblokir oleh ekstensi PHP</td>
+</tr>
+</tbody>
+</table>
+<h3 id="proses-upload-aman">Proses Upload Aman <a href="#proses-upload-aman" class="anchor" aria-hidden="true">#</a></h3>
+<pre><code class="language-php">&lt;?php
+function uploadGambar(array $file, string $uploadDir = &quot;uploads/&quot;): array {
+    // 1. Cek error
+    if ($file[&quot;error&quot;] !== UPLOAD_ERR_OK) {
+        return [&quot;sukses&quot; =&gt; false, &quot;pesan&quot; =&gt; &quot;Upload gagal (kode: {$file['error']})&quot;];
+    }
+
+    // 2. Cek ukuran (maks 2MB)
+    if ($file[&quot;size&quot;] &gt; 2 * 1024 * 1024) {
+        return [&quot;sukses&quot; =&gt; false, &quot;pesan&quot; =&gt; &quot;Ukuran maksimal 2MB&quot;];
+    }
+
+    // 3. Cek MIME type dengan finfo (JANGAN percaya $file[&quot;type&quot;]!)
+    $finfo = new finfo(FILEINFO_MIME_TYPE);
+    $mime = $finfo-&gt;file($file[&quot;tmp_name&quot;]);
+    $izinMime = [&quot;image/jpeg&quot;, &quot;image/png&quot;, &quot;image/webp&quot;, &quot;image/gif&quot;];
+
+    if (!in_array($mime, $izinMime, true)) {
+        return [&quot;sukses&quot; =&gt; false, &quot;pesan&quot; =&gt; &quot;Format file tidak didukung&quot;];
+    }
+
+    // 4. Buat nama file unik — JANGAN gunakan nama asli!
+    $ext = match ($mime) {
+        &quot;image/jpeg&quot; =&gt; &quot;.jpg&quot;,
+        &quot;image/png&quot; =&gt; &quot;.png&quot;,
+        &quot;image/webp&quot; =&gt; &quot;.webp&quot;,
+        &quot;image/gif&quot; =&gt; &quot;.gif&quot;,
+    };
+    $namaBaru = bin2hex(random_bytes(16)) . $ext;
+
+    // 5. Pastikan folder upload ada
+    if (!is_dir($uploadDir)) {
+        mkdir($uploadDir, 0755, true);
+    }
+
+    // 6. Pindahkan file
+    $tujuan = $uploadDir . $namaBaru;
+    if (!move_uploaded_file($file[&quot;tmp_name&quot;], $tujuan)) {
+        return [&quot;sukses&quot; =&gt; false, &quot;pesan&quot; =&gt; &quot;Gagal menyimpan file&quot;];
+    }
+
+    return [&quot;sukses&quot; =&gt; true, &quot;pesan&quot; =&gt; &quot;Upload berhasil&quot;, &quot;file&quot; =&gt; $namaBaru];
+}
+
+// Penggunaan
+if ($_SERVER[&quot;REQUEST_METHOD&quot;] === &quot;POST&quot; &amp;&amp; isset($_FILES[&quot;foto&quot;])) {
+    $hasil = uploadGambar($_FILES[&quot;foto&quot;]);
+    echo $hasil[&quot;pesan&quot;];
+}
+</code></pre>
+<blockquote>
+<p>⚠️ <strong>Peringatan keamanan:</strong></p>
+<ul>
+<li><strong>Jangan percaya <code>$_FILES[&quot;type&quot;]</code></strong> — MIME type dari client bisa dipalsukan. Gunakan <code>finfo</code> untuk memeriksa isi file.</li>
+<li><strong>Jangan gunakan nama file asli</strong> — bisa mengandung karakter berbahaya atau menimpa file lain. Generate nama unik.</li>
+<li><strong>Batasi ekstensi dan ukuran</strong> — cegah upload file berbahaya.</li>
+<li><strong>Simpan file di luar document root</strong> jika memungkinkan, atau nonaktifkan eksekusi PHP di folder upload.</li>
+</ul>
+</blockquote>
+<h3 id="menonaktifkan-eksekusi-php-di-folder-upload">Menonaktifkan Eksekusi PHP di Folder Upload <a href="#menonaktifkan-eksekusi-php-di-folder-upload" class="anchor" aria-hidden="true">#</a></h3>
+<p>Buat file <code>.htaccess</code> di folder <code>uploads/</code>:</p>
+<pre><code class="language-apache"># uploads/.htaccess
+php_flag engine off
+&lt;FilesMatch &quot;\.(php|phtml|php3|php4|php5|php7|phps)$&quot;&gt;
+    Deny from all
+&lt;/FilesMatch&gt;
+</code></pre>
+<p>Untuk Nginx:</p>
+<pre><code class="language-nginx">location /uploads/ {
+    location ~ \.php$ {
+        deny all;
+    }
+}
+</code></pre>
+<hr>
+<h2 id="validasi-dan-sanitasi-input">Validasi dan Sanitasi Input <a href="#validasi-dan-sanitasi-input" class="anchor" aria-hidden="true">#</a></h2>
+<p><strong>Validasi</strong> memastikan data memenuhi aturan. <strong>Sanitasi</strong> membersihkan data dari karakter berbahaya.</p>
+<h3 id="prinsip-dasar">Prinsip Dasar <a href="#prinsip-dasar" class="anchor" aria-hidden="true">#</a></h3>
+<ol>
+<li><strong>Jangan pernah percaya input user</strong> — semua bisa dimanipulasi.</li>
+<li><strong>Validasi di server</strong> — validasi di client (JavaScript) hanya untuk UX, bukan keamanan.</li>
+<li><strong>Whitelist, bukan blacklist</strong> — tentukan apa yang <strong>diizinkan</strong>, bukan apa yang dilarang.</li>
+<li><strong>Gunakan <code>filter_var()</code></strong> untuk validasi standar (email, URL, integer).</li>
+<li><strong>Selalu <code>htmlspecialchars()</code></strong> saat output ke HTML.</li>
+</ol>
+<h3 id="validasi-dengan-filter_var">Validasi dengan <code>filter_var()</code> <a href="#validasi-dengan-filter_var" class="anchor" aria-hidden="true">#</a></h3>
+<pre><code class="language-php">&lt;?php
+// Integer
+$umur = filter_var($_POST[&quot;umur&quot;] ?? &quot;&quot;, FILTER_VALIDATE_INT, [
+    &quot;options&quot; =&gt; [&quot;min_range&quot; =&gt; 17, &quot;max_range&quot; =&gt; 100],
+]);
+if ($umur === false) {
+    $error[] = &quot;Umur harus bilangan bulat 17-100&quot;;
+}
+
+// Email
+$email = filter_var($_POST[&quot;email&quot;] ?? &quot;&quot;, FILTER_VALIDATE_EMAIL);
+if ($email === false) {
+    $error[] = &quot;Email tidak valid&quot;;
+}
+
+// URL
+$url = filter_var($_POST[&quot;url&quot;] ?? &quot;&quot;, FILTER_VALIDATE_URL);
+
+// Float
+$harga = filter_var($_POST[&quot;harga&quot;] ?? &quot;&quot;, FILTER_VALIDATE_FLOAT);
+
+// Boolean
+$aktif = filter_var($_POST[&quot;aktif&quot;] ?? false, FILTER_VALIDATE_BOOLEAN);
+
+// IP
+$ip = filter_var($_POST[&quot;ip&quot;] ?? &quot;&quot;, FILTER_VALIDATE_IP);
+</code></pre>
+<h3 id="sanitasi-dengan-filter_var">Sanitasi dengan <code>filter_var()</code> <a href="#sanitasi-dengan-filter_var" class="anchor" aria-hidden="true">#</a></h3>
+<pre><code class="language-php">&lt;?php
+// Hapus karakter non-email
+$email = filter_var($input, FILTER_SANITIZE_EMAIL);
+
+// Hapus tag HTML
+$teks = filter_var($input, FILTER_SANITIZE_SPECIAL_CHARS);
+
+// Hapus karakter non-digit
+$telepon = preg_replace(&quot;/\D/&quot;, &quot;&quot;, $input);
+
+// Trim spasi
+$nama = trim($input);
+
+// Hapus newline berlebih
+$pesan = preg_replace(&quot;/\n{3,}/&quot;, &quot;\n\n&quot;, $input);
+</code></pre>
+<h3 id="contoh-form-validasi-lengkap">Contoh Form Validasi Lengkap <a href="#contoh-form-validasi-lengkap" class="anchor" aria-hidden="true">#</a></h3>
+<pre><code class="language-php">&lt;?php
+$error = [];
+$data = [];
+
+if ($_SERVER[&quot;REQUEST_METHOD&quot;] === &quot;POST&quot;) {
+    // Nama
+    $nama = trim($_POST[&quot;nama&quot;] ?? &quot;&quot;);
+    if ($nama === &quot;&quot;) {
+        $error[&quot;nama&quot;] = &quot;Nama wajib diisi&quot;;
+    } elseif (mb_strlen($nama) &lt; 3) {
+        $error[&quot;nama&quot;] = &quot;Nama minimal 3 karakter&quot;;
+    } else {
+        $data[&quot;nama&quot;] = htmlspecialchars($nama, ENT_QUOTES, &quot;UTF-8&quot;);
+    }
+
+    // Email
+    $email = filter_var($_POST[&quot;email&quot;] ?? &quot;&quot;, FILTER_VALIDATE_EMAIL);
+    if ($email === false) {
+        $error[&quot;email&quot;] = &quot;Email tidak valid&quot;;
+    } else {
+        $data[&quot;email&quot;] = $email;
+    }
+
+    // Umur
+    $umur = filter_var($_POST[&quot;umur&quot;] ?? &quot;&quot;, FILTER_VALIDATE_INT, [
+        &quot;options&quot; =&gt; [&quot;min_range&quot; =&gt; 17, &quot;max_range&quot; =&gt; 100],
+    ]);
+    if ($umur === false) {
+        $error[&quot;umur&quot;] = &quot;Umur harus 17-100&quot;;
+    } else {
+        $data[&quot;umur&quot;] = $umur;
+    }
+
+    // Jika valid, proses
+    if (empty($error)) {
+        // Simpan ke database, kirim email, dll.
+        echo &quot;Registrasi berhasil!&quot;;
+    }
+}
+?&gt;
+
+&lt;form method=&quot;post&quot;&gt;
+    &lt;div&gt;
+        &lt;label&gt;Nama:&lt;/label&gt;
+        &lt;input type=&quot;text&quot; name=&quot;nama&quot; value=&quot;&lt;?= htmlspecialchars($_POST['nama'] ?? '', ENT_QUOTES, 'UTF-8') ?&gt;&quot;&gt;
+        &lt;span class=&quot;error&quot;&gt;&lt;?= $error[&quot;nama&quot;] ?? &quot;&quot; ?&gt;&lt;/span&gt;
+    &lt;/div&gt;
+    &lt;div&gt;
+        &lt;label&gt;Email:&lt;/label&gt;
+        &lt;input type=&quot;email&quot; name=&quot;email&quot; value=&quot;&lt;?= htmlspecialchars($_POST['email'] ?? '', ENT_QUOTES, 'UTF-8') ?&gt;&quot;&gt;
+        &lt;span class=&quot;error&quot;&gt;&lt;?= $error[&quot;email&quot;] ?? &quot;&quot; ?&gt;&lt;/span&gt;
+    &lt;/div&gt;
+    &lt;div&gt;
+        &lt;label&gt;Umur:&lt;/label&gt;
+        &lt;input type=&quot;number&quot; name=&quot;umur&quot; value=&quot;&lt;?= htmlspecialchars($_POST['umur'] ?? '', ENT_QUOTES, 'UTF-8') ?&gt;&quot;&gt;
+        &lt;span class=&quot;error&quot;&gt;&lt;?= $error[&quot;umur&quot;] ?? &quot;&quot; ?&gt;&lt;/span&gt;
+    &lt;/div&gt;
+    &lt;button type=&quot;submit&quot;&gt;Daftar&lt;/button&gt;
+&lt;/form&gt;
+</code></pre>
+<blockquote>
+<p><strong>Tips:</strong> Saat menampilkan kembali input ke form, selalu gunakan <strong><code>htmlspecialchars()</code></strong> — mencegah XSS dan menjaga karakter khusus.</p>
+</blockquote>
+<hr>
+<h2 id="csrf-protection">CSRF Protection <a href="#csrf-protection" class="anchor" aria-hidden="true">#</a></h2>
+<p><strong>CSRF</strong> (Cross-Site Request Forgery) adalah serangan di mana penyerang membuat user yang sudah login mengirim request tanpa sadar.</p>
+<h3 id="cara-kerja">Cara Kerja <a href="#cara-kerja" class="anchor" aria-hidden="true">#</a></h3>
+<ol>
+<li>User login ke <code>example.com</code> — browser menyimpan session cookie.</li>
+<li>User membuka situs penyerang <code>evil.com</code> yang berisi:
+<pre><code class="language-html">&lt;form action=&quot;https://example.com/hapus-produk&quot; method=&quot;post&quot;&gt;
+    &lt;input type=&quot;hidden&quot; name=&quot;id&quot; value=&quot;1&quot;&gt;
+&lt;/form&gt;
+&lt;script&gt;document.forms[0].submit();&lt;/script&gt;
+</code></pre>
+</li>
+<li>Browser mengirim request ke <code>example.com</code> <strong>dengan session cookie</strong> — server mengira itu dari user asli.</li>
+<li>Produk terhapus!</li>
+</ol>
+<h3 id="solusi-csrf-token">Solusi: CSRF Token <a href="#solusi-csrf-token" class="anchor" aria-hidden="true">#</a></h3>
+<p><strong>1. Generate token saat session dimulai:</strong></p>
+<pre><code class="language-php">&lt;?php
+session_start();
+
+if (empty($_SESSION[&quot;csrf_token&quot;])) {
+    $_SESSION[&quot;csrf_token&quot;] = bin2hex(random_bytes(32));
+}
+
+$csrfToken = $_SESSION[&quot;csrf_token&quot;];
+</code></pre>
+<p><strong>2. Sertakan token di form:</strong></p>
+<pre><code class="language-html">&lt;form method=&quot;post&quot; action=&quot;proses.php&quot;&gt;
+    &lt;input type=&quot;hidden&quot; name=&quot;csrf_token&quot; value=&quot;&lt;?= htmlspecialchars($csrfToken) ?&gt;&quot;&gt;
+    &lt;input type=&quot;text&quot; name=&quot;nama&quot;&gt;
+    &lt;button type=&quot;submit&quot;&gt;Simpan&lt;/button&gt;
+&lt;/form&gt;
+</code></pre>
+<p><strong>3. Verifikasi token saat memproses:</strong></p>
+<pre><code class="language-php">&lt;?php
+session_start();
+
+if ($_SERVER[&quot;REQUEST_METHOD&quot;] === &quot;POST&quot;) {
+    $token = $_POST[&quot;csrf_token&quot;] ?? &quot;&quot;;
+    $sessionToken = $_SESSION[&quot;csrf_token&quot;] ?? &quot;&quot;;
+
+    if (!hash_equals($sessionToken, $token)) {
+        http_response_code(403);
+        die(&quot;CSRF token tidak valid&quot;);
+    }
+
+    // Token valid — proses form
+    // ...
+}
+</code></pre>
+<blockquote>
+<p><strong>Tips:</strong> Gunakan <strong><code>hash_equals()</code></strong> untuk membandingkan token — mencegah timing attack. Jangan gunakan <code>==</code> atau <code>===</code>.</p>
+</blockquote>
+<hr>
+<h2 id="contoh-praktis">Contoh Praktis <a href="#contoh-praktis" class="anchor" aria-hidden="true">#</a></h2>
+<h3 id="1-form-login-dengan-validasi">1. Form Login dengan Validasi <a href="#1-form-login-dengan-validasi" class="anchor" aria-hidden="true">#</a></h3>
+<pre><code class="language-php">&lt;?php
+session_start();
+
+$error = &quot;&quot;;
+$sukses = false;
+
+if ($_SERVER[&quot;REQUEST_METHOD&quot;] === &quot;POST&quot;) {
+    $email = filter_var($_POST[&quot;email&quot;] ?? &quot;&quot;, FILTER_VALIDATE_EMAIL);
+    $password = $_POST[&quot;password&quot;] ?? &quot;&quot;;
+
+    if ($email === false) {
+        $error = &quot;Email tidak valid&quot;;
+    } elseif (strlen($password) &lt; 8) {
+        $error = &quot;Password minimal 8 karakter&quot;;
+    } else {
+        // Cek ke database (contoh dengan PDO)
+        $pdo = new PDO(&quot;mysql:host=localhost;dbname=toko&quot;, &quot;root&quot;, &quot;&quot;);
+        $stmt = $pdo-&gt;prepare(&quot;SELECT id, nama, password FROM users WHERE email = ?&quot;);
+        $stmt-&gt;execute([$email]);
+        $user = $stmt-&gt;fetch(PDO::FETCH_ASSOC);
+
+        if ($user &amp;&amp; password_verify($password, $user[&quot;password&quot;])) {
+            $_SESSION[&quot;user_id&quot;] = $user[&quot;id&quot;];
+            $_SESSION[&quot;user_nama&quot;] = $user[&quot;nama&quot;];
+            $sukses = true;
+            header(&quot;Location: dashboard.php&quot;);
+            exit;
+        } else {
+            $error = &quot;Email atau password salah&quot;;
+        }
+    }
+}
+?&gt;
+
+&lt;form method=&quot;post&quot;&gt;
+    &lt;?php if ($error): ?&gt;
+        &lt;div class=&quot;error&quot;&gt;&lt;?= htmlspecialchars($error) ?&gt;&lt;/div&gt;
+    &lt;?php endif; ?&gt;
+
+    &lt;input type=&quot;email&quot; name=&quot;email&quot; placeholder=&quot;Email&quot; required&gt;
+    &lt;input type=&quot;password&quot; name=&quot;password&quot; placeholder=&quot;Password&quot; required&gt;
+    &lt;button type=&quot;submit&quot;&gt;Login&lt;/button&gt;
+&lt;/form&gt;
+</code></pre>
+<h3 id="2-form-pencarian-dengan-get">2. Form Pencarian dengan GET <a href="#2-form-pencarian-dengan-get" class="anchor" aria-hidden="true">#</a></h3>
+<pre><code class="language-php">&lt;?php
+$keyword = trim($_GET[&quot;q&quot;] ?? &quot;&quot;);
+$kategori = $_GET[&quot;kategori&quot;] ?? &quot;semua&quot;;
+
+$produk = [
+    [&quot;nama&quot; =&gt; &quot;Keyboard Mechanical&quot;, &quot;kategori&quot; =&gt; &quot;elektronik&quot;],
+    [&quot;nama&quot; =&gt; &quot;Mouse Wireless&quot;, &quot;kategori&quot; =&gt; &quot;elektronik&quot;],
+    [&quot;nama&quot; =&gt; &quot;Kaos Polos&quot;, &quot;kategori&quot; =&gt; &quot;fashion&quot;],
+];
+
+$hasil = array_filter($produk, function($p) use ($keyword, $kategori) {
+    if ($kategori !== &quot;semua&quot; &amp;&amp; $p[&quot;kategori&quot;] !== $kategori) return false;
+    if ($keyword !== &quot;&quot; &amp;&amp; stripos($p[&quot;nama&quot;], $keyword) === false) return false;
+    return true;
+});
+?&gt;
+
+&lt;form method=&quot;get&quot;&gt;
+    &lt;input type=&quot;text&quot; name=&quot;q&quot; value=&quot;&lt;?= htmlspecialchars($keyword, ENT_QUOTES, 'UTF-8') ?&gt;&quot; placeholder=&quot;Cari...&quot;&gt;
+    &lt;select name=&quot;kategori&quot;&gt;
+        &lt;option value=&quot;semua&quot; &lt;?= $kategori === &quot;semua&quot; ? &quot;selected&quot; : &quot;&quot; ?&gt;&gt;Semua&lt;/option&gt;
+        &lt;option value=&quot;elektronik&quot; &lt;?= $kategori === &quot;elektronik&quot; ? &quot;selected&quot; : &quot;&quot; ?&gt;&gt;Elektronik&lt;/option&gt;
+        &lt;option value=&quot;fashion&quot; &lt;?= $kategori === &quot;fashion&quot; ? &quot;selected&quot; : &quot;&quot; ?&gt;&gt;Fashion&lt;/option&gt;
+    &lt;/select&gt;
+    &lt;button type=&quot;submit&quot;&gt;Cari&lt;/button&gt;
+&lt;/form&gt;
+
+&lt;h2&gt;Hasil (&lt;?= count($hasil) ?&gt;)&lt;/h2&gt;
+&lt;?php foreach ($hasil as $p): ?&gt;
+    &lt;div&gt;&lt;?= htmlspecialchars($p[&quot;nama&quot;], ENT_QUOTES, 'UTF-8') ?&gt;&lt;/div&gt;
+&lt;?php endforeach; ?&gt;
+</code></pre>
+<h3 id="3-upload-file-dengan-validasi">3. Upload File dengan Validasi <a href="#3-upload-file-dengan-validasi" class="anchor" aria-hidden="true">#</a></h3>
+<pre><code class="language-php">&lt;?php
+if ($_SERVER[&quot;REQUEST_METHOD&quot;] === &quot;POST&quot; &amp;&amp; isset($_FILES[&quot;foto&quot;])) {
+    $file = $_FILES[&quot;foto&quot;];
+
+    // Cek error
+    if ($file[&quot;error&quot;] !== UPLOAD_ERR_OK) {
+        $error = &quot;Upload gagal: kode &quot; . $file[&quot;error&quot;];
+    } elseif ($file[&quot;size&quot;] &gt; 5 * 1024 * 1024) {
+        $error = &quot;Ukuran maksimal 5MB&quot;;
+    } else {
+        $finfo = new finfo(FILEINFO_MIME_TYPE);
+        $mime = $finfo-&gt;file($file[&quot;tmp_name&quot;]);
+
+        if (!in_array($mime, [&quot;image/jpeg&quot;, &quot;image/png&quot;, &quot;image/webp&quot;], true)) {
+            $error = &quot;Format harus JPG, PNG, atau WebP&quot;;
+        } else {
+            $ext = match ($mime) {
+                &quot;image/jpeg&quot; =&gt; &quot;.jpg&quot;,
+                &quot;image/png&quot; =&gt; &quot;.png&quot;,
+                &quot;image/webp&quot; =&gt; &quot;.webp&quot;,
+            };
+            $namaBaru = bin2hex(random_bytes(16)) . $ext;
+            $tujuan = __DIR__ . &quot;/uploads/&quot; . $namaBaru;
+
+            if (move_uploaded_file($file[&quot;tmp_name&quot;], $tujuan)) {
+                $sukses = &quot;Upload berhasil: $namaBaru&quot;;
+            } else {
+                $error = &quot;Gagal menyimpan file&quot;;
+            }
+        }
+    }
+}
+?&gt;
+
+&lt;form method=&quot;post&quot; enctype=&quot;multipart/form-data&quot;&gt;
+    &lt;input type=&quot;file&quot; name=&quot;foto&quot; accept=&quot;image/*&quot; required&gt;
+    &lt;button type=&quot;submit&quot;&gt;Upload&lt;/button&gt;
+&lt;/form&gt;
+</code></pre>
+<h3 id="4-form-kontak-dengan-csrf">4. Form Kontak dengan CSRF <a href="#4-form-kontak-dengan-csrf" class="anchor" aria-hidden="true">#</a></h3>
+<pre><code class="language-php">&lt;?php
+session_start();
+
+if (empty($_SESSION[&quot;csrf_token&quot;])) {
+    $_SESSION[&quot;csrf_token&quot;] = bin2hex(random_bytes(32));
+}
+
+$sukses = &quot;&quot;;
+$error = [];
+
+if ($_SERVER[&quot;REQUEST_METHOD&quot;] === &quot;POST&quot;) {
+    // Verifikasi CSRF
+    if (!hash_equals($_SESSION[&quot;csrf_token&quot;], $_POST[&quot;csrf_token&quot;] ?? &quot;&quot;)) {
+        $error[&quot;csrf&quot;] = &quot;Token tidak valid&quot;;
+    }
+
+    $nama = trim($_POST[&quot;nama&quot;] ?? &quot;&quot;);
+    $email = filter_var($_POST[&quot;email&quot;] ?? &quot;&quot;, FILTER_VALIDATE_EMAIL);
+    $pesan = trim($_POST[&quot;pesan&quot;] ?? &quot;&quot;);
+
+    if ($nama === &quot;&quot;) $error[&quot;nama&quot;] = &quot;Nama wajib diisi&quot;;
+    if ($email === false) $error[&quot;email&quot;] = &quot;Email tidak valid&quot;;
+    if (mb_strlen($pesan) &lt; 10) $error[&quot;pesan&quot;] = &quot;Pesan minimal 10 karakter&quot;;
+
+    if (empty($error)) {
+        // Kirim email atau simpan ke database
+        $sukses = &quot;Terima kasih, pesan Anda telah dikirim!&quot;;
+    }
+}
+?&gt;
+
+&lt;form method=&quot;post&quot;&gt;
+    &lt;input type=&quot;hidden&quot; name=&quot;csrf_token&quot; value=&quot;&lt;?= htmlspecialchars($_SESSION[&quot;csrf_token&quot;]) ?&gt;&quot;&gt;
+    &lt;input type=&quot;text&quot; name=&quot;nama&quot; placeholder=&quot;Nama&quot; value=&quot;&lt;?= htmlspecialchars($_POST['nama'] ?? '') ?&gt;&quot;&gt;
+    &lt;input type=&quot;email&quot; name=&quot;email&quot; placeholder=&quot;Email&quot; value=&quot;&lt;?= htmlspecialchars($_POST['email'] ?? '') ?&gt;&quot;&gt;
+    &lt;textarea name=&quot;pesan&quot; placeholder=&quot;Pesan&quot;&gt;&lt;?= htmlspecialchars($_POST['pesan'] ?? '') ?&gt;&lt;/textarea&gt;
+    &lt;button type=&quot;submit&quot;&gt;Kirim&lt;/button&gt;
+&lt;/form&gt;
+</code></pre>
+<hr>
+<h2 id="tips-dan-best-practice">Tips dan Best Practice <a href="#tips-dan-best-practice" class="anchor" aria-hidden="true">#</a></h2>
+<ol>
+<li>
+<p><strong>Jangan pernah percaya input user</strong> — validasi dan sanitasi semua data.</p>
+</li>
+<li>
+<p><strong>Gunakan <code>$_GET</code> untuk data read-only</strong>, <code>$_POST</code> untuk data yang mengubah state.</p>
+</li>
+<li>
+<p><strong>Hindari <code>$_REQUEST</code></strong> — gunakan <code>$_GET</code> atau <code>$_POST</code> secara eksplisit.</p>
+</li>
+<li>
+<p><strong>Selalu cek <code>$_SERVER[&quot;REQUEST_METHOD&quot;]</code></strong> sebelum memproses form POST.</p>
+</li>
+<li>
+<p><strong>Validasi di server</strong> — validasi JavaScript hanya untuk UX, bukan keamanan.</p>
+</li>
+<li>
+<p><strong>Gunakan <code>filter_var()</code></strong> untuk validasi email, URL, integer, float.</p>
+</li>
+<li>
+<p><strong>Selalu <code>htmlspecialchars()</code></strong> saat output input user ke HTML.</p>
+</li>
+<li>
+<p><strong>Jangan percaya <code>$_FILES[&quot;type&quot;]</code></strong> — gunakan <code>finfo</code> untuk cek MIME type.</p>
+</li>
+<li>
+<p><strong>Generate nama file unik</strong> untuk upload — jangan gunakan nama asli.</p>
+</li>
+<li>
+<p><strong>Implementasikan CSRF token</strong> untuk form yang mengubah data.</p>
+</li>
+<li>
+<p><strong>Gunakan <code>hash_equals()</code></strong> untuk membandingkan token CSRF — mencegah timing attack.</p>
+</li>
+<li>
+<p><strong>Batasi ukuran upload</strong> di <code>php.ini</code> (<code>upload_max_filesize</code>, <code>post_max_size</code>).</p>
+</li>
+<li>
+<p><strong>Nonaktifkan eksekusi PHP</strong> di folder upload.</p>
+</li>
+<li>
+<p><strong>Gunakan HTTPS</strong> untuk mengirim data sensitif.</p>
+</li>
+<li>
+<p><strong>Set <code>display_errors = Off</code></strong> di produksi — jangan tampilkan error ke user.</p>
+</li>
+</ol>
+<hr>
+<h2 id="ringkasan">Ringkasan <a href="#ringkasan" class="anchor" aria-hidden="true">#</a></h2>
+<table>
+<thead>
+<tr>
+<th>Superglobal</th>
+<th>Kegunaan</th>
+<th>Kapan Digunakan</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>$_GET</code></td>
+<td>Query string</td>
+<td>Pencarian, filter, pagination</td>
+</tr>
+<tr>
+<td><code>$_POST</code></td>
+<td>Body request</td>
+<td>Login, registrasi, create/update</td>
+</tr>
+<tr>
+<td><code>$_REQUEST</code></td>
+<td>Gabungan GET/POST/COOKIE</td>
+<td><strong>Hindari</strong> — gunakan eksplisit</td>
+</tr>
+<tr>
+<td><code>$_SERVER</code></td>
+<td>Info server/request</td>
+<td>Method, URL, IP, header</td>
+</tr>
+<tr>
+<td><code>$_FILES</code></td>
+<td>File upload</td>
+<td>Upload gambar/dokumen</td>
+</tr>
+<tr>
+<td><code>$_SESSION</code></td>
+<td>Data session</td>
+<td>Login state, CSRF token</td>
+</tr>
+<tr>
+<td><code>$_COOKIE</code></td>
+<td>Data cookie</td>
+<td>Preferensi, remember me</td>
+</tr>
+</tbody>
+</table>
+<p>Poin penting:</p>
+<ul>
+<li><strong><code>$_GET</code> terlihat di URL</strong> — jangan kirim data sensitif.</li>
+<li><strong><code>$_POST</code> tidak terlihat</strong> — cocok untuk data sensitif.</li>
+<li><strong>Selalu validasi dan sanitasi</strong> input user.</li>
+<li><strong>Gunakan <code>filter_var()</code></strong> untuk validasi standar.</li>
+<li><strong>Selalu <code>htmlspecialchars()</code></strong> saat output ke HTML — mencegah XSS.</li>
+<li><strong>Jangan percaya <code>$_FILES[&quot;type&quot;]</code></strong> — gunakan <code>finfo</code>.</li>
+<li><strong>Generate nama file unik</strong> untuk upload.</li>
+<li><strong>Implementasikan CSRF token</strong> untuk form yang mengubah data.</li>
+<li><strong>Jangan gunakan <code>$_SERVER[&quot;PHP_SELF&quot;]</code></strong> tanpa <code>htmlspecialchars()</code> — rentan XSS.</li>
+<li><strong>Cek <code>$_SERVER[&quot;REQUEST_METHOD&quot;]</code></strong> sebelum memproses form.</li>
+</ul>
+<p>Pada artikel berikutnya, kita akan membahas <strong>Session dan Cookie</strong> — menyimpan state user di sisi server dan klien.</p>
+
+			<div class="page-footer-meta d-flex flex-column flex-md-row justify-content-between">
+				</div>
+			<div class="docs-navigation d-flex justify-content-between">
+	
+	<a href="/php/tutorial/08-string/">
+			<div class="card my-1">
+				<div class="card-body py-2">
+					&larr; String dan Manipulasi
+				</div>
+			</div>
+		</a>
+	<a class="ms-auto" href="/php/tutorial/10-session-cookie/">
+			<div class="card my-1">
+				<div class="card-body py-2">
+					Session dan Cookie &rarr;
+				</div>
+			</div>
+		</a>
+	</div>
+
+			
+		</main>
+	</div>
+
+      </div>
+    </div>
+    
+    
+    <footer class="footer text-muted">
+  <div class="container-xxl">
+    <div class="row">
+      <div class="col-lg-8 order-last order-lg-first">
+        <ul class="list-inline">
+          <li class="list-inline-item">Powered by <a class="text-muted" href="https://gohugo.io/">Hugo</a> and <a class="text-muted" href="https://github.com/">Github</a></li>
+        </ul>
+      </div>
+      <div class="col-lg-8 order-first order-lg-last text-lg-end">
+        <ul class="list-inline">
+          </ul>
+      </div>
+    </div>
+  </div>
+</footer>
+    
+
+<script src="/js/bootstrap.min.650aeec64c81d69d4c0850fc73c93da3f0330cec0a27772feed7f90f60baa5f47f1c45687d71914bdafd1c4e860d40f6dc08ede27a2f08431ff929c9a2d24621.js" integrity="sha512-ZQruxkyB1p1MCFD8c8k9o/AzDOwKJ3cv7tf5D2C6pfR/HEVofXGRS9r9HE6GDUD23Ajt4novCEMf&#43;SnJotJGIQ==" crossorigin="anonymous" defer></script>
+  <script src="/js/highlight.min.ec234bd8a5f487aaffe50a89f17b14501b1bb65633cf177cffd4cb84702dd7030edc08712dceb8dc27ac7e54b53240a08bf0b8d951572ee582bcdbbd06a48a7b.js" integrity="sha512-7CNL2KX0h6r/5QqJ8XsUUBsbtlYzzxd8/9TLhHAt1wMO3AhxLc643CesflS1MkCgi/C42VFXLuWCvNu9BqSKew==" crossorigin="anonymous" defer></script>
+  <script src="/main.min.cd1e5e6b40065b3f7f7fd8548a528fac67019754eda0f37b9918d02d154fc9ef6a22742f6513b0572ad9163152e151ec36221fbeafbecd7759c3dab1f19b64b9.js" integrity="sha512-zR5ea0AGWz9/f9hUilKPrGcBl1TtoPN7mRjQLRVPye9qInQvZROwVyrZFjFS4VHsNiIfvq&#43;&#43;zXdZw9qx8ZtkuQ==" crossorigin="anonymous" defer></script>
+  <script src="https://kaban.my.id/index.min.797ba4de6d8a5423115e651882a6de105e1744ee10ab32e79b10db26c6fbcd5d2706c0392c663ea0d01e04e8a21e3a87bb2ea742d9df2d62f481a7e793b68ec4.js" integrity="sha512-eXuk3m2KVCMRXmUYgqbeEF4XRO4QqzLnmxDbJsb7zV0nBsA5LGY&#43;oNAeBOiiHjqHuy6nQtnfLWL0gafnk7aOxA==" crossorigin="anonymous" defer></script>
+  
+    <div class="d-flex fixed-bottom pb-4 pb-lg-5 pe-4 pe-lg-5">
+      <a id="toTop" href="#" class="btn btn-outline-primary rounded-circle ms-auto p-2"><span class="visually-hidden">Top</span><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-chevron-up"><polyline points="18 15 12 9 6 15"></polyline></svg></a>
+    </div>
+    
+  </body>
+</html>

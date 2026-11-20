@@ -62,5 +62,61 @@ Mengambil keputusan — menjalankan blok kode berdasarkan kondisi (if, switch, m
 Asumsi: Anda sudah memahami variabel, tipe data, dan operator dari artikel sebelumnya.</description>
     </item>
     
+    <item>
+      <title>Fungsi</title>
+      <link>https://kaban.my.id/php/tutorial/06-fungsi/</link>
+      <pubDate>Sun, 08 Jan 2023 08:00:00 +0000</pubDate>
+      
+      <guid>https://kaban.my.id/php/tutorial/06-fungsi/</guid>
+      <description>Pendahuluan # Fungsi adalah blok kode yang dirancang untuk melakukan tugas tertentu dan dapat dipanggil berulang kali. Fungsi adalah fondasi pemrograman — hampir semua kode PHP modern terdiri dari fungsi-fungsi yang saling memanggil.
+Fungsi memungkinkan kita untuk:
+Menghindari duplikasi — tulis sekali, panggil berkali-kali. Memecah masalah kompleks menjadi bagian-bagian kecil. Mengabstraksi detail — pengguna fungsi tidak perlu tahu implementasinya. Menguji kode secara terpisah. Artikel ini membahas semua aspek fungsi di PHP: cara mendefinisikan, parameter, return value, scope, anonymous function, closure, dan arrow function.</description>
+    </item>
+    
+    <item>
+      <title>Array dan Method-nya</title>
+      <link>https://kaban.my.id/php/tutorial/07-array/</link>
+      <pubDate>Mon, 09 Jan 2023 08:00:00 +0000</pubDate>
+      
+      <guid>https://kaban.my.id/php/tutorial/07-array/</guid>
+      <description>Pendahuluan # Array adalah struktur data yang menyimpan kumpulan nilai dalam satu variabel. Di PHP, array sangat fleksibel — bisa berfungsi sebagai list (indexed), map (associative), bahkan keduanya sekaligus.
+Array adalah struktur data yang paling sering digunakan di PHP. Hampir setiap aplikasi menggunakan array: daftar produk, data user dari database, hasil query, konfigurasi, dan sebagainya.
+Artikel ini membahas:
+Tiga jenis array: indexed, associative, multidimensional. Cara membuat dan mengakses array. Method manipulasi array.</description>
+    </item>
+    
+    <item>
+      <title>String dan Manipulasi</title>
+      <link>https://kaban.my.id/php/tutorial/08-string/</link>
+      <pubDate>Tue, 10 Jan 2023 08:00:00 +0000</pubDate>
+      
+      <guid>https://kaban.my.id/php/tutorial/08-string/</guid>
+      <description>Pendahuluan # String adalah urutan karakter — tipe data yang paling sering diolah dalam aplikasi web. Mulai dari menampilkan nama user, memformat harga, memvalidasi input, hingga memproses teks dari database, semuanya melibatkan string.
+PHP menyediakan puluhan fungsi string bawaan yang membuat manipulasi teks menjadi mudah. Artikel ini membahas fungsi-fungsi yang paling sering digunakan, cara formatting, heredoc/nowdoc, multibyte string untuk Unicode, serta regex dasar.
+Asumsi: Anda sudah memahami variabel, tipe data, fungsi, dan array dari artikel sebelumnya.</description>
+    </item>
+    
+    <item>
+      <title>Superglobal dan Form Handling</title>
+      <link>https://kaban.my.id/php/tutorial/09-superglobal-form/</link>
+      <pubDate>Wed, 11 Jan 2023 08:00:00 +0000</pubDate>
+      
+      <guid>https://kaban.my.id/php/tutorial/09-superglobal-form/</guid>
+      <description>Pendahuluan # Aplikasi web tidak lepas dari input dari user — mengisi form, mengirim data, mengunggah file. PHP menyediakan superglobal — variabel bawaan yang bisa diakses dari mana saja, termasuk di dalam fungsi, tanpa perlu global.
+Superglobal utama untuk form handling:
+$_GET — data dari query string (URL). $_POST — data dari form method POST. $_REQUEST — gabungan GET, POST, dan COOKIE. $_SERVER — informasi server dan request. $_FILES — file yang diunggah.</description>
+    </item>
+    
+    <item>
+      <title>Session dan Cookie</title>
+      <link>https://kaban.my.id/php/tutorial/10-session-cookie/</link>
+      <pubDate>Thu, 12 Jan 2023 08:00:00 +0000</pubDate>
+      
+      <guid>https://kaban.my.id/php/tutorial/10-session-cookie/</guid>
+      <description>Pendahuluan # HTTP adalah protokol stateless — setiap request berdiri sendiri, server tidak otomatis mengingat request sebelumnya. Padahal aplikasi web sering perlu mengingat user: siapa yang login, apa isi keranjang belanja, preferensi tema, dan sebagainya.
+Dua mekanisme utama untuk menyimpan state:
+Cookie — data kecil yang disimpan di browser dan dikirim ke server setiap request. Session — data yang disimpan di server, diidentifikasi oleh session ID yang biasanya disimpan di cookie.</description>
+    </item>
+    
   </channel>
 </rss>

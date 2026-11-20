@@ -1,0 +1,1589 @@
+<!doctype html>
+<html lang="en-US">
+  <head>
+  <meta charset="utf-8">
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <link rel="preload" as="font" href="https://kaban.my.id/fonts/vendor/jost/jost-v4-latin-regular.woff2" type="font/woff2" crossorigin>
+<link rel="preload" as="font" href="https://kaban.my.id/fonts/vendor/jost/jost-v4-latin-500.woff2" type="font/woff2" crossorigin>
+<link rel="preload" as="font" href="https://kaban.my.id/fonts/vendor/jost/jost-v4-latin-700.woff2" type="font/woff2" crossorigin>
+
+  <script>(()=>{var t=window.matchMedia&&window.matchMedia("(prefers-color-scheme: dark)").matches,e=localStorage.getItem("theme");t&&e===null&&(localStorage.setItem("theme","dark"),document.documentElement.setAttribute("data-dark-mode","")),t&&e==="dark"&&document.documentElement.setAttribute("data-dark-mode",""),e==="dark"&&document.documentElement.setAttribute("data-dark-mode","")})()</script>
+
+  <link rel="stylesheet" href="https://kaban.my.id/main.4296e689affcd00e933b8954c10fc43cd1a5f16d5552e78183d12ea50d3e0bf5a596df23a379a4936743f01a7cd8ba048a628b2b9b60b34aa49fad468287100a.css" integrity="sha512-Qpbmia/80A6TO4lUwQ/EPNGl8W1VUueBg9EupQ0&#43;C/Wllt8jo3mkk2dD8Bp82LoEimKLK5tgs0qkn61GgocQCg==" crossorigin="anonymous">
+<noscript><style>img.lazyload { display: none; }</style></noscript>
+  <meta name="robots" content="index, follow">
+    <meta name="googlebot" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1">
+    <meta name="bingbot" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1">
+  <title>Session dan Cookie - Roberto Kaban Blog&#39;s</title>
+<meta name="description" content="Panduan lengkap session dan cookie PHP: menyimpan state user, keamanan session, cookie attributes, dan best practice.">
+<link rel="canonical" href="https://kaban.my.id/php/tutorial/10-session-cookie/">
+<meta property="og:locale" content="en_US">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Session dan Cookie">
+<meta property="og:description" content="Panduan lengkap session dan cookie PHP: menyimpan state user, keamanan session, cookie attributes, dan best practice.">
+<meta property="og:url" content="https://kaban.my.id/php/tutorial/10-session-cookie/">
+<meta property="og:site_name" content="Roberto Kaban Blog&#39;s">
+<meta property="article:published_time" content="2023-01-12T08:00:00+00:00">
+  <meta property="article:modified_time" content="2023-01-12T08:00:00+00:00">
+  
+  <meta property="og:image" content="https://kaban.my.id/doks.png"/>
+      <meta property="og:image:alt" content="Roberto Kaban Blog&#39;s">
+    
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:site" content="@robertokaban">
+<meta name="twitter:creator" content="@robertokaban">
+<meta name="twitter:title" content="Session dan Cookie">
+<meta name="twitter:description" content="Panduan lengkap session dan cookie PHP: menyimpan state user, keamanan session, cookie attributes, dan best practice.">
+<meta name="twitter:image" content="https://kaban.my.id/doks.png">
+    <meta name="twitter:image:alt" content="Session dan Cookie">
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "Person",
+        "@id": "https://kaban.my.id/#/schema/person/1",
+      "name": "BlogRobertoKaban",
+      "url": "https://kaban.my.id/",
+      "sameAs": [
+        "https://twitter.com/robertokaban"
+        , "https://github.com/robertokaban"
+        ],
+      "image": {
+          "@type": "ImageObject",
+          "@id": "https://kaban.my.id/#/schema/image/1",
+          "url": "https://kaban.my.id/doks.png",
+          "width":  1280 ,
+          "height":  640 ,
+          "caption": "BlogRobertoKaban"
+        }
+      },
+    {
+      "@type": "WebSite",
+      "@id": "https://kaban.my.id/#/schema/website/1",
+      "url": "https://kaban.my.id/",
+      "name": "Roberto Kaban Blog\u0027s",
+      "description": "Hanya sebuah catatan kecil untuk hal yang tidak ingin dilupakan.",
+      "publisher": {
+          "@id": "https://kaban.my.id/#/schema/person/1"
+        }
+      },
+    {
+      "@type": "WebPage",
+      "@id": "https://kaban.my.id/php/tutorial/10-session-cookie/",
+      "url": "https://kaban.my.id/php/tutorial/10-session-cookie/",
+      "name": "Session dan Cookie",
+      "description": "Panduan lengkap session dan cookie PHP: menyimpan state user, keamanan session, cookie attributes, dan best practice.",
+      "isPartOf": {
+        "@id": "https://kaban.my.id/#/schema/website/1"
+      },
+      "about": {
+          "@id": "https://kaban.my.id/#/schema/person/1"
+        },
+      "datePublished": "2023-01-12T08:00:00CET",
+      "dateModified": "2023-01-12T08:00:00CET",
+      "breadcrumb": {
+        "@id": "https://kaban.my.id/php/tutorial/10-session-cookie/#/schema/breadcrumb/1"
+      },
+      "primaryImageOfPage": {
+        "@id": "https://kaban.my.id/php/tutorial/10-session-cookie/#/schema/image/2"
+      },
+      "inLanguage": "en-US",
+      "potentialAction": [{
+        "@type": "ReadAction", "target": ["https://kaban.my.id/php/tutorial/10-session-cookie/"]
+      }]
+    },
+    {
+      "@type": "BreadcrumbList",
+      "@id": "https://kaban.my.id/php/tutorial/10-session-cookie/#/schema/breadcrumb/1",
+      "name": "Breadcrumbs",
+      "itemListElement": [{
+        "@type": "ListItem",
+        "position":  1 ,
+        "item": {
+          "@type": "WebPage",
+          "@id": "https://kaban.my.id/",
+          "url": "https://kaban.my.id/",
+          "name": "Home"
+          }
+        },{
+        "@type": "ListItem",
+        "position":  2 ,
+        "item": {
+          "@type": "WebPage",
+          "@id": "https://kaban.my.id/php/",
+          "url": "https://kaban.my.id/php/",
+          "name": "Php"
+          }
+        },{
+        "@type": "ListItem",
+        "position":  3 ,
+        "item": {
+          "@type": "WebPage",
+          "@id": "https://kaban.my.id/php/tutorial/",
+          "url": "https://kaban.my.id/php/tutorial/",
+          "name": "Tutorial"
+          }
+        },{
+        "@type": "ListItem",
+        "position":  4 ,
+        "item": {
+          "@id": "https://kaban.my.id/php/tutorial/10-session-cookie/"
+          }
+        }]
+    },
+
+    {
+      "@context": "https://schema.org",
+      "@graph": [
+        {
+          "@type": "ImageObject",
+          "@id": "https://kaban.my.id/php/tutorial/10-session-cookie/#/schema/image/2",
+          "url": "https://kaban.my.id/doks.png",
+          "contentUrl": "https://kaban.my.id/doks.png",
+          "caption": "Session dan Cookie"
+        }
+      ]
+    }
+
+  ]
+}
+</script>
+
+  <meta name="theme-color" content="#fff">
+<link rel="icon" href="https://kaban.my.id/favicon.ico" sizes="any">
+<link rel="icon" type="image/svg+xml" href="https://kaban.my.id/favicon.svg">
+<link rel="apple-touch-icon" sizes="180x180" href="https://kaban.my.id/apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="32x32" href="https://kaban.my.id/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="https://kaban.my.id/favicon-16x16.png">
+<link rel="manifest" crossorigin="use-credentials" href="https://kaban.my.id/site.webmanifest">
+
+  
+
+
+  
+  
+  
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-60VSDZFQR5"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-60VSDZFQR5');
+</script>
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6664512614760985"
+     crossorigin="anonymous"></script>
+</head>
+
+  <body class="php single">
+    <div class="sticky-top">
+<div class="header-bar"></div>
+
+<header class="navbar navbar-expand-lg navbar-light doks-navbar">
+  <nav class="container-xxl flex-wrap flex-lg-nowrap" aria-label="Main navigation">
+
+    <a class="navbar-brand order-0" href="/" aria-label="Roberto Kaban Blog&#39;s">
+      Roberto Kaban Blog&#39;s
+    </a>
+
+    <button class="btn btn-menu order-2 d-block d-lg-none" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasDoks" aria-controls="offcanvasDoks" aria-label="Open main menu">
+      <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-menu"><line x1="3" y1="12" x2="21" y2="12"></line><line x1="3" y1="6" x2="21" y2="6"></line><line x1="3" y1="18" x2="21" y2="18"></line></svg>
+    </button>
+    <div class="offcanvas offcanvas-end border-0 py-lg-1" tabindex="-1" id="offcanvasDoks" data-bs-backdrop="true" aria-labelledby="offcanvasDoksLabel">
+      <div class="header-bar d-lg-none"></div>
+      <div class="offcanvas-header d-lg-none">
+        <h2 class="h5 offcanvas-title ps-2" id="offcanvasDoksLabel"><a class="text-dark" href="/">Roberto Kaban Blog&#39;s</a></h2>
+        <button type="button" class="btn-close text-reset me-2" data-bs-dismiss="offcanvas" aria-label="Close main menu"></button>
+      </div>
+      <div class="offcanvas-body p-4 p-lg-0">
+        <ul class="nav flex-column flex-lg-row align-items-lg-center mt-2 mt-lg-0 ms-lg-2 me-lg-auto">
+              <li class="nav-item">
+                <a class="nav-link ps-0 py-1" href="/about/">About Me</a>
+              </li>
+            
+          
+              <li class="nav-item">
+                <a class="nav-link ps-0 py-1" href="/contact/">Contact</a>
+              </li>
+            
+          
+              <li class="nav-item">
+                <a class="nav-link ps-0 py-1" href="/artikel/">Artikel</a>
+              </li>
+            
+          
+              <li class="nav-item">
+                <a class="nav-link ps-0 py-1" href="/coretanku/">Coretanku</a>
+              </li>
+            
+          </ul>
+
+        <hr class="text-black-50 my-4 d-lg-none">
+        <form class="doks-search position-relative flex-grow-1 ms-lg-auto me-lg-2">
+          <input id="search" class="form-control is-search" type="search" placeholder="Cari di blog ini..." aria-label="Cari di blog ini..." autocomplete="off">
+          <div id="suggestions" class="shadow bg-white rounded d-none"></div>
+        </form>
+        <hr class="text-black-50 my-4 d-lg-none">
+        <ul class="nav flex-column flex-lg-row">
+          <li class="nav-item">
+              <a class="nav-link social-link" href="https://github.com/robertokaban"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-github"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path></svg><small class="ms-2 d-lg-none">GitHub</small></a>
+            </li>
+          <li class="nav-item">
+              <a class="nav-link social-link" href="https://facebook.com/roberto.kaban"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-facebook"><path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"></path></svg><small class="ms-2 d-lg-none">Facebook</small></a>
+            </li>
+          <li class="nav-item">
+              <a class="nav-link social-link" href="https://twitter.com/robertokaban"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-twitter"><path d="M23 3a10.9 10.9 0 0 1-3.14 1.53 4.48 4.48 0 0 0-7.86 3v1A10.66 10.66 0 0 1 3 4s-4 9 5 13a11.64 11.64 0 0 1-7 2c9 5 20 0 20-11.5a4.5 4.5 0 0 0-.08-.83A7.72 7.72 0 0 0 23 3z"></path></svg><small class="ms-2 d-lg-none">Twitter</small></a>
+            </li>
+          <li class="nav-item">
+              <a class="nav-link social-link" href="https://youtube.com/@robertokaban"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-youtube"><path d="M10,15L15.19,12L10,9V15M21.56,7.17C21.69,7.64 21.78,8.27 21.84,9.07C21.91,9.87 21.94,10.56 21.94,11.16L22,12C22,14.19 21.84,15.8 21.56,16.83C21.31,17.73 20.73,18.31 19.83,18.56C19.36,18.69 18.5,18.78 17.18,18.84C15.88,18.91 14.69,18.94 13.59,18.94L12,19C7.81,19 5.2,18.84 4.17,18.56C3.27,18.31 2.69,17.73 2.44,16.83C2.31,16.36 2.22,15.73 2.16,14.93C2.09,14.13 2.06,13.44 2.06,12.84L2,12C2,9.81 2.16,8.2 2.44,7.17C2.69,6.27 3.27,5.69 4.17,5.44C4.64,5.31 5.5,5.22 6.82,5.16C8.12,5.09 9.31,5.06 10.41,5.06L12,5C16.19,5 18.8,5.16 19.83,5.44C20.73,5.69 21.31,6.27 21.56,7.17Z"></path></svg><small class="ms-2 d-lg-none">Youtube</small></a>
+            </li>
+          </ul>
+
+        
+        <hr class="text-black-50 my-4 d-lg-none">
+        <button id="mode" class="btn btn-link" type="button" aria-label="Toggle user interface mode">
+          <span class="toggle-dark"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-moon"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path></svg></span>
+          <span class="toggle-light"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-sun"><circle cx="12" cy="12" r="5"></circle><line x1="12" y1="1" x2="12" y2="3"></line><line x1="12" y1="21" x2="12" y2="23"></line><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line><line x1="1" y1="12" x2="3" y2="12"></line><line x1="21" y1="12" x2="23" y2="12"></line><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line></svg></span>
+        </button>
+        
+
+        </div>
+    </div>
+  </nav>
+</header>
+
+
+</div>
+
+
+<div class="container-xxl">
+  <aside class="doks-sidebar">
+    <nav id="doks-docs-nav" class="collapse d-lg-none" aria-label="Tertiary navigation">
+      
+<ul class="list-unstyled collapsible-sidebar">
+  
+    
+      
+      <li class="mb-1">
+        <button class="btn btn-toggle align-items-center rounded collapsed" data-bs-toggle="collapse" data-bs-target="#section-de2591224751442a3b2101e94880333c" aria-expanded="true">
+          Tutorial PHP
+        </button>
+        <div class="collapse show" id="section-de2591224751442a3b2101e94880333c">
+          <ul class="btn-toggle-nav list-unstyled fw-normal pb-1 small">
+            
+              
+                
+                <li><a class="docs-link rounded" href="https://kaban.my.id/php/tutorial/pengenalan/">Pengenalan PHP</a></li>
+              
+            
+              
+                
+                <li><a class="docs-link rounded" href="https://kaban.my.id/php/tutorial/02-instalasi-persiapan/">Instalasi &amp; Persiapan Lingkungan PHP</a></li>
+              
+            
+              
+                
+                <li><a class="docs-link rounded" href="https://kaban.my.id/php/tutorial/03-sintaks-variabel/">Sintaks Dasar &amp; Variabel PHP</a></li>
+              
+            
+              
+                
+                <li><a class="docs-link rounded" href="https://kaban.my.id/php/tutorial/04-tipe-data-konversi/">Tipe Data &amp; Konversi</a></li>
+              
+            
+              
+                
+                <li><a class="docs-link rounded" href="https://kaban.my.id/php/tutorial/05-struktur-kontrol/">Struktur Kontrol &amp; Perulangan</a></li>
+              
+            
+              
+                
+                <li><a class="docs-link rounded" href="https://kaban.my.id/php/tutorial/06-fungsi/">Fungsi</a></li>
+              
+            
+              
+                
+                <li><a class="docs-link rounded" href="https://kaban.my.id/php/tutorial/07-array/">Array dan Method-nya</a></li>
+              
+            
+              
+                
+                <li><a class="docs-link rounded" href="https://kaban.my.id/php/tutorial/08-string/">String dan Manipulasi</a></li>
+              
+            
+              
+                
+                <li><a class="docs-link rounded" href="https://kaban.my.id/php/tutorial/09-superglobal-form/">Superglobal dan Form Handling</a></li>
+              
+            
+              
+                
+                <li><a class="docs-link rounded active" href="https://kaban.my.id/php/tutorial/10-session-cookie/">Session dan Cookie</a></li>
+              
+            
+              
+                
+                <li><a class="docs-link rounded" href="https://kaban.my.id/php/tutorial/11-include-require/">Include dan Require</a></li>
+              
+            
+          </ul>
+        </div>
+      </li>
+    
+  
+</ul>
+
+    </nav>
+  </aside>
+</div>
+
+    <div class="wrap container-xxl" role="document">
+      <div class="content">
+        
+	<div class="row flex-xl-nowrap">
+		<div class="col-lg-5 col-xl-4 docs-sidebar d-none d-lg-block">
+			<nav class="docs-links" aria-label="Main navigation">
+				
+<ul class="list-unstyled collapsible-sidebar">
+  
+    
+      
+      <li class="mb-1">
+        <button class="btn btn-toggle align-items-center rounded collapsed" data-bs-toggle="collapse" data-bs-target="#section-de2591224751442a3b2101e94880333c" aria-expanded="true">
+          Tutorial PHP
+        </button>
+        <div class="collapse show" id="section-de2591224751442a3b2101e94880333c">
+          <ul class="btn-toggle-nav list-unstyled fw-normal pb-1 small">
+            
+              
+                
+                <li><a class="docs-link rounded" href="https://kaban.my.id/php/tutorial/pengenalan/">Pengenalan PHP</a></li>
+              
+            
+              
+                
+                <li><a class="docs-link rounded" href="https://kaban.my.id/php/tutorial/02-instalasi-persiapan/">Instalasi &amp; Persiapan Lingkungan PHP</a></li>
+              
+            
+              
+                
+                <li><a class="docs-link rounded" href="https://kaban.my.id/php/tutorial/03-sintaks-variabel/">Sintaks Dasar &amp; Variabel PHP</a></li>
+              
+            
+              
+                
+                <li><a class="docs-link rounded" href="https://kaban.my.id/php/tutorial/04-tipe-data-konversi/">Tipe Data &amp; Konversi</a></li>
+              
+            
+              
+                
+                <li><a class="docs-link rounded" href="https://kaban.my.id/php/tutorial/05-struktur-kontrol/">Struktur Kontrol &amp; Perulangan</a></li>
+              
+            
+              
+                
+                <li><a class="docs-link rounded" href="https://kaban.my.id/php/tutorial/06-fungsi/">Fungsi</a></li>
+              
+            
+              
+                
+                <li><a class="docs-link rounded" href="https://kaban.my.id/php/tutorial/07-array/">Array dan Method-nya</a></li>
+              
+            
+              
+                
+                <li><a class="docs-link rounded" href="https://kaban.my.id/php/tutorial/08-string/">String dan Manipulasi</a></li>
+              
+            
+              
+                
+                <li><a class="docs-link rounded" href="https://kaban.my.id/php/tutorial/09-superglobal-form/">Superglobal dan Form Handling</a></li>
+              
+            
+              
+                
+                <li><a class="docs-link rounded active" href="https://kaban.my.id/php/tutorial/10-session-cookie/">Session dan Cookie</a></li>
+              
+            
+              
+                
+                <li><a class="docs-link rounded" href="https://kaban.my.id/php/tutorial/11-include-require/">Include dan Require</a></li>
+              
+            
+          </ul>
+        </div>
+      </li>
+    
+  
+</ul>
+
+			</nav>
+		</div>
+		<nav class="docs-toc d-none d-xl-block col-xl-3" aria-label="Secondary navigation">
+			<div class="d-xl-none">
+  <button class="btn btn-outline-primary btn-sm doks-toc-toggle collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#onThisPage" aria-controls="doks-docs-nav" aria-expanded="false" aria-label="Toggle On this page navigation">
+    <span>Daftar isi</span>
+    <span>
+      <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" class="doks doks-expand" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><title>Expand</title><polyline points="7 13 12 18 17 13"></polyline><polyline points="7 6 12 11 17 6"></polyline></svg>
+      <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" class="doks doks-collapse" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><title>Collapse</title><polyline points="17 11 12 6 7 11"></polyline><polyline points="17 18 12 13 7 18"></polyline></svg>
+    </span>
+  </button>
+  <div class="collapse" id="onThisPage">
+    <div class="card card-body mt-3 py-1">
+      <div class="page-links">
+        <nav id="TableOfContents">
+  <ul>
+    <li><a href="#pendahuluan">Pendahuluan</a></li>
+    <li><a href="#cookie">Cookie</a>
+      <ul>
+        <li><a href="#cara-kerja-cookie">Cara Kerja Cookie</a></li>
+        <li><a href="#membuat-cookie-di-php">Membuat Cookie di PHP</a></li>
+        <li><a href="#membaca-cookie">Membaca Cookie</a></li>
+        <li><a href="#menghapus-cookie">Menghapus Cookie</a></li>
+        <li><a href="#atribut-cookie">Atribut Cookie</a></li>
+        <li><a href="#samesite--perlindungan-csrf"><code>SameSite</code> — Perlindungan CSRF</a></li>
+        <li><a href="#kapan-menggunakan-cookie">Kapan Menggunakan Cookie?</a></li>
+      </ul>
+    </li>
+    <li><a href="#session">Session</a>
+      <ul>
+        <li><a href="#cara-kerja-session">Cara Kerja Session</a></li>
+        <li><a href="#memulai-session">Memulai Session</a></li>
+        <li><a href="#mengakses-data-session">Mengakses Data Session</a></li>
+        <li><a href="#mengubah-data-session">Mengubah Data Session</a></li>
+        <li><a href="#menghapus-data-session">Menghapus Data Session</a></li>
+        <li><a href="#session-id">Session ID</a></li>
+        <li><a href="#regenerasi-session-id">Regenerasi Session ID</a></li>
+      </ul>
+    </li>
+    <li><a href="#konfigurasi-session">Konfigurasi Session</a>
+      <ul>
+        <li><a href="#konfigurasi-penting">Konfigurasi Penting</a></li>
+        <li><a href="#mengubah-konfigurasi-via-php">Mengubah Konfigurasi via PHP</a></li>
+        <li><a href="#penyimpanan-session">Penyimpanan Session</a></li>
+      </ul>
+    </li>
+    <li><a href="#perbandingan-session-dan-cookie">Perbandingan Session dan Cookie</a></li>
+    <li><a href="#keamanan-session-dan-cookie">Keamanan Session dan Cookie</a>
+      <ul>
+        <li><a href="#1-session-fixation">1. Session Fixation</a></li>
+        <li><a href="#2-session-hijacking">2. Session Hijacking</a></li>
+        <li><a href="#3-xss-cross-site-scripting">3. XSS (Cross-Site Scripting)</a></li>
+        <li><a href="#4-csrf-cross-site-request-forgery">4. CSRF (Cross-Site Request Forgery)</a></li>
+        <li><a href="#5-session-timeout">5. Session Timeout</a></li>
+        <li><a href="#6-secure-cookie-attributes">6. Secure Cookie Attributes</a></li>
+        <li><a href="#ringkasan-keamanan">Ringkasan Keamanan</a></li>
+      </ul>
+    </li>
+    <li><a href="#contoh-praktis">Contoh Praktis</a>
+      <ul>
+        <li><a href="#1-login-dan-logout-dengan-session">1. Login dan Logout dengan Session</a></li>
+        <li><a href="#2-remember-me-dengan-cookie">2. Remember Me dengan Cookie</a></li>
+        <li><a href="#3-keranjang-belanja-dengan-session">3. Keranjang Belanja dengan Session</a></li>
+        <li><a href="#4-flash-message">4. Flash Message</a></li>
+      </ul>
+    </li>
+    <li><a href="#tips-dan-best-practice">Tips dan Best Practice</a></li>
+    <li><a href="#ringkasan">Ringkasan</a></li>
+  </ul>
+</nav>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="page-links d-none d-xl-block">
+  <h3>Daftar isi</h3>
+  <nav id="TableOfContents">
+  <ul>
+    <li><a href="#pendahuluan">Pendahuluan</a></li>
+    <li><a href="#cookie">Cookie</a>
+      <ul>
+        <li><a href="#cara-kerja-cookie">Cara Kerja Cookie</a></li>
+        <li><a href="#membuat-cookie-di-php">Membuat Cookie di PHP</a></li>
+        <li><a href="#membaca-cookie">Membaca Cookie</a></li>
+        <li><a href="#menghapus-cookie">Menghapus Cookie</a></li>
+        <li><a href="#atribut-cookie">Atribut Cookie</a></li>
+        <li><a href="#samesite--perlindungan-csrf"><code>SameSite</code> — Perlindungan CSRF</a></li>
+        <li><a href="#kapan-menggunakan-cookie">Kapan Menggunakan Cookie?</a></li>
+      </ul>
+    </li>
+    <li><a href="#session">Session</a>
+      <ul>
+        <li><a href="#cara-kerja-session">Cara Kerja Session</a></li>
+        <li><a href="#memulai-session">Memulai Session</a></li>
+        <li><a href="#mengakses-data-session">Mengakses Data Session</a></li>
+        <li><a href="#mengubah-data-session">Mengubah Data Session</a></li>
+        <li><a href="#menghapus-data-session">Menghapus Data Session</a></li>
+        <li><a href="#session-id">Session ID</a></li>
+        <li><a href="#regenerasi-session-id">Regenerasi Session ID</a></li>
+      </ul>
+    </li>
+    <li><a href="#konfigurasi-session">Konfigurasi Session</a>
+      <ul>
+        <li><a href="#konfigurasi-penting">Konfigurasi Penting</a></li>
+        <li><a href="#mengubah-konfigurasi-via-php">Mengubah Konfigurasi via PHP</a></li>
+        <li><a href="#penyimpanan-session">Penyimpanan Session</a></li>
+      </ul>
+    </li>
+    <li><a href="#perbandingan-session-dan-cookie">Perbandingan Session dan Cookie</a></li>
+    <li><a href="#keamanan-session-dan-cookie">Keamanan Session dan Cookie</a>
+      <ul>
+        <li><a href="#1-session-fixation">1. Session Fixation</a></li>
+        <li><a href="#2-session-hijacking">2. Session Hijacking</a></li>
+        <li><a href="#3-xss-cross-site-scripting">3. XSS (Cross-Site Scripting)</a></li>
+        <li><a href="#4-csrf-cross-site-request-forgery">4. CSRF (Cross-Site Request Forgery)</a></li>
+        <li><a href="#5-session-timeout">5. Session Timeout</a></li>
+        <li><a href="#6-secure-cookie-attributes">6. Secure Cookie Attributes</a></li>
+        <li><a href="#ringkasan-keamanan">Ringkasan Keamanan</a></li>
+      </ul>
+    </li>
+    <li><a href="#contoh-praktis">Contoh Praktis</a>
+      <ul>
+        <li><a href="#1-login-dan-logout-dengan-session">1. Login dan Logout dengan Session</a></li>
+        <li><a href="#2-remember-me-dengan-cookie">2. Remember Me dengan Cookie</a></li>
+        <li><a href="#3-keranjang-belanja-dengan-session">3. Keranjang Belanja dengan Session</a></li>
+        <li><a href="#4-flash-message">4. Flash Message</a></li>
+      </ul>
+    </li>
+    <li><a href="#tips-dan-best-practice">Tips dan Best Practice</a></li>
+    <li><a href="#ringkasan">Ringkasan</a></li>
+  </ul>
+</nav>
+  </div>
+
+		</nav>
+		<main class="docs-content col-lg-11 col-xl-9">
+		
+				<nav aria-label="breadcrumb">
+					<ol class="breadcrumb">
+						<li class="breadcrumb-item"><a href="/">Home</a></li>
+<li class="breadcrumb-item"><a href="/php/">Php</a></li>
+<li class="breadcrumb-item"><a href="/php/tutorial/">Tutorial PHP</a></li>
+<li class="breadcrumb-item active" aria-current="page">Session dan Cookie</li>
+					</ol>
+				</nav>
+			
+			<h1>Session dan Cookie</h1>
+			<p class="lead">HTTP bersifat stateless — server tidak mengingat request sebelumnya. Session dan cookie memungkinkan aplikasi mengingat user antar request. Artikel ini membahas cara kerja session, cookie, keamanan, dan best practice.</p>
+			<nav class="d-xl-none" aria-label="Quaternary navigation">
+				<div class="d-xl-none">
+  <button class="btn btn-outline-primary btn-sm doks-toc-toggle collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#onThisPage" aria-controls="doks-docs-nav" aria-expanded="false" aria-label="Toggle On this page navigation">
+    <span>Daftar isi</span>
+    <span>
+      <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" class="doks doks-expand" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><title>Expand</title><polyline points="7 13 12 18 17 13"></polyline><polyline points="7 6 12 11 17 6"></polyline></svg>
+      <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" class="doks doks-collapse" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><title>Collapse</title><polyline points="17 11 12 6 7 11"></polyline><polyline points="17 18 12 13 7 18"></polyline></svg>
+    </span>
+  </button>
+  <div class="collapse" id="onThisPage">
+    <div class="card card-body mt-3 py-1">
+      <div class="page-links">
+        <nav id="TableOfContents">
+  <ul>
+    <li><a href="#pendahuluan">Pendahuluan</a></li>
+    <li><a href="#cookie">Cookie</a>
+      <ul>
+        <li><a href="#cara-kerja-cookie">Cara Kerja Cookie</a></li>
+        <li><a href="#membuat-cookie-di-php">Membuat Cookie di PHP</a></li>
+        <li><a href="#membaca-cookie">Membaca Cookie</a></li>
+        <li><a href="#menghapus-cookie">Menghapus Cookie</a></li>
+        <li><a href="#atribut-cookie">Atribut Cookie</a></li>
+        <li><a href="#samesite--perlindungan-csrf"><code>SameSite</code> — Perlindungan CSRF</a></li>
+        <li><a href="#kapan-menggunakan-cookie">Kapan Menggunakan Cookie?</a></li>
+      </ul>
+    </li>
+    <li><a href="#session">Session</a>
+      <ul>
+        <li><a href="#cara-kerja-session">Cara Kerja Session</a></li>
+        <li><a href="#memulai-session">Memulai Session</a></li>
+        <li><a href="#mengakses-data-session">Mengakses Data Session</a></li>
+        <li><a href="#mengubah-data-session">Mengubah Data Session</a></li>
+        <li><a href="#menghapus-data-session">Menghapus Data Session</a></li>
+        <li><a href="#session-id">Session ID</a></li>
+        <li><a href="#regenerasi-session-id">Regenerasi Session ID</a></li>
+      </ul>
+    </li>
+    <li><a href="#konfigurasi-session">Konfigurasi Session</a>
+      <ul>
+        <li><a href="#konfigurasi-penting">Konfigurasi Penting</a></li>
+        <li><a href="#mengubah-konfigurasi-via-php">Mengubah Konfigurasi via PHP</a></li>
+        <li><a href="#penyimpanan-session">Penyimpanan Session</a></li>
+      </ul>
+    </li>
+    <li><a href="#perbandingan-session-dan-cookie">Perbandingan Session dan Cookie</a></li>
+    <li><a href="#keamanan-session-dan-cookie">Keamanan Session dan Cookie</a>
+      <ul>
+        <li><a href="#1-session-fixation">1. Session Fixation</a></li>
+        <li><a href="#2-session-hijacking">2. Session Hijacking</a></li>
+        <li><a href="#3-xss-cross-site-scripting">3. XSS (Cross-Site Scripting)</a></li>
+        <li><a href="#4-csrf-cross-site-request-forgery">4. CSRF (Cross-Site Request Forgery)</a></li>
+        <li><a href="#5-session-timeout">5. Session Timeout</a></li>
+        <li><a href="#6-secure-cookie-attributes">6. Secure Cookie Attributes</a></li>
+        <li><a href="#ringkasan-keamanan">Ringkasan Keamanan</a></li>
+      </ul>
+    </li>
+    <li><a href="#contoh-praktis">Contoh Praktis</a>
+      <ul>
+        <li><a href="#1-login-dan-logout-dengan-session">1. Login dan Logout dengan Session</a></li>
+        <li><a href="#2-remember-me-dengan-cookie">2. Remember Me dengan Cookie</a></li>
+        <li><a href="#3-keranjang-belanja-dengan-session">3. Keranjang Belanja dengan Session</a></li>
+        <li><a href="#4-flash-message">4. Flash Message</a></li>
+      </ul>
+    </li>
+    <li><a href="#tips-dan-best-practice">Tips dan Best Practice</a></li>
+    <li><a href="#ringkasan">Ringkasan</a></li>
+  </ul>
+</nav>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="page-links d-none d-xl-block">
+  <h3>Daftar isi</h3>
+  <nav id="TableOfContents">
+  <ul>
+    <li><a href="#pendahuluan">Pendahuluan</a></li>
+    <li><a href="#cookie">Cookie</a>
+      <ul>
+        <li><a href="#cara-kerja-cookie">Cara Kerja Cookie</a></li>
+        <li><a href="#membuat-cookie-di-php">Membuat Cookie di PHP</a></li>
+        <li><a href="#membaca-cookie">Membaca Cookie</a></li>
+        <li><a href="#menghapus-cookie">Menghapus Cookie</a></li>
+        <li><a href="#atribut-cookie">Atribut Cookie</a></li>
+        <li><a href="#samesite--perlindungan-csrf"><code>SameSite</code> — Perlindungan CSRF</a></li>
+        <li><a href="#kapan-menggunakan-cookie">Kapan Menggunakan Cookie?</a></li>
+      </ul>
+    </li>
+    <li><a href="#session">Session</a>
+      <ul>
+        <li><a href="#cara-kerja-session">Cara Kerja Session</a></li>
+        <li><a href="#memulai-session">Memulai Session</a></li>
+        <li><a href="#mengakses-data-session">Mengakses Data Session</a></li>
+        <li><a href="#mengubah-data-session">Mengubah Data Session</a></li>
+        <li><a href="#menghapus-data-session">Menghapus Data Session</a></li>
+        <li><a href="#session-id">Session ID</a></li>
+        <li><a href="#regenerasi-session-id">Regenerasi Session ID</a></li>
+      </ul>
+    </li>
+    <li><a href="#konfigurasi-session">Konfigurasi Session</a>
+      <ul>
+        <li><a href="#konfigurasi-penting">Konfigurasi Penting</a></li>
+        <li><a href="#mengubah-konfigurasi-via-php">Mengubah Konfigurasi via PHP</a></li>
+        <li><a href="#penyimpanan-session">Penyimpanan Session</a></li>
+      </ul>
+    </li>
+    <li><a href="#perbandingan-session-dan-cookie">Perbandingan Session dan Cookie</a></li>
+    <li><a href="#keamanan-session-dan-cookie">Keamanan Session dan Cookie</a>
+      <ul>
+        <li><a href="#1-session-fixation">1. Session Fixation</a></li>
+        <li><a href="#2-session-hijacking">2. Session Hijacking</a></li>
+        <li><a href="#3-xss-cross-site-scripting">3. XSS (Cross-Site Scripting)</a></li>
+        <li><a href="#4-csrf-cross-site-request-forgery">4. CSRF (Cross-Site Request Forgery)</a></li>
+        <li><a href="#5-session-timeout">5. Session Timeout</a></li>
+        <li><a href="#6-secure-cookie-attributes">6. Secure Cookie Attributes</a></li>
+        <li><a href="#ringkasan-keamanan">Ringkasan Keamanan</a></li>
+      </ul>
+    </li>
+    <li><a href="#contoh-praktis">Contoh Praktis</a>
+      <ul>
+        <li><a href="#1-login-dan-logout-dengan-session">1. Login dan Logout dengan Session</a></li>
+        <li><a href="#2-remember-me-dengan-cookie">2. Remember Me dengan Cookie</a></li>
+        <li><a href="#3-keranjang-belanja-dengan-session">3. Keranjang Belanja dengan Session</a></li>
+        <li><a href="#4-flash-message">4. Flash Message</a></li>
+      </ul>
+    </li>
+    <li><a href="#tips-dan-best-practice">Tips dan Best Practice</a></li>
+    <li><a href="#ringkasan">Ringkasan</a></li>
+  </ul>
+</nav>
+  </div>
+
+			</nav>
+			<h2 id="pendahuluan">Pendahuluan <a href="#pendahuluan" class="anchor" aria-hidden="true">#</a></h2>
+<p><strong>HTTP adalah protokol stateless</strong> — setiap request berdiri sendiri, server tidak otomatis mengingat request sebelumnya. Padahal aplikasi web sering perlu mengingat user: siapa yang login, apa isi keranjang belanja, preferensi tema, dan sebagainya.</p>
+<p>Dua mekanisme utama untuk menyimpan state:</p>
+<ul>
+<li><strong>Cookie</strong> — data kecil yang disimpan di <strong>browser</strong> dan dikirim ke server setiap request.</li>
+<li><strong>Session</strong> — data yang disimpan di <strong>server</strong>, diidentifikasi oleh session ID yang biasanya disimpan di cookie.</li>
+</ul>
+<p>Artikel ini membahas cara kerja keduanya, perbedaannya, keamanan, dan best practice.</p>
+<blockquote>
+<p><strong>Asumsi:</strong> Anda sudah memahami superglobal, form handling, dan fungsi PHP dari artikel sebelumnya.</p>
+</blockquote>
+<hr>
+<h2 id="cookie">Cookie <a href="#cookie" class="anchor" aria-hidden="true">#</a></h2>
+<p><strong>Cookie</strong> adalah data kecil (maksimal sekitar 4 KB) yang disimpan di browser dan <strong>dikirim ke server</strong> pada setiap request ke domain yang sama.</p>
+<h3 id="cara-kerja-cookie">Cara Kerja Cookie <a href="#cara-kerja-cookie" class="anchor" aria-hidden="true">#</a></h3>
+<ol>
+<li>Server mengirim header <code>Set-Cookie</code> dalam response.</li>
+<li>Browser menyimpan cookie.</li>
+<li>Pada request berikutnya ke domain yang sama, browser mengirim cookie dalam header <code>Cookie</code>.</li>
+</ol>
+<pre><code># Response dari server
+Set-Cookie: tema=dark; Path=/; Max-Age=86400; HttpOnly
+
+# Request berikutnya dari browser
+Cookie: tema=dark
+</code></pre>
+<h3 id="membuat-cookie-di-php">Membuat Cookie di PHP <a href="#membuat-cookie-di-php" class="anchor" aria-hidden="true">#</a></h3>
+<p>Gunakan <strong><code>setcookie()</code></strong> — harus dipanggil <strong>sebelum</strong> ada output apa pun (termasuk spasi atau HTML).</p>
+<pre><code class="language-php">&lt;?php
+// setcookie(nama, nilai, expires, path, domain, secure, httponly)
+
+setcookie(&quot;tema&quot;, &quot;dark&quot;, [
+    &quot;expires&quot; =&gt; time() + 86400,  // 1 hari
+    &quot;path&quot; =&gt; &quot;/&quot;,
+    &quot;domain&quot; =&gt; &quot;&quot;,
+    &quot;secure&quot; =&gt; true,             // hanya via HTTPS
+    &quot;httponly&quot; =&gt; true,           // tidak bisa diakses JavaScript
+    &quot;samesite&quot; =&gt; &quot;Lax&quot;,          // perlindungan CSRF
+]);
+</code></pre>
+<p><strong>Sintaks lama (sebelum PHP 7.3):</strong></p>
+<pre><code class="language-php">&lt;?php
+setcookie(&quot;tema&quot;, &quot;dark&quot;, time() + 86400, &quot;/&quot;, &quot;&quot;, true, true);
+</code></pre>
+<blockquote>
+<p><strong>Tips:</strong> Gunakan sintaks array (PHP 7.3+) — lebih jelas dan mendukung <code>SameSite</code>.</p>
+</blockquote>
+<h3 id="membaca-cookie">Membaca Cookie <a href="#membaca-cookie" class="anchor" aria-hidden="true">#</a></h3>
+<p>Cookie tersedia di superglobal <strong><code>$_COOKIE</code></strong>.</p>
+<pre><code class="language-php">&lt;?php
+$tema = $_COOKIE[&quot;tema&quot;] ?? &quot;light&quot;;
+echo &quot;Tema: $tema&quot;;
+</code></pre>
+<h3 id="menghapus-cookie">Menghapus Cookie <a href="#menghapus-cookie" class="anchor" aria-hidden="true">#</a></h3>
+<p>Set cookie dengan nilai kosong dan <code>expires</code> di masa lalu:</p>
+<pre><code class="language-php">&lt;?php
+setcookie(&quot;tema&quot;, &quot;&quot;, [
+    &quot;expires&quot; =&gt; time() - 3600,
+    &quot;path&quot; =&gt; &quot;/&quot;,
+]);
+</code></pre>
+<blockquote>
+<p><strong>Catatan:</strong> Atribut <code>path</code> dan <code>domain</code> harus <strong>sama</strong> dengan saat cookie dibuat agar penghapusan berhasil.</p>
+</blockquote>
+<h3 id="atribut-cookie">Atribut Cookie <a href="#atribut-cookie" class="anchor" aria-hidden="true">#</a></h3>
+<table>
+<thead>
+<tr>
+<th>Atribut</th>
+<th>Arti</th>
+<th>Rekomendasi</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>expires</code></td>
+<td>Kapan cookie kedaluwarsa</td>
+<td>Set sesuai kebutuhan</td>
+</tr>
+<tr>
+<td><code>path</code></td>
+<td>Path yang bisa mengakses cookie</td>
+<td><code>/</code> untuk seluruh situs</td>
+</tr>
+<tr>
+<td><code>domain</code></td>
+<td>Domain yang bisa mengakses cookie</td>
+<td>Kosongkan untuk current domain</td>
+</tr>
+<tr>
+<td><code>secure</code></td>
+<td>Hanya dikirim via HTTPS</td>
+<td><strong>Aktifkan di produksi</strong></td>
+</tr>
+<tr>
+<td><code>httponly</code></td>
+<td>Tidak bisa diakses JavaScript</td>
+<td><strong>Aktifkan untuk cookie sensitif</strong></td>
+</tr>
+<tr>
+<td><code>samesite</code></td>
+<td>Kontrol pengiriman lintas situs</td>
+<td><code>Lax</code> (default) atau <code>Strict</code></td>
+</tr>
+</tbody>
+</table>
+<h3 id="samesite--perlindungan-csrf"><code>SameSite</code> — Perlindungan CSRF <a href="#samesite--perlindungan-csrf" class="anchor" aria-hidden="true">#</a></h3>
+<table>
+<thead>
+<tr>
+<th>Nilai</th>
+<th>Perilaku</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>Strict</code></td>
+<td>Cookie <strong>tidak</strong> dikirim pada request lintas situs</td>
+</tr>
+<tr>
+<td><code>Lax</code></td>
+<td>Cookie dikirim pada navigasi top-level (klik link), tidak pada request POST lintas situs</td>
+</tr>
+<tr>
+<td><code>None</code></td>
+<td>Cookie selalu dikirim (wajib <code>Secure</code>)</td>
+</tr>
+</tbody>
+</table>
+<pre><code class="language-php">&lt;?php
+setcookie(&quot;session_id&quot;, $id, [
+    &quot;secure&quot; =&gt; true,
+    &quot;httponly&quot; =&gt; true,
+    &quot;samesite&quot; =&gt; &quot;Strict&quot;,
+]);
+</code></pre>
+<blockquote>
+<p><strong>Rekomendasi:</strong> Gunakan <strong><code>SameSite=Lax</code></strong> sebagai default. Gunakan <code>Strict</code> untuk cookie yang sangat sensitif (misalnya session admin).</p>
+</blockquote>
+<h3 id="kapan-menggunakan-cookie">Kapan Menggunakan Cookie? <a href="#kapan-menggunakan-cookie" class="anchor" aria-hidden="true">#</a></h3>
+<ul>
+<li><strong>Preferensi user</strong> yang perlu diketahui server (tema, bahasa).</li>
+<li><strong>Remember me</strong> — token untuk auto-login.</li>
+<li><strong>Tracking</strong> (analytics) — biasanya pihak ketiga.</li>
+<li><strong>Session ID</strong> — biasanya dikelola otomatis oleh PHP.</li>
+</ul>
+<blockquote>
+<p>⚠️ <strong>Peringatan:</strong> Jangan simpan data sensitif (password, token rahasia) di cookie — cookie bisa dibaca user dan penyerang.</p>
+</blockquote>
+<hr>
+<h2 id="session">Session <a href="#session" class="anchor" aria-hidden="true">#</a></h2>
+<p><strong>Session</strong> menyimpan data di <strong>server</strong>, diidentifikasi oleh <strong>session ID</strong> yang biasanya disimpan di cookie.</p>
+<h3 id="cara-kerja-session">Cara Kerja Session <a href="#cara-kerja-session" class="anchor" aria-hidden="true">#</a></h3>
+<ol>
+<li><code>session_start()</code> dipanggil — PHP membuat session ID unik (jika belum ada).</li>
+<li>PHP mengirim cookie <code>PHPSESSID</code> ke browser.</li>
+<li>Data session disimpan di file server (default: <code>/tmp/sess_XXXX</code>).</li>
+<li>Pada request berikutnya, browser mengirim cookie <code>PHPSESSID</code> — PHP memuat data session yang sesuai.</li>
+</ol>
+<pre><code># Response dari server
+Set-Cookie: PHPSESSID=abc123def456; Path=/; HttpOnly
+
+# Request berikutnya
+Cookie: PHPSESSID=abc123def456
+</code></pre>
+<h3 id="memulai-session">Memulai Session <a href="#memulai-session" class="anchor" aria-hidden="true">#</a></h3>
+<p><strong><code>session_start()</code></strong> harus dipanggil <strong>di awal</strong> setiap file yang menggunakan session — sebelum output apa pun.</p>
+<pre><code class="language-php">&lt;?php
+session_start();
+
+// Sekarang $_SESSION tersedia
+$_SESSION[&quot;user_id&quot;] = 1;
+$_SESSION[&quot;user_nama&quot;] = &quot;Budi&quot;;
+</code></pre>
+<blockquote>
+<p><strong>Peringatan:</strong> Jika ada output (termasuk spasi atau newline) sebelum <code>session_start()</code>, akan muncul error <strong>&ldquo;Headers already sent&rdquo;</strong>. Pastikan <code>&lt;?php</code> adalah hal pertama di file, tanpa spasi atau BOM.</p>
+</blockquote>
+<h3 id="mengakses-data-session">Mengakses Data Session <a href="#mengakses-data-session" class="anchor" aria-hidden="true">#</a></h3>
+<pre><code class="language-php">&lt;?php
+session_start();
+
+// Baca
+$nama = $_SESSION[&quot;user_nama&quot;] ?? &quot;Tamu&quot;;
+echo &quot;Halo, $nama!&quot;;
+
+// Cek apakah user login
+if (isset($_SESSION[&quot;user_id&quot;])) {
+    echo &quot;Anda sudah login&quot;;
+} else {
+    echo &quot;Silakan login&quot;;
+}
+</code></pre>
+<h3 id="mengubah-data-session">Mengubah Data Session <a href="#mengubah-data-session" class="anchor" aria-hidden="true">#</a></h3>
+<pre><code class="language-php">&lt;?php
+session_start();
+
+$_SESSION[&quot;keranjang&quot;] = [
+    [&quot;id&quot; =&gt; 1, &quot;nama&quot; =&gt; &quot;Keyboard&quot;, &quot;jumlah&quot; =&gt; 2],
+];
+
+// Tambah item
+$_SESSION[&quot;keranjang&quot;][] = [&quot;id&quot; =&gt; 2, &quot;nama&quot; =&gt; &quot;Mouse&quot;, &quot;jumlah&quot; =&gt; 1];
+
+// Ubah
+$_SESSION[&quot;user_nama&quot;] = &quot;Budi Santoso&quot;;
+</code></pre>
+<h3 id="menghapus-data-session">Menghapus Data Session <a href="#menghapus-data-session" class="anchor" aria-hidden="true">#</a></h3>
+<pre><code class="language-php">&lt;?php
+session_start();
+
+// Hapus satu key
+unset($_SESSION[&quot;keranjang&quot;]);
+
+// Hapus semua data (session tetap aktif)
+$_SESSION = [];
+
+// Hapus cookie session di browser
+if (ini_get(&quot;session.use_cookies&quot;)) {
+    $params = session_get_cookie_params();
+    setcookie(
+        session_name(),
+        &quot;&quot;,
+        time() - 42000,
+        $params[&quot;path&quot;],
+        $params[&quot;domain&quot;],
+        $params[&quot;secure&quot;],
+        $params[&quot;httponly&quot;]
+    );
+}
+
+// Hancurkan session di server
+session_destroy();
+</code></pre>
+<blockquote>
+<p><strong>Tips:</strong> Untuk logout, lakukan <strong>ketiganya</strong>: <code>$_SESSION = []</code>, hapus cookie, dan <code>session_destroy()</code>.</p>
+</blockquote>
+<h3 id="session-id">Session ID <a href="#session-id" class="anchor" aria-hidden="true">#</a></h3>
+<pre><code class="language-php">&lt;?php
+session_start();
+
+// Mendapatkan session ID
+echo session_id();
+
+// Mendapatkan nama session (default: PHPSESSID)
+echo session_name();
+</code></pre>
+<h3 id="regenerasi-session-id">Regenerasi Session ID <a href="#regenerasi-session-id" class="anchor" aria-hidden="true">#</a></h3>
+<p><strong>Wajib</strong> dilakukan setelah login untuk mencegah <strong>session fixation</strong> — penyerang yang mengetahui session ID sebelum login bisa membajak session setelah user login.</p>
+<pre><code class="language-php">&lt;?php
+session_start();
+
+// Setelah login berhasil
+if ($loginBerhasil) {
+    session_regenerate_id(true);  // true = hapus session lama
+    $_SESSION[&quot;user_id&quot;] = $user[&quot;id&quot;];
+    $_SESSION[&quot;user_nama&quot;] = $user[&quot;nama&quot;];
+}
+</code></pre>
+<blockquote>
+<p><strong>Peringatan:</strong> Selalu panggil <code>session_regenerate_id(true)</code> setelah login, logout, atau perubahan hak akses.</p>
+</blockquote>
+<hr>
+<h2 id="konfigurasi-session">Konfigurasi Session <a href="#konfigurasi-session" class="anchor" aria-hidden="true">#</a></h2>
+<p>Konfigurasi session ada di <code>php.ini</code> atau bisa diubah via <code>ini_set()</code> sebelum <code>session_start()</code>.</p>
+<h3 id="konfigurasi-penting">Konfigurasi Penting <a href="#konfigurasi-penting" class="anchor" aria-hidden="true">#</a></h3>
+<pre><code class="language-ini">; Nama cookie session
+session.name = PHPSESSID
+
+; Masa hidup session (detik)
+session.gc_maxlifetime = 1440
+
+; Path cookie session
+session.cookie_path = /
+
+; Domain cookie session
+session.cookie_domain =
+
+; Hanya via HTTPS
+session.cookie_secure = 1
+
+; Tidak bisa diakses JavaScript
+session.cookie_httponly = 1
+
+; SameSite cookie
+session.cookie_samesite = Lax
+
+; Gunakan hanya cookie (jangan URL)
+session.use_only_cookies = 1
+
+; Jangan terima session ID dari URL
+session.use_trans_sid = 0
+
+; Regenerasi ID otomatis
+session.use_strict_mode = 1
+</code></pre>
+<blockquote>
+<p><strong>Rekomendasi keamanan:</strong> Setidaknya aktifkan <code>session.cookie_httponly = 1</code>, <code>session.cookie_secure = 1</code> (di produksi), <code>session.use_only_cookies = 1</code>, dan <code>session.use_strict_mode = 1</code>.</p>
+</blockquote>
+<h3 id="mengubah-konfigurasi-via-php">Mengubah Konfigurasi via PHP <a href="#mengubah-konfigurasi-via-php" class="anchor" aria-hidden="true">#</a></h3>
+<pre><code class="language-php">&lt;?php
+// HARUS sebelum session_start()
+ini_set(&quot;session.cookie_httponly&quot;, &quot;1&quot;);
+ini_set(&quot;session.cookie_secure&quot;, &quot;1&quot;);
+ini_set(&quot;session.cookie_samesite&quot;, &quot;Lax&quot;);
+ini_set(&quot;session.use_only_cookies&quot;, &quot;1&quot;);
+ini_set(&quot;session.use_strict_mode&quot;, &quot;1&quot;);
+
+session_start();
+</code></pre>
+<h3 id="penyimpanan-session">Penyimpanan Session <a href="#penyimpanan-session" class="anchor" aria-hidden="true">#</a></h3>
+<p>Secara default, PHP menyimpan session di file (<code>/tmp/sess_XXXX</code>). Untuk aplikasi produksi dengan banyak server, pertimbangkan:</p>
+<ul>
+<li><strong>Database</strong> — simpan session di tabel MySQL.</li>
+<li><strong>Redis</strong> atau <strong>Memcached</strong> — cepat dan mendukung banyak server.</li>
+<li><strong>Filesystem kustom</strong> — dengan <code>session.save_path</code>.</li>
+</ul>
+<pre><code class="language-php">&lt;?php
+// Simpan session di folder kustom
+ini_set(&quot;session.save_path&quot;, &quot;/var/www/sessions&quot;);
+session_start();
+</code></pre>
+<hr>
+<h2 id="perbandingan-session-dan-cookie">Perbandingan Session dan Cookie <a href="#perbandingan-session-dan-cookie" class="anchor" aria-hidden="true">#</a></h2>
+<table>
+<thead>
+<tr>
+<th>Aspek</th>
+<th>Session</th>
+<th>Cookie</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Lokasi data</td>
+<td>Server</td>
+<td>Browser</td>
+</tr>
+<tr>
+<td>Kapasitas</td>
+<td>Tidak terbatas (tergantung server)</td>
+<td>~4 KB per cookie</td>
+</tr>
+<tr>
+<td>Keamanan</td>
+<td>Lebih aman — data tidak terlihat user</td>
+<td>Bisa dibaca user</td>
+</tr>
+<tr>
+<td>Dikirim ke server</td>
+<td>Hanya session ID</td>
+<td>Semua data cookie</td>
+</tr>
+<tr>
+<td>Masa hidup</td>
+<td>Tergantung konfigurasi server</td>
+<td>Bisa diatur (expires)</td>
+</tr>
+<tr>
+<td>Cocok untuk</td>
+<td>Data login, keranjang, data sensitif</td>
+<td>Preferensi, remember me, tracking</td>
+</tr>
+<tr>
+<td>Dampak performa</td>
+<td>Sedikit (baca file/DB)</td>
+<td>Tidak ada (selain ukuran request)</td>
+</tr>
+</tbody>
+</table>
+<blockquote>
+<p><strong>Rekomendasi:</strong> Gunakan <strong>session</strong> untuk data sensitif dan data yang perlu diakses server. Gunakan <strong>cookie</strong> untuk preferensi yang perlu bertahan lama atau diketahui server.</p>
+</blockquote>
+<hr>
+<h2 id="keamanan-session-dan-cookie">Keamanan Session dan Cookie <a href="#keamanan-session-dan-cookie" class="anchor" aria-hidden="true">#</a></h2>
+<h3 id="1-session-fixation">1. Session Fixation <a href="#1-session-fixation" class="anchor" aria-hidden="true">#</a></h3>
+<p><strong>Serangan:</strong> Penyerang memberikan session ID yang diketahui ke korban. Setelah korban login, penyerang menggunakan session ID yang sama untuk mengakses akun korban.</p>
+<p><strong>Solusi:</strong></p>
+<pre><code class="language-php">&lt;?php
+// Setelah login berhasil
+session_regenerate_id(true);
+</code></pre>
+<p>Aktifkan juga <code>session.use_strict_mode = 1</code> — PHP menolak session ID yang tidak dikenal.</p>
+<h3 id="2-session-hijacking">2. Session Hijacking <a href="#2-session-hijacking" class="anchor" aria-hidden="true">#</a></h3>
+<p><strong>Serangan:</strong> Penyerang mencuri session ID (via XSS, sniffing, atau malware) dan menggunakannya untuk mengakses akun korban.</p>
+<p><strong>Solusi:</strong></p>
+<ul>
+<li>Gunakan <strong>HTTPS</strong> — mencegah sniffing.</li>
+<li>Set <strong><code>session.cookie_httponly = 1</code></strong> — mencegah akses via JavaScript (XSS).</li>
+<li>Set <strong><code>session.cookie_secure = 1</code></strong> — cookie hanya via HTTPS.</li>
+<li><strong>Regenerasi session ID</strong> secara berkala.</li>
+<li><strong>Bind session ke IP atau user agent</strong> (opsional, bisa menyebabkan masalah dengan mobile).</li>
+</ul>
+<pre><code class="language-php">&lt;?php
+session_start();
+
+// Bind session ke user agent (opsional)
+$userAgent = $_SERVER[&quot;HTTP_USER_AGENT&quot;] ?? &quot;&quot;;
+if (!isset($_SESSION[&quot;user_agent&quot;])) {
+    $_SESSION[&quot;user_agent&quot;] = $userAgent;
+} elseif ($_SESSION[&quot;user_agent&quot;] !== $userAgent) {
+    // User agent berubah — kemungkinan session hijacking
+    session_destroy();
+    die(&quot;Session tidak valid&quot;);
+}
+</code></pre>
+<h3 id="3-xss-cross-site-scripting">3. XSS (Cross-Site Scripting) <a href="#3-xss-cross-site-scripting" class="anchor" aria-hidden="true">#</a></h3>
+<p><strong>Serangan:</strong> Penyerang menyisipkan JavaScript berbahaya yang mencuri cookie.</p>
+<p><strong>Solusi:</strong></p>
+<ul>
+<li>Selalu <strong><code>htmlspecialchars()</code></strong> saat output ke HTML.</li>
+<li>Set <strong><code>HttpOnly</code></strong> pada cookie session — JavaScript tidak bisa membaca cookie.</li>
+<li>Implementasikan <strong>Content Security Policy</strong> (CSP).</li>
+</ul>
+<h3 id="4-csrf-cross-site-request-forgery">4. CSRF (Cross-Site Request Forgery) <a href="#4-csrf-cross-site-request-forgery" class="anchor" aria-hidden="true">#</a></h3>
+<p><strong>Serangan:</strong> Penyerang membuat user yang sudah login mengirim request tanpa sadar.</p>
+<p><strong>Solusi:</strong></p>
+<ul>
+<li>Set <strong><code>SameSite=Lax</code></strong> atau <code>Strict</code> pada cookie session.</li>
+<li>Implementasikan <strong>CSRF token</strong> (dibahas di artikel sebelumnya).</li>
+</ul>
+<h3 id="5-session-timeout">5. Session Timeout <a href="#5-session-timeout" class="anchor" aria-hidden="true">#</a></h3>
+<p><strong>Solusi:</strong> Terapkan timeout untuk session yang tidak aktif.</p>
+<pre><code class="language-php">&lt;?php
+session_start();
+
+$timeout = 1800; // 30 menit
+if (isset($_SESSION[&quot;last_activity&quot;])) {
+    if (time() - $_SESSION[&quot;last_activity&quot;] &gt; $timeout) {
+        session_unset();
+        session_destroy();
+        header(&quot;Location: login.php?pesan=timeout&quot;);
+        exit;
+    }
+}
+$_SESSION[&quot;last_activity&quot;] = time();
+</code></pre>
+<h3 id="6-secure-cookie-attributes">6. Secure Cookie Attributes <a href="#6-secure-cookie-attributes" class="anchor" aria-hidden="true">#</a></h3>
+<p><strong>Selalu</strong> set atribut keamanan pada cookie session:</p>
+<pre><code class="language-php">&lt;?php
+session_set_cookie_params([
+    &quot;lifetime&quot; =&gt; 0,           // session cookie (hilang saat browser ditutup)
+    &quot;path&quot; =&gt; &quot;/&quot;,
+    &quot;domain&quot; =&gt; &quot;&quot;,
+    &quot;secure&quot; =&gt; true,          // hanya HTTPS
+    &quot;httponly&quot; =&gt; true,        // tidak bisa diakses JS
+    &quot;samesite&quot; =&gt; &quot;Lax&quot;,       // perlindungan CSRF
+]);
+
+session_start();
+</code></pre>
+<blockquote>
+<p><strong>Tips:</strong> Panggil <code>session_set_cookie_params()</code> <strong>sebelum</strong> <code>session_start()</code>.</p>
+</blockquote>
+<h3 id="ringkasan-keamanan">Ringkasan Keamanan <a href="#ringkasan-keamanan" class="anchor" aria-hidden="true">#</a></h3>
+<table>
+<thead>
+<tr>
+<th>Ancaman</th>
+<th>Solusi</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Session fixation</td>
+<td><code>session_regenerate_id(true)</code> setelah login</td>
+</tr>
+<tr>
+<td>Session hijacking</td>
+<td>HTTPS, <code>HttpOnly</code>, <code>Secure</code>, regenerasi ID</td>
+</tr>
+<tr>
+<td>XSS</td>
+<td><code>htmlspecialchars()</code>, <code>HttpOnly</code>, CSP</td>
+</tr>
+<tr>
+<td>CSRF</td>
+<td><code>SameSite</code>, CSRF token</td>
+</tr>
+<tr>
+<td>Session timeout</td>
+<td>Cek <code>last_activity</code></td>
+</tr>
+<tr>
+<td>Cookie theft</td>
+<td><code>Secure</code>, <code>HttpOnly</code>, <code>SameSite</code></td>
+</tr>
+</tbody>
+</table>
+<hr>
+<h2 id="contoh-praktis">Contoh Praktis <a href="#contoh-praktis" class="anchor" aria-hidden="true">#</a></h2>
+<h3 id="1-login-dan-logout-dengan-session">1. Login dan Logout dengan Session <a href="#1-login-dan-logout-dengan-session" class="anchor" aria-hidden="true">#</a></h3>
+<p><strong><code>login.php</code>:</strong></p>
+<pre><code class="language-php">&lt;?php
+session_start();
+
+// Jika sudah login, redirect ke dashboard
+if (isset($_SESSION[&quot;user_id&quot;])) {
+    header(&quot;Location: dashboard.php&quot;);
+    exit;
+}
+
+$error = &quot;&quot;;
+
+if ($_SERVER[&quot;REQUEST_METHOD&quot;] === &quot;POST&quot;) {
+    $email = filter_var($_POST[&quot;email&quot;] ?? &quot;&quot;, FILTER_VALIDATE_EMAIL);
+    $password = $_POST[&quot;password&quot;] ?? &quot;&quot;;
+
+    if ($email === false || $password === &quot;&quot;) {
+        $error = &quot;Email dan password wajib diisi&quot;;
+    } else {
+        // Cek ke database
+        $pdo = new PDO(&quot;mysql:host=localhost;dbname=toko&quot;, &quot;root&quot;, &quot;&quot;);
+        $stmt = $pdo-&gt;prepare(&quot;SELECT id, nama, password FROM users WHERE email = ?&quot;);
+        $stmt-&gt;execute([$email]);
+        $user = $stmt-&gt;fetch(PDO::FETCH_ASSOC);
+
+        if ($user &amp;&amp; password_verify($password, $user[&quot;password&quot;])) {
+            // Login berhasil
+            session_regenerate_id(true);  // PENTING!
+            $_SESSION[&quot;user_id&quot;] = $user[&quot;id&quot;];
+            $_SESSION[&quot;user_nama&quot;] = $user[&quot;nama&quot;];
+            $_SESSION[&quot;last_activity&quot;] = time();
+
+            header(&quot;Location: dashboard.php&quot;);
+            exit;
+        } else {
+            $error = &quot;Email atau password salah&quot;;
+        }
+    }
+}
+?&gt;
+
+&lt;form method=&quot;post&quot;&gt;
+    &lt;?php if ($error): ?&gt;
+        &lt;div class=&quot;error&quot;&gt;&lt;?= htmlspecialchars($error) ?&gt;&lt;/div&gt;
+    &lt;?php endif; ?&gt;
+    &lt;input type=&quot;email&quot; name=&quot;email&quot; placeholder=&quot;Email&quot; required&gt;
+    &lt;input type=&quot;password&quot; name=&quot;password&quot; placeholder=&quot;Password&quot; required&gt;
+    &lt;button type=&quot;submit&quot;&gt;Login&lt;/button&gt;
+&lt;/form&gt;
+</code></pre>
+<p><strong><code>dashboard.php</code>:</strong></p>
+<pre><code class="language-php">&lt;?php
+session_start();
+
+// Cek login
+if (!isset($_SESSION[&quot;user_id&quot;])) {
+    header(&quot;Location: login.php&quot;);
+    exit;
+}
+
+// Cek timeout
+$timeout = 1800;
+if (isset($_SESSION[&quot;last_activity&quot;]) &amp;&amp; time() - $_SESSION[&quot;last_activity&quot;] &gt; $timeout) {
+    session_unset();
+    session_destroy();
+    header(&quot;Location: login.php?pesan=timeout&quot;);
+    exit;
+}
+$_SESSION[&quot;last_activity&quot;] = time();
+
+$nama = $_SESSION[&quot;user_nama&quot;];
+?&gt;
+
+&lt;h1&gt;Selamat datang, &lt;?= htmlspecialchars($nama) ?&gt;!&lt;/h1&gt;
+&lt;a href=&quot;logout.php&quot;&gt;Logout&lt;/a&gt;
+</code></pre>
+<p><strong><code>logout.php</code>:</strong></p>
+<pre><code class="language-php">&lt;?php
+session_start();
+
+// Hapus semua data session
+$_SESSION = [];
+
+// Hapus cookie session
+if (ini_get(&quot;session.use_cookies&quot;)) {
+    $params = session_get_cookie_params();
+    setcookie(
+        session_name(),
+        &quot;&quot;,
+        time() - 42000,
+        $params[&quot;path&quot;],
+        $params[&quot;domain&quot;],
+        $params[&quot;secure&quot;],
+        $params[&quot;httponly&quot;]
+    );
+}
+
+// Hancurkan session
+session_destroy();
+
+header(&quot;Location: login.php&quot;);
+exit;
+</code></pre>
+<h3 id="2-remember-me-dengan-cookie">2. Remember Me dengan Cookie <a href="#2-remember-me-dengan-cookie" class="anchor" aria-hidden="true">#</a></h3>
+<pre><code class="language-php">&lt;?php
+// Saat login
+if ($loginBerhasil &amp;&amp; !empty($_POST[&quot;remember&quot;])) {
+    $token = bin2hex(random_bytes(32));
+    $hash = hash(&quot;sha256&quot;, $token);
+
+    // Simpan hash ke database
+    $stmt = $pdo-&gt;prepare(&quot;UPDATE users SET remember_token = ? WHERE id = ?&quot;);
+    $stmt-&gt;execute([$hash, $user[&quot;id&quot;]]);
+
+    // Set cookie
+    setcookie(&quot;remember_token&quot;, $token, [
+        &quot;expires&quot; =&gt; time() + (30 * 24 * 60 * 60),  // 30 hari
+        &quot;path&quot; =&gt; &quot;/&quot;,
+        &quot;secure&quot; =&gt; true,
+        &quot;httponly&quot; =&gt; true,
+        &quot;samesite&quot; =&gt; &quot;Lax&quot;,
+    ]);
+}
+
+// Saat halaman dimuat — cek auto-login
+if (!isset($_SESSION[&quot;user_id&quot;]) &amp;&amp; isset($_COOKIE[&quot;remember_token&quot;])) {
+    $token = $_COOKIE[&quot;remember_token&quot;];
+    $hash = hash(&quot;sha256&quot;, $token);
+
+    $stmt = $pdo-&gt;prepare(&quot;SELECT id, nama FROM users WHERE remember_token = ?&quot;);
+    $stmt-&gt;execute([$hash]);
+    $user = $stmt-&gt;fetch(PDO::FETCH_ASSOC);
+
+    if ($user) {
+        session_regenerate_id(true);
+        $_SESSION[&quot;user_id&quot;] = $user[&quot;id&quot;];
+        $_SESSION[&quot;user_nama&quot;] = $user[&quot;nama&quot;];
+    }
+}
+</code></pre>
+<blockquote>
+<p><strong>Tips:</strong> Simpan <strong>hash</strong> token di database, bukan token asli. Jika database bocor, token tidak bisa digunakan penyerang.</p>
+</blockquote>
+<h3 id="3-keranjang-belanja-dengan-session">3. Keranjang Belanja dengan Session <a href="#3-keranjang-belanja-dengan-session" class="anchor" aria-hidden="true">#</a></h3>
+<pre><code class="language-php">&lt;?php
+session_start();
+
+// Tambah item ke keranjang
+function tambahKeKeranjang(int $produkId, string $nama, float $harga, int $jumlah = 1): void {
+    if (!isset($_SESSION[&quot;keranjang&quot;])) {
+        $_SESSION[&quot;keranjang&quot;] = [];
+    }
+
+    // Cek apakah produk sudah ada
+    foreach ($_SESSION[&quot;keranjang&quot;] as $key =&gt; $item) {
+        if ($item[&quot;id&quot;] === $produkId) {
+            $_SESSION[&quot;keranjang&quot;][$key][&quot;jumlah&quot;] += $jumlah;
+            return;
+        }
+    }
+
+    // Tambah item baru
+    $_SESSION[&quot;keranjang&quot;][] = [
+        &quot;id&quot; =&gt; $produkId,
+        &quot;nama&quot; =&gt; $nama,
+        &quot;harga&quot; =&gt; $harga,
+        &quot;jumlah&quot; =&gt; $jumlah,
+    ];
+}
+
+// Hitung total
+function totalKeranjang(): float {
+    $total = 0;
+    foreach ($_SESSION[&quot;keranjang&quot;] ?? [] as $item) {
+        $total += $item[&quot;harga&quot;] * $item[&quot;jumlah&quot;];
+    }
+    return $total;
+}
+
+// Contoh penggunaan
+tambahKeKeranjang(1, &quot;Keyboard&quot;, 450000, 2);
+tambahKeKeranjang(2, &quot;Mouse&quot;, 150000, 1);
+
+echo &quot;Total: Rp&quot; . number_format(totalKeranjang(), 0, &quot;,&quot;, &quot;.&quot;);
+// &quot;Total: Rp1.050.000&quot;
+</code></pre>
+<h3 id="4-flash-message">4. Flash Message <a href="#4-flash-message" class="anchor" aria-hidden="true">#</a></h3>
+<p><strong>Flash message</strong> adalah pesan yang hanya muncul sekali (misalnya setelah redirect).</p>
+<pre><code class="language-php">&lt;?php
+session_start();
+
+// Set flash message
+function setFlash(string $tipe, string $pesan): void {
+    $_SESSION[&quot;flash&quot;] = [&quot;tipe&quot; =&gt; $tipe, &quot;pesan&quot; =&gt; $pesan];
+}
+
+// Ambil dan hapus flash message
+function getFlash(): ?array {
+    if (isset($_SESSION[&quot;flash&quot;])) {
+        $flash = $_SESSION[&quot;flash&quot;];
+        unset($_SESSION[&quot;flash&quot;]);
+        return $flash;
+    }
+    return null;
+}
+
+// Contoh: setelah simpan data
+setFlash(&quot;sukses&quot;, &quot;Data berhasil disimpan&quot;);
+header(&quot;Location: index.php&quot;);
+exit;
+
+// Di index.php
+$flash = getFlash();
+if ($flash):
+?&gt;
+    &lt;div class=&quot;alert alert-&lt;?= htmlspecialchars($flash[&quot;tipe&quot;]) ?&gt;&quot;&gt;
+        &lt;?= htmlspecialchars($flash[&quot;pesan&quot;]) ?&gt;
+    &lt;/div&gt;
+&lt;?php endif; ?&gt;
+</code></pre>
+<hr>
+<h2 id="tips-dan-best-practice">Tips dan Best Practice <a href="#tips-dan-best-practice" class="anchor" aria-hidden="true">#</a></h2>
+<ol>
+<li>
+<p><strong>Panggil <code>session_start()</code> di awal</strong> — sebelum output apa pun.</p>
+</li>
+<li>
+<p><strong>Regenerasi session ID</strong> setelah login, logout, atau perubahan hak akses: <code>session_regenerate_id(true)</code>.</p>
+</li>
+<li>
+<p><strong>Aktifkan <code>HttpOnly</code> dan <code>Secure</code></strong> pada cookie session.</p>
+</li>
+<li>
+<p><strong>Set <code>SameSite=Lax</code></strong> atau <code>Strict</code> untuk perlindungan CSRF.</p>
+</li>
+<li>
+<p><strong>Jangan simpan data sensitif di cookie</strong> — password, token rahasia.</p>
+</li>
+<li>
+<p><strong>Simpan hash token</strong> remember me di database, bukan token asli.</p>
+</li>
+<li>
+<p><strong>Implementasikan timeout session</strong> — cek <code>last_activity</code>.</p>
+</li>
+<li>
+<p><strong>Untuk logout</strong>, lakukan <code>$_SESSION = []</code>, hapus cookie, dan <code>session_destroy()</code>.</p>
+</li>
+<li>
+<p><strong>Gunakan <code>session_set_cookie_params()</code></strong> sebelum <code>session_start()</code> untuk konfigurasi keamanan.</p>
+</li>
+<li>
+<p><strong>Hindari <code>session.use_trans_sid</code></strong> — jangan terima session ID dari URL.</p>
+</li>
+<li>
+<p><strong>Gunakan <code>session.use_strict_mode = 1</code></strong> — tolak session ID yang tidak dikenal.</p>
+</li>
+<li>
+<p><strong>Untuk banyak server</strong>, simpan session di Redis atau database — bukan file lokal.</p>
+</li>
+<li>
+<p><strong>Selalu <code>htmlspecialchars()</code></strong> saat menampilkan data dari session ke HTML.</p>
+</li>
+<li>
+<p><strong>Hindari menyimpan object besar</strong> di session — bisa membebani server dan file session.</p>
+</li>
+<li>
+<p><strong>Bersihkan session lama</strong> secara berkala — PHP melakukan garbage collection otomatis, tetapi bisa dikonfigurasi.</p>
+</li>
+</ol>
+<hr>
+<h2 id="ringkasan">Ringkasan <a href="#ringkasan" class="anchor" aria-hidden="true">#</a></h2>
+<table>
+<thead>
+<tr>
+<th>Konsep</th>
+<th>Poin Penting</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Cookie</td>
+<td>Data di browser, dikirim setiap request, maks ~4 KB</td>
+</tr>
+<tr>
+<td>Session</td>
+<td>Data di server, diidentifikasi session ID</td>
+</tr>
+<tr>
+<td><code>setcookie()</code></td>
+<td>Membuat cookie — harus sebelum output</td>
+</tr>
+<tr>
+<td><code>$_COOKIE</code></td>
+<td>Membaca cookie</td>
+</tr>
+<tr>
+<td><code>session_start()</code></td>
+<td>Memulai session — di awal file</td>
+</tr>
+<tr>
+<td><code>$_SESSION</code></td>
+<td>Array data session</td>
+</tr>
+<tr>
+<td><code>session_regenerate_id()</code></td>
+<td>Regenerasi ID — wajib setelah login</td>
+</tr>
+<tr>
+<td><code>session_destroy()</code></td>
+<td>Menghancurkan session</td>
+</tr>
+<tr>
+<td><code>HttpOnly</code></td>
+<td>Cookie tidak bisa diakses JavaScript</td>
+</tr>
+<tr>
+<td><code>Secure</code></td>
+<td>Cookie hanya via HTTPS</td>
+</tr>
+<tr>
+<td><code>SameSite</code></td>
+<td>Perlindungan CSRF</td>
+</tr>
+</tbody>
+</table>
+<p>Poin penting:</p>
+<ul>
+<li><strong>Cookie</strong> disimpan di browser, <strong>session</strong> di server.</li>
+<li><strong>Session lebih aman</strong> untuk data sensitif — data tidak terlihat user.</li>
+<li><strong><code>session_start()</code> harus di awal</strong> — sebelum output apa pun.</li>
+<li><strong><code>session_regenerate_id(true)</code></strong> setelah login — mencegah session fixation.</li>
+<li><strong>Aktifkan <code>HttpOnly</code>, <code>Secure</code>, <code>SameSite</code></strong> pada cookie session.</li>
+<li><strong>Untuk logout</strong>, hapus <code>$_SESSION</code>, cookie, dan <code>session_destroy()</code>.</li>
+<li><strong>Simpan hash token</strong> remember me di database — bukan token asli.</li>
+<li><strong>Implementasikan timeout session</strong> — cek <code>last_activity</code>.</li>
+<li><strong>Untuk banyak server</strong>, gunakan Redis atau database untuk session.</li>
+</ul>
+<p>Pada artikel berikutnya, kita akan membahas <strong>Include dan Require</strong> — memecah kode menjadi file terpisah.</p>
+
+			<div class="page-footer-meta d-flex flex-column flex-md-row justify-content-between">
+				</div>
+			<div class="docs-navigation d-flex justify-content-between">
+	
+	<a href="/php/tutorial/09-superglobal-form/">
+			<div class="card my-1">
+				<div class="card-body py-2">
+					&larr; Superglobal dan Form Handling
+				</div>
+			</div>
+		</a>
+	<a class="ms-auto" href="/php/tutorial/11-include-require/">
+			<div class="card my-1">
+				<div class="card-body py-2">
+					Include dan Require &rarr;
+				</div>
+			</div>
+		</a>
+	</div>
+
+			
+		</main>
+	</div>
+
+      </div>
+    </div>
+    
+    
+    <footer class="footer text-muted">
+  <div class="container-xxl">
+    <div class="row">
+      <div class="col-lg-8 order-last order-lg-first">
+        <ul class="list-inline">
+          <li class="list-inline-item">Powered by <a class="text-muted" href="https://gohugo.io/">Hugo</a> and <a class="text-muted" href="https://github.com/">Github</a></li>
+        </ul>
+      </div>
+      <div class="col-lg-8 order-first order-lg-last text-lg-end">
+        <ul class="list-inline">
+          </ul>
+      </div>
+    </div>
+  </div>
+</footer>
+    
+
+<script src="/js/bootstrap.min.650aeec64c81d69d4c0850fc73c93da3f0330cec0a27772feed7f90f60baa5f47f1c45687d71914bdafd1c4e860d40f6dc08ede27a2f08431ff929c9a2d24621.js" integrity="sha512-ZQruxkyB1p1MCFD8c8k9o/AzDOwKJ3cv7tf5D2C6pfR/HEVofXGRS9r9HE6GDUD23Ajt4novCEMf&#43;SnJotJGIQ==" crossorigin="anonymous" defer></script>
+  <script src="/js/highlight.min.ec234bd8a5f487aaffe50a89f17b14501b1bb65633cf177cffd4cb84702dd7030edc08712dceb8dc27ac7e54b53240a08bf0b8d951572ee582bcdbbd06a48a7b.js" integrity="sha512-7CNL2KX0h6r/5QqJ8XsUUBsbtlYzzxd8/9TLhHAt1wMO3AhxLc643CesflS1MkCgi/C42VFXLuWCvNu9BqSKew==" crossorigin="anonymous" defer></script>
+  <script src="/main.min.cd1e5e6b40065b3f7f7fd8548a528fac67019754eda0f37b9918d02d154fc9ef6a22742f6513b0572ad9163152e151ec36221fbeafbecd7759c3dab1f19b64b9.js" integrity="sha512-zR5ea0AGWz9/f9hUilKPrGcBl1TtoPN7mRjQLRVPye9qInQvZROwVyrZFjFS4VHsNiIfvq&#43;&#43;zXdZw9qx8ZtkuQ==" crossorigin="anonymous" defer></script>
+  <script src="https://kaban.my.id/index.min.797ba4de6d8a5423115e651882a6de105e1744ee10ab32e79b10db26c6fbcd5d2706c0392c663ea0d01e04e8a21e3a87bb2ea742d9df2d62f481a7e793b68ec4.js" integrity="sha512-eXuk3m2KVCMRXmUYgqbeEF4XRO4QqzLnmxDbJsb7zV0nBsA5LGY&#43;oNAeBOiiHjqHuy6nQtnfLWL0gafnk7aOxA==" crossorigin="anonymous" defer></script>
+  
+    <div class="d-flex fixed-bottom pb-4 pb-lg-5 pe-4 pe-lg-5">
+      <a id="toTop" href="#" class="btn btn-outline-primary rounded-circle ms-auto p-2"><span class="visually-hidden">Top</span><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-chevron-up"><polyline points="18 15 12 9 6 15"></polyline></svg></a>
+    </div>
+    
+  </body>
+</html>

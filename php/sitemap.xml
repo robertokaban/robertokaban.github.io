@@ -37,4 +37,40 @@
         <changefreq>weekly</changefreq>
         <priority>0.5</priority>
       </url>
+      <url>
+        <loc>https://kaban.my.id/php/tutorial/06-fungsi/</loc>
+        <lastmod>2023-01-08T08:00:00+00:00</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.5</priority>
+      </url>
+      <url>
+        <loc>https://kaban.my.id/php/tutorial/07-array/</loc>
+        <lastmod>2023-01-09T08:00:00+00:00</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.5</priority>
+      </url>
+      <url>
+        <loc>https://kaban.my.id/php/tutorial/08-string/</loc>
+        <lastmod>2023-01-10T08:00:00+00:00</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.5</priority>
+      </url>
+      <url>
+        <loc>https://kaban.my.id/php/tutorial/09-superglobal-form/</loc>
+        <lastmod>2023-01-11T08:00:00+00:00</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.5</priority>
+      </url>
+      <url>
+        <loc>https://kaban.my.id/php/tutorial/10-session-cookie/</loc>
+        <lastmod>2023-01-12T08:00:00+00:00</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.5</priority>
+      </url>
+      <url>
+        <loc>https://kaban.my.id/php/tutorial/11-include-require/</loc>
+        <lastmod>2023-01-13T08:00:00+00:00</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.5</priority>
+      </url>
       </urlset>

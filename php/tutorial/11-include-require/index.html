@@ -1,0 +1,1293 @@
+<!doctype html>
+<html lang="en-US">
+  <head>
+  <meta charset="utf-8">
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <link rel="preload" as="font" href="https://kaban.my.id/fonts/vendor/jost/jost-v4-latin-regular.woff2" type="font/woff2" crossorigin>
+<link rel="preload" as="font" href="https://kaban.my.id/fonts/vendor/jost/jost-v4-latin-500.woff2" type="font/woff2" crossorigin>
+<link rel="preload" as="font" href="https://kaban.my.id/fonts/vendor/jost/jost-v4-latin-700.woff2" type="font/woff2" crossorigin>
+
+  <script>(()=>{var t=window.matchMedia&&window.matchMedia("(prefers-color-scheme: dark)").matches,e=localStorage.getItem("theme");t&&e===null&&(localStorage.setItem("theme","dark"),document.documentElement.setAttribute("data-dark-mode","")),t&&e==="dark"&&document.documentElement.setAttribute("data-dark-mode",""),e==="dark"&&document.documentElement.setAttribute("data-dark-mode","")})()</script>
+
+  <link rel="stylesheet" href="https://kaban.my.id/main.4296e689affcd00e933b8954c10fc43cd1a5f16d5552e78183d12ea50d3e0bf5a596df23a379a4936743f01a7cd8ba048a628b2b9b60b34aa49fad468287100a.css" integrity="sha512-Qpbmia/80A6TO4lUwQ/EPNGl8W1VUueBg9EupQ0&#43;C/Wllt8jo3mkk2dD8Bp82LoEimKLK5tgs0qkn61GgocQCg==" crossorigin="anonymous">
+<noscript><style>img.lazyload { display: none; }</style></noscript>
+  <meta name="robots" content="index, follow">
+    <meta name="googlebot" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1">
+    <meta name="bingbot" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1">
+  <title>Include dan Require - Roberto Kaban Blog&#39;s</title>
+<meta name="description" content="Panduan lengkap include dan require PHP: memecah kode, struktur proyek, autoloading, dan best practice.">
+<link rel="canonical" href="https://kaban.my.id/php/tutorial/11-include-require/">
+<meta property="og:locale" content="en_US">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Include dan Require">
+<meta property="og:description" content="Panduan lengkap include dan require PHP: memecah kode, struktur proyek, autoloading, dan best practice.">
+<meta property="og:url" content="https://kaban.my.id/php/tutorial/11-include-require/">
+<meta property="og:site_name" content="Roberto Kaban Blog&#39;s">
+<meta property="article:published_time" content="2023-01-13T08:00:00+00:00">
+  <meta property="article:modified_time" content="2023-01-13T08:00:00+00:00">
+  
+  <meta property="og:image" content="https://kaban.my.id/doks.png"/>
+      <meta property="og:image:alt" content="Roberto Kaban Blog&#39;s">
+    
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:site" content="@robertokaban">
+<meta name="twitter:creator" content="@robertokaban">
+<meta name="twitter:title" content="Include dan Require">
+<meta name="twitter:description" content="Panduan lengkap include dan require PHP: memecah kode, struktur proyek, autoloading, dan best practice.">
+<meta name="twitter:image" content="https://kaban.my.id/doks.png">
+    <meta name="twitter:image:alt" content="Include dan Require">
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "Person",
+        "@id": "https://kaban.my.id/#/schema/person/1",
+      "name": "BlogRobertoKaban",
+      "url": "https://kaban.my.id/",
+      "sameAs": [
+        "https://twitter.com/robertokaban"
+        , "https://github.com/robertokaban"
+        ],
+      "image": {
+          "@type": "ImageObject",
+          "@id": "https://kaban.my.id/#/schema/image/1",
+          "url": "https://kaban.my.id/doks.png",
+          "width":  1280 ,
+          "height":  640 ,
+          "caption": "BlogRobertoKaban"
+        }
+      },
+    {
+      "@type": "WebSite",
+      "@id": "https://kaban.my.id/#/schema/website/1",
+      "url": "https://kaban.my.id/",
+      "name": "Roberto Kaban Blog\u0027s",
+      "description": "Hanya sebuah catatan kecil untuk hal yang tidak ingin dilupakan.",
+      "publisher": {
+          "@id": "https://kaban.my.id/#/schema/person/1"
+        }
+      },
+    {
+      "@type": "WebPage",
+      "@id": "https://kaban.my.id/php/tutorial/11-include-require/",
+      "url": "https://kaban.my.id/php/tutorial/11-include-require/",
+      "name": "Include dan Require",
+      "description": "Panduan lengkap include dan require PHP: memecah kode, struktur proyek, autoloading, dan best practice.",
+      "isPartOf": {
+        "@id": "https://kaban.my.id/#/schema/website/1"
+      },
+      "about": {
+          "@id": "https://kaban.my.id/#/schema/person/1"
+        },
+      "datePublished": "2023-01-13T08:00:00CET",
+      "dateModified": "2023-01-13T08:00:00CET",
+      "breadcrumb": {
+        "@id": "https://kaban.my.id/php/tutorial/11-include-require/#/schema/breadcrumb/1"
+      },
+      "primaryImageOfPage": {
+        "@id": "https://kaban.my.id/php/tutorial/11-include-require/#/schema/image/2"
+      },
+      "inLanguage": "en-US",
+      "potentialAction": [{
+        "@type": "ReadAction", "target": ["https://kaban.my.id/php/tutorial/11-include-require/"]
+      }]
+    },
+    {
+      "@type": "BreadcrumbList",
+      "@id": "https://kaban.my.id/php/tutorial/11-include-require/#/schema/breadcrumb/1",
+      "name": "Breadcrumbs",
+      "itemListElement": [{
+        "@type": "ListItem",
+        "position":  1 ,
+        "item": {
+          "@type": "WebPage",
+          "@id": "https://kaban.my.id/",
+          "url": "https://kaban.my.id/",
+          "name": "Home"
+          }
+        },{
+        "@type": "ListItem",
+        "position":  2 ,
+        "item": {
+          "@type": "WebPage",
+          "@id": "https://kaban.my.id/php/",
+          "url": "https://kaban.my.id/php/",
+          "name": "Php"
+          }
+        },{
+        "@type": "ListItem",
+        "position":  3 ,
+        "item": {
+          "@type": "WebPage",
+          "@id": "https://kaban.my.id/php/tutorial/",
+          "url": "https://kaban.my.id/php/tutorial/",
+          "name": "Tutorial"
+          }
+        },{
+        "@type": "ListItem",
+        "position":  4 ,
+        "item": {
+          "@id": "https://kaban.my.id/php/tutorial/11-include-require/"
+          }
+        }]
+    },
+
+    {
+      "@context": "https://schema.org",
+      "@graph": [
+        {
+          "@type": "ImageObject",
+          "@id": "https://kaban.my.id/php/tutorial/11-include-require/#/schema/image/2",
+          "url": "https://kaban.my.id/doks.png",
+          "contentUrl": "https://kaban.my.id/doks.png",
+          "caption": "Include dan Require"
+        }
+      ]
+    }
+
+  ]
+}
+</script>
+
+  <meta name="theme-color" content="#fff">
+<link rel="icon" href="https://kaban.my.id/favicon.ico" sizes="any">
+<link rel="icon" type="image/svg+xml" href="https://kaban.my.id/favicon.svg">
+<link rel="apple-touch-icon" sizes="180x180" href="https://kaban.my.id/apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="32x32" href="https://kaban.my.id/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="https://kaban.my.id/favicon-16x16.png">
+<link rel="manifest" crossorigin="use-credentials" href="https://kaban.my.id/site.webmanifest">
+
+  
+
+
+  
+  
+  
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-60VSDZFQR5"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-60VSDZFQR5');
+</script>
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6664512614760985"
+     crossorigin="anonymous"></script>
+</head>
+
+  <body class="php single">
+    <div class="sticky-top">
+<div class="header-bar"></div>
+
+<header class="navbar navbar-expand-lg navbar-light doks-navbar">
+  <nav class="container-xxl flex-wrap flex-lg-nowrap" aria-label="Main navigation">
+
+    <a class="navbar-brand order-0" href="/" aria-label="Roberto Kaban Blog&#39;s">
+      Roberto Kaban Blog&#39;s
+    </a>
+
+    <button class="btn btn-menu order-2 d-block d-lg-none" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasDoks" aria-controls="offcanvasDoks" aria-label="Open main menu">
+      <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-menu"><line x1="3" y1="12" x2="21" y2="12"></line><line x1="3" y1="6" x2="21" y2="6"></line><line x1="3" y1="18" x2="21" y2="18"></line></svg>
+    </button>
+    <div class="offcanvas offcanvas-end border-0 py-lg-1" tabindex="-1" id="offcanvasDoks" data-bs-backdrop="true" aria-labelledby="offcanvasDoksLabel">
+      <div class="header-bar d-lg-none"></div>
+      <div class="offcanvas-header d-lg-none">
+        <h2 class="h5 offcanvas-title ps-2" id="offcanvasDoksLabel"><a class="text-dark" href="/">Roberto Kaban Blog&#39;s</a></h2>
+        <button type="button" class="btn-close text-reset me-2" data-bs-dismiss="offcanvas" aria-label="Close main menu"></button>
+      </div>
+      <div class="offcanvas-body p-4 p-lg-0">
+        <ul class="nav flex-column flex-lg-row align-items-lg-center mt-2 mt-lg-0 ms-lg-2 me-lg-auto">
+              <li class="nav-item">
+                <a class="nav-link ps-0 py-1" href="/about/">About Me</a>
+              </li>
+            
+          
+              <li class="nav-item">
+                <a class="nav-link ps-0 py-1" href="/contact/">Contact</a>
+              </li>
+            
+          
+              <li class="nav-item">
+                <a class="nav-link ps-0 py-1" href="/artikel/">Artikel</a>
+              </li>
+            
+          
+              <li class="nav-item">
+                <a class="nav-link ps-0 py-1" href="/coretanku/">Coretanku</a>
+              </li>
+            
+          </ul>
+
+        <hr class="text-black-50 my-4 d-lg-none">
+        <form class="doks-search position-relative flex-grow-1 ms-lg-auto me-lg-2">
+          <input id="search" class="form-control is-search" type="search" placeholder="Cari di blog ini..." aria-label="Cari di blog ini..." autocomplete="off">
+          <div id="suggestions" class="shadow bg-white rounded d-none"></div>
+        </form>
+        <hr class="text-black-50 my-4 d-lg-none">
+        <ul class="nav flex-column flex-lg-row">
+          <li class="nav-item">
+              <a class="nav-link social-link" href="https://github.com/robertokaban"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-github"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path></svg><small class="ms-2 d-lg-none">GitHub</small></a>
+            </li>
+          <li class="nav-item">
+              <a class="nav-link social-link" href="https://facebook.com/roberto.kaban"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-facebook"><path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"></path></svg><small class="ms-2 d-lg-none">Facebook</small></a>
+            </li>
+          <li class="nav-item">
+              <a class="nav-link social-link" href="https://twitter.com/robertokaban"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-twitter"><path d="M23 3a10.9 10.9 0 0 1-3.14 1.53 4.48 4.48 0 0 0-7.86 3v1A10.66 10.66 0 0 1 3 4s-4 9 5 13a11.64 11.64 0 0 1-7 2c9 5 20 0 20-11.5a4.5 4.5 0 0 0-.08-.83A7.72 7.72 0 0 0 23 3z"></path></svg><small class="ms-2 d-lg-none">Twitter</small></a>
+            </li>
+          <li class="nav-item">
+              <a class="nav-link social-link" href="https://youtube.com/@robertokaban"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-youtube"><path d="M10,15L15.19,12L10,9V15M21.56,7.17C21.69,7.64 21.78,8.27 21.84,9.07C21.91,9.87 21.94,10.56 21.94,11.16L22,12C22,14.19 21.84,15.8 21.56,16.83C21.31,17.73 20.73,18.31 19.83,18.56C19.36,18.69 18.5,18.78 17.18,18.84C15.88,18.91 14.69,18.94 13.59,18.94L12,19C7.81,19 5.2,18.84 4.17,18.56C3.27,18.31 2.69,17.73 2.44,16.83C2.31,16.36 2.22,15.73 2.16,14.93C2.09,14.13 2.06,13.44 2.06,12.84L2,12C2,9.81 2.16,8.2 2.44,7.17C2.69,6.27 3.27,5.69 4.17,5.44C4.64,5.31 5.5,5.22 6.82,5.16C8.12,5.09 9.31,5.06 10.41,5.06L12,5C16.19,5 18.8,5.16 19.83,5.44C20.73,5.69 21.31,6.27 21.56,7.17Z"></path></svg><small class="ms-2 d-lg-none">Youtube</small></a>
+            </li>
+          </ul>
+
+        
+        <hr class="text-black-50 my-4 d-lg-none">
+        <button id="mode" class="btn btn-link" type="button" aria-label="Toggle user interface mode">
+          <span class="toggle-dark"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-moon"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path></svg></span>
+          <span class="toggle-light"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-sun"><circle cx="12" cy="12" r="5"></circle><line x1="12" y1="1" x2="12" y2="3"></line><line x1="12" y1="21" x2="12" y2="23"></line><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line><line x1="1" y1="12" x2="3" y2="12"></line><line x1="21" y1="12" x2="23" y2="12"></line><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line></svg></span>
+        </button>
+        
+
+        </div>
+    </div>
+  </nav>
+</header>
+
+
+</div>
+
+
+<div class="container-xxl">
+  <aside class="doks-sidebar">
+    <nav id="doks-docs-nav" class="collapse d-lg-none" aria-label="Tertiary navigation">
+      
+<ul class="list-unstyled collapsible-sidebar">
+  
+    
+      
+      <li class="mb-1">
+        <button class="btn btn-toggle align-items-center rounded collapsed" data-bs-toggle="collapse" data-bs-target="#section-de2591224751442a3b2101e94880333c" aria-expanded="true">
+          Tutorial PHP
+        </button>
+        <div class="collapse show" id="section-de2591224751442a3b2101e94880333c">
+          <ul class="btn-toggle-nav list-unstyled fw-normal pb-1 small">
+            
+              
+                
+                <li><a class="docs-link rounded" href="https://kaban.my.id/php/tutorial/pengenalan/">Pengenalan PHP</a></li>
+              
+            
+              
+                
+                <li><a class="docs-link rounded" href="https://kaban.my.id/php/tutorial/02-instalasi-persiapan/">Instalasi &amp; Persiapan Lingkungan PHP</a></li>
+              
+            
+              
+                
+                <li><a class="docs-link rounded" href="https://kaban.my.id/php/tutorial/03-sintaks-variabel/">Sintaks Dasar &amp; Variabel PHP</a></li>
+              
+            
+              
+                
+                <li><a class="docs-link rounded" href="https://kaban.my.id/php/tutorial/04-tipe-data-konversi/">Tipe Data &amp; Konversi</a></li>
+              
+            
+              
+                
+                <li><a class="docs-link rounded" href="https://kaban.my.id/php/tutorial/05-struktur-kontrol/">Struktur Kontrol &amp; Perulangan</a></li>
+              
+            
+              
+                
+                <li><a class="docs-link rounded" href="https://kaban.my.id/php/tutorial/06-fungsi/">Fungsi</a></li>
+              
+            
+              
+                
+                <li><a class="docs-link rounded" href="https://kaban.my.id/php/tutorial/07-array/">Array dan Method-nya</a></li>
+              
+            
+              
+                
+                <li><a class="docs-link rounded" href="https://kaban.my.id/php/tutorial/08-string/">String dan Manipulasi</a></li>
+              
+            
+              
+                
+                <li><a class="docs-link rounded" href="https://kaban.my.id/php/tutorial/09-superglobal-form/">Superglobal dan Form Handling</a></li>
+              
+            
+              
+                
+                <li><a class="docs-link rounded" href="https://kaban.my.id/php/tutorial/10-session-cookie/">Session dan Cookie</a></li>
+              
+            
+              
+                
+                <li><a class="docs-link rounded active" href="https://kaban.my.id/php/tutorial/11-include-require/">Include dan Require</a></li>
+              
+            
+          </ul>
+        </div>
+      </li>
+    
+  
+</ul>
+
+    </nav>
+  </aside>
+</div>
+
+    <div class="wrap container-xxl" role="document">
+      <div class="content">
+        
+	<div class="row flex-xl-nowrap">
+		<div class="col-lg-5 col-xl-4 docs-sidebar d-none d-lg-block">
+			<nav class="docs-links" aria-label="Main navigation">
+				
+<ul class="list-unstyled collapsible-sidebar">
+  
+    
+      
+      <li class="mb-1">
+        <button class="btn btn-toggle align-items-center rounded collapsed" data-bs-toggle="collapse" data-bs-target="#section-de2591224751442a3b2101e94880333c" aria-expanded="true">
+          Tutorial PHP
+        </button>
+        <div class="collapse show" id="section-de2591224751442a3b2101e94880333c">
+          <ul class="btn-toggle-nav list-unstyled fw-normal pb-1 small">
+            
+              
+                
+                <li><a class="docs-link rounded" href="https://kaban.my.id/php/tutorial/pengenalan/">Pengenalan PHP</a></li>
+              
+            
+              
+                
+                <li><a class="docs-link rounded" href="https://kaban.my.id/php/tutorial/02-instalasi-persiapan/">Instalasi &amp; Persiapan Lingkungan PHP</a></li>
+              
+            
+              
+                
+                <li><a class="docs-link rounded" href="https://kaban.my.id/php/tutorial/03-sintaks-variabel/">Sintaks Dasar &amp; Variabel PHP</a></li>
+              
+            
+              
+                
+                <li><a class="docs-link rounded" href="https://kaban.my.id/php/tutorial/04-tipe-data-konversi/">Tipe Data &amp; Konversi</a></li>
+              
+            
+              
+                
+                <li><a class="docs-link rounded" href="https://kaban.my.id/php/tutorial/05-struktur-kontrol/">Struktur Kontrol &amp; Perulangan</a></li>
+              
+            
+              
+                
+                <li><a class="docs-link rounded" href="https://kaban.my.id/php/tutorial/06-fungsi/">Fungsi</a></li>
+              
+            
+              
+                
+                <li><a class="docs-link rounded" href="https://kaban.my.id/php/tutorial/07-array/">Array dan Method-nya</a></li>
+              
+            
+              
+                
+                <li><a class="docs-link rounded" href="https://kaban.my.id/php/tutorial/08-string/">String dan Manipulasi</a></li>
+              
+            
+              
+                
+                <li><a class="docs-link rounded" href="https://kaban.my.id/php/tutorial/09-superglobal-form/">Superglobal dan Form Handling</a></li>
+              
+            
+              
+                
+                <li><a class="docs-link rounded" href="https://kaban.my.id/php/tutorial/10-session-cookie/">Session dan Cookie</a></li>
+              
+            
+              
+                
+                <li><a class="docs-link rounded active" href="https://kaban.my.id/php/tutorial/11-include-require/">Include dan Require</a></li>
+              
+            
+          </ul>
+        </div>
+      </li>
+    
+  
+</ul>
+
+			</nav>
+		</div>
+		<nav class="docs-toc d-none d-xl-block col-xl-3" aria-label="Secondary navigation">
+			<div class="d-xl-none">
+  <button class="btn btn-outline-primary btn-sm doks-toc-toggle collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#onThisPage" aria-controls="doks-docs-nav" aria-expanded="false" aria-label="Toggle On this page navigation">
+    <span>Daftar isi</span>
+    <span>
+      <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" class="doks doks-expand" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><title>Expand</title><polyline points="7 13 12 18 17 13"></polyline><polyline points="7 6 12 11 17 6"></polyline></svg>
+      <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" class="doks doks-collapse" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><title>Collapse</title><polyline points="17 11 12 6 7 11"></polyline><polyline points="17 18 12 13 7 18"></polyline></svg>
+    </span>
+  </button>
+  <div class="collapse" id="onThisPage">
+    <div class="card card-body mt-3 py-1">
+      <div class="page-links">
+        <nav id="TableOfContents">
+  <ul>
+    <li><a href="#pendahuluan">Pendahuluan</a></li>
+    <li><a href="#include-vs-require">Include vs Require</a>
+      <ul>
+        <li><a href="#include"><code>include</code></a></li>
+        <li><a href="#require"><code>require</code></a></li>
+        <li><a href="#include_once-dan-require_once"><code>include_once</code> dan <code>require_once</code></a></li>
+        <li><a href="#perbandingan">Perbandingan</a></li>
+        <li><a href="#kapan-menggunakan-yang-mana">Kapan Menggunakan yang Mana?</a></li>
+      </ul>
+    </li>
+    <li><a href="#cara-menggunakan-include">Cara Menggunakan Include</a>
+      <ul>
+        <li><a href="#path-relatif">Path Relatif</a></li>
+        <li><a href="#path-absolut">Path Absolut</a></li>
+        <li><a href="#include-dengan-variabel">Include dengan Variabel</a></li>
+        <li><a href="#include-di-dalam-fungsi">Include di Dalam Fungsi</a></li>
+        <li><a href="#return-value">Return Value</a></li>
+      </ul>
+    </li>
+    <li><a href="#struktur-proyek">Struktur Proyek</a>
+      <ul>
+        <li><a href="#mengapa-folder-public">Mengapa Folder <code>public/</code>?</a></li>
+        <li><a href="#konfigurasi-web-server">Konfigurasi Web Server</a></li>
+      </ul>
+    </li>
+    <li><a href="#partials-header-footer-sidebar">Partials: Header, Footer, Sidebar</a>
+      <ul>
+        <li><a href="#templatesheaderphp"><code>templates/header.php</code></a></li>
+        <li><a href="#templatesfooterphp"><code>templates/footer.php</code></a></li>
+        <li><a href="#publicindexphp"><code>public/index.php</code></a></li>
+      </ul>
+    </li>
+    <li><a href="#autoloading">Autoloading</a>
+      <ul>
+        <li><a href="#spl_autoload_register"><code>spl_autoload_register()</code></a></li>
+        <li><a href="#autoloading-dengan-namespace-psr-4">Autoloading dengan Namespace (PSR-4)</a></li>
+      </ul>
+    </li>
+    <li><a href="#contoh-praktis">Contoh Praktis</a>
+      <ul>
+        <li><a href="#1-struktur-aplikasi-sederhana">1. Struktur Aplikasi Sederhana</a></li>
+        <li><a href="#2-autoloading-dengan-composer">2. Autoloading dengan Composer</a></li>
+      </ul>
+    </li>
+    <li><a href="#tips-dan-best-practice">Tips dan Best Practice</a></li>
+    <li><a href="#ringkasan">Ringkasan</a></li>
+  </ul>
+</nav>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="page-links d-none d-xl-block">
+  <h3>Daftar isi</h3>
+  <nav id="TableOfContents">
+  <ul>
+    <li><a href="#pendahuluan">Pendahuluan</a></li>
+    <li><a href="#include-vs-require">Include vs Require</a>
+      <ul>
+        <li><a href="#include"><code>include</code></a></li>
+        <li><a href="#require"><code>require</code></a></li>
+        <li><a href="#include_once-dan-require_once"><code>include_once</code> dan <code>require_once</code></a></li>
+        <li><a href="#perbandingan">Perbandingan</a></li>
+        <li><a href="#kapan-menggunakan-yang-mana">Kapan Menggunakan yang Mana?</a></li>
+      </ul>
+    </li>
+    <li><a href="#cara-menggunakan-include">Cara Menggunakan Include</a>
+      <ul>
+        <li><a href="#path-relatif">Path Relatif</a></li>
+        <li><a href="#path-absolut">Path Absolut</a></li>
+        <li><a href="#include-dengan-variabel">Include dengan Variabel</a></li>
+        <li><a href="#include-di-dalam-fungsi">Include di Dalam Fungsi</a></li>
+        <li><a href="#return-value">Return Value</a></li>
+      </ul>
+    </li>
+    <li><a href="#struktur-proyek">Struktur Proyek</a>
+      <ul>
+        <li><a href="#mengapa-folder-public">Mengapa Folder <code>public/</code>?</a></li>
+        <li><a href="#konfigurasi-web-server">Konfigurasi Web Server</a></li>
+      </ul>
+    </li>
+    <li><a href="#partials-header-footer-sidebar">Partials: Header, Footer, Sidebar</a>
+      <ul>
+        <li><a href="#templatesheaderphp"><code>templates/header.php</code></a></li>
+        <li><a href="#templatesfooterphp"><code>templates/footer.php</code></a></li>
+        <li><a href="#publicindexphp"><code>public/index.php</code></a></li>
+      </ul>
+    </li>
+    <li><a href="#autoloading">Autoloading</a>
+      <ul>
+        <li><a href="#spl_autoload_register"><code>spl_autoload_register()</code></a></li>
+        <li><a href="#autoloading-dengan-namespace-psr-4">Autoloading dengan Namespace (PSR-4)</a></li>
+      </ul>
+    </li>
+    <li><a href="#contoh-praktis">Contoh Praktis</a>
+      <ul>
+        <li><a href="#1-struktur-aplikasi-sederhana">1. Struktur Aplikasi Sederhana</a></li>
+        <li><a href="#2-autoloading-dengan-composer">2. Autoloading dengan Composer</a></li>
+      </ul>
+    </li>
+    <li><a href="#tips-dan-best-practice">Tips dan Best Practice</a></li>
+    <li><a href="#ringkasan">Ringkasan</a></li>
+  </ul>
+</nav>
+  </div>
+
+		</nav>
+		<main class="docs-content col-lg-11 col-xl-9">
+		
+				<nav aria-label="breadcrumb">
+					<ol class="breadcrumb">
+						<li class="breadcrumb-item"><a href="/">Home</a></li>
+<li class="breadcrumb-item"><a href="/php/">Php</a></li>
+<li class="breadcrumb-item"><a href="/php/tutorial/">Tutorial PHP</a></li>
+<li class="breadcrumb-item active" aria-current="page">Include dan Require</li>
+					</ol>
+				</nav>
+			
+			<h1>Include dan Require</h1>
+			<p class="lead">Saat proyek tumbuh, kode harus dipecah menjadi file-file terpisah agar mudah dikelola. Artikel ini membahas include, require, perbedaannya, struktur proyek, partials, dan autoloading dasar.</p>
+			<nav class="d-xl-none" aria-label="Quaternary navigation">
+				<div class="d-xl-none">
+  <button class="btn btn-outline-primary btn-sm doks-toc-toggle collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#onThisPage" aria-controls="doks-docs-nav" aria-expanded="false" aria-label="Toggle On this page navigation">
+    <span>Daftar isi</span>
+    <span>
+      <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" class="doks doks-expand" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><title>Expand</title><polyline points="7 13 12 18 17 13"></polyline><polyline points="7 6 12 11 17 6"></polyline></svg>
+      <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" class="doks doks-collapse" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><title>Collapse</title><polyline points="17 11 12 6 7 11"></polyline><polyline points="17 18 12 13 7 18"></polyline></svg>
+    </span>
+  </button>
+  <div class="collapse" id="onThisPage">
+    <div class="card card-body mt-3 py-1">
+      <div class="page-links">
+        <nav id="TableOfContents">
+  <ul>
+    <li><a href="#pendahuluan">Pendahuluan</a></li>
+    <li><a href="#include-vs-require">Include vs Require</a>
+      <ul>
+        <li><a href="#include"><code>include</code></a></li>
+        <li><a href="#require"><code>require</code></a></li>
+        <li><a href="#include_once-dan-require_once"><code>include_once</code> dan <code>require_once</code></a></li>
+        <li><a href="#perbandingan">Perbandingan</a></li>
+        <li><a href="#kapan-menggunakan-yang-mana">Kapan Menggunakan yang Mana?</a></li>
+      </ul>
+    </li>
+    <li><a href="#cara-menggunakan-include">Cara Menggunakan Include</a>
+      <ul>
+        <li><a href="#path-relatif">Path Relatif</a></li>
+        <li><a href="#path-absolut">Path Absolut</a></li>
+        <li><a href="#include-dengan-variabel">Include dengan Variabel</a></li>
+        <li><a href="#include-di-dalam-fungsi">Include di Dalam Fungsi</a></li>
+        <li><a href="#return-value">Return Value</a></li>
+      </ul>
+    </li>
+    <li><a href="#struktur-proyek">Struktur Proyek</a>
+      <ul>
+        <li><a href="#mengapa-folder-public">Mengapa Folder <code>public/</code>?</a></li>
+        <li><a href="#konfigurasi-web-server">Konfigurasi Web Server</a></li>
+      </ul>
+    </li>
+    <li><a href="#partials-header-footer-sidebar">Partials: Header, Footer, Sidebar</a>
+      <ul>
+        <li><a href="#templatesheaderphp"><code>templates/header.php</code></a></li>
+        <li><a href="#templatesfooterphp"><code>templates/footer.php</code></a></li>
+        <li><a href="#publicindexphp"><code>public/index.php</code></a></li>
+      </ul>
+    </li>
+    <li><a href="#autoloading">Autoloading</a>
+      <ul>
+        <li><a href="#spl_autoload_register"><code>spl_autoload_register()</code></a></li>
+        <li><a href="#autoloading-dengan-namespace-psr-4">Autoloading dengan Namespace (PSR-4)</a></li>
+      </ul>
+    </li>
+    <li><a href="#contoh-praktis">Contoh Praktis</a>
+      <ul>
+        <li><a href="#1-struktur-aplikasi-sederhana">1. Struktur Aplikasi Sederhana</a></li>
+        <li><a href="#2-autoloading-dengan-composer">2. Autoloading dengan Composer</a></li>
+      </ul>
+    </li>
+    <li><a href="#tips-dan-best-practice">Tips dan Best Practice</a></li>
+    <li><a href="#ringkasan">Ringkasan</a></li>
+  </ul>
+</nav>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="page-links d-none d-xl-block">
+  <h3>Daftar isi</h3>
+  <nav id="TableOfContents">
+  <ul>
+    <li><a href="#pendahuluan">Pendahuluan</a></li>
+    <li><a href="#include-vs-require">Include vs Require</a>
+      <ul>
+        <li><a href="#include"><code>include</code></a></li>
+        <li><a href="#require"><code>require</code></a></li>
+        <li><a href="#include_once-dan-require_once"><code>include_once</code> dan <code>require_once</code></a></li>
+        <li><a href="#perbandingan">Perbandingan</a></li>
+        <li><a href="#kapan-menggunakan-yang-mana">Kapan Menggunakan yang Mana?</a></li>
+      </ul>
+    </li>
+    <li><a href="#cara-menggunakan-include">Cara Menggunakan Include</a>
+      <ul>
+        <li><a href="#path-relatif">Path Relatif</a></li>
+        <li><a href="#path-absolut">Path Absolut</a></li>
+        <li><a href="#include-dengan-variabel">Include dengan Variabel</a></li>
+        <li><a href="#include-di-dalam-fungsi">Include di Dalam Fungsi</a></li>
+        <li><a href="#return-value">Return Value</a></li>
+      </ul>
+    </li>
+    <li><a href="#struktur-proyek">Struktur Proyek</a>
+      <ul>
+        <li><a href="#mengapa-folder-public">Mengapa Folder <code>public/</code>?</a></li>
+        <li><a href="#konfigurasi-web-server">Konfigurasi Web Server</a></li>
+      </ul>
+    </li>
+    <li><a href="#partials-header-footer-sidebar">Partials: Header, Footer, Sidebar</a>
+      <ul>
+        <li><a href="#templatesheaderphp"><code>templates/header.php</code></a></li>
+        <li><a href="#templatesfooterphp"><code>templates/footer.php</code></a></li>
+        <li><a href="#publicindexphp"><code>public/index.php</code></a></li>
+      </ul>
+    </li>
+    <li><a href="#autoloading">Autoloading</a>
+      <ul>
+        <li><a href="#spl_autoload_register"><code>spl_autoload_register()</code></a></li>
+        <li><a href="#autoloading-dengan-namespace-psr-4">Autoloading dengan Namespace (PSR-4)</a></li>
+      </ul>
+    </li>
+    <li><a href="#contoh-praktis">Contoh Praktis</a>
+      <ul>
+        <li><a href="#1-struktur-aplikasi-sederhana">1. Struktur Aplikasi Sederhana</a></li>
+        <li><a href="#2-autoloading-dengan-composer">2. Autoloading dengan Composer</a></li>
+      </ul>
+    </li>
+    <li><a href="#tips-dan-best-practice">Tips dan Best Practice</a></li>
+    <li><a href="#ringkasan">Ringkasan</a></li>
+  </ul>
+</nav>
+  </div>
+
+			</nav>
+			<h2 id="pendahuluan">Pendahuluan <a href="#pendahuluan" class="anchor" aria-hidden="true">#</a></h2>
+<p>Saat proyek PHP tumbuh, menulis semua kode dalam satu file menjadi tidak praktis. Kode menjadi sulit dibaca, sulit diuji, dan sulit dipelihara. Solusinya adalah <strong>memecah kode menjadi file-file terpisah</strong> — header, footer, fungsi, konfigurasi, dan sebagainya.</p>
+<p>PHP menyediakan empat konstruksi untuk menyisipkan file:</p>
+<ul>
+<li><strong><code>include</code></strong></li>
+<li><strong><code>require</code></strong></li>
+<li><strong><code>include_once</code></strong></li>
+<li><strong><code>require_once</code></strong></li>
+</ul>
+<p>Artikel ini membahas perbedaannya, cara menggunakannya, struktur proyek yang baik, dan autoloading dasar.</p>
+<blockquote>
+<p><strong>Asumsi:</strong> Anda sudah memahami fungsi, array, dan session dari artikel sebelumnya.</p>
+</blockquote>
+<hr>
+<h2 id="include-vs-require">Include vs Require <a href="#include-vs-require" class="anchor" aria-hidden="true">#</a></h2>
+<h3 id="include"><code>include</code> <a href="#include" class="anchor" aria-hidden="true">#</a></h3>
+<p>Menyisipkan dan mengeksekusi file. Jika file <strong>tidak ditemukan</strong>, PHP menghasilkan <strong>warning</strong> tetapi <strong>melanjutkan</strong> eksekusi.</p>
+<pre><code class="language-php">&lt;?php
+include &quot;header.php&quot;;
+echo &quot;Konten halaman&quot;;
+include &quot;footer.php&quot;;
+</code></pre>
+<h3 id="require"><code>require</code> <a href="#require" class="anchor" aria-hidden="true">#</a></h3>
+<p>Menyisipkan dan mengeksekusi file. Jika file <strong>tidak ditemukan</strong>, PHP menghasilkan <strong>fatal error</strong> dan <strong>menghentikan</strong> eksekusi.</p>
+<pre><code class="language-php">&lt;?php
+require &quot;config.php&quot;;
+// Jika config.php tidak ada, eksekusi berhenti di sini
+</code></pre>
+<h3 id="include_once-dan-require_once"><code>include_once</code> dan <code>require_once</code> <a href="#include_once-dan-require_once" class="anchor" aria-hidden="true">#</a></h3>
+<p>Sama seperti <code>include</code> dan <code>require</code>, tetapi <strong>hanya menyisipkan file sekali</strong>. Jika file sudah pernah disisipkan, permintaan berikutnya diabaikan.</p>
+<pre><code class="language-php">&lt;?php
+require_once &quot;functions.php&quot;;
+require_once &quot;functions.php&quot;; // diabaikan — tidak error
+</code></pre>
+<h3 id="perbandingan">Perbandingan <a href="#perbandingan" class="anchor" aria-hidden="true">#</a></h3>
+<table>
+<thead>
+<tr>
+<th>Konstruksi</th>
+<th>File Tidak Ditemukan</th>
+<th>Duplikat</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>include</code></td>
+<td>Warning, lanjut</td>
+<td>Disisipkan ulang</td>
+</tr>
+<tr>
+<td><code>require</code></td>
+<td>Fatal error, berhenti</td>
+<td>Disisipkan ulang</td>
+</tr>
+<tr>
+<td><code>include_once</code></td>
+<td>Warning, lanjut</td>
+<td>Diabaikan</td>
+</tr>
+<tr>
+<td><code>require_once</code></td>
+<td>Fatal error, berhenti</td>
+<td>Diabaikan</td>
+</tr>
+</tbody>
+</table>
+<h3 id="kapan-menggunakan-yang-mana">Kapan Menggunakan yang Mana? <a href="#kapan-menggunakan-yang-mana" class="anchor" aria-hidden="true">#</a></h3>
+<table>
+<thead>
+<tr>
+<th>Situasi</th>
+<th>Gunakan</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>File wajib (config, fungsi inti)</td>
+<td><code>require</code> atau <code>require_once</code></td>
+</tr>
+<tr>
+<td>File opsional (template, widget)</td>
+<td><code>include</code> atau <code>include_once</code></td>
+</tr>
+<tr>
+<td>File yang mungkin disisipkan berulang</td>
+<td><code>*_once</code></td>
+</tr>
+<tr>
+<td>File yang aman disisipkan berulang</td>
+<td><code>include</code> / <code>require</code></td>
+</tr>
+</tbody>
+</table>
+<blockquote>
+<p><strong>Rekomendasi:</strong> Gunakan <strong><code>require_once</code></strong> untuk file yang wajib dan tidak boleh duplikat (config, fungsi, class). Gunakan <strong><code>include</code></strong> untuk template yang mungkin disisipkan berulang (misalnya partials).</p>
+</blockquote>
+<hr>
+<h2 id="cara-menggunakan-include">Cara Menggunakan Include <a href="#cara-menggunakan-include" class="anchor" aria-hidden="true">#</a></h2>
+<h3 id="path-relatif">Path Relatif <a href="#path-relatif" class="anchor" aria-hidden="true">#</a></h3>
+<pre><code class="language-php">&lt;?php
+include &quot;header.php&quot;;              // relatif terhadap working directory
+include &quot;./header.php&quot;;            // relatif terhadap file saat ini
+include &quot;../header.php&quot;;           // naik satu folder
+</code></pre>
+<blockquote>
+<p>⚠️ <strong>Peringatan:</strong> Path relatif bergantung pada <strong>working directory</strong>, bukan lokasi file. Ini bisa menyebabkan bug jika file di-include dari folder berbeda.</p>
+</blockquote>
+<h3 id="path-absolut">Path Absolut <a href="#path-absolut" class="anchor" aria-hidden="true">#</a></h3>
+<pre><code class="language-php">&lt;?php
+include __DIR__ . &quot;/header.php&quot;;           // relatif terhadap file ini
+require __DIR__ . &quot;/../config/database.php&quot;;
+</code></pre>
+<p><strong><code>__DIR__</code></strong> adalah konstanta magic yang berisi direktori file saat ini. Ini adalah cara <strong>paling aman</strong> untuk include file.</p>
+<blockquote>
+<p><strong>Tips:</strong> Selalu gunakan <strong><code>__DIR__</code></strong> untuk include file — menghindari masalah path relatif.</p>
+</blockquote>
+<h3 id="include-dengan-variabel">Include dengan Variabel <a href="#include-dengan-variabel" class="anchor" aria-hidden="true">#</a></h3>
+<p>File yang di-include <strong>mewarisi scope</strong> tempat ia di-include.</p>
+<p><strong><code>header.php</code>:</strong></p>
+<pre><code class="language-php">&lt;header&gt;
+    &lt;h1&gt;&lt;?= htmlspecialchars($judul) ?&gt;&lt;/h1&gt;
+    &lt;p&gt;Selamat datang, &lt;?= htmlspecialchars($nama) ?&gt;&lt;/p&gt;
+&lt;/header&gt;
+</code></pre>
+<p><strong><code>index.php</code>:</strong></p>
+<pre><code class="language-php">&lt;?php
+$judul = &quot;Halaman Utama&quot;;
+$nama = &quot;Budi&quot;;
+include __DIR__ . &quot;/header.php&quot;;
+?&gt;
+</code></pre>
+<p>Variabel <code>$judul</code> dan <code>$nama</code> tersedia di <code>header.php</code>.</p>
+<h3 id="include-di-dalam-fungsi">Include di Dalam Fungsi <a href="#include-di-dalam-fungsi" class="anchor" aria-hidden="true">#</a></h3>
+<p>Jika include dilakukan di dalam fungsi, variabel di file yang di-include hanya tersedia di scope fungsi tersebut.</p>
+<pre><code class="language-php">&lt;?php
+function tampilkanHeader() {
+    $judul = &quot;Halaman&quot;;
+    include __DIR__ . &quot;/header.php&quot;;
+}
+
+tampilkanHeader();
+</code></pre>
+<h3 id="return-value">Return Value <a href="#return-value" class="anchor" aria-hidden="true">#</a></h3>
+<p><code>include</code> dan <code>require</code> mengembalikan nilai jika file yang di-include memiliki <code>return</code>.</p>
+<p><strong><code>config.php</code>:</strong></p>
+<pre><code class="language-php">&lt;?php
+return [
+    &quot;host&quot; =&gt; &quot;localhost&quot;,
+    &quot;db&quot; =&gt; &quot;toko_online&quot;,
+];
+</code></pre>
+<p><strong><code>index.php</code>:</strong></p>
+<pre><code class="language-php">&lt;?php
+$config = include __DIR__ . &quot;/config.php&quot;;
+echo $config[&quot;host&quot;]; // &quot;localhost&quot;
+</code></pre>
+<blockquote>
+<p><strong>Tips:</strong> Pola ini sering digunakan untuk file konfigurasi — mengembalikan array daripada mendefinisikan variabel global.</p>
+</blockquote>
+<hr>
+<h2 id="struktur-proyek">Struktur Proyek <a href="#struktur-proyek" class="anchor" aria-hidden="true">#</a></h2>
+<p>Saat proyek tumbuh, struktur folder yang baik sangat penting. Berikut struktur yang direkomendasikan:</p>
+<pre><code>proyek/
+├── public/                  # Document root (yang diakses browser)
+│   ├── index.php
+│   ├── login.php
+│   ├── logout.php
+│   ├── assets/
+│   │   ├── css/
+│   │   ├── js/
+│   │   └── img/
+│   └── uploads/
+├── src/                     # Kode aplikasi
+│   ├── functions.php
+│   ├── auth.php
+│   ├── database.php
+│   └── helpers/
+│       ├── string.php
+│       └── array.php
+├── templates/               # Template HTML
+│   ├── header.php
+│   ├── footer.php
+│   └── sidebar.php
+├── config/                  # Konfigurasi
+│   ├── database.php
+│   └── app.php
+├── vendor/                  # Composer dependencies
+├── .env                     # Environment variables (jangan commit!)
+├── .gitignore
+└── composer.json
+</code></pre>
+<h3 id="mengapa-folder-public">Mengapa Folder <code>public/</code>? <a href="#mengapa-folder-public" class="anchor" aria-hidden="true">#</a></h3>
+<ul>
+<li><strong>Keamanan</strong> — file konfigurasi, kode aplikasi, dan <code>.env</code> <strong>tidak</strong> bisa diakses langsung via URL.</li>
+<li><strong>Kebersihan</strong> — hanya file yang perlu diakses browser yang ada di <code>public/</code>.</li>
+<li><strong>Standar</strong> — banyak framework (Laravel, Symfony) menggunakan struktur ini.</li>
+</ul>
+<h3 id="konfigurasi-web-server">Konfigurasi Web Server <a href="#konfigurasi-web-server" class="anchor" aria-hidden="true">#</a></h3>
+<p><strong>Apache</strong> — arahkan <code>DocumentRoot</code> ke folder <code>public/</code>:</p>
+<pre><code class="language-apache">&lt;VirtualHost *:80&gt;
+    DocumentRoot &quot;/var/www/proyek/public&quot;
+    &lt;Directory &quot;/var/www/proyek/public&quot;&gt;
+        AllowOverride All
+        Require all granted
+    &lt;/Directory&gt;
+&lt;/VirtualHost&gt;
+</code></pre>
+<p><strong>Nginx:</strong></p>
+<pre><code class="language-nginx">server {
+    root /var/www/proyek/public;
+    index index.php;
+
+    location / {
+        try_files $uri $uri/ /index.php?$query_string;
+    }
+
+    location ~ \.php$ {
+        fastcgi_pass unix:/run/php/php8.2-fpm.sock;
+        fastcgi_param SCRIPT_FILENAME $document_root$fastcgi_script_name;
+        include fastcgi_params;
+    }
+}
+</code></pre>
+<p><strong>PHP built-in server:</strong></p>
+<pre><code class="language-bash">php -S localhost:8000 -t public/
+</code></pre>
+<hr>
+<h2 id="partials-header-footer-sidebar">Partials: Header, Footer, Sidebar <a href="#partials-header-footer-sidebar" class="anchor" aria-hidden="true">#</a></h2>
+<p><strong>Partial</strong> adalah file template yang disisipkan ke banyak halaman — header, footer, sidebar, navigasi.</p>
+<h3 id="templatesheaderphp"><code>templates/header.php</code> <a href="#templatesheaderphp" class="anchor" aria-hidden="true">#</a></h3>
+<pre><code class="language-php">&lt;!DOCTYPE html&gt;
+&lt;html lang=&quot;id&quot;&gt;
+&lt;head&gt;
+    &lt;meta charset=&quot;UTF-8&quot;&gt;
+    &lt;meta name=&quot;viewport&quot; content=&quot;width=device-width, initial-scale=1.0&quot;&gt;
+    &lt;title&gt;&lt;?= htmlspecialchars($judul ?? &quot;Aplikasi&quot;) ?&gt;&lt;/title&gt;
+    &lt;link rel=&quot;stylesheet&quot; href=&quot;/assets/css/style.css&quot;&gt;
+&lt;/head&gt;
+&lt;body&gt;
+    &lt;header&gt;
+        &lt;nav&gt;
+            &lt;a href=&quot;/&quot;&gt;Beranda&lt;/a&gt;
+            &lt;a href=&quot;/produk.php&quot;&gt;Produk&lt;/a&gt;
+            &lt;a href=&quot;/keranjang.php&quot;&gt;Keranjang&lt;/a&gt;
+            &lt;?php if (isset($_SESSION[&quot;user_id&quot;])): ?&gt;
+                &lt;span&gt;Halo, &lt;?= htmlspecialchars($_SESSION[&quot;user_nama&quot;]) ?&gt;&lt;/span&gt;
+                &lt;a href=&quot;/logout.php&quot;&gt;Logout&lt;/a&gt;
+            &lt;?php else: ?&gt;
+                &lt;a href=&quot;/login.php&quot;&gt;Login&lt;/a&gt;
+            &lt;?php endif; ?&gt;
+        &lt;/nav&gt;
+    &lt;/header&gt;
+    &lt;main&gt;
+</code></pre>
+<h3 id="templatesfooterphp"><code>templates/footer.php</code> <a href="#templatesfooterphp" class="anchor" aria-hidden="true">#</a></h3>
+<pre><code class="language-php">    &lt;/main&gt;
+    &lt;footer&gt;
+        &lt;p&gt;&amp;copy; &lt;?= date(&quot;Y&quot;) ?&gt; Toko Online. All rights reserved.&lt;/p&gt;
+    &lt;/footer&gt;
+    &lt;script src=&quot;/assets/js/app.js&quot;&gt;&lt;/script&gt;
+&lt;/body&gt;
+&lt;/html&gt;
+</code></pre>
+<h3 id="publicindexphp"><code>public/index.php</code> <a href="#publicindexphp" class="anchor" aria-hidden="true">#</a></h3>
+<pre><code class="language-php">&lt;?php
+session_start();
+
+$judul = &quot;Halaman Utama&quot;;
+require __DIR__ . &quot;/../templates/header.php&quot;;
+?&gt;
+
+&lt;h1&gt;Selamat datang!&lt;/h1&gt;
+&lt;p&gt;Ini adalah halaman utama aplikasi.&lt;/p&gt;
+
+&lt;?php require __DIR__ . &quot;/../templates/footer.php&quot;; ?&gt;
+</code></pre>
+<blockquote>
+<p><strong>Tips:</strong> Gunakan <code>require</code> untuk partials yang wajib (header, footer) dan <code>include</code> untuk partials opsional (sidebar, widget).</p>
+</blockquote>
+<hr>
+<h2 id="autoloading">Autoloading <a href="#autoloading" class="anchor" aria-hidden="true">#</a></h2>
+<p>Saat proyek memiliki banyak class, menulis <code>require</code> untuk setiap class menjadi tidak praktis. <strong>Autoloading</strong> memungkinkan PHP memuat class secara otomatis saat dibutuhkan.</p>
+<h3 id="spl_autoload_register"><code>spl_autoload_register()</code> <a href="#spl_autoload_register" class="anchor" aria-hidden="true">#</a></h3>
+<pre><code class="language-php">&lt;?php
+spl_autoload_register(function ($className) {
+    $file = __DIR__ . &quot;/src/&quot; . str_replace(&quot;\\&quot;, &quot;/&quot;, $className) . &quot;.php&quot;;
+    if (file_exists($file)) {
+        require $file;
+    }
+});
+
+// Sekarang class dimuat otomatis
+$user = new User();        // memuat src/User.php
+$produk = new Produk();    // memuat src/Produk.php
+</code></pre>
+<h3 id="autoloading-dengan-namespace-psr-4">Autoloading dengan Namespace (PSR-4) <a href="#autoloading-dengan-namespace-psr-4" class="anchor" aria-hidden="true">#</a></h3>
+<p><strong>PSR-4</strong> adalah standar autoloading yang memetakan namespace ke folder.</p>
+<p><strong>Struktur:</strong></p>
+<pre><code>src/
+├── Models/
+│   ├── User.php          (namespace App\Models)
+│   └── Produk.php        (namespace App\Models)
+├── Controllers/
+│   └── UserController.php (namespace App\Controllers)
+└── Helpers/
+    └── Str.php            (namespace App\Helpers)
+</code></pre>
+<p><strong><code>src/Models/User.php</code>:</strong></p>
+<pre><code class="language-php">&lt;?php
+namespace App\Models;
+
+class User {
+    public function __construct(
+        public string $nama,
+        public string $email,
+    ) {}
+}
+</code></pre>
+<p><strong>Autoloader:</strong></p>
+<pre><code class="language-php">&lt;?php
+spl_autoload_register(function ($className) {
+    $prefix = &quot;App\\&quot;;
+    $baseDir = __DIR__ . &quot;/src/&quot;;
+
+    $len = strlen($prefix);
+    if (strncmp($prefix, $className, $len) !== 0) {
+        return;
+    }
+
+    $relativeClass = substr($className, $len);
+    $file = $baseDir . str_replace(&quot;\\&quot;, &quot;/&quot;, $relativeClass) . &quot;.php&quot;;
+
+    if (file_exists($file)) {
+        require $file;
+    }
+});
+
+// Penggunaan
+use App\Models\User;
+
+$user = new User(&quot;Budi&quot;, &quot;budi@example.com&quot;);
+echo $user-&gt;nama; // &quot;Budi&quot;
+</code></pre>
+<blockquote>
+<p><strong>Tips:</strong> Untuk proyek nyata, gunakan <strong>Composer</strong> — autoloading PSR-4 sudah ditangani otomatis (dibahas di artikel Composer).</p>
+</blockquote>
+<hr>
+<h2 id="contoh-praktis">Contoh Praktis <a href="#contoh-praktis" class="anchor" aria-hidden="true">#</a></h2>
+<h3 id="1-struktur-aplikasi-sederhana">1. Struktur Aplikasi Sederhana <a href="#1-struktur-aplikasi-sederhana" class="anchor" aria-hidden="true">#</a></h3>
+<p><strong><code>config/app.php</code>:</strong></p>
+<pre><code class="language-php">&lt;?php
+return [
+    &quot;nama&quot; =&gt; &quot;Toko Online&quot;,
+    &quot;versi&quot; =&gt; &quot;1.0.0&quot;,
+    &quot;timezone&quot; =&gt; &quot;Asia/Jakarta&quot;,
+    &quot;debug&quot; =&gt; true,
+];
+</code></pre>
+<p><strong><code>config/database.php</code>:</strong></p>
+<pre><code class="language-php">&lt;?php
+return [
+    &quot;host&quot; =&gt; &quot;localhost&quot;,
+    &quot;port&quot; =&gt; 3306,
+    &quot;database&quot; =&gt; &quot;toko_online&quot;,
+    &quot;username&quot; =&gt; &quot;root&quot;,
+    &quot;password&quot; =&gt; &quot;&quot;,
+];
+</code></pre>
+<p><strong><code>src/database.php</code>:</strong></p>
+<pre><code class="language-php">&lt;?php
+function getKoneksi(): PDO {
+    static $pdo = null;
+
+    if ($pdo === null) {
+        $config = require __DIR__ . &quot;/../config/database.php&quot;;
+        $dsn = &quot;mysql:host={$config['host']};port={$config['port']};dbname={$config['database']};charset=utf8mb4&quot;;
+
+        $pdo = new PDO($dsn, $config[&quot;username&quot;], $config[&quot;password&quot;], [
+            PDO::ATTR_ERRMODE =&gt; PDO::ERRMODE_EXCEPTION,
+            PDO::ATTR_DEFAULT_FETCH_MODE =&gt; PDO::FETCH_ASSOC,
+            PDO::ATTR_EMULATE_PREPARES =&gt; false,
+        ]);
+    }
+
+    return $pdo;
+}
+</code></pre>
+<p><strong><code>src/helpers.php</code>:</strong></p>
+<pre><code class="language-php">&lt;?php
+function formatRupiah(float $angka): string {
+    return &quot;Rp&quot; . number_format($angka, 0, &quot;,&quot;, &quot;.&quot;);
+}
+
+function e(string $teks): string {
+    return htmlspecialchars($teks, ENT_QUOTES, &quot;UTF-8&quot;);
+}
+
+function redirect(string $url): never {
+    header(&quot;Location: $url&quot;);
+    exit;
+}
+</code></pre>
+<p><strong><code>public/index.php</code>:</strong></p>
+<pre><code class="language-php">&lt;?php
+session_start();
+
+// Load konfigurasi dan helper
+$config = require __DIR__ . &quot;/../config/app.php&quot;;
+require_once __DIR__ . &quot;/../src/helpers.php&quot;;
+require_once __DIR__ . &quot;/../src/database.php&quot;;
+
+// Set timezone
+date_default_timezone_set($config[&quot;timezone&quot;]);
+
+// Ambil data
+$pdo = getKoneksi();
+$stmt = $pdo-&gt;query(&quot;SELECT id, nama, harga FROM produk ORDER BY nama&quot;);
+$produk = $stmt-&gt;fetchAll();
+
+// Render
+$judul = &quot;Daftar Produk&quot;;
+require __DIR__ . &quot;/../templates/header.php&quot;;
+?&gt;
+
+&lt;h1&gt;Daftar Produk&lt;/h1&gt;
+&lt;ul&gt;
+    &lt;?php foreach ($produk as $p): ?&gt;
+        &lt;li&gt;
+            &lt;?= e($p[&quot;nama&quot;]) ?&gt; - &lt;?= formatRupiah($p[&quot;harga&quot;]) ?&gt;
+        &lt;/li&gt;
+    &lt;?php endforeach; ?&gt;
+&lt;/ul&gt;
+
+&lt;?php require __DIR__ . &quot;/../templates/footer.php&quot;; ?&gt;
+</code></pre>
+<h3 id="2-autoloading-dengan-composer">2. Autoloading dengan Composer <a href="#2-autoloading-dengan-composer" class="anchor" aria-hidden="true">#</a></h3>
+<p>Jika menggunakan Composer, autoloading PSR-4 cukup didefinisikan di <code>composer.json</code>:</p>
+<pre><code class="language-json">{
+    &quot;autoload&quot;: {
+        &quot;psr-4&quot;: {
+            &quot;App\\&quot;: &quot;src/&quot;
+        },
+        &quot;files&quot;: [
+            &quot;src/helpers.php&quot;
+        ]
+    }
+}
+</code></pre>
+<p>Setelah menjalankan <code>composer dump-autoload</code>, cukup:</p>
+<pre><code class="language-php">&lt;?php
+require __DIR__ . &quot;/../vendor/autoload.php&quot;;
+
+use App\Models\User;
+
+$user = new User(&quot;Budi&quot;, &quot;budi@example.com&quot;);
+</code></pre>
+<blockquote>
+<p><strong>Tips:</strong> Composer menangani autoloading PSR-4 dan file yang perlu selalu dimuat (via <code>files</code>). Ini adalah standar industri.</p>
+</blockquote>
+<hr>
+<h2 id="tips-dan-best-practice">Tips dan Best Practice <a href="#tips-dan-best-practice" class="anchor" aria-hidden="true">#</a></h2>
+<ol>
+<li>
+<p><strong>Gunakan <code>__DIR__</code></strong> untuk include file — menghindari masalah path relatif.</p>
+</li>
+<li>
+<p><strong>Gunakan <code>require_once</code></strong> untuk file wajib dan tidak boleh duplikat (config, fungsi, class).</p>
+</li>
+<li>
+<p><strong>Gunakan <code>include</code></strong> untuk template yang mungkin disisipkan berulang.</p>
+</li>
+<li>
+<p><strong>Struktur folder dengan <code>public/</code></strong> sebagai document root — meningkatkan keamanan.</p>
+</li>
+<li>
+<p><strong>Pisahkan konfigurasi</strong> ke folder <code>config/</code> — jangan hardcode di kode.</p>
+</li>
+<li>
+<p><strong>Gunakan Composer</strong> untuk autoloading PSR-4 di proyek nyata.</p>
+</li>
+<li>
+<p><strong>Hindari include file dari input user</strong> — bisa menyebabkan <strong>Local File Inclusion</strong> (LFI).</p>
+</li>
+</ol>
+<pre><code class="language-php">&lt;?php
+// ❌ SANGAT BERBAHAYA — LFI
+include $_GET[&quot;page&quot;] . &quot;.php&quot;;
+
+// ✅ AMAN — whitelist
+$halamanValid = [&quot;home&quot;, &quot;produk&quot;, &quot;kontak&quot;];
+$halaman = $_GET[&quot;page&quot;] ?? &quot;home&quot;;
+if (!in_array($halaman, $halamanValid, true)) {
+    $halaman = &quot;home&quot;;
+}
+include __DIR__ . &quot;/pages/$halaman.php&quot;;
+</code></pre>
+<ol start="8">
+<li>
+<p><strong>Gunakan <code>require</code></strong> untuk file yang wajib — jangan biarkan aplikasi berjalan tanpa config.</p>
+</li>
+<li>
+<p><strong>Hindari include file dari URL</strong> — <code>allow_url_include</code> harus <code>Off</code>.</p>
+</li>
+<li>
+<p><strong>Dokumentasikan struktur proyek</strong> di README — memudahkan kolaborasi.</p>
+</li>
+<li>
+<p><strong>Gunakan <code>return</code></strong> di file config — mengembalikan array daripada variabel global.</p>
+</li>
+<li>
+<p><strong>Untuk class, gunakan autoloading</strong> — jangan <code>require</code> manual satu per satu.</p>
+</li>
+</ol>
+<hr>
+<h2 id="ringkasan">Ringkasan <a href="#ringkasan" class="anchor" aria-hidden="true">#</a></h2>
+<table>
+<thead>
+<tr>
+<th>Konstruksi</th>
+<th>File Tidak Ada</th>
+<th>Duplikat</th>
+<th>Kapan Digunakan</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>include</code></td>
+<td>Warning, lanjut</td>
+<td>Disisipkan</td>
+<td>Template opsional</td>
+</tr>
+<tr>
+<td><code>require</code></td>
+<td>Fatal error</td>
+<td>Disisipkan</td>
+<td>File wajib</td>
+</tr>
+<tr>
+<td><code>include_once</code></td>
+<td>Warning, lanjut</td>
+<td>Diabaikan</td>
+<td>Template yang mungkin duplikat</td>
+</tr>
+<tr>
+<td><code>require_once</code></td>
+<td>Fatal error</td>
+<td>Diabaikan</td>
+<td>File wajib yang tidak boleh duplikat</td>
+</tr>
+</tbody>
+</table>
+<p>Poin penting:</p>
+<ul>
+<li><strong><code>include</code></strong> menghasilkan warning jika file tidak ada; <strong><code>require</code></strong> menghasilkan fatal error.</li>
+<li><strong><code>*_once</code></strong> mencegah file disisipkan lebih dari sekali.</li>
+<li><strong><code>__DIR__</code></strong> adalah cara aman untuk path file — menghindari masalah path relatif.</li>
+<li><strong>Struktur folder dengan <code>public/</code></strong> meningkatkan keamanan — file konfigurasi tidak bisa diakses langsung.</li>
+<li><strong>Partials</strong> (header, footer, sidebar) memecah template menjadi bagian yang dapat digunakan ulang.</li>
+<li><strong>Autoloading</strong> memuat class secara otomatis — gunakan <code>spl_autoload_register()</code> atau Composer.</li>
+<li><strong>Jangan include file dari input user</strong> — risiko <strong>Local File Inclusion</strong> (LFI).</li>
+<li><strong>Gunakan <code>return</code></strong> di file config — mengembalikan array daripada variabel global.</li>
+<li><strong>Composer</strong> adalah standar industri untuk autoloading PSR-4.</li>
+</ul>
+<p>Pada artikel berikutnya, kita akan membahas <strong>Koneksi PHP ke MySQL</strong> — menghubungkan aplikasi ke database.</p>
+
+			<div class="page-footer-meta d-flex flex-column flex-md-row justify-content-between">
+				</div>
+			<div class="docs-navigation d-flex justify-content-between">
+	
+	<a href="/php/tutorial/10-session-cookie/">
+			<div class="card my-1">
+				<div class="card-body py-2">
+					&larr; Session dan Cookie
+				</div>
+			</div>
+		</a>
+	</div>
+
+			
+		</main>
+	</div>
+
+      </div>
+    </div>
+    
+    
+    <footer class="footer text-muted">
+  <div class="container-xxl">
+    <div class="row">
+      <div class="col-lg-8 order-last order-lg-first">
+        <ul class="list-inline">
+          <li class="list-inline-item">Powered by <a class="text-muted" href="https://gohugo.io/">Hugo</a> and <a class="text-muted" href="https://github.com/">Github</a></li>
+        </ul>
+      </div>
+      <div class="col-lg-8 order-first order-lg-last text-lg-end">
+        <ul class="list-inline">
+          </ul>
+      </div>
+    </div>
+  </div>
+</footer>
+    
+
+<script src="/js/bootstrap.min.650aeec64c81d69d4c0850fc73c93da3f0330cec0a27772feed7f90f60baa5f47f1c45687d71914bdafd1c4e860d40f6dc08ede27a2f08431ff929c9a2d24621.js" integrity="sha512-ZQruxkyB1p1MCFD8c8k9o/AzDOwKJ3cv7tf5D2C6pfR/HEVofXGRS9r9HE6GDUD23Ajt4novCEMf&#43;SnJotJGIQ==" crossorigin="anonymous" defer></script>
+  <script src="/js/highlight.min.ec234bd8a5f487aaffe50a89f17b14501b1bb65633cf177cffd4cb84702dd7030edc08712dceb8dc27ac7e54b53240a08bf0b8d951572ee582bcdbbd06a48a7b.js" integrity="sha512-7CNL2KX0h6r/5QqJ8XsUUBsbtlYzzxd8/9TLhHAt1wMO3AhxLc643CesflS1MkCgi/C42VFXLuWCvNu9BqSKew==" crossorigin="anonymous" defer></script>
+  <script src="/main.min.cd1e5e6b40065b3f7f7fd8548a528fac67019754eda0f37b9918d02d154fc9ef6a22742f6513b0572ad9163152e151ec36221fbeafbecd7759c3dab1f19b64b9.js" integrity="sha512-zR5ea0AGWz9/f9hUilKPrGcBl1TtoPN7mRjQLRVPye9qInQvZROwVyrZFjFS4VHsNiIfvq&#43;&#43;zXdZw9qx8ZtkuQ==" crossorigin="anonymous" defer></script>
+  <script src="https://kaban.my.id/index.min.797ba4de6d8a5423115e651882a6de105e1744ee10ab32e79b10db26c6fbcd5d2706c0392c663ea0d01e04e8a21e3a87bb2ea742d9df2d62f481a7e793b68ec4.js" integrity="sha512-eXuk3m2KVCMRXmUYgqbeEF4XRO4QqzLnmxDbJsb7zV0nBsA5LGY&#43;oNAeBOiiHjqHuy6nQtnfLWL0gafnk7aOxA==" crossorigin="anonymous" defer></script>
+  
+    <div class="d-flex fixed-bottom pb-4 pb-lg-5 pe-4 pe-lg-5">
+      <a id="toTop" href="#" class="btn btn-outline-primary rounded-circle ms-auto p-2"><span class="visually-hidden">Top</span><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-chevron-up"><polyline points="18 15 12 9 6 15"></polyline></svg></a>
+    </div>
+    
+  </body>
+</html>

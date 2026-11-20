@@ -1,0 +1,1880 @@
+<!doctype html>
+<html lang="en-US">
+  <head>
+  <meta charset="utf-8">
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <link rel="preload" as="font" href="https://kaban.my.id/fonts/vendor/jost/jost-v4-latin-regular.woff2" type="font/woff2" crossorigin>
+<link rel="preload" as="font" href="https://kaban.my.id/fonts/vendor/jost/jost-v4-latin-500.woff2" type="font/woff2" crossorigin>
+<link rel="preload" as="font" href="https://kaban.my.id/fonts/vendor/jost/jost-v4-latin-700.woff2" type="font/woff2" crossorigin>
+
+  <script>(()=>{var t=window.matchMedia&&window.matchMedia("(prefers-color-scheme: dark)").matches,e=localStorage.getItem("theme");t&&e===null&&(localStorage.setItem("theme","dark"),document.documentElement.setAttribute("data-dark-mode","")),t&&e==="dark"&&document.documentElement.setAttribute("data-dark-mode",""),e==="dark"&&document.documentElement.setAttribute("data-dark-mode","")})()</script>
+
+  <link rel="stylesheet" href="https://kaban.my.id/main.4296e689affcd00e933b8954c10fc43cd1a5f16d5552e78183d12ea50d3e0bf5a596df23a379a4936743f01a7cd8ba048a628b2b9b60b34aa49fad468287100a.css" integrity="sha512-Qpbmia/80A6TO4lUwQ/EPNGl8W1VUueBg9EupQ0&#43;C/Wllt8jo3mkk2dD8Bp82LoEimKLK5tgs0qkn61GgocQCg==" crossorigin="anonymous">
+<noscript><style>img.lazyload { display: none; }</style></noscript>
+  <meta name="robots" content="index, follow">
+    <meta name="googlebot" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1">
+    <meta name="bingbot" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1">
+  <title>Array dan Method-nya - Roberto Kaban Blog&#39;s</title>
+<meta name="description" content="Panduan lengkap array PHP: indexed array, associative array, multidimensional, method manipulasi, sorting, dan iterasi.">
+<link rel="canonical" href="https://kaban.my.id/php/tutorial/07-array/">
+<meta property="og:locale" content="en_US">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Array dan Method-nya">
+<meta property="og:description" content="Panduan lengkap array PHP: indexed array, associative array, multidimensional, method manipulasi, sorting, dan iterasi.">
+<meta property="og:url" content="https://kaban.my.id/php/tutorial/07-array/">
+<meta property="og:site_name" content="Roberto Kaban Blog&#39;s">
+<meta property="article:published_time" content="2023-01-09T08:00:00+00:00">
+  <meta property="article:modified_time" content="2023-01-09T08:00:00+00:00">
+  
+  <meta property="og:image" content="https://kaban.my.id/doks.png"/>
+      <meta property="og:image:alt" content="Roberto Kaban Blog&#39;s">
+    
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:site" content="@robertokaban">
+<meta name="twitter:creator" content="@robertokaban">
+<meta name="twitter:title" content="Array dan Method-nya">
+<meta name="twitter:description" content="Panduan lengkap array PHP: indexed array, associative array, multidimensional, method manipulasi, sorting, dan iterasi.">
+<meta name="twitter:image" content="https://kaban.my.id/doks.png">
+    <meta name="twitter:image:alt" content="Array dan Method-nya">
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "Person",
+        "@id": "https://kaban.my.id/#/schema/person/1",
+      "name": "BlogRobertoKaban",
+      "url": "https://kaban.my.id/",
+      "sameAs": [
+        "https://twitter.com/robertokaban"
+        , "https://github.com/robertokaban"
+        ],
+      "image": {
+          "@type": "ImageObject",
+          "@id": "https://kaban.my.id/#/schema/image/1",
+          "url": "https://kaban.my.id/doks.png",
+          "width":  1280 ,
+          "height":  640 ,
+          "caption": "BlogRobertoKaban"
+        }
+      },
+    {
+      "@type": "WebSite",
+      "@id": "https://kaban.my.id/#/schema/website/1",
+      "url": "https://kaban.my.id/",
+      "name": "Roberto Kaban Blog\u0027s",
+      "description": "Hanya sebuah catatan kecil untuk hal yang tidak ingin dilupakan.",
+      "publisher": {
+          "@id": "https://kaban.my.id/#/schema/person/1"
+        }
+      },
+    {
+      "@type": "WebPage",
+      "@id": "https://kaban.my.id/php/tutorial/07-array/",
+      "url": "https://kaban.my.id/php/tutorial/07-array/",
+      "name": "Array dan Method-nya",
+      "description": "Panduan lengkap array PHP: indexed array, associative array, multidimensional, method manipulasi, sorting, dan iterasi.",
+      "isPartOf": {
+        "@id": "https://kaban.my.id/#/schema/website/1"
+      },
+      "about": {
+          "@id": "https://kaban.my.id/#/schema/person/1"
+        },
+      "datePublished": "2023-01-09T08:00:00CET",
+      "dateModified": "2023-01-09T08:00:00CET",
+      "breadcrumb": {
+        "@id": "https://kaban.my.id/php/tutorial/07-array/#/schema/breadcrumb/1"
+      },
+      "primaryImageOfPage": {
+        "@id": "https://kaban.my.id/php/tutorial/07-array/#/schema/image/2"
+      },
+      "inLanguage": "en-US",
+      "potentialAction": [{
+        "@type": "ReadAction", "target": ["https://kaban.my.id/php/tutorial/07-array/"]
+      }]
+    },
+    {
+      "@type": "BreadcrumbList",
+      "@id": "https://kaban.my.id/php/tutorial/07-array/#/schema/breadcrumb/1",
+      "name": "Breadcrumbs",
+      "itemListElement": [{
+        "@type": "ListItem",
+        "position":  1 ,
+        "item": {
+          "@type": "WebPage",
+          "@id": "https://kaban.my.id/",
+          "url": "https://kaban.my.id/",
+          "name": "Home"
+          }
+        },{
+        "@type": "ListItem",
+        "position":  2 ,
+        "item": {
+          "@type": "WebPage",
+          "@id": "https://kaban.my.id/php/",
+          "url": "https://kaban.my.id/php/",
+          "name": "Php"
+          }
+        },{
+        "@type": "ListItem",
+        "position":  3 ,
+        "item": {
+          "@type": "WebPage",
+          "@id": "https://kaban.my.id/php/tutorial/",
+          "url": "https://kaban.my.id/php/tutorial/",
+          "name": "Tutorial"
+          }
+        },{
+        "@type": "ListItem",
+        "position":  4 ,
+        "item": {
+          "@id": "https://kaban.my.id/php/tutorial/07-array/"
+          }
+        }]
+    },
+
+    {
+      "@context": "https://schema.org",
+      "@graph": [
+        {
+          "@type": "ImageObject",
+          "@id": "https://kaban.my.id/php/tutorial/07-array/#/schema/image/2",
+          "url": "https://kaban.my.id/doks.png",
+          "contentUrl": "https://kaban.my.id/doks.png",
+          "caption": "Array dan Method-nya"
+        }
+      ]
+    }
+
+  ]
+}
+</script>
+
+  <meta name="theme-color" content="#fff">
+<link rel="icon" href="https://kaban.my.id/favicon.ico" sizes="any">
+<link rel="icon" type="image/svg+xml" href="https://kaban.my.id/favicon.svg">
+<link rel="apple-touch-icon" sizes="180x180" href="https://kaban.my.id/apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="32x32" href="https://kaban.my.id/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="https://kaban.my.id/favicon-16x16.png">
+<link rel="manifest" crossorigin="use-credentials" href="https://kaban.my.id/site.webmanifest">
+
+  
+
+
+  
+  
+  
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-60VSDZFQR5"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-60VSDZFQR5');
+</script>
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6664512614760985"
+     crossorigin="anonymous"></script>
+</head>
+
+  <body class="php single">
+    <div class="sticky-top">
+<div class="header-bar"></div>
+
+<header class="navbar navbar-expand-lg navbar-light doks-navbar">
+  <nav class="container-xxl flex-wrap flex-lg-nowrap" aria-label="Main navigation">
+
+    <a class="navbar-brand order-0" href="/" aria-label="Roberto Kaban Blog&#39;s">
+      Roberto Kaban Blog&#39;s
+    </a>
+
+    <button class="btn btn-menu order-2 d-block d-lg-none" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasDoks" aria-controls="offcanvasDoks" aria-label="Open main menu">
+      <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-menu"><line x1="3" y1="12" x2="21" y2="12"></line><line x1="3" y1="6" x2="21" y2="6"></line><line x1="3" y1="18" x2="21" y2="18"></line></svg>
+    </button>
+    <div class="offcanvas offcanvas-end border-0 py-lg-1" tabindex="-1" id="offcanvasDoks" data-bs-backdrop="true" aria-labelledby="offcanvasDoksLabel">
+      <div class="header-bar d-lg-none"></div>
+      <div class="offcanvas-header d-lg-none">
+        <h2 class="h5 offcanvas-title ps-2" id="offcanvasDoksLabel"><a class="text-dark" href="/">Roberto Kaban Blog&#39;s</a></h2>
+        <button type="button" class="btn-close text-reset me-2" data-bs-dismiss="offcanvas" aria-label="Close main menu"></button>
+      </div>
+      <div class="offcanvas-body p-4 p-lg-0">
+        <ul class="nav flex-column flex-lg-row align-items-lg-center mt-2 mt-lg-0 ms-lg-2 me-lg-auto">
+              <li class="nav-item">
+                <a class="nav-link ps-0 py-1" href="/about/">About Me</a>
+              </li>
+            
+          
+              <li class="nav-item">
+                <a class="nav-link ps-0 py-1" href="/contact/">Contact</a>
+              </li>
+            
+          
+              <li class="nav-item">
+                <a class="nav-link ps-0 py-1" href="/artikel/">Artikel</a>
+              </li>
+            
+          
+              <li class="nav-item">
+                <a class="nav-link ps-0 py-1" href="/coretanku/">Coretanku</a>
+              </li>
+            
+          </ul>
+
+        <hr class="text-black-50 my-4 d-lg-none">
+        <form class="doks-search position-relative flex-grow-1 ms-lg-auto me-lg-2">
+          <input id="search" class="form-control is-search" type="search" placeholder="Cari di blog ini..." aria-label="Cari di blog ini..." autocomplete="off">
+          <div id="suggestions" class="shadow bg-white rounded d-none"></div>
+        </form>
+        <hr class="text-black-50 my-4 d-lg-none">
+        <ul class="nav flex-column flex-lg-row">
+          <li class="nav-item">
+              <a class="nav-link social-link" href="https://github.com/robertokaban"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-github"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path></svg><small class="ms-2 d-lg-none">GitHub</small></a>
+            </li>
+          <li class="nav-item">
+              <a class="nav-link social-link" href="https://facebook.com/roberto.kaban"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-facebook"><path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"></path></svg><small class="ms-2 d-lg-none">Facebook</small></a>
+            </li>
+          <li class="nav-item">
+              <a class="nav-link social-link" href="https://twitter.com/robertokaban"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-twitter"><path d="M23 3a10.9 10.9 0 0 1-3.14 1.53 4.48 4.48 0 0 0-7.86 3v1A10.66 10.66 0 0 1 3 4s-4 9 5 13a11.64 11.64 0 0 1-7 2c9 5 20 0 20-11.5a4.5 4.5 0 0 0-.08-.83A7.72 7.72 0 0 0 23 3z"></path></svg><small class="ms-2 d-lg-none">Twitter</small></a>
+            </li>
+          <li class="nav-item">
+              <a class="nav-link social-link" href="https://youtube.com/@robertokaban"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-youtube"><path d="M10,15L15.19,12L10,9V15M21.56,7.17C21.69,7.64 21.78,8.27 21.84,9.07C21.91,9.87 21.94,10.56 21.94,11.16L22,12C22,14.19 21.84,15.8 21.56,16.83C21.31,17.73 20.73,18.31 19.83,18.56C19.36,18.69 18.5,18.78 17.18,18.84C15.88,18.91 14.69,18.94 13.59,18.94L12,19C7.81,19 5.2,18.84 4.17,18.56C3.27,18.31 2.69,17.73 2.44,16.83C2.31,16.36 2.22,15.73 2.16,14.93C2.09,14.13 2.06,13.44 2.06,12.84L2,12C2,9.81 2.16,8.2 2.44,7.17C2.69,6.27 3.27,5.69 4.17,5.44C4.64,5.31 5.5,5.22 6.82,5.16C8.12,5.09 9.31,5.06 10.41,5.06L12,5C16.19,5 18.8,5.16 19.83,5.44C20.73,5.69 21.31,6.27 21.56,7.17Z"></path></svg><small class="ms-2 d-lg-none">Youtube</small></a>
+            </li>
+          </ul>
+
+        
+        <hr class="text-black-50 my-4 d-lg-none">
+        <button id="mode" class="btn btn-link" type="button" aria-label="Toggle user interface mode">
+          <span class="toggle-dark"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-moon"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path></svg></span>
+          <span class="toggle-light"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-sun"><circle cx="12" cy="12" r="5"></circle><line x1="12" y1="1" x2="12" y2="3"></line><line x1="12" y1="21" x2="12" y2="23"></line><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line><line x1="1" y1="12" x2="3" y2="12"></line><line x1="21" y1="12" x2="23" y2="12"></line><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line></svg></span>
+        </button>
+        
+
+        </div>
+    </div>
+  </nav>
+</header>
+
+
+</div>
+
+
+<div class="container-xxl">
+  <aside class="doks-sidebar">
+    <nav id="doks-docs-nav" class="collapse d-lg-none" aria-label="Tertiary navigation">
+      
+<ul class="list-unstyled collapsible-sidebar">
+  
+    
+      
+      <li class="mb-1">
+        <button class="btn btn-toggle align-items-center rounded collapsed" data-bs-toggle="collapse" data-bs-target="#section-de2591224751442a3b2101e94880333c" aria-expanded="true">
+          Tutorial PHP
+        </button>
+        <div class="collapse show" id="section-de2591224751442a3b2101e94880333c">
+          <ul class="btn-toggle-nav list-unstyled fw-normal pb-1 small">
+            
+              
+                
+                <li><a class="docs-link rounded" href="https://kaban.my.id/php/tutorial/pengenalan/">Pengenalan PHP</a></li>
+              
+            
+              
+                
+                <li><a class="docs-link rounded" href="https://kaban.my.id/php/tutorial/02-instalasi-persiapan/">Instalasi &amp; Persiapan Lingkungan PHP</a></li>
+              
+            
+              
+                
+                <li><a class="docs-link rounded" href="https://kaban.my.id/php/tutorial/03-sintaks-variabel/">Sintaks Dasar &amp; Variabel PHP</a></li>
+              
+            
+              
+                
+                <li><a class="docs-link rounded" href="https://kaban.my.id/php/tutorial/04-tipe-data-konversi/">Tipe Data &amp; Konversi</a></li>
+              
+            
+              
+                
+                <li><a class="docs-link rounded" href="https://kaban.my.id/php/tutorial/05-struktur-kontrol/">Struktur Kontrol &amp; Perulangan</a></li>
+              
+            
+              
+                
+                <li><a class="docs-link rounded" href="https://kaban.my.id/php/tutorial/06-fungsi/">Fungsi</a></li>
+              
+            
+              
+                
+                <li><a class="docs-link rounded active" href="https://kaban.my.id/php/tutorial/07-array/">Array dan Method-nya</a></li>
+              
+            
+              
+                
+                <li><a class="docs-link rounded" href="https://kaban.my.id/php/tutorial/08-string/">String dan Manipulasi</a></li>
+              
+            
+              
+                
+                <li><a class="docs-link rounded" href="https://kaban.my.id/php/tutorial/09-superglobal-form/">Superglobal dan Form Handling</a></li>
+              
+            
+              
+                
+                <li><a class="docs-link rounded" href="https://kaban.my.id/php/tutorial/10-session-cookie/">Session dan Cookie</a></li>
+              
+            
+              
+                
+                <li><a class="docs-link rounded" href="https://kaban.my.id/php/tutorial/11-include-require/">Include dan Require</a></li>
+              
+            
+          </ul>
+        </div>
+      </li>
+    
+  
+</ul>
+
+    </nav>
+  </aside>
+</div>
+
+    <div class="wrap container-xxl" role="document">
+      <div class="content">
+        
+	<div class="row flex-xl-nowrap">
+		<div class="col-lg-5 col-xl-4 docs-sidebar d-none d-lg-block">
+			<nav class="docs-links" aria-label="Main navigation">
+				
+<ul class="list-unstyled collapsible-sidebar">
+  
+    
+      
+      <li class="mb-1">
+        <button class="btn btn-toggle align-items-center rounded collapsed" data-bs-toggle="collapse" data-bs-target="#section-de2591224751442a3b2101e94880333c" aria-expanded="true">
+          Tutorial PHP
+        </button>
+        <div class="collapse show" id="section-de2591224751442a3b2101e94880333c">
+          <ul class="btn-toggle-nav list-unstyled fw-normal pb-1 small">
+            
+              
+                
+                <li><a class="docs-link rounded" href="https://kaban.my.id/php/tutorial/pengenalan/">Pengenalan PHP</a></li>
+              
+            
+              
+                
+                <li><a class="docs-link rounded" href="https://kaban.my.id/php/tutorial/02-instalasi-persiapan/">Instalasi &amp; Persiapan Lingkungan PHP</a></li>
+              
+            
+              
+                
+                <li><a class="docs-link rounded" href="https://kaban.my.id/php/tutorial/03-sintaks-variabel/">Sintaks Dasar &amp; Variabel PHP</a></li>
+              
+            
+              
+                
+                <li><a class="docs-link rounded" href="https://kaban.my.id/php/tutorial/04-tipe-data-konversi/">Tipe Data &amp; Konversi</a></li>
+              
+            
+              
+                
+                <li><a class="docs-link rounded" href="https://kaban.my.id/php/tutorial/05-struktur-kontrol/">Struktur Kontrol &amp; Perulangan</a></li>
+              
+            
+              
+                
+                <li><a class="docs-link rounded" href="https://kaban.my.id/php/tutorial/06-fungsi/">Fungsi</a></li>
+              
+            
+              
+                
+                <li><a class="docs-link rounded active" href="https://kaban.my.id/php/tutorial/07-array/">Array dan Method-nya</a></li>
+              
+            
+              
+                
+                <li><a class="docs-link rounded" href="https://kaban.my.id/php/tutorial/08-string/">String dan Manipulasi</a></li>
+              
+            
+              
+                
+                <li><a class="docs-link rounded" href="https://kaban.my.id/php/tutorial/09-superglobal-form/">Superglobal dan Form Handling</a></li>
+              
+            
+              
+                
+                <li><a class="docs-link rounded" href="https://kaban.my.id/php/tutorial/10-session-cookie/">Session dan Cookie</a></li>
+              
+            
+              
+                
+                <li><a class="docs-link rounded" href="https://kaban.my.id/php/tutorial/11-include-require/">Include dan Require</a></li>
+              
+            
+          </ul>
+        </div>
+      </li>
+    
+  
+</ul>
+
+			</nav>
+		</div>
+		<nav class="docs-toc d-none d-xl-block col-xl-3" aria-label="Secondary navigation">
+			<div class="d-xl-none">
+  <button class="btn btn-outline-primary btn-sm doks-toc-toggle collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#onThisPage" aria-controls="doks-docs-nav" aria-expanded="false" aria-label="Toggle On this page navigation">
+    <span>Daftar isi</span>
+    <span>
+      <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" class="doks doks-expand" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><title>Expand</title><polyline points="7 13 12 18 17 13"></polyline><polyline points="7 6 12 11 17 6"></polyline></svg>
+      <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" class="doks doks-collapse" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><title>Collapse</title><polyline points="17 11 12 6 7 11"></polyline><polyline points="17 18 12 13 7 18"></polyline></svg>
+    </span>
+  </button>
+  <div class="collapse" id="onThisPage">
+    <div class="card card-body mt-3 py-1">
+      <div class="page-links">
+        <nav id="TableOfContents">
+  <ul>
+    <li><a href="#pendahuluan">Pendahuluan</a></li>
+    <li><a href="#jenis-jenis-array">Jenis-Jenis Array</a>
+      <ul>
+        <li><a href="#1-indexed-array">1. Indexed Array</a></li>
+        <li><a href="#2-associative-array">2. Associative Array</a></li>
+        <li><a href="#3-multidimensional-array">3. Multidimensional Array</a></li>
+        <li><a href="#4-campuran-indexed-dan-associative">4. Campuran (Indexed dan Associative)</a></li>
+      </ul>
+    </li>
+    <li><a href="#membuat-array">Membuat Array</a>
+      <ul>
+        <li><a href="#sintaks-literal">Sintaks Literal</a></li>
+        <li><a href="#menambah-elemen-satu-per-satu">Menambah Elemen Satu per Satu</a></li>
+        <li><a href="#array_fill--array-dengan-nilai-yang-sama"><code>array_fill()</code> — Array dengan Nilai yang Sama</a></li>
+        <li><a href="#range--array-berurutan"><code>range()</code> — Array Berurutan</a></li>
+        <li><a href="#array_combine--menggabungkan-key-dan-value"><code>array_combine()</code> — Menggabungkan Key dan Value</a></li>
+      </ul>
+    </li>
+    <li><a href="#mengakses-elemen">Mengakses Elemen</a>
+      <ul>
+        <li><a href="#indexed-array">Indexed Array</a></li>
+        <li><a href="#associative-array">Associative Array</a></li>
+        <li><a href="#multidimensional-array">Multidimensional Array</a></li>
+        <li><a href="#cek-keberadaan-key">Cek Keberadaan Key</a></li>
+      </ul>
+    </li>
+    <li><a href="#mengubah-dan-menghapus-elemen">Mengubah dan Menghapus Elemen</a>
+      <ul>
+        <li><a href="#mengubah-nilai">Mengubah Nilai</a></li>
+        <li><a href="#menambah-elemen">Menambah Elemen</a></li>
+        <li><a href="#menghapus-elemen">Menghapus Elemen</a></li>
+      </ul>
+    </li>
+    <li><a href="#method-manipulasi-array">Method Manipulasi Array</a>
+      <ul>
+        <li><a href="#menambah-dan-menghapus">Menambah dan Menghapus</a></li>
+        <li><a href="#menggabungkan-dan-memotong">Menggabungkan dan Memotong</a></li>
+        <li><a href="#mencari-dan-memeriksa">Mencari dan Memeriksa</a></li>
+        <li><a href="#transformasi">Transformasi</a></li>
+        <li><a href="#ringkasan-method-manipulasi">Ringkasan Method Manipulasi</a></li>
+      </ul>
+    </li>
+    <li><a href="#sorting-array">Sorting Array</a>
+      <ul>
+        <li><a href="#sort--urutkan-berdasarkan-nilai-ascending"><code>sort()</code> — Urutkan Berdasarkan Nilai (Ascending)</a></li>
+        <li><a href="#rsort--descending"><code>rsort()</code> — Descending</a></li>
+        <li><a href="#asort--urutkan-berdasarkan-nilai-pertahankan-key"><code>asort()</code> — Urutkan Berdasarkan Nilai (Pertahankan Key)</a></li>
+        <li><a href="#arsort--descending-pertahankan-key"><code>arsort()</code> — Descending (Pertahankan Key)</a></li>
+        <li><a href="#ksort--urutkan-berdasarkan-key"><code>ksort()</code> — Urutkan Berdasarkan Key</a></li>
+        <li><a href="#krsort--key-descending"><code>krsort()</code> — Key Descending</a></li>
+        <li><a href="#usort--urutkan-dengan-callback-berdasarkan-nilai"><code>usort()</code> — Urutkan dengan Callback (Berdasarkan Nilai)</a></li>
+        <li><a href="#uasort--callback-pertahankan-key"><code>uasort()</code> — Callback (Pertahankan Key)</a></li>
+        <li><a href="#uksort--callback-berdasarkan-key"><code>uksort()</code> — Callback Berdasarkan Key</a></li>
+        <li><a href="#sorting-array-multidimensi">Sorting Array Multidimensi</a></li>
+        <li><a href="#ringkasan-sorting">Ringkasan Sorting</a></li>
+      </ul>
+    </li>
+    <li><a href="#iterasi-array">Iterasi Array</a>
+      <ul>
+        <li><a href="#foreach--cara-utama"><code>foreach</code> — Cara Utama</a></li>
+        <li><a href="#foreach-dengan-referensi"><code>foreach</code> dengan Referensi</a></li>
+        <li><a href="#foreach-dengan-destructuring"><code>foreach</code> dengan Destructuring</a></li>
+        <li><a href="#alternative-syntax">Alternative Syntax</a></li>
+        <li><a href="#array_walk--terapkan-fungsi-ke-setiap-elemen"><code>array_walk()</code> — Terapkan Fungsi ke Setiap Elemen</a></li>
+      </ul>
+    </li>
+    <li><a href="#spread-operator-pada-array-php-74">Spread Operator pada Array (PHP 7.4+)</a></li>
+    <li><a href="#contoh-praktis">Contoh Praktis</a>
+      <ul>
+        <li><a href="#1-keranjang-belanja">1. Keranjang Belanja</a></li>
+        <li><a href="#2-menghapus-duplikat">2. Menghapus Duplikat</a></li>
+        <li><a href="#3-mengelompokkan-data">3. Mengelompokkan Data</a></li>
+        <li><a href="#4-pencarian-dan-filter">4. Pencarian dan Filter</a></li>
+        <li><a href="#5-sorting-data-kompleks">5. Sorting Data Kompleks</a></li>
+      </ul>
+    </li>
+    <li><a href="#tips-dan-best-practice">Tips dan Best Practice</a></li>
+    <li><a href="#ringkasan">Ringkasan</a></li>
+  </ul>
+</nav>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="page-links d-none d-xl-block">
+  <h3>Daftar isi</h3>
+  <nav id="TableOfContents">
+  <ul>
+    <li><a href="#pendahuluan">Pendahuluan</a></li>
+    <li><a href="#jenis-jenis-array">Jenis-Jenis Array</a>
+      <ul>
+        <li><a href="#1-indexed-array">1. Indexed Array</a></li>
+        <li><a href="#2-associative-array">2. Associative Array</a></li>
+        <li><a href="#3-multidimensional-array">3. Multidimensional Array</a></li>
+        <li><a href="#4-campuran-indexed-dan-associative">4. Campuran (Indexed dan Associative)</a></li>
+      </ul>
+    </li>
+    <li><a href="#membuat-array">Membuat Array</a>
+      <ul>
+        <li><a href="#sintaks-literal">Sintaks Literal</a></li>
+        <li><a href="#menambah-elemen-satu-per-satu">Menambah Elemen Satu per Satu</a></li>
+        <li><a href="#array_fill--array-dengan-nilai-yang-sama"><code>array_fill()</code> — Array dengan Nilai yang Sama</a></li>
+        <li><a href="#range--array-berurutan"><code>range()</code> — Array Berurutan</a></li>
+        <li><a href="#array_combine--menggabungkan-key-dan-value"><code>array_combine()</code> — Menggabungkan Key dan Value</a></li>
+      </ul>
+    </li>
+    <li><a href="#mengakses-elemen">Mengakses Elemen</a>
+      <ul>
+        <li><a href="#indexed-array">Indexed Array</a></li>
+        <li><a href="#associative-array">Associative Array</a></li>
+        <li><a href="#multidimensional-array">Multidimensional Array</a></li>
+        <li><a href="#cek-keberadaan-key">Cek Keberadaan Key</a></li>
+      </ul>
+    </li>
+    <li><a href="#mengubah-dan-menghapus-elemen">Mengubah dan Menghapus Elemen</a>
+      <ul>
+        <li><a href="#mengubah-nilai">Mengubah Nilai</a></li>
+        <li><a href="#menambah-elemen">Menambah Elemen</a></li>
+        <li><a href="#menghapus-elemen">Menghapus Elemen</a></li>
+      </ul>
+    </li>
+    <li><a href="#method-manipulasi-array">Method Manipulasi Array</a>
+      <ul>
+        <li><a href="#menambah-dan-menghapus">Menambah dan Menghapus</a></li>
+        <li><a href="#menggabungkan-dan-memotong">Menggabungkan dan Memotong</a></li>
+        <li><a href="#mencari-dan-memeriksa">Mencari dan Memeriksa</a></li>
+        <li><a href="#transformasi">Transformasi</a></li>
+        <li><a href="#ringkasan-method-manipulasi">Ringkasan Method Manipulasi</a></li>
+      </ul>
+    </li>
+    <li><a href="#sorting-array">Sorting Array</a>
+      <ul>
+        <li><a href="#sort--urutkan-berdasarkan-nilai-ascending"><code>sort()</code> — Urutkan Berdasarkan Nilai (Ascending)</a></li>
+        <li><a href="#rsort--descending"><code>rsort()</code> — Descending</a></li>
+        <li><a href="#asort--urutkan-berdasarkan-nilai-pertahankan-key"><code>asort()</code> — Urutkan Berdasarkan Nilai (Pertahankan Key)</a></li>
+        <li><a href="#arsort--descending-pertahankan-key"><code>arsort()</code> — Descending (Pertahankan Key)</a></li>
+        <li><a href="#ksort--urutkan-berdasarkan-key"><code>ksort()</code> — Urutkan Berdasarkan Key</a></li>
+        <li><a href="#krsort--key-descending"><code>krsort()</code> — Key Descending</a></li>
+        <li><a href="#usort--urutkan-dengan-callback-berdasarkan-nilai"><code>usort()</code> — Urutkan dengan Callback (Berdasarkan Nilai)</a></li>
+        <li><a href="#uasort--callback-pertahankan-key"><code>uasort()</code> — Callback (Pertahankan Key)</a></li>
+        <li><a href="#uksort--callback-berdasarkan-key"><code>uksort()</code> — Callback Berdasarkan Key</a></li>
+        <li><a href="#sorting-array-multidimensi">Sorting Array Multidimensi</a></li>
+        <li><a href="#ringkasan-sorting">Ringkasan Sorting</a></li>
+      </ul>
+    </li>
+    <li><a href="#iterasi-array">Iterasi Array</a>
+      <ul>
+        <li><a href="#foreach--cara-utama"><code>foreach</code> — Cara Utama</a></li>
+        <li><a href="#foreach-dengan-referensi"><code>foreach</code> dengan Referensi</a></li>
+        <li><a href="#foreach-dengan-destructuring"><code>foreach</code> dengan Destructuring</a></li>
+        <li><a href="#alternative-syntax">Alternative Syntax</a></li>
+        <li><a href="#array_walk--terapkan-fungsi-ke-setiap-elemen"><code>array_walk()</code> — Terapkan Fungsi ke Setiap Elemen</a></li>
+      </ul>
+    </li>
+    <li><a href="#spread-operator-pada-array-php-74">Spread Operator pada Array (PHP 7.4+)</a></li>
+    <li><a href="#contoh-praktis">Contoh Praktis</a>
+      <ul>
+        <li><a href="#1-keranjang-belanja">1. Keranjang Belanja</a></li>
+        <li><a href="#2-menghapus-duplikat">2. Menghapus Duplikat</a></li>
+        <li><a href="#3-mengelompokkan-data">3. Mengelompokkan Data</a></li>
+        <li><a href="#4-pencarian-dan-filter">4. Pencarian dan Filter</a></li>
+        <li><a href="#5-sorting-data-kompleks">5. Sorting Data Kompleks</a></li>
+      </ul>
+    </li>
+    <li><a href="#tips-dan-best-practice">Tips dan Best Practice</a></li>
+    <li><a href="#ringkasan">Ringkasan</a></li>
+  </ul>
+</nav>
+  </div>
+
+		</nav>
+		<main class="docs-content col-lg-11 col-xl-9">
+		
+				<nav aria-label="breadcrumb">
+					<ol class="breadcrumb">
+						<li class="breadcrumb-item"><a href="/">Home</a></li>
+<li class="breadcrumb-item"><a href="/php/">Php</a></li>
+<li class="breadcrumb-item"><a href="/php/tutorial/">Tutorial PHP</a></li>
+<li class="breadcrumb-item active" aria-current="page">Array dan Method-nya</li>
+					</ol>
+				</nav>
+			
+			<h1>Array dan Method-nya</h1>
+			<p class="lead">Array adalah struktur data paling serbaguna di PHP. Artikel ini membahas cara membuat dan mengakses indexed array, associative array, multidimensional array, method manipulasi, sorting, serta iterasi dengan foreach.</p>
+			<nav class="d-xl-none" aria-label="Quaternary navigation">
+				<div class="d-xl-none">
+  <button class="btn btn-outline-primary btn-sm doks-toc-toggle collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#onThisPage" aria-controls="doks-docs-nav" aria-expanded="false" aria-label="Toggle On this page navigation">
+    <span>Daftar isi</span>
+    <span>
+      <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" class="doks doks-expand" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><title>Expand</title><polyline points="7 13 12 18 17 13"></polyline><polyline points="7 6 12 11 17 6"></polyline></svg>
+      <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" class="doks doks-collapse" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><title>Collapse</title><polyline points="17 11 12 6 7 11"></polyline><polyline points="17 18 12 13 7 18"></polyline></svg>
+    </span>
+  </button>
+  <div class="collapse" id="onThisPage">
+    <div class="card card-body mt-3 py-1">
+      <div class="page-links">
+        <nav id="TableOfContents">
+  <ul>
+    <li><a href="#pendahuluan">Pendahuluan</a></li>
+    <li><a href="#jenis-jenis-array">Jenis-Jenis Array</a>
+      <ul>
+        <li><a href="#1-indexed-array">1. Indexed Array</a></li>
+        <li><a href="#2-associative-array">2. Associative Array</a></li>
+        <li><a href="#3-multidimensional-array">3. Multidimensional Array</a></li>
+        <li><a href="#4-campuran-indexed-dan-associative">4. Campuran (Indexed dan Associative)</a></li>
+      </ul>
+    </li>
+    <li><a href="#membuat-array">Membuat Array</a>
+      <ul>
+        <li><a href="#sintaks-literal">Sintaks Literal</a></li>
+        <li><a href="#menambah-elemen-satu-per-satu">Menambah Elemen Satu per Satu</a></li>
+        <li><a href="#array_fill--array-dengan-nilai-yang-sama"><code>array_fill()</code> — Array dengan Nilai yang Sama</a></li>
+        <li><a href="#range--array-berurutan"><code>range()</code> — Array Berurutan</a></li>
+        <li><a href="#array_combine--menggabungkan-key-dan-value"><code>array_combine()</code> — Menggabungkan Key dan Value</a></li>
+      </ul>
+    </li>
+    <li><a href="#mengakses-elemen">Mengakses Elemen</a>
+      <ul>
+        <li><a href="#indexed-array">Indexed Array</a></li>
+        <li><a href="#associative-array">Associative Array</a></li>
+        <li><a href="#multidimensional-array">Multidimensional Array</a></li>
+        <li><a href="#cek-keberadaan-key">Cek Keberadaan Key</a></li>
+      </ul>
+    </li>
+    <li><a href="#mengubah-dan-menghapus-elemen">Mengubah dan Menghapus Elemen</a>
+      <ul>
+        <li><a href="#mengubah-nilai">Mengubah Nilai</a></li>
+        <li><a href="#menambah-elemen">Menambah Elemen</a></li>
+        <li><a href="#menghapus-elemen">Menghapus Elemen</a></li>
+      </ul>
+    </li>
+    <li><a href="#method-manipulasi-array">Method Manipulasi Array</a>
+      <ul>
+        <li><a href="#menambah-dan-menghapus">Menambah dan Menghapus</a></li>
+        <li><a href="#menggabungkan-dan-memotong">Menggabungkan dan Memotong</a></li>
+        <li><a href="#mencari-dan-memeriksa">Mencari dan Memeriksa</a></li>
+        <li><a href="#transformasi">Transformasi</a></li>
+        <li><a href="#ringkasan-method-manipulasi">Ringkasan Method Manipulasi</a></li>
+      </ul>
+    </li>
+    <li><a href="#sorting-array">Sorting Array</a>
+      <ul>
+        <li><a href="#sort--urutkan-berdasarkan-nilai-ascending"><code>sort()</code> — Urutkan Berdasarkan Nilai (Ascending)</a></li>
+        <li><a href="#rsort--descending"><code>rsort()</code> — Descending</a></li>
+        <li><a href="#asort--urutkan-berdasarkan-nilai-pertahankan-key"><code>asort()</code> — Urutkan Berdasarkan Nilai (Pertahankan Key)</a></li>
+        <li><a href="#arsort--descending-pertahankan-key"><code>arsort()</code> — Descending (Pertahankan Key)</a></li>
+        <li><a href="#ksort--urutkan-berdasarkan-key"><code>ksort()</code> — Urutkan Berdasarkan Key</a></li>
+        <li><a href="#krsort--key-descending"><code>krsort()</code> — Key Descending</a></li>
+        <li><a href="#usort--urutkan-dengan-callback-berdasarkan-nilai"><code>usort()</code> — Urutkan dengan Callback (Berdasarkan Nilai)</a></li>
+        <li><a href="#uasort--callback-pertahankan-key"><code>uasort()</code> — Callback (Pertahankan Key)</a></li>
+        <li><a href="#uksort--callback-berdasarkan-key"><code>uksort()</code> — Callback Berdasarkan Key</a></li>
+        <li><a href="#sorting-array-multidimensi">Sorting Array Multidimensi</a></li>
+        <li><a href="#ringkasan-sorting">Ringkasan Sorting</a></li>
+      </ul>
+    </li>
+    <li><a href="#iterasi-array">Iterasi Array</a>
+      <ul>
+        <li><a href="#foreach--cara-utama"><code>foreach</code> — Cara Utama</a></li>
+        <li><a href="#foreach-dengan-referensi"><code>foreach</code> dengan Referensi</a></li>
+        <li><a href="#foreach-dengan-destructuring"><code>foreach</code> dengan Destructuring</a></li>
+        <li><a href="#alternative-syntax">Alternative Syntax</a></li>
+        <li><a href="#array_walk--terapkan-fungsi-ke-setiap-elemen"><code>array_walk()</code> — Terapkan Fungsi ke Setiap Elemen</a></li>
+      </ul>
+    </li>
+    <li><a href="#spread-operator-pada-array-php-74">Spread Operator pada Array (PHP 7.4+)</a></li>
+    <li><a href="#contoh-praktis">Contoh Praktis</a>
+      <ul>
+        <li><a href="#1-keranjang-belanja">1. Keranjang Belanja</a></li>
+        <li><a href="#2-menghapus-duplikat">2. Menghapus Duplikat</a></li>
+        <li><a href="#3-mengelompokkan-data">3. Mengelompokkan Data</a></li>
+        <li><a href="#4-pencarian-dan-filter">4. Pencarian dan Filter</a></li>
+        <li><a href="#5-sorting-data-kompleks">5. Sorting Data Kompleks</a></li>
+      </ul>
+    </li>
+    <li><a href="#tips-dan-best-practice">Tips dan Best Practice</a></li>
+    <li><a href="#ringkasan">Ringkasan</a></li>
+  </ul>
+</nav>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="page-links d-none d-xl-block">
+  <h3>Daftar isi</h3>
+  <nav id="TableOfContents">
+  <ul>
+    <li><a href="#pendahuluan">Pendahuluan</a></li>
+    <li><a href="#jenis-jenis-array">Jenis-Jenis Array</a>
+      <ul>
+        <li><a href="#1-indexed-array">1. Indexed Array</a></li>
+        <li><a href="#2-associative-array">2. Associative Array</a></li>
+        <li><a href="#3-multidimensional-array">3. Multidimensional Array</a></li>
+        <li><a href="#4-campuran-indexed-dan-associative">4. Campuran (Indexed dan Associative)</a></li>
+      </ul>
+    </li>
+    <li><a href="#membuat-array">Membuat Array</a>
+      <ul>
+        <li><a href="#sintaks-literal">Sintaks Literal</a></li>
+        <li><a href="#menambah-elemen-satu-per-satu">Menambah Elemen Satu per Satu</a></li>
+        <li><a href="#array_fill--array-dengan-nilai-yang-sama"><code>array_fill()</code> — Array dengan Nilai yang Sama</a></li>
+        <li><a href="#range--array-berurutan"><code>range()</code> — Array Berurutan</a></li>
+        <li><a href="#array_combine--menggabungkan-key-dan-value"><code>array_combine()</code> — Menggabungkan Key dan Value</a></li>
+      </ul>
+    </li>
+    <li><a href="#mengakses-elemen">Mengakses Elemen</a>
+      <ul>
+        <li><a href="#indexed-array">Indexed Array</a></li>
+        <li><a href="#associative-array">Associative Array</a></li>
+        <li><a href="#multidimensional-array">Multidimensional Array</a></li>
+        <li><a href="#cek-keberadaan-key">Cek Keberadaan Key</a></li>
+      </ul>
+    </li>
+    <li><a href="#mengubah-dan-menghapus-elemen">Mengubah dan Menghapus Elemen</a>
+      <ul>
+        <li><a href="#mengubah-nilai">Mengubah Nilai</a></li>
+        <li><a href="#menambah-elemen">Menambah Elemen</a></li>
+        <li><a href="#menghapus-elemen">Menghapus Elemen</a></li>
+      </ul>
+    </li>
+    <li><a href="#method-manipulasi-array">Method Manipulasi Array</a>
+      <ul>
+        <li><a href="#menambah-dan-menghapus">Menambah dan Menghapus</a></li>
+        <li><a href="#menggabungkan-dan-memotong">Menggabungkan dan Memotong</a></li>
+        <li><a href="#mencari-dan-memeriksa">Mencari dan Memeriksa</a></li>
+        <li><a href="#transformasi">Transformasi</a></li>
+        <li><a href="#ringkasan-method-manipulasi">Ringkasan Method Manipulasi</a></li>
+      </ul>
+    </li>
+    <li><a href="#sorting-array">Sorting Array</a>
+      <ul>
+        <li><a href="#sort--urutkan-berdasarkan-nilai-ascending"><code>sort()</code> — Urutkan Berdasarkan Nilai (Ascending)</a></li>
+        <li><a href="#rsort--descending"><code>rsort()</code> — Descending</a></li>
+        <li><a href="#asort--urutkan-berdasarkan-nilai-pertahankan-key"><code>asort()</code> — Urutkan Berdasarkan Nilai (Pertahankan Key)</a></li>
+        <li><a href="#arsort--descending-pertahankan-key"><code>arsort()</code> — Descending (Pertahankan Key)</a></li>
+        <li><a href="#ksort--urutkan-berdasarkan-key"><code>ksort()</code> — Urutkan Berdasarkan Key</a></li>
+        <li><a href="#krsort--key-descending"><code>krsort()</code> — Key Descending</a></li>
+        <li><a href="#usort--urutkan-dengan-callback-berdasarkan-nilai"><code>usort()</code> — Urutkan dengan Callback (Berdasarkan Nilai)</a></li>
+        <li><a href="#uasort--callback-pertahankan-key"><code>uasort()</code> — Callback (Pertahankan Key)</a></li>
+        <li><a href="#uksort--callback-berdasarkan-key"><code>uksort()</code> — Callback Berdasarkan Key</a></li>
+        <li><a href="#sorting-array-multidimensi">Sorting Array Multidimensi</a></li>
+        <li><a href="#ringkasan-sorting">Ringkasan Sorting</a></li>
+      </ul>
+    </li>
+    <li><a href="#iterasi-array">Iterasi Array</a>
+      <ul>
+        <li><a href="#foreach--cara-utama"><code>foreach</code> — Cara Utama</a></li>
+        <li><a href="#foreach-dengan-referensi"><code>foreach</code> dengan Referensi</a></li>
+        <li><a href="#foreach-dengan-destructuring"><code>foreach</code> dengan Destructuring</a></li>
+        <li><a href="#alternative-syntax">Alternative Syntax</a></li>
+        <li><a href="#array_walk--terapkan-fungsi-ke-setiap-elemen"><code>array_walk()</code> — Terapkan Fungsi ke Setiap Elemen</a></li>
+      </ul>
+    </li>
+    <li><a href="#spread-operator-pada-array-php-74">Spread Operator pada Array (PHP 7.4+)</a></li>
+    <li><a href="#contoh-praktis">Contoh Praktis</a>
+      <ul>
+        <li><a href="#1-keranjang-belanja">1. Keranjang Belanja</a></li>
+        <li><a href="#2-menghapus-duplikat">2. Menghapus Duplikat</a></li>
+        <li><a href="#3-mengelompokkan-data">3. Mengelompokkan Data</a></li>
+        <li><a href="#4-pencarian-dan-filter">4. Pencarian dan Filter</a></li>
+        <li><a href="#5-sorting-data-kompleks">5. Sorting Data Kompleks</a></li>
+      </ul>
+    </li>
+    <li><a href="#tips-dan-best-practice">Tips dan Best Practice</a></li>
+    <li><a href="#ringkasan">Ringkasan</a></li>
+  </ul>
+</nav>
+  </div>
+
+			</nav>
+			<h2 id="pendahuluan">Pendahuluan <a href="#pendahuluan" class="anchor" aria-hidden="true">#</a></h2>
+<p><strong>Array</strong> adalah struktur data yang menyimpan <strong>kumpulan nilai</strong> dalam satu variabel. Di PHP, array sangat fleksibel — bisa berfungsi sebagai <strong>list</strong> (indexed), <strong>map</strong> (associative), bahkan keduanya sekaligus.</p>
+<p>Array adalah struktur data yang paling sering digunakan di PHP. Hampir setiap aplikasi menggunakan array: daftar produk, data user dari database, hasil query, konfigurasi, dan sebagainya.</p>
+<p>Artikel ini membahas:</p>
+<ul>
+<li>Tiga jenis array: indexed, associative, multidimensional.</li>
+<li>Cara membuat dan mengakses array.</li>
+<li>Method manipulasi array.</li>
+<li>Sorting array.</li>
+<li>Iterasi dengan <code>foreach</code>.</li>
+<li>Fungsi array yang sering digunakan.</li>
+</ul>
+<blockquote>
+<p><strong>Asumsi:</strong> Anda sudah memahami variabel, tipe data, fungsi, dan struktur kontrol dari artikel sebelumnya.</p>
+</blockquote>
+<hr>
+<h2 id="jenis-jenis-array">Jenis-Jenis Array <a href="#jenis-jenis-array" class="anchor" aria-hidden="true">#</a></h2>
+<h3 id="1-indexed-array">1. Indexed Array <a href="#1-indexed-array" class="anchor" aria-hidden="true">#</a></h3>
+<p>Array dengan <strong>index numerik</strong> (dimulai dari 0).</p>
+<pre><code class="language-php">&lt;?php
+$buah = [&quot;apel&quot;, &quot;jeruk&quot;, &quot;mangga&quot;];
+$angka = [1, 2, 3, 4, 5];
+$campuran = [&quot;Budi&quot;, 25, true, null];
+$kosong = [];
+</code></pre>
+<p><strong>Membuat dengan <code>array()</code> (cara lama):</strong></p>
+<pre><code class="language-php">&lt;?php
+$buah = array(&quot;apel&quot;, &quot;jeruk&quot;, &quot;mangga&quot;);
+</code></pre>
+<blockquote>
+<p><strong>Tips:</strong> Gunakan sintaks <code>[]</code> (short array syntax) — lebih ringkas dan direkomendasikan sejak PHP 5.4.</p>
+</blockquote>
+<h3 id="2-associative-array">2. Associative Array <a href="#2-associative-array" class="anchor" aria-hidden="true">#</a></h3>
+<p>Array dengan <strong>key string</strong> (atau integer non-berurutan).</p>
+<pre><code class="language-php">&lt;?php
+$user = [
+    &quot;nama&quot; =&gt; &quot;Budi&quot;,
+    &quot;umur&quot; =&gt; 25,
+    &quot;email&quot; =&gt; &quot;budi@example.com&quot;,
+    &quot;aktif&quot; =&gt; true,
+];
+
+$harga = [
+    &quot;keyboard&quot; =&gt; 450000,
+    &quot;mouse&quot; =&gt; 150000,
+    &quot;monitor&quot; =&gt; 1500000,
+];
+</code></pre>
+<h3 id="3-multidimensional-array">3. Multidimensional Array <a href="#3-multidimensional-array" class="anchor" aria-hidden="true">#</a></h3>
+<p>Array yang berisi array lain.</p>
+<pre><code class="language-php">&lt;?php
+// Array 2 dimensi
+$matrix = [
+    [1, 2, 3],
+    [4, 5, 6],
+    [7, 8, 9],
+];
+
+// Array associative bertingkat
+$users = [
+    [
+        &quot;nama&quot; =&gt; &quot;Budi&quot;,
+        &quot;umur&quot; =&gt; 25,
+        &quot;hobi&quot; =&gt; [&quot;coding&quot;, &quot;membaca&quot;],
+    ],
+    [
+        &quot;nama&quot; =&gt; &quot;Siti&quot;,
+        &quot;umur&quot; =&gt; 30,
+        &quot;hobi&quot; =&gt; [&quot;memasak&quot;, &quot;bersepeda&quot;],
+    ],
+];
+</code></pre>
+<h3 id="4-campuran-indexed-dan-associative">4. Campuran (Indexed dan Associative) <a href="#4-campuran-indexed-dan-associative" class="anchor" aria-hidden="true">#</a></h3>
+<p>PHP mengizinkan array dengan key campuran:</p>
+<pre><code class="language-php">&lt;?php
+$campur = [
+    0 =&gt; &quot;nol&quot;,
+    &quot;satu&quot; =&gt; 1,
+    2 =&gt; true,
+    &quot;nama&quot; =&gt; &quot;Budi&quot;,
+];
+</code></pre>
+<blockquote>
+<p><strong>Catatan:</strong> Meskipun valid, array campuran sulit diprediksi. Hindari dalam kode produksi.</p>
+</blockquote>
+<hr>
+<h2 id="membuat-array">Membuat Array <a href="#membuat-array" class="anchor" aria-hidden="true">#</a></h2>
+<h3 id="sintaks-literal">Sintaks Literal <a href="#sintaks-literal" class="anchor" aria-hidden="true">#</a></h3>
+<pre><code class="language-php">&lt;?php
+$buah = [&quot;apel&quot;, &quot;jeruk&quot;, &quot;mangga&quot;];
+$user = [&quot;nama&quot; =&gt; &quot;Budi&quot;, &quot;umur&quot; =&gt; 25];
+</code></pre>
+<h3 id="menambah-elemen-satu-per-satu">Menambah Elemen Satu per Satu <a href="#menambah-elemen-satu-per-satu" class="anchor" aria-hidden="true">#</a></h3>
+<pre><code class="language-php">&lt;?php
+$buah = [];
+$buah[] = &quot;apel&quot;;        // index 0
+$buah[] = &quot;jeruk&quot;;       // index 1
+$buah[] = &quot;mangga&quot;;      // index 2
+
+$user = [];
+$user[&quot;nama&quot;] = &quot;Budi&quot;;
+$user[&quot;umur&quot;] = 25;
+</code></pre>
+<h3 id="array_fill--array-dengan-nilai-yang-sama"><code>array_fill()</code> — Array dengan Nilai yang Sama <a href="#array_fill--array-dengan-nilai-yang-sama" class="anchor" aria-hidden="true">#</a></h3>
+<pre><code class="language-php">&lt;?php
+$nol = array_fill(0, 5, 0);
+print_r($nol); // [0, 0, 0, 0, 0]
+
+$nama = array_fill(0, 3, &quot;Anonim&quot;);
+print_r($nama); // [&quot;Anonim&quot;, &quot;Anonim&quot;, &quot;Anonim&quot;]
+</code></pre>
+<h3 id="range--array-berurutan"><code>range()</code> — Array Berurutan <a href="#range--array-berurutan" class="anchor" aria-hidden="true">#</a></h3>
+<pre><code class="language-php">&lt;?php
+$angka = range(1, 10);
+print_r($angka); // [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
+
+$ganjil = range(1, 10, 2);
+print_r($ganjil); // [1, 3, 5, 7, 9]
+
+$huruf = range(&quot;a&quot;, &quot;e&quot;);
+print_r($huruf); // [&quot;a&quot;, &quot;b&quot;, &quot;c&quot;, &quot;d&quot;, &quot;e&quot;]
+</code></pre>
+<h3 id="array_combine--menggabungkan-key-dan-value"><code>array_combine()</code> — Menggabungkan Key dan Value <a href="#array_combine--menggabungkan-key-dan-value" class="anchor" aria-hidden="true">#</a></h3>
+<pre><code class="language-php">&lt;?php
+$keys = [&quot;nama&quot;, &quot;umur&quot;, &quot;kota&quot;];
+$values = [&quot;Budi&quot;, 25, &quot;Jakarta&quot;];
+
+$user = array_combine($keys, $values);
+print_r($user);
+// [&quot;nama&quot; =&gt; &quot;Budi&quot;, &quot;umur&quot; =&gt; 25, &quot;kota&quot; =&gt; &quot;Jakarta&quot;]
+</code></pre>
+<blockquote>
+<p><strong>Catatan:</strong> Jumlah elemen <code>$keys</code> dan <code>$values</code> harus sama, jika tidak akan error.</p>
+</blockquote>
+<hr>
+<h2 id="mengakses-elemen">Mengakses Elemen <a href="#mengakses-elemen" class="anchor" aria-hidden="true">#</a></h2>
+<h3 id="indexed-array">Indexed Array <a href="#indexed-array" class="anchor" aria-hidden="true">#</a></h3>
+<pre><code class="language-php">&lt;?php
+$buah = [&quot;apel&quot;, &quot;jeruk&quot;, &quot;mangga&quot;];
+
+echo $buah[0]; // &quot;apel&quot;
+echo $buah[1]; // &quot;jeruk&quot;
+echo $buah[2]; // &quot;mangga&quot;
+
+// Di luar batas — warning
+echo $buah[3] ?? &quot;Tidak ada&quot;; // &quot;Tidak ada&quot;
+</code></pre>
+<h3 id="associative-array">Associative Array <a href="#associative-array" class="anchor" aria-hidden="true">#</a></h3>
+<pre><code class="language-php">&lt;?php
+$user = [&quot;nama&quot; =&gt; &quot;Budi&quot;, &quot;umur&quot; =&gt; 25];
+
+echo $user[&quot;nama&quot;]; // &quot;Budi&quot;
+echo $user[&quot;umur&quot;]; // 25
+
+// Key tidak ada — warning
+echo $user[&quot;email&quot;] ?? &quot;Tidak ada&quot;; // &quot;Tidak ada&quot;
+</code></pre>
+<h3 id="multidimensional-array">Multidimensional Array <a href="#multidimensional-array" class="anchor" aria-hidden="true">#</a></h3>
+<pre><code class="language-php">&lt;?php
+$matrix = [
+    [1, 2, 3],
+    [4, 5, 6],
+];
+
+echo $matrix[0][0]; // 1
+echo $matrix[1][2]; // 6
+
+$users = [
+    [&quot;nama&quot; =&gt; &quot;Budi&quot;, &quot;umur&quot; =&gt; 25],
+    [&quot;nama&quot; =&gt; &quot;Siti&quot;, &quot;umur&quot; =&gt; 30],
+];
+
+echo $users[0][&quot;nama&quot;]; // &quot;Budi&quot;
+echo $users[1][&quot;umur&quot;]; // 30
+</code></pre>
+<h3 id="cek-keberadaan-key">Cek Keberadaan Key <a href="#cek-keberadaan-key" class="anchor" aria-hidden="true">#</a></h3>
+<pre><code class="language-php">&lt;?php
+$user = [&quot;nama&quot; =&gt; &quot;Budi&quot;, &quot;umur&quot; =&gt; 25, &quot;email&quot; =&gt; null];
+
+// array_key_exists — true meskipun nilai null
+var_dump(array_key_exists(&quot;nama&quot;, $user));  // bool(true)
+var_dump(array_key_exists(&quot;email&quot;, $user)); // bool(true) — meskipun null
+var_dump(array_key_exists(&quot;kota&quot;, $user));  // bool(false)
+
+// isset — false jika nilai null
+var_dump(isset($user[&quot;nama&quot;]));  // bool(true)
+var_dump(isset($user[&quot;email&quot;])); // bool(false) — karena null
+var_dump(isset($user[&quot;kota&quot;]));  // bool(false)
+</code></pre>
+<p><strong>Perbedaan <code>isset()</code> dan <code>array_key_exists()</code>:</strong></p>
+<table>
+<thead>
+<tr>
+<th>Key</th>
+<th>Nilai</th>
+<th><code>isset()</code></th>
+<th><code>array_key_exists()</code></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>&quot;nama&quot;</code></td>
+<td><code>&quot;Budi&quot;</code></td>
+<td><code>true</code></td>
+<td><code>true</code></td>
+</tr>
+<tr>
+<td><code>&quot;email&quot;</code></td>
+<td><code>null</code></td>
+<td><code>false</code></td>
+<td><code>true</code></td>
+</tr>
+<tr>
+<td><code>&quot;kota&quot;</code></td>
+<td>(tidak ada)</td>
+<td><code>false</code></td>
+<td><code>false</code></td>
+</tr>
+</tbody>
+</table>
+<blockquote>
+<p><strong>Tips:</strong> Gunakan <code>array_key_exists()</code> jika perlu membedakan key yang tidak ada dari key yang bernilai <code>null</code>.</p>
+</blockquote>
+<hr>
+<h2 id="mengubah-dan-menghapus-elemen">Mengubah dan Menghapus Elemen <a href="#mengubah-dan-menghapus-elemen" class="anchor" aria-hidden="true">#</a></h2>
+<h3 id="mengubah-nilai">Mengubah Nilai <a href="#mengubah-nilai" class="anchor" aria-hidden="true">#</a></h3>
+<pre><code class="language-php">&lt;?php
+$buah = [&quot;apel&quot;, &quot;jeruk&quot;, &quot;mangga&quot;];
+$buah[1] = &quot;pisang&quot;;
+print_r($buah); // [&quot;apel&quot;, &quot;pisang&quot;, &quot;mangga&quot;]
+
+$user = [&quot;nama&quot; =&gt; &quot;Budi&quot;];
+$user[&quot;nama&quot;] = &quot;Budi Santoso&quot;;
+</code></pre>
+<h3 id="menambah-elemen">Menambah Elemen <a href="#menambah-elemen" class="anchor" aria-hidden="true">#</a></h3>
+<pre><code class="language-php">&lt;?php
+$buah = [&quot;apel&quot;];
+$buah[] = &quot;jeruk&quot;;        // tambah di akhir
+$buah[5] = &quot;mangga&quot;;      // index spesifik
+
+$user = [&quot;nama&quot; =&gt; &quot;Budi&quot;];
+$user[&quot;umur&quot;] = 25;       // tambah key baru
+</code></pre>
+<h3 id="menghapus-elemen">Menghapus Elemen <a href="#menghapus-elemen" class="anchor" aria-hidden="true">#</a></h3>
+<pre><code class="language-php">&lt;?php
+$buah = [&quot;apel&quot;, &quot;jeruk&quot;, &quot;mangga&quot;];
+
+unset($buah[1]);
+print_r($buah); // [0 =&gt; &quot;apel&quot;, 2 =&gt; &quot;mangga&quot;] — index tidak di-reset!
+
+// Reset index dengan array_values
+$buah = array_values($buah);
+print_r($buah); // [0 =&gt; &quot;apel&quot;, 1 =&gt; &quot;mangga&quot;]
+
+// Associative
+$user = [&quot;nama&quot; =&gt; &quot;Budi&quot;, &quot;umur&quot; =&gt; 25];
+unset($user[&quot;umur&quot;]);
+</code></pre>
+<blockquote>
+<p><strong>Peringatan:</strong> <code>unset()</code> <strong>tidak</strong> me-reset index array. Jika perlu index berurutan, gunakan <code>array_values()</code>.</p>
+</blockquote>
+<hr>
+<h2 id="method-manipulasi-array">Method Manipulasi Array <a href="#method-manipulasi-array" class="anchor" aria-hidden="true">#</a></h2>
+<h3 id="menambah-dan-menghapus">Menambah dan Menghapus <a href="#menambah-dan-menghapus" class="anchor" aria-hidden="true">#</a></h3>
+<p><strong><code>array_push()</code></strong> — tambah di akhir:</p>
+<pre><code class="language-php">&lt;?php
+$buah = [&quot;apel&quot;, &quot;jeruk&quot;];
+array_push($buah, &quot;mangga&quot;, &quot;pisang&quot;);
+print_r($buah); // [&quot;apel&quot;, &quot;jeruk&quot;, &quot;mangga&quot;, &quot;pisang&quot;]
+
+// Setara dengan
+$buah[] = &quot;anggur&quot;;
+</code></pre>
+<p><strong><code>array_pop()</code></strong> — hapus dari akhir:</p>
+<pre><code class="language-php">&lt;?php
+$buah = [&quot;apel&quot;, &quot;jeruk&quot;, &quot;mangga&quot;];
+$terakhir = array_pop($buah);
+echo $terakhir; // &quot;mangga&quot;
+print_r($buah); // [&quot;apel&quot;, &quot;jeruk&quot;]
+</code></pre>
+<p><strong><code>array_unshift()</code></strong> — tambah di awal:</p>
+<pre><code class="language-php">&lt;?php
+$buah = [&quot;jeruk&quot;, &quot;mangga&quot;];
+array_unshift($buah, &quot;apel&quot;);
+print_r($buah); // [&quot;apel&quot;, &quot;jeruk&quot;, &quot;mangga&quot;]
+</code></pre>
+<p><strong><code>array_shift()</code></strong> — hapus dari awal:</p>
+<pre><code class="language-php">&lt;?php
+$buah = [&quot;apel&quot;, &quot;jeruk&quot;, &quot;mangga&quot;];
+$pertama = array_shift($buah);
+echo $pertama; // &quot;apel&quot;
+print_r($buah); // [&quot;jeruk&quot;, &quot;mangga&quot;]
+</code></pre>
+<blockquote>
+<p><strong>Catatan:</strong> <code>array_unshift()</code> dan <code>array_shift()</code> lebih lambat dari <code>array_push()</code> dan <code>array_pop()</code> karena harus menggeser index.</p>
+</blockquote>
+<h3 id="menggabungkan-dan-memotong">Menggabungkan dan Memotong <a href="#menggabungkan-dan-memotong" class="anchor" aria-hidden="true">#</a></h3>
+<p><strong><code>array_merge()</code></strong> — menggabungkan array:</p>
+<pre><code class="language-php">&lt;?php
+$arr1 = [1, 2];
+$arr2 = [3, 4];
+$arr3 = [5, 6];
+
+$gabungan = array_merge($arr1, $arr2, $arr3);
+print_r($gabungan); // [1, 2, 3, 4, 5, 6]
+
+// Associative — key dari array kanan menimpa
+$user1 = [&quot;nama&quot; =&gt; &quot;Budi&quot;, &quot;umur&quot; =&gt; 25];
+$user2 = [&quot;umur&quot; =&gt; 30, &quot;kota&quot; =&gt; &quot;Jakarta&quot;];
+$user = array_merge($user1, $user2);
+print_r($user); // [&quot;nama&quot; =&gt; &quot;Budi&quot;, &quot;umur&quot; =&gt; 30, &quot;kota&quot; =&gt; &quot;Jakarta&quot;]
+</code></pre>
+<p><strong><code>array_slice()</code></strong> — mengambil bagian array:</p>
+<pre><code class="language-php">&lt;?php
+$buah = [&quot;apel&quot;, &quot;jeruk&quot;, &quot;mangga&quot;, &quot;pisang&quot;, &quot;anggur&quot;];
+
+print_r(array_slice($buah, 1, 3));  // [&quot;jeruk&quot;, &quot;mangga&quot;, &quot;pisang&quot;]
+print_r(array_slice($buah, 2));     // [&quot;mangga&quot;, &quot;pisang&quot;, &quot;anggur&quot;]
+print_r(array_slice($buah, -2));    // [&quot;pisang&quot;, &quot;anggur&quot;]
+</code></pre>
+<p><strong><code>array_splice()</code></strong> — menghapus/mengganti bagian array (<strong>mutasi</strong>):</p>
+<pre><code class="language-php">&lt;?php
+$buah = [&quot;apel&quot;, &quot;jeruk&quot;, &quot;mangga&quot;, &quot;pisang&quot;];
+
+// Hapus 1 elemen di index 1
+array_splice($buah, 1, 1);
+print_r($buah); // [&quot;apel&quot;, &quot;mangga&quot;, &quot;pisang&quot;]
+
+// Hapus 2 elemen, tambah 2 baru
+$buah = [&quot;apel&quot;, &quot;jeruk&quot;, &quot;mangga&quot;, &quot;pisang&quot;];
+array_splice($buah, 1, 2, [&quot;anggur&quot;, &quot;kiwi&quot;]);
+print_r($buah); // [&quot;apel&quot;, &quot;anggur&quot;, &quot;kiwi&quot;, &quot;pisang&quot;]
+</code></pre>
+<h3 id="mencari-dan-memeriksa">Mencari dan Memeriksa <a href="#mencari-dan-memeriksa" class="anchor" aria-hidden="true">#</a></h3>
+<p><strong><code>in_array()</code></strong> — cek keberadaan nilai:</p>
+<pre><code class="language-php">&lt;?php
+$buah = [&quot;apel&quot;, &quot;jeruk&quot;, &quot;mangga&quot;];
+
+var_dump(in_array(&quot;jeruk&quot;, $buah));  // bool(true)
+var_dump(in_array(&quot;pisang&quot;, $buah)); // bool(false)
+
+// SELALU gunakan parameter ketiga true (strict)
+var_dump(in_array(&quot;1&quot;, [1, 2, 3], true)); // bool(false)
+var_dump(in_array(1, [1, 2, 3], true));   // bool(true)
+</code></pre>
+<p><strong><code>array_search()</code></strong> — cari index/key dari nilai:</p>
+<pre><code class="language-php">&lt;?php
+$buah = [&quot;apel&quot;, &quot;jeruk&quot;, &quot;mangga&quot;];
+
+$index = array_search(&quot;jeruk&quot;, $buah);
+echo $index; // 1
+
+$index = array_search(&quot;pisang&quot;, $buah);
+var_dump($index); // bool(false) — tidak ditemukan
+
+// Strict
+$index = array_search(&quot;1&quot;, [1, 2, 3], true);
+var_dump($index); // bool(false)
+</code></pre>
+<p><strong><code>array_keys()</code></strong> — ambil semua key:</p>
+<pre><code class="language-php">&lt;?php
+$user = [&quot;nama&quot; =&gt; &quot;Budi&quot;, &quot;umur&quot; =&gt; 25, &quot;kota&quot; =&gt; &quot;Jakarta&quot;];
+
+print_r(array_keys($user));
+// [&quot;nama&quot;, &quot;umur&quot;, &quot;kota&quot;]
+
+print_r(array_keys($user, &quot;Budi&quot;));
+// [&quot;nama&quot;] — key yang nilainya &quot;Budi&quot;
+</code></pre>
+<p><strong><code>array_values()</code></strong> — ambil semua value:</p>
+<pre><code class="language-php">&lt;?php
+$user = [&quot;nama&quot; =&gt; &quot;Budi&quot;, &quot;umur&quot; =&gt; 25];
+
+print_r(array_values($user));
+// [&quot;Budi&quot;, 25]
+</code></pre>
+<p><strong><code>array_key_exists()</code></strong> — cek key:</p>
+<pre><code class="language-php">&lt;?php
+$user = [&quot;nama&quot; =&gt; &quot;Budi&quot;, &quot;email&quot; =&gt; null];
+
+var_dump(array_key_exists(&quot;nama&quot;, $user));  // bool(true)
+var_dump(array_key_exists(&quot;email&quot;, $user)); // bool(true)
+var_dump(array_key_exists(&quot;kota&quot;, $user));  // bool(false)
+</code></pre>
+<p><strong><code>array_flip()</code></strong> — tukar key dan value:</p>
+<pre><code class="language-php">&lt;?php
+$user = [&quot;nama&quot; =&gt; &quot;Budi&quot;, &quot;umur&quot; =&gt; 25];
+$flipped = array_flip($user);
+print_r($flipped); // [&quot;Budi&quot; =&gt; &quot;nama&quot;, 25 =&gt; &quot;umur&quot;]
+</code></pre>
+<h3 id="transformasi">Transformasi <a href="#transformasi" class="anchor" aria-hidden="true">#</a></h3>
+<p><strong><code>array_map()</code></strong> — terapkan fungsi ke setiap elemen:</p>
+<pre><code class="language-php">&lt;?php
+$angka = [1, 2, 3, 4, 5];
+
+$kuadrat = array_map(fn($n) =&gt; $n * $n, $angka);
+print_r($kuadrat); // [1, 4, 9, 16, 25]
+
+// Dengan beberapa array
+$a = [1, 2, 3];
+$b = [10, 20, 30];
+$hasil = array_map(fn($x, $y) =&gt; $x + $y, $a, $b);
+print_r($hasil); // [11, 22, 33]
+</code></pre>
+<p><strong><code>array_filter()</code></strong> — menyaring elemen:</p>
+<pre><code class="language-php">&lt;?php
+$angka = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
+
+$genap = array_filter($angka, fn($n) =&gt; $n % 2 === 0);
+print_r($genap); // [1 =&gt; 2, 3 =&gt; 4, 5 =&gt; 6, 7 =&gt; 8, 9 =&gt; 10]
+// Index tetap! Gunakan array_values jika perlu reset
+print_r(array_values($genap)); // [2, 4, 6, 8, 10]
+
+// Tanpa callback — hapus nilai falsy
+$campur = [0, 1, &quot;&quot;, &quot;Hello&quot;, null, [], &quot;0&quot;];
+$bersih = array_filter($campur);
+print_r($bersih); // [1 =&gt; 1, 3 =&gt; &quot;Hello&quot;]
+</code></pre>
+<p><strong><code>array_reduce()</code></strong> — ringkas array menjadi satu nilai:</p>
+<pre><code class="language-php">&lt;?php
+$angka = [1, 2, 3, 4, 5];
+
+$total = array_reduce($angka, fn($sum, $n) =&gt; $sum + $n, 0);
+echo $total; // 15
+
+// Dengan string
+$kata = [&quot;Hello&quot;, &quot;World&quot;, &quot;dari&quot;, &quot;PHP&quot;];
+$kalimat = array_reduce($kata, fn($carry, $item) =&gt; $carry . &quot; &quot; . $item, &quot;&quot;);
+echo trim($kalimat); // &quot;Hello World dari PHP&quot;
+</code></pre>
+<p><strong><code>array_unique()</code></strong> — hapus duplikat:</p>
+<pre><code class="language-php">&lt;?php
+$angka = [1, 2, 2, 3, 3, 3, 4, 5, 5];
+
+$unik = array_unique($angka);
+print_r($unik); // [0 =&gt; 1, 1 =&gt; 2, 3 =&gt; 3, 6 =&gt; 4, 7 =&gt; 5]
+
+// Reset index
+print_r(array_values($unik)); // [1, 2, 3, 4, 5]
+</code></pre>
+<p><strong><code>array_reverse()</code></strong> — balik urutan:</p>
+<pre><code class="language-php">&lt;?php
+$buah = [&quot;apel&quot;, &quot;jeruk&quot;, &quot;mangga&quot;];
+$terbalik = array_reverse($buah);
+print_r($terbalik); // [&quot;mangga&quot;, &quot;jeruk&quot;, &quot;apel&quot;]
+</code></pre>
+<p><strong><code>array_column()</code></strong> — ambil kolom dari array multidimensi:</p>
+<pre><code class="language-php">&lt;?php
+$users = [
+    [&quot;id&quot; =&gt; 1, &quot;nama&quot; =&gt; &quot;Budi&quot;, &quot;umur&quot; =&gt; 25],
+    [&quot;id&quot; =&gt; 2, &quot;nama&quot; =&gt; &quot;Siti&quot;, &quot;umur&quot; =&gt; 30],
+    [&quot;id&quot; =&gt; 3, &quot;nama&quot; =&gt; &quot;Andi&quot;, &quot;umur&quot; =&gt; 28],
+];
+
+$nama = array_column($users, &quot;nama&quot;);
+print_r($nama); // [&quot;Budi&quot;, &quot;Siti&quot;, &quot;Andi&quot;]
+
+// Dengan index key
+$byId = array_column($users, &quot;nama&quot;, &quot;id&quot;);
+print_r($byId); // [1 =&gt; &quot;Budi&quot;, 2 =&gt; &quot;Siti&quot;, 3 =&gt; &quot;Andi&quot;]
+</code></pre>
+<p><strong><code>array_sum()</code></strong> — jumlahkan semua nilai:</p>
+<pre><code class="language-php">&lt;?php
+$angka = [1, 2, 3, 4, 5];
+echo array_sum($angka); // 15
+</code></pre>
+<p><strong><code>array_product()</code></strong> — kalikan semua nilai:</p>
+<pre><code class="language-php">&lt;?php
+$angka = [2, 3, 4];
+echo array_product($angka); // 24
+</code></pre>
+<p><strong><code>count()</code></strong> — jumlah elemen:</p>
+<pre><code class="language-php">&lt;?php
+$buah = [&quot;apel&quot;, &quot;jeruk&quot;, &quot;mangga&quot;];
+echo count($buah); // 3
+</code></pre>
+<p><strong><code>array_chunk()</code></strong> — pecah array menjadi potongan:</p>
+<pre><code class="language-php">&lt;?php
+$angka = [1, 2, 3, 4, 5, 6, 7];
+$chunks = array_chunk($angka, 3);
+print_r($chunks);
+// [[1, 2, 3], [4, 5, 6], [7]]
+</code></pre>
+<p><strong><code>array_diff()</code></strong> — elemen yang ada di array pertama tetapi tidak di array lain:</p>
+<pre><code class="language-php">&lt;?php
+$arr1 = [1, 2, 3, 4, 5];
+$arr2 = [2, 4];
+
+$diff = array_diff($arr1, $arr2);
+print_r($diff); // [0 =&gt; 1, 2 =&gt; 3, 4 =&gt; 5]
+</code></pre>
+<p><strong><code>array_intersect()</code></strong> — elemen yang ada di semua array:</p>
+<pre><code class="language-php">&lt;?php
+$arr1 = [1, 2, 3, 4, 5];
+$arr2 = [2, 4, 6, 8];
+
+$intersect = array_intersect($arr1, $arr2);
+print_r($intersect); // [1 =&gt; 2, 3 =&gt; 4]
+</code></pre>
+<p><strong><code>array_diff_key()</code> dan <code>array_intersect_key()</code></strong> — berdasarkan key:</p>
+<pre><code class="language-php">&lt;?php
+$arr1 = [&quot;a&quot; =&gt; 1, &quot;b&quot; =&gt; 2, &quot;c&quot; =&gt; 3];
+$arr2 = [&quot;a&quot; =&gt; 10, &quot;b&quot; =&gt; 20];
+
+print_r(array_diff_key($arr1, $arr2));      // [&quot;c&quot; =&gt; 3]
+print_r(array_intersect_key($arr1, $arr2)); // [&quot;a&quot; =&gt; 1, &quot;b&quot; =&gt; 2]
+</code></pre>
+<h3 id="ringkasan-method-manipulasi">Ringkasan Method Manipulasi <a href="#ringkasan-method-manipulasi" class="anchor" aria-hidden="true">#</a></h3>
+<table>
+<thead>
+<tr>
+<th>Kategori</th>
+<th>Fungsi</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Tambah/hapus</strong></td>
+<td><code>array_push</code>, <code>array_pop</code>, <code>array_unshift</code>, <code>array_shift</code></td>
+</tr>
+<tr>
+<td><strong>Gabung/potong</strong></td>
+<td><code>array_merge</code>, <code>array_slice</code>, <code>array_splice</code>, <code>array_chunk</code></td>
+</tr>
+<tr>
+<td><strong>Cari</strong></td>
+<td><code>in_array</code>, <code>array_search</code>, <code>array_keys</code>, <code>array_values</code>, <code>array_key_exists</code></td>
+</tr>
+<tr>
+<td><strong>Transformasi</strong></td>
+<td><code>array_map</code>, <code>array_filter</code>, <code>array_reduce</code>, <code>array_unique</code>, <code>array_reverse</code>, <code>array_column</code>, <code>array_flip</code></td>
+</tr>
+<tr>
+<td><strong>Agregasi</strong></td>
+<td><code>array_sum</code>, <code>array_product</code>, <code>count</code></td>
+</tr>
+<tr>
+<td><strong>Diff/intersect</strong></td>
+<td><code>array_diff</code>, <code>array_intersect</code>, <code>array_diff_key</code>, <code>array_intersect_key</code></td>
+</tr>
+</tbody>
+</table>
+<hr>
+<h2 id="sorting-array">Sorting Array <a href="#sorting-array" class="anchor" aria-hidden="true">#</a></h2>
+<h3 id="sort--urutkan-berdasarkan-nilai-ascending"><code>sort()</code> — Urutkan Berdasarkan Nilai (Ascending) <a href="#sort--urutkan-berdasarkan-nilai-ascending" class="anchor" aria-hidden="true">#</a></h3>
+<p><strong>Mutasi</strong> array asli dan <strong>me-reset index</strong>.</p>
+<pre><code class="language-php">&lt;?php
+$angka = [3, 1, 4, 1, 5];
+sort($angka);
+print_r($angka); // [1, 1, 3, 4, 5]
+
+$buah = [&quot;mangga&quot;, &quot;apel&quot;, &quot;jeruk&quot;];
+sort($buah);
+print_r($buah); // [&quot;apel&quot;, &quot;jeruk&quot;, &quot;mangga&quot;]
+</code></pre>
+<h3 id="rsort--descending"><code>rsort()</code> — Descending <a href="#rsort--descending" class="anchor" aria-hidden="true">#</a></h3>
+<pre><code class="language-php">&lt;?php
+$angka = [3, 1, 4, 1, 5];
+rsort($angka);
+print_r($angka); // [5, 4, 3, 1, 1]
+</code></pre>
+<h3 id="asort--urutkan-berdasarkan-nilai-pertahankan-key"><code>asort()</code> — Urutkan Berdasarkan Nilai (Pertahankan Key) <a href="#asort--urutkan-berdasarkan-nilai-pertahankan-key" class="anchor" aria-hidden="true">#</a></h3>
+<pre><code class="language-php">&lt;?php
+$harga = [
+    &quot;keyboard&quot; =&gt; 450000,
+    &quot;mouse&quot; =&gt; 150000,
+    &quot;monitor&quot; =&gt; 1500000,
+];
+
+asort($harga);
+print_r($harga);
+// [&quot;mouse&quot; =&gt; 150000, &quot;keyboard&quot; =&gt; 450000, &quot;monitor&quot; =&gt; 1500000]
+</code></pre>
+<h3 id="arsort--descending-pertahankan-key"><code>arsort()</code> — Descending (Pertahankan Key) <a href="#arsort--descending-pertahankan-key" class="anchor" aria-hidden="true">#</a></h3>
+<pre><code class="language-php">&lt;?php
+arsort($harga);
+print_r($harga);
+// [&quot;monitor&quot; =&gt; 1500000, &quot;keyboard&quot; =&gt; 450000, &quot;mouse&quot; =&gt; 150000]
+</code></pre>
+<h3 id="ksort--urutkan-berdasarkan-key"><code>ksort()</code> — Urutkan Berdasarkan Key <a href="#ksort--urutkan-berdasarkan-key" class="anchor" aria-hidden="true">#</a></h3>
+<pre><code class="language-php">&lt;?php
+$user = [&quot;umur&quot; =&gt; 25, &quot;nama&quot; =&gt; &quot;Budi&quot;, &quot;kota&quot; =&gt; &quot;Jakarta&quot;];
+ksort($user);
+print_r($user);
+// [&quot;kota&quot; =&gt; &quot;Jakarta&quot;, &quot;nama&quot; =&gt; &quot;Budi&quot;, &quot;umur&quot; =&gt; 25]
+</code></pre>
+<h3 id="krsort--key-descending"><code>krsort()</code> — Key Descending <a href="#krsort--key-descending" class="anchor" aria-hidden="true">#</a></h3>
+<pre><code class="language-php">&lt;?php
+krsort($user);
+print_r($user);
+// [&quot;umur&quot; =&gt; 25, &quot;nama&quot; =&gt; &quot;Budi&quot;, &quot;kota&quot; =&gt; &quot;Jakarta&quot;]
+</code></pre>
+<h3 id="usort--urutkan-dengan-callback-berdasarkan-nilai"><code>usort()</code> — Urutkan dengan Callback (Berdasarkan Nilai) <a href="#usort--urutkan-dengan-callback-berdasarkan-nilai" class="anchor" aria-hidden="true">#</a></h3>
+<pre><code class="language-php">&lt;?php
+$angka = [3, 1, 4, 1, 5];
+usort($angka, fn($a, $b) =&gt; $a &lt;=&gt; $b);
+print_r($angka); // [1, 1, 3, 4, 5]
+
+// Descending
+usort($angka, fn($a, $b) =&gt; $b &lt;=&gt; $a);
+print_r($angka); // [5, 4, 3, 1, 1]
+</code></pre>
+<h3 id="uasort--callback-pertahankan-key"><code>uasort()</code> — Callback (Pertahankan Key) <a href="#uasort--callback-pertahankan-key" class="anchor" aria-hidden="true">#</a></h3>
+<pre><code class="language-php">&lt;?php
+$harga = [&quot;keyboard&quot; =&gt; 450000, &quot;mouse&quot; =&gt; 150000, &quot;monitor&quot; =&gt; 1500000];
+
+uasort($harga, fn($a, $b) =&gt; $a &lt;=&gt; $b);
+print_r($harga);
+// [&quot;mouse&quot; =&gt; 150000, &quot;keyboard&quot; =&gt; 450000, &quot;monitor&quot; =&gt; 1500000]
+</code></pre>
+<h3 id="uksort--callback-berdasarkan-key"><code>uksort()</code> — Callback Berdasarkan Key <a href="#uksort--callback-berdasarkan-key" class="anchor" aria-hidden="true">#</a></h3>
+<pre><code class="language-php">&lt;?php
+$user = [&quot;umur&quot; =&gt; 25, &quot;nama&quot; =&gt; &quot;Budi&quot;, &quot;kota&quot; =&gt; &quot;Jakarta&quot;];
+
+uksort($user, fn($a, $b) =&gt; strcmp($a, $b));
+print_r($user);
+// [&quot;kota&quot; =&gt; &quot;Jakarta&quot;, &quot;nama&quot; =&gt; &quot;Budi&quot;, &quot;umur&quot; =&gt; 25]
+</code></pre>
+<h3 id="sorting-array-multidimensi">Sorting Array Multidimensi <a href="#sorting-array-multidimensi" class="anchor" aria-hidden="true">#</a></h3>
+<pre><code class="language-php">&lt;?php
+$users = [
+    [&quot;nama&quot; =&gt; &quot;Budi&quot;, &quot;umur&quot; =&gt; 30],
+    [&quot;nama&quot; =&gt; &quot;Andi&quot;, &quot;umur&quot; =&gt; 25],
+    [&quot;nama&quot; =&gt; &quot;Siti&quot;, &quot;umur&quot; =&gt; 35],
+];
+
+// Urutkan berdasarkan umur
+usort($users, fn($a, $b) =&gt; $a[&quot;umur&quot;] &lt;=&gt; $b[&quot;umur&quot;]);
+print_r($users);
+// [[&quot;nama&quot; =&gt; &quot;Andi&quot;, &quot;umur&quot; =&gt; 25], [&quot;nama&quot; =&gt; &quot;Budi&quot;, &quot;umur&quot; =&gt; 30], [&quot;nama&quot; =&gt; &quot;Siti&quot;, &quot;umur&quot; =&gt; 35]]
+
+// Urutkan berdasarkan nama
+usort($users, fn($a, $b) =&gt; strcmp($a[&quot;nama&quot;], $b[&quot;nama&quot;]));
+</code></pre>
+<h3 id="ringkasan-sorting">Ringkasan Sorting <a href="#ringkasan-sorting" class="anchor" aria-hidden="true">#</a></h3>
+<table>
+<thead>
+<tr>
+<th>Fungsi</th>
+<th>Urut Berdasarkan</th>
+<th>Pertahankan Key</th>
+<th>Arah</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>sort()</code></td>
+<td>Value</td>
+<td>❌</td>
+<td>Ascending</td>
+</tr>
+<tr>
+<td><code>rsort()</code></td>
+<td>Value</td>
+<td>❌</td>
+<td>Descending</td>
+</tr>
+<tr>
+<td><code>asort()</code></td>
+<td>Value</td>
+<td>✅</td>
+<td>Ascending</td>
+</tr>
+<tr>
+<td><code>arsort()</code></td>
+<td>Value</td>
+<td>✅</td>
+<td>Descending</td>
+</tr>
+<tr>
+<td><code>ksort()</code></td>
+<td>Key</td>
+<td>✅</td>
+<td>Ascending</td>
+</tr>
+<tr>
+<td><code>krsort()</code></td>
+<td>Key</td>
+<td>✅</td>
+<td>Descending</td>
+</tr>
+<tr>
+<td><code>usort()</code></td>
+<td>Value (callback)</td>
+<td>❌</td>
+<td>Custom</td>
+</tr>
+<tr>
+<td><code>uasort()</code></td>
+<td>Value (callback)</td>
+<td>✅</td>
+<td>Custom</td>
+</tr>
+<tr>
+<td><code>uksort()</code></td>
+<td>Key (callback)</td>
+<td>✅</td>
+<td>Custom</td>
+</tr>
+</tbody>
+</table>
+<blockquote>
+<p><strong>Tips:</strong> Gunakan operator <strong>spaceship</strong> (<code>&lt;=&gt;</code>) untuk perbandingan di callback sorting — ringkas dan mudah dibaca.</p>
+</blockquote>
+<hr>
+<h2 id="iterasi-array">Iterasi Array <a href="#iterasi-array" class="anchor" aria-hidden="true">#</a></h2>
+<h3 id="foreach--cara-utama"><code>foreach</code> — Cara Utama <a href="#foreach--cara-utama" class="anchor" aria-hidden="true">#</a></h3>
+<pre><code class="language-php">&lt;?php
+$buah = [&quot;apel&quot;, &quot;jeruk&quot;, &quot;mangga&quot;];
+
+// Tanpa key
+foreach ($buah as $item) {
+    echo $item . &quot;\n&quot;;
+}
+
+// Dengan key
+foreach ($buah as $index =&gt; $item) {
+    echo &quot;$index: $item\n&quot;;
+}
+
+// Associative
+$user = [&quot;nama&quot; =&gt; &quot;Budi&quot;, &quot;umur&quot; =&gt; 25];
+foreach ($user as $key =&gt; $value) {
+    echo &quot;$key: $value\n&quot;;
+}
+</code></pre>
+<h3 id="foreach-dengan-referensi"><code>foreach</code> dengan Referensi <a href="#foreach-dengan-referensi" class="anchor" aria-hidden="true">#</a></h3>
+<pre><code class="language-php">&lt;?php
+$angka = [1, 2, 3, 4, 5];
+
+foreach ($angka as &amp;$n) {
+    $n *= 2;
+}
+unset($n); // PENTING — putuskan referensi!
+
+print_r($angka); // [2, 4, 6, 8, 10]
+</code></pre>
+<blockquote>
+<p><strong>Peringatan:</strong> Selalu <code>unset($n)</code> setelah <code>foreach</code> dengan referensi. Jika tidak, iterasi berikutnya bisa menghasilkan bug yang sulit dilacak.</p>
+</blockquote>
+<h3 id="foreach-dengan-destructuring"><code>foreach</code> dengan Destructuring <a href="#foreach-dengan-destructuring" class="anchor" aria-hidden="true">#</a></h3>
+<pre><code class="language-php">&lt;?php
+$koordinat = [
+    [1, 2],
+    [3, 4],
+    [5, 6],
+];
+
+foreach ($koordinat as [$x, $y]) {
+    echo &quot;X: $x, Y: $y\n&quot;;
+}
+
+// Associative
+$users = [
+    [&quot;nama&quot; =&gt; &quot;Budi&quot;, &quot;umur&quot; =&gt; 25],
+    [&quot;nama&quot; =&gt; &quot;Siti&quot;, &quot;umur&quot; =&gt; 30],
+];
+
+foreach ($users as [&quot;nama&quot; =&gt; $nama, &quot;umur&quot; =&gt; $umur]) {
+    echo &quot;$nama ($umur tahun)\n&quot;;
+}
+</code></pre>
+<h3 id="alternative-syntax">Alternative Syntax <a href="#alternative-syntax" class="anchor" aria-hidden="true">#</a></h3>
+<pre><code class="language-php">&lt;?php foreach ($buah as $item): ?&gt;
+    &lt;li&gt;&lt;?= htmlspecialchars($item) ?&gt;&lt;/li&gt;
+&lt;?php endforeach; ?&gt;
+</code></pre>
+<h3 id="array_walk--terapkan-fungsi-ke-setiap-elemen"><code>array_walk()</code> — Terapkan Fungsi ke Setiap Elemen <a href="#array_walk--terapkan-fungsi-ke-setiap-elemen" class="anchor" aria-hidden="true">#</a></h3>
+<pre><code class="language-php">&lt;?php
+$angka = [1, 2, 3, 4, 5];
+
+array_walk($angka, function(&amp;$nilai, $key) {
+    $nilai *= 2;
+});
+
+print_r($angka); // [2, 4, 6, 8, 10]
+</code></pre>
+<blockquote>
+<p><strong>Catatan:</strong> <code>array_walk()</code> memodifikasi array asli (pass by reference). Untuk transformasi tanpa mutasi, gunakan <code>array_map()</code>.</p>
+</blockquote>
+<hr>
+<h2 id="spread-operator-pada-array-php-74">Spread Operator pada Array (PHP 7.4+) <a href="#spread-operator-pada-array-php-74" class="anchor" aria-hidden="true">#</a></h2>
+<pre><code class="language-php">&lt;?php
+$arr1 = [1, 2, 3];
+$arr2 = [4, 5, 6];
+
+// Gabung
+$gabungan = [...$arr1, ...$arr2];
+print_r($gabungan); // [1, 2, 3, 4, 5, 6]
+
+// Sisipkan
+$baru = [0, ...$arr1, 10];
+print_r($baru); // [0, 1, 2, 3, 10]
+
+// Associative (PHP 8.1+)
+$user1 = [&quot;nama&quot; =&gt; &quot;Budi&quot;];
+$user2 = [&quot;umur&quot; =&gt; 25];
+$user = [...$user1, ...$user2];
+print_r($user); // [&quot;nama&quot; =&gt; &quot;Budi&quot;, &quot;umur&quot; =&gt; 25]
+</code></pre>
+<blockquote>
+<p><strong>Catatan:</strong> Spread pada array associative hanya didukung sejak PHP 8.1. Di versi sebelumnya, gunakan <code>array_merge()</code>.</p>
+</blockquote>
+<hr>
+<h2 id="contoh-praktis">Contoh Praktis <a href="#contoh-praktis" class="anchor" aria-hidden="true">#</a></h2>
+<h3 id="1-keranjang-belanja">1. Keranjang Belanja <a href="#1-keranjang-belanja" class="anchor" aria-hidden="true">#</a></h3>
+<pre><code class="language-php">&lt;?php
+$keranjang = [
+    [&quot;produk&quot; =&gt; &quot;Keyboard&quot;, &quot;harga&quot; =&gt; 450000, &quot;jumlah&quot; =&gt; 2],
+    [&quot;produk&quot; =&gt; &quot;Mouse&quot;, &quot;harga&quot; =&gt; 150000, &quot;jumlah&quot; =&gt; 1],
+    [&quot;produk&quot; =&gt; &quot;Monitor&quot;, &quot;harga&quot; =&gt; 1500000, &quot;jumlah&quot; =&gt; 1],
+];
+
+// Total
+$total = array_reduce(
+    $keranjang,
+    fn($sum, $item) =&gt; $sum + $item[&quot;harga&quot;] * $item[&quot;jumlah&quot;],
+    0
+);
+echo &quot;Total: Rp&quot; . number_format($total, 0, &quot;,&quot;, &quot;.&quot;);
+// &quot;Total: Rp2.550.000&quot;
+
+// Daftar nama produk
+$namaProduk = array_column($keranjang, &quot;produk&quot;);
+print_r($namaProduk);
+// [&quot;Keyboard&quot;, &quot;Mouse&quot;, &quot;Monitor&quot;]
+
+// Produk di atas 200rb
+$mahal = array_filter($keranjang, fn($item) =&gt; $item[&quot;harga&quot;] &gt; 200000);
+print_r($mahal);
+</code></pre>
+<h3 id="2-menghapus-duplikat">2. Menghapus Duplikat <a href="#2-menghapus-duplikat" class="anchor" aria-hidden="true">#</a></h3>
+<pre><code class="language-php">&lt;?php
+$angka = [1, 2, 2, 3, 3, 4, 5, 5, 5];
+
+$unik = array_values(array_unique($angka));
+print_r($unik); // [1, 2, 3, 4, 5]
+</code></pre>
+<h3 id="3-mengelompokkan-data">3. Mengelompokkan Data <a href="#3-mengelompokkan-data" class="anchor" aria-hidden="true">#</a></h3>
+<pre><code class="language-php">&lt;?php
+$transaksi = [
+    [&quot;tanggal&quot; =&gt; &quot;2022-12-01&quot;, &quot;total&quot; =&gt; 100000],
+    [&quot;tanggal&quot; =&gt; &quot;2022-12-01&quot;, &quot;total&quot; =&gt; 250000],
+    [&quot;tanggal&quot; =&gt; &quot;2022-12-02&quot;, &quot;total&quot; =&gt; 300000],
+    [&quot;tanggal&quot; =&gt; &quot;2022-12-02&quot;, &quot;total&quot; =&gt; 150000],
+];
+
+$perHari = array_reduce($transaksi, function($acc, $t) {
+    $tanggal = $t[&quot;tanggal&quot;];
+    if (!isset($acc[$tanggal])) {
+        $acc[$tanggal] = 0;
+    }
+    $acc[$tanggal] += $t[&quot;total&quot;];
+    return $acc;
+}, []);
+
+print_r($perHari);
+// [&quot;2022-12-01&quot; =&gt; 350000, &quot;2022-12-02&quot; =&gt; 450000]
+</code></pre>
+<h3 id="4-pencarian-dan-filter">4. Pencarian dan Filter <a href="#4-pencarian-dan-filter" class="anchor" aria-hidden="true">#</a></h3>
+<pre><code class="language-php">&lt;?php
+$produk = [
+    [&quot;nama&quot; =&gt; &quot;Keyboard Mechanical&quot;, &quot;harga&quot; =&gt; 450000, &quot;kategori&quot; =&gt; &quot;aksesoris&quot;],
+    [&quot;nama&quot; =&gt; &quot;Mouse Wireless&quot;, &quot;harga&quot; =&gt; 150000, &quot;kategori&quot; =&gt; &quot;aksesoris&quot;],
+    [&quot;nama&quot; =&gt; &quot;Monitor 24 inch&quot;, &quot;harga&quot; =&gt; 1500000, &quot;kategori&quot; =&gt; &quot;display&quot;],
+    [&quot;nama&quot; =&gt; &quot;Headset Gaming&quot;, &quot;harga&quot; =&gt; 350000, &quot;kategori&quot; =&gt; &quot;audio&quot;],
+];
+
+// Cari berdasarkan kata kunci
+function cariProduk(array $produk, string $keyword): array {
+    $lower = mb_strtolower($keyword);
+    return array_filter($produk, function($p) use ($lower) {
+        return str_contains(mb_strtolower($p[&quot;nama&quot;]), $lower);
+    });
+}
+
+print_r(cariProduk($produk, &quot;gaming&quot;));
+// [[&quot;nama&quot; =&gt; &quot;Headset Gaming&quot;, ...]]
+
+// Filter berdasarkan kategori dan harga
+function filterProduk(array $produk, ?string $kategori = null, ?float $hargaMax = null): array {
+    return array_filter($produk, function($p) use ($kategori, $hargaMax) {
+        if ($kategori !== null &amp;&amp; $p[&quot;kategori&quot;] !== $kategori) return false;
+        if ($hargaMax !== null &amp;&amp; $p[&quot;harga&quot;] &gt; $hargaMax) return false;
+        return true;
+    });
+}
+
+print_r(filterProduk($produk, &quot;aksesoris&quot;, 200000));
+// [[&quot;nama&quot; =&gt; &quot;Mouse Wireless&quot;, ...]]
+</code></pre>
+<h3 id="5-sorting-data-kompleks">5. Sorting Data Kompleks <a href="#5-sorting-data-kompleks" class="anchor" aria-hidden="true">#</a></h3>
+<pre><code class="language-php">&lt;?php
+$users = [
+    [&quot;nama&quot; =&gt; &quot;Budi&quot;, &quot;umur&quot; =&gt; 30],
+    [&quot;nama&quot; =&gt; &quot;Andi&quot;, &quot;umur&quot; =&gt; 25],
+    [&quot;nama&quot; =&gt; &quot;Siti&quot;, &quot;umur&quot; =&gt; 35],
+];
+
+// Urutkan berdasarkan umur (ascending)
+usort($users, fn($a, $b) =&gt; $a[&quot;umur&quot;] &lt;=&gt; $b[&quot;umur&quot;]);
+print_r($users);
+
+// Urutkan berdasarkan nama (ascending)
+usort($users, fn($a, $b) =&gt; strcmp($a[&quot;nama&quot;], $b[&quot;nama&quot;]));
+print_r($users);
+</code></pre>
+<hr>
+<h2 id="tips-dan-best-practice">Tips dan Best Practice <a href="#tips-dan-best-practice" class="anchor" aria-hidden="true">#</a></h2>
+<ol>
+<li>
+<p><strong>Gunakan sintaks <code>[]</code></strong> daripada <code>array()</code> — lebih ringkas.</p>
+</li>
+<li>
+<p><strong>Selalu gunakan <code>true</code></strong> sebagai parameter ketiga <code>in_array()</code> dan <code>array_search()</code> — perbandingan ketat.</p>
+</li>
+<li>
+<p><strong>Gunakan <code>array_key_exists()</code></strong> jika perlu membedakan key yang tidak ada dari key bernilai <code>null</code>.</p>
+</li>
+<li>
+<p><strong><code>array_filter()</code> mempertahankan key</strong> — gunakan <code>array_values()</code> jika perlu reset index.</p>
+</li>
+<li>
+<p><strong><code>sort()</code> me-reset index</strong> — gunakan <code>asort()</code> jika perlu mempertahankan key.</p>
+</li>
+<li>
+<p><strong>Selalu <code>unset($n)</code></strong> setelah <code>foreach</code> dengan referensi.</p>
+</li>
+<li>
+<p><strong>Gunakan <code>array_column()</code></strong> untuk mengekstrak kolom dari array multidimensi — lebih ringkas daripada <code>array_map()</code>.</p>
+</li>
+<li>
+<p><strong>Gunakan operator spaceship <code>&lt;=&gt;</code></strong> di callback sorting — ringkas dan mudah dibaca.</p>
+</li>
+<li>
+<p><strong>Gunakan <code>array_reduce()</code></strong> untuk agregasi kompleks — lebih fleksibel daripada loop manual.</p>
+</li>
+<li>
+<p><strong>Gunakan <code>array_map()</code>, <code>array_filter()</code>, <code>array_reduce()</code></strong> daripada loop manual — lebih deklaratif dan mudah dibaca.</p>
+</li>
+<li>
+<p><strong>Hati-hati dengan array campuran</strong> (indexed dan associative) — sulit diprediksi.</p>
+</li>
+<li>
+<p><strong>Gunakan <code>count()</code></strong> untuk menghitung elemen — bukan <code>sizeof()</code> (alias, tetapi kurang umum).</p>
+</li>
+</ol>
+<hr>
+<h2 id="ringkasan">Ringkasan <a href="#ringkasan" class="anchor" aria-hidden="true">#</a></h2>
+<table>
+<thead>
+<tr>
+<th>Kategori</th>
+<th>Fungsi Utama</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Membuat</strong></td>
+<td><code>[]</code>, <code>array()</code>, <code>range()</code>, <code>array_fill()</code>, <code>array_combine()</code></td>
+</tr>
+<tr>
+<td><strong>Akses</strong></td>
+<td><code>$arr[key]</code>, <code>$arr[index]</code>, <code>$arr[i][j]</code></td>
+</tr>
+<tr>
+<td><strong>Cek</strong></td>
+<td><code>isset()</code>, <code>array_key_exists()</code>, <code>in_array()</code>, <code>array_search()</code></td>
+</tr>
+<tr>
+<td><strong>Tambah/hapus</strong></td>
+<td><code>array_push</code>, <code>array_pop</code>, <code>array_unshift</code>, <code>array_shift</code>, <code>unset</code></td>
+</tr>
+<tr>
+<td><strong>Gabung/potong</strong></td>
+<td><code>array_merge</code>, <code>array_slice</code>, <code>array_splice</code>, <code>array_chunk</code></td>
+</tr>
+<tr>
+<td><strong>Transformasi</strong></td>
+<td><code>array_map</code>, <code>array_filter</code>, <code>array_reduce</code>, <code>array_unique</code>, <code>array_reverse</code>, <code>array_column</code>, <code>array_flip</code></td>
+</tr>
+<tr>
+<td><strong>Sorting</strong></td>
+<td><code>sort</code>, <code>rsort</code>, <code>asort</code>, <code>arsort</code>, <code>ksort</code>, <code>krsort</code>, <code>usort</code>, <code>uasort</code>, <code>uksort</code></td>
+</tr>
+<tr>
+<td><strong>Agregasi</strong></td>
+<td><code>array_sum</code>, <code>array_product</code>, <code>count</code></td>
+</tr>
+<tr>
+<td><strong>Diff/intersect</strong></td>
+<td><code>array_diff</code>, <code>array_intersect</code>, <code>array_diff_key</code>, <code>array_intersect_key</code></td>
+</tr>
+<tr>
+<td><strong>Iterasi</strong></td>
+<td><code>foreach</code>, <code>array_walk</code></td>
+</tr>
+<tr>
+<td><strong>Spread</strong></td>
+<td><code>[...$arr1, ...$arr2]</code> (PHP 7.4+)</td>
+</tr>
+</tbody>
+</table>
+<p>Poin penting:</p>
+<ul>
+<li>PHP memiliki <strong>indexed array</strong>, <strong>associative array</strong>, dan <strong>multidimensional array</strong>.</li>
+<li><strong><code>unset()</code> tidak me-reset index</strong> — gunakan <code>array_values()</code> jika perlu.</li>
+<li><strong><code>array_filter()</code> mempertahankan key</strong> — gunakan <code>array_values()</code> untuk reset.</li>
+<li><strong><code>sort()</code> me-reset index</strong>; <strong><code>asort()</code> mempertahankan key</strong>.</li>
+<li><strong>Selalu <code>unset($n)</code></strong> setelah <code>foreach</code> dengan referensi.</li>
+<li>Gunakan <strong><code>array_column()</code></strong> untuk ekstrak kolom dari array multidimensi.</li>
+<li><strong><code>in_array()</code> dan <code>array_search()</code></strong> — selalu gunakan mode ketat (<code>true</code>).</li>
+<li>Gunakan <strong><code>array_map</code>/<code>array_filter</code>/<code>array_reduce</code></strong> daripada loop manual.</li>
+<li><strong>Spread operator</strong> (<code>...</code>) tersedia sejak PHP 7.4 (associative: PHP 8.1+).</li>
+</ul>
+<p>Pada artikel berikutnya, kita akan membahas <strong>String dan Manipulasi</strong> — fungsi string, regex, dan formatting.</p>
+
+			<div class="page-footer-meta d-flex flex-column flex-md-row justify-content-between">
+				</div>
+			<div class="docs-navigation d-flex justify-content-between">
+	
+	<a href="/php/tutorial/06-fungsi/">
+			<div class="card my-1">
+				<div class="card-body py-2">
+					&larr; Fungsi
+				</div>
+			</div>
+		</a>
+	<a class="ms-auto" href="/php/tutorial/08-string/">
+			<div class="card my-1">
+				<div class="card-body py-2">
+					String dan Manipulasi &rarr;
+				</div>
+			</div>
+		</a>
+	</div>
+
+			
+		</main>
+	</div>
+
+      </div>
+    </div>
+    
+    
+    <footer class="footer text-muted">
+  <div class="container-xxl">
+    <div class="row">
+      <div class="col-lg-8 order-last order-lg-first">
+        <ul class="list-inline">
+          <li class="list-inline-item">Powered by <a class="text-muted" href="https://gohugo.io/">Hugo</a> and <a class="text-muted" href="https://github.com/">Github</a></li>
+        </ul>
+      </div>
+      <div class="col-lg-8 order-first order-lg-last text-lg-end">
+        <ul class="list-inline">
+          </ul>
+      </div>
+    </div>
+  </div>
+</footer>
+    
+
+<script src="/js/bootstrap.min.650aeec64c81d69d4c0850fc73c93da3f0330cec0a27772feed7f90f60baa5f47f1c45687d71914bdafd1c4e860d40f6dc08ede27a2f08431ff929c9a2d24621.js" integrity="sha512-ZQruxkyB1p1MCFD8c8k9o/AzDOwKJ3cv7tf5D2C6pfR/HEVofXGRS9r9HE6GDUD23Ajt4novCEMf&#43;SnJotJGIQ==" crossorigin="anonymous" defer></script>
+  <script src="/js/highlight.min.ec234bd8a5f487aaffe50a89f17b14501b1bb65633cf177cffd4cb84702dd7030edc08712dceb8dc27ac7e54b53240a08bf0b8d951572ee582bcdbbd06a48a7b.js" integrity="sha512-7CNL2KX0h6r/5QqJ8XsUUBsbtlYzzxd8/9TLhHAt1wMO3AhxLc643CesflS1MkCgi/C42VFXLuWCvNu9BqSKew==" crossorigin="anonymous" defer></script>
+  <script src="/main.min.cd1e5e6b40065b3f7f7fd8548a528fac67019754eda0f37b9918d02d154fc9ef6a22742f6513b0572ad9163152e151ec36221fbeafbecd7759c3dab1f19b64b9.js" integrity="sha512-zR5ea0AGWz9/f9hUilKPrGcBl1TtoPN7mRjQLRVPye9qInQvZROwVyrZFjFS4VHsNiIfvq&#43;&#43;zXdZw9qx8ZtkuQ==" crossorigin="anonymous" defer></script>
+  <script src="https://kaban.my.id/index.min.797ba4de6d8a5423115e651882a6de105e1744ee10ab32e79b10db26c6fbcd5d2706c0392c663ea0d01e04e8a21e3a87bb2ea742d9df2d62f481a7e793b68ec4.js" integrity="sha512-eXuk3m2KVCMRXmUYgqbeEF4XRO4QqzLnmxDbJsb7zV0nBsA5LGY&#43;oNAeBOiiHjqHuy6nQtnfLWL0gafnk7aOxA==" crossorigin="anonymous" defer></script>
+  
+    <div class="d-flex fixed-bottom pb-4 pb-lg-5 pe-4 pe-lg-5">
+      <a id="toTop" href="#" class="btn btn-outline-primary rounded-circle ms-auto p-2"><span class="visually-hidden">Top</span><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-chevron-up"><polyline points="18 15 12 9 6 15"></polyline></svg></a>
+    </div>
+    
+  </body>
+</html>

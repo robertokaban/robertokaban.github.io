@@ -1,0 +1,1642 @@
+<!doctype html>
+<html lang="en-US">
+  <head>
+  <meta charset="utf-8">
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <link rel="preload" as="font" href="https://kaban.my.id/fonts/vendor/jost/jost-v4-latin-regular.woff2" type="font/woff2" crossorigin>
+<link rel="preload" as="font" href="https://kaban.my.id/fonts/vendor/jost/jost-v4-latin-500.woff2" type="font/woff2" crossorigin>
+<link rel="preload" as="font" href="https://kaban.my.id/fonts/vendor/jost/jost-v4-latin-700.woff2" type="font/woff2" crossorigin>
+
+  <script>(()=>{var t=window.matchMedia&&window.matchMedia("(prefers-color-scheme: dark)").matches,e=localStorage.getItem("theme");t&&e===null&&(localStorage.setItem("theme","dark"),document.documentElement.setAttribute("data-dark-mode","")),t&&e==="dark"&&document.documentElement.setAttribute("data-dark-mode",""),e==="dark"&&document.documentElement.setAttribute("data-dark-mode","")})()</script>
+
+  <link rel="stylesheet" href="https://kaban.my.id/main.4296e689affcd00e933b8954c10fc43cd1a5f16d5552e78183d12ea50d3e0bf5a596df23a379a4936743f01a7cd8ba048a628b2b9b60b34aa49fad468287100a.css" integrity="sha512-Qpbmia/80A6TO4lUwQ/EPNGl8W1VUueBg9EupQ0&#43;C/Wllt8jo3mkk2dD8Bp82LoEimKLK5tgs0qkn61GgocQCg==" crossorigin="anonymous">
+<noscript><style>img.lazyload { display: none; }</style></noscript>
+  <meta name="robots" content="index, follow">
+    <meta name="googlebot" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1">
+    <meta name="bingbot" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1">
+  <title>Fungsi - Roberto Kaban Blog&#39;s</title>
+<meta name="description" content="Panduan lengkap fungsi PHP: function declaration, parameter, return value, scope, anonymous function, closure, dan arrow function.">
+<link rel="canonical" href="https://kaban.my.id/php/tutorial/06-fungsi/">
+<meta property="og:locale" content="en_US">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Fungsi">
+<meta property="og:description" content="Panduan lengkap fungsi PHP: function declaration, parameter, return value, scope, anonymous function, closure, dan arrow function.">
+<meta property="og:url" content="https://kaban.my.id/php/tutorial/06-fungsi/">
+<meta property="og:site_name" content="Roberto Kaban Blog&#39;s">
+<meta property="article:published_time" content="2023-01-08T08:00:00+00:00">
+  <meta property="article:modified_time" content="2023-01-08T08:00:00+00:00">
+  
+  <meta property="og:image" content="https://kaban.my.id/doks.png"/>
+      <meta property="og:image:alt" content="Roberto Kaban Blog&#39;s">
+    
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:site" content="@robertokaban">
+<meta name="twitter:creator" content="@robertokaban">
+<meta name="twitter:title" content="Fungsi">
+<meta name="twitter:description" content="Panduan lengkap fungsi PHP: function declaration, parameter, return value, scope, anonymous function, closure, dan arrow function.">
+<meta name="twitter:image" content="https://kaban.my.id/doks.png">
+    <meta name="twitter:image:alt" content="Fungsi">
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "Person",
+        "@id": "https://kaban.my.id/#/schema/person/1",
+      "name": "BlogRobertoKaban",
+      "url": "https://kaban.my.id/",
+      "sameAs": [
+        "https://twitter.com/robertokaban"
+        , "https://github.com/robertokaban"
+        ],
+      "image": {
+          "@type": "ImageObject",
+          "@id": "https://kaban.my.id/#/schema/image/1",
+          "url": "https://kaban.my.id/doks.png",
+          "width":  1280 ,
+          "height":  640 ,
+          "caption": "BlogRobertoKaban"
+        }
+      },
+    {
+      "@type": "WebSite",
+      "@id": "https://kaban.my.id/#/schema/website/1",
+      "url": "https://kaban.my.id/",
+      "name": "Roberto Kaban Blog\u0027s",
+      "description": "Hanya sebuah catatan kecil untuk hal yang tidak ingin dilupakan.",
+      "publisher": {
+          "@id": "https://kaban.my.id/#/schema/person/1"
+        }
+      },
+    {
+      "@type": "WebPage",
+      "@id": "https://kaban.my.id/php/tutorial/06-fungsi/",
+      "url": "https://kaban.my.id/php/tutorial/06-fungsi/",
+      "name": "Fungsi",
+      "description": "Panduan lengkap fungsi PHP: function declaration, parameter, return value, scope, anonymous function, closure, dan arrow function.",
+      "isPartOf": {
+        "@id": "https://kaban.my.id/#/schema/website/1"
+      },
+      "about": {
+          "@id": "https://kaban.my.id/#/schema/person/1"
+        },
+      "datePublished": "2023-01-08T08:00:00CET",
+      "dateModified": "2023-01-08T08:00:00CET",
+      "breadcrumb": {
+        "@id": "https://kaban.my.id/php/tutorial/06-fungsi/#/schema/breadcrumb/1"
+      },
+      "primaryImageOfPage": {
+        "@id": "https://kaban.my.id/php/tutorial/06-fungsi/#/schema/image/2"
+      },
+      "inLanguage": "en-US",
+      "potentialAction": [{
+        "@type": "ReadAction", "target": ["https://kaban.my.id/php/tutorial/06-fungsi/"]
+      }]
+    },
+    {
+      "@type": "BreadcrumbList",
+      "@id": "https://kaban.my.id/php/tutorial/06-fungsi/#/schema/breadcrumb/1",
+      "name": "Breadcrumbs",
+      "itemListElement": [{
+        "@type": "ListItem",
+        "position":  1 ,
+        "item": {
+          "@type": "WebPage",
+          "@id": "https://kaban.my.id/",
+          "url": "https://kaban.my.id/",
+          "name": "Home"
+          }
+        },{
+        "@type": "ListItem",
+        "position":  2 ,
+        "item": {
+          "@type": "WebPage",
+          "@id": "https://kaban.my.id/php/",
+          "url": "https://kaban.my.id/php/",
+          "name": "Php"
+          }
+        },{
+        "@type": "ListItem",
+        "position":  3 ,
+        "item": {
+          "@type": "WebPage",
+          "@id": "https://kaban.my.id/php/tutorial/",
+          "url": "https://kaban.my.id/php/tutorial/",
+          "name": "Tutorial"
+          }
+        },{
+        "@type": "ListItem",
+        "position":  4 ,
+        "item": {
+          "@id": "https://kaban.my.id/php/tutorial/06-fungsi/"
+          }
+        }]
+    },
+
+    {
+      "@context": "https://schema.org",
+      "@graph": [
+        {
+          "@type": "ImageObject",
+          "@id": "https://kaban.my.id/php/tutorial/06-fungsi/#/schema/image/2",
+          "url": "https://kaban.my.id/doks.png",
+          "contentUrl": "https://kaban.my.id/doks.png",
+          "caption": "Fungsi"
+        }
+      ]
+    }
+
+  ]
+}
+</script>
+
+  <meta name="theme-color" content="#fff">
+<link rel="icon" href="https://kaban.my.id/favicon.ico" sizes="any">
+<link rel="icon" type="image/svg+xml" href="https://kaban.my.id/favicon.svg">
+<link rel="apple-touch-icon" sizes="180x180" href="https://kaban.my.id/apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="32x32" href="https://kaban.my.id/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="https://kaban.my.id/favicon-16x16.png">
+<link rel="manifest" crossorigin="use-credentials" href="https://kaban.my.id/site.webmanifest">
+
+  
+
+
+  
+  
+  
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-60VSDZFQR5"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-60VSDZFQR5');
+</script>
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6664512614760985"
+     crossorigin="anonymous"></script>
+</head>
+
+  <body class="php single">
+    <div class="sticky-top">
+<div class="header-bar"></div>
+
+<header class="navbar navbar-expand-lg navbar-light doks-navbar">
+  <nav class="container-xxl flex-wrap flex-lg-nowrap" aria-label="Main navigation">
+
+    <a class="navbar-brand order-0" href="/" aria-label="Roberto Kaban Blog&#39;s">
+      Roberto Kaban Blog&#39;s
+    </a>
+
+    <button class="btn btn-menu order-2 d-block d-lg-none" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasDoks" aria-controls="offcanvasDoks" aria-label="Open main menu">
+      <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-menu"><line x1="3" y1="12" x2="21" y2="12"></line><line x1="3" y1="6" x2="21" y2="6"></line><line x1="3" y1="18" x2="21" y2="18"></line></svg>
+    </button>
+    <div class="offcanvas offcanvas-end border-0 py-lg-1" tabindex="-1" id="offcanvasDoks" data-bs-backdrop="true" aria-labelledby="offcanvasDoksLabel">
+      <div class="header-bar d-lg-none"></div>
+      <div class="offcanvas-header d-lg-none">
+        <h2 class="h5 offcanvas-title ps-2" id="offcanvasDoksLabel"><a class="text-dark" href="/">Roberto Kaban Blog&#39;s</a></h2>
+        <button type="button" class="btn-close text-reset me-2" data-bs-dismiss="offcanvas" aria-label="Close main menu"></button>
+      </div>
+      <div class="offcanvas-body p-4 p-lg-0">
+        <ul class="nav flex-column flex-lg-row align-items-lg-center mt-2 mt-lg-0 ms-lg-2 me-lg-auto">
+              <li class="nav-item">
+                <a class="nav-link ps-0 py-1" href="/about/">About Me</a>
+              </li>
+            
+          
+              <li class="nav-item">
+                <a class="nav-link ps-0 py-1" href="/contact/">Contact</a>
+              </li>
+            
+          
+              <li class="nav-item">
+                <a class="nav-link ps-0 py-1" href="/artikel/">Artikel</a>
+              </li>
+            
+          
+              <li class="nav-item">
+                <a class="nav-link ps-0 py-1" href="/coretanku/">Coretanku</a>
+              </li>
+            
+          </ul>
+
+        <hr class="text-black-50 my-4 d-lg-none">
+        <form class="doks-search position-relative flex-grow-1 ms-lg-auto me-lg-2">
+          <input id="search" class="form-control is-search" type="search" placeholder="Cari di blog ini..." aria-label="Cari di blog ini..." autocomplete="off">
+          <div id="suggestions" class="shadow bg-white rounded d-none"></div>
+        </form>
+        <hr class="text-black-50 my-4 d-lg-none">
+        <ul class="nav flex-column flex-lg-row">
+          <li class="nav-item">
+              <a class="nav-link social-link" href="https://github.com/robertokaban"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-github"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path></svg><small class="ms-2 d-lg-none">GitHub</small></a>
+            </li>
+          <li class="nav-item">
+              <a class="nav-link social-link" href="https://facebook.com/roberto.kaban"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-facebook"><path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"></path></svg><small class="ms-2 d-lg-none">Facebook</small></a>
+            </li>
+          <li class="nav-item">
+              <a class="nav-link social-link" href="https://twitter.com/robertokaban"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-twitter"><path d="M23 3a10.9 10.9 0 0 1-3.14 1.53 4.48 4.48 0 0 0-7.86 3v1A10.66 10.66 0 0 1 3 4s-4 9 5 13a11.64 11.64 0 0 1-7 2c9 5 20 0 20-11.5a4.5 4.5 0 0 0-.08-.83A7.72 7.72 0 0 0 23 3z"></path></svg><small class="ms-2 d-lg-none">Twitter</small></a>
+            </li>
+          <li class="nav-item">
+              <a class="nav-link social-link" href="https://youtube.com/@robertokaban"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-youtube"><path d="M10,15L15.19,12L10,9V15M21.56,7.17C21.69,7.64 21.78,8.27 21.84,9.07C21.91,9.87 21.94,10.56 21.94,11.16L22,12C22,14.19 21.84,15.8 21.56,16.83C21.31,17.73 20.73,18.31 19.83,18.56C19.36,18.69 18.5,18.78 17.18,18.84C15.88,18.91 14.69,18.94 13.59,18.94L12,19C7.81,19 5.2,18.84 4.17,18.56C3.27,18.31 2.69,17.73 2.44,16.83C2.31,16.36 2.22,15.73 2.16,14.93C2.09,14.13 2.06,13.44 2.06,12.84L2,12C2,9.81 2.16,8.2 2.44,7.17C2.69,6.27 3.27,5.69 4.17,5.44C4.64,5.31 5.5,5.22 6.82,5.16C8.12,5.09 9.31,5.06 10.41,5.06L12,5C16.19,5 18.8,5.16 19.83,5.44C20.73,5.69 21.31,6.27 21.56,7.17Z"></path></svg><small class="ms-2 d-lg-none">Youtube</small></a>
+            </li>
+          </ul>
+
+        
+        <hr class="text-black-50 my-4 d-lg-none">
+        <button id="mode" class="btn btn-link" type="button" aria-label="Toggle user interface mode">
+          <span class="toggle-dark"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-moon"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path></svg></span>
+          <span class="toggle-light"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-sun"><circle cx="12" cy="12" r="5"></circle><line x1="12" y1="1" x2="12" y2="3"></line><line x1="12" y1="21" x2="12" y2="23"></line><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line><line x1="1" y1="12" x2="3" y2="12"></line><line x1="21" y1="12" x2="23" y2="12"></line><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line></svg></span>
+        </button>
+        
+
+        </div>
+    </div>
+  </nav>
+</header>
+
+
+</div>
+
+
+<div class="container-xxl">
+  <aside class="doks-sidebar">
+    <nav id="doks-docs-nav" class="collapse d-lg-none" aria-label="Tertiary navigation">
+      
+<ul class="list-unstyled collapsible-sidebar">
+  
+    
+      
+      <li class="mb-1">
+        <button class="btn btn-toggle align-items-center rounded collapsed" data-bs-toggle="collapse" data-bs-target="#section-de2591224751442a3b2101e94880333c" aria-expanded="true">
+          Tutorial PHP
+        </button>
+        <div class="collapse show" id="section-de2591224751442a3b2101e94880333c">
+          <ul class="btn-toggle-nav list-unstyled fw-normal pb-1 small">
+            
+              
+                
+                <li><a class="docs-link rounded" href="https://kaban.my.id/php/tutorial/pengenalan/">Pengenalan PHP</a></li>
+              
+            
+              
+                
+                <li><a class="docs-link rounded" href="https://kaban.my.id/php/tutorial/02-instalasi-persiapan/">Instalasi &amp; Persiapan Lingkungan PHP</a></li>
+              
+            
+              
+                
+                <li><a class="docs-link rounded" href="https://kaban.my.id/php/tutorial/03-sintaks-variabel/">Sintaks Dasar &amp; Variabel PHP</a></li>
+              
+            
+              
+                
+                <li><a class="docs-link rounded" href="https://kaban.my.id/php/tutorial/04-tipe-data-konversi/">Tipe Data &amp; Konversi</a></li>
+              
+            
+              
+                
+                <li><a class="docs-link rounded" href="https://kaban.my.id/php/tutorial/05-struktur-kontrol/">Struktur Kontrol &amp; Perulangan</a></li>
+              
+            
+              
+                
+                <li><a class="docs-link rounded active" href="https://kaban.my.id/php/tutorial/06-fungsi/">Fungsi</a></li>
+              
+            
+              
+                
+                <li><a class="docs-link rounded" href="https://kaban.my.id/php/tutorial/07-array/">Array dan Method-nya</a></li>
+              
+            
+              
+                
+                <li><a class="docs-link rounded" href="https://kaban.my.id/php/tutorial/08-string/">String dan Manipulasi</a></li>
+              
+            
+              
+                
+                <li><a class="docs-link rounded" href="https://kaban.my.id/php/tutorial/09-superglobal-form/">Superglobal dan Form Handling</a></li>
+              
+            
+              
+                
+                <li><a class="docs-link rounded" href="https://kaban.my.id/php/tutorial/10-session-cookie/">Session dan Cookie</a></li>
+              
+            
+              
+                
+                <li><a class="docs-link rounded" href="https://kaban.my.id/php/tutorial/11-include-require/">Include dan Require</a></li>
+              
+            
+          </ul>
+        </div>
+      </li>
+    
+  
+</ul>
+
+    </nav>
+  </aside>
+</div>
+
+    <div class="wrap container-xxl" role="document">
+      <div class="content">
+        
+	<div class="row flex-xl-nowrap">
+		<div class="col-lg-5 col-xl-4 docs-sidebar d-none d-lg-block">
+			<nav class="docs-links" aria-label="Main navigation">
+				
+<ul class="list-unstyled collapsible-sidebar">
+  
+    
+      
+      <li class="mb-1">
+        <button class="btn btn-toggle align-items-center rounded collapsed" data-bs-toggle="collapse" data-bs-target="#section-de2591224751442a3b2101e94880333c" aria-expanded="true">
+          Tutorial PHP
+        </button>
+        <div class="collapse show" id="section-de2591224751442a3b2101e94880333c">
+          <ul class="btn-toggle-nav list-unstyled fw-normal pb-1 small">
+            
+              
+                
+                <li><a class="docs-link rounded" href="https://kaban.my.id/php/tutorial/pengenalan/">Pengenalan PHP</a></li>
+              
+            
+              
+                
+                <li><a class="docs-link rounded" href="https://kaban.my.id/php/tutorial/02-instalasi-persiapan/">Instalasi &amp; Persiapan Lingkungan PHP</a></li>
+              
+            
+              
+                
+                <li><a class="docs-link rounded" href="https://kaban.my.id/php/tutorial/03-sintaks-variabel/">Sintaks Dasar &amp; Variabel PHP</a></li>
+              
+            
+              
+                
+                <li><a class="docs-link rounded" href="https://kaban.my.id/php/tutorial/04-tipe-data-konversi/">Tipe Data &amp; Konversi</a></li>
+              
+            
+              
+                
+                <li><a class="docs-link rounded" href="https://kaban.my.id/php/tutorial/05-struktur-kontrol/">Struktur Kontrol &amp; Perulangan</a></li>
+              
+            
+              
+                
+                <li><a class="docs-link rounded active" href="https://kaban.my.id/php/tutorial/06-fungsi/">Fungsi</a></li>
+              
+            
+              
+                
+                <li><a class="docs-link rounded" href="https://kaban.my.id/php/tutorial/07-array/">Array dan Method-nya</a></li>
+              
+            
+              
+                
+                <li><a class="docs-link rounded" href="https://kaban.my.id/php/tutorial/08-string/">String dan Manipulasi</a></li>
+              
+            
+              
+                
+                <li><a class="docs-link rounded" href="https://kaban.my.id/php/tutorial/09-superglobal-form/">Superglobal dan Form Handling</a></li>
+              
+            
+              
+                
+                <li><a class="docs-link rounded" href="https://kaban.my.id/php/tutorial/10-session-cookie/">Session dan Cookie</a></li>
+              
+            
+              
+                
+                <li><a class="docs-link rounded" href="https://kaban.my.id/php/tutorial/11-include-require/">Include dan Require</a></li>
+              
+            
+          </ul>
+        </div>
+      </li>
+    
+  
+</ul>
+
+			</nav>
+		</div>
+		<nav class="docs-toc d-none d-xl-block col-xl-3" aria-label="Secondary navigation">
+			<div class="d-xl-none">
+  <button class="btn btn-outline-primary btn-sm doks-toc-toggle collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#onThisPage" aria-controls="doks-docs-nav" aria-expanded="false" aria-label="Toggle On this page navigation">
+    <span>Daftar isi</span>
+    <span>
+      <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" class="doks doks-expand" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><title>Expand</title><polyline points="7 13 12 18 17 13"></polyline><polyline points="7 6 12 11 17 6"></polyline></svg>
+      <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" class="doks doks-collapse" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><title>Collapse</title><polyline points="17 11 12 6 7 11"></polyline><polyline points="17 18 12 13 7 18"></polyline></svg>
+    </span>
+  </button>
+  <div class="collapse" id="onThisPage">
+    <div class="card card-body mt-3 py-1">
+      <div class="page-links">
+        <nav id="TableOfContents">
+  <ul>
+    <li><a href="#pendahuluan">Pendahuluan</a></li>
+    <li><a href="#mendefinisikan-fungsi">Mendefinisikan Fungsi</a>
+      <ul>
+        <li><a href="#function-declaration">Function Declaration</a></li>
+        <li><a href="#nested-function">Nested Function</a></li>
+        <li><a href="#fungsi-dengan-type-declaration">Fungsi dengan Type Declaration</a></li>
+      </ul>
+    </li>
+    <li><a href="#parameter-dan-argumen">Parameter dan Argumen</a>
+      <ul>
+        <li><a href="#parameter-vs-argumen">Parameter vs Argumen</a></li>
+        <li><a href="#parameter-default">Parameter Default</a></li>
+        <li><a href="#type-declaration-pada-parameter">Type Declaration pada Parameter</a></li>
+        <li><a href="#nullable-parameter">Nullable Parameter</a></li>
+        <li><a href="#variadic-parameter-args">Variadic Parameter (<code>...$args</code>)</a></li>
+        <li><a href="#named-arguments--php-8">Named Arguments — PHP 8+</a></li>
+        <li><a href="#pass-by-value-vs-pass-by-reference">Pass by Value vs Pass by Reference</a></li>
+        <li><a href="#destructuring-parameter-php-8">Destructuring Parameter (PHP 8+)</a></li>
+      </ul>
+    </li>
+    <li><a href="#return-value">Return Value</a>
+      <ul>
+        <li><a href="#return--mengembalikan-nilai"><code>return</code> — Mengembalikan Nilai</a></li>
+        <li><a href="#fungsi-tanpa-return">Fungsi Tanpa <code>return</code></a></li>
+        <li><a href="#return-menghentikan-eksekusi"><code>return</code> Menghentikan Eksekusi</a></li>
+        <li><a href="#return-type-declaration">Return Type Declaration</a></li>
+        <li><a href="#mengembalikan-banyak-nilai">Mengembalikan Banyak Nilai</a></li>
+        <li><a href="#early-return">Early Return</a></li>
+      </ul>
+    </li>
+    <li><a href="#scope-lingkup-variabel">Scope: Lingkup Variabel</a>
+      <ul>
+        <li><a href="#global-scope">Global Scope</a></li>
+        <li><a href="#mengakses-global-dari-dalam-fungsi">Mengakses Global dari Dalam Fungsi</a></li>
+        <li><a href="#local-scope">Local Scope</a></li>
+        <li><a href="#static-variable">Static Variable</a></li>
+        <li><a href="#scope-constant">Scope Constant</a></li>
+      </ul>
+    </li>
+    <li><a href="#anonymous-function-dan-closure">Anonymous Function dan Closure</a>
+      <ul>
+        <li><a href="#anonymous-function">Anonymous Function</a></li>
+        <li><a href="#closure">Closure</a></li>
+        <li><a href="#arrow-function--php-74">Arrow Function — PHP 7.4+</a></li>
+        <li><a href="#perbandingan-closure-vs-arrow-function">Perbandingan Closure vs Arrow Function</a></li>
+        <li><a href="#callable-type"><code>callable</code> Type</a></li>
+      </ul>
+    </li>
+    <li><a href="#contoh-praktis">Contoh Praktis</a>
+      <ul>
+        <li><a href="#1-fungsi-utility-format-rupiah">1. Fungsi Utility: Format Rupiah</a></li>
+        <li><a href="#2-fungsi-dengan-validasi-dan-early-return">2. Fungsi dengan Validasi dan Early Return</a></li>
+        <li><a href="#3-function-factory-dengan-closure">3. Function Factory dengan Closure</a></li>
+        <li><a href="#4-komposisi-fungsi">4. Komposisi Fungsi</a></li>
+        <li><a href="#5-higher-order-function">5. Higher-Order Function</a></li>
+        <li><a href="#6-memoization-dengan-static-variable">6. Memoization dengan Static Variable</a></li>
+      </ul>
+    </li>
+    <li><a href="#tips-dan-best-practice">Tips dan Best Practice</a></li>
+    <li><a href="#ringkasan">Ringkasan</a></li>
+  </ul>
+</nav>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="page-links d-none d-xl-block">
+  <h3>Daftar isi</h3>
+  <nav id="TableOfContents">
+  <ul>
+    <li><a href="#pendahuluan">Pendahuluan</a></li>
+    <li><a href="#mendefinisikan-fungsi">Mendefinisikan Fungsi</a>
+      <ul>
+        <li><a href="#function-declaration">Function Declaration</a></li>
+        <li><a href="#nested-function">Nested Function</a></li>
+        <li><a href="#fungsi-dengan-type-declaration">Fungsi dengan Type Declaration</a></li>
+      </ul>
+    </li>
+    <li><a href="#parameter-dan-argumen">Parameter dan Argumen</a>
+      <ul>
+        <li><a href="#parameter-vs-argumen">Parameter vs Argumen</a></li>
+        <li><a href="#parameter-default">Parameter Default</a></li>
+        <li><a href="#type-declaration-pada-parameter">Type Declaration pada Parameter</a></li>
+        <li><a href="#nullable-parameter">Nullable Parameter</a></li>
+        <li><a href="#variadic-parameter-args">Variadic Parameter (<code>...$args</code>)</a></li>
+        <li><a href="#named-arguments--php-8">Named Arguments — PHP 8+</a></li>
+        <li><a href="#pass-by-value-vs-pass-by-reference">Pass by Value vs Pass by Reference</a></li>
+        <li><a href="#destructuring-parameter-php-8">Destructuring Parameter (PHP 8+)</a></li>
+      </ul>
+    </li>
+    <li><a href="#return-value">Return Value</a>
+      <ul>
+        <li><a href="#return--mengembalikan-nilai"><code>return</code> — Mengembalikan Nilai</a></li>
+        <li><a href="#fungsi-tanpa-return">Fungsi Tanpa <code>return</code></a></li>
+        <li><a href="#return-menghentikan-eksekusi"><code>return</code> Menghentikan Eksekusi</a></li>
+        <li><a href="#return-type-declaration">Return Type Declaration</a></li>
+        <li><a href="#mengembalikan-banyak-nilai">Mengembalikan Banyak Nilai</a></li>
+        <li><a href="#early-return">Early Return</a></li>
+      </ul>
+    </li>
+    <li><a href="#scope-lingkup-variabel">Scope: Lingkup Variabel</a>
+      <ul>
+        <li><a href="#global-scope">Global Scope</a></li>
+        <li><a href="#mengakses-global-dari-dalam-fungsi">Mengakses Global dari Dalam Fungsi</a></li>
+        <li><a href="#local-scope">Local Scope</a></li>
+        <li><a href="#static-variable">Static Variable</a></li>
+        <li><a href="#scope-constant">Scope Constant</a></li>
+      </ul>
+    </li>
+    <li><a href="#anonymous-function-dan-closure">Anonymous Function dan Closure</a>
+      <ul>
+        <li><a href="#anonymous-function">Anonymous Function</a></li>
+        <li><a href="#closure">Closure</a></li>
+        <li><a href="#arrow-function--php-74">Arrow Function — PHP 7.4+</a></li>
+        <li><a href="#perbandingan-closure-vs-arrow-function">Perbandingan Closure vs Arrow Function</a></li>
+        <li><a href="#callable-type"><code>callable</code> Type</a></li>
+      </ul>
+    </li>
+    <li><a href="#contoh-praktis">Contoh Praktis</a>
+      <ul>
+        <li><a href="#1-fungsi-utility-format-rupiah">1. Fungsi Utility: Format Rupiah</a></li>
+        <li><a href="#2-fungsi-dengan-validasi-dan-early-return">2. Fungsi dengan Validasi dan Early Return</a></li>
+        <li><a href="#3-function-factory-dengan-closure">3. Function Factory dengan Closure</a></li>
+        <li><a href="#4-komposisi-fungsi">4. Komposisi Fungsi</a></li>
+        <li><a href="#5-higher-order-function">5. Higher-Order Function</a></li>
+        <li><a href="#6-memoization-dengan-static-variable">6. Memoization dengan Static Variable</a></li>
+      </ul>
+    </li>
+    <li><a href="#tips-dan-best-practice">Tips dan Best Practice</a></li>
+    <li><a href="#ringkasan">Ringkasan</a></li>
+  </ul>
+</nav>
+  </div>
+
+		</nav>
+		<main class="docs-content col-lg-11 col-xl-9">
+		
+				<nav aria-label="breadcrumb">
+					<ol class="breadcrumb">
+						<li class="breadcrumb-item"><a href="/">Home</a></li>
+<li class="breadcrumb-item"><a href="/php/">Php</a></li>
+<li class="breadcrumb-item"><a href="/php/tutorial/">Tutorial PHP</a></li>
+<li class="breadcrumb-item active" aria-current="page">Fungsi</li>
+					</ol>
+				</nav>
+			
+			<h1>Fungsi</h1>
+			<p class="lead">Fungsi adalah blok kode yang dapat dipanggil berulang kali. Artikel ini membahas cara membuat fungsi, parameter, return value, scope, anonymous function, closure, dan arrow function dengan contoh praktis.</p>
+			<nav class="d-xl-none" aria-label="Quaternary navigation">
+				<div class="d-xl-none">
+  <button class="btn btn-outline-primary btn-sm doks-toc-toggle collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#onThisPage" aria-controls="doks-docs-nav" aria-expanded="false" aria-label="Toggle On this page navigation">
+    <span>Daftar isi</span>
+    <span>
+      <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" class="doks doks-expand" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><title>Expand</title><polyline points="7 13 12 18 17 13"></polyline><polyline points="7 6 12 11 17 6"></polyline></svg>
+      <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" class="doks doks-collapse" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><title>Collapse</title><polyline points="17 11 12 6 7 11"></polyline><polyline points="17 18 12 13 7 18"></polyline></svg>
+    </span>
+  </button>
+  <div class="collapse" id="onThisPage">
+    <div class="card card-body mt-3 py-1">
+      <div class="page-links">
+        <nav id="TableOfContents">
+  <ul>
+    <li><a href="#pendahuluan">Pendahuluan</a></li>
+    <li><a href="#mendefinisikan-fungsi">Mendefinisikan Fungsi</a>
+      <ul>
+        <li><a href="#function-declaration">Function Declaration</a></li>
+        <li><a href="#nested-function">Nested Function</a></li>
+        <li><a href="#fungsi-dengan-type-declaration">Fungsi dengan Type Declaration</a></li>
+      </ul>
+    </li>
+    <li><a href="#parameter-dan-argumen">Parameter dan Argumen</a>
+      <ul>
+        <li><a href="#parameter-vs-argumen">Parameter vs Argumen</a></li>
+        <li><a href="#parameter-default">Parameter Default</a></li>
+        <li><a href="#type-declaration-pada-parameter">Type Declaration pada Parameter</a></li>
+        <li><a href="#nullable-parameter">Nullable Parameter</a></li>
+        <li><a href="#variadic-parameter-args">Variadic Parameter (<code>...$args</code>)</a></li>
+        <li><a href="#named-arguments--php-8">Named Arguments — PHP 8+</a></li>
+        <li><a href="#pass-by-value-vs-pass-by-reference">Pass by Value vs Pass by Reference</a></li>
+        <li><a href="#destructuring-parameter-php-8">Destructuring Parameter (PHP 8+)</a></li>
+      </ul>
+    </li>
+    <li><a href="#return-value">Return Value</a>
+      <ul>
+        <li><a href="#return--mengembalikan-nilai"><code>return</code> — Mengembalikan Nilai</a></li>
+        <li><a href="#fungsi-tanpa-return">Fungsi Tanpa <code>return</code></a></li>
+        <li><a href="#return-menghentikan-eksekusi"><code>return</code> Menghentikan Eksekusi</a></li>
+        <li><a href="#return-type-declaration">Return Type Declaration</a></li>
+        <li><a href="#mengembalikan-banyak-nilai">Mengembalikan Banyak Nilai</a></li>
+        <li><a href="#early-return">Early Return</a></li>
+      </ul>
+    </li>
+    <li><a href="#scope-lingkup-variabel">Scope: Lingkup Variabel</a>
+      <ul>
+        <li><a href="#global-scope">Global Scope</a></li>
+        <li><a href="#mengakses-global-dari-dalam-fungsi">Mengakses Global dari Dalam Fungsi</a></li>
+        <li><a href="#local-scope">Local Scope</a></li>
+        <li><a href="#static-variable">Static Variable</a></li>
+        <li><a href="#scope-constant">Scope Constant</a></li>
+      </ul>
+    </li>
+    <li><a href="#anonymous-function-dan-closure">Anonymous Function dan Closure</a>
+      <ul>
+        <li><a href="#anonymous-function">Anonymous Function</a></li>
+        <li><a href="#closure">Closure</a></li>
+        <li><a href="#arrow-function--php-74">Arrow Function — PHP 7.4+</a></li>
+        <li><a href="#perbandingan-closure-vs-arrow-function">Perbandingan Closure vs Arrow Function</a></li>
+        <li><a href="#callable-type"><code>callable</code> Type</a></li>
+      </ul>
+    </li>
+    <li><a href="#contoh-praktis">Contoh Praktis</a>
+      <ul>
+        <li><a href="#1-fungsi-utility-format-rupiah">1. Fungsi Utility: Format Rupiah</a></li>
+        <li><a href="#2-fungsi-dengan-validasi-dan-early-return">2. Fungsi dengan Validasi dan Early Return</a></li>
+        <li><a href="#3-function-factory-dengan-closure">3. Function Factory dengan Closure</a></li>
+        <li><a href="#4-komposisi-fungsi">4. Komposisi Fungsi</a></li>
+        <li><a href="#5-higher-order-function">5. Higher-Order Function</a></li>
+        <li><a href="#6-memoization-dengan-static-variable">6. Memoization dengan Static Variable</a></li>
+      </ul>
+    </li>
+    <li><a href="#tips-dan-best-practice">Tips dan Best Practice</a></li>
+    <li><a href="#ringkasan">Ringkasan</a></li>
+  </ul>
+</nav>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="page-links d-none d-xl-block">
+  <h3>Daftar isi</h3>
+  <nav id="TableOfContents">
+  <ul>
+    <li><a href="#pendahuluan">Pendahuluan</a></li>
+    <li><a href="#mendefinisikan-fungsi">Mendefinisikan Fungsi</a>
+      <ul>
+        <li><a href="#function-declaration">Function Declaration</a></li>
+        <li><a href="#nested-function">Nested Function</a></li>
+        <li><a href="#fungsi-dengan-type-declaration">Fungsi dengan Type Declaration</a></li>
+      </ul>
+    </li>
+    <li><a href="#parameter-dan-argumen">Parameter dan Argumen</a>
+      <ul>
+        <li><a href="#parameter-vs-argumen">Parameter vs Argumen</a></li>
+        <li><a href="#parameter-default">Parameter Default</a></li>
+        <li><a href="#type-declaration-pada-parameter">Type Declaration pada Parameter</a></li>
+        <li><a href="#nullable-parameter">Nullable Parameter</a></li>
+        <li><a href="#variadic-parameter-args">Variadic Parameter (<code>...$args</code>)</a></li>
+        <li><a href="#named-arguments--php-8">Named Arguments — PHP 8+</a></li>
+        <li><a href="#pass-by-value-vs-pass-by-reference">Pass by Value vs Pass by Reference</a></li>
+        <li><a href="#destructuring-parameter-php-8">Destructuring Parameter (PHP 8+)</a></li>
+      </ul>
+    </li>
+    <li><a href="#return-value">Return Value</a>
+      <ul>
+        <li><a href="#return--mengembalikan-nilai"><code>return</code> — Mengembalikan Nilai</a></li>
+        <li><a href="#fungsi-tanpa-return">Fungsi Tanpa <code>return</code></a></li>
+        <li><a href="#return-menghentikan-eksekusi"><code>return</code> Menghentikan Eksekusi</a></li>
+        <li><a href="#return-type-declaration">Return Type Declaration</a></li>
+        <li><a href="#mengembalikan-banyak-nilai">Mengembalikan Banyak Nilai</a></li>
+        <li><a href="#early-return">Early Return</a></li>
+      </ul>
+    </li>
+    <li><a href="#scope-lingkup-variabel">Scope: Lingkup Variabel</a>
+      <ul>
+        <li><a href="#global-scope">Global Scope</a></li>
+        <li><a href="#mengakses-global-dari-dalam-fungsi">Mengakses Global dari Dalam Fungsi</a></li>
+        <li><a href="#local-scope">Local Scope</a></li>
+        <li><a href="#static-variable">Static Variable</a></li>
+        <li><a href="#scope-constant">Scope Constant</a></li>
+      </ul>
+    </li>
+    <li><a href="#anonymous-function-dan-closure">Anonymous Function dan Closure</a>
+      <ul>
+        <li><a href="#anonymous-function">Anonymous Function</a></li>
+        <li><a href="#closure">Closure</a></li>
+        <li><a href="#arrow-function--php-74">Arrow Function — PHP 7.4+</a></li>
+        <li><a href="#perbandingan-closure-vs-arrow-function">Perbandingan Closure vs Arrow Function</a></li>
+        <li><a href="#callable-type"><code>callable</code> Type</a></li>
+      </ul>
+    </li>
+    <li><a href="#contoh-praktis">Contoh Praktis</a>
+      <ul>
+        <li><a href="#1-fungsi-utility-format-rupiah">1. Fungsi Utility: Format Rupiah</a></li>
+        <li><a href="#2-fungsi-dengan-validasi-dan-early-return">2. Fungsi dengan Validasi dan Early Return</a></li>
+        <li><a href="#3-function-factory-dengan-closure">3. Function Factory dengan Closure</a></li>
+        <li><a href="#4-komposisi-fungsi">4. Komposisi Fungsi</a></li>
+        <li><a href="#5-higher-order-function">5. Higher-Order Function</a></li>
+        <li><a href="#6-memoization-dengan-static-variable">6. Memoization dengan Static Variable</a></li>
+      </ul>
+    </li>
+    <li><a href="#tips-dan-best-practice">Tips dan Best Practice</a></li>
+    <li><a href="#ringkasan">Ringkasan</a></li>
+  </ul>
+</nav>
+  </div>
+
+			</nav>
+			<h2 id="pendahuluan">Pendahuluan <a href="#pendahuluan" class="anchor" aria-hidden="true">#</a></h2>
+<p><strong>Fungsi</strong> adalah blok kode yang dirancang untuk melakukan tugas tertentu dan dapat dipanggil berulang kali. Fungsi adalah fondasi pemrograman — hampir semua kode PHP modern terdiri dari fungsi-fungsi yang saling memanggil.</p>
+<p>Fungsi memungkinkan kita untuk:</p>
+<ul>
+<li><strong>Menghindari duplikasi</strong> — tulis sekali, panggil berkali-kali.</li>
+<li><strong>Memecah masalah kompleks</strong> menjadi bagian-bagian kecil.</li>
+<li><strong>Mengabstraksi detail</strong> — pengguna fungsi tidak perlu tahu implementasinya.</li>
+<li><strong>Menguji kode</strong> secara terpisah.</li>
+</ul>
+<p>Artikel ini membahas semua aspek fungsi di PHP: cara mendefinisikan, parameter, return value, scope, anonymous function, closure, dan arrow function.</p>
+<blockquote>
+<p><strong>Asumsi:</strong> Anda sudah memahami variabel, tipe data, dan struktur kontrol dari artikel sebelumnya.</p>
+</blockquote>
+<hr>
+<h2 id="mendefinisikan-fungsi">Mendefinisikan Fungsi <a href="#mendefinisikan-fungsi" class="anchor" aria-hidden="true">#</a></h2>
+<h3 id="function-declaration">Function Declaration <a href="#function-declaration" class="anchor" aria-hidden="true">#</a></h3>
+<p>Cara paling umum — fungsi dideklarasikan dengan kata kunci <code>function</code> dan <strong>nama</strong>.</p>
+<pre><code class="language-php">&lt;?php
+function sapa($nama) {
+    return &quot;Halo, $nama!&quot;;
+}
+
+echo sapa(&quot;Budi&quot;); // &quot;Halo, Budi!&quot;
+</code></pre>
+<p><strong>Ciri:</strong></p>
+<ul>
+<li>Nama fungsi <strong>case-insensitive</strong> — <code>sapa()</code> dan <code>SAPA()</code> dianggap sama.</li>
+<li>Fungsi bisa dipanggil <strong>sebelum</strong> dideklarasikan (karena hoisting), selama masih dalam file yang sama.</li>
+<li>Nama fungsi harus unik — tidak bisa mendeklarasikan dua fungsi dengan nama sama.</li>
+</ul>
+<pre><code class="language-php">&lt;?php
+echo sapa(&quot;Budi&quot;); // &quot;Halo, Budi!&quot; — berhasil
+
+function sapa($nama) {
+    return &quot;Halo, $nama!&quot;;
+}
+</code></pre>
+<h3 id="nested-function">Nested Function <a href="#nested-function" class="anchor" aria-hidden="true">#</a></h3>
+<p>Fungsi bisa dideklarasikan di dalam fungsi lain. Fungsi dalam baru tersedia setelah fungsi luar dipanggil.</p>
+<pre><code class="language-php">&lt;?php
+function luar() {
+    function dalam() {
+        return &quot;Dari fungsi dalam&quot;;
+    }
+    return &quot;Dari fungsi luar&quot;;
+}
+
+echo luar();   // &quot;Dari fungsi luar&quot;
+echo dalam();  // &quot;Dari fungsi dalam&quot; — baru tersedia setelah luar() dipanggil
+</code></pre>
+<blockquote>
+<p><strong>Catatan:</strong> Nested function jarang dipakai dan bisa membingungkan. Hindari kecuali benar-benar perlu.</p>
+</blockquote>
+<h3 id="fungsi-dengan-type-declaration">Fungsi dengan Type Declaration <a href="#fungsi-dengan-type-declaration" class="anchor" aria-hidden="true">#</a></h3>
+<p>PHP mendukung <strong>type declaration</strong> untuk parameter dan return value (PHP 7+).</p>
+<pre><code class="language-php">&lt;?php
+function tambah(int $a, int $b): int {
+    return $a + $b;
+}
+
+echo tambah(2, 3); // 5
+</code></pre>
+<p><strong>Tipe yang didukung:</strong></p>
+<ul>
+<li>Scalar: <code>int</code>, <code>float</code>, <code>string</code>, <code>bool</code></li>
+<li>Compound: <code>array</code>, <code>object</code>, <code>callable</code>, <code>iterable</code></li>
+<li>Khusus: <code>mixed</code> (PHP 8+), <code>void</code>, <code>never</code> (PHP 8.1+)</li>
+<li>Class/interface: nama class, <code>self</code>, <code>static</code>, <code>parent</code></li>
+<li>Union types (PHP 8+): <code>int|string</code></li>
+<li>Nullable: <code>?int</code> (setara <code>int|null</code>)</li>
+</ul>
+<pre><code class="language-php">&lt;?php
+function formatHarga(float $harga): string {
+    return &quot;Rp&quot; . number_format($harga, 0, &quot;,&quot;, &quot;.&quot;);
+}
+
+function cariUser(int $id): ?array {
+    // mengembalikan array atau null
+    return $id &gt; 0 ? [&quot;id&quot; =&gt; $id, &quot;nama&quot; =&gt; &quot;Budi&quot;] : null;
+}
+
+function logPesan(string $pesan): void {
+    echo &quot;[LOG] $pesan\n&quot;;
+    // void = tidak mengembalikan nilai
+}
+</code></pre>
+<blockquote>
+<p><strong>Tips:</strong> Selalu gunakan type declaration jika memungkinkan — membuat kode lebih aman dan mudah dipahami.</p>
+</blockquote>
+<hr>
+<h2 id="parameter-dan-argumen">Parameter dan Argumen <a href="#parameter-dan-argumen" class="anchor" aria-hidden="true">#</a></h2>
+<h3 id="parameter-vs-argumen">Parameter vs Argumen <a href="#parameter-vs-argumen" class="anchor" aria-hidden="true">#</a></h3>
+<ul>
+<li><strong>Parameter</strong> — variabel yang dideklarasikan di definisi fungsi.</li>
+<li><strong>Argumen</strong> — nilai yang diberikan saat memanggil fungsi.</li>
+</ul>
+<pre><code class="language-php">&lt;?php
+function sapa($nama, $umur) {  // $nama, $umur = parameter
+    return &quot;Halo $nama, umur $umur&quot;;
+}
+
+echo sapa(&quot;Budi&quot;, 25);  // &quot;Budi&quot;, 25 = argumen
+</code></pre>
+<h3 id="parameter-default">Parameter Default <a href="#parameter-default" class="anchor" aria-hidden="true">#</a></h3>
+<p>Memberikan nilai default jika argumen tidak diberikan.</p>
+<pre><code class="language-php">&lt;?php
+function sapa($nama = &quot;Anonim&quot;, $sapaan = &quot;Halo&quot;) {
+    return &quot;$sapaan, $nama!&quot;;
+}
+
+echo sapa();                    // &quot;Halo, Anonim!&quot;
+echo sapa(&quot;Budi&quot;);              // &quot;Halo, Budi!&quot;
+echo sapa(&quot;Budi&quot;, &quot;Selamat pagi&quot;); // &quot;Selamat pagi, Budi!&quot;
+</code></pre>
+<p><strong>Default parameter bisa menggunakan konstanta atau ekspresi sederhana:</strong></p>
+<pre><code class="language-php">&lt;?php
+function buatId(string $prefix = &quot;user&quot;, int $timestamp = null) {
+    $timestamp = $timestamp ?? time();
+    return &quot;{$prefix}_{$timestamp}&quot;;
+}
+</code></pre>
+<blockquote>
+<p><strong>Catatan:</strong> Parameter dengan default harus berada <strong>setelah</strong> parameter tanpa default.</p>
+</blockquote>
+<pre><code class="language-php">&lt;?php
+// ❌ Error — parameter tanpa default setelah parameter default
+// function salah($a = 1, $b) {}
+
+// ✅ Benar
+function benar($a, $b = 1) {}
+</code></pre>
+<h3 id="type-declaration-pada-parameter">Type Declaration pada Parameter <a href="#type-declaration-pada-parameter" class="anchor" aria-hidden="true">#</a></h3>
+<pre><code class="language-php">&lt;?php
+function hitungTotal(array $items, float $pajak = 0.11): float {
+    $total = 0;
+    foreach ($items as $item) {
+        $total += $item[&quot;harga&quot;] * $item[&quot;jumlah&quot;];
+    }
+    return $total * (1 + $pajak);
+}
+
+$items = [
+    [&quot;harga&quot; =&gt; 450000, &quot;jumlah&quot; =&gt; 2],
+    [&quot;harga&quot; =&gt; 150000, &quot;jumlah&quot; =&gt; 1],
+];
+
+echo hitungTotal($items);       // 1165500
+echo hitungTotal($items, 0.05); // 1102500
+</code></pre>
+<h3 id="nullable-parameter">Nullable Parameter <a href="#nullable-parameter" class="anchor" aria-hidden="true">#</a></h3>
+<pre><code class="language-php">&lt;?php
+function sapa(?string $nama): string {
+    return $nama !== null ? &quot;Halo, $nama!&quot; : &quot;Halo, Anonim!&quot;;
+}
+
+echo sapa(&quot;Budi&quot;);  // &quot;Halo, Budi!&quot;
+echo sapa(null);    // &quot;Halo, Anonim!&quot;
+</code></pre>
+<h3 id="variadic-parameter-args">Variadic Parameter (<code>...$args</code>) <a href="#variadic-parameter-args" class="anchor" aria-hidden="true">#</a></h3>
+<p>Menampung <strong>semua argumen sisa</strong> dalam sebuah array (PHP 5.6+).</p>
+<pre><code class="language-php">&lt;?php
+function jumlahkan(...$angka): int {
+    return array_sum($angka);
+}
+
+echo jumlahkan(1, 2, 3);       // 6
+echo jumlahkan(1, 2, 3, 4, 5); // 15
+echo jumlahkan();              // 0
+</code></pre>
+<p><strong>Variadic dengan type declaration:</strong></p>
+<pre><code class="language-php">&lt;?php
+function rataRata(float ...$angka): float {
+    return array_sum($angka) / count($angka);
+}
+
+echo rataRata(10, 20, 30); // 20
+</code></pre>
+<p><strong>Variadic harus di akhir:</strong></p>
+<pre><code class="language-php">&lt;?php
+function log(string $level, ...$pesan) {
+    echo &quot;[$level] &quot; . implode(&quot; &quot;, $pesan) . &quot;\n&quot;;
+}
+
+log(&quot;INFO&quot;, &quot;Server&quot;, &quot;berjalan&quot;, &quot;di port 3000&quot;);
+// [INFO] Server berjalan di port 3000
+</code></pre>
+<p><strong>Spread operator untuk memanggil fungsi:</strong></p>
+<pre><code class="language-php">&lt;?php
+$angka = [1, 2, 3, 4, 5];
+echo jumlahkan(...$angka); // 15
+</code></pre>
+<h3 id="named-arguments--php-8">Named Arguments — PHP 8+ <a href="#named-arguments--php-8" class="anchor" aria-hidden="true">#</a></h3>
+<p>Memanggil fungsi dengan nama parameter, bukan urutan.</p>
+<pre><code class="language-php">&lt;?php
+function buatUser(string $nama, int $umur, string $role = &quot;user&quot;) {
+    return compact(&quot;nama&quot;, &quot;umur&quot;, &quot;role&quot;);
+}
+
+// Tanpa named arguments
+$user1 = buatUser(&quot;Budi&quot;, 25, &quot;admin&quot;);
+
+// Dengan named arguments — urutan bebas
+$user2 = buatUser(
+    umur: 25,
+    nama: &quot;Budi&quot;,
+    role: &quot;admin&quot;
+);
+
+// Melewati parameter default
+$user3 = buatUser(nama: &quot;Budi&quot;, umur: 25);
+</code></pre>
+<blockquote>
+<p><strong>Tips:</strong> Named arguments sangat berguna untuk fungsi dengan banyak parameter opsional.</p>
+</blockquote>
+<h3 id="pass-by-value-vs-pass-by-reference">Pass by Value vs Pass by Reference <a href="#pass-by-value-vs-pass-by-reference" class="anchor" aria-hidden="true">#</a></h3>
+<p>Secara default, argumen di PHP dikirim <strong>by value</strong> — perubahan di dalam fungsi tidak memengaruhi variabel asli.</p>
+<pre><code class="language-php">&lt;?php
+function tambahSatu($nilai) {
+    $nilai++;
+}
+
+$x = 5;
+tambahSatu($x);
+echo $x; // 5 (tidak berubah)
+</code></pre>
+<p>Untuk mengirim <strong>by reference</strong>, tambahkan <code>&amp;</code> sebelum parameter:</p>
+<pre><code class="language-php">&lt;?php
+function tambahSatu(&amp;$nilai) {
+    $nilai++;
+}
+
+$x = 5;
+tambahSatu($x);
+echo $x; // 6 (berubah!)
+</code></pre>
+<blockquote>
+<p><strong>Peringatan:</strong> Pass by reference jarang diperlukan dan bisa membingungkan. Gunakan hanya jika fungsi memang perlu mengubah variabel asli. Untuk array besar, pass by reference bisa menghemat memori, tetapi PHP sudah menggunakan copy-on-write.</p>
+</blockquote>
+<h3 id="destructuring-parameter-php-8">Destructuring Parameter (PHP 8+) <a href="#destructuring-parameter-php-8" class="anchor" aria-hidden="true">#</a></h3>
+<p>Parameter bisa di-destructure langsung jika berbentuk array:</p>
+<pre><code class="language-php">&lt;?php
+function tampilkanUser(array $user) {
+    // Destructuring di dalam fungsi
+    [&quot;nama&quot; =&gt; $nama, &quot;umur&quot; =&gt; $umur] = $user;
+    echo &quot;$nama, $umur tahun\n&quot;;
+}
+
+// PHP 8+ juga mendukung destructuring di parameter
+// (melalui array parameter biasa)
+</code></pre>
+<hr>
+<h2 id="return-value">Return Value <a href="#return-value" class="anchor" aria-hidden="true">#</a></h2>
+<h3 id="return--mengembalikan-nilai"><code>return</code> — Mengembalikan Nilai <a href="#return--mengembalikan-nilai" class="anchor" aria-hidden="true">#</a></h3>
+<pre><code class="language-php">&lt;?php
+function tambah(int $a, int $b): int {
+    return $a + $b;
+}
+
+$hasil = tambah(3, 5);
+echo $hasil; // 8
+</code></pre>
+<h3 id="fungsi-tanpa-return">Fungsi Tanpa <code>return</code> <a href="#fungsi-tanpa-return" class="anchor" aria-hidden="true">#</a></h3>
+<p>Jika tidak ada <code>return</code>, fungsi mengembalikan <code>null</code>.</p>
+<pre><code class="language-php">&lt;?php
+function sapa($nama) {
+    echo &quot;Halo, $nama!&quot;;
+}
+
+$hasil = sapa(&quot;Budi&quot;);
+var_dump($hasil); // NULL
+</code></pre>
+<h3 id="return-menghentikan-eksekusi"><code>return</code> Menghentikan Eksekusi <a href="#return-menghentikan-eksekusi" class="anchor" aria-hidden="true">#</a></h3>
+<p>Kode setelah <code>return</code> tidak dijalankan.</p>
+<pre><code class="language-php">&lt;?php
+function cekUmur(int $umur): string {
+    if ($umur &lt; 0) {
+        return &quot;Umur tidak valid&quot;;
+    }
+    if ($umur &lt; 18) {
+        return &quot;Belum dewasa&quot;;
+    }
+    return &quot;Dewasa&quot;;
+    echo &quot;Tidak akan pernah dijalankan&quot;;
+}
+</code></pre>
+<h3 id="return-type-declaration">Return Type Declaration <a href="#return-type-declaration" class="anchor" aria-hidden="true">#</a></h3>
+<pre><code class="language-php">&lt;?php
+function bagi(float $a, float $b): float {
+    if ($b === 0.0) {
+        throw new DivisionByZeroError(&quot;Pembagi tidak boleh nol&quot;);
+    }
+    return $a / $b;
+}
+
+function cariUser(int $id): ?array {
+    return $id &gt; 0 ? [&quot;id&quot; =&gt; $id] : null;
+}
+
+function logPesan(string $pesan): void {
+    echo &quot;[LOG] $pesan\n&quot;;
+}
+</code></pre>
+<p><strong><code>void</code> vs <code>never</code> (PHP 8.1+):</strong></p>
+<ul>
+<li><code>void</code> — fungsi tidak mengembalikan nilai (boleh <code>return;</code> tanpa nilai).</li>
+<li><code>never</code> — fungsi <strong>tidak pernah</strong> kembali normal (selalu throw atau exit).</li>
+</ul>
+<pre><code class="language-php">&lt;?php
+function redirect(string $url): never {
+    header(&quot;Location: $url&quot;);
+    exit;
+}
+
+function lemparError(string $pesan): never {
+    throw new RuntimeException($pesan);
+}
+</code></pre>
+<h3 id="mengembalikan-banyak-nilai">Mengembalikan Banyak Nilai <a href="#mengembalikan-banyak-nilai" class="anchor" aria-hidden="true">#</a></h3>
+<p>PHP tidak mendukung multiple return secara langsung. Gunakan <strong>array</strong> atau <strong>object</strong>.</p>
+<pre><code class="language-php">&lt;?php
+// Array — ringkas
+function minMax(array $angka): array {
+    return [min($angka), max($angka)];
+}
+
+[$nilaiMin, $nilaiMax] = minMax([5, 2, 9, 1]);
+echo &quot;Min: $nilaiMin, Max: $nilaiMax&quot;; // &quot;Min: 1, Max: 9&quot;
+
+// Associative array — lebih jelas
+function statistik(array $angka): array {
+    return [
+        &quot;total&quot; =&gt; array_sum($angka),
+        &quot;rata&quot; =&gt; array_sum($angka) / count($angka),
+        &quot;min&quot; =&gt; min($angka),
+        &quot;max&quot; =&gt; max($angka),
+    ];
+}
+
+$stat = statistik([10, 20, 30, 40]);
+echo $stat[&quot;total&quot;]; // 100
+</code></pre>
+<h3 id="early-return">Early Return <a href="#early-return" class="anchor" aria-hidden="true">#</a></h3>
+<p>Pola &ldquo;early return&rdquo; membuat kode lebih mudah dibaca — hindari nested <code>if</code> yang dalam.</p>
+<pre><code class="language-php">&lt;?php
+// ❌ Nested if yang dalam
+function prosesUser($user) {
+    if ($user) {
+        if ($user[&quot;aktif&quot;]) {
+            if ($user[&quot;umur&quot;] &gt;= 18) {
+                return &quot;OK&quot;;
+            } else {
+                return &quot;Terlalu muda&quot;;
+            }
+        } else {
+            return &quot;Tidak aktif&quot;;
+        }
+    } else {
+        return &quot;User tidak ada&quot;;
+    }
+}
+
+// ✅ Early return
+function prosesUser($user) {
+    if (!$user) return &quot;User tidak ada&quot;;
+    if (!$user[&quot;aktif&quot;]) return &quot;Tidak aktif&quot;;
+    if ($user[&quot;umur&quot;] &lt; 18) return &quot;Terlalu muda&quot;;
+    return &quot;OK&quot;;
+}
+</code></pre>
+<hr>
+<h2 id="scope-lingkup-variabel">Scope: Lingkup Variabel <a href="#scope-lingkup-variabel" class="anchor" aria-hidden="true">#</a></h2>
+<h3 id="global-scope">Global Scope <a href="#global-scope" class="anchor" aria-hidden="true">#</a></h3>
+<p>Variabel yang dideklarasikan di luar fungsi memiliki <strong>global scope</strong> — tetapi <strong>tidak otomatis</strong> tersedia di dalam fungsi.</p>
+<pre><code class="language-php">&lt;?php
+$x = 10;
+
+function tampilkan() {
+    echo $x; // Warning: Undefined variable $x
+}
+
+tampilkan();
+</code></pre>
+<h3 id="mengakses-global-dari-dalam-fungsi">Mengakses Global dari Dalam Fungsi <a href="#mengakses-global-dari-dalam-fungsi" class="anchor" aria-hidden="true">#</a></h3>
+<p><strong>1. Kata kunci <code>global</code>:</strong></p>
+<pre><code class="language-php">&lt;?php
+$x = 10;
+
+function tampilkan() {
+    global $x;
+    echo $x; // 10
+}
+
+tampilkan();
+</code></pre>
+<p><strong>2. Array <code>$GLOBALS</code>:</strong></p>
+<pre><code class="language-php">&lt;?php
+$x = 10;
+
+function tampilkan() {
+    echo $GLOBALS[&quot;x&quot;]; // 10
+}
+
+tampilkan();
+</code></pre>
+<blockquote>
+<p><strong>Peringatan:</strong> Menggunakan <code>global</code> atau <code>$GLOBALS</code> adalah praktik yang <strong>tidak disarankan</strong> — membuat kode sulit dilacak dan diuji. Gunakan parameter fungsi atau dependency injection.</p>
+</blockquote>
+<h3 id="local-scope">Local Scope <a href="#local-scope" class="anchor" aria-hidden="true">#</a></h3>
+<p>Variabel yang dideklarasikan di dalam fungsi hanya bisa diakses di dalam fungsi itu.</p>
+<pre><code class="language-php">&lt;?php
+function hitung() {
+    $hasil = 42;
+    echo $hasil; // 42
+}
+
+hitung();
+echo $hasil; // Warning: Undefined variable $hasil
+</code></pre>
+<h3 id="static-variable">Static Variable <a href="#static-variable" class="anchor" aria-hidden="true">#</a></h3>
+<p>Variabel <code>static</code> di dalam fungsi <strong>mempertahankan nilainya</strong> antar pemanggilan.</p>
+<pre><code class="language-php">&lt;?php
+function counter() {
+    static $count = 0;
+    $count++;
+    return $count;
+}
+
+echo counter(); // 1
+echo counter(); // 2
+echo counter(); // 3
+</code></pre>
+<p>Berguna untuk cache sederhana atau counter:</p>
+<pre><code class="language-php">&lt;?php
+function getKoneksi() {
+    static $koneksi = null;
+    if ($koneksi === null) {
+        $koneksi = new PDO(&quot;mysql:host=localhost;dbname=toko&quot;, &quot;root&quot;, &quot;&quot;);
+        echo &quot;Membuat koneksi baru\n&quot;;
+    }
+    return $koneksi;
+}
+
+getKoneksi(); // &quot;Membuat koneksi baru&quot;
+getKoneksi(); // (tidak mencetak apa pun — koneksi sama)
+</code></pre>
+<h3 id="scope-constant">Scope Constant <a href="#scope-constant" class="anchor" aria-hidden="true">#</a></h3>
+<p>Konstanta (<code>const</code> / <code>define</code>) bersifat <strong>global</strong> — bisa diakses dari mana saja, termasuk di dalam fungsi.</p>
+<pre><code class="language-php">&lt;?php
+const APP_NAME = &quot;Toko Online&quot;;
+
+function tampilkanNama() {
+    echo APP_NAME; // &quot;Toko Online&quot;
+}
+
+tampilkanNama();
+</code></pre>
+<hr>
+<h2 id="anonymous-function-dan-closure">Anonymous Function dan Closure <a href="#anonymous-function-dan-closure" class="anchor" aria-hidden="true">#</a></h2>
+<h3 id="anonymous-function">Anonymous Function <a href="#anonymous-function" class="anchor" aria-hidden="true">#</a></h3>
+<p>Fungsi <strong>tanpa nama</strong>, biasanya disimpan di variabel atau dikirim sebagai argumen.</p>
+<pre><code class="language-php">&lt;?php
+$sapa = function($nama) {
+    return &quot;Halo, $nama!&quot;;
+};
+
+echo $sapa(&quot;Budi&quot;); // &quot;Halo, Budi!&quot;
+
+// Cek tipe
+var_dump($sapa); // object(Closure)
+</code></pre>
+<p><strong>Anonymous function dengan <code>use</code>:</strong></p>
+<pre><code class="language-php">&lt;?php
+$pesan = &quot;Halo&quot;;
+
+$sapa = function($nama) use ($pesan) {
+    return &quot;$pesan, $nama!&quot;;
+};
+
+echo $sapa(&quot;Budi&quot;); // &quot;Halo, Budi!&quot;
+</code></pre>
+<h3 id="closure">Closure <a href="#closure" class="anchor" aria-hidden="true">#</a></h3>
+<p><strong>Closure</strong> adalah anonymous function yang &ldquo;mengingat&rdquo; variabel dari scope tempat ia dibuat, melalui <code>use</code>.</p>
+<pre><code class="language-php">&lt;?php
+function buatPengali($faktor) {
+    return function($angka) use ($faktor) {
+        return $angka * $faktor;
+    };
+}
+
+$kali2 = buatPengali(2);
+$kali10 = buatPengali(10);
+
+echo $kali2(5);  // 10
+echo $kali10(5); // 50
+</code></pre>
+<p><strong><code>use</code> by value vs by reference:</strong></p>
+<pre><code class="language-php">&lt;?php
+$counter = 0;
+
+// By value — nilai disalin saat closure dibuat
+$fn1 = function() use ($counter) {
+    return $counter; // selalu 0
+};
+
+// By reference — menggunakan variabel asli
+$fn2 = function() use (&amp;$counter) {
+    $counter++;
+    return $counter;
+};
+
+echo $fn1(); // 0
+echo $fn2(); // 1
+echo $fn2(); // 2
+echo $counter; // 2 (berubah!)
+</code></pre>
+<blockquote>
+<p><strong>Peringatan:</strong> <code>use (&amp;$var)</code> memungkinkan closure mengubah variabel luar. Gunakan dengan hati-hati — bisa menyebabkan bug yang sulit dilacak.</p>
+</blockquote>
+<p><strong>Closure sebagai callback:</strong></p>
+<pre><code class="language-php">&lt;?php
+$angka = [1, 2, 3, 4, 5];
+
+$kuadrat = array_map(function($n) {
+    return $n * $n;
+}, $angka);
+
+print_r($kuadrat); // [1, 4, 9, 16, 25]
+
+$genap = array_filter($angka, function($n) {
+    return $n % 2 === 0;
+});
+
+print_r($genap); // [2, 4]
+</code></pre>
+<h3 id="arrow-function--php-74">Arrow Function — PHP 7.4+ <a href="#arrow-function--php-74" class="anchor" aria-hidden="true">#</a></h3>
+<p>Sintaks ringkas untuk closure dengan <strong>satu ekspresi</strong>. Otomatis menangkap variabel dari scope luar (<strong>by value</strong>).</p>
+<pre><code class="language-php">&lt;?php
+$angka = [1, 2, 3, 4, 5];
+
+// Closure biasa
+$kuadrat1 = array_map(function($n) {
+    return $n * $n;
+}, $angka);
+
+// Arrow function — lebih ringkas
+$kuadrat2 = array_map(fn($n) =&gt; $n * $n, $angka);
+
+print_r($kuadrat2); // [1, 4, 9, 16, 25]
+</code></pre>
+<p><strong>Arrow function otomatis menangkap variabel luar:</strong></p>
+<pre><code class="language-php">&lt;?php
+$faktor = 3;
+$kali3 = fn($n) =&gt; $n * $faktor;
+echo $kali3(5); // 15
+</code></pre>
+<p><strong>Arrow function hanya bisa berisi satu ekspresi:</strong></p>
+<pre><code class="language-php">&lt;?php
+// ✅ Satu ekspresi
+$tambah = fn($a, $b) =&gt; $a + $b;
+
+// ❌ Multi-baris — gunakan closure biasa
+// $proses = fn($x) =&gt; {
+//     $y = $x * 2;
+//     return $y + 1;
+// };
+</code></pre>
+<h3 id="perbandingan-closure-vs-arrow-function">Perbandingan Closure vs Arrow Function <a href="#perbandingan-closure-vs-arrow-function" class="anchor" aria-hidden="true">#</a></h3>
+<table>
+<thead>
+<tr>
+<th>Aspek</th>
+<th>Closure <code>function() use()</code></th>
+<th>Arrow <code>fn()</code></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Sintaks</td>
+<td>Verbose</td>
+<td>Ringkas</td>
+</tr>
+<tr>
+<td>Body</td>
+<td>Multi-baris</td>
+<td>Satu ekspresi</td>
+</tr>
+<tr>
+<td>Capture variabel</td>
+<td>Manual (<code>use</code>)</td>
+<td>Otomatis (by value)</td>
+</tr>
+<tr>
+<td>Capture by reference</td>
+<td>✅ (<code>use (&amp;$x)</code>)</td>
+<td>❌</td>
+</tr>
+<tr>
+<td><code>$this</code> binding</td>
+<td>✅</td>
+<td>✅</td>
+</tr>
+<tr>
+<td>Versi PHP</td>
+<td>5.3+</td>
+<td>7.4+</td>
+</tr>
+</tbody>
+</table>
+<h3 id="callable-type"><code>callable</code> Type <a href="#callable-type" class="anchor" aria-hidden="true">#</a></h3>
+<p>Parameter atau return type yang menerima fungsi:</p>
+<pre><code class="language-php">&lt;?php
+function jalankan(callable $fn, $nilai) {
+    return $fn($nilai);
+}
+
+echo jalankan(fn($x) =&gt; $x * 2, 5); // 10
+echo jalankan(&quot;strtoupper&quot;, &quot;hello&quot;); // &quot;HELLO&quot;
+echo jalankan([new User, &quot;method&quot;], $arg); // method call
+</code></pre>
+<hr>
+<h2 id="contoh-praktis">Contoh Praktis <a href="#contoh-praktis" class="anchor" aria-hidden="true">#</a></h2>
+<h3 id="1-fungsi-utility-format-rupiah">1. Fungsi Utility: Format Rupiah <a href="#1-fungsi-utility-format-rupiah" class="anchor" aria-hidden="true">#</a></h3>
+<pre><code class="language-php">&lt;?php
+function formatRupiah(float $angka): string {
+    return &quot;Rp&quot; . number_format($angka, 0, &quot;,&quot;, &quot;.&quot;);
+}
+
+echo formatRupiah(1500000); // &quot;Rp1.500.000&quot;
+</code></pre>
+<h3 id="2-fungsi-dengan-validasi-dan-early-return">2. Fungsi dengan Validasi dan Early Return <a href="#2-fungsi-dengan-validasi-dan-early-return" class="anchor" aria-hidden="true">#</a></h3>
+<pre><code class="language-php">&lt;?php
+function hitungDiskon(float $harga, float $persenDiskon): array {
+    if ($harga &lt; 0) {
+        throw new InvalidArgumentException(&quot;Harga harus positif&quot;);
+    }
+    if ($persenDiskon &lt; 0 || $persenDiskon &gt; 100) {
+        throw new InvalidArgumentException(&quot;Diskon harus antara 0 dan 100&quot;);
+    }
+
+    $diskon = $harga * ($persenDiskon / 100);
+
+    return [
+        &quot;hargaAsli&quot; =&gt; $harga,
+        &quot;diskon&quot; =&gt; $diskon,
+        &quot;hargaAkhir&quot; =&gt; $harga - $diskon,
+    ];
+}
+
+$hasil = hitungDiskon(500000, 20);
+print_r($hasil);
+// [
+//   &quot;hargaAsli&quot; =&gt; 500000,
+//   &quot;diskon&quot; =&gt; 100000,
+//   &quot;hargaAkhir&quot; =&gt; 400000,
+// ]
+</code></pre>
+<h3 id="3-function-factory-dengan-closure">3. Function Factory dengan Closure <a href="#3-function-factory-dengan-closure" class="anchor" aria-hidden="true">#</a></h3>
+<pre><code class="language-php">&lt;?php
+function buatValidator(float $min, float $max): callable {
+    return function(float $nilai) use ($min, $max): string {
+        if ($nilai &lt; $min) return &quot;Minimal $min&quot;;
+        if ($nilai &gt; $max) return &quot;Maksimal $max&quot;;
+        return &quot;Valid&quot;;
+    };
+}
+
+$validasiUmur = buatValidator(17, 100);
+echo $validasiUmur(15);  // &quot;Minimal 17&quot;
+echo $validasiUmur(25);  // &quot;Valid&quot;
+echo $validasiUmur(150); // &quot;Maksimal 100&quot;
+
+$validasiNilai = buatValidator(0, 100);
+echo $validasiNilai(85); // &quot;Valid&quot;
+</code></pre>
+<h3 id="4-komposisi-fungsi">4. Komposisi Fungsi <a href="#4-komposisi-fungsi" class="anchor" aria-hidden="true">#</a></h3>
+<pre><code class="language-php">&lt;?php
+$tambah = fn($a) =&gt; fn($b) =&gt; $a + $b;
+$kali = fn($a) =&gt; fn($b) =&gt; $a * $b;
+
+$tambah5 = $tambah(5);
+$kali2 = $kali(2);
+
+echo $tambah5(10);  // 15
+echo $kali2(10);    // 20
+echo $kali2($tambah5(10)); // 30
+</code></pre>
+<h3 id="5-higher-order-function">5. Higher-Order Function <a href="#5-higher-order-function" class="anchor" aria-hidden="true">#</a></h3>
+<p>Fungsi yang menerima fungsi lain sebagai argumen (atau mengembalikan fungsi).</p>
+<pre><code class="language-php">&lt;?php
+function prosesArray(array $arr, callable $transformasi): array {
+    $hasil = [];
+    foreach ($arr as $item) {
+        $hasil[] = $transformasi($item);
+    }
+    return $hasil;
+}
+
+$angka = [1, 2, 3, 4, 5];
+$kuadrat = prosesArray($angka, fn($n) =&gt; $n * $n);
+print_r($kuadrat); // [1, 4, 9, 16, 25]
+</code></pre>
+<h3 id="6-memoization-dengan-static-variable">6. Memoization dengan Static Variable <a href="#6-memoization-dengan-static-variable" class="anchor" aria-hidden="true">#</a></h3>
+<pre><code class="language-php">&lt;?php
+function fibonacci(int $n): int {
+    static $cache = [];
+
+    if ($n &lt;= 1) return $n;
+    if (isset($cache[$n])) return $cache[$n];
+
+    return $cache[$n] = fibonacci($n - 1) + fibonacci($n - 2);
+}
+
+echo fibonacci(40); // cepat berkat cache
+</code></pre>
+<hr>
+<h2 id="tips-dan-best-practice">Tips dan Best Practice <a href="#tips-dan-best-practice" class="anchor" aria-hidden="true">#</a></h2>
+<ol>
+<li>
+<p><strong>Gunakan type declaration</strong> untuk parameter dan return — kode lebih aman.</p>
+</li>
+<li>
+<p><strong>Nama fungsi harus deskriptif</strong> — <code>hitungTotalBelanja()</code> lebih baik dari <code>ht()</code>.</p>
+</li>
+<li>
+<p><strong>Satu fungsi, satu tugas</strong> — hindari fungsi yang melakukan terlalu banyak hal.</p>
+</li>
+<li>
+<p><strong>Hindari <code>global</code></strong> — gunakan parameter atau dependency injection.</p>
+</li>
+<li>
+<p><strong>Gunakan early return</strong> — hindari nested <code>if</code> yang dalam.</p>
+</li>
+<li>
+<p><strong>Batasi jumlah parameter</strong> — jika lebih dari 4-5, pertimbangkan object atau named arguments.</p>
+</li>
+<li>
+<p><strong>Gunakan <code>void</code></strong> untuk fungsi yang tidak mengembalikan nilai.</p>
+</li>
+<li>
+<p><strong>Gunakan arrow function</strong> untuk callback pendek — lebih ringkas.</p>
+</li>
+<li>
+<p><strong>Selalu <code>unset($n)</code></strong> setelah <code>foreach</code> dengan referensi di dalam fungsi.</p>
+</li>
+<li>
+<p><strong>Dokumentasikan fungsi</strong> dengan PHPDoc:</p>
+</li>
+</ol>
+<pre><code class="language-php">&lt;?php
+/**
+ * Menghitung total belanja termasuk pajak.
+ *
+ * @param array $items Daftar item dengan key &quot;harga&quot; dan &quot;jumlah&quot;.
+ * @param float $pajak Persentase pajak (default 0.11).
+ * @return float Total belanja setelah pajak.
+ * @throws InvalidArgumentException Jika item tidak valid.
+ */
+function hitungTotal(array $items, float $pajak = 0.11): float {
+    // ...
+}
+</code></pre>
+<ol start="11">
+<li>
+<p><strong>Hindari pass by reference</strong> kecuali benar-benar perlu.</p>
+</li>
+<li>
+<p><strong>Gunakan <code>static</code> variable</strong> untuk cache sederhana, tetapi hati-hati dengan testing.</p>
+</li>
+</ol>
+<hr>
+<h2 id="ringkasan">Ringkasan <a href="#ringkasan" class="anchor" aria-hidden="true">#</a></h2>
+<table>
+<thead>
+<tr>
+<th>Konsep</th>
+<th>Poin Penting</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Function declaration</td>
+<td>Case-insensitive, bisa dipanggil sebelum deklarasi</td>
+</tr>
+<tr>
+<td>Type declaration</td>
+<td>Untuk parameter dan return value</td>
+</tr>
+<tr>
+<td>Default parameter</td>
+<td>Nilai default jika argumen tidak diberikan</td>
+</tr>
+<tr>
+<td>Variadic <code>...$args</code></td>
+<td>Mengumpulkan argumen jadi array</td>
+</tr>
+<tr>
+<td>Named arguments</td>
+<td>Memanggil dengan nama parameter (PHP 8+)</td>
+</tr>
+<tr>
+<td>Pass by value</td>
+<td>Default — perubahan tidak memengaruhi variabel asli</td>
+</tr>
+<tr>
+<td>Pass by reference <code>&amp;$x</code></td>
+<td>Perubahan memengaruhi variabel asli</td>
+</tr>
+<tr>
+<td><code>return</code></td>
+<td>Mengembalikan nilai dan menghentikan eksekusi</td>
+</tr>
+<tr>
+<td>Early return</td>
+<td>Hindari nested <code>if</code> yang dalam</td>
+</tr>
+<tr>
+<td>Scope</td>
+<td>Global, local, static</td>
+</tr>
+<tr>
+<td>Anonymous function</td>
+<td>Fungsi tanpa nama, disimpan di variabel</td>
+</tr>
+<tr>
+<td>Closure</td>
+<td>Anonymous function dengan <code>use</code></td>
+</tr>
+<tr>
+<td>Arrow function <code>fn()</code></td>
+<td>Closure ringkas (PHP 7.4+)</td>
+</tr>
+<tr>
+<td><code>callable</code></td>
+<td>Type untuk parameter/return berupa fungsi</td>
+</tr>
+</tbody>
+</table>
+<p>Poin penting:</p>
+<ul>
+<li>Gunakan <strong>type declaration</strong> untuk keamanan kode.</li>
+<li><strong>Hindari <code>global</code></strong> — gunakan parameter atau dependency injection.</li>
+<li><strong><code>static</code> variable</strong> mempertahankan nilai antar pemanggilan.</li>
+<li><strong>Closure</strong> menggunakan <code>use</code> untuk menangkap variabel luar.</li>
+<li><strong>Arrow function</strong> (<code>fn()</code>) otomatis menangkap variabel luar (by value).</li>
+<li><strong><code>use (&amp;$x)</code></strong> menangkap by reference — gunakan dengan hati-hati.</li>
+<li><strong>Pass by reference</strong> (<code>&amp;$param</code>) jarang diperlukan.</li>
+<li>Gunakan <strong>early return</strong> untuk kode yang lebih mudah dibaca.</li>
+<li><strong>Dokumentasikan fungsi</strong> dengan PHPDoc.</li>
+</ul>
+<p>Pada artikel berikutnya, kita akan membahas <strong>Array dan Method-nya</strong> — membuat, mengakses, dan memanipulasi array di PHP.</p>
+
+			<div class="page-footer-meta d-flex flex-column flex-md-row justify-content-between">
+				</div>
+			<div class="docs-navigation d-flex justify-content-between">
+	
+	<a href="/php/tutorial/05-struktur-kontrol/">
+			<div class="card my-1">
+				<div class="card-body py-2">
+					&larr; Struktur Kontrol &amp; Perulangan
+				</div>
+			</div>
+		</a>
+	<a class="ms-auto" href="/php/tutorial/07-array/">
+			<div class="card my-1">
+				<div class="card-body py-2">
+					Array dan Method-nya &rarr;
+				</div>
+			</div>
+		</a>
+	</div>
+
+			
+		</main>
+	</div>
+
+      </div>
+    </div>
+    
+    
+    <footer class="footer text-muted">
+  <div class="container-xxl">
+    <div class="row">
+      <div class="col-lg-8 order-last order-lg-first">
+        <ul class="list-inline">
+          <li class="list-inline-item">Powered by <a class="text-muted" href="https://gohugo.io/">Hugo</a> and <a class="text-muted" href="https://github.com/">Github</a></li>
+        </ul>
+      </div>
+      <div class="col-lg-8 order-first order-lg-last text-lg-end">
+        <ul class="list-inline">
+          </ul>
+      </div>
+    </div>
+  </div>
+</footer>
+    
+
+<script src="/js/bootstrap.min.650aeec64c81d69d4c0850fc73c93da3f0330cec0a27772feed7f90f60baa5f47f1c45687d71914bdafd1c4e860d40f6dc08ede27a2f08431ff929c9a2d24621.js" integrity="sha512-ZQruxkyB1p1MCFD8c8k9o/AzDOwKJ3cv7tf5D2C6pfR/HEVofXGRS9r9HE6GDUD23Ajt4novCEMf&#43;SnJotJGIQ==" crossorigin="anonymous" defer></script>
+  <script src="/js/highlight.min.ec234bd8a5f487aaffe50a89f17b14501b1bb65633cf177cffd4cb84702dd7030edc08712dceb8dc27ac7e54b53240a08bf0b8d951572ee582bcdbbd06a48a7b.js" integrity="sha512-7CNL2KX0h6r/5QqJ8XsUUBsbtlYzzxd8/9TLhHAt1wMO3AhxLc643CesflS1MkCgi/C42VFXLuWCvNu9BqSKew==" crossorigin="anonymous" defer></script>
+  <script src="/main.min.cd1e5e6b40065b3f7f7fd8548a528fac67019754eda0f37b9918d02d154fc9ef6a22742f6513b0572ad9163152e151ec36221fbeafbecd7759c3dab1f19b64b9.js" integrity="sha512-zR5ea0AGWz9/f9hUilKPrGcBl1TtoPN7mRjQLRVPye9qInQvZROwVyrZFjFS4VHsNiIfvq&#43;&#43;zXdZw9qx8ZtkuQ==" crossorigin="anonymous" defer></script>
+  <script src="https://kaban.my.id/index.min.797ba4de6d8a5423115e651882a6de105e1744ee10ab32e79b10db26c6fbcd5d2706c0392c663ea0d01e04e8a21e3a87bb2ea742d9df2d62f481a7e793b68ec4.js" integrity="sha512-eXuk3m2KVCMRXmUYgqbeEF4XRO4QqzLnmxDbJsb7zV0nBsA5LGY&#43;oNAeBOiiHjqHuy6nQtnfLWL0gafnk7aOxA==" crossorigin="anonymous" defer></script>
+  
+    <div class="d-flex fixed-bottom pb-4 pb-lg-5 pe-4 pe-lg-5">
+      <a id="toTop" href="#" class="btn btn-outline-primary rounded-circle ms-auto p-2"><span class="visually-hidden">Top</span><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-chevron-up"><polyline points="18 15 12 9 6 15"></polyline></svg></a>
+    </div>
+    
+  </body>
+</html>

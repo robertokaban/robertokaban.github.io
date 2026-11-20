@@ -855,6 +855,11 @@
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url><url>
+    <loc>https://kaban.my.id/php/tutorial/06-fungsi/</loc>
+    <lastmod>2023-01-08T08:00:00+00:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url><url>
     <loc>https://kaban.my.id/javascript/tutorial/06-fungsi/</loc>
     <lastmod>2022-12-24T08:00:00+00:00</lastmod>
     <changefreq>weekly</changefreq>
@@ -875,6 +880,11 @@
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url><url>
+    <loc>https://kaban.my.id/php/tutorial/07-array/</loc>
+    <lastmod>2023-01-09T08:00:00+00:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url><url>
     <loc>https://kaban.my.id/javascript/tutorial/07-array/</loc>
     <lastmod>2022-12-25T08:00:00+00:00</lastmod>
     <changefreq>weekly</changefreq>
@@ -887,6 +897,11 @@
   </url><url>
     <loc>https://kaban.my.id/html/tutorial/video/</loc>
     <lastmod>2021-12-06T08:49:31+00:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url><url>
+    <loc>https://kaban.my.id/php/tutorial/08-string/</loc>
+    <lastmod>2023-01-10T08:00:00+00:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url><url>
@@ -905,6 +920,11 @@
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url><url>
+    <loc>https://kaban.my.id/php/tutorial/09-superglobal-form/</loc>
+    <lastmod>2023-01-11T08:00:00+00:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url><url>
     <loc>https://kaban.my.id/javascript/tutorial/09-dom-manipulation/</loc>
     <lastmod>2022-12-27T08:00:00+00:00</lastmod>
     <changefreq>weekly</changefreq>
@@ -920,6 +940,11 @@
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url><url>
+    <loc>https://kaban.my.id/php/tutorial/10-session-cookie/</loc>
+    <lastmod>2023-01-12T08:00:00+00:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url><url>
     <loc>https://kaban.my.id/javascript/tutorial/10-event-handling/</loc>
     <lastmod>2022-12-28T08:00:00+00:00</lastmod>
     <changefreq>weekly</changefreq>
@@ -932,6 +957,11 @@
   </url><url>
     <loc>https://kaban.my.id/css/tutorial/word-spacing/</loc>
     <lastmod>2021-12-06T08:49:31+00:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url><url>
+    <loc>https://kaban.my.id/php/tutorial/11-include-require/</loc>
+    <lastmod>2023-01-13T08:00:00+00:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url><url>
